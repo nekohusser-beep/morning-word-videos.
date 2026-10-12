@@ -3,23 +3,29 @@ on:
   workflow_dispatch:
     inputs:
       urls:
-        description: "Newline-separated list of name|url"
+        description: "name|url pairs, one per line"
         required: true
         type: string
 jobs:
   fetch:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      URLS: ${{ inputs.urls }}
     steps:
       - name: Download
         shell: bash
         run: |
+          set -e
           mkdir -p out
+          printf '%s\n' "$URLS" > list.txt
           while IFS='|' read -r name url; do
+            name="$(echo "$name" | xargs)"; url="$(echo "$url" | xargs)"
             [ -z "$name" ] && continue
-            curl -sSL --retry 3 -o "out/$name" "$url"
-            ls -la "out/$name"
-          done <<< "${{ inputs.urls }}"
+            echo "fetching $name"
+            curl -fsSL --retry 3 -A "Mozilla/5.0" -o "out/$name" "$url"
+          done < list.txt
+          ls -la out
       - uses: actions/upload-artifact@v4
         with:
           name: clips

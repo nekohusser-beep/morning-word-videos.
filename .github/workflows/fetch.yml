@@ -1,0 +1,27 @@
+name: fetch
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Newline-separated list of name|url"
+        required: true
+        type: string
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download
+        shell: bash
+        run: |
+          mkdir -p out
+          while IFS='|' read -r name url; do
+            [ -z "$name" ] && continue
+            curl -sSL --retry 3 -o "out/$name" "$url"
+            ls -la "out/$name"
+          done <<< "${{ inputs.urls }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: clips
+          path: out/
+          retention-days: 3

@@ -3,29 +3,32 @@ on:
   workflow_dispatch:
     inputs:
       branch: {description: "branch holding vc_in.tgz", required: true}
+      clips: {description: "JSON list of wav names", required: true}
 permissions:
   contents: write
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        clip: ${{ fromJSON(inputs.clips) }}
     steps:
       - uses: actions/checkout@v4
         with: {ref: "${{ inputs.branch }}"}
-      - run: tar xzf vc_in.tgz && ls vc_in
+      - run: tar xzf vc_in.tgz
       - run: |
           git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
-          cd sv && pip install -q -r requirements.txt 2>&1 | tail -3 || true
+          cd sv && pip install -q -r requirements.txt > ../log.txt 2>&1 || true
       - run: |
           mkdir -p out
           cd sv
-          for f in ../vc_in/*.wav; do
-            n=$(basename $f); [ "$n" = "ref.wav" ] && continue
-            python inference.py --source "$f" --target ../vc_in/ref.wav --output ../out/tmp_$n --diffusion-steps 30 --length-adjust 1.0 --inference-cfg-rate 0.7 --f0-condition False --fp16 False || echo "FAIL $n"
-            g=$(ls ../out/tmp_$n/*.wav | head -1); mv "$g" ../out/$n; rm -rf ../out/tmp_$n
-          done
-          ls -la ../out
-      - env: {GH_TOKEN: "${{ github.token }}"}
+          python inference.py --source ../vc_in/${{ matrix.clip }} --target ../vc_in/ref.wav --output ../out/tmp --diffusion-steps 20 --length-adjust 1.0 --inference-cfg-rate 0.7 --f0-condition False --fp16 False >> ../log.txt 2>&1 || echo FAILED >> ../log.txt
+          g=$(ls ../out/tmp/*.wav 2>/dev/null | head -1); [ -n "$g" ] && mv "$g" ../out/${{ matrix.clip }}; rm -rf ../out/tmp
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
         run: |
-          tar czf vc_out-${{ github.run_id }}.tgz out
-          gh release upload inbox vc_out-${{ github.run_id }}.tgz --clobber
+          if [ -f out/${{ matrix.clip }} ]; then cp out/${{ matrix.clip }} vcout_${{ matrix.clip }}; gh release upload inbox vcout_${{ matrix.clip }} --clobber; fi
+          tail -c 3000 log.txt > vclog_${{ matrix.clip }}.txt; gh release upload inbox vclog_${{ matrix.clip }}.txt --clobber

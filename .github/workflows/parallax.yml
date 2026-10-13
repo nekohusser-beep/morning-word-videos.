@@ -1,0 +1,16 @@
+name: parallax
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q transformers pillow opencv-python-headless numpy
+      - run: python parallax.py
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          tar czf anim-${{ github.run_id }}.tgz anim
+          gh release upload inbox anim-${{ github.run_id }}.tgz --clobber

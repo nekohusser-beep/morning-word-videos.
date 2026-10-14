@@ -226,7 +226,8 @@ def gate(x, sr=48000, rel_db=-28, pre=0.05, hold=0.11, ramp=0.025, depth_db=-32)
     g=np.convolve(g,ker,mode="same")
     return x*g
 
-BASE_AF = "highpass=f=85,afftdn=nr=14:nf=-42:tn=1,lowpass=f=11000"
+BASE_AF = "highpass=f=85,lowpass=f=11000"
+def dfn(clip): return f"{W}/clips_dfn/{clip}_DeepFilterNet3.wav"   # DeepFilterNet3 pass (GitHub Actions) removes the room echo from the Veo clips
 def tilt(x):
     S_ = np.abs(np.fft.rfft(x * np.hanning(len(x)))) ** 2; f_ = np.fft.rfftfreq(len(x), 1 / SR)
     return 10 * np.log10(S_[(f_ > 2000) & (f_ < 6000)].sum() / S_[(f_ > 100) & (f_ < 1000)].sum())
@@ -234,14 +235,13 @@ raw_ = {}
 for k in ORDER:
     clip, s, e, ge, gap = CLIP[k]
     a = max(0.0, s - LEAD); b = min(7.98, e + TAIL)
-    raw_[k] = (a, b, tilt(load(f"{W}/clips/{clip}.mp4", a, b, BASE_AF)))
+    raw_[k] = (a, b, tilt(load(dfn(clip), a, b, BASE_AF)))
 t_med = float(np.median([v[2] for v in raw_.values()]))
 for k in ORDER:
     clip, s, e, ge, gap = CLIP[k]
     a, b, tl_ = raw_[k]
     g_sh = max(-3.0, min(3.0, 0.65 * (t_med - tl_)))        # pull each line's tone toward the episode's middle
-    x = load(f"{W}/clips/{clip}.mp4", a, b, BASE_AF + f",highshelf=f=2200:g={g_sh:.2f}")
-    x = gate(dereverb(x, t60=0.8 if k in ("2", "4", "8") else 0.6, floor_db=-20 if k in ("2", "4", "8") else -14), sr=SR, rel_db=-30, hold=0.09, depth_db=-30)  # 2, 4, 8 have the most room echo
+    x = load(dfn(clip), a, b, BASE_AF + f",highshelf=f=2200:g={g_sh:.2f}")
     g = TARGET / max(speech_rms(x), 1e-6)
     x = x * g
     fi = int(0.012 * SR); fo = int(0.06 * SR)

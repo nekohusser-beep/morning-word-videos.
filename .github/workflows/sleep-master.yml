@@ -104,8 +104,17 @@ jobs:
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
           cd work
-          gh release view "${{ inputs.out_tag }}" -R ${{ github.repository }} >/dev/null 2>&1 || \
-            gh release create "${{ inputs.out_tag }}" -R ${{ github.repository }} --prerelease -t "${{ inputs.out_tag }}" -n "Sleep Bible video"
-          gh release upload "${{ inputs.out_tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" -R ${{ github.repository }} --clobber
-          flac -s --best -o "${{ inputs.name }}-master.flac" master.wav 2>/dev/null || ffmpeg -v error -i master.wav -c:a flac "${{ inputs.name }}-master.flac"
-          gh release upload "${{ inputs.tag }}" "${{ inputs.name }}-master.flac" -R ${{ github.repository }} --clobber
+          while IFS= read -r l; do echo "::notice::$l"; done < check.txt
+          R=${{ github.repository }}
+          ok=0
+          if gh release view "${{ inputs.out_tag }}" -R $R >/dev/null 2>&1 || \
+             gh release create "${{ inputs.out_tag }}" -R $R --prerelease -t "${{ inputs.out_tag }}" -n "Sleep Bible video" 2> cr.err; then
+            gh release upload "${{ inputs.out_tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" -R $R --clobber 2> up.err && ok=1
+          fi
+          [ $ok = 1 ] || echo "::warning::public release failed: $(cat cr.err up.err 2>/dev/null | head -c 400 | tr '\n' ' ')"
+          for t in 1 2 3; do
+            gh release upload "${{ inputs.tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" -R $R --clobber 2> up2.err && break
+            sleep 20
+          done || true
+          [ -s up2.err ] && echo "::warning::draft upload: $(head -c 300 up2.err | tr '\n' ' ')" || true
+          echo "::notice::published=$ok"

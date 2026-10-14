@@ -1,0 +1,75 @@
+name: sleep-render
+on:
+  workflow_dispatch:
+    inputs:
+      book: {description: "Bible book file name, e.g. Psalms", required: true}
+      title: {description: "Spoken title", required: true}
+      voice: {description: "Kokoro voice", required: true, default: "af_nicole"}
+      tag: {description: "draft release tag for outputs", required: true}
+      chunks: {description: "number of parallel chunks", required: true, default: "10"}
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      idx: ${{ steps.p.outputs.idx }}
+    steps:
+      - id: p
+        run: python3 -c "import json;print('idx='+json.dumps(list(range(int('${{ inputs.chunks }}')))))" >> $GITHUB_OUTPUT
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        i: ${{ fromJson(needs.plan.outputs.idx) }}
+    steps:
+      - run: |
+          pip install -q kokoro-onnx soundfile
+          curl -sSL -o kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sSL -o voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+          curl -sSL -o book.json "https://raw.githubusercontent.com/aruljohn/Bible-kjv/master/${{ inputs.book }}.json"
+          sudo apt-get -qq install -y flac >/dev/null
+      - name: Render chunk
+        run: |
+          python3 - <<'PY'
+          import json, os, numpy as np, soundfile as sf
+          from kokoro_onnx import Kokoro
+          book = "${{ inputs.book }}"; title = "${{ inputs.title }}"; voice = "${{ inputs.voice }}"
+          i = int("${{ matrix.i }}"); N = int("${{ inputs.chunks }}")
+          label = "Psalm" if book == "Psalms" else "Chapter"
+          k = Kokoro("kokoro-v1.0.onnx", "voices-v1.0.bin")
+          d = json.load(open("book.json"))
+          chs = d["chapters"]
+          # balance chunks by word count
+          wc = [sum(len(v["text"].split()) for v in c["verses"]) for c in chs]
+          total = sum(wc); target = total / N; bounds = []; acc = 0; cur = 0
+          owner = []
+          for w in wc:
+              owner.append(min(cur, N - 1)); acc += w
+              if acc >= target * (cur + 1): cur += 1
+          SR = 24000
+          sil = lambda s: np.zeros(int(SR * s), dtype=np.float32)
+          def say(t):
+              a, _ = k.create(t, voice=voice, speed=0.82, lang="en-us"); return a.astype(np.float32)
+          os.makedirs("out", exist_ok=True)
+          if i == 0:
+              sf.write("out/000.flac", np.concatenate([sil(2), say(title + ". King James Version."), sil(4)]), SR)
+          for c, o in zip(chs, owner):
+              if o != i: continue
+              n = int(c["chapter"])
+              parts = [say(f"{label} {n}."), sil(3.5)]
+              for v in c["verses"]:
+                  parts += [say(v["text"].strip()), sil(2.5)]
+              parts.append(sil(1.0))
+              sf.write(f"out/{n:03d}.flac", np.concatenate(parts), SR)
+              print("done", n, flush=True)
+          PY
+      - name: Upload
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh release view "${{ inputs.tag }}" -R ${{ github.repository }} >/dev/null 2>&1 || gh release create "${{ inputs.tag }}" -R ${{ github.repository }} --draft -t "${{ inputs.tag }}" -n render || true
+          sleep $(( ${{ matrix.i }} * 3 ))
+          gh release upload "${{ inputs.tag }}" out/*.flac -R ${{ github.repository }} --clobber

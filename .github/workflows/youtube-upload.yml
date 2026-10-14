@@ -1,0 +1,52 @@
+name: youtube-upload
+# Uploads a video straight to the Blessed Prayers YouTube channel with the YouTube Data API
+# (for long videos Buffer can't carry). Needs three repo secrets from a one-time Google sign-in:
+# YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN.
+on:
+  workflow_dispatch:
+    inputs:
+      video_url: {description: "public URL of the MP4", required: true}
+      meta_path: {description: "repo path of JSON with title, description, tags", required: true}
+      privacy: {description: "private, unlisted or public", required: true, default: "private"}
+      publish_at: {description: "optional ISO time to go public (needs privacy=private)", required: false, default: ""}
+      thumbnail_path: {description: "optional repo path of thumbnail image", required: false, default: ""}
+permissions:
+  contents: read
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          pip install -q google-api-python-client google-auth
+          curl -sSfL -o video.mp4 "${{ inputs.video_url }}"
+          python3 - <<'PY'
+          import json, os
+          from google.oauth2.credentials import Credentials
+          from googleapiclient.discovery import build
+          from googleapiclient.http import MediaFileUpload
+          c = Credentials(None, refresh_token=os.environ["YT_REFRESH_TOKEN"], token_uri="https://oauth2.googleapis.com/token",
+                          client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"])
+          yt = build("youtube", "v3", credentials=c)
+          m = json.load(open("${{ inputs.meta_path }}"))
+          status = {"privacyStatus": "${{ inputs.privacy }}", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True}
+          if "${{ inputs.publish_at }}": status["publishAt"] = "${{ inputs.publish_at }}"
+          body = {"snippet": {"title": m["title"], "description": m["description"], "tags": m.get("tags", []),
+                              "categoryId": m.get("categoryId", "22")}, "status": status}
+          req = yt.videos().insert(part="snippet,status", body=body,
+                                   media_body=MediaFileUpload("video.mp4", chunksize=64 * 1024 * 1024, resumable=True))
+          resp = None
+          while resp is None:
+              st, resp = req.next_chunk()
+              if st: print(f"{int(st.progress() * 100)}%", flush=True)
+          vid = resp["id"]; print("VIDEO", vid, "https://youtu.be/" + vid)
+          if "${{ inputs.thumbnail_path }}":
+              yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload("${{ inputs.thumbnail_path }}")).execute()
+              print("thumbnail set")
+          PY

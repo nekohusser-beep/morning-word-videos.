@@ -30,22 +30,33 @@ jobs:
       - name: Setup
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
+          sleep $(( ${{ matrix.i }} * 4 ))
           sudo apt-get -qq install -y ffmpeg >/dev/null
-          pip install -q faster-whisper==1.0.3
-          curl -sSL -o book.json "https://raw.githubusercontent.com/aruljohn/Bible-kjv/master/${{ inputs.book }}.json"
+          pip install -q faster-whisper==1.0.3 2>&1 | tail -1 || true
+          curl -sSL --retry 5 -o book.json "https://raw.githubusercontent.com/aruljohn/Bible-kjv/master/${{ inputs.book }}.json"
           mkdir -p flac
-          gh release download "${{ inputs.tag }}" -R ${{ github.repository }} -p '*.flac' -D flac
-          ls flac | wc -l
+          R=${{ github.repository }}
+          RID=$(gh api "repos/$R/releases?per_page=100" --jq '.[]|select(.tag_name=="${{ inputs.tag }}")|.id' | head -1)
+          (gh api --paginate "repos/$R/releases/$RID/assets?per_page=100" --jq '.[]|select(.name|endswith(".flac"))|[.name,.id]|@tsv') | sort > all.tsv
+          awk -v i=${{ matrix.i }} -v n=${{ inputs.chunks }} '(NR-1)%n==i' all.tsv > mine.tsv
+          echo "assets $(wc -l < all.tsv), mine $(wc -l < mine.tsv)"
+          while IFS=$'\t' read name id; do
+            for t in 1 2 3 4 5; do
+              gh api -H "Accept: application/octet-stream" "repos/$R/releases/assets/$id" > "flac/$name" && [ -s "flac/$name" ] && break
+              echo "retry $name"; sleep $((t*10))
+            done
+            [ -s "flac/$name" ] || { echo "::error::could not download $name"; exit 1; }
+          done < mine.tsv
+          python3 -c "import faster_whisper" || { echo "::error::faster-whisper import failed"; exit 1; }
       - name: Check chunk
         run: |
-          python3 - <<'PY'
+          cat > qa.py <<'PY'
           import json, os, re, subprocess, difflib
           from faster_whisper import WhisperModel
           i, N = int("${{ matrix.i }}"), int("${{ inputs.chunks }}")
           book = json.load(open("book.json"))
           chs = {int(c["chapter"]): c for c in book["chapters"]}
-          files = sorted(f for f in os.listdir("flac") if f.endswith(".flac"))
-          mine = files[i::N]
+          mine = sorted(f for f in os.listdir("flac") if f.endswith(".flac"))
           model = WhisperModel("${{ inputs.model }}", device="cpu", compute_type="int8")
           norm = lambda s: re.sub(r"[^a-z0-9' ]", " ", s.lower().replace("’", "'")).split()
           report = []
@@ -81,8 +92,13 @@ jobs:
               report.append(r)
           json.dump(report, open(f"qa-{i:02d}.json", "w"), indent=1)
           PY
+          python3 qa.py 2> err.txt || { echo "::error::$(tail -c 600 err.txt | tr '\n' ' ')"; exit 1; }
       - name: Upload report
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
-          sleep $(( ${{ matrix.i }} * 3 ))
-          gh release upload "${{ inputs.tag }}" qa-*.json -R ${{ github.repository }} --clobber
+          sleep $(( ${{ matrix.i }} * 5 ))
+          for t in 1 2 3 4 5; do
+            gh release upload "${{ inputs.tag }}" qa-*.json -R ${{ github.repository }} --clobber 2> up.err && exit 0
+            echo "retry upload: $(head -c 300 up.err)"; sleep $((t*15))
+          done
+          echo "::error::upload failed: $(head -c 300 up.err)"; exit 1

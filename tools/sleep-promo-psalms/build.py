@@ -43,7 +43,7 @@ VIS = {
  "9": ("broll", ["br_rain"]), "10": ("broll", ["br_sleeper"]),
  "11": ("cam", 1.08), "12": ("cam", 1.00), "13": ("cam", 1.08), "14": ("cam", 1.00), "15": ("cam", 1.08), "16": ("cam", 1.00),
 }
-ORDER = [str(i) for i in range(1, 17)]
+ORDER = [str(i) for i in range(1, 17) if i != 10]  # line 10 ("Ten hours") cut: the reading runs 8.8 hours
 PRE = {}   # this piece starts mid-clip, so only a sliver of picture before its first word is usable
 OPEN = 5.7333; CLOSE_LEN = 12.4667
 XF = 0.36          # crossfade into / out of B-roll

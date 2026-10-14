@@ -31,7 +31,7 @@ jobs:
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
           sudo apt-get -qq install -y ffmpeg >/dev/null
-          pip install -q faster-whisper
+          pip install -q faster-whisper==1.0.3
           curl -sSL -o book.json "https://raw.githubusercontent.com/aruljohn/Bible-kjv/master/${{ inputs.book }}.json"
           mkdir -p flac
           gh release download "${{ inputs.tag }}" -R ${{ github.repository }} -p '*.flac' -D flac

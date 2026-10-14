@@ -193,6 +193,39 @@ LEAD, TAIL = 0.08, 0.12
 _d1 = load(DAY1, 12.0, 100.0)
 TARGET = speech_rms(_d1)
 print("Day 1 speech level %.1f dBFS" % (20 * math.log10(TARGET)))
+# de-echo: Veo clips carry room reverb; suppress late reverb, then close the gaps inside each line
+def dereverb(x, t60=0.6, td=0.05, floor_db=-18, n=1024, h=256):
+    win=np.hanning(n); pad=np.concatenate([np.zeros(n),x,np.zeros(n)])
+    fr=np.lib.stride_tricks.sliding_window_view(pad,n)[::h]*win
+    X=np.fft.rfft(fr,axis=1); P=np.abs(X)**2
+    Ps=P.copy()
+    for i in range(1,len(P)): Ps[i]=0.5*Ps[i-1]+0.5*P[i]   # light smoothing
+    d=int(round(td*SR/h)); delta=3*np.log(10)/t60
+    L=np.zeros_like(P); L[d:]=np.exp(-2*delta*td)*Ps[:-d]
+    # recursive late reverb accumulation
+    a=np.exp(-2*delta*h/SR)
+    R=np.zeros_like(P)
+    for i in range(d,len(P)): R[i]=max(0,1)*np.maximum(a*R[i-1], L[i]) if False else a*R[i-1]*0+L[i]
+    G=np.maximum(1-R/(P+1e-12), 10**(floor_db/20))
+    G=np.sqrt(np.maximum(G,0)) if False else G
+    for i in range(1,len(G)): G[i]=np.maximum(G[i],0.6*G[i-1]) if False else G[i]
+    Y=X*G; y=np.fft.irfft(Y,n,axis=1)*win
+    out=np.zeros(len(pad)); norm=np.zeros(len(pad))
+    for i,f in enumerate(y): out[i*h:i*h+n]+=f; norm[i*h:i*h+n]+=win**2
+    out/=np.maximum(norm,1e-6); return out[n:n+len(x)]
+def gate(x, sr=48000, rel_db=-28, pre=0.05, hold=0.11, ramp=0.025, depth_db=-32):
+    fr=int(0.01*sr); m=len(x)//fr+1
+    xp=np.concatenate([x,np.zeros(m*fr-len(x))])
+    e=10*np.log10((xp.reshape(m,fr)**2).mean(1)+1e-14)
+    ref=np.percentile(e,97)
+    sp=e>ref+rel_db
+    a=np.zeros(m,bool); P=int(pre*100); H=int(hold*100)
+    for i in np.where(sp)[0]: a[max(0,i-P):i+H+1]=True
+    g=np.where(a,1.0,10**(depth_db/20)); g=np.repeat(g,fr)[:len(x)]
+    k=int(ramp*sr); ker=np.ones(k)/k
+    g=np.convolve(g,ker,mode="same")
+    return x*g
+
 BASE_AF = "highpass=f=85,afftdn=nr=14:nf=-42:tn=1,lowpass=f=11000"
 def tilt(x):
     S_ = np.abs(np.fft.rfft(x * np.hanning(len(x)))) ** 2; f_ = np.fft.rfftfreq(len(x), 1 / SR)
@@ -208,6 +241,7 @@ for k in ORDER:
     a, b, tl_ = raw_[k]
     g_sh = max(-3.0, min(3.0, 0.65 * (t_med - tl_)))        # pull each line's tone toward the episode's middle
     x = load(f"{W}/clips/{clip}.mp4", a, b, BASE_AF + f",highshelf=f=2200:g={g_sh:.2f}")
+    x = gate(dereverb(x, t60=0.8 if k in ("2", "4", "8") else 0.6, floor_db=-20 if k in ("2", "4", "8") else -14), sr=SR, rel_db=-30, hold=0.09, depth_db=-30)  # 2, 4, 8 have the most room echo
     g = TARGET / max(speech_rms(x), 1e-6)
     x = x * g
     fi = int(0.012 * SR); fo = int(0.06 * SR)

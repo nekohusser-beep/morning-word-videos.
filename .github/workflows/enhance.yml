@@ -23,7 +23,7 @@ jobs:
       - name: Enhance
         run: |
           mkdir -p out
-          for f in tools/enhance/in/*.wav; do deepFilter -o out "$f" >/dev/null 2>&1 || { echo "::error::failed $f"; exit 1; }; done
+          for f in tools/enhance/in/*.wav; do deepFilter -o out "$f" > df.log 2>&1 || { echo "::error::failed $f: $(tail -c 600 df.log | tr '\n' ' ')"; exit 1; }; done
           ls -la out
           cd out && zip -q ../dfn3.zip *.wav && cd ..
       - name: Publish

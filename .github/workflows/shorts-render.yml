@@ -1,0 +1,34 @@
+name: shorts-render
+# Renders a HyperFrames Short (HTML + GSAP -> MP4) for free on a GitHub runner.
+# Each Short lives in tools/shorts/<name>/ (index.html, fonts/, assets/).
+on:
+  workflow_dispatch:
+    inputs:
+      name: {description: "folder under tools/shorts", required: true, default: "psalm-4-8"}
+      tag: {description: "release to put the MP4 in", required: true, default: "shorts"}
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - name: Render
+        env: {HYPERFRAMES_SKIP_SKILLS: "1"}
+        run: |
+          sudo apt-get -qq install -y ffmpeg >/dev/null
+          cd "tools/shorts/${{ inputs.name }}"
+          npx -y hyperframes@0.8.157 telemetry disable || true
+          npx -y hyperframes@0.8.157 browser ensure
+          npx -y hyperframes@0.8.157 lint
+          npx -y hyperframes@0.8.157 render -o "out/${{ inputs.name }}-short.mp4" --quality delivery
+          ffmpeg -v error -i "out/${{ inputs.name }}-short.mp4" -f null - && echo "::notice::decode ok"
+          ffmpeg -hide_banner -nostats -i "out/${{ inputs.name }}-short.mp4" -af ebur128 -f null - 2>&1 | grep -E "I:" | tail -1 | sed 's/^/::notice::loudness /'
+      - name: Publish
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          bash tools/rel.sh ensure "${{ inputs.tag }}" public > /dev/null
+          bash tools/rel.sh up "${{ inputs.tag }}" "tools/shorts/${{ inputs.name }}/out/${{ inputs.name }}-short.mp4"

@@ -1,0 +1,111 @@
+name: sleep-master
+# Joins the rendered chapters, masters per the Sleep Bible kit, checks the result,
+# and builds the black-screen MP4. Outputs go to a published release so they have a public URL.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "release tag holding the FLACs", required: true}
+      out_tag: {description: "published release for the finished video", required: true}
+      name: {description: "output file base name", required: true}
+      title_frame: {description: "path in repo to the title frame PNG", required: true}
+permissions:
+  contents: write
+jobs:
+  master:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: "sleep/kit"}
+      - name: Setup and pull chapters
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          sudo apt-get -qq install -y ffmpeg >/dev/null
+          mkdir -p flac work
+          gh release download "${{ inputs.tag }}" -R ${{ github.repository }} -p '*.flac' -D flac
+          ls flac | sort > work/list.txt; wc -l work/list.txt
+          for f in $(cat work/list.txt); do echo "file '$PWD/flac/$f'"; done > work/concat.txt
+      - name: Join and process voice
+        run: |
+          cd work
+          CHAIN="aresample=48000,highpass=f=80,equalizer=f=3000:t=q:w=1.5:g=-3,highshelf=f=8000:g=-3,acompressor=threshold=-24dB:ratio=2:attack=30:release=250:makeup=1"
+          ffmpeg -hide_banner -nostats -f concat -safe 0 -i concat.txt -af "$CHAIN,loudnorm=I=-18:LRA=3.5:TP=-2:print_format=json" -f null - 2> ln1.txt
+          python3 - <<'PY'
+          import json,re
+          t=open("ln1.txt").read(); j=json.loads(t[t.rindex("{"):t.rindex("}")+1])
+          open("ln2.txt","w").write("loudnorm=I=-18:LRA=3.5:TP=-2:linear=true:measured_I=%s:measured_LRA=%s:measured_TP=%s:measured_thresh=%s:offset=%s" % (j["input_i"],j["input_lra"],j["input_tp"],j["input_thresh"],j["target_offset"]))
+          print(j)
+          PY
+          ffmpeg -v error -f concat -safe 0 -i concat.txt -af "$CHAIN,$(cat ln2.txt),aresample=48000" -ac 1 -c:a pcm_s24le voice.wav
+          ffprobe -v error -show_entries format=duration -of csv=p=0 voice.wav | tee vdur.txt
+      - name: Beds (rain 14 dB under voice, brown noise at -52 dBFS)
+        run: |
+          cd work
+          RAIN="highpass=f=250,lowpass=f=4500,tremolo=f=0.13:d=0.12"
+          ffmpeg -hide_banner -nostats -f lavfi -i "anoisesrc=color=pink:sample_rate=48000:amplitude=0.5:seed=7" -t 600 -af "$RAIN,ebur128" -f null - 2> rain_meas.txt
+          python3 -c "import re;t=open('rain_meas.txt').read().split('Summary:')[-1];I=float(re.search(r'I:\s*(-?[\d.]+)',t).group(1));print(round(-32-I,2))" > rain_gain.txt
+          echo "rain gain $(cat rain_gain.txt) dB"
+      - name: Mix, decay, tail
+        run: |
+          cd work
+          V=$(cat vdur.txt); T=$(python3 -c "print(round($V+900,3))"); echo $T > tdur.txt
+          D0=$(python3 -c "print($T-2700)")
+          # 45-minute decay: -0.5 dB every 5 minutes; last 15 minutes rain + bed only, fading to zero at the final second
+          G=$(cat rain_gain.txt)
+          ffmpeg -v error -i voice.wav \
+            -f lavfi -i "anoisesrc=color=pink:sample_rate=48000:amplitude=0.5:seed=7:duration=$T" \
+            -f lavfi -i "anoisesrc=color=brown:sample_rate=48000:amplitude=1:seed=3:duration=$T" -filter_complex \
+            "[0]apad=whole_dur=$T[v];[1]highpass=f=250,lowpass=f=4500,tremolo=f=0.13:d=0.12,volume=${G}dB,afade=t=in:d=4[r];[2]volume=-52dB[b];\
+             [v][r][b]amix=inputs=3:normalize=0:duration=first,\
+             volume='if(gt(t,$D0),pow(10,-0.5*(floor((t-$D0)/300)+1)/20),1)':eval=frame,\
+             afade=t=out:st=$(python3 -c "print($T-900)"):d=900,alimiter=limit=0.79:level=false[o]" \
+            -map "[o]" -t $T -ar 48000 -c:a pcm_s16le master.wav
+          ls -la master.wav
+      - name: Check master
+        run: |
+          cd work
+          ffmpeg -v error -i master.wav -f null - 2> decode.txt; echo "decode errors: $(wc -c < decode.txt) bytes"
+          ffmpeg -hide_banner -nostats -v verbose -i master.wav -af ebur128=peak=true:framelog=verbose -f null - 2> ebu.txt
+          ffmpeg -hide_banner -nostats -i voice.wav -af silencedetect=n=-50dB:d=8 -f null - 2> sil.txt
+          python3 - <<'PY' | tee check.txt
+          import re
+          T=float(open("tdur.txt").read()); V=float(open("vdur.txt").read())
+          S=[];
+          for line in open("ebu.txt"):
+              m=re.search(r"t:\s*([\d.]+).*?M:\s*(-?[\d.]+)\s+S:\s*(-?[\d.]+)",line)
+              if m: S.append((float(m.group(1)),float(m.group(3)),float(m.group(2))))
+          summ=open("ebu.txt").read().split("Summary:")[-1]
+          I=float(re.search(r"I:\s*(-?[\d.]+)",summ).group(1)); LRA=float(re.search(r"LRA:\s*([\d.]+)",summ).group(1))
+          pk=re.search(r"Peak:\s*(-?[\d.]+)",summ); pk=float(pk.group(1)) if pk else None
+          voice=[x for x in S if 60<x[0]<V-60]
+          hot=sum(1 for x in voice if x[1]>I+6)/10
+          # spikes: momentary loudness more than 8 LU above the programme level while the voice is running
+          jumps=[(round(x[0]),x[2]) for x in voice if x[2]>I+8]
+          sil=[float(x) for x in re.findall(r"silence_duration: ([\d.]+)",open("sil.txt").read())]
+          print(f"runtime {T/3600:.2f} h (voice {V/3600:.2f} h)")
+          print(f"integrated {I} LUFS, LRA {LRA} LU, true peak {pk} dBFS")
+          print(f"seconds louder than integrated+6: {hot}; momentary spikes >8 LU over: {len(jumps)} {jumps[:10]}")
+          print(f"voice gaps over 8 s: {len(sil)} {sil[:10]}")
+          print(f"last-minute level: {[x[1] for x in S if x[0]>T-60][::100]}")
+          PY
+      - name: Build video
+        run: |
+          cd work
+          T=$(cat tdur.txt)
+          ffmpeg -v error -loop 1 -framerate 1 -t 60 -i "$GITHUB_WORKSPACE/${{ inputs.title_frame }}" \
+            -f lavfi -t $(python3 -c "print($T-60)") -i "color=c=black:s=1920x1080:r=1" -i master.wav \
+            -filter_complex "[0]scale=1920:1080,format=yuv420p,fade=t=out:st=52:d=8[a];[1]format=yuv420p[b];[a][b]concat=n=2:v=1:a=0[v]" \
+            -map "[v]" -map 2:a -c:v libx264 -preset veryslow -tune stillimage -crf 30 -r 1 -g 300 \
+            -c:a aac -b:a 128k -ac 1 -movflags +faststart -shortest "${{ inputs.name }}.mp4"
+          ffmpeg -v error -i "${{ inputs.name }}.mp4" -f null - 2> vdecode.txt; echo "video decode errors: $(wc -c < vdecode.txt) bytes"
+          ffprobe -v error -show_entries format=duration,size -of default=nw=1 "${{ inputs.name }}.mp4" | tee -a check.txt
+          cp check.txt "${{ inputs.name }}-check.txt"
+      - name: Publish
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          cd work
+          gh release view "${{ inputs.out_tag }}" -R ${{ github.repository }} >/dev/null 2>&1 || \
+            gh release create "${{ inputs.out_tag }}" -R ${{ github.repository }} --prerelease -t "${{ inputs.out_tag }}" -n "Sleep Bible video"
+          gh release upload "${{ inputs.out_tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" -R ${{ github.repository }} --clobber
+          flac -s --best -o "${{ inputs.name }}-master.flac" master.wav 2>/dev/null || ffmpeg -v error -i master.wav -c:a flac "${{ inputs.name }}-master.flac"
+          gh release upload "${{ inputs.tag }}" "${{ inputs.name }}-master.flac" -R ${{ github.repository }} --clobber

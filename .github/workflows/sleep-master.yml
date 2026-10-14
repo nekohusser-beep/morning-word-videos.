@@ -39,10 +39,10 @@ jobs:
           PY
           ffmpeg -v error -f concat -safe 0 -i concat.txt -af "$CHAIN,$(cat ln2.txt),aresample=48000" -ac 1 -c:a pcm_s24le voice.wav
           ffprobe -v error -show_entries format=duration -of csv=p=0 voice.wav | tee vdur.txt
-      - name: Beds (rain 14 dB under voice, brown noise at -52 dBFS)
+      - name: Beds (ocean-wave bed 14 dB under voice, brown noise at -52 dBFS)
         run: |
           cd work
-          RAIN="highpass=f=250,lowpass=f=4500,tremolo=f=0.13:d=0.12"
+          RAIN="highpass=f=250,lowpass=f=4500,tremolo=f=0.13:d=0.12"  # this bed sounds like peaceful crashing waves (slow swell), labelled as waves
           ffmpeg -hide_banner -nostats -f lavfi -i "anoisesrc=color=pink:sample_rate=48000:amplitude=0.5:seed=7" -t 600 -af "$RAIN,ebur128" -f null - 2> rain_meas.txt
           python3 -c "import re;t=open('rain_meas.txt').read().split('Summary:')[-1];I=float(re.search(r'I:\s*(-?[\d.]+)',t).group(1));print(round(-32-I,2))" > rain_gain.txt
           echo "rain gain $(cat rain_gain.txt) dB"

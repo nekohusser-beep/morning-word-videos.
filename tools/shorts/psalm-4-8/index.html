@@ -30,8 +30,8 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="24" data-width="1080" data-height="1920">
-      <audio id="bed" class="clip" src="assets/mix.m4a" data-start="0" data-duration="24" data-has-audio="true"></audio>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="27" data-width="1080" data-height="1920">
+      <audio id="bed" class="clip" src="assets/mix.m4a" data-start="0" data-duration="27" data-has-audio="true"></audio>
       <div id="glow"></div>
       <div id="rain"></div>
       <div id="eyebrow">FOR NIGHTS THE MIND WON'T REST</div>
@@ -45,8 +45,8 @@
     <script>
       // narration timing from the rendered voice track (seconds)
       const LINES = [
-        { text: "“I will both lay me down in peace, and sleep:", start: 2.0, end: 6.54 },
-        { text: "for thou, LORD, only makest me dwell in safety.”", start: 7.74, end: 12.78 },
+        { text: "“I will both lay me down in peace, and sleep:", start: 1.5, end: 6.04 },
+        { text: "for thou, LORD, only makest me dwell in safety.”", start: 7.04, end: 12.08 },
       ];
       const verse = document.getElementById("verse");
       const words = [];
@@ -75,17 +75,17 @@
 
       const tl = gsap.timeline({ paused: true });
       drops.forEach(({ d, speed, off }) => {
-        tl.fromTo(d, { y: 0 }, { y: 2300, duration: speed, ease: "none", repeat: Math.ceil(24 / speed) + 1 }, -off);
+        tl.fromTo(d, { y: 0 }, { y: 2300, duration: speed, ease: "none", repeat: Math.ceil(27 / speed) + 1 }, -off);
       });
-      tl.fromTo("#glow", { scale: 0.92, opacity: 0.7 }, { scale: 1.06, opacity: 1, duration: 12, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      tl.fromTo("#glow", { scale: 0.92, opacity: 0.7 }, { scale: 1.06, opacity: 1, duration: 13.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
       tl.fromTo("#eyebrow", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.0, ease: "power2.out" }, 0.3);
       tl.fromTo("#rule1", { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.8, ease: "power2.out" }, 0.6);
       words.forEach(({ el, t }) => tl.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, t));
-      tl.fromTo("#ref", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" }, 13.3);
-      tl.to("#verse", { opacity: 0.55, duration: 1.2, ease: "sine.inOut" }, 15.4);
-      tl.fromTo("#cta", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }, 15.8);
-      tl.to("#fade", { opacity: 0.85, duration: 2.6, ease: "sine.in" }, 21.4);
-      tl.set({}, {}, 24);
+      tl.fromTo("#ref", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" }, 13.0);
+      tl.to("#verse", { opacity: 0.55, duration: 1.2, ease: "sine.inOut" }, 15.8);
+      tl.fromTo("#cta", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }, 16.4);
+      tl.to("#fade", { opacity: 0.85, duration: 1.8, ease: "sine.in" }, 25.2);
+      tl.set({}, {}, 27);
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
       tl.seek(0);

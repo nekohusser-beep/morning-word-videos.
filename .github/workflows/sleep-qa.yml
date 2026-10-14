@@ -27,6 +27,8 @@ jobs:
       matrix:
         i: ${{ fromJson(needs.plan.outputs.idx) }}
     steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: tools}
       - name: Setup
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
@@ -97,8 +99,4 @@ jobs:
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
           sleep $(( ${{ matrix.i }} * 5 ))
-          for t in 1 2 3 4 5; do
-            gh release upload "${{ inputs.tag }}" qa-*.json -R ${{ github.repository }} --clobber 2> up.err && exit 0
-            echo "retry upload: $(head -c 300 up.err)"; sleep $((t*15))
-          done
-          echo "::error::upload failed: $(head -c 300 up.err)"; exit 1
+          bash tools/rel.sh up "${{ inputs.tag }}" qa-*.json 2> up.err || { echo "::error::upload failed: $(head -c 300 up.err)"; exit 1; }

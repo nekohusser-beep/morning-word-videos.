@@ -16,14 +16,15 @@ jobs:
     timeout-minutes: 340
     steps:
       - uses: actions/checkout@v4
-        with: {sparse-checkout: "sleep/kit"}
+        with: {sparse-checkout: "sleep/kit\ntools"}
       - name: Setup and pull chapters
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
           sudo apt-get -qq install -y ffmpeg >/dev/null
           mkdir -p flac work
-          gh release download "${{ inputs.tag }}" -R ${{ github.repository }} -p '*.flac' -D flac
-          ls flac | sort > work/list.txt; wc -l work/list.txt
+          bash tools/rel.sh down "${{ inputs.tag }}" flac '\.flac' || { echo "::error::chapter download failed"; exit 1; }
+          ls flac | grep -E '^[0-9]{3}\.flac$' > /dev/null
+          ls flac | grep -E '^[0-9]{3}\.flac$' | sort > work/list.txt; wc -l work/list.txt
           for f in $(cat work/list.txt); do echo "file '$PWD/flac/$f'"; done > work/concat.txt
       - name: Join and process voice
         run: |
@@ -105,16 +106,10 @@ jobs:
         run: |
           cd work
           while IFS= read -r l; do echo "::notice::$l"; done < check.txt
-          R=${{ github.repository }}
-          ok=0
-          if gh release view "${{ inputs.out_tag }}" -R $R >/dev/null 2>&1 || \
-             gh release create "${{ inputs.out_tag }}" -R $R --prerelease -t "${{ inputs.out_tag }}" -n "Sleep Bible video" 2> cr.err; then
-            gh release upload "${{ inputs.out_tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" -R $R --clobber 2> up.err && ok=1
+          REL="$GITHUB_WORKSPACE/tools/rel.sh"
+          if bash $REL ensure "${{ inputs.out_tag }}" public > id.txt 2> cr.err && bash $REL up "${{ inputs.out_tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" 2> up.err; then
+            echo "::notice::public release ${{ inputs.out_tag }} id $(cat id.txt)"
+          else
+            echo "::warning::public release failed: $(cat cr.err up.err 2>/dev/null | head -c 400 | tr '\n' ' ')"
+            bash $REL up "${{ inputs.tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" || { echo "::error::all uploads failed"; exit 1; }
           fi
-          [ $ok = 1 ] || echo "::warning::public release failed: $(cat cr.err up.err 2>/dev/null | head -c 400 | tr '\n' ' ')"
-          for t in 1 2 3; do
-            gh release upload "${{ inputs.tag }}" "${{ inputs.name }}.mp4" "${{ inputs.name }}-check.txt" -R $R --clobber 2> up2.err && break
-            sleep 20
-          done || true
-          [ -s up2.err ] && echo "::warning::draft upload: $(head -c 300 up2.err | tr '\n' ' ')" || true
-          echo "::notice::published=$ok"

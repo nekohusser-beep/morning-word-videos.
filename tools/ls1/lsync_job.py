@@ -54,7 +54,7 @@ def samp():
         time.sleep(3)
 th = threading.Thread(target=samp, daemon=True); th.start()
 t = time.time()
-env = dict(os.environ); env['PYTHONPATH'] = W + '/LatentSync'; env['CUDA_VISIBLE_DEVICES'] = '0'
+env = dict(os.environ); env['PYTHONPATH'] = W + '/LatentSync'; env['CUDA_VISIBLE_DEVICES'] = '0'; env['MPLBACKEND'] = 'agg'
 cmd = ('cd LatentSync && %s -m scripts.inference --unet_config_path configs/unet/stage2.yaml '
        '--inference_ckpt_path checkpoints/latentsync_unet.pt --inference_steps 20 --guidance_scale 1.5 '
        '--enable_deepcache --video_path %s/base_t01_32s.mp4 --audio_path %s/narr_test.wav '

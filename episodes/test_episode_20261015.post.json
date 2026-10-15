@@ -1,8 +1,8 @@
 {
  "step_s": {
-  "3_histogram_match": 21.2,
-  "4_interpolate_and_mux": 159.9,
-  "5_captions": 24.6,
+  "3_histogram_match": 21.1,
+  "4_interpolate_and_mux": 161.9,
+  "5_captions": 16.5,
   "6_loudnorm": 4.6
  },
  "frames": 513,
@@ -11,14 +11,14 @@
   400
  ],
  "drift_raw": {
-  "sweater_first_to_last_pct": -11.47,
-  "sweater_worst_vs_first_pct": -22.24,
-  "wholeframe_first_to_last_pct": -9.32
+  "sweater_first_to_last_pct": -12.46,
+  "sweater_worst_vs_first_pct": -22.81,
+  "wholeframe_first_to_last_pct": -9.37
  },
  "drift_hm": {
-  "sweater_first_to_last_pct": -0.16,
-  "sweater_worst_vs_first_pct": -2.57,
-  "wholeframe_first_to_last_pct": 0.07
+  "sweater_first_to_last_pct": -0.4,
+  "sweater_worst_vs_first_pct": -2.06,
+  "wholeframe_first_to_last_pct": 0.05
  },
  "narration_s": 28.92,
  "trim_s": 29.62,
@@ -35,16 +35,16 @@
  "caption_vs_audio_onset_ms": null,
  "burn_try_ffmpeg": [
   183,
-  "izing filters\n[vost#0:0/libx264 @ 0x5aeffbba6500] Error initializing a simple filtergraph\nError opening output file captioned.mp4.\nError opening output files: Invalid data found when processing input\n"
+  "izing filters\n[vost#0:0/libx264 @ 0x5bd4ed8c1940] Error initializing a simple filtergraph\nError opening output file captioned.mp4.\nError opening output files: Invalid data found when processing input\n"
  ],
  "burn_try_ffmpeg-linux-x86_64-v7.0.2": [
   183,
-  "tializing filters\n[vost#0:0/libx264 @ 0x1c826780] Error initializing a simple filtergraph\nError opening output file captioned.mp4.\nError opening output files: Invalid data found when processing input\n"
+  "tializing filters\n[vost#0:0/libx264 @ 0x3b25cb40] Error initializing a simple filtergraph\nError opening output file captioned.mp4.\nError opening output files: Invalid data found when processing input\n"
  ],
  "burn_method": "PIL overlay fallback",
  "loudnorm_pass1": {
-  "input_i": "-15.73",
-  "input_tp": "0.21",
+  "input_i": "-15.74",
+  "input_tp": "0.15",
   "input_lra": "4.40",
   "input_thresh": "-26.24",
   "output_i": "-15.14",
@@ -63,5 +63,5 @@
   "r_frame_rate": "30/1"
  },
  "final_duration_s": 29.6,
- "final_bytes": 6380409
+ "final_bytes": 6306953
 }

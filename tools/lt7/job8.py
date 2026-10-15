@@ -125,7 +125,7 @@ rep = {'dtype: "bf16"': 'dtype: "fp16"',
        'image_path: examples/inference/example1.jpg': 'image_path: %s/still.png' % W,
        'audio_path: examples/inference/example1.wav': 'audio_path: %s/clipA.wav' % W,
        'prompt: "A realistic video of a person speaking directly to the camera. The individual maintains steady eye contact with clear, expressive facial features. Their facial expressions are naturally animated and emotionally engaging, with precise lip movements perfectly synchronized to their speech."':
-           'prompt: "A realistic video of a man speaking directly to the camera, warm and alive. He maintains steady eye contact, blinks naturally, and his face is animated and emotionally engaging: eyebrows lift, he nods and tilts his head as he talks, smiles warmly, with precise lip movements perfectly synchronized to his speech. The camera remains steady."',
+           'prompt: "A realistic video of a man speaking directly to the camera in a relaxed, natural way. His eyes stay open and steady on the lens with calm eye contact, eyebrows relaxed, only small natural blinks. His lips form clear natural speech shapes in sync with the audio. His head stays mostly still with small slight nods, shoulders relaxed. The camera remains steady."',
        'image_sizes_720: [[512,512]]': 'image_sizes_720: [[400,720],[720,720],[720,400]]'}
 for a, b in rep.items():
     if a not in cfg:

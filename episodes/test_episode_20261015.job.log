@@ -1,0 +1,29 @@
+21:11:09 job8 start
+21:11:09 df: Filesystem      Size  Used Avail Use% Mounted on | /dev/loop2       20G   70M   20G   1% /kaggle/working | overlay         8.0T  7.0T  1.1T  88% / | 
+21:11:13 pip rc=0 
+21:11:13 inputs: -rw-r--r-- 1 root root  156878 Oct 15 20:54 /kaggle/working/clipA.wav | -rw-r--r-- 1 root root 1276259 Oct 15 20:54 /kaggle/working/still.png | -rw-r--r-- 1 root root  836798 Oct 15 20:54 /kaggle/working/voice.mp3 | 
+21:11:13 free /kaggle/temp = 1130.3 GB
+21:11:13 free /tmp = 1130.3 GB
+21:11:13 free /kaggle/working = 20.9 GB
+21:11:13 download root /kaggle/temp/dl
+21:11:13 add_patch rc=0
+21:11:13 Wan base DOWNLOADED 0s: ['Wan2.1_VAE.pth', 'models_t5_umt5-xxl-enc-bf16.pth', 'config.json', 'google', '.cache']
+21:11:13 wav2vec downloaded
+21:11:13 LiveTalk files: .gitattributes=0.00GB, README.md=0.00GB, assets/livetalk_icon.png=0.00GB, assets/overview.png=0.00GB, config.json=0.00GB, model.safetensors=5.68GB
+21:11:13 LiveTalk checkpoint ready in 0s: ['assets', 'config.json', 'README.md', 'model.safetensors', '.gitattributes', '.cache']
+21:11:13 config written; still=True clipA=True
+21:11:14 ref10: 
+21:11:27 cb install rc=0 ━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.5/108.5 kB 5.9 MB/s eta 0:00:00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.4/226.4 kB 12.3 MB/s eta 0:00:00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.4/34.4 MB 44.7 MB/s eta 0:00:00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 46.7 MB/s eta 0:00:00 
+21:13:35 tts try 0 rc=0 tail=Sampling:   2%|▏         | 23/1000 [00:00<00:30, 31.75it/s]Sampling:   3%|▎         | 27/1000 [00:00<00:30, 32.22it/s]Sampling:   3%|▎         | 31/1000 [00:00<00:29, 32.30it/s]Sampling:   4%|▎         | 35/1000 [00:01<00:30, 31.74it/s]Sampling:   4%|▍         | 38/1000 [00:01<00:30, 31.44it/s] | 
+21:13:35 TTS ok=True in 141s
+21:13:35 tts_stage rc=0 
+21:13:35 narration 29.64 s (source tts_raw.wav) -> video_duration 32
+21:13:35 narr.wav: -rw-r--r-- 1 root root 1024078 Oct 15 21:13 /kaggle/working/narr.wav
+21:13:35 narration stage done
+21:13:35 RUN START (setup took 147s)
+21:25:27 RUN END rc=0 wall=11.87 min
+21:25:40 post deps rc=0 account all the packages that are installed. This behaviour is the source of the following dependency conflicts. dopamine-rl 4.1.2 requires gym<=0.25.2, but you have gym 0.26.2 which is incompatible. 
+21:25:40 POST START
+21:29:17 POST rc=0 : "-26.42", |   "output_i": "-15.17", |   "output_tp": "-1.50", |   "output_lra": "1.50", |   "output_thresh": "-25.74", |   "normalization_type": "dynamic", |   "target_offset": "1.17" |  }, |  "loudnorm_rc": 0, |  "final_loudness_lufs": -14.7, |  "final_true_peak_dbfs": -1.4, |  "final_video": { |   "width": 400, |   "height": 720, |   "r_frame_rate": "30/1" |  }, |  "final_duration_s": 30.4, |  "final_bytes": 6783556 | } | Multiple -pix_fmt options specified for stream 0, only the last option '-pix_fmt yuv420p' will be used. | Multiple -pix_fmt options specified for stream 0, only the last option '-pix_fmt yuv420p' will be used. | 
+21:29:17 job8 done total 18.1 min; download 0s
+21:29:17 PUSH START

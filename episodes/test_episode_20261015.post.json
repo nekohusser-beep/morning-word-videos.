@@ -1,0 +1,67 @@
+{
+ "step_s": {
+  "3_histogram_match": 21.6,
+  "4_interpolate_and_mux": 165.9,
+  "5_captions": 24.4,
+  "6_loudnorm": 4.8
+ },
+ "frames": 513,
+ "hw": [
+  720,
+  400
+ ],
+ "drift_raw": {
+  "sweater_first_to_last_pct": -13.01,
+  "sweater_worst_vs_first_pct": -22.66,
+  "wholeframe_first_to_last_pct": -11.74
+ },
+ "drift_hm": {
+  "sweater_first_to_last_pct": 1.11,
+  "sweater_worst_vs_first_pct": 2.5,
+  "wholeframe_first_to_last_pct": 0.1
+ },
+ "narration_s": 29.64,
+ "trim_s": 30.34,
+ "interp_rc": 0,
+ "interp_err": "",
+ "mux_rc": 0,
+ "mux_err": "",
+ "whisper_error": "ate)\n  File \"/usr/local/lib/python3.13/dist-packages/faster_whisper/audio.py\", line 46, in decode_audio\n    with av.open(input_file, mode=\"r\", metadata_errors=\"ignore\") as container:\n         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"av/container/core.py\", line 479, in av.container.core.open\n    def open(\nTypeError: open() got an unexpected keyword argument 'metadata_errors'\n",
+ "whisper_words": 0,
+ "whisper_text": "",
+ "cues": 0,
+ "speech_onset_s": 0.18,
+ "first_cue_start_s": null,
+ "caption_vs_audio_onset_ms": null,
+ "burn_try_ffmpeg": [
+  183,
+  "izing filters\n[vost#0:0/libx264 @ 0x5a14ca0dde80] Error initializing a simple filtergraph\nError opening output file captioned.mp4.\nError opening output files: Invalid data found when processing input\n"
+ ],
+ "burn_try_ffmpeg-linux-x86_64-v7.0.2": [
+  183,
+  "tializing filters\n[vost#0:0/libx264 @ 0x285bc780] Error initializing a simple filtergraph\nError opening output file captioned.mp4.\nError opening output files: Invalid data found when processing input\n"
+ ],
+ "burn_method": "PIL overlay fallback",
+ "loudnorm_pass1": {
+  "input_i": "-15.82",
+  "input_tp": "0.20",
+  "input_lra": "2.80",
+  "input_thresh": "-26.42",
+  "output_i": "-15.17",
+  "output_tp": "-1.50",
+  "output_lra": "1.50",
+  "output_thresh": "-25.74",
+  "normalization_type": "dynamic",
+  "target_offset": "1.17"
+ },
+ "loudnorm_rc": 0,
+ "final_loudness_lufs": -14.7,
+ "final_true_peak_dbfs": -1.4,
+ "final_video": {
+  "width": 400,
+  "height": 720,
+  "r_frame_rate": "30/1"
+ },
+ "final_duration_s": 30.4,
+ "final_bytes": 6783556
+}

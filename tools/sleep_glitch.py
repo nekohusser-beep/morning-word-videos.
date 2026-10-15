@@ -1,138 +1,134 @@
 #!/usr/bin/env python3
-"""Glitch scan for Kokoro-rendered sleep chapters.
+"""Per-verse measurements for Kokoro-rendered sleep chapters (v2: DP alignment, raw numbers).
 
-Each chapter FLAC is: header ("Psalm N." / "Chapter N."), 3.5 s gap, then every verse
-spoken on its own with 2.5 s of silence after it. So long silences (>= 2.0 s) split the file
-into one speech block per verse, and anything quieter inside a block is the narrator.
+Each chapter FLAC is: header ("Psalm N." / "Chapter N."), 3.5 s gap, then every verse spoken on
+its own with 2.5 s of silence after it. Silences >= 2.0 s split the file into speech blocks. A verse
+can come out as 2+ blocks (a >= 2 s pause inside it), so verses are aligned to blocks by dynamic
+programming on expected duration (chars / 9.5 per second), allowing a verse to take 1-3 blocks.
 
-Per chapter this reports:
-  block_mismatch  - number of speech blocks != 1 + verses (a verse got split or two merged)
-  rate outliers   - verses spoken much faster/slower than the book's median (characters per speech second)
-  mid_pauses      - silences of >= PAUSE s inside a verse
-  clicks          - sample spikes that stand far above the local level
-  garbled         - verses whose transcript disagrees with the KJV text, or with very low-confidence words
+For every verse the report stores raw numbers; thresholds are applied afterwards:
+  k            blocks the verse took (k > 1 = long mid-verse pause)
+  cps          characters per second of the verse's span (speed)
+  max_pause    longest silence inside the verse span (>= 0.5 s)
+  click        biggest spike-to-local-level ratio in the span, and its time
+  mismatch     words that differ from the KJV text / words in the verse (whisper transcript)
+  low          words whisper heard with probability < 0.30
 
-usage: sleep_glitch.py BOOK.json FLAC_DIR OUT.json [whisper_model] [i N]
+usage: sleep_glitch.py BOOK.json FLAC_DIR OUT.json [whisper_model]
 """
-import json, os, re, subprocess, sys, difflib, statistics
+import json, os, re, subprocess, sys, difflib, functools
 import numpy as np
 import soundfile as sf
 from faster_whisper import WhisperModel
-
-PAUSE = 1.1          # seconds of silence inside a verse that counts as a mid-verse pause
-SPLIT = 2.0          # silence that separates verses
-RATE_Z = 3.0         # robust z-score for a rushed / dragged verse
-CLICK_K = 14.0       # spike height vs local RMS
-LOWP = 0.30          # word probability treated as garbled
 
 book_json, flac_dir, out_path = sys.argv[1:4]
 model_name = sys.argv[4] if len(sys.argv) > 4 else "medium.en"
 book = json.load(open(book_json))
 chs = {int(c["chapter"]): c for c in book["chapters"]}
-label = "Psalm" if os.path.basename(book_json).startswith("Psalms") else "Chapter"
 norm = lambda s: re.sub(r"[^a-z0-9' ]", " ", s.lower().replace("’", "'")).split()
+SPLIT = 2.0
+CPS = 9.5
 
 
-def silences(path, noise="-45dB", d=0.5):
-    err = subprocess.run(["ffmpeg", "-nostats", "-i", path, "-af", f"silencedetect=n={noise}:d={d}", "-f", "null", "-"],
+def silences(path):
+    err = subprocess.run(["ffmpeg", "-nostats", "-i", path, "-af", "silencedetect=n=-45dB:d=0.5", "-f", "null", "-"],
                          capture_output=True, text=True).stderr
     st = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", err)]
     en = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", err)]
     dur = re.search(r"Duration: (\d+):(\d+):([\d.]+)", err)
     total = int(dur.group(1)) * 3600 + int(dur.group(2)) * 60 + float(dur.group(3))
-    out = []
-    for i, s in enumerate(st):
-        e = en[i] if i < len(en) else total
-        out.append((max(0.0, s), e))
-    return out, total
+    return [(max(0.0, s), (en[i] if i < len(en) else total)) for i, s in enumerate(st)], total
 
 
 def blocks(sils, total):
-    """speech blocks = gaps between silences of >= SPLIT."""
-    seps = [s for s in sils if s[1] - s[0] >= SPLIT]
     res, cur = [], 0.0
-    for s, e in seps:
-        if s - cur > 0.15:
-            res.append((cur, s))
-        cur = e
+    for s, e in sils:
+        if e - s >= SPLIT:
+            if s - cur > 0.15:
+                res.append((cur, s))
+            cur = e
     if total - cur > 0.15:
         res.append((cur, total))
     return res
 
 
-def clicks_in(y, sr, t0, t1):
+def align(texts, B):
+    n, m = len(texts), len(B)
+    INF = 1e9
+
+    @functools.lru_cache(None)
+    def f(i, j):
+        if i == n:
+            return (0.0, ()) if j == m else (INF, ())
+        if j >= m:
+            return (INF, ())
+        best = (INF, ())
+        e = len(texts[i]) / CPS
+        for k in (1, 2, 3):
+            if j + k > m:
+                break
+            span = B[j + k - 1][1] - B[j][0]
+            cost = abs(span - e) / e + (0.15 if k > 1 else 0.0)
+            c, p = f(i + 1, j + k)
+            if c + cost < best[0]:
+                best = (c + cost, (k,) + p)
+        return best
+
+    return f(0, 0)[1]
+
+
+def click_peak(y, sr, t0, t1):
     seg = y[int(t0 * sr):int(t1 * sr)]
     if len(seg) < sr // 2:
-        return []
+        return 0.0, 0.0
     d = np.abs(np.diff(seg))
     win = sr // 20
-    k = np.ones(win) / win
-    local = np.sqrt(np.convolve(d * d, k, mode="same")) + 1e-6
-    hits = np.where((d > CLICK_K * local) & (d > 0.04))[0]
-    out, last = [], -10**9
-    for h in hits:
-        if h - last > sr // 4:
-            out.append(round(t0 + h / sr, 2))
-        last = h
-    return out[:6]
+    local = np.sqrt(np.convolve(d * d, np.ones(win) / win, mode="same")) + 1e-4
+    ratio = np.where(d > 0.03, d / local, 0.0)
+    h = int(np.argmax(ratio))
+    return float(ratio[h]), round(t0 + h / sr, 2)
 
 
 model = WhisperModel(model_name, device="cpu", compute_type="int8")
-report, rates_all = [], []
-files = sorted(f for f in os.listdir(flac_dir) if f.endswith(".flac"))
-for f in files:
+report = []
+for f in sorted(x for x in os.listdir(flac_dir) if x.endswith(".flac")):
     n = int(f[:3])
     if n == 0:
         continue
     path = os.path.join(flac_dir, f)
     sils, total = silences(path)
     bl = blocks(sils, total)
-    verses = chs[n]["verses"]
-    r = {"file": f, "chapter": n, "verses": len(verses), "blocks": len(bl), "issues": []}
-    if len(bl) != len(verses) + 1:
-        r["issues"].append({"type": "block_mismatch", "detail": f"{len(bl)} speech blocks vs {len(verses) + 1} expected"})
+    verses = [v["text"].strip() for v in chs[n]["verses"]]
+    B = bl[1:]
+    plan = align(verses, B)
+    r = {"chapter": n, "verses": len(verses), "blocks": len(bl), "aligned": bool(plan), "v": []}
+    if not plan:
+        report.append(r)
+        print(f, "ALIGN FAILED", flush=True)
+        continue
     y, sr = sf.read(path, dtype="float32")
     if y.ndim > 1:
         y = y.mean(axis=1)
     segs, _ = model.transcribe(path, language="en", beam_size=5, vad_filter=False,
                                condition_on_previous_text=False, word_timestamps=True)
     words = [w for s in segs for w in s.words]
-    for vi, v in enumerate(verses):
-        bi = vi + 1
-        if bi >= len(bl):
-            r["issues"].append({"type": "missing_block", "verse": vi + 1})
-            continue
-        t0, t1 = bl[bi]
-        speech = t1 - t0
-        chars = len(v["text"].strip())
-        rate = chars / max(speech, 0.1)
-        rates_all.append((n, vi + 1, rate))
-        inner = [(s, e) for s, e in sils if s >= t0 and e <= t1 and (e - s) >= PAUSE]
-        for s, e in inner:
-            r["issues"].append({"type": "mid_pause", "verse": vi + 1, "at": round(s, 1), "seconds": round(e - s, 2)})
-        for c in clicks_in(y, sr, t0, t1):
-            r["issues"].append({"type": "click", "verse": vi + 1, "at": c})
-        hw = [w for w in words if w.start >= t0 - 0.2 and w.end <= t1 + 0.2]
-        heard = norm(" ".join(w.word for w in hw))
-        ref = norm(v["text"])
+    j = 0
+    for vi, k in enumerate(plan):
+        t0, t1 = B[j][0], B[j + k - 1][1]
+        j += k
+        inner = [e - s for s, e in sils if s >= t0 - 0.05 and e <= t1 + 0.05 and e - s >= 0.5 and e - s < SPLIT]
+        inner += [B[j - k + q + 1][0] - B[j - k + q][1] for q in range(k - 1)]
+        cr, ct = click_peak(y, sr, t0, t1)
+        hw = [w for w in words if w.start >= t0 - 0.25 and w.end <= t1 + 0.25]
+        heard, ref = norm(" ".join(w.word for w in hw)), norm(verses[vi])
         sm = difflib.SequenceMatcher(a=ref, b=heard, autojunk=False)
         bad = sum(max(a2 - a1, b2 - b1) for op, a1, a2, b1, b2 in sm.get_opcodes() if op != "equal")
-        low = [w.word.strip() for w in hw if w.probability < LOWP]
-        if bad / max(1, len(ref)) > 0.12 or len(low) >= 2:
-            r["issues"].append({"type": "garbled", "verse": vi + 1, "mismatch_words": bad, "low_conf": low[:5],
-                                "start": round(t0, 1)})
+        r["v"].append({"n": vi + 1, "k": k, "t0": round(t0, 1), "t1": round(t1, 1),
+                       "cps": round(len(verses[vi]) / max(t1 - t0, 0.1), 2),
+                       "max_pause": round(max(inner), 2) if inner else 0.0,
+                       "click": round(cr, 1), "click_at": ct,
+                       "mismatch": round(bad / max(1, len(ref)), 3),
+                       "low": [w.word.strip() for w in hw if w.probability < 0.30][:6]})
     report.append(r)
-    print(f, len(bl), len(r["issues"]), flush=True)
-
-# rate outliers: robust z-score against the whole set of verses in this run
-vals = [x[2] for x in rates_all]
-if len(vals) > 20:
-    med = statistics.median(vals)
-    mad = statistics.median(abs(x - med) for x in vals) or 1e-6
-    by = {r["chapter"]: r for r in report}
-    for n, vn, rt in rates_all:
-        z = 0.6745 * (rt - med) / mad
-        if abs(z) >= RATE_Z:
-            by[n]["issues"].append({"type": "rushed" if z > 0 else "dragged", "verse": vn,
-                                    "chars_per_sec": round(rt, 1), "z": round(z, 1), "median": round(med, 1)})
-json.dump({"model": model_name, "chapters": report}, open(out_path, "w"), indent=1)
+    print(f, len(bl), sum(1 for v in r["v"] if v["k"] > 1), flush=True)
+json.dump({"model": model_name, "chapters": report}, open(out_path, "w"))

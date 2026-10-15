@@ -139,7 +139,6 @@ sh('curl -sSL -o %s/script8.txt https://raw.githubusercontent.com/nekohusser-bee
 TEXT = open(W + '/script8.txt').read().strip()
 open(W + '/narr_text.txt', 'w').write(TEXT)
 say('ref10: %s' % sh('ffmpeg -y -loglevel error -ss 0 -t 10 -i %s/voice.mp3 -ar 24000 -ac 1 %s/ref10.wav' % (W, W))[1][-200:])
-shutil.copy(W + '/tts.py', W + '/tts.py.bak')
 rc, o = sh('python %s/tts_stage8.py' % W)
 say('tts_stage rc=%d %s' % (rc, o[-300:].replace('\n', ' | ')))
 src = 'tts_raw.wav' if open(W + '/tts_ok.txt').read().strip() == '1' else 'FALLBACK'

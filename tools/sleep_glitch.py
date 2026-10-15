@@ -123,7 +123,12 @@ for f in sorted(x for x in os.listdir(flac_dir) if x.endswith(".flac")):
         heard, ref = norm(" ".join(w.word for w in hw)), norm(verses[vi])
         sm = difflib.SequenceMatcher(a=ref, b=heard, autojunk=False)
         bad = sum(max(a2 - a1, b2 - b1) for op, a1, a2, b1, b2 in sm.get_opcodes() if op != "equal")
-        r["v"].append({"n": vi + 1, "k": k, "t0": round(t0, 1), "t1": round(t1, 1),
+        diffs = []
+        if bad / max(1, len(ref)) > 0.12 and len(ref) >= 8:
+            for op, a1, a2, b1, b2 in sm.get_opcodes():
+                if op != "equal":
+                    diffs.append([op, " ".join(ref[a1:a2]), " ".join(heard[b1:b2])])
+        r["v"].append({"diff": diffs[:8], "n": vi + 1, "k": k, "t0": round(t0, 1), "t1": round(t1, 1),
                        "cps": round(len(verses[vi]) / max(t1 - t0, 0.1), 2),
                        "max_pause": round(max(inner), 2) if inner else 0.0,
                        "click": round(cr, 1), "click_at": ct,

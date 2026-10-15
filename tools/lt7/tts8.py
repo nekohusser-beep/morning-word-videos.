@@ -13,7 +13,7 @@ sents = [x.strip() for x in re.split(r'(?<=[.!?])\s+', TEXT) if x.strip()]
 parts = []
 gap = torch.zeros(1, int(m.sr * 0.28))
 for i, s in enumerate(sents):
-    w = m.generate(s, audio_prompt_path=REF, exaggeration=0.5, cfg_weight=0.5).cpu()
+    w = m.generate(s, audio_prompt_path=REF, exaggeration=0.65, cfg_weight=0.5).cpu()
     parts.append(w)
     if i < len(sents) - 1:
         parts.append(gap)

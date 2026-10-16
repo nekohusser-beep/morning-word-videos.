@@ -21,8 +21,9 @@
 Passwords/tokens never in chat. No spending money or credits without his yes. Nothing posts without his yes on that exact file. No Etsy links in cold outreach unless group rules allow. No tagging people.
 
 ## Update 08:35 ET
-- Pinterest: 10 pins live (Etsy link on each). Two landed on the T-Shirts board by mistake (I Wanna Die Different, Built to Carry).
+- Pinterest: 14 pins live (Etsy link on each). Two landed on the T-Shirts board by mistake (I Wanna Die Different, Built to Carry).
 - Morning Word Day 4 (1 Peter 5:7) delivered by Buffer 5:01-5:04 AM ET to YouTube, Instagram, TikTok; confirmed public on YouTube. Joshua 1:9 image card queued for 9 AM ET.
 - John and Proverbs sleep videos: rendered, mastered, checked, NOT on YouTube. Upload workflow fails because repo secrets YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN are missing (yt-diag run confirmed). Thumbnails ready: sleep/kit/thumb_john_v3.jpg, thumb_proverbs_v3.jpg (final: modest young woman matched to the narrator pitch; v2 is the older-woman alternate). Once secrets exist, run youtube-upload with privacy=private and thumbnail_path set.
 - Derrick Day 5 and 6: not built (waiting on HeyGen voice change).
 - Genesis sleep reading: not started.
+- Final thumbnails approved by Neko 08:38 ET (v3, modest woman on beach). Facebook page posts not started (needs Facebook site permission in the browser; will do only on already-allowed sites).

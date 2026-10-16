@@ -27,3 +27,7 @@ Passwords/tokens never in chat. No spending money or credits without his yes. No
 - Derrick Day 5 and 6: not built (waiting on HeyGen voice change).
 - Genesis sleep reading: not started.
 - Final thumbnails approved by Neko 08:38 ET (v3, modest woman on beach). Facebook page posts not started (needs Facebook site permission in the browser; will do only on already-allowed sites).
+
+## Genesis (started 08:50 ET, per Neko: keep building Bible books when idle)
+- sleep-render dispatched: book Genesis, voice af_nicole, tag sleep-genesis-chapters, 10 chunks.
+- Next: sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, then youtube.json. Upload still blocked on YT secrets.

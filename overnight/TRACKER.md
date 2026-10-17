@@ -2,11 +2,11 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 2:25 AM ET
+Last updated: Oct 17 2:56 AM ET
 
-Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6
+Counts: Blocked 2, Done 29, In progress 12, Not started 16, On hold 6
 
-## In progress (11)
+## In progress (12)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 16
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
@@ -18,6 +18,7 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6
 - [Z7] Neko Zion | Song audio and lyrics: Island of Peace mp3 found in Gmail (nekozionrecords thread 19cf730572b1914c). Other tracks and lyrics not in Drive | NEXT: Other audio comes from Fiverr deliveries (WAV/zip); lyrics still to find | WAITING ON: Fiverr human check | Claude | Oct 17 1:15 AM ET
 - [K3] Apparel | Back-corner QR code for wash-proof scanning: QR made, decodes to kingdomimpactshop.etsy.com | NEXT: Confirm print method and placement with the print provider; wash test | WAITING ON: Print provider confirmation | Neko | Oct 17 1:20 AM ET
 - [K4] Apparel | New designs on models: HH1, PS1, TS1 on the red tee model done. Half Hood hoodie, plus PS1 and TS1 hoodies, not done | NEXT: Make the HH1 hoodie mockup, then PS1 and TS1 hoodies | WAITING ON: None | Claude | Oct 17 1:45 AM ET
+- [S13] Sleep Bible | Nightly KJV verse cards (Bible-app style: photo background, KJV verse, our lady in a circle, 'soft-spoken KJV Bible readings for sleep') to drive viewers to the long readings. Template built (tools/cards/mist_card.py + lady_circle.png), Romans 8:28 sample sent | NEXT: Neko approves the look. Then: background photos from Gemini Pro plan (free, not copied from the Bible app), scheduled task builds each night's card, stage for his yes | WAITING ON: Neko: approve sample + say yes to a nightly scheduled task. Backgrounds must be our own or licensed, not the Bible app's photos | Claude | Oct 17 2:56 AM ET
 
 ## Blocked (2)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET

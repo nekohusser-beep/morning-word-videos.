@@ -2,11 +2,11 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 4:35 AM ET
+Last updated: Oct 17 4:55 AM ET
 
-Counts: Blocked 3, Done 30, In progress 10, Not started 17, On hold 8, Waiting on Neko 1
+Counts: Blocked 3, Done 30, In progress 11, Not started 16, On hold 8, Waiting on Neko 1
 
-## In progress (10)
+## In progress (11)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | Oct 17 3:45 AM ET research: HeyGen custom-motion prompt 'Hands still, calm expression' (Avatar IV/V, one gesture per prompt) fixes hand waving; use ElevenLabs Derrick audio per scene (audio route) instead of HeyGen voice, no voice change needed; Video Agent only 'largely follows' pasted script so verify words. Waiting on Neko go for one test episode. B-roll rule: write a shot list per line first, show what the line literally says. | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 17 3:45 AM ET
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
@@ -16,14 +16,15 @@ Counts: Blocked 3, Done 30, In progress 10, Not started 17, On hold 8, Waiting o
 - [K3] Apparel | Back-corner QR code for wash-proof scanning: QR made, decodes to kingdomimpactshop.etsy.com | NEXT: Confirm print method and placement with the print provider; wash test | WAITING ON: Print provider confirmation | Neko | Oct 17 1:20 AM ET
 - [K4] Apparel | New designs on models: HH1, PS1, TS1 on the red tee model done. Half Hood hoodie, plus PS1 and TS1 hoodies, not done | NEXT: Make the HH1 hoodie mockup, then PS1 and TS1 hoodies | WAITING ON: None | Claude | Oct 17 1:45 AM ET
 - [S13] Sleep Bible | Nightly KJV verse cards (Bible-app style: photo background, KJV verse, our lady in a circle, 'soft-spoken KJV Bible readings for sleep') to drive viewers to the long readings. Template built (tools/cards/mist_card.py + lady_circle.png), Romans 8:28 sample sent | NEXT: Neko approves the look. Then: background photos from Gemini Pro plan (free, not copied from the Bible app), scheduled task builds each night's card, stage for his yes | WAITING ON: Neko: approve sample + say yes to a nightly scheduled task. Backgrounds must be our own or licensed, not the Bible app's photos | Claude | Oct 17 2:56 AM ET
-- [Z15] Neko Zion | Spotify playlist pitching: 7 curators found, no contact on Spotify pages. Pitch message drafted with real link (One Love, One World track open.spotify.com/track/0VdOCUOERoPvgD295VUY3l). Gemini advice: find curator on Instagram, short DM, SubmitHub/Groover paid only if enough matches | NEXT: Web search found no curator handles. Free routes found: playlistsupply.com/playlistcurator/genre/gospel/ (curator list + submit pages), Spotify Community Music Exchange threads. DMs need a Neko Zion Instagram/Facebook login in the browser | WAITING ON: Neko: which account to send from (Blessed Prayers FB is the only one signed in) | Claude | Oct 17 4:35 AM ET
+- [Z12] Neko Zion | Joined 3 CHRISTAFARI groups (7.4K, 5.3K, 5.3K). Still to join: AFRO GOSPEL ARTISTS WORLDWIDE (2K) and 8 older queue groups | NEXT: Join in paced batches (part 2 task joins 3 per run) | Claude | Oct 17 4:55 AM ET
+- [Z15] Neko Zion | Spotify playlist pitching: 7 curators found, no contact on Spotify pages. Pitch message drafted with real link (One Love, One World track open.spotify.com/track/0VdOCUOERoPvgD295VUY3l). Gemini advice: find curator on Instagram, short DM, SubmitHub/Groover paid only if enough matches | NEXT: Neko approved pitching from Neko Zion page. Browser only signed in as Blessed Prayers (FB and Instagram); PlaylistSupply contacts need an account (Claude cannot create). Needs Neko Zion login | WAITING ON: Neko: sign into Neko Zion Instagram/Facebook in the browser pane (or give OK to pitch from Blessed Prayers) | Claude | Oct 17 4:55 AM ET
 
 ## Blocked (3)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET
 - [M6] Morning Word | Week 2 Days 2-7 and Oct 17+ not built | NEXT: Build after HeyGen voice change | WAITING ON: Neko: HeyGen voice change | Neko | Oct 16
 - [Z13] Neko Zion | Radio submissions verified real: tdnradio.net/submit-music (Reggae/Afrobeats, clean radio edit, tagged MP3) and sunlightradio.com/submit-music (Gospel/Reggae, MP3 128k, original music) | NEXT: Neko OK given. Both forms have reCAPTCHA and a file upload, so Neko does captcha + file on phone; Claude gave him the paste kit | WAITING ON: Neko: captcha + MP3 upload on phone (Island of Peace mp3 is in Gmail thread 19cf730572b1914c) | Claude | Oct 17 4:05 AM ET
 
-## Not started (17)
+## Not started (16)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Build after HeyGen voice fix | WAITING ON: Derrick voice change in HeyGen; Neko go on promo credits | Claude | Oct 16
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
@@ -40,7 +41,6 @@ Counts: Blocked 3, Done 30, In progress 10, Not started 17, On hold 8, Waiting o
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
-- [Z12] Neko Zion | Found 4 more groups via Facebook search: CHRISTAFARI (3 groups, 7.4K / 5.3K / 5.3K), AFRO GOSPEL ARTISTS WORLDWIDE (2K). Queued with the 8 other groups to join, about 3 a day | NEXT: Join in paced batches (part 2 task joins 3 per run) | Claude | Oct 17 3:50 AM ET
 
 ## On hold (8)
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16

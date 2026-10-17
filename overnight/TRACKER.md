@@ -4,7 +4,7 @@
 
 Last updated: Oct 17 1:20 AM ET
 
-Counts: Blocked 3, Done 26, In progress 11, Not started 18, On hold 6
+Counts: Blocked 2, Done 26, In progress 11, Not started 19, On hold 6
 
 ## In progress (11)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
@@ -19,12 +19,11 @@ Counts: Blocked 3, Done 26, In progress 11, Not started 18, On hold 6
 - [K3] Apparel | Back-corner QR code for wash-proof scanning: QR made, decodes to kingdomimpactshop.etsy.com | NEXT: Confirm print method and placement with the print provider; wash test | WAITING ON: Print provider confirmation | Neko | Oct 17 1:20 AM ET
 - [K4] Apparel | New designs on models: Half Hood Half Holy (tee and hoodie), Psalm 78:52-53 (PS1), Tap My Shoulder (TS1). Designs rendered; models not done | NEXT: Make the tee and hoodie mockups on the models | WAITING ON: None | Claude | Oct 17 1:20 AM ET
 
-## Blocked (3)
+## Blocked (2)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET
 - [M6] Morning Word | Week 2 Days 2-7 and Oct 17+ not built | NEXT: Build after HeyGen voice change | WAITING ON: Neko: HeyGen voice change | Neko | Oct 16
-- [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB, Win10 Pro 22H2) chosen as host; Neko says Hermes Agent is already installed on it; Docker not installed; no model set yet. Plan (Neko Oct 17): Hermes runs Derrick, gets a thread dump of done/not done, builds the free pipeline, then a white-hat security pass on it | NEXT: Set Hermes model: OpenRouter free (GLM-5.2:free, 50 req/day, 20/min) or one-time $10 credit (1,000/day). Backups: NVIDIA NIM free credits, Gemini free tier, DeepSeek V4 Flash ~$0.30/$1.20 per M. Then install Docker as the Hermes terminal sandbox, hand Hermes the thread dump file, build, then white-hat test | WAITING ON: Neko: OpenRouter free vs $10 (ask-before-spending); be at the laptop. Laptop linked to this chat is the old i3, not the new one | Neko | Oct 17 12:03 AM ET
 
-## Not started (18)
+## Not started (19)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Build after HeyGen voice fix | WAITING ON: Derrick voice change in HeyGen; Neko go on promo credits | Claude | Oct 16
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
@@ -36,6 +35,7 @@ Counts: Blocked 3, Done 26, In progress 11, Not started 18, On hold 6
 - [M9] Morning Word | Derek only thread turns 117-361 unread | NEXT: Re-read after limit resets, reconcile Week 2 status | WAITING ON: Hourly chat-read limit | Claude | Oct 16
 - [E1] Etsy | Etsy connector trial ends Oct 17; 4 empty drafts; journals/planners still in Desk Calendars | NEXT: Neko decides on trial; Claude tidies drafts and categories | WAITING ON: Neko: trial decision | Neko | Oct 16
 - [E3] Etsy | Six books still lack PDFs; Christian Anxiety Workbook has no PDF/description/tags | NEXT: Neko supplies PDFs | WAITING ON: Neko: PDFs | Neko | Oct 16
+- [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB, Win10 Pro 22H2) is the host. Per Neko Oct 17: Hermes with DeepSeek, Claude desktop app, Chrome and GitHub are already installed on it (not yet verified by Claude: this chat is linked to the old i3). Docker not installed. Plan: Hermes runs Derrick from the tracker, builds the free pipeline, then a white-hat security pass | NEXT: MON OCT 19, 9-10 AM ET (calendar block set, Neko at the new laptop): 1) link Claude desktop app on the new laptop to this chat; 2) confirm Hermes model/key works (DeepSeek, or OpenRouter free vs one-time $10, ask before spending); 3) install Docker as the Hermes terminal sandbox; 4) give Hermes the repo morning-word-videos. so it reads overnight/TRACKER.md as its thread dump; 5) run the white-hat test on the finished pipeline | WAITING ON: Neko: be at the new laptop Mon 9 AM ET; any model spend needs his yes | Neko | Oct 17 1:20 AM ET
 - [D6] Morning Word | Monday Oct 19 Derrick episode: nothing built or queued in Buffer | NEXT: Build after HeyGen voice change or in Flow | WAITING ON: M3 (HeyGen voice) if using HeyGen | Claude | Oct 16 11:28 PM ET
 - [Z4] Neko Zion | Word For Today promo video | NEXT: Make after the pre-save push | Claude | Oct 16 11:50 PM ET
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET

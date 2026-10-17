@@ -1,3 +1,9 @@
+# RULE ZERO (read first, every thread, every model)
+
+Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.
+
+---
+
 # START HERE (every Claude thread, before anything else)
 
 Neko's single source of truth is `overnight/Claude-Work-Tracker.xlsx`, mirrored as plain text in `overnight/TRACKER.md`.

@@ -1,6 +1,8 @@
+# RULE ZERO (read first, applies to every thread and every model): Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.
+
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:35 AM ET
+Last updated: Oct 17 12:40 AM ET
 
 Counts: Blocked 3, Done 22, In progress 7, Not started 18, On hold 6
 
@@ -71,6 +73,7 @@ Counts: Blocked 3, Done 22, In progress 7, Not started 18, On hold 6
 - [S12] Sleep Bible | Temp branch upload-tmp: only copies of finished John/Proverbs videos cut in pieces (420 MB). Delete only after Neko okays | NEXT: upload-tmp deleted Oct 17 via one-off repo workflow (Neko okayed). Other branches untouched | Neko | Oct 17 12:35 AM ET
 
 ## Standing rules
+- RULE ZERO (read first) :: Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.
 - Promo links :: Every sleep-Bible video and every promo for any book or channel carries the Kingdom Impact Shop link plus 3-4 relevant book links in the description. Set by Neko Oct 16, 2026.
 - Scripture :: KJV only. Do not announce it.
 - Derrick :: No 'tomorrow' promises. Never tag people in posts. Nothing posts without Neko's yes on that exact file.

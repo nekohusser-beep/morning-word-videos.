@@ -5,7 +5,8 @@ Also archives Done rows older than 14 days is NOT automatic; move them by hand t
 import openpyxl,sys,os
 X='overnight/Claude-Work-Tracker.xlsx';M='overnight/TRACKER.md'
 wb=openpyxl.load_workbook(X)
-out=['# TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)','']
+rz=[r[1] for r in wb['Standing rules'].iter_rows(min_row=2,values_only=True) if r[0] and str(r[0]).startswith('RULE ZERO')]
+out=(['# RULE ZERO (read first, applies to every thread and every model): '+rz[0],''] if rz else [])+['# TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)','']
 w=wb['Where we are']
 out.append('Last updated: %s'%w['B2'].value);out.append('')
 t=wb['Tasks'];rows=[[ (str(c) if c is not None else '') for c in r] for r in t.iter_rows(min_row=2,values_only=True) if any(r)]

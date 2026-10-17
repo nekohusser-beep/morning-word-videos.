@@ -1,8 +1,8 @@
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:04 AM ET
+Last updated: Oct 17 12:09 AM ET
 
-Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
+Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 6
 
 ## In progress (7)
 - [S8] Sleep Bible | Genesis sleep reading: all 50 chapters + title rendered (release sleep-genesis-chapters, 51 assets) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:02 AM ET
@@ -39,12 +39,13 @@ Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
 - [S12] Sleep Bible | Remove temp branch upload-tmp (about 420 MB of split John/Proverbs parts) from repo | NEXT: Delete branch on GitHub (session cannot delete) | WAITING ON: Neko or a session with delete access | Neko | Oct 17 12:02 AM ET
 
-## On hold (5)
+## On hold (6)
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16
 - [T2] Tech | Replace trial connectors with free tools (Orshot, Buffer, TinyFish, Descript, ElevenLabs); Neko said 'different route' Oct 15 | NEXT: Ask Neko the new route | WAITING ON: Neko | Neko | Oct 16
 - [R1] Resume service | Aviation resume service: Wix page live ($49), card made, nothing posted, no sales; Neko doubts niche | NEXT: Neko decides: pivot or drop | WAITING ON: Neko: payment handles, logins, direction | Neko | Oct 16
 - [X1] Spending | Promo credits for John/Proverbs (~210 Flow credits each) - ask first; free path instead | NEXT: Use free path or get yes | WAITING ON: Neko: credit approval | Neko | Oct 16
 - [D4] Morning Word | FALLBACK if Flow credits run out or Flow breaks: MiniMax H3 official API ($0.08/sec, about $1.20 per 15s). Self-hosting the open weights is NOT allowed in the U.S. (license excludes US). APIYI reseller $0.03/sec unverified for US use | NEXT: Revisit only if Flow fails; one test clip first | WAITING ON: Neko: sign up + key as repo secret | Neko | Oct 16 11:28 PM ET
+- [N1] Ideas (shelved) | Church division idea: the enemy keeps the church arguing and divided while the kingdom of darkness grows (fulfillment of prophecy). Form not yet chosen (book, video, sermon series) | NEXT: Hear the rest from Neko; start only when an in-flight project closes (live on Etsy with illustrations) | WAITING ON: WIP cap: nothing in flight has closed | Neko | Oct 17 12:09 AM ET
 
 ## Done (21)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16

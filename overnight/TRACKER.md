@@ -2,9 +2,9 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:40 AM ET
+Last updated: Oct 17 1:01 AM ET
 
-Counts: Blocked 3, Done 22, In progress 7, Not started 18, On hold 6
+Counts: Blocked 3, Done 23, In progress 7, Not started 17, On hold 6
 
 ## In progress (7)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
@@ -20,12 +20,11 @@ Counts: Blocked 3, Done 22, In progress 7, Not started 18, On hold 6
 - [M6] Morning Word | Week 2 Days 2-7 and Oct 17+ not built | NEXT: Build after HeyGen voice change | WAITING ON: Neko: HeyGen voice change | Neko | Oct 16
 - [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB, Win10 Pro 22H2) chosen as host; Neko says Hermes Agent is already installed on it; Docker not installed; no model set yet. Plan (Neko Oct 17): Hermes runs Derrick, gets a thread dump of done/not done, builds the free pipeline, then a white-hat security pass on it | NEXT: Set Hermes model: OpenRouter free (GLM-5.2:free, 50 req/day, 20/min) or one-time $10 credit (1,000/day). Backups: NVIDIA NIM free credits, Gemini free tier, DeepSeek V4 Flash ~$0.30/$1.20 per M. Then install Docker as the Hermes terminal sandbox, hand Hermes the thread dump file, build, then white-hat test | WAITING ON: Neko: OpenRouter free vs $10 (ask-before-spending); be at the laptop. Laptop linked to this chat is the old i3, not the new one | Neko | Oct 17 12:03 AM ET
 
-## Not started (18)
+## Not started (17)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Build after HeyGen voice fix | WAITING ON: Derrick voice change in HeyGen; Neko go on promo credits | Claude | Oct 16
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
 - [M4] Morning Word | Derrick Day 5 and Day 6 videos built and scheduled | NEXT: Build after M3. Nothing in Buffer for Oct 16-17 | WAITING ON: M3 | Claude | Oct 16
-- [P2] Pinterest | Move 2 pins to the right board (I Wanna Die Different, Built to Carry) | NEXT: Re-pin to Christian Books & Audiobooks | Claude | Oct 16
 - [F1] Outreach | Facebook posts on Blessed Prayers and Prince Nico pages | NEXT: Post where group rules allow Etsy links | WAITING ON: Facebook site permission in browser | Claude | Oct 16
 - [H2] Shopify | Vet real CJ product pages for the 3 candidates | NEXT: Open CJ pages and check reviews, shipping | Claude | Oct 16
 - [A1] Free avatar | Free-face test (InfiniteTalk or MuseTalk on Kaggle) | NEXT: Neko says token is in; run test | Claude | Oct 16
@@ -48,7 +47,7 @@ Counts: Blocked 3, Done 22, In progress 7, Not started 18, On hold 6
 - [D4] Morning Word | FALLBACK if Flow credits run out or Flow breaks: MiniMax H3 official API ($0.08/sec, about $1.20 per 15s). Self-hosting the open weights is NOT allowed in the U.S. (license excludes US). APIYI reseller $0.03/sec unverified for US use | NEXT: Revisit only if Flow fails; one test clip first | WAITING ON: Neko: sign up + key as repo secret | Neko | Oct 16 11:28 PM ET
 - [N1] Ideas (shelved) | Church division idea: the enemy keeps the church arguing and divided while the kingdom of darkness grows (fulfillment of prophecy). Form not yet chosen (book, video, sermon series) | NEXT: Hear the rest from Neko; start only when an in-flight project closes (live on Etsy with illustrations) | WAITING ON: WIP cap: nothing in flight has closed | Neko | Oct 17 12:09 AM ET
 
-## Done (22)
+## Done (23)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
@@ -56,7 +55,8 @@ Counts: Blocked 3, Done 22, In progress 7, Not started 18, On hold 6
 - [S5] Sleep Bible | Shop and book links in John, Proverbs, Psalms descriptions | NEXT: None | Claude | Oct 16
 - [M1] Morning Word | Day 4 (1 Peter 5:7) delivered by Buffer to YouTube, Instagram, TikTok | NEXT: None | Claude | Oct 16
 - [M2] Morning Word | Joshua 1:9 image card queued for 9 AM ET | NEXT: Confirm it sent | Claude | Oct 16
-- [P1] Pinterest | Pin Etsy listings (14 pins live) | NEXT: Pin remaining listings (audiobooks, teen playbook, apparel) | Claude | Oct 16
+- [P1] Pinterest | Pin Etsy listings (14 pins live) | NEXT: Books board now 41 pins. Pin remaining listings (audiobooks, teen playbook, apparel to T-Shirts board) | Claude | Oct 17 1:01 AM ET
+- [P2] Pinterest | Move 2 pins to the right board (I Wanna Die Different, Built to Carry) | NEXT: Both pins (I Wanna Die Different, Built to Carry) moved to Christian Books & Audiobooks Oct 17, verified | Claude | Oct 17 1:01 AM ET
 - [G1] Gossip teaching | 7-day scripts written, saved in repo | NEXT: None | Claude | Oct 16
 - [H1] Shopify | First-pass niche research (night-shift sleep products) | NEXT: None | Claude | Oct 16
 - [S11] Sleep Bible | Duplicate of S8 (merged into S8) | NEXT: See S8 | Claude | Oct 17 12:02 AM ET
@@ -101,3 +101,4 @@ Counts: Blocked 3, Done 22, In progress 7, Not started 18, On hold 6
 - Upload a long sleep video to YouTube :: HOW PSALMS WAS UPLOADED (Oct 14): split mp4 into ~90MB parts, push to branch media-psalms, in the Studio upload page fetch the parts from raw.githubusercontent.com, join into one File, put it in the upload input with DataTransfer + change event, then fill metadata and thumbnail the same way. Oct 17 John attempt used the same method (branch upload-tmp) and the final inject step was blocked by this session's safety check. Alternative: youtube-upload workflow once the 3 YT secrets exist, or Neko picks the file in the native picker. :: Fetching GitHub release URLs directly from Studio fails (CSP); only raw.githubusercontent.com works. Chrome extension cannot (10MB limit, YouTube blocked). Retry the inject in a session where it is allowed, or use secrets.
 - Book chapters via DeepSeek :: Give it the full brief once, then a correction brief: what changed and why, the ban list, a self-check, and the corrected chapter as the standard. DeepSeek writes ahead and invents backstory, so audit every chapter against the brief (names, facts, Scripture quotes, banned phrases) before Neko reads it. Ban list built from tropes.fyi, pangram.com/signs-of-ai-writing, plusai.com overused words, and the humzakt ai-writing-markers dataset; added the sit-with/hold-space family and no em dashes. :: Neko pastes briefs into DeepSeek; Claude audits and fixes. Chapters live in chat only, never as files.
 - Glitch-scan a rendered sleep book :: Dispatch the sleep-glitch workflow: gh api -X POST repos/<repo>/actions/workflows/sleep-glitch.yml/dispatches -f ref=main -f inputs[book]=John -f inputs[tag]=sleep-john -f inputs[chunks]=10. About 17 min on free GitHub minutes. It aligns each verse to its audio by duration and writes glitch-NN.json to the release (speed, longest pause, click ratio, word match per verse). Read with tools/rel.sh down <tag> <dir> glitch-. :: John and Proverbs scanned Oct 17: speed uniform, only 4 verses with a pause just over 2 s (John 3:18, 12:38, 21:25, Proverbs 12:11), no clicks, word mismatches are spelling variants or Whisper dropouts. Judged by measurement only; Claude cannot hear audio.
+- Move a Pinterest pin to another board :: In Chrome (extension works even if screenshots time out): open pin page, JS click More actions, Edit Pin, click Board dropdown, pick board, click Save. Internal PinResource API call returned 404, UI clicks work. :: Done Oct 17 for 2 pins. Use get_page_text/JS, not screenshots, when laptop screen is off.

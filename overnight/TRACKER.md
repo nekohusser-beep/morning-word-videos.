@@ -1,6 +1,6 @@
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:09 AM ET
+Last updated: Oct 17 12:14 AM ET
 
 Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 6
 
@@ -37,7 +37,7 @@ Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 6
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
-- [S12] Sleep Bible | Remove temp branch upload-tmp (about 420 MB of split John/Proverbs parts) from repo | NEXT: Delete branch on GitHub (session cannot delete) | WAITING ON: Neko or a session with delete access | Neko | Oct 17 12:02 AM ET
+- [S12] Sleep Bible | Temp branch upload-tmp: only copies of finished John/Proverbs videos cut in pieces (420 MB). Delete only after Neko okays | NEXT: Wait for Neko okay, then delete upload-tmp only. Leave all other branches alone | WAITING ON: Neko or a session with delete access | Neko | Oct 17 12:14 AM ET
 
 ## On hold (6)
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16

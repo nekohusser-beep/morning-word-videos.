@@ -2,12 +2,13 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 5:31 PM ET
+Last updated: Oct 17 5:35 PM ET
 
-Counts: Done 31, In progress 10, Not started 15, On hold 13, Waiting on Neko 1
+Counts: Done 31, In progress 11, Not started 15, On hold 12, Waiting on Neko 1
 
-## In progress (10)
-- [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters, master built (7.28 h, -18.1 LUFS, no spikes, no gaps over 8 s; release sleep-genesis, file genesis-sleep.mp4), QA clean (no decode errors), glitch scan done (1533 verses, 11 with a pause just over 2 s). youtube.json written | NEXT: Genesis thumbnail (modest woman on beach, same style as John/Proverbs); upload when keys exist | WAITING ON: Upload waits on S6 keys (parked) | Claude | Oct 17 5:31 PM ET
+## In progress (11)
+- [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: Neko Oct 17 5:34 PM ET: he is at the laptop now, do the keys now. Walkthrough in chat; then run youtube-upload for John, Proverbs, Genesis (private, thumbnails) | WAITING ON: Neko: create the 3 keys and store as repo secrets | Neko | Oct 17 5:35 PM ET
+- [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters, master built (7.28 h, -18.1 LUFS, no spikes, no gaps over 8 s; release sleep-genesis, file genesis-sleep.mp4), QA clean (no decode errors), glitch scan done (1533 verses, 11 with a pause just over 2 s). youtube.json written, thumbnail done (sleep/kit/thumb_genesis_v3.jpg) | NEXT: Upload Genesis once keys exist (or Neko picks file in Studio) | WAITING ON: Upload waits on S6 keys (parked) | Claude | Oct 17 5:35 PM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | Oct 17 3:45 AM ET research: HeyGen custom-motion prompt 'Hands still, calm expression' (Avatar IV/V, one gesture per prompt) fixes hand waving; use ElevenLabs Derrick audio per scene (audio route) instead of HeyGen voice, no voice change needed; Video Agent only 'largely follows' pasted script so verify words. Waiting on Neko go for one test episode. B-roll rule: write a shot list per line first, show what the line literally says. | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 17 3:45 AM ET
 - [M6] Morning Word | Week 2 (Mon Oct 19 to Fri Oct 23, Mon-Fri only): Jeremiah 29:11 (built), Psalm 91 (new, Neko Oct 17); Isaiah 41:10 archived (M10); rest from top-10 search-demand verses | NEXT: Build only on Derrick day, in Flow, state credit cost first | WAITING ON: Neko approval of M10 file | Claude | Oct 17 5:31 PM ET
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
@@ -35,8 +36,7 @@ Counts: Done 31, In progress 10, Not started 15, On hold 13, Waiting on Neko 1
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
 
-## On hold (13)
-- [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: Neko Oct 17 5:29 PM ET: keys NOT today, too many credits already lost. Walkthrough is in the Oct 17 chat; resume on the Sleep Bible day | WAITING ON: Neko: picks the day for the 3 YouTube keys | Neko | Oct 17 5:31 PM ET
+## On hold (12)
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16
 - [T2] Tech | Replace trial connectors with free tools (Orshot, Buffer, TinyFish, Descript, ElevenLabs); Neko said 'different route' Oct 15 | NEXT: Ask Neko the new route | WAITING ON: Neko | Neko | Oct 16
 - [R1] Resume service | Aviation resume service: Wix page live ($49), card made, nothing posted, no sales; Neko doubts niche | NEXT: Neko decides: pivot or drop | WAITING ON: Neko: payment handles, logins, direction | Neko | Oct 16

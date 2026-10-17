@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 2:12 AM ET
+Last updated: Oct 17 2:25 AM ET
 
 Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6
 
@@ -35,7 +35,7 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6
 - [M9] Morning Word | Derek only thread turns 117-361 unread | NEXT: Re-read after limit resets, reconcile Week 2 status | WAITING ON: Hourly chat-read limit | Claude | Oct 16
 - [E1] Etsy | Etsy connector trial ends Oct 17; 4 empty drafts; journals/planners still in Desk Calendars | NEXT: Neko decides on trial; Claude tidies drafts and categories | WAITING ON: Neko: trial decision | Neko | Oct 16
 - [E3] Etsy | Six books still lack PDFs; Christian Anxiety Workbook has no PDF/description/tags | NEXT: Neko supplies PDFs | WAITING ON: Neko: PDFs | Neko | Oct 16
-- [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB, Win10 Pro 22H2) is the host. Per Neko Oct 17: Hermes with DeepSeek, Claude desktop app, Chrome and GitHub are already installed on it (not yet verified by Claude: this chat is linked to the old i3). Docker not installed. Plan: Hermes runs Derrick from the tracker, builds the free pipeline, then a white-hat security pass | NEXT: MON OCT 19, 9-10 AM ET (calendar block set, Neko at the new laptop): 1) link Claude desktop app on the new laptop to this chat; 2) confirm Hermes model/key works (DeepSeek, or OpenRouter free vs one-time $10, ask before spending); 3) install Docker as the Hermes terminal sandbox; 4) give Hermes the repo morning-word-videos. so it reads overnight/TRACKER.md as its thread dump; 5) run the white-hat test on the finished pipeline | WAITING ON: Neko: be at the new laptop Mon 9 AM ET; any model spend needs his yes | Neko | Oct 17 1:20 AM ET
+- [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB, Win10 Pro 22H2) is the host. Per Neko Oct 17: Hermes with DeepSeek, Claude desktop app, Chrome and GitHub are already installed on it (not yet verified by Claude: this chat is linked to the old i3). Docker not installed. Plan: Hermes runs Derrick from the tracker, builds the free pipeline, then a white-hat security pass | NEXT: MON OCT 19, 9-10 AM ET (calendar block set, Neko at the new laptop): 1) link Claude desktop app on the new laptop to this chat; 2) confirm Hermes model/key works (DeepSeek, or OpenRouter free vs one-time $10, ask before spending); 3) install Docker as the Hermes terminal sandbox; 4) give Hermes the repo morning-word-videos. so it reads overnight/TRACKER.md as its thread dump; 5) run the white-hat test on the finished pipeline | Hermes' own setup list now lives in hermes/Hermes-Tracker.xlsx (Tracker B, rows H1-H16); update Hermes work there, not here | WAITING ON: Neko: be at the new laptop Mon 9 AM ET; any model spend needs his yes | Neko | Oct 17 2:25 AM ET
 - [Z4] Neko Zion | Word For Today promo video | NEXT: Make after the pre-save push | Claude | Oct 16 11:50 PM ET
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
@@ -95,6 +95,7 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6
 - Versions :: If the file passes about 300 rows or 1 MB: copy it to overnight/archive/Claude-Work-Tracker-V<n>-<date>.xlsx, then start a clean V<n+1> in the main file with open rows only. V1 baseline is already in overnight/archive/.
 - Plain-text mirror :: After every edit run python3 tools/tracker_sync.py. It rebuilds overnight/TRACKER.md, which any thread can read without a spreadsheet library. Commit both files.
 - Thread start :: Every thread: read /README.md in the repo root first, then overnight/TRACKER.md. The root README tells you the rules.
+- Hermes tracker :: Exception set by Neko Oct 17, 2026: Hermes has his OWN tracker, hermes/Hermes-Tracker.xlsx (mirror hermes/TRACKER.md). Do not add Hermes setup rows here and do not edit that file unless working on Hermes. Tracker A items move into it only when Neko says Hermes is flawless.
 
 ## How it was done
 - Derrick episode in Flow :: Open Derrick project in Chrome (signed in as neko.husser@gmail.com). Add derrick-gray still as reference, type script clip (about 15 words), generate Veo 3.1 Lite 9:16. Stitch, caption, -14 LUFS in ffmpeg. Send ONE captioned MP4 for approval. :: Project flow.google.com/u/0/project/0a90fb26-707c-45ae-aae4-61a8d163a56b. Keep other Chrome tabs closed. Screenshots in Chrome often time out; use get_page_text.

@@ -3,10 +3,10 @@
 Move Done rows older than 14 days to the Archive tab by hand, then rerun this script.
 Also archives Done rows older than 14 days is NOT automatic; move them by hand to the Archive tab."""
 import openpyxl,sys,os
-X='overnight/Claude-Work-Tracker.xlsx';M='overnight/TRACKER.md'
+X=sys.argv[1] if len(sys.argv)>2 else 'overnight/Claude-Work-Tracker.xlsx';M=sys.argv[2] if len(sys.argv)>2 else 'overnight/TRACKER.md'
 wb=openpyxl.load_workbook(X)
 rz=[r[1] for r in wb['Standing rules'].iter_rows(min_row=2,values_only=True) if r[0] and str(r[0]).startswith('RULE ZERO')]
-out=(['# RULE ZERO (read first, applies to every thread and every model): '+rz[0],''] if rz else [])+['# TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)','']
+out=(['# RULE ZERO (read first, applies to every thread and every model): '+rz[0],''] if rz else [])+['# TRACKER (auto-generated mirror of '+os.path.basename(X)+'; edit the xlsx, never this file)','']
 w=wb['Where we are']
 out.append('Last updated: %s'%w['B2'].value);out.append('')
 t=wb['Tasks'];rows=[[ (str(c) if c is not None else '') for c in r] for r in t.iter_rows(min_row=2,values_only=True) if any(r)]

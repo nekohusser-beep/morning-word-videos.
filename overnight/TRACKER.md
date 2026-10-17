@@ -2,9 +2,9 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 4:05 AM ET
+Last updated: Oct 17 4:15 AM ET
 
-Counts: Blocked 3, Done 30, In progress 9, Not started 17, On hold 8, Waiting on Neko 1
+Counts: Blocked 3, Done 31, In progress 9, Not started 17, On hold 8, Waiting on Neko 1
 
 ## In progress (9)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
@@ -51,7 +51,7 @@ Counts: Blocked 3, Done 30, In progress 9, Not started 17, On hold 8, Waiting on
 - [Z7] Neko Zion | Song audio and lyrics: Island of Peace mp3 found in Gmail (nekozionrecords thread 19cf730572b1914c). Other tracks and lyrics not in Drive | NEXT: Do on Tue Oct 20 with the copyright session; try Chrome app/touch screen for the Fiverr check. Do not raise before then | WAITING ON: Neko decision: parked until Oct 20 | Claude | Oct 17 3:55 AM ET
 - [N1] Ideas (shelved) | Church division idea: the enemy keeps the church arguing and divided while the kingdom of darkness grows (fulfillment of prophecy). Form not yet chosen (book, video, sermon series) | NEXT: Hear the rest from Neko; start only when an in-flight project closes (live on Etsy with illustrations) | WAITING ON: WIP cap: nothing in flight has closed | Neko | Oct 17 12:09 AM ET
 
-## Done (30)
+## Done (31)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
@@ -82,6 +82,7 @@ Counts: Blocked 3, Done 30, In progress 9, Not started 17, On hold 8, Waiting on
 - [K6] Apparel | Design canvas "KI Apparel Mockups": Tees and Hoodies artboards filled with the finished mockups | NEXT: Add K4 hoodies when done | WAITING ON: None | Claude | Oct 17 1:45 AM ET
 - [T3] Tech | Music playing on the laptop found and turned off (Neko) | NEXT: None | WAITING ON: None | Neko | Oct 17 1:20 AM ET
 - [Z14] Standards | NEW STANDARD: when unsure, ask Gemini AI in the browser (gemini.google.com/app) with a live-check, no-guessing prompt, then verify its answer. Steps in playbook. Gemini connector is the crypto exchange, not the AI | NEXT: Use every thread | Claude | Oct 17 3:50 AM ET
+- [Z15] Neko Zion | Tool sweep: vidIQ keywords (gospel reggae demand), Spotify curator playlists (7 found), Claude in Chrome file_upload route for radio forms. Details in playbook | NEXT: Pitch the 7 playlist curators; pick keywords for video titles | Claude | Oct 17 4:15 AM ET
 
 ## Standing rules
 - RULE ZERO (read first) :: Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.

@@ -1,13 +1,13 @@
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:03 AM ET
+Last updated: Oct 17 12:04 AM ET
 
 Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
 
 ## In progress (7)
 - [S8] Sleep Bible | Genesis sleep reading: all 50 chapters + title rendered (release sleep-genesis-chapters, 51 assets) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:02 AM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 16
-- [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle (voice and face tests passed Oct 15) | NEXT: 60-sec real-narration test; brightness drift fix; Kaggle->GitHub handoff test | WAITING ON: Kaggle GITHUB_TOKEN secret (Neko says in); ElevenLabs credits at zero; intro/outro music missing | Claude | Oct 16
+- [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
 - [B1] Books | Mother-in-law book 'The Empty Chair' (locked: names Norman/Asia/Francisca/Sasha, courthouse elopement, first-step ending): ch 1-5 delivered, 6-13 to write | NEXT: Neko reads/corrects ch 2-5, says 'next' for ch 6. DeepSeek correction brief with AI-phrase ban list already delivered | WAITING ON: Neko review; check overlap with Mama's Boys; Norman's father detail is a placeholder ('out of the picture'), Neko can supply the true one | Neko | Oct 17 12:03 AM ET
 - [Z3] Neko Zion | Push to Hymn Reimagined, Reggae Gospel, Reggae Gospel Link, GospelReggae.com, Zion Reggae Gospel: scheduled task Oct 18-20 10:47 AM ET, 3 groups per run, One Love One World video + pre-save | NEXT: Task runs on its own; confirm posts after Oct 20 | WAITING ON: Computer must be on with Claude desktop app open | Claude | Oct 16 11:50 PM ET

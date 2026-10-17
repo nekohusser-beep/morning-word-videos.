@@ -2,12 +2,12 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 6:10 PM ET
+Last updated: Oct 17 6:15 PM ET
 
 Counts: Done 32, In progress 8, Not started 15, On hold 14, Waiting on Neko 1
 
 ## In progress (8)
-- [M6] Morning Word | Week 2 (Mon Oct 19 to Fri Oct 23, Mon-Fri only): Jeremiah 29:11 (built), Psalm 91 (new, Neko Oct 17); Isaiah 41:10 archived (M10); rest from top-10 search-demand verses | NEXT: Build only on Derrick day, in Flow, state credit cost first | WAITING ON: Neko approval of M10 file | Claude | Oct 17 5:31 PM ET
+- [M6] Morning Word | Week 2 (Mon Oct 19 to Fri Oct 23, Mon-Fri only): Jeremiah 29:11 (built), Psalm 91 (new, Neko Oct 17); Isaiah 41:10 archived (M10); rest from top-10 search-demand verses | NEXT: Psalm 91 script drafted (tools/scripts-pending/psalm-91.json, Format E, ~250 credits). Build in Flow after Neko approves the script; Jeremiah already built | WAITING ON: Neko: script approval | Claude | Oct 17 6:15 PM ET
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
 - [B1] Books | Mother-in-law book 'The Empty Chair' (locked: names Norman/Asia/Francisca/Sasha, courthouse elopement, first-step ending): ch 1-5 delivered and corrected; ch 6-13 written, sitting in DeepSeek | NEXT: Neko brings ch 6-13 out of DeepSeek; Claude edits each against the brief and ban list, one at a time. Remind Neko they are done in DeepSeek whenever he asks where we are | WAITING ON: Neko: getting ch 6-13 out of DeepSeek; check overlap with Mama's Boys; Norman's father detail is a placeholder | Neko | Oct 17 1:08 AM ET
@@ -17,7 +17,7 @@ Counts: Done 32, In progress 8, Not started 15, On hold 14, Waiting on Neko 1
 - [Z12] Neko Zion | Joined 3 CHRISTAFARI groups (7.4K, 5.3K, 5.3K). Still to join: AFRO GOSPEL ARTISTS WORLDWIDE (2K) and 8 older queue groups | NEXT: Join in paced batches (part 2 task joins 3 per run) | Claude | Oct 17 4:55 AM ET
 
 ## Not started (15)
-- [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Voice fixed (Oct 17 6:10 PM ET). Build when Neko says go on promo credits; state credit cost first | WAITING ON: Neko: go on promo credits | Claude | Oct 17 6:10 PM ET
+- [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Credits approved Oct 17 6:12 PM ET. Scripts drafted: tools/scripts-pending/john-promo.json, proverbs-promo.json. Build in Flow right after Neko approves the scripts (~210 credits each) | WAITING ON: Neko: script approval | Claude | Oct 17 6:15 PM ET
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
 - [F1] Outreach | Facebook posts on Blessed Prayers and Prince Nico pages | NEXT: Post where group rules allow Etsy links | WAITING ON: Facebook site permission in browser | Claude | Oct 16

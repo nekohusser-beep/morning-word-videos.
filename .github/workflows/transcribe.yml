@@ -16,7 +16,7 @@ jobs:
           python - <<'PY'
           import json
           from faster_whisper import WhisperModel
-          m = WhisperModel("small.en", device="cpu", compute_type="int8")
+          m = WhisperModel("medium.en", device="cpu", compute_type="int8")
           out = {}
           for p in "${{ inputs.path }}".split():
               segs, _ = m.transcribe(p, word_timestamps=True, vad_filter=False)

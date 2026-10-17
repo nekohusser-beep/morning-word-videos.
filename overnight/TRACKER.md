@@ -2,11 +2,11 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 4:15 AM ET
+Last updated: Oct 17 4:25 AM ET
 
-Counts: Blocked 3, Done 31, In progress 9, Not started 17, On hold 8, Waiting on Neko 1
+Counts: Blocked 3, Done 30, In progress 10, Not started 17, On hold 8, Waiting on Neko 1
 
-## In progress (9)
+## In progress (10)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | Oct 17 3:45 AM ET research: HeyGen custom-motion prompt 'Hands still, calm expression' (Avatar IV/V, one gesture per prompt) fixes hand waving; use ElevenLabs Derrick audio per scene (audio route) instead of HeyGen voice, no voice change needed; Video Agent only 'largely follows' pasted script so verify words. Waiting on Neko go for one test episode. B-roll rule: write a shot list per line first, show what the line literally says. | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 17 3:45 AM ET
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
@@ -16,6 +16,7 @@ Counts: Blocked 3, Done 31, In progress 9, Not started 17, On hold 8, Waiting on
 - [K3] Apparel | Back-corner QR code for wash-proof scanning: QR made, decodes to kingdomimpactshop.etsy.com | NEXT: Confirm print method and placement with the print provider; wash test | WAITING ON: Print provider confirmation | Neko | Oct 17 1:20 AM ET
 - [K4] Apparel | New designs on models: HH1, PS1, TS1 on the red tee model done. Half Hood hoodie, plus PS1 and TS1 hoodies, not done | NEXT: Make the HH1 hoodie mockup, then PS1 and TS1 hoodies | WAITING ON: None | Claude | Oct 17 1:45 AM ET
 - [S13] Sleep Bible | Nightly KJV verse cards (Bible-app style: photo background, KJV verse, our lady in a circle, 'soft-spoken KJV Bible readings for sleep') to drive viewers to the long readings. Template built (tools/cards/mist_card.py + lady_circle.png), Romans 8:28 sample sent | NEXT: Neko approves the look. Then: background photos from Gemini Pro plan (free, not copied from the Bible app), scheduled task builds each night's card, stage for his yes | WAITING ON: Neko: approve sample + say yes to a nightly scheduled task. Backgrounds must be our own or licensed, not the Bible app's photos | Claude | Oct 17 2:56 AM ET
+- [Z15] Neko Zion | Spotify playlist pitching: 7 curators found, no contact on Spotify pages. Pitch message drafted with real link (One Love, One World track open.spotify.com/track/0VdOCUOERoPvgD295VUY3l). Gemini advice: find curator on Instagram, short DM, SubmitHub/Groover paid only if enough matches | NEXT: Neko OK to send DMs; Claude finds each curator public handle. Paid platforms need Neko OK to spend | WAITING ON: Neko OK: sending messages and any spend | Claude | Oct 17 4:25 AM ET
 
 ## Blocked (3)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET
@@ -51,7 +52,7 @@ Counts: Blocked 3, Done 31, In progress 9, Not started 17, On hold 8, Waiting on
 - [Z7] Neko Zion | Song audio and lyrics: Island of Peace mp3 found in Gmail (nekozionrecords thread 19cf730572b1914c). Other tracks and lyrics not in Drive | NEXT: Do on Tue Oct 20 with the copyright session; try Chrome app/touch screen for the Fiverr check. Do not raise before then | WAITING ON: Neko decision: parked until Oct 20 | Claude | Oct 17 3:55 AM ET
 - [N1] Ideas (shelved) | Church division idea: the enemy keeps the church arguing and divided while the kingdom of darkness grows (fulfillment of prophecy). Form not yet chosen (book, video, sermon series) | NEXT: Hear the rest from Neko; start only when an in-flight project closes (live on Etsy with illustrations) | WAITING ON: WIP cap: nothing in flight has closed | Neko | Oct 17 12:09 AM ET
 
-## Done (31)
+## Done (30)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
@@ -82,7 +83,6 @@ Counts: Blocked 3, Done 31, In progress 9, Not started 17, On hold 8, Waiting on
 - [K6] Apparel | Design canvas "KI Apparel Mockups": Tees and Hoodies artboards filled with the finished mockups | NEXT: Add K4 hoodies when done | WAITING ON: None | Claude | Oct 17 1:45 AM ET
 - [T3] Tech | Music playing on the laptop found and turned off (Neko) | NEXT: None | WAITING ON: None | Neko | Oct 17 1:20 AM ET
 - [Z14] Standards | NEW STANDARD: when unsure, ask Gemini AI in the browser (gemini.google.com/app) with a live-check, no-guessing prompt, then verify its answer. Steps in playbook. Gemini connector is the crypto exchange, not the AI | NEXT: Use every thread | Claude | Oct 17 3:50 AM ET
-- [Z15] Neko Zion | Tool sweep: vidIQ keywords (gospel reggae demand), Spotify curator playlists (7 found), Claude in Chrome file_upload route for radio forms. Details in playbook | NEXT: Pitch the 7 playlist curators; pick keywords for video titles | Claude | Oct 17 4:15 AM ET
 
 ## Standing rules
 - RULE ZERO (read first) :: Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.

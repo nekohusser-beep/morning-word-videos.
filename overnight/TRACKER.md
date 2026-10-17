@@ -2,9 +2,9 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 2:56 AM ET
+Last updated: Oct 17 3:50 AM ET
 
-Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6, Waiting on Neko 1
+Counts: Blocked 2, Done 30, In progress 11, Not started 18, On hold 6, Waiting on Neko 1
 
 ## In progress (11)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
@@ -23,7 +23,7 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6, Waiting o
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET
 - [M6] Morning Word | Week 2 Days 2-7 and Oct 17+ not built | NEXT: Build after HeyGen voice change | WAITING ON: Neko: HeyGen voice change | Neko | Oct 16
 
-## Not started (16)
+## Not started (18)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Build after HeyGen voice fix | WAITING ON: Derrick voice change in HeyGen; Neko go on promo credits | Claude | Oct 16
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
@@ -40,6 +40,8 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6, Waiting o
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
+- [Z12] Neko Zion | Found 4 more groups via Facebook search: CHRISTAFARI (3 groups, 7.4K / 5.3K / 5.3K), AFRO GOSPEL ARTISTS WORLDWIDE (2K). Queued with the 8 other groups to join, about 3 a day | NEXT: Join in paced batches (part 2 task joins 3 per run) | Claude | Oct 17 3:50 AM ET
+- [Z13] Neko Zion | Radio submissions verified real: tdnradio.net/submit-music (Reggae/Afrobeats, clean radio edit, tagged MP3) and sunlightradio.com/submit-music (Gospel/Reggae, MP3 128k, original music) | NEXT: Need clean tagged MP3 of each song; Island of Peace mp3 is in Gmail | WAITING ON: Audio files for other songs (Fiverr check) | Claude | Oct 17 3:50 AM ET
 
 ## On hold (6)
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16
@@ -49,7 +51,7 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6, Waiting o
 - [D4] Morning Word | FALLBACK if Flow credits run out or Flow breaks: MiniMax H3 official API ($0.08/sec, about $1.20 per 15s). Self-hosting the open weights is NOT allowed in the U.S. (license excludes US). APIYI reseller $0.03/sec unverified for US use | NEXT: Revisit only if Flow fails; one test clip first | WAITING ON: Neko: sign up + key as repo secret | Neko | Oct 16 11:28 PM ET
 - [N1] Ideas (shelved) | Church division idea: the enemy keeps the church arguing and divided while the kingdom of darkness grows (fulfillment of prophecy). Form not yet chosen (book, video, sermon series) | NEXT: Hear the rest from Neko; start only when an in-flight project closes (live on Etsy with illustrations) | WAITING ON: WIP cap: nothing in flight has closed | Neko | Oct 17 12:09 AM ET
 
-## Done (29)
+## Done (30)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
@@ -79,6 +81,7 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6, Waiting o
 - [K5] Apparel | Center the 29 older apparel renders (out/*.png) like the new designs | NEXT: None | WAITING ON: None | Claude | Oct 17 1:45 AM ET
 - [K6] Apparel | Design canvas "KI Apparel Mockups": Tees and Hoodies artboards filled with the finished mockups | NEXT: Add K4 hoodies when done | WAITING ON: None | Claude | Oct 17 1:45 AM ET
 - [T3] Tech | Music playing on the laptop found and turned off (Neko) | NEXT: None | WAITING ON: None | Neko | Oct 17 1:20 AM ET
+- [Z14] Standards | NEW STANDARD: when unsure, ask Gemini AI in the browser (gemini.google.com/app) with a live-check, no-guessing prompt, then verify its answer. Steps in playbook. Gemini connector is the crypto exchange, not the AI | NEXT: Use every thread | Claude | Oct 17 3:50 AM ET
 
 ## Standing rules
 - RULE ZERO (read first) :: Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.

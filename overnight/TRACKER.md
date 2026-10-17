@@ -1,6 +1,6 @@
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:14 AM ET
+Last updated: Oct 17 12:22 AM ET
 
 Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 6
 
@@ -14,7 +14,7 @@ Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 6
 - [Z6] Neko Zion | Fiverr license letters from Vaizal (8 PDFs): 1 of 8 read | NEXT: Read other 7, map each to a song | Claude | Oct 16 11:50 PM ET
 
 ## Blocked (3)
-- [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: Route A: Neko picks file in Studio upload window (Select files), Claude fills title/description/thumb/private. Route B: add 3 YT secrets, run youtube-upload | WAITING ON: Neko: pick the file OR store YT_CLIENT_ID/SECRET/REFRESH_TOKEN. Claude cannot inject files into Studio (session safety check blocked it). Temp branch upload-tmp in repo can be deleted | Neko | Oct 17 12:02 AM ET
+- [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET
 - [M6] Morning Word | Week 2 Days 2-7 and Oct 17+ not built | NEXT: Build after HeyGen voice change | WAITING ON: Neko: HeyGen voice change | Neko | Oct 16
 - [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB, Win10 Pro 22H2) chosen as host; Neko says Hermes Agent is already installed on it; Docker not installed; no model set yet. Plan (Neko Oct 17): Hermes runs Derrick, gets a thread dump of done/not done, builds the free pipeline, then a white-hat security pass on it | NEXT: Set Hermes model: OpenRouter free (GLM-5.2:free, 50 req/day, 20/min) or one-time $10 credit (1,000/day). Backups: NVIDIA NIM free credits, Gemini free tier, DeepSeek V4 Flash ~$0.30/$1.20 per M. Then install Docker as the Hermes terminal sandbox, hand Hermes the thread dump file, build, then white-hat test | WAITING ON: Neko: OpenRouter free vs $10 (ask-before-spending); be at the laptop. Laptop linked to this chat is the old i3, not the new one | Neko | Oct 17 12:03 AM ET
 

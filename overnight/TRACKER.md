@@ -1,11 +1,11 @@
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:23 AM ET
+Last updated: Oct 17 12:32 AM ET
 
 Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 6
 
 ## In progress (7)
-- [S8] Sleep Bible | Genesis sleep reading: all 50 chapters + title rendered (release sleep-genesis-chapters, 51 assets) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:02 AM ET
+- [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 16
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
@@ -37,7 +37,7 @@ Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 6
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
-- [S12] Sleep Bible | Temp branch upload-tmp: only copies of finished John/Proverbs videos cut in pieces (420 MB). Delete only after Neko okays | NEXT: Wait for Neko okay, then delete upload-tmp only. Leave all other branches alone | WAITING ON: Neko or a session with delete access | Neko | Oct 17 12:14 AM ET
+- [S12] Sleep Bible | Temp branch upload-tmp: only copies of finished John/Proverbs videos cut in pieces (420 MB). Delete only after Neko okays | NEXT: Neko okayed deleting upload-tmp (Oct 17 12:32 AM ET). This session cannot delete branches (proxy blocks it). Neko deletes it on github.com Branches page at 8:30 AM keys session, or a session with delete access does it | WAITING ON: Neko or a session with delete access | Neko | Oct 17 12:32 AM ET
 
 ## On hold (6)
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16

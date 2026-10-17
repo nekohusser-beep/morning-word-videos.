@@ -1,6 +1,6 @@
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 12:02 AM ET
+Last updated: Oct 17 12:06 AM ET
 
 Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
 
@@ -31,7 +31,7 @@ Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
 - [M9] Morning Word | Derek only thread turns 117-361 unread | NEXT: Re-read after limit resets, reconcile Week 2 status | WAITING ON: Hourly chat-read limit | Claude | Oct 16
 - [E1] Etsy | Etsy connector trial ends Oct 17; 4 empty drafts; journals/planners still in Desk Calendars | NEXT: Neko decides on trial; Claude tidies drafts and categories | WAITING ON: Neko: trial decision | Neko | Oct 16
 - [E3] Etsy | Six books still lack PDFs; Christian Anxiety Workbook has no PDF/description/tags | NEXT: Neko supplies PDFs | WAITING ON: Neko: PDFs | Neko | Oct 16
-- [D6] Morning Word | Monday Oct 19 Derrick episode: nothing built or queued in Buffer | NEXT: Build after HeyGen voice change or in Flow | WAITING ON: M3 (HeyGen voice) if using HeyGen | Claude | Oct 16
+- [D6] Morning Word | Monday Oct 19 Derrick episode: nothing built or queued in Buffer | NEXT: Build after HeyGen voice change or in Flow | WAITING ON: M3 (HeyGen voice) if using HeyGen | Claude | Oct 16 11:28 PM ET
 - [Z4] Neko Zion | Word For Today promo video | NEXT: Make after the pre-save push | Claude | Oct 16 11:50 PM ET
 - [Z7] Neko Zion | Locate song audio files and lyrics (not in Gmail label 'music and royalty stuff') | NEXT: Search Drive and Gmail | Claude | Oct 16 11:50 PM ET
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
@@ -44,7 +44,7 @@ Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
 - [T2] Tech | Replace trial connectors with free tools (Orshot, Buffer, TinyFish, Descript, ElevenLabs); Neko said 'different route' Oct 15 | NEXT: Ask Neko the new route | WAITING ON: Neko | Neko | Oct 16
 - [R1] Resume service | Aviation resume service: Wix page live ($49), card made, nothing posted, no sales; Neko doubts niche | NEXT: Neko decides: pivot or drop | WAITING ON: Neko: payment handles, logins, direction | Neko | Oct 16
 - [X1] Spending | Promo credits for John/Proverbs (~210 Flow credits each) - ask first; free path instead | NEXT: Use free path or get yes | WAITING ON: Neko: credit approval | Neko | Oct 16
-- [D4] Morning Word | FALLBACK if Flow credits run out or Flow breaks: MiniMax H3 official API ($0.08/sec, about $1.20 per 15s). Self-hosting the open weights is NOT allowed in the U.S. (license excludes US). APIYI reseller $0.03/sec unverified for US use | NEXT: Revisit only if Flow fails; one test clip first | WAITING ON: Neko: sign up + key as repo secret | Neko | Oct 16
+- [D4] Morning Word | FALLBACK if Flow credits run out or Flow breaks: MiniMax H3 official API ($0.08/sec, about $1.20 per 15s). Self-hosting the open weights is NOT allowed in the U.S. (license excludes US). APIYI reseller $0.03/sec unverified for US use | NEXT: Revisit only if Flow fails; one test clip first | WAITING ON: Neko: sign up + key as repo secret | Neko | Oct 16 11:28 PM ET
 
 ## Done (21)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
@@ -61,10 +61,10 @@ Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
 - [M5] Morning Word | Day 4 (1 Peter 5:7) built, Buffer-delivered Oct 16 5 AM; Neko said 'good, not the best' | NEXT: Rebuild only if Neko asks | Claude | Oct 16
 - [B2] Books | Horrorcore verse flipped to testimony, Suno kit delivered | NEXT: Neko runs kit in Suno, reports; BPM 92 if too jazzy | WAITING ON: Neko in Suno | Neko | Oct 16
 - [X2] Music | Psalms 82-150 glitch fix: closed by Neko ('leave it') | NEXT: None | Neko | Oct 16
-- [D1] Morning Word | LOCKED Oct 16: Derrick episodes Monday to Friday only; no Sat/Sun episodes | NEXT: Build Mon-Fri only | Neko | Oct 16
-- [D2] Morning Word | Main route is Google Flow; HeyGen only until its credits run out (renews Nov 15, will NOT be renewed) | NEXT: Use HeyGen credits on Derrick episodes before then | Neko | Oct 16
-- [D3] Morning Word | Mic-over-mouth Derrick still made in Flow (Sep 24 project, first tile in All media); Neko says it looks good. Use only for free-pipeline tests when lip-sync fails | NEXT: Animate only on Neko's go; check credit cost first | Claude | Oct 16
-- [D5] Morning Word | Flow credits (Pro): 1000/mo + 50 free/day. Lite 10, Fast 20, Quality 100 per clip. Keep clips 6-7s, lines under 20 words, use edits not full regenerates | NEXT: Run Lite test before finals | Claude | Oct 16
+- [D1] Morning Word | LOCKED Oct 16: Derrick episodes Monday to Friday only; no Sat/Sun episodes | NEXT: Build Mon-Fri only | Neko | Oct 16 11:28 PM ET
+- [D2] Morning Word | Main route is Google Flow; HeyGen only until its credits run out (renews Nov 15, will NOT be renewed) | NEXT: Use HeyGen credits on Derrick episodes before then | Neko | Oct 16 11:28 PM ET
+- [D3] Morning Word | Mic-over-mouth Derrick still made in Flow (Sep 24 project, first tile in All media); Neko says it looks good. Use only for free-pipeline tests when lip-sync fails | NEXT: Animate only on Neko's go; check credit cost first | Claude | Oct 16 11:28 PM ET
+- [D5] Morning Word | Flow credits (Pro): 1000/mo + 50 free/day. Lite 10, Fast 20, Quality 100 per clip. Keep clips 6-7s, lines under 20 words, use edits not full regenerates | NEXT: Run Lite test before finals | Claude | Oct 16 11:28 PM ET
 - [Z1] Neko Zion | Joined 6 gospel reggae FB groups (instant, no approval) | NEXT: Join Roots Reggae Gospel, Jamaica Reggae Gospel Amen, Gospel/Christian Rap, Gospel Music History, Gospel Music Videos Network | Claude | Oct 16 11:50 PM ET
 - [Z2] Neko Zion | Word For Today pre-save posted in Gospel reggae (10.8K) and Reggae gospel songs (15.3K) | NEXT: None | Claude | Oct 16 11:50 PM ET
 - [Z5] Neko Zion | Copyright day Tue Oct 20, 2-5 PM ET on calendar | NEXT: None | Claude | Oct 16 11:50 PM ET

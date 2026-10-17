@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 4:25 AM ET
+Last updated: Oct 17 4:35 AM ET
 
 Counts: Blocked 3, Done 30, In progress 10, Not started 17, On hold 8, Waiting on Neko 1
 
@@ -16,7 +16,7 @@ Counts: Blocked 3, Done 30, In progress 10, Not started 17, On hold 8, Waiting o
 - [K3] Apparel | Back-corner QR code for wash-proof scanning: QR made, decodes to kingdomimpactshop.etsy.com | NEXT: Confirm print method and placement with the print provider; wash test | WAITING ON: Print provider confirmation | Neko | Oct 17 1:20 AM ET
 - [K4] Apparel | New designs on models: HH1, PS1, TS1 on the red tee model done. Half Hood hoodie, plus PS1 and TS1 hoodies, not done | NEXT: Make the HH1 hoodie mockup, then PS1 and TS1 hoodies | WAITING ON: None | Claude | Oct 17 1:45 AM ET
 - [S13] Sleep Bible | Nightly KJV verse cards (Bible-app style: photo background, KJV verse, our lady in a circle, 'soft-spoken KJV Bible readings for sleep') to drive viewers to the long readings. Template built (tools/cards/mist_card.py + lady_circle.png), Romans 8:28 sample sent | NEXT: Neko approves the look. Then: background photos from Gemini Pro plan (free, not copied from the Bible app), scheduled task builds each night's card, stage for his yes | WAITING ON: Neko: approve sample + say yes to a nightly scheduled task. Backgrounds must be our own or licensed, not the Bible app's photos | Claude | Oct 17 2:56 AM ET
-- [Z15] Neko Zion | Spotify playlist pitching: 7 curators found, no contact on Spotify pages. Pitch message drafted with real link (One Love, One World track open.spotify.com/track/0VdOCUOERoPvgD295VUY3l). Gemini advice: find curator on Instagram, short DM, SubmitHub/Groover paid only if enough matches | NEXT: Neko OK to send DMs; Claude finds each curator public handle. Paid platforms need Neko OK to spend | WAITING ON: Neko OK: sending messages and any spend | Claude | Oct 17 4:25 AM ET
+- [Z15] Neko Zion | Spotify playlist pitching: 7 curators found, no contact on Spotify pages. Pitch message drafted with real link (One Love, One World track open.spotify.com/track/0VdOCUOERoPvgD295VUY3l). Gemini advice: find curator on Instagram, short DM, SubmitHub/Groover paid only if enough matches | NEXT: Web search found no curator handles. Free routes found: playlistsupply.com/playlistcurator/genre/gospel/ (curator list + submit pages), Spotify Community Music Exchange threads. DMs need a Neko Zion Instagram/Facebook login in the browser | WAITING ON: Neko: which account to send from (Blessed Prayers FB is the only one signed in) | Claude | Oct 17 4:35 AM ET
 
 ## Blocked (3)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET

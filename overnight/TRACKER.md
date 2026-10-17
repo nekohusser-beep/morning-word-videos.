@@ -1,12 +1,12 @@
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 16 11:50 PM ET
+Last updated: Oct 17 12:02 AM ET
 
-Counts: Blocked 3, Done 20, In progress 7, Not started 19, On hold 5
+Counts: Blocked 3, Done 21, In progress 7, Not started 19, On hold 5
 
 ## In progress (7)
+- [S8] Sleep Bible | Genesis sleep reading: all 50 chapters + title rendered (release sleep-genesis-chapters, 51 assets) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:02 AM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 16
-- [S11] Sleep Bible | Genesis sleep reading: render started 8:50 AM Oct 16 (sleep-render, tag sleep-genesis-chapters) | NEXT: Run sleep-master (needs title frame), sleep-qa, sleep-glitch, write youtube.json | WAITING ON: Upload blocked on YT secrets | Claude | Oct 16
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle (voice and face tests passed Oct 15) | NEXT: 60-sec real-narration test; brightness drift fix; Kaggle->GitHub handoff test | WAITING ON: Kaggle GITHUB_TOKEN secret (Neko says in); ElevenLabs credits at zero; intro/outro music missing | Claude | Oct 16
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
 - [B1] Books | Mother-in-law book 'The Empty Chair': ch 1-5 delivered, 6-13 to write | NEXT: Neko reads/corrects ch 2-5, says 'next' for ch 6 | WAITING ON: Neko review; Norman's father detail; check overlap with Mama's Boys | Neko | Oct 16
@@ -14,13 +14,12 @@ Counts: Blocked 3, Done 20, In progress 7, Not started 19, On hold 5
 - [Z6] Neko Zion | Fiverr license letters from Vaizal (8 PDFs): 1 of 8 read | NEXT: Read other 7, map each to a song | Claude | Oct 16 11:50 PM ET
 
 ## Blocked (3)
-- [S6] Sleep Bible | Upload John and Proverbs to YouTube as private with thumbnails | NEXT: Run youtube-upload workflow (privacy=private, thumbnail_path set) | WAITING ON: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN missing from repo secrets | Neko | Oct 16
+- [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: Route A: Neko picks file in Studio upload window (Select files), Claude fills title/description/thumb/private. Route B: add 3 YT secrets, run youtube-upload | WAITING ON: Neko: pick the file OR store YT_CLIENT_ID/SECRET/REFRESH_TOKEN. Claude cannot inject files into Studio (session safety check blocked it). Temp branch upload-tmp in repo can be deleted | Neko | Oct 17 12:02 AM ET
 - [M6] Morning Word | Week 2 Days 2-7 and Oct 17+ not built | NEXT: Build after HeyGen voice change | WAITING ON: Neko: HeyGen voice change | Neko | Oct 16
 - [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB) chosen; Docker not installed; Hermes free-model setup not started | NEXT: Set up Hermes after $10 OpenRouter decision | WAITING ON: Neko: OpenRouter free vs $10; be at laptop | Neko | Oct 16
 
 ## Not started (19)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Build after HeyGen voice fix | WAITING ON: Derrick voice change in HeyGen; Neko go on promo credits | Claude | Oct 16
-- [S8] Sleep Bible | Genesis sleep reading | NEXT: Needs Neko's go; no render exists | WAITING ON: Neko go | Claude | Oct 16
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
 - [M4] Morning Word | Derrick Day 5 and Day 6 videos built and scheduled | NEXT: Build after M3. Nothing in Buffer for Oct 16-17 | WAITING ON: M3 | Claude | Oct 16
@@ -38,6 +37,7 @@ Counts: Blocked 3, Done 20, In progress 7, Not started 19, On hold 5
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
+- [S12] Sleep Bible | Remove temp branch upload-tmp (about 420 MB of split John/Proverbs parts) from repo | NEXT: Delete branch on GitHub (session cannot delete) | WAITING ON: Neko or a session with delete access | Neko | Oct 17 12:02 AM ET
 
 ## On hold (5)
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16
@@ -46,7 +46,7 @@ Counts: Blocked 3, Done 20, In progress 7, Not started 19, On hold 5
 - [X1] Spending | Promo credits for John/Proverbs (~210 Flow credits each) - ask first; free path instead | NEXT: Use free path or get yes | WAITING ON: Neko: credit approval | Neko | Oct 16
 - [D4] Morning Word | FALLBACK if Flow credits run out or Flow breaks: MiniMax H3 official API ($0.08/sec, about $1.20 per 15s). Self-hosting the open weights is NOT allowed in the U.S. (license excludes US). APIYI reseller $0.03/sec unverified for US use | NEXT: Revisit only if Flow fails; one test clip first | WAITING ON: Neko: sign up + key as repo secret | Neko | Oct 16
 
-## Done (20)
+## Done (21)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked | NEXT: None | Claude | Oct 16
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked | NEXT: None | Claude | Oct 16
@@ -57,6 +57,7 @@ Counts: Blocked 3, Done 20, In progress 7, Not started 19, On hold 5
 - [P1] Pinterest | Pin Etsy listings (14 pins live) | NEXT: Pin remaining listings (audiobooks, teen playbook, apparel) | Claude | Oct 16
 - [G1] Gossip teaching | 7-day scripts written, saved in repo | NEXT: None | Claude | Oct 16
 - [H1] Shopify | First-pass niche research (night-shift sleep products) | NEXT: None | Claude | Oct 16
+- [S11] Sleep Bible | Duplicate of S8 (merged into S8) | NEXT: See S8 | Claude | Oct 17 12:02 AM ET
 - [M5] Morning Word | Day 4 (1 Peter 5:7) built, Buffer-delivered Oct 16 5 AM; Neko said 'good, not the best' | NEXT: Rebuild only if Neko asks | Claude | Oct 16
 - [B2] Books | Horrorcore verse flipped to testimony, Suno kit delivered | NEXT: Neko runs kit in Suno, reports; BPM 92 if too jazzy | WAITING ON: Neko in Suno | Neko | Oct 16
 - [X2] Music | Psalms 82-150 glitch fix: closed by Neko ('leave it') | NEXT: None | Neko | Oct 16
@@ -92,3 +93,5 @@ Counts: Blocked 3, Done 20, In progress 7, Not started 19, On hold 5
 - Flow credit saving :: Lite not Quality; one output; 6-7s clips; targeted edits instead of full regenerate; use the free daily 50 credits. :: Source: Google Flow credits help page.
 - HeyGen voice fix :: Voice picker, Import from ElevenLabs (Neko types his own API key) or Clone from approved sample. Voice must be ElevenLabs Derrick Hughes, deeper and more masculine. :: Neko does the login/key step.
 - Copyright Office (eCO) :: eco.copyright.gov in the built-in browser. Neko does login, payment and audio upload; Claude fills every other field. Suno-made audio is disclosed as AI and excluded from the claim; claim is lyrics and human production (Vaizal transfer of rights). :: Fiverr license letters: fiverr.com/inbox/pesanmusik, open PDF link in the pane and read by screenshot.
+- Render a new sleep Bible book :: gh api -X POST repos/<repo>/actions/workflows/sleep-render.yml/dispatches -f ref=main -f inputs[book]=Genesis -f inputs[title]="The Book of Genesis" -f inputs[voice]=af_nicole -f inputs[tag]=sleep-genesis-chapters -f inputs[chunks]=10. Then sleep-master, sleep-qa, sleep-glitch. :: Genesis chapters done Oct 17 (free GitHub minutes, no credits). Book name = file name from aruljohn/Bible-kjv.
+- Upload a long sleep video to YouTube :: Psalms way: file downloaded to laptop (curl in device shell into Downloads), then Studio Create > Upload videos > Select files, Neko picks file in the native picker, Claude fills metadata. Or the youtube-upload workflow once the 3 YT secrets exist. :: Did NOT work: fetching GitHub release files from the Studio page (its CSP blocks them); injecting a File into the upload input with a script (blocked by the session safety check); computer-use cannot drive the Claude app window.

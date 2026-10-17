@@ -2,25 +2,26 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 1:08 AM ET
+Last updated: Oct 17 1:15 AM ET
 
-Counts: Blocked 3, Done 23, In progress 7, Not started 17, On hold 6
+Counts: Blocked 3, Done 24, In progress 8, Not started 16, On hold 6
 
-## In progress (7)
+## In progress (8)
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters + title rendered (draft release sleep-genesis-chapters). VIDEO NOT BUILT (no master, QA, title frame, thumbnail, upload) | NEXT: Run sleep-master (needs title frame in sleep/kit), sleep-qa, sleep-glitch, write sleep/genesis/youtube.json, thumbnail | WAITING ON: Upload blocked same as S6 | Claude | Oct 17 12:32 AM ET
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 16
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
 - [B1] Books | Mother-in-law book 'The Empty Chair' (locked: names Norman/Asia/Francisca/Sasha, courthouse elopement, first-step ending): ch 1-5 delivered and corrected; ch 6-13 written, sitting in DeepSeek | NEXT: Neko brings ch 6-13 out of DeepSeek; Claude edits each against the brief and ban list, one at a time. Remind Neko they are done in DeepSeek whenever he asks where we are | WAITING ON: Neko: getting ch 6-13 out of DeepSeek; check overlap with Mama's Boys; Norman's father detail is a placeholder | Neko | Oct 17 1:08 AM ET
-- [Z3] Neko Zion | Push to Hymn Reimagined, Reggae Gospel, Reggae Gospel Link, GospelReggae.com, Zion Reggae Gospel: scheduled task Oct 18-20 10:47 AM ET, 3 groups per run, One Love One World video + pre-save | NEXT: Task runs on its own; confirm posts after Oct 20 | WAITING ON: Computer must be on with Claude desktop app open | Claude | Oct 16 11:50 PM ET
-- [Z6] Neko Zion | Fiverr license letters from Vaizal (8 PDFs): 1 of 8 read | NEXT: Read other 7, map each to a song | Claude | Oct 16 11:50 PM ET
+- [Z3] Neko Zion | Push to groups: Oct 18-20 task (5 groups from Oct 16 joins, 3 per run). Part 2 task Oct 21-23 posts to the 9 groups joined Oct 17 and joins 3 more per run | NEXT: Tasks run on their own; check posts after Oct 20 | WAITING ON: Computer on with Claude desktop app open | Claude | Oct 17 1:15 AM ET
+- [Z6] Neko Zion | Fiverr license letters from Vaizal: 1 of 8 read (order FO3229E553F07 = tracks 1-3). Tracks 4-7 are in the other 2 offers | NEXT: Read the other letters; Fiverr shows a Press & Hold human check | WAITING ON: Neko: press and hold on the Fiverr check in the browser pane | Claude | Oct 17 1:15 AM ET
+- [Z7] Neko Zion | Song audio and lyrics: Island of Peace mp3 found in Gmail (nekozionrecords thread 19cf730572b1914c). Other tracks and lyrics not in Drive | NEXT: Other audio comes from Fiverr deliveries (WAV/zip); lyrics still to find | WAITING ON: Fiverr human check | Claude | Oct 17 1:15 AM ET
 
 ## Blocked (3)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: DECIDED by Neko Oct 17: use the 3 YouTube secrets. Alarm set 8:30 AM ET Oct 17; walk him through it step by step, then run youtube-upload for John and Proverbs (private, thumbnails) | WAITING ON: Neko at 8:30 AM ET: create the 3 keys and store as repo secrets (never paste in chat) | Neko | Oct 17 12:22 AM ET
 - [M6] Morning Word | Week 2 Days 2-7 and Oct 17+ not built | NEXT: Build after HeyGen voice change | WAITING ON: Neko: HeyGen voice change | Neko | Oct 16
 - [T1] Tech | Self-host laptop: new laptop (i5-7300U, 16GB, Win10 Pro 22H2) chosen as host; Neko says Hermes Agent is already installed on it; Docker not installed; no model set yet. Plan (Neko Oct 17): Hermes runs Derrick, gets a thread dump of done/not done, builds the free pipeline, then a white-hat security pass on it | NEXT: Set Hermes model: OpenRouter free (GLM-5.2:free, 50 req/day, 20/min) or one-time $10 credit (1,000/day). Backups: NVIDIA NIM free credits, Gemini free tier, DeepSeek V4 Flash ~$0.30/$1.20 per M. Then install Docker as the Hermes terminal sandbox, hand Hermes the thread dump file, build, then white-hat test | WAITING ON: Neko: OpenRouter free vs $10 (ask-before-spending); be at the laptop. Laptop linked to this chat is the old i3, not the new one | Neko | Oct 17 12:03 AM ET
 
-## Not started (17)
+## Not started (16)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Build after HeyGen voice fix | WAITING ON: Derrick voice change in HeyGen; Neko go on promo credits | Claude | Oct 16
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
@@ -34,7 +35,6 @@ Counts: Blocked 3, Done 23, In progress 7, Not started 17, On hold 6
 - [E3] Etsy | Six books still lack PDFs; Christian Anxiety Workbook has no PDF/description/tags | NEXT: Neko supplies PDFs | WAITING ON: Neko: PDFs | Neko | Oct 16
 - [D6] Morning Word | Monday Oct 19 Derrick episode: nothing built or queued in Buffer | NEXT: Build after HeyGen voice change or in Flow | WAITING ON: M3 (HeyGen voice) if using HeyGen | Claude | Oct 16 11:28 PM ET
 - [Z4] Neko Zion | Word For Today promo video | NEXT: Make after the pre-save push | Claude | Oct 16 11:50 PM ET
-- [Z7] Neko Zion | Locate song audio files and lyrics (not in Gmail label 'music and royalty stuff') | NEXT: Search Drive and Gmail | Claude | Oct 16 11:50 PM ET
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 16 11:50 PM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
@@ -47,7 +47,7 @@ Counts: Blocked 3, Done 23, In progress 7, Not started 17, On hold 6
 - [D4] Morning Word | FALLBACK if Flow credits run out or Flow breaks: MiniMax H3 official API ($0.08/sec, about $1.20 per 15s). Self-hosting the open weights is NOT allowed in the U.S. (license excludes US). APIYI reseller $0.03/sec unverified for US use | NEXT: Revisit only if Flow fails; one test clip first | WAITING ON: Neko: sign up + key as repo secret | Neko | Oct 16 11:28 PM ET
 - [N1] Ideas (shelved) | Church division idea: the enemy keeps the church arguing and divided while the kingdom of darkness grows (fulfillment of prophecy). Form not yet chosen (book, video, sermon series) | NEXT: Hear the rest from Neko; start only when an in-flight project closes (live on Etsy with illustrations) | WAITING ON: WIP cap: nothing in flight has closed | Neko | Oct 17 12:09 AM ET
 
-## Done (23)
+## Done (24)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
@@ -67,10 +67,11 @@ Counts: Blocked 3, Done 23, In progress 7, Not started 17, On hold 6
 - [D2] Morning Word | Main route is Google Flow; HeyGen only until its credits run out (renews Nov 15, will NOT be renewed) | NEXT: Use HeyGen credits on Derrick episodes before then | Neko | Oct 16 11:28 PM ET
 - [D3] Morning Word | Mic-over-mouth Derrick still made in Flow (Sep 24 project, first tile in All media); Neko says it looks good. Use only for free-pipeline tests when lip-sync fails | NEXT: Animate only on Neko's go; check credit cost first | Claude | Oct 16 11:28 PM ET
 - [D5] Morning Word | Flow credits (Pro): 1000/mo + 50 free/day. Lite 10, Fast 20, Quality 100 per clip. Keep clips 6-7s, lines under 20 words, use edits not full regenerates | NEXT: Run Lite test before finals | Claude | Oct 16 11:28 PM ET
-- [Z1] Neko Zion | Joined 6 gospel reggae FB groups (instant, no approval) | NEXT: Join Roots Reggae Gospel, Jamaica Reggae Gospel Amen, Gospel/Christian Rap, Gospel Music History, Gospel Music Videos Network | Claude | Oct 16 11:50 PM ET
+- [Z1] Neko Zion | Joined 15 gospel reggae FB groups (6 on Oct 16, 9 on Oct 17) | NEXT: 8 more on target, join about 3 a day (list in playbook group tracker) | Claude | Oct 17 1:15 AM ET
 - [Z2] Neko Zion | Word For Today pre-save posted in Gospel reggae (10.8K) and Reggae gospel songs (15.3K) | NEXT: None | Claude | Oct 16 11:50 PM ET
 - [Z5] Neko Zion | Copyright day Tue Oct 20, 2-5 PM ET on calendar | NEXT: None | Claude | Oct 16 11:50 PM ET
 - [S12] Sleep Bible | Temp branch upload-tmp: only copies of finished John/Proverbs videos cut in pieces (420 MB). Delete only after Neko okays | NEXT: upload-tmp deleted Oct 17 via one-off repo workflow (Neko okayed). Other branches untouched | Neko | Oct 17 12:35 AM ET
+- [Z11] Neko Zion | Duplicate Google Sheet trashed (Neko approved) | NEXT: None | Claude | Oct 17 1:15 AM ET
 
 ## Standing rules
 - RULE ZERO (read first) :: Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.

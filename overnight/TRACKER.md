@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 1:55 AM ET
+Last updated: Oct 17 2:00 AM ET
 
 Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6
 
@@ -68,7 +68,7 @@ Counts: Blocked 2, Done 29, In progress 11, Not started 16, On hold 6
 - [D1] Morning Word | LOCKED Oct 16: Derrick episodes Monday to Friday only; no Sat/Sun episodes | NEXT: Build Mon-Fri only | Neko | Oct 16 11:28 PM ET
 - [D2] Morning Word | Main route is Google Flow; HeyGen only until its credits run out (renews Nov 15, will NOT be renewed) | NEXT: Use HeyGen credits on Derrick episodes before then | Neko | Oct 16 11:28 PM ET
 - [D3] Morning Word | Mic-over-mouth Derrick still made in Flow (Sep 24 project, first tile in All media); Neko says it looks good. Use only for free-pipeline tests when lip-sync fails | NEXT: Animate only on Neko's go; check credit cost first | Claude | Oct 16 11:28 PM ET
-- [D5] Morning Word | Flow credits CHECKED Oct 17 1:55 AM ET: balance is 200 (not 1000). Lite 10, Fast 20, Quality 100 per clip. Keep clips 6-7s, lines under 20 words, use edits not full regenerates | NEXT: Do NOT spend on Derrick clips while HeyGen credits exist (D2). Flow: images (free, confirm cost label), 200 credits kept for B-roll motion/fallback | Claude | Oct 17 1:55 AM ET
+- [D5] Morning Word | Flow credits (Pro): plan gives 1000/mo + 50 free/day. Already used this month: balance checked Oct 17 1:55 AM ET = 200 left. Lite 10, Fast 20, Quality 100 per clip. Keep clips 6-7s, lines under 20 words, use edits not full regenerates | NEXT: Do NOT spend on Derrick clips while HeyGen credits exist (D2). Use the 200 for B-roll motion/fallback only. Renewal date not confirmed - ask Neko or check Manage subscription | Claude | Oct 17 2:00 AM ET
 - [Z1] Neko Zion | Joined 15 gospel reggae FB groups (6 on Oct 16, 9 on Oct 17) | NEXT: 8 more on target, join about 3 a day (list in playbook group tracker) | Claude | Oct 17 1:15 AM ET
 - [Z2] Neko Zion | Word For Today pre-save posted in Gospel reggae (10.8K) and Reggae gospel songs (15.3K) | NEXT: None | Claude | Oct 16 11:50 PM ET
 - [Z5] Neko Zion | Copyright day Tue Oct 20, 2-5 PM ET on calendar | NEXT: None | Claude | Oct 16 11:50 PM ET

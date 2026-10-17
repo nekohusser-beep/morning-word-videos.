@@ -2,12 +2,11 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 5:39 PM ET
+Last updated: Oct 17 6:10 PM ET
 
-Counts: Done 31, In progress 9, Not started 15, On hold 14, Waiting on Neko 1
+Counts: Done 32, In progress 8, Not started 15, On hold 14, Waiting on Neko 1
 
-## In progress (9)
-- [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: Neko is changing it | Oct 17 3:45 AM ET research: HeyGen custom-motion prompt 'Hands still, calm expression' (Avatar IV/V, one gesture per prompt) fixes hand waving; use ElevenLabs Derrick audio per scene (audio route) instead of HeyGen voice, no voice change needed; Video Agent only 'largely follows' pasted script so verify words. Waiting on Neko go for one test episode. B-roll rule: write a shot list per line first, show what the line literally says. | WAITING ON: Neko changing voice in HeyGen | Neko | Oct 17 3:45 AM ET
+## In progress (8)
 - [M6] Morning Word | Week 2 (Mon Oct 19 to Fri Oct 23, Mon-Fri only): Jeremiah 29:11 (built), Psalm 91 (new, Neko Oct 17); Isaiah 41:10 archived (M10); rest from top-10 search-demand verses | NEXT: Build only on Derrick day, in Flow, state credit cost first | WAITING ON: Neko approval of M10 file | Claude | Oct 17 5:31 PM ET
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
@@ -18,7 +17,7 @@ Counts: Done 31, In progress 9, Not started 15, On hold 14, Waiting on Neko 1
 - [Z12] Neko Zion | Joined 3 CHRISTAFARI groups (7.4K, 5.3K, 5.3K). Still to join: AFRO GOSPEL ARTISTS WORLDWIDE (2K) and 8 older queue groups | NEXT: Join in paced batches (part 2 task joins 3 per run) | Claude | Oct 17 4:55 AM ET
 
 ## Not started (15)
-- [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Build after HeyGen voice fix | WAITING ON: Derrick voice change in HeyGen; Neko go on promo credits | Claude | Oct 16
+- [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Voice fixed (Oct 17 6:10 PM ET). Build when Neko says go on promo credits; state credit cost first | WAITING ON: Neko: go on promo credits | Claude | Oct 17 6:10 PM ET
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
 - [F1] Outreach | Facebook posts on Blessed Prayers and Prince Nico pages | NEXT: Post where group rules allow Etsy links | WAITING ON: Facebook site permission in browser | Claude | Oct 16
@@ -50,7 +49,7 @@ Counts: Done 31, In progress 9, Not started 15, On hold 14, Waiting on Neko 1
 - [Z15] Neko Zion | Spotify outreach: curators not reachable. Neko Oct 17: building a NEW Spotify outreach and promotion for the single on Wednesday Oct 21 | NEXT: Wed Oct 21: build the new outreach and promotion plan for the single | WAITING ON: Neko: Wed Oct 21 session | Claude | Oct 17 4:53 PM ET
 - [M10] Morning Word | Isaiah 41:10 footage (3 Flow clips): ARCHIVED by Neko Oct 17, not usable for the episode it was made for (credits and timing). Keep, do not delete. Possible use: short midday pick-me-up clip | NEXT: Keep in archive. Reuse only if Neko picks a use. Files sit in the building session's workspace (/home/claude/isa-build/out), not in the repo | WAITING ON: Neko: decides a use | Neko | Oct 17 5:31 PM ET
 
-## Done (31)
+## Done (32)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
@@ -58,6 +57,7 @@ Counts: Done 31, In progress 9, Not started 15, On hold 14, Waiting on Neko 1
 - [S5] Sleep Bible | Shop and book links in John, Proverbs, Psalms descriptions | NEXT: None | Claude | Oct 16
 - [M1] Morning Word | Day 4 (1 Peter 5:7) delivered by Buffer to YouTube, Instagram, TikTok | NEXT: None | Claude | Oct 16
 - [M2] Morning Word | Joshua 1:9 image card queued for 9 AM ET | NEXT: Confirm it sent | Claude | Oct 16
+- [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: None. Neko Oct 17 6:10 PM ET: voice changed in HeyGen, sounds good | Neko | Oct 17 6:10 PM ET
 - [M4] Morning Word | Derrick Day 5 and Day 6: DROPPED, Neko locked Mon-Fri only (D1); no weekend episodes | NEXT: None | WAITING ON:   | Claude | Oct 17 4:53 PM ET
 - [P1] Pinterest | Pin Etsy listings (14 pins live) | NEXT: Books board now 41 pins. Pin remaining listings (audiobooks, teen playbook, apparel to T-Shirts board) | Claude | Oct 17 1:01 AM ET
 - [P2] Pinterest | Move 2 pins to the right board (I Wanna Die Different, Built to Carry) | NEXT: Both pins (I Wanna Die Different, Built to Carry) moved to Christian Books & Audiobooks Oct 17, verified | Claude | Oct 17 1:01 AM ET

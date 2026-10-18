@@ -4,9 +4,10 @@
 
 Last updated: Oct 18 4:45 AM ET
 
-Counts: Done 32, In progress 8, Not started 14, On hold 15, Waiting on Neko 4
+Counts: Done 32, In progress 9, Not started 14, On hold 15, Waiting on Neko 3
 
-## In progress (8)
+## In progress (9)
+- [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Both built and sent Oct 18 (Sleep_Promo_John.mp4 1:55, Sleep_Promo_Proverbs.mp4 1:50; -14 LUFS, transcript matches). Build folders in tools/promo-john and tools/promo-proverbs. Nothing posts until Neko says yes on that exact file | WAITING ON: Neko: watch/listen and approve or point at a spot | Neko | Oct 18 4:45 AM ET
 - [M6] Morning Word | Week 2 (Mon Oct 19 to Fri Oct 23, Mon-Fri only): Jeremiah 29:11 (built), Psalm 91 (new, Neko Oct 17); Isaiah 41:10 archived (M10); rest from top-10 search-demand verses | NEXT: Psalm 91 episode built and sent Oct 18 (Morning_Word_Psalm_91.mp4, 1:56, navy henley; reference line reworded to "That's the 91st Psalm, verses 1 and 2" because Flow garbled "ninety-one" 3 times). tools/psalm-91 has the build. Next: after his yes, copy to week2/ and schedule 5 AM slot; then next Week 2 verse | WAITING ON: Neko: approve Psalm 91 | Neko | Oct 18 4:45 AM ET
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16

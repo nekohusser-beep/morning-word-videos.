@@ -31,6 +31,8 @@ jobs:
       haveref: ${{ steps.list.outputs.haveref }}
     steps:
       - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
       - name: Pull release assets
         id: list
         env: {GH_TOKEN: "${{ github.token }}"}
@@ -112,6 +114,8 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
       - uses: actions/download-artifact@v4
         with: {name: prep}
       - name: Download converted audio

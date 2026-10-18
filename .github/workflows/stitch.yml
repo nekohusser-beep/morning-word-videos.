@@ -42,7 +42,7 @@ jobs:
             id=$(bash tools/rel.sh id "$TAG")
             if [ -n "$id" ]; then
               bash tools/rel.sh up "$TAG" STATUS.txt
-              gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
+              gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -f tag_name="$TAG" -F draft=true -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
             fi
             cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"
             echo "::error::$1"
@@ -177,7 +177,7 @@ jobs:
           if [ "$rc" != 0 ]; then
             id=$(bash tools/rel.sh id "$TAG")
             bash tools/rel.sh up "$TAG" STATUS.txt
-            gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -f tag_name="$TAG" -F draft=true -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
             echo "::error::$(head -3 STATUS.txt | tr '\n' ' ')"
             exit 1
           fi
@@ -200,7 +200,7 @@ jobs:
           PY
           bash tools/rel.sh up "$TAG" "out/$NAME.mp4" STATUS.txt
           id=$(bash tools/rel.sh id "$TAG")
-          gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -f tag_name="$TAG" -F draft=true -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
           cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:

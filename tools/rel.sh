@@ -9,7 +9,7 @@ R=${GITHUB_REPOSITORY:-nekohusser-beep/morning-word-videos.}
 cmd=$1; tag=$2; shift 2
 rid() {
   for t in 1 2 3 4 5 6; do
-    id=$(gh api "repos/$R/releases?per_page=100" --jq ".[]|select(.tag_name==\"$tag\")|.id" | head -1)
+    id=$(gh api "repos/$R/releases?per_page=100" --jq ".[]|select(.tag_name==\"$tag\" or .name==\"$tag\")|.id" | head -1)
     [ -n "$id" ] && { echo "$id"; return; }
     sleep $((t * 5))
   done

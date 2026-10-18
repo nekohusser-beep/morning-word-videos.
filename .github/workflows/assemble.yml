@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       thu5: {description: "clip name on week1 for Thursday line 5 (blank = skip Thursday)", required: false, default: ""}
+      bed2: {description: "clip name on week1 for bedtime line 2", required: false, default: "b05.mp4"}
       days: {description: "space-separated days to assemble", required: false, default: "mon tue wed thu fri"}
 permissions:
   contents: write
@@ -14,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build releases
-        env: {THU5: "${{ inputs.thu5 }}", DAYS: "${{ inputs.days }}"}
+        env: {THU5: "${{ inputs.thu5 }}", DAYS: "${{ inputs.days }}", BED2: "${{ inputs.bed2 }}"}
         run: |
           set -e
           mkdir -p in && T=$'\t'
@@ -25,6 +26,7 @@ jobs:
           M[wed]="v05 v08 v07 v06 n07"
           M[thu]="n02 n01 n03 n04 ${THU5%.mp4}"
           M[fri]="v04 v02 v01 v03 n05"
+          M[bed]="b03 ${BED2%.mp4} b04 b01"
           for d in $DAYS; do
             [ "$d" = thu ] && [ -z "$THU5" ] && { echo "skip thu"; continue; }
             rm -rf out && mkdir out

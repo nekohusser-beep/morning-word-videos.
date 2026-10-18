@@ -152,7 +152,10 @@ jobs:
           done
       - name: No hiss removal
         if: ${{ !inputs.enhance }}
-        run: mkdir -p audio_final && cp audio_pick/*.wav audio_final/ && echo "Hiss removal: off (you turned it off)." >> notes.txt
+        run: |
+          mkdir -p audio_final
+          cp audio_pick/*.wav audio_final/
+          echo "Hiss removal is off (you turned it off)." >> notes.txt
       - name: Transcribe and gate
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |

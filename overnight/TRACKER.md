@@ -2,11 +2,11 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 18 6:30 AM ET
+Last updated: Oct 18 8:46 AM ET
 
-Counts: Done 32, In progress 7, Not started 14, On hold 17, Waiting on Neko 3
+Counts: Done 32, In progress 8, Not started 14, On hold 17, Waiting on Neko 3
 
-## In progress (7)
+## In progress (8)
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
 - [B1] Books | Mother-in-law book 'The Empty Chair' (locked: names Norman/Asia/Francisca/Sasha, courthouse elopement, first-step ending): ch 1-5 delivered and corrected; ch 6-13 written, sitting in DeepSeek | NEXT: Neko brings ch 6-13 out of DeepSeek; Claude edits each against the brief and ban list, one at a time. Remind Neko they are done in DeepSeek whenever he asks where we are | WAITING ON: Neko: getting ch 6-13 out of DeepSeek; check overlap with Mama's Boys; Norman's father detail is a placeholder | Neko | Oct 17 1:08 AM ET
@@ -14,6 +14,7 @@ Counts: Done 32, In progress 7, Not started 14, On hold 17, Waiting on Neko 3
 - [K3] Apparel | Back-corner QR code for wash-proof scanning: QR made, decodes to kingdomimpactshop.etsy.com | NEXT: Confirm print method and placement with the print provider; wash test | WAITING ON: Print provider confirmation | Neko | Oct 17 1:20 AM ET
 - [S13] Sleep Bible | Nightly KJV verse cards (Bible-app style: photo background, KJV verse, our lady in a circle, 'soft-spoken KJV Bible readings for sleep') to drive viewers to the long readings. Template built (tools/cards/mist_card.py + lady_circle.png), Romans 8:28 sample sent | NEXT: Neko approves the look. Then: background photos from Gemini Pro plan (free, not copied from the Bible app), scheduled task builds each night's card, stage for his yes | WAITING ON: Neko: approve sample + say yes to a nightly scheduled task. Backgrounds must be our own or licensed, not the Bible app's photos | Claude | Oct 17 2:56 AM ET
 - [Z12] Neko Zion | Joined 3 CHRISTAFARI groups (7.4K, 5.3K, 5.3K). Still to join: AFRO GOSPEL ARTISTS WORLDWIDE (2K) and 8 older queue groups | NEXT: Join in paced batches (part 2 task joins 3 per run) | Claude | Oct 17 4:55 AM ET
+- [M12] Derrick / Morning Word | One-tap stitch pipeline (workflow stitch.yml + tools/stitch/stitch.py): clips on a draft release -> voice convert -> hiss removal -> Whisper gate -> stitched captioned MP4 on the same release. Tested on GitHub with 4 real clips (gate passed, -14 LUFS, one MP4 sent to Neko Oct 18). | NEXT: Neko: watch the test MP4, then say go. Next: attach ref.wav (dry Derrick narration, 12-18 s, no waves or music) to a release to switch on Seed-VC; test one real Flow clip from the phone; add opener/closer songs if wanted. How to run: attach clip01.mp4.. + script.json to a draft release, then Actions > stitch > Run workflow (tag). See overnight/ROADBLOCK-PLAYBOOK.md. | WAITING ON: Neko: ref.wav (dry voice) and approval of test MP4 | Claude | Oct 18 8:46 AM ET
 
 ## Not started (14)
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16

@@ -140,7 +140,9 @@ jobs:
             if [ -s "vc/$s.wav" ]; then cp "vc/$s.wav" "audio_pick/$s.wav"
             else
               cp "audio_raw/$s.wav" "audio_pick/$s.wav"
-              [ -f ref.wav ] && [ "${{ inputs.convert }}" = "true" ] && echo "WARNING $s: voice conversion failed, used the clip's own voice. Re-run to retry it." >> notes.txt
+              if [ -f ref.wav ] && [ "${{ inputs.convert }}" = "true" ]; then
+                echo "WARNING $s: voice conversion failed, used the clip's own voice. Re-run to retry it." >> notes.txt
+              fi
             fi
           done
       - name: Hiss removal (DeepFilterNet3)

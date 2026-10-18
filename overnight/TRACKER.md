@@ -2,13 +2,11 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 18 4:55 AM ET
+Last updated: Oct 18 6:30 AM ET
 
-Counts: Done 32, In progress 9, Not started 14, On hold 15, Waiting on Neko 3
+Counts: Done 32, In progress 7, Not started 14, On hold 17, Waiting on Neko 3
 
-## In progress (9)
-- [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Both built and sent Oct 18 (Sleep_Promo_John.mp4 1:55, Sleep_Promo_Proverbs.mp4 1:50; -14 LUFS, transcript matches). Build folders in tools/promo-john and tools/promo-proverbs. Nothing posts until Neko says yes on that exact file | WAITING ON: Neko: watch/listen and approve or point at a spot | Neko | Oct 18 4:45 AM ET
-- [M6] Morning Word | Week 2 (Mon Oct 19 to Fri Oct 23, Mon-Fri only): Jeremiah 29:11 (built), Psalm 91 (new, Neko Oct 17); Isaiah 41:10 archived (M10); rest from top-10 search-demand verses | NEXT: Psalm 91 episode built and sent Oct 18 (Morning_Word_Psalm_91.mp4, 1:56, navy henley; reference line reworded to "That's the 91st Psalm, verses 1 and 2" because Flow garbled "ninety-one" 3 times). tools/psalm-91 has the build. Next: after his yes, copy to week2/ and schedule 5 AM slot; then next Week 2 verse | WAITING ON: Neko: approve Psalm 91 | Neko | Oct 18 4:45 AM ET
+## In progress (7)
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
 - [B1] Books | Mother-in-law book 'The Empty Chair' (locked: names Norman/Asia/Francisca/Sasha, courthouse elopement, first-step ending): ch 1-5 delivered and corrected; ch 6-13 written, sitting in DeepSeek | NEXT: Neko brings ch 6-13 out of DeepSeek; Claude edits each against the brief and ban list, one at a time. Remind Neko they are done in DeepSeek whenever he asks where we are | WAITING ON: Neko: getting ch 6-13 out of DeepSeek; check overlap with Mama's Boys; Norman's father detail is a placeholder | Neko | Oct 17 1:08 AM ET
@@ -33,10 +31,12 @@ Counts: Done 32, In progress 9, Not started 14, On hold 15, Waiting on Neko 3
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
 
-## On hold (15)
+## On hold (17)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: Neko Oct 17 5:39 PM ET: not rushing. John, Proverbs, Genesis are parked in sleep/READY-TO-UPLOAD (json + thumbnail each; videos in releases). When Neko says keys done: test yt-diag, run youtube-upload x3 (private). Reminder set for Thu Oct 22 (Sleep Bible day) | WAITING ON: Neko: create the 3 keys and store as repo secrets | Neko | Oct 17 5:39 PM ET
+- [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Neko Oct 18 6:23 AM ET: he writes his own scripts and makes his own Derrick videos until he finds the right person or tool. Claude does NOT generate Derrick clips or build episodes. Finished John promo, Proverbs promo and Psalm 91 episode already sent; builds saved in tools/promo-john, tools/promo-proverbs, tools/psalm-91 | WAITING ON: Neko: scripts and clips | Neko | Oct 18 6:30 AM ET
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters, master built (7.28 h, -18.1 LUFS, no spikes, no gaps over 8 s; release sleep-genesis, file genesis-sleep.mp4), QA clean (no decode errors), glitch scan done (1533 verses, 11 with a pause just over 2 s). youtube.json written, thumbnail done (sleep/kit/thumb_genesis_v3.jpg) | NEXT: Upload with S6 once keys exist (parked in sleep/READY-TO-UPLOAD/genesis) | WAITING ON: Upload waits on S6 keys (parked) | Claude | Oct 17 5:39 PM ET
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16
+- [M6] Morning Word | Week 2 (Mon Oct 19 to Fri Oct 23, Mon-Fri only): Jeremiah 29:11 (built), Psalm 91 (new, Neko Oct 17); Isaiah 41:10 archived (M10); rest from top-10 search-demand verses | NEXT: Neko Oct 18 6:23 AM ET: he writes his own scripts and makes his own Derrick videos until he finds the right person or tool. Claude does NOT generate Derrick clips or build episodes. Finished John promo, Proverbs promo and Psalm 91 episode already sent; builds saved in tools/promo-john, tools/promo-proverbs, tools/psalm-91 | WAITING ON: Neko: scripts and clips | Neko | Oct 18 6:30 AM ET
 - [T2] Tech | Replace trial connectors with free tools (Orshot, Buffer, TinyFish, Descript, ElevenLabs); Neko said 'different route' Oct 15 | NEXT: Ask Neko the new route | WAITING ON: Neko | Neko | Oct 16
 - [R1] Resume service | Aviation resume service: Wix page live ($49), card made, nothing posted, no sales; Neko doubts niche | NEXT: Neko decides: pivot or drop | WAITING ON: Neko: payment handles, logins, direction | Neko | Oct 16
 - [X1] Spending | Promo credits for John/Proverbs (~210 Flow credits each) - ask first; free path instead | NEXT: Use free path or get yes | WAITING ON: Neko: credit approval | Neko | Oct 16

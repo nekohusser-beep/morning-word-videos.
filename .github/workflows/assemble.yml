@@ -19,7 +19,7 @@ jobs:
         run: |
           set -e
           mkdir -p in && T=$'\t'
-          bash tools/rel.sh down week1 in "${T}[vn][0-9]+\.mp4${T}"
+          bash tools/rel.sh down week1 in "${T}[vnb][0-9]+\.mp4${T}"
           declare -A M
           M[mon]="v16 v13 v15 v14 n08"
           M[tue]="v10 v12 v11 v09 n06"

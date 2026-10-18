@@ -2,9 +2,9 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 17 7:00 PM ET
+Last updated: Oct 18 4:20 AM ET
 
-Counts: Done 32, In progress 9, Not started 14, On hold 14, Waiting on Neko 1
+Counts: Done 32, In progress 9, Not started 14, On hold 15, Waiting on Neko 3
 
 ## In progress (9)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Neko approved scripts Oct 17 6:23 PM ET. Flow: John promo 19 clips (gray) and Proverbs promo 17 clips (burgundy) queued, 360 credits. NEXT: pull clips, medium.en transcript check, build (copy tools/sleep-promo-psalms), QA, send captioned mp4 to Neko | WAITING ON: Flow render to finish | Claude | Oct 17 7:00 PM ET
@@ -33,7 +33,7 @@ Counts: Done 32, In progress 9, Not started 14, On hold 14, Waiting on Neko 1
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
 
-## On hold (14)
+## On hold (15)
 - [S6] Sleep Bible | Upload John and Proverbs to YouTube (private, with thumbnails). Both mp4s are already in laptop Downloads | NEXT: Neko Oct 17 5:39 PM ET: not rushing. John, Proverbs, Genesis are parked in sleep/READY-TO-UPLOAD (json + thumbnail each; videos in releases). When Neko says keys done: test yt-diag, run youtube-upload x3 (private). Reminder set for Thu Oct 22 (Sleep Bible day) | WAITING ON: Neko: create the 3 keys and store as repo secrets | Neko | Oct 17 5:39 PM ET
 - [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters, master built (7.28 h, -18.1 LUFS, no spikes, no gaps over 8 s; release sleep-genesis, file genesis-sleep.mp4), QA clean (no decode errors), glitch scan done (1533 verses, 11 with a pause just over 2 s). youtube.json written, thumbnail done (sleep/kit/thumb_genesis_v3.jpg) | NEXT: Upload with S6 once keys exist (parked in sleep/READY-TO-UPLOAD/genesis) | WAITING ON: Upload waits on S6 keys (parked) | Claude | Oct 17 5:39 PM ET
 - [G2] Gossip teaching | Rewrite to Neko's corrections | NEXT: Wait for his review | WAITING ON: Neko must see scripts first | Neko | Oct 16
@@ -48,6 +48,7 @@ Counts: Done 32, In progress 9, Not started 14, On hold 14, Waiting on Neko 1
 - [Z13] Neko Zion | Radio submissions (TDN Radio, Sunlight Radio): SHELVED by Neko Oct 17, belong to the new-single promotion; forms verified real (tdnradio.net/submit-music, sunlightradio.com/submit-music) | NEXT: Revisit when the new single promotion starts | WAITING ON: Neko: new-single promo kickoff | Claude | Oct 17 4:53 PM ET
 - [Z15] Neko Zion | Spotify outreach: curators not reachable. Neko Oct 17: building a NEW Spotify outreach and promotion for the single on Wednesday Oct 21 | NEXT: Wed Oct 21: build the new outreach and promotion plan for the single | WAITING ON: Neko: Wed Oct 21 session | Claude | Oct 17 4:53 PM ET
 - [M10] Morning Word | Isaiah 41:10 footage (3 Flow clips): ARCHIVED by Neko Oct 17, not usable for the episode it was made for (credits and timing). Keep, do not delete. Possible use: short midday pick-me-up clip | NEXT: Keep in archive. Reuse only if Neko picks a use. Files sit in the building session's workspace (/home/claude/isa-build/out), not in the repo | WAITING ON: Neko: decides a use | Neko | Oct 17 5:31 PM ET
+- [D1] Derrick / Morning Word | Isaiah 41:10 Derrick: 20-clip Flow kit sent for Neko to make himself (Claude video generation deprioritized by Neko). HeyGen draft exists (create-v4/70eb6fd4f6d54e8280c1c5ebbf755fa2), voice still AI NEEK, unrendered. | NEXT: Only if Neko asks: real Derrick voice needs his sample upload (derrick_voice_sample.mp3) or his ElevenLabs API key in HeyGen. | WAITING ON: Neko: voice clone upload or API key | Neko | Oct 18 4:20 AM ET
 
 ## Done (32)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16

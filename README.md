@@ -12,7 +12,7 @@ Neko's single source of truth is `overnight/Claude-Work-Tracker.xlsx`, mirrored 
 2. Never create another sheet or tracker. The ONE exception, set by Neko Oct 17, 2026: Hermes has his own tracker at `hermes/Hermes-Tracker.xlsx` (mirror `hermes/TRACKER.md`); Hermes work goes there. Edit the xlsx only, keep columns, copy row formatting.
 3. Every change: set Updated to date and time ET (like `Oct 16 11:50 PM ET`), update Last updated on the Where we are tab, run `python3 tools/tracker_sync.py`, commit, `git pull --rebase`, push, then reply.
 4. Stale check: if a row's Updated stamp is newer than what you read, reconcile before changing it.
-5. Before saying "I can't", check How it was done and memory /topics/workflow-playbook.md.
+5. Before saying "I can't", check How it was done, memory /topics/workflow-playbook.md, and overnight/ROADBLOCK-PLAYBOOK.md (ladders per job: work them in order, then report "Routes tried").
 6. Answer where-are-we with only what is done and what is not, in a few short lines.
 
 ---

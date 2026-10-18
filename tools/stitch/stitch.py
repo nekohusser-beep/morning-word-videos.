@@ -102,9 +102,10 @@ def check_clip(expected_text, words, heard=""):
         if heard.strip():
             return "fail", f"no word timings came back (heard: '{heard.strip()[:80]}')"
         return "fail", "no speech found in this clip"
-    ratio = difflib.SequenceMatcher(None, exp, got).ratio()
-    first_ok = exp[0] in got[:2]
-    last_ok = exp[-1] in got[-2:]
+    sm = difflib.SequenceMatcher(None, exp, got)
+    ratio = sum(m.size for m in sm.get_matching_blocks()) / len(exp)   # share of the script line that was heard
+    first_ok = exp[0] in got[:3]
+    last_ok = exp[-1] in got[-6:]
     if not first_ok:
         return "fail", f"first word missing (expected '{exp[0]}', heard '{' '.join(got[:3])}')"
     if not last_ok:
@@ -112,9 +113,13 @@ def check_clip(expected_text, words, heard=""):
     if ratio < 0.72:
         missing = [t for t in exp if t not in got][:4]
         return "fail", f"wrong words (match {ratio:.0%}; missing: {' '.join(missing) or 'none'})"
+    last_pos = max(i for i in range(len(got)) if got[i] == exp[-1])
+    extra = got[last_pos + 1:]
     if ratio < 0.88:
         missing = [t for t in exp if t not in got][:4]
         return "warn", f"check by ear (match {ratio:.0%}; missing: {' '.join(missing) or 'none'})"
+    if extra:
+        return "warn", f"Veo added extra words after the line ('{' '.join(extra)}'); they are cut out automatically"
     return "ok", f"match {ratio:.0%}"
 
 
@@ -148,12 +153,29 @@ def cmd_gate(a):
 
 
 # ---------------------------------------------------------------- build helpers
-def speech_bounds(words, clip_dur):
+def speech_bounds(words, clip_dur, expected_text=""):
+    """Cut points from the words of the SCRIPT LINE itself, not from everything Whisper heard.
+    Veo sometimes adds extra speech or a long hold after the line, and Whisper often stretches
+    the last word across silence; both would leave dead air or stray words in the edit."""
     ws = [w for w in words if norm(w["text"])]
     if not ws:
         return 0.0, min(clip_dur, 6.0)
-    a = max(0.0, ws[0]["start"] - LEAD)
-    b = min(clip_dur - 0.05, ws[-1]["end"] + TAIL)
+    got = [norm(w["text"]) for w in ws]
+    exp = tokens(expected_text) if expected_text else []
+    i0, i1 = 0, len(ws) - 1
+    if exp:
+        for i in range(min(3, len(got))):
+            if got[i] == exp[0]:
+                i0 = i
+                break
+        for i in range(len(got) - 1, max(-1, len(got) - 7), -1):
+            if got[i] == exp[-1]:
+                i1 = i
+                break
+    start = max(ws[i0]["start"], ws[i0]["end"] - 0.9)
+    end = min(ws[i1]["end"], ws[i1]["start"] + 0.9)
+    a = max(0.0, start - LEAD)
+    b = min(clip_dur - 0.05, end + TAIL)
     return a, max(b, a + 0.5)
 
 
@@ -266,7 +288,7 @@ def cmd_build(a):
         n, path = clips[i]
         words = words_all.get(str(n), {}).get("words", [])
         cd = dur(path)
-        sa, sb = speech_bounds(words, cd)
+        sa, sb = speech_bounds(words, cd, lines[i]["text"])
         gap = gap_after(lines[i], i, i == n_use - 1)
         plan.append(dict(i=i, n=n, path=path, words=words, a=sa, b=sb, gap=gap, T=t,
                          src=audio_source(path, a.audio)))

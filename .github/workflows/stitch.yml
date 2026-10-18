@@ -16,6 +16,9 @@ on:
       force: {description: "build even if the Whisper gate flags a clip", required: true, type: boolean, default: false}
 permissions:
   contents: write
+concurrency:
+  group: stitch-${{ inputs.tag }}
+  cancel-in-progress: false
 env:
   TAG: ${{ inputs.tag }}
 
@@ -37,7 +40,7 @@ jobs:
             id=$(bash tools/rel.sh id "$TAG")
             if [ -n "$id" ]; then
               bash tools/rel.sh up "$TAG" STATUS.txt
-              gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null
+              gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
             fi
             cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"
             echo "::error::$1"
@@ -111,7 +114,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with: {name: prep}
-      - uses: actions/download-artifact@v4
+      - name: Download converted audio
+        if: ${{ needs.convert.result == 'success' }}
+        uses: actions/download-artifact@v4
         continue-on-error: true
         with:
           pattern: vc-*
@@ -168,7 +173,7 @@ jobs:
           if [ "$rc" != 0 ]; then
             id=$(bash tools/rel.sh id "$TAG")
             bash tools/rel.sh up "$TAG" STATUS.txt
-            gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
             echo "::error::$(head -3 STATUS.txt | tr '\n' ' ')"
             exit 1
           fi
@@ -191,7 +196,7 @@ jobs:
           PY
           bash tools/rel.sh up "$TAG" "out/$NAME.mp4" STATUS.txt
           id=$(bash tools/rel.sh id "$TAG")
-          gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
           cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
@@ -201,3 +206,12 @@ jobs:
             out/*.srt
             out/report.json
             words.json
+      - name: Report an unexpected failure
+        if: ${{ failure() }}
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          if [ ! -s STATUS.txt ] || ! grep -q "^GATE" STATUS.txt; then
+            printf 'BUILD FAILED\nSomething broke before the video was finished (not a clip problem). Open the run: %s/%s/actions/runs/%s\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > STATUS.txt
+          fi
+          bash tools/rel.sh up "$TAG" STATUS.txt || true
+          cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"

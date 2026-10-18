@@ -76,9 +76,11 @@ def cmd_transcribe(a):
     for n, clip in clip_files(a.clips):
         src = audio_source(clip, a.audio)
         segs, _ = model.transcribe(src, word_timestamps=True, vad_filter=False)
+        segs = list(segs)
         words = [{"text": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3)}
-                 for s in segs for w in s.words]
-        out[str(n)] = {"words": words, "text": " ".join(w["text"] for w in words)}
+                 for s in segs for w in (s.words or [])]
+        heard = " ".join(s.text.strip() for s in segs).strip()
+        out[str(n)] = {"words": words, "text": heard or " ".join(w["text"] for w in words)}
         print(f"clip {n}: {out[str(n)]['text']}")
     json.dump(out, open(a.words, "w"))
 
@@ -92,11 +94,13 @@ def tokens(text):
     return [t for t in (norm(x) for x in text.split()) if t]
 
 
-def check_clip(expected_text, words):
+def check_clip(expected_text, words, heard=""):
     """Returns (level, message). level: ok | warn | fail."""
     exp = tokens(expected_text)
     got = [t for t in (norm(w["text"]) for w in words) if t]
     if not got:
+        if heard.strip():
+            return "fail", f"no word timings came back (heard: '{heard.strip()[:80]}')"
         return "fail", "no speech found in this clip"
     ratio = difflib.SequenceMatcher(None, exp, got).ratio()
     first_ok = exp[0] in got[:2]
@@ -125,7 +129,8 @@ def cmd_gate(a):
     for i, (n, _) in enumerate(clips):
         if i >= len(lines):
             break
-        level, msg = check_clip(lines[i]["text"], words.get(str(n), {}).get("words", []))
+        entry = words.get(str(n), {})
+        level, msg = check_clip(lines[i]["text"], entry.get("words", []), entry.get("text", ""))
         label = f"Clip {n:02d}"
         status.append(f"{label}: {level.upper()} - {msg}")
         if level == "fail":

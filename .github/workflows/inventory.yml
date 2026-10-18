@@ -15,7 +15,7 @@ jobs:
       - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null && pip install faster-whisper==1.0.3
       - run: |
           mkdir -p in && T=$'\t'
-          bash tools/rel.sh down "$TAG" in "${T}[vn][0-9]+\.mp4${T}"
+          bash tools/rel.sh down "$TAG" in "${T}[vnb][0-9]+\.mp4${T}"
           ls in
       - run: |
           python - <<'PY'
@@ -23,7 +23,7 @@ jobs:
           from faster_whisper import WhisperModel
           m = WhisperModel("small.en", device="cpu", compute_type="int8")
           out = {}
-          for p in sorted(glob.glob("in/[vn]*.mp4")):
+          for p in sorted(glob.glob("in/[vnb]*.mp4")):
               wav = p[:-4] + ".wav"
               subprocess.run(["ffmpeg","-v","error","-y","-i",p,"-vn","-ac","1","-ar","16000",wav],check=True)
               segs,_ = m.transcribe(wav, word_timestamps=True, vad_filter=False)

@@ -87,7 +87,7 @@ def cmd_transcribe(a):
 
 # ---------------------------------------------------------------- gate
 def norm(w):
-    return re.sub(r"[^a-z0-9']", "", w.lower().replace("’", "'"))
+    return re.sub(r"[^a-z0-9']", "", w.lower().replace("’", "'")).strip("'")
 
 
 def tokens(text):

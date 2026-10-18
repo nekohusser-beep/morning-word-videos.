@@ -28,7 +28,7 @@ Sources: VERIFIED = opened this session; FIELD = Neko or a past thread proved it
 Abandoned (tested Oct 15-17). Only mouth-only lip-sync or the mic-over-mouth overlay for tests. Then HeyGen audio-to-video, then Clip Kit.
 
 ### 3. YouTube multi-hour upload
-1. youtube-upload GitHub Action once the 3 secrets exist (YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN). Upload PRIVATE first and check what Studio shows. Docs conflict: Google's videos.insert page opened Oct 18 says unverified projects are NOT forced private and a 1-unit cost in a separate upload bucket; a Gemini-cited mirror said private until audit at 100 units. Test, do not assume. (Parked until Thu Oct 22.)
+1. youtube-upload GitHub Action once the 3 secrets exist (YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN). Upload PRIVATE first and check what Studio shows, and whether a manual visibility change sticks. Google's own docs contradict themselves (checked Oct 18): the videos.insert page says unverified projects are NOT restricted to private, while the Videos resource page summary says unverified uploads are private by default and need an audit. Plan as if uploads land private (draft pipeline) until proven otherwise. Test, do not assume. (Parked until Thu Oct 22.)
 2. Studio split method: ~90 MB parts to a branch, fetch from raw.githubusercontent.com inside Studio, join, inject. Worked for Psalms. Only raw.githubusercontent.com works (CSP blocks release URLs). (FIELD)
 3. Neko picks the file in the native picker.
 - The Chrome extension cannot (10 MB limit, YouTube freezes it).

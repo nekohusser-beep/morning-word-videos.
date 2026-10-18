@@ -170,8 +170,10 @@ jobs:
       - name: Transcribe and gate
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
-          pip install -q faster-whisper==1.0.3
-          python tools/stitch/stitch.py transcribe --clips clips --audio audio_final --words words.json
+          die() { echo "::error::$1 :: $(tail -c 900 tr.log | tr '\n' ' ')"; printf 'BUILD FAILED\n%s (not a clip problem). See the run summary.\n' "$1" > STATUS.txt; bash tools/rel.sh up "$TAG" STATUS.txt || true; exit 1; }
+          pip install -q faster-whisper==1.0.3 > tr.log 2>&1 || die "Could not install the speech checker"
+          python tools/stitch/stitch.py transcribe --clips clips --audio audio_final --words words.json > tr.log 2>&1 || die "Speech check crashed"
+          tail -n 12 tr.log
           rc=0
           python tools/stitch/stitch.py gate --clips clips --script script.json --words words.json --status STATUS.txt ${{ inputs.force && '--force' || '' }} || rc=$?
           { echo; cat notes.txt; } >> STATUS.txt

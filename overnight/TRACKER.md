@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 19 11:45 AM ET
+Last updated: Oct 19 11:48 AM ET
 
 Counts: Built, partly scheduled 1, Done 37, In progress 7, Not started 14, On hold 18, Shelved 1, Waiting on Neko 3, Waiting on approval 2
 
@@ -22,7 +22,7 @@ Counts: Built, partly scheduled 1, Done 37, In progress 7, Not started 14, On ho
 
 ## Waiting on approval (2)
 - [M13] Blessed Prayers sleep stream / Derrick promo ads | 5 UGC-style Derrick ad scripts (30-45 s, 5 clips each) promoting the long KJV sleep readings: doomscroll, Psalm 4:8, honest direct, midnight worry, night shift. Written Oct 18 in chat. | NEXT: Neko hears and approves the scripts, then Claude builds Script 1 (about 50 Flow credits, ask first), checks it, sends ONE captioned MP4. Needs a screen capture of the live sleep video for the 3 s cutaway. Flow asset named derrick-gray.png is really the navy henley; the true gray still is repo ref/derrick-gray-still.png and must be uploaded to Flow. | WAITING ON: Neko: yes on scripts; credit OK for Script 1 | Claude | Oct 18 12:06 PM ET
-- [M15] Derrick / Morning Word | Quick prayer Shorts bank: 12 scripts (varied openers, verse and no-verse) in Google Doc "Derrick Quick Shorts - Morning Prayer Set 1 (DRAFT)" | NEXT: Neko Oct 19 11:35 AM ET: this week is already built (M14). M15 bank is for later weeks. Neko picks the mix when he wants the next batch; no credits until then. | WAITING ON: Buffer 10-post cap; Neko approval on exact scripts | Claude | Oct 19 11:45 AM ET
+- [M15] Derrick / Morning Word | Quick prayer Shorts bank: 12 scripts (varied openers, verse and no-verse) in Google Doc "Derrick Quick Shorts - Morning Prayer Set 1 (DRAFT)" | NEXT: Neko Oct 19 11:35 AM ET: this week is already built (M14). M15 bank is for later weeks. Neko picks the mix when he wants the next batch; no credits until then. | Neko Oct 19 11:36 AM ET: the mix and order of the bank shorts is Claude's call, however it wants; no mix approval needed. Exact file still needs his yes before posting. | WAITING ON: Buffer 10-post cap; Neko approval on exact scripts | Claude | Oct 19 11:48 AM ET
 
 ## Built, partly scheduled (1)
 - [M14] Derrick / Morning Word | Five Morning Word Shorts Mon-Fri (Jer 29:11, Isa 41:10, Rom 8:28, Ps 46, Matt 11:28), one per weekday, different sweater each day, released 5 AM; plus one bedtime short ~8 PM pointing to the sleep readings. Neko authorized all Flow credits Oct 18. | NEXT: Mon Oct 19 + Tue Oct 20 5 AM queued in Buffer (YouTube). Wed/Thu/Fri 5 AM and the bedtime short (Oct 19 8 PM) queue automatically after the sleep-verse posts free Buffer slots (free plan cap 10). All 5 MP4s + bedtime MP4 in repo shorts/week1/. Thursday uses burgundy sweater (gray crewneck kept failing Flow filter). Closers dropped the spoken name (filter); name is the on-screen tag. DECISION Oct 19 8:45 AM ET: channel = Morning Word (Derek) + daytime birdsong cards + nighttime rain cards + Bible sleep readings. Midday cards CUT. 6 daytime cards (d15-d19,d22) rendered in release verse-shorts, queue noon ET from Oct 20. | WAITING ON: Buffer 10-post cap; send_later tasks queue the rest | Claude | Oct 19 8:45 AM ET

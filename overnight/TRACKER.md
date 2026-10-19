@@ -4,7 +4,7 @@
 
 Last updated: Oct 19 9:50 AM ET
 
-Counts: Built, partly scheduled 1, Done 35, In progress 8, Not started 14, On hold 19, Waiting on Neko 3, Waiting on approval 1
+Counts: Built, partly scheduled 1, Done 35, In progress 8, Not started 14, On hold 19, Shelved 1, Waiting on Neko 3, Waiting on approval 2
 
 ## In progress (8)
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET

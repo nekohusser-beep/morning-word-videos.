@@ -2,9 +2,9 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 19 3:12 AM ET
+Last updated: Oct 19 ET (offline session)
 
-Counts: Blocked 1, Built, partly scheduled 1, Done 34, In progress 8, Not started 14, On hold 17, Waiting on Neko 3, Waiting on approval 1
+Counts: Blocked 3, Built, partly scheduled 1, Done 34, In progress 8, Not started 14, On hold 17, Waiting on Neko 3, Waiting on approval 1
 
 ## In progress (8)
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
@@ -16,7 +16,9 @@ Counts: Blocked 1, Built, partly scheduled 1, Done 34, In progress 8, Not starte
 - [Z12] Neko Zion | Joined 3 CHRISTAFARI groups (7.4K, 5.3K, 5.3K). Still to join: AFRO GOSPEL ARTISTS WORLDWIDE (2K) and 8 older queue groups | NEXT: Join in paced batches (part 2 task joins 3 per run) | Claude | Oct 17 4:55 AM ET
 - [M12] Derrick / Morning Word | One-tap stitch pipeline (workflow stitch.yml + tools/stitch/stitch.py): clips on a draft release -> voice convert -> hiss removal -> Whisper gate -> stitched captioned MP4 on the same release. Tested on GitHub with 4 real clips (gate passed, -14 LUFS, one MP4 sent to Neko Oct 18). | NEXT: Neko: test MP4 approved ("Much better"). Phone test PASSED Oct 18: Neko generated one real Flow clip on his phone (green-sweater still, 720x1280, 24fps, 8.0 s, audio), downloaded and sent it; he says the line and voice sound great. Next: Mon Oct 19 Derrick day: make clips with derrick-gray.png (approved still), attach to a draft release with script.json, run stitch. Still needed: ref.wav (dry voice) to switch on Seed-VC; identify his free generator. | WAITING ON: Neko: gray-still clips on Mon Oct 19 (ask before credits) | Claude | Oct 18 12:06 PM ET
 
-## Blocked (1)
+## Blocked (3)
+- [F1] Film | One Love One World Ep1: Scenes 1-5 generated (42 clips on laptop). Redos: dl05, dl33 captions, missing Scene 5 dinner opener, dl35/dl36 extras, porch guitar | NEXT: caption scan, scene contact sheets, redo bad clips, assemble Ep1 | WAITING ON: laptop offline | Claude | Oct 19
+- [F2] Film | Music map doc and Character Bible updated; narrator line not generated | NEXT: top up ElevenLabs or other voice route | WAITING ON: ElevenLabs credits 0 | Claude | Oct 19
 - [T5] Tech | Laptop install of agentmemory + Browser Use (INSTALL-V2 ran Oct 19 3:05 AM ET, no admin needed). Result: Claude Code installed; Browser Use installed; two failures: agentmemory MCP not registered (PowerShell ate the '--'), Playwright/Chromium missing for Browser Use. Fixed in INSTALL-V3 (on Desktop). Nice-to-have only: kingdom-brain is the memory fix | NEXT: Neko double-clicks INSTALL-V3.bat on the laptop Desktop (no admin), waits for ALL DONE; log is install-v3-LOG.txt | WAITING ON: Neko: one double-click at home. Also resolve which laptop is linked (Device identity rule) | Claude | Oct 19 3:24 AM ET
 
 ## Not started (14)

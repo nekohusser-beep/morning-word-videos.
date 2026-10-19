@@ -13,7 +13,8 @@ t=wb['Tasks'];rows=[[ (str(c) if c is not None else '') for c in r] for r in t.i
 cnt={}
 for r in rows: cnt[r[3]]=cnt.get(r[3],0)+1
 out.append('Counts: '+', '.join('%s %d'%(k,v) for k,v in sorted(cnt.items())));out.append('')
-for st in ['In progress','Blocked','Not started','On hold','Done']:
+order=['In progress','Waiting on Neko','Waiting on approval','Built, partly scheduled','Blocked','Not started','On hold','Shelved','Done']
+for st in order+sorted(k for k in cnt if k not in order):
     sel=[r for r in rows if r[3]==st]
     if not sel: continue
     out.append('## %s (%d)'%(st,len(sel)))

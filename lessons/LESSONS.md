@@ -1,2 +1,3 @@
 # LESSONS (one line per mistake and its fix)
 - Oct 19: "GitHub not working" was not an outage. gh failed because GH_TOKEN in a session is a 14-character placeholder, and the repo was not attached. Fix: call add_repo (owner nekohusser-beep, repo morning-word-videos. with the trailing period, access push), then one shallow clone, then push. Public repos clone without any token.
+- Oct 19: tracker_sync.py dropped every row whose status was not In progress/Blocked/Not started/On hold/Done (M11-M16 and others invisible in TRACKER.md). Fixed: it now prints every status. After any sync, grep the mirror for the row you just edited.

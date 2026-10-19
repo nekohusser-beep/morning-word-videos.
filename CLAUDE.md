@@ -16,6 +16,9 @@
 - Copy-paste content goes in ONE code block, notes after it.
 - Competitors first: keep what people like, fix what they dislike.
 
+## Contradiction check (Neko's main reason for using Claude)
+Neko should never have to remember it all. Before acting on any instruction, check it against the standing rules, the tracker, and memory. If it contradicts an earlier rule, decision or open item, say so in one line (what he said before, and when) and then do what he says now.
+
 ## GitHub access (so this never trips again)
 Repo is nekohusser-beep/morning-word-videos. (the trailing period is part of the name). GH_TOKEN in a session is only a placeholder. Attach with add_repo (owner nekohusser-beep, access push), then ONE shallow clone, then push. Details: lessons/LESSONS.md.
 

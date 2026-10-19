@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 19 ET (offline session)
+Last updated: Oct 19 4:46 AM ET (Blessed Prayers stats pull blocked: vidIQ 0 credits until Nov 13; subs 2,610)
 
 Counts: Blocked 3, Built, partly scheduled 1, Done 34, In progress 8, Not started 14, On hold 17, Waiting on Neko 3, Waiting on approval 1
 
@@ -17,9 +17,9 @@ Counts: Blocked 3, Built, partly scheduled 1, Done 34, In progress 8, Not starte
 - [M12] Derrick / Morning Word | One-tap stitch pipeline (workflow stitch.yml + tools/stitch/stitch.py): clips on a draft release -> voice convert -> hiss removal -> Whisper gate -> stitched captioned MP4 on the same release. Tested on GitHub with 4 real clips (gate passed, -14 LUFS, one MP4 sent to Neko Oct 18). | NEXT: Neko: test MP4 approved ("Much better"). Phone test PASSED Oct 18: Neko generated one real Flow clip on his phone (green-sweater still, 720x1280, 24fps, 8.0 s, audio), downloaded and sent it; he says the line and voice sound great. Next: Mon Oct 19 Derrick day: make clips with derrick-gray.png (approved still), attach to a draft release with script.json, run stitch. Still needed: ref.wav (dry voice) to switch on Seed-VC; identify his free generator. | WAITING ON: Neko: gray-still clips on Mon Oct 19 (ask before credits) | Claude | Oct 18 12:06 PM ET
 
 ## Blocked (3)
-- [F1] Film | One Love One World Ep1: Scenes 1-5 generated (42 clips on laptop). Redos: dl05, dl33 captions, missing Scene 5 dinner opener, dl35/dl36 extras, porch guitar | NEXT: caption scan, scene contact sheets, redo bad clips, assemble Ep1 | WAITING ON: laptop offline | Claude | Oct 19
-- [F2] Film | Music map doc and Character Bible updated; narrator line not generated | NEXT: top up ElevenLabs or other voice route | WAITING ON: ElevenLabs credits 0 | Claude | Oct 19
 - [T5] Tech | Laptop install of agentmemory + Browser Use (INSTALL-V2 ran Oct 19 3:05 AM ET, no admin needed). Result: Claude Code installed; Browser Use installed; two failures: agentmemory MCP not registered (PowerShell ate the '--'), Playwright/Chromium missing for Browser Use. Fixed in INSTALL-V3 (on Desktop). Nice-to-have only: kingdom-brain is the memory fix | NEXT: Neko double-clicks INSTALL-V3.bat on the laptop Desktop (no admin), waits for ALL DONE; log is install-v3-LOG.txt | WAITING ON: Neko: one double-click at home. Also resolve which laptop is linked (Device identity rule) | Claude | Oct 19 3:24 AM ET
+- [F1] Film | One Love One World Ep1: Scenes 1-5 generated in Flow (6 + 36 clips), downloaded to laptop Downloads/ep1_raw. 300-credit finishing allowance. Review-before-stitch; redos needed: dl05, dl33 captions, missing Scene 5 dinner opener, dl35/dl36 extras, porch guitar continuity | NEXT: When laptop is back: finish caption scan, scene contact sheets, Neko flags, redo bad clips, assemble Ep1 and deliver one MP4 | WAITING ON: Laptop/internet offline | Claude | Oct 19 ET (offline session)
+- [F2] Film | Ep1 Music and Sound Map (Drive doc) and Character Bible update done. Narrator line not generated: ElevenLabs credits at 0 | NEXT: Top up ElevenLabs or use another voice route, then generate the narrator line | WAITING ON: ElevenLabs credits 0 | Claude | Oct 19 ET (offline session)
 
 ## Not started (14)
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16

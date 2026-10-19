@@ -2,9 +2,9 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 19 2:58 AM ET
+Last updated: Oct 19 3:12 AM ET
 
-Counts: Built, partly scheduled 1, Done 33, In progress 9, Not started 14, On hold 17, Waiting on Neko 3, Waiting on approval 1
+Counts: Built, partly scheduled 1, Done 34, In progress 9, Not started 14, On hold 17, Waiting on Neko 3, Waiting on approval 1
 
 ## In progress (9)
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 17 12:04 AM ET
@@ -52,7 +52,7 @@ Counts: Built, partly scheduled 1, Done 33, In progress 9, Not started 14, On ho
 - [M10] Morning Word | Isaiah 41:10 footage (3 Flow clips): ARCHIVED by Neko Oct 17, not usable for the episode it was made for (credits and timing). Keep, do not delete. Possible use: short midday pick-me-up clip | NEXT: Keep in archive. Reuse only if Neko picks a use. Files sit in the building session's workspace (/home/claude/isa-build/out), not in the repo | WAITING ON: Neko: decides a use | Neko | Oct 17 5:31 PM ET
 - [D1] Derrick / Morning Word | Isaiah 41:10 Derrick: 20-clip Flow kit sent for Neko to make himself (Claude video generation deprioritized by Neko). HeyGen draft exists (create-v4/70eb6fd4f6d54e8280c1c5ebbf755fa2), voice still AI NEEK, unrendered. | NEXT: Only if Neko asks: real Derrick voice needs his sample upload (derrick_voice_sample.mp3) or his ElevenLabs API key in HeyGen. | WAITING ON: Neko: voice clone upload or API key | Neko | Oct 18 4:20 AM ET
 
-## Done (33)
+## Done (34)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
@@ -86,6 +86,7 @@ Counts: Built, partly scheduled 1, Done 33, In progress 9, Not started 14, On ho
 - [T3] Tech | Music playing on the laptop found and turned off (Neko) | NEXT: None | WAITING ON: None | Neko | Oct 17 1:20 AM ET
 - [Z14] Standards | NEW STANDARD: when unsure, ask Gemini AI in the browser (gemini.google.com/app) with a live-check, no-guessing prompt, then verify its answer. Steps in playbook. Gemini connector is the crypto exchange, not the AI | NEXT: Use every thread | Claude | Oct 17 3:50 AM ET
 - [T4] Tech | Agent tools: agentmemory + Browser Use installed in Claude Code (cloud workspace) and CLAUDE.md added to repo root. GitHub "not working" diagnosed: GH_TOKEN is a placeholder and repo was not attached; fix is add_repo then one clone (lessons/LESSONS.md). Others shelved: OpenViking, scientific skills, diagram-design, cybersecurity skills, harness list | NEXT: Install both on the new laptop (T1 step) once Claude desktop app is linked and the repo folder is added | WAITING ON: Neko: add morning-word-videos. folder in Claude desktop app on the laptop | Claude | Oct 19 2:08 AM ET
+- [T6] Tech | PRIVATE repo nekohusser-beep/kingdom-brain created (via Chrome, GitHub signed in) and seeded: rules/STANDING-RULES.md (every rule from memory + last 10 threads), decisions/DECISIONS.md, 7 project STATUS.md files, workflows, lessons, CLAUDE.md. Public repo CLAUDE.md now points to it | NEXT: Every thread: attach kingdom-brain first, read its CLAUDE.md. Add new rules/decisions there the same turn | Claude | Oct 19 3:12 AM ET
 
 ## Standing rules
 - RULE ZERO (read first) :: Never stop after one failed attempt. If a method fails, try the next legitimate method, and keep going through every route (other tools, browsers, repo workflows, other connectors, splitting the job) until the job is done. Report the result, not the reasons it was hard. Say 'I can't' only after every route is tried, and list the routes tried. Applies to every thread and every model: act like Fable. Exception: a safety check or permission block is Neko's decision, not a failed method; say so plainly and give him the options. Neko, Oct 17, 2026.
@@ -110,6 +111,7 @@ Counts: Built, partly scheduled 1, Done 33, In progress 9, Not started 14, On ho
 - Buffer :: Free plan, 10 scheduled posts per channel cap. Verse cards post in three daily slots: 7 AM, 5 PM, 9 PM ET. A daily 9:45 AM ET task refills slots from the batch-2 queue. Do not upgrade without Neko's yes.
 - Device identity :: get_device_info reports the linked laptop as desktop-7p3htrm. Memory (Oct 18) says the linked machine is Laptop B (new i5, Docker host), but Neko said Oct 18 that Laptop B is DESKTOP-UHLBVIS. UNRESOLVED. Re-verify before installing anything or saying which laptop is linked.
 - Neko-only taps :: Some steps only Neko can do and Claude must not route around: Windows admin (UAC) prompts, picking a Google account on a new sign-in, data-use authorization boxes, passwords, payments, 3 YouTube keys. Ask once, in one line, with the exact tap.
+- Memory home :: Neko Oct 19, 2026: the private repo nekohusser-beep/kingdom-brain is where rules, decisions, project status, workflows and lessons live. Read it every session (attach with add_repo, push). This public tracker stays the task list. Nothing personal in this public repo.
 
 ## How it was done
 - Derrick episode in Flow :: Open Derrick project in Chrome (signed in as neko.husser@gmail.com). Add derrick-gray still as reference, type script clip (about 15 words), generate Veo 3.1 Lite 9:16. Stitch, caption, -14 LUFS in ffmpeg. Send ONE captioned MP4 for approval. :: Project flow.google.com/u/0/project/0a90fb26-707c-45ae-aae4-61a8d163a56b. Keep other Chrome tabs closed. Screenshots in Chrome often time out; use get_page_text.

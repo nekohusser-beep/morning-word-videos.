@@ -17,6 +17,9 @@ CTA = {
     "calm": ("FOR NIGHTS THE MIND WON'T REST",
              "The whole Book of Psalms,<br />read slow for sleep.<br />8 hours &middot; ocean waves &middot; black screen<br />On the Blessed Prayers channel.",
              "The whole Book of Psalms, read slow for sleep, is on the Blessed Prayers channel."),
+    "day": ("START THE DAY IN THE WORD",
+            "Check out the Blessed Prayers channel<br />for more of the Word<br />to carry through your day.",
+            "Check out the Blessed Prayers channel for more of the Word to carry through your day."),
     "morning": ("START THE DAY IN THE WORD",
                 "Start every morning in the Word.<br />The full Bible reading<br />is on the Blessed Prayers channel.",
                 "Start every morning in the Word. The full Bible reading is on the Blessed Prayers channel."),
@@ -62,6 +65,30 @@ def font_size(text):
     return 50
 
 
+def birdbed(path, dur, sr=44100, seed=7):
+    """Synthesized morning birdsong (FM chirps in random trills) over a soft warm pad. Original, royalty-free."""
+    rng = np.random.default_rng(seed)
+    n = int(sr * (dur + 1)); out = np.zeros(n, dtype=np.float32)
+    t = 0.4
+    while t < dur:
+        f0 = rng.uniform(2300, 4200); reps = int(rng.integers(2, 7)); gap = rng.uniform(0.07, 0.13)
+        kind = rng.integers(0, 3)
+        for r in range(reps):
+            L = rng.uniform(0.06, 0.14); m = int(sr * L); tt = np.arange(m) / sr
+            sweep = {0: f0 * (1 + 0.35 * tt / L), 1: f0 * (1.3 - 0.45 * tt / L), 2: f0 * (1 + 0.12 * np.sin(2 * np.pi * 28 * tt))}[int(kind)]
+            ph = 2 * np.pi * np.cumsum(sweep) / sr
+            env = np.sin(np.pi * tt / L) ** 2
+            tone = (np.sin(ph) + 0.25 * np.sin(2 * ph)) * env * rng.uniform(0.5, 1.0)
+            i = int(sr * (t + r * (L + gap)))
+            if i + m < n: out[i:i + m] += tone.astype(np.float32)
+        t += rng.uniform(0.9, 2.6)
+    out /= max(1e-6, np.abs(out).max())
+    tt = np.arange(n) / sr
+    pad = sum(np.sin(2 * np.pi * f * tt) * a for f, a in ((196.0, .5), (246.94, .4), (293.66, .35), (392.0, .25)))
+    pad *= (0.75 + 0.25 * np.sin(2 * np.pi * 0.08 * tt)); pad = (pad / np.abs(pad).max()).astype(np.float32)
+    sf.write(path, np.stack([out * 0.9 + pad * 0.28] * 2, 1), sr)
+
+
 def run(cmd):
     subprocess.run(cmd, check=True)
 
@@ -99,14 +126,22 @@ def main(ids):
         voice = np.concatenate(parts)
         sf.write(f"{out}/assets/voice.wav", voice, SR)
         # rain bed (soft pink noise) under the voice, loudness-matched, gentle fade at the end
-        fc = ("[0:a]aresample=44100[v];"
-              f"[1:a]highpass=f=350,lowpass=f=6500,volume=0.11,tremolo=f=0.12:d=0.25[r];"
-              "[v][r]amix=inputs=2:duration=first:normalize=0,"
-              f"loudnorm=I=-14:TP=-1.5:LRA=7,afade=t=out:st={dur-2:.1f}:d=2")
-        run(["ffmpeg", "-v", "error", "-y", "-i", f"{out}/assets/voice.wav",
-             "-f", "lavfi", "-i", f"anoisesrc=d={dur+1}:c=pink:r=44100:a=0.5",
-             "-filter_complex", fc, "-t", str(dur), "-ac", "2", "-c:a", "aac", "-b:a", "192k", f"{out}/assets/mix.m4a"])
+        if v["set"] == "day":
+            birdbed(f"{out}/assets/bed.wav", dur)
+            fc = ("[0:a]aresample=44100[v];[1:a]volume=0.30[r];"
+                  "[v][r]amix=inputs=2:duration=first:normalize=0,"
+                  f"loudnorm=I=-14:TP=-1.5:LRA=7,afade=t=out:st={dur-2:.1f}:d=2")
+            bedin = ["-i", f"{out}/assets/bed.wav"]
+        else:
+            fc = ("[0:a]aresample=44100[v];"
+                  f"[1:a]highpass=f=350,lowpass=f=6500,volume=0.11,tremolo=f=0.12:d=0.25[r];"
+                  "[v][r]amix=inputs=2:duration=first:normalize=0,"
+                  f"loudnorm=I=-14:TP=-1.5:LRA=7,afade=t=out:st={dur-2:.1f}:d=2")
+            bedin = ["-f", "lavfi", "-i", f"anoisesrc=d={dur+1}:c=pink:r=44100:a=0.5"]
+        run(["ffmpeg", "-v", "error", "-y", "-i", f"{out}/assets/voice.wav"] + bedin +
+            ["-filter_complex", fc, "-t", str(dur), "-ac", "2", "-c:a", "aac", "-b:a", "192k", f"{out}/assets/mix.m4a"])
         os.remove(f"{out}/assets/voice.wav")
+        if os.path.exists(f"{out}/assets/bed.wav"): os.remove(f"{out}/assets/bed.wav")
         bg = v.get("bg")
         if bg:
             shutil.copy(os.path.join("ref", "broll", bg + ".png"), f"{out}/assets/bg.png")

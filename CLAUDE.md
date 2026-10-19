@@ -16,6 +16,9 @@
 - Copy-paste content goes in ONE code block, notes after it.
 - Competitors first: keep what people like, fix what they dislike.
 
+## More rules live in the tracker
+Derrick standard, Film (episode-by-episode), Spend and tools, Buffer, Device identity, Neko-only taps: see the Standing rules tab of overnight/Claude-Work-Tracker.xlsx. Read it every session.
+
 ## Contradiction check (Neko's main reason for using Claude)
 Neko should never have to remember it all. Before acting on any instruction, check it against the standing rules, the tracker, and memory. If it contradicts an earlier rule, decision or open item, say so in one line (what he said before, and when) and then do what he says now.
 

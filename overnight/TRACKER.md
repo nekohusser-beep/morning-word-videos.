@@ -2,12 +2,11 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 20 12:21 AM ET
+Last updated: Oct 20 12:50 AM ET
 
-Counts: Built, partly scheduled 1, Done 39, In progress 8, Not started 14, On hold 16, Shelved 1, Waiting on Neko 2, Waiting on approval 2
+Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On hold 16, Shelved 1, Waiting on Neko 2, Waiting on approval 2
 
-## In progress (8)
-- [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters, master built (7.28 h, -18.1 LUFS, no spikes, no gaps over 8 s; release sleep-genesis, file genesis-sleep.mp4), QA clean (no decode errors), glitch scan done (1533 verses, 11 with a pause just over 2 s). youtube.json written, thumbnail done (sleep/kit/thumb_genesis_v3.jpg) | NEXT: Genesis upload stalled at 77% in Studio Oct 19 night and never finished. Needs a fresh upload (file in release sleep-genesis; metadata in sleep/READY-TO-UPLOAD/genesis). Neko said Oct 19 it goes live with no Derrick promo wait. | WAITING ON: Neko picks the file in Studio upload dialog (Claude fills everything else) | Claude | Oct 20 12:21 AM ET
+## In progress (7)
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: STALE since Oct 17; free Chatterbox/LiveTalk path is a backup only (Neko: free face looked off). No action tonight. Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 20 12:21 AM ET
 - [E2] Etsy | Facebook groups: Key live in Christian Fiction Fans; 4 posts in admin review; Married Twice unverified; Say Something About My Father blocked by safety check | NEXT: Verify which posts went live; no new posting until Facebook allowed | WAITING ON: Facebook site permission | Claude | Oct 16
 - [B1] Books | Mother-in-law book 'The Empty Chair' (locked: names Norman/Asia/Francisca/Sasha, courthouse elopement, first-step ending): ch 1-5 delivered and corrected; ch 6-13 written, sitting in DeepSeek | NEXT: Neko brings ch 6-13 out of DeepSeek; Claude edits each against the brief and ban list, one at a time. Remind Neko they are done in DeepSeek whenever he asks where we are | WAITING ON: Neko: getting ch 6-13 out of DeepSeek; check overlap with Mama's Boys; Norman's father detail is a placeholder | Neko | Oct 17 1:08 AM ET
@@ -64,13 +63,14 @@ Counts: Built, partly scheduled 1, Done 39, In progress 8, Not started 14, On ho
 ## Shelved (1)
 - [M16] Film / Google Flow | Film SHELVED Oct 19. Flow playbook written (Google Doc "Google Flow Playbook - Derrick and Film"): fixes for face/outfit drift, wrong speaker, subtitles, extras, voice, credit waste | NEXT: If restarted: check Flow output is x1 (not x4), confirm Voice ingredient on screen, run a 3-clip test capped at 150 credits, then price the redo (est. 300-700 credits for Ep 1) | WAITING ON: Neko decision to restart; no Flow credits spent until then | Claude | Oct 19 11:05 AM ET
 
-## Done (39)
+## Done (40)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
 - [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S4] Sleep Bible | John and Proverbs thumbnails (modest woman on beach, approved) | NEXT: None | Claude | Oct 16
 - [S5] Sleep Bible | Shop and book links in John, Proverbs, Psalms descriptions | NEXT: None | Claude | Oct 16
-- [S6] Sleep Bible |  | NEXT: John and Proverbs are PUBLIC on Blessed Prayers (uploaded by hand in Studio Oct 19 night; YouTube-keys route no longer needed). Reconciled from the Oct 19 upload thread; verify live in Studio. | WAITING ON: None | Neko | Oct 20 12:21 AM ET
+- [S6] Sleep Bible |  | NEXT: John and Proverbs PUBLIC, verified on the channel Oct 20 12:50 AM ET. | WAITING ON: None | Neko | Oct 20 12:50 AM ET
+- [S8] Sleep Bible | Genesis sleep reading: voice for all 50 chapters, master built (7.28 h, -18.1 LUFS, no spikes, no gaps over 8 s; release sleep-genesis, file genesis-sleep.mp4), QA clean (no decode errors), glitch scan done (1533 verses, 11 with a pause just over 2 s). youtube.json written, thumbnail done (sleep/kit/thumb_genesis_v3.jpg) | NEXT: VERIFIED LIVE Oct 20 12:50 AM ET on the public Blessed Prayers videos tab: Genesis (Ogm50YBMIsI), John (wRkrSQkJA3s), Proverbs (xyrX8g51qYI), plus Psalms (YHwBI5EVYuA). All 4 long readings public. | WAITING ON: None | Claude | Oct 20 12:50 AM ET
 - [M1] Morning Word | Day 4 (1 Peter 5:7) delivered by Buffer to YouTube, Instagram, TikTok | NEXT: None | Claude | Oct 16
 - [M2] Morning Word | Joshua 1:9 image card queued for 9 AM ET | NEXT: Confirm it sent | Claude | Oct 16
 - [M3] Morning Word | Derrick voice changed in HeyGen to the ElevenLabs Derrick Hughes clone | NEXT: None. Neko Oct 17 6:10 PM ET: voice changed in HeyGen, sounds good | Neko | Oct 17 6:10 PM ET

@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 20 12:50 AM ET
+Last updated: Oct 20 12:51 AM ET
 
 Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On hold 16, Shelved 1, Waiting on Neko 2, Waiting on approval 2
 
@@ -24,7 +24,7 @@ Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On ho
 - [M15] Derrick / Morning Word | Quick prayer Shorts bank: 12 scripts (varied openers, verse and no-verse) in Google Doc "Derrick Quick Shorts - Morning Prayer Set 1 (DRAFT)" | NEXT: Neko Oct 19 11:35 AM ET: this week is already built (M14). M15 bank is for later weeks. Neko picks the mix when he wants the next batch; no credits until then. | Neko Oct 19 11:36 AM ET: the mix and order of the bank shorts is Claude's call, however it wants; no mix approval needed. Exact file still needs his yes before posting. | WAITING ON: Buffer 10-post cap; Neko approval on exact scripts | Claude | Oct 19 11:48 AM ET
 
 ## Built, partly scheduled (1)
-- [M14] Derrick / Morning Word | Five Morning Word Shorts Mon-Fri (Jer 29:11, Isa 41:10, Rom 8:28, Ps 46, Matt 11:28), one per weekday, different sweater each day, released 5 AM; plus one bedtime short ~8 PM pointing to the sleep readings. Neko authorized all Flow credits Oct 18. | NEXT: VERIFIED in Buffer Oct 20 12:21 AM ET (YouTube queue): Tue Oct 20 5 AM Isaiah 41:10, Wed Rom 8:28, Thu Ps 46, Fri Matt 11:28 all scheduled. Daytime birdsong cards queued: Tue 7 AM Ps 118:24, Wed 7 AM Ps 5:3 (others wait on 10-post cap). Bedtime short not in the queue (sent or never queued: confirm). Mon Jer 29:11 already posted. | WAITING ON: Buffer 10-post cap; send_later tasks queue the rest | Claude | Oct 20 12:21 AM ET
+- [M14] Derrick / Morning Word | Five Morning Word Shorts Mon-Fri (Jer 29:11, Isa 41:10, Rom 8:28, Ps 46, Matt 11:28), one per weekday, different sweater each day, released 5 AM; plus one bedtime short ~8 PM pointing to the sleep readings. Neko authorized all Flow credits Oct 18. | NEXT: VERIFIED in Buffer Oct 20 12:21 AM ET (YouTube queue): Tue Oct 20 5 AM Isaiah 41:10, Wed Rom 8:28, Thu Ps 46, Fri Matt 11:28 all scheduled. Daytime birdsong cards queued: Tue 7 AM Ps 118:24, Wed 7 AM Ps 5:3 (others wait on 10-post cap). Bedtime short (Psalm 4:8, Oct 19 8 PM ET) VERIFIED SENT in Buffer. Mon Jer 29:11 already posted. | Mon Jer 29:11 verified sent Oct 19 5 AM. | WAITING ON: Buffer 10-post cap; send_later tasks queue the rest | Claude | Oct 20 12:51 AM ET
 
 ## Not started (14)
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16

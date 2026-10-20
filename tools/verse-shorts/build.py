@@ -13,6 +13,7 @@ from kokoro_onnx import Kokoro
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "..", "shorts", "psalm-4-8")
 VOICE, SPEED, SR = "af_nicole", 0.82, 24000
+DAY_VOICE, DAY_SPEED, DAY_GAP = "am_michael", 1.0, 0.55  # morning cards: upbeat male voice, brisker pace
 CTA = {
     "calm": ("FOR NIGHTS THE MIND WON'T REST",
              "The whole Book of Psalms,<br />read slow for sleep.<br />8 hours &middot; ocean waves &middot; black screen<br />On the Blessed Prayers channel.",
@@ -103,18 +104,20 @@ def main(ids):
         v = verses[vid]
         text = kjv(v["book"], v["ch"], v["v"])
         eyebrow, cta_html, cta_say = CTA[v["set"]]
+        vo, sp, gap = (DAY_VOICE, DAY_SPEED, DAY_GAP) if v["set"] == "day" else (VOICE, SPEED, 0.9)
+        say = lambda t, vo=vo, sp=sp: k.create(t, voice=vo, speed=sp, lang="en-us")[0].astype(np.float32)
         parts = [sil(1.5)]; t = 1.5; lines = []
         for ch_ in chunks(text):
             a = say(ch_); d = len(a) / SR
             show = ch_ if not lines else ch_
             lines.append({"text": show, "start": round(t, 2), "end": round(t + d, 2)})
-            parts += [a, sil(0.9)]; t += d + 0.9
+            parts += [a, sil(gap)]; t += d + gap
         lines[0]["text"] = "“" + lines[0]["text"]
         lines[-1]["text"] = lines[-1]["text"] + "”"
         verse_end = t
         parts.append(sil(0.5)); t += 0.5
         ref_t = t
-        a = say(v["say"]); parts += [a, sil(0.9)]; t += len(a) / SR + 0.9
+        a = say(v["say"]); parts += [a, sil(gap)]; t += len(a) / SR + gap
         cta_t = t
         a = say(cta_say); parts += [a, sil(3.0)]; t += len(a) / SR + 3.0
         dur = round(t, 1)

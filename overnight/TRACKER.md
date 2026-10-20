@@ -2,9 +2,9 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 20 1:03 AM ET
+Last updated: Oct 20 1:09 AM ET
 
-Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On hold 16, Shelved 1, Waiting on Neko 2, Waiting on approval 2
+Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 15, On hold 16, Shelved 1, Waiting on Neko 2, Waiting on approval 2
 
 ## In progress (7)
 - [M7] Morning Word | Free pipeline: Chatterbox voice + LiveTalk face on Kaggle. Oct 15 tests: voice and face cleared; 11 s lip-sync PASS (aggregate lag under 80 ms, syllable timing loose); histogram match fixes brightness drift (-9% to -0.1%); single long generation beats stitching. Neko said Oct 15 evening the free face looked off, then bought HeyGen Pro, so this is now a backup path | NEXT: STALE since Oct 17; free Chatterbox/LiveTalk path is a backup only (Neko: free face looked off). No action tonight. Kaggle->GitHub push failed on login at test time (Kaggle Secrets empty). Neko says token is now in: rerun handoff test once, then the 30 s assembly test (script fix: no Take a breath / Say it with me) | WAITING ON: Confirm GITHUB_TOKEN secret in Kaggle; intro/outro music not in repo; 60 s+ run untested | Claude | Oct 20 12:21 AM ET
@@ -26,7 +26,7 @@ Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On ho
 ## Built, partly scheduled (1)
 - [M14] Derrick / Morning Word | Five Morning Word Shorts Mon-Fri (Jer 29:11, Isa 41:10, Rom 8:28, Ps 46, Matt 11:28), one per weekday, different sweater each day, released 5 AM; plus one bedtime short ~8 PM pointing to the sleep readings. Neko authorized all Flow credits Oct 18. | NEXT: VERIFIED in Buffer Oct 20 12:21 AM ET (YouTube queue): Tue Oct 20 5 AM Isaiah 41:10, Wed Rom 8:28, Thu Ps 46, Fri Matt 11:28 all scheduled. Daytime birdsong cards queued: Tue 7 AM Ps 118:24, Wed 7 AM Ps 5:3 (others wait on 10-post cap). Bedtime short (Psalm 4:8, Oct 19 8 PM ET) VERIFIED SENT in Buffer. Mon Jer 29:11 already posted. | Mon Jer 29:11 verified sent Oct 19 5 AM. | WAITING ON: Buffer 10-post cap; send_later tasks queue the rest | Claude | Oct 20 12:51 AM ET
 
-## Not started (14)
+## Not started (15)
 - [S9] Sleep Bible | Pinned comment with shop link on each sleep video | NEXT: Add once videos are public | Claude | Oct 16
 - [S10] Sleep Bible | YouTube cards / end screens pointing to books | NEXT: Set in Studio video editor | Claude | Oct 16
 - [F1] Outreach | Facebook posts on Blessed Prayers and Prince Nico pages | NEXT: Post where group rules allow Etsy links | WAITING ON: Facebook site permission in browser | Claude | Oct 16
@@ -41,6 +41,7 @@ Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On ho
 - [Z8] Neko Zion | Copyright Office: Island of Peace first, then Word For Today and rest of One Love One World (that album filed 4/22/2026). AI origin disclosed briefly and excluded from claim | NEXT: Tue Oct 20: Neko logs in, pays, uploads audio; Claude fills fields | CONFLICT Oct 20 12:21 AM ET: Neko Oct 17 chat said Island of Peace first; calendar event (Oct 20 2-5 PM) says Word For Today first, then unregistered OLOW tracks. Neko to pick the order at session start. Memory also disagrees on whether OLOW album is already registered (Sept note: fully; Oct 10 note: only 2 of 8 tracks released). | WAITING ON: Neko: login, payment, audio upload | Neko | Oct 20 12:21 AM ET
 - [Z9] Neko Zion | BMI, MLC, SoundExchange, Songtrust for other tracks | NEXT: After copyright day | Claude | Oct 16 11:50 PM ET
 - [Z10] Neko Zion | Facebook Pages Prince Neko and Neko Zion not in Business Suite; X not connected | NEXT: Fix Business Suite; connect X | WAITING ON: Neko: page access | Neko | Oct 16 11:50 PM ET
+- [I1] Side income | Remote side income, not a 4th project (WIP cap). Ranked Oct 20: 1) Daily Transcription (reported ~$18-20/hr clean audio, 60 wpm + grammar tests, AI policy unstated); 2) AI-edit transcript work (Verbit, Scribie, TranscribeMe; real pay $4-9/hr); 3) DataAnnotation ($20+/hr, 1-hr test, must be Neko himself, AI use banned); 4) caption/subtitle service built on our Whisper+caption pipeline. Skip surveys/Prolific (few studies, needs his real answers). | NEXT: Neko sends/approves AI-policy question email to Daily Transcription; account sign-up and tests are Neko-only taps. Claude drafts, preps files, does the editing work once allowed. | WAITING ON: Neko: yes on email; sign-up + ID/tests | Claude | Oct 20 1:09 AM ET
 
 ## On hold (16)
 - [S7] Sleep Bible | Derrick promos for John and Proverbs | NEXT: Neko Oct 19 11:34 AM ET: Claude builds Derrick videos (supersedes Oct 18 "I write my own"). John and Proverbs promos stay on hold until Week 2 is done. | Reconciled Oct 20 12:21 AM ET: sleep readings no longer wait for promos (Neko Oct 19: they can go live). | WAITING ON: Neko: scripts and clips | Claude | Oct 20 12:21 AM ET

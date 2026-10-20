@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 20 12:51 AM ET
+Last updated: Oct 20 1:03 AM ET
 
 Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On hold 16, Shelved 1, Waiting on Neko 2, Waiting on approval 2
 
@@ -65,7 +65,7 @@ Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On ho
 
 ## Done (40)
 - [S1] Sleep Bible | Psalms video live on Blessed Prayers YouTube + shop links in description | NEXT: None | Claude | Oct 16
-- [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
+- [S2] Sleep Bible | John video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Correct John file (3.79 h, 224,708,494 bytes, release sleep-john-video) saved to Desktop\Claude-Work\Sleep-Videos Oct 20. The John live on YouTube (wRkrSQkJA3s) is only 1.04 h: needs the full file uploaded; old one then set private (delete only with Neko's yes). | Claude | Oct 20 1:03 AM ET
 - [S3] Sleep Bible | Proverbs video rendered, mastered, checked; glitch scan clean (speed, pauses, clicks, word match), nothing to re-render | NEXT: Upload is tracked in S6; promo in S7 | Claude | Oct 17 12:03 AM ET
 - [S4] Sleep Bible | John and Proverbs thumbnails (modest woman on beach, approved) | NEXT: None | Claude | Oct 16
 - [S5] Sleep Bible | Shop and book links in John, Proverbs, Psalms descriptions | NEXT: None | Claude | Oct 16
@@ -129,6 +129,7 @@ Counts: Built, partly scheduled 1, Done 40, In progress 7, Not started 14, On ho
 - Device identity :: get_device_info reports the linked laptop as desktop-7p3htrm. Memory (Oct 18) says the linked machine is Laptop B (new i5, Docker host), but Neko said Oct 18 that Laptop B is DESKTOP-UHLBVIS. UNRESOLVED. Re-verify before installing anything or saying which laptop is linked.
 - Neko-only taps :: Some steps only Neko can do and Claude must not route around: Windows admin (UAC) prompts, picking a Google account on a new sign-in, data-use authorization boxes, passwords, payments, 3 YouTube keys. Ask once, in one line, with the exact tap.
 - Memory home :: Neko Oct 19, 2026: the private repo nekohusser-beep/kingdom-brain is where rules, decisions, project status, workflows and lessons live. Read it every session (attach with add_repo, push). This public tracker stays the task list. Nothing personal in this public repo.
+- Repo downloads :: Neko Oct 20, 2026: anything Claude pulls from the repo (videos, releases, files) downloads straight into the laptop folder Desktop\Claude-Work (sleep videos in Desktop\Claude-Work\Sleep-Videos), never loose in Downloads, so Claude can reach it without Neko saving or moving anything. Desktop and Downloads folder access is granted on request. Also Oct 20: verify live whenever possible (YouTube, Buffer, repo) before stating status; threads are leads only. Lead with the fix already in motion, not the problem.
 
 ## How it was done
 - Derrick episode in Flow :: Open Derrick project in Chrome (signed in as neko.husser@gmail.com). Add derrick-gray still as reference, type script clip (about 15 words), generate Veo 3.1 Lite 9:16. Stitch, caption, -14 LUFS in ffmpeg. Send ONE captioned MP4 for approval. :: Project flow.google.com/u/0/project/0a90fb26-707c-45ae-aae4-61a8d163a56b. Keep other Chrome tabs closed. Screenshots in Chrome often time out; use get_page_text.

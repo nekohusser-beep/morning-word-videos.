@@ -131,7 +131,7 @@ def main(ids):
         # rain bed (soft pink noise) under the voice, loudness-matched, gentle fade at the end
         if v["set"] == "day":
             birdbed(f"{out}/assets/bed.wav", dur)
-            fc = ("[0:a]aresample=44100[v];[1:a]volume=0.30[r];"
+            fc = ("[0:a]aresample=44100[v];[1:a]volume=0.12[r];"
                   "[v][r]amix=inputs=2:duration=first:normalize=0,"
                   f"loudnorm=I=-14:TP=-1.5:LRA=7,afade=t=out:st={dur-2:.1f}:d=2")
             bedin = ["-i", f"{out}/assets/bed.wav"]

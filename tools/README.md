@@ -20,3 +20,4 @@ Everything the connectors did now has a free GitHub route. Secrets live in repo 
 | Transcript checks | ElevenLabs transcribe | faster-whisper in `transcribe.yml`, `sleep-qa.yml` | nothing |
 | Long YouTube uploads | Buffer | `youtube-upload.yml` (YouTube Data API) | secrets `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` |
 | Sleep video master + MP4 | local ffmpeg | `sleep-master.yml` | nothing |
+| Sleep reading with animated scenes | ffmpeg | `sleep-scenes.yml` (tools/sleep-scenes/build.py) | nothing |

@@ -21,7 +21,7 @@ jobs:
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
           sudo apt-get -qq install -y ffmpeg >/dev/null
-          bash tools/rel.sh down "${{ inputs.src_tag }}" src "^${{ inputs.src_file }}$"
+          bash tools/rel.sh down "${{ inputs.src_tag }}" src "[[:space:]]${{ inputs.src_file }}[[:space:]]"
           ls -la src
       - name: Build
         run: python3 tools/sleep-scenes/build.py "src/${{ inputs.src_file }}" "${{ inputs.scenes_dir }}" "${{ inputs.out_name }}.mp4" ${{ inputs.seg }} 10 6

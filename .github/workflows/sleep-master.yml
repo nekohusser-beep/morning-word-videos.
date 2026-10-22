@@ -8,6 +8,7 @@ on:
       out_tag: {description: "published release for the finished video", required: true}
       name: {description: "output file base name", required: true}
       title_frame: {description: "path in repo to the title frame PNG", required: true}
+      bed: {description: "waves (default) or none = voice only, no wave bed", required: false, default: "waves"}
 permissions:
   contents: write
 jobs:
@@ -52,7 +53,7 @@ jobs:
           V=$(cat vdur.txt); T=$(python3 -c "print(round($V+900,3))"); echo $T > tdur.txt
           D0=$(python3 -c "print($T-2700)")
           # 45-minute decay: -0.5 dB every 5 minutes; last 15 minutes rain + bed only, fading to zero at the final second
-          G=$(cat rain_gain.txt)
+          G=$(cat rain_gain.txt); if [ "${{ inputs.bed }}" = none ]; then G=-120; fi
           ffmpeg -v error -i voice.wav \
             -f lavfi -i "anoisesrc=color=pink:sample_rate=48000:amplitude=0.5:seed=7:duration=$T" \
             -f lavfi -i "anoisesrc=color=brown:sample_rate=48000:amplitude=1:seed=3:duration=$T" -filter_complex \

@@ -90,7 +90,8 @@ def try_space(c):
     if stage not in ("RUNNING", "RUNNING_APP_STARTING", "RUNNING_BUILDING", None) and not str(stage).startswith("ERR"):
         row["result"] = f"not running ({stage})"; return row
     t0 = time.time()
-    cl = Client(sid, hf_token=HF, verbose=False)
+    try: cl = Client(sid, token=HF, verbose=False)
+    except TypeError: cl = Client(sid, hf_token=HF, verbose=False)
     info = cl.view_api(return_format="dict", print_info=False)
     row["endpoints"] = list(info.get("named_endpoints", {}).keys())
     ep = pick_endpoint(info)

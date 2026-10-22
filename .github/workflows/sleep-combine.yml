@@ -1,0 +1,28 @@
+name: sleep-combine
+# Joins the chapter FLACs of several rendered books into one release, renumbered 000.. in order.
+on:
+  workflow_dispatch:
+    inputs:
+      tags: {description: "space-separated source release tags, in order", required: true}
+      out_tag: {description: "release tag for the combined FLACs", required: true}
+permissions:
+  contents: write
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: "tools"}
+      - name: Combine
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p out in; n=0
+          for t in ${{ inputs.tags }}; do
+            bash tools/rel.sh down "$t" "in/$t" '\.flac'
+            for f in $(ls "in/$t" | grep -E '^[0-9]{3}\.flac$' | sort); do
+              cp "in/$t/$f" "$(printf 'out/%03d.flac' $n)"; n=$((n+1))
+            done
+          done
+          echo "combined $n files"; ls out | wc -l
+          bash tools/rel.sh ensure "${{ inputs.out_tag }}" >/dev/null
+          bash tools/rel.sh up "${{ inputs.out_tag }}" out/*.flac

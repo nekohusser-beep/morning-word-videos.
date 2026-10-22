@@ -1,0 +1,137 @@
+{
+ "title": "The Instructions",
+ "aspect": "9:16",
+ "wps": 1.9,
+ "max_sec": 8,
+ "script_sha": "f389ab8f4fa2f634",
+ "base_prompt": "Colored stick figure, red shirt, blue pants, round white head, clean ink outlines, flat bright rooms.",
+ "characters": {
+  "Hero": "colored stick figure, red shirt, blue pants"
+ },
+ "scenes": [
+  {
+   "id": "s001",
+   "vo": "Okay. Easy one. Grab the salt shaker...",
+   "words": 7,
+   "est_sec": 2.59,
+   "kind": "character",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "hold": 2.2,
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Stick figure sits at a kitchen table with a coffee mug, salt shaker and sugar bowl; he grabs the shaker and salts the coffee. Instructor speaker icon top right.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s002",
+   "vo": "...and move it so you don't mix it up with the sugar.",
+   "words": 12,
+   "est_sec": 4.44,
+   "kind": "character",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "hold": 1.8,
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He is still shaking salt into the mug, then freezes mid-shake with a thought-dots note.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "pull_out"
+  },
+  {
+   "id": "s003",
+   "vo": "Two parts to that sentence. He did one.",
+   "words": 8,
+   "est_sec": 2.96,
+   "kind": "abstract",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "hold": 1.4,
+   "chars": [],
+   "image_prompt": "Graphic: a sentence bar split into PART 1 (green, check) and PART 2 (grey); a yellow ball runs part 1 then hops off the bar.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "drift_up"
+  },
+  {
+   "id": "s004",
+   "vo": "No problem. If anything goes in the wrong cup, pick up the spoon...",
+   "words": 13,
+   "est_sec": 4.81,
+   "kind": "character",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "hold": 2.0,
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He grabs the spoon the second he hears it and stirs the salty coffee hard; coffee sloshes.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s005",
+   "vo": "...and set it down. I'll bring you a fresh one.",
+   "words": 10,
+   "est_sec": 3.7,
+   "kind": "character",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "hold": 2.0,
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Still stirring, he freezes with the spoon in the mug; thought-dots note.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "pull_out"
+  },
+  {
+   "id": "s006",
+   "vo": "You got all that?",
+   "words": 4,
+   "est_sec": 1.48,
+   "kind": "character",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "hold": 2.6,
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He turns and stares at the camera, eyes wide, one sweat drop, slow blink.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s007",
+   "vo": "If you move before the sentence ends, same here.",
+   "words": 9,
+   "est_sec": 3.33,
+   "kind": "abstract",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "hold": 0.3,
+   "chars": [],
+   "image_prompt": "Graphic: the same sentence bar; this time the ball waits, then runs the whole bar and gets a check.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "pan_right"
+  },
+  {
+   "id": "s008",
+   "vo": "What helps me: let them finish the sentence. Then pick up the spoon.",
+   "words": 13,
+   "est_sec": 4.81,
+   "kind": "character",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "hold": 1.0,
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Calm figure at the table, hands folded, waits, then picks up the spoon with a fresh cup.",
+   "motion_prompt": "frame-by-frame rig animation (see short_instr/draw.py)",
+   "motion": "push_in"
+  }
+ ]
+}

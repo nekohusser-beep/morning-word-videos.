@@ -33,18 +33,19 @@ for i in range(n):
                            "-c:v","libx264","-preset","veryfast","-crf","28",p])
     segs.append(p)
 # chain dissolves
-cur = segs[0]; off = 0.0; merged = []
+cur = segs[0]; cur_len = SEG; merged = []
 step = 8
 for k in range(1, len(segs), step):
     group = segs[k:k+step]
     inputs = [cur] + group
     args = ["ffmpeg","-v","error","-y"]
     for f in inputs: args += ["-i", f]
-    fc = []; last = "[0:v]"; t = SEG
+    fc = []; last = "[0:v]"; t = cur_len
     for j in range(1, len(inputs)):
         tag = f"[x{j}]"
         fc.append(f"{last}[{j}:v]xfade=transition=fade:duration={FADE}:offset={t-FADE}{tag}")
         last = tag; t += SEG - FADE
+    cur_len = t
     outp = f"segs/m{k:04d}.mp4"
     args += ["-filter_complex",";".join(fc),"-map",last,"-c:v","libx264","-preset","veryfast","-crf","28",outp]
     subprocess.check_call(args)

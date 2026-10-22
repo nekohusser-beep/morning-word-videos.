@@ -1,0 +1,189 @@
+{
+ "title": "The Keys",
+ "aspect": "9:16",
+ "wps": 1.9,
+ "max_sec": 8,
+ "script_sha": "e377368ac8afe0c3",
+ "base_prompt": "Colored stick figure, red shirt, blue pants, round white head, clean ink outlines, flat bright rooms.",
+ "characters": {
+  "Hero": "colored stick figure, red shirt, blue pants"
+ },
+ "scenes": [
+  {
+   "id": "s001",
+   "vo": "I need to leave in five minutes. Where are my keys?",
+   "words": 11,
+   "est_sec": 5.8,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Stick figure by the front door patting his pockets, empty key hook on the wall; sticky-note hook text.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s002",
+   "vo": "Not on the hook. Check the counter.",
+   "words": 7,
+   "est_sec": 3.7,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He checks the hook, then walks to the counter.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s003",
+   "vo": "Mail pile, coffee mug, one sock.",
+   "words": 6,
+   "est_sec": 3.2,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He lifts the mail pile and a green sock is under it.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s004",
+   "vo": "Why is there a sock here?",
+   "words": 6,
+   "est_sec": 3.2,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He holds the sock up, purple question mark.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s005",
+   "vo": "The sink has a plate I should rinse.",
+   "words": 8,
+   "est_sec": 4.2,
+   "kind": "abstract",
+   "chars": [],
+   "image_prompt": "The sink with one plate in it, no figure.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s006",
+   "vo": "Wait, the trash needs to go out.",
+   "words": 7,
+   "est_sec": 3.7,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He grabs a full black trash bag.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s007",
+   "vo": "The bag rips. Trash on the floor.",
+   "words": 7,
+   "est_sec": 3.7,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The bag rips and colorful trash scatters on the floor.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s008",
+   "vo": "The car. I'm supposed to be in the car.",
+   "words": 9,
+   "est_sec": 4.7,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "He looks out the window at the blue car, then back at the mess.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s009",
+   "vo": "One hour later, I'm sweeping the kitchen, the trash is still by the door,",
+   "words": 14,
+   "est_sec": 7.4,
+   "kind": "abstract",
+   "chars": [],
+   "image_prompt": "Dark purple abstract: rainbow spiral around a racing clock; keys, sock, trash bag and question mark orbit.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s010",
+   "vo": "and my keys were in my pocket the whole time.",
+   "words": 10,
+   "est_sec": 5.3,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Sweeping the floor, then pulls the keys out of his pocket, deadpan.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s011",
+   "vo": "If that's your brain too, one thing works for me.",
+   "words": 10,
+   "est_sec": 5.3,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Smiling to camera in a purple room.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s012",
+   "vo": "Keys go in the same bowl the second I walk in. One spot.",
+   "words": 13,
+   "est_sec": 6.8,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Drops the keys into a bowl on a stool by the door; green check.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s013",
+   "vo": "Psalm 46:10 says, \"Be still, and know that I am God.\"",
+   "words": 11,
+   "est_sec": 5.8,
+   "kind": "abstract",
+   "chars": [],
+   "image_prompt": "Vertical sunrise over hills.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  },
+  {
+   "id": "s014",
+   "vo": "My keys get one place. God gets the first minute. The car can wait.",
+   "words": 14,
+   "est_sec": 7.4,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "Calm by the door, keys in the bowl, golden light; loops to the opening.",
+   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "motion": "push_in"
+  }
+ ]
+}

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Scene Engine planner (steps 2-3 of the script-to-video pipeline).
 
-  plan.py split   SCRIPT.txt SCENES.json [--wps 2.4] [--max-sec 8] [--title T] [--aspect 16:9|9:16]
+  plan.py split   SCRIPT.txt SCENES.json [--wps 1.9] [--max-sec 8] [--title T] [--aspect 16:9|9:16]
   plan.py check   SCENES.json [--script SCRIPT.txt]
   plan.py prompts SCENES.json OUT_DIR
 
-split   Cuts the approved script into scenes of at most 8 seconds of voice (2.4 words/s, 19 words).
+split   Cuts the approved script into scenes of at most 8 seconds of voice (1.9 words/s for the Kokoro voice at 0.95, 15 words; calibrate with the voice you use).
         The spoken text is fixed here, in code, so no AI step can rewrite or drop a line.
         Every 5th scene is marked 'abstract' (20% non-character graphics), scripture scenes too.
         An AI step (prompts/3_visual_planner.txt) then fills only the picture and motion fields.
@@ -94,8 +94,8 @@ def split(a):
             scenes.append(" ".join(cur)); cur = []
         cur.append(u)
     if cur: scenes.append(" ".join(cur))
-    if len(scenes) > 1 and len(scenes[-1].split()) < 5 and len((scenes[-2] + " " + scenes[-1]).split()) <= cap + 2:
-        scenes[-2] += " " + scenes.pop()
+    if len(scenes) > 1 and len(scenes[-1].split()) < 5 and len((scenes[-2] + " " + scenes[-1]).split()) <= cap:
+        tail = scenes.pop(); scenes[-1] += " " + tail
     out = []
     for i, vo in enumerate(scenes):
         n = len(vo.split())
@@ -103,6 +103,11 @@ def split(a):
         kind = "abstract" if (i % 5 == 4 or scripture) else "character"
         out.append({"id": f"s{i+1:03d}", "vo": vo, "words": n, "est_sec": round(n / a.wps, 2), "kind": kind,
                     "chars": [], "image_prompt": "", "motion_prompt": "", "motion": MOTIONS[i % len(MOTIONS)]})
+    need = -(-len(out) // 5)  # at least 20% abstract: add the scene farthest from the existing ones
+    while sum(1 for x in out if x["kind"] == "abstract") < need:
+        ab = [k for k, x in enumerate(out) if x["kind"] == "abstract"] or [-5]
+        k = max((k for k, x in enumerate(out) if x["kind"] == "character" and k > 0), key=lambda k: (min(abs(k - j) for j in ab), k)) if len(out) > 2 else 0
+        out[k]["kind"] = "abstract"
     d = {"title": a.title, "aspect": a.aspect, "wps": a.wps, "max_sec": a.max_sec, "script_sha": sha([s["vo"] for s in out]),
          "base_prompt": DEFAULT_BASE, "characters": {}, "scenes": out}
     json.dump(d, open(a.out, "w"), indent=1, ensure_ascii=False)
@@ -168,7 +173,7 @@ def prompts(a):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser(); sp = p.add_subparsers(dest="cmd", required=True)
-    s = sp.add_parser("split"); s.add_argument("script"); s.add_argument("out"); s.add_argument("--wps", type=float, default=2.4)
+    s = sp.add_parser("split"); s.add_argument("script"); s.add_argument("out"); s.add_argument("--wps", type=float, default=1.9)
     s.add_argument("--max-sec", dest="max_sec", type=float, default=8.0); s.add_argument("--title", default="")
     s.add_argument("--aspect", default="16:9", choices=["16:9", "9:16"]); s.set_defaults(f=split)
     c = sp.add_parser("check"); c.add_argument("scenes"); c.add_argument("--script"); c.set_defaults(f=check)

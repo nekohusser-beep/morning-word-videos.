@@ -3,7 +3,7 @@
  "aspect": "9:16",
  "wps": 1.9,
  "max_sec": 8.0,
- "script_sha": "96df5260f1e905df",
+ "script_sha": "ad8daef46f1f8951",
  "base_prompt": "Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.",
  "characters": {
   "Hero": "colored stick figure, red shirt, blue pants, round white head, ink outline"
@@ -150,36 +150,12 @@
   },
   {
    "id": "s012",
-   "vo": "Isaiah 26:3 says, \"Thou wilt keep him in perfect peace,",
-   "words": 10,
-   "est_sec": 5.3,
+   "vo": "One thing at a time. That's the whole trick.",
+   "words": 8,
+   "est_sec": 4.2,
    "kind": "abstract",
    "chars": [],
-   "image_prompt": "Vertical sunrise over hills; 'Isaiah 26:3' note.",
-   "motion_prompt": "frame-by-frame rig animation",
-   "motion": "push_in"
-  },
-  {
-   "id": "s013",
-   "vo": "whose mind is stayed on thee.\"",
-   "words": 6,
-   "est_sec": 3.2,
-   "kind": "abstract",
-   "chars": [],
-   "image_prompt": "Sunrise continues, sun higher.",
-   "motion_prompt": "frame-by-frame rig animation",
-   "motion": "push_in"
-  },
-  {
-   "id": "s014",
-   "vo": "One thing at a time. And He goes first.",
-   "words": 9,
-   "est_sec": 4.7,
-   "kind": "character",
-   "chars": [
-    "Hero"
-   ],
-   "image_prompt": "Back on the couch with a full glass, smiling; closing notes; loops to the opening.",
+   "image_prompt": "Back on the couch with a full glass, smiling; closing note; loops to the opening.",
    "motion_prompt": "frame-by-frame rig animation",
    "motion": "push_in"
   }

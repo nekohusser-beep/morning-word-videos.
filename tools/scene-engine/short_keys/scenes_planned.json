@@ -3,7 +3,7 @@
  "aspect": "9:16",
  "wps": 1.9,
  "max_sec": 8,
- "script_sha": "e377368ac8afe0c3",
+ "script_sha": "4361daf924e34495",
  "base_prompt": "Colored stick figure, red shirt, blue pants, round white head, clean ink outlines, flat bright rooms.",
  "characters": {
   "Hero": "colored stick figure, red shirt, blue pants"
@@ -163,26 +163,13 @@
   },
   {
    "id": "s013",
-   "vo": "Psalm 46:10 says, \"Be still, and know that I am God.\"",
-   "words": 11,
-   "est_sec": 5.8,
+   "vo": "My keys get one place. The car can wait.",
+   "words": 9,
+   "est_sec": 4.7,
    "kind": "abstract",
    "chars": [],
-   "image_prompt": "Vertical sunrise over hills.",
-   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
-   "motion": "push_in"
-  },
-  {
-   "id": "s014",
-   "vo": "My keys get one place. God gets the first minute. The car can wait.",
-   "words": 14,
-   "est_sec": 7.4,
-   "kind": "character",
-   "chars": [
-    "Hero"
-   ],
-   "image_prompt": "Calm by the door, keys in the bowl, golden light; loops to the opening.",
-   "motion_prompt": "frame-by-frame rig animation (see short_keys/draw.py)",
+   "image_prompt": "Calm by the door, keys in the bowl; loops to the opening.",
+   "motion_prompt": "frame-by-frame rig animation",
    "motion": "push_in"
   }
  ]

@@ -181,10 +181,10 @@ def s14(c, p, t, T):  # loop: door, keys in bowl, calm
     c.glow(540, 700, 320, col=GOLD, strength=150)
     F(c, stand(900, mood="smile", ra1=20, ra2=30, la1=-10, la2=-20), face=-1)
     s = ease((p - .4) / .12)
-    if s > .05: title(c, "God gets the first minute.", 540, 300, int(66 * s), bg=(255, 255, 255)); title(c, "The car can wait.", 540, 430, int(78 * s), bg=YEL)
+    if s > .05: title(c, "Keys get one place.", 540, 300, int(78 * s), bg=(255, 255, 255)); title(c, "The car can wait.", 540, 430, int(78 * s), bg=YEL)
 
 
-RECIPES = {f"s{i:03d}": fn for i, fn in enumerate((s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s13, s14), 1)}
+RECIPES = {f"s{i:03d}": fn for i, fn in enumerate((s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s14), 1)}
 V.RECIPES = RECIPES
 
 if __name__ == "__main__":

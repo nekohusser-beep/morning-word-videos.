@@ -197,10 +197,10 @@ def s13(c, p, t, T):  # loop back: couch, full cup, peace
     cup(c, f["rh"][0] + 10, f["rh"][1] + 30, 1.5, level=.85)
     c.glow(820, 710, 320, col=GOLD, strength=170)
     s = ease((p - .45) / .12)
-    if s > .05: title(c, "One thing at a time.", 540, 300, int(78 * s), bg=(255, 255, 255)); title(c, "He goes first.", 540, 430, int(78 * s), bg=YEL)
+    if s > .05: title(c, "One thing at a time.", 540, 300, int(78 * s), bg=(255, 255, 255)); title(c, "That's the whole trick.", 540, 430, int(78 * s), bg=YEL)
 
 
-RECIPES = {f"s{i:03d}": fn for i, fn in enumerate((s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s12, s12b, s13), 1)}
+RECIPES = {f"s{i:03d}": fn for i, fn in enumerate((s01, s02, s03, s04, s05, s06, s07, s08, s09, s10, s11, s13), 1)}
 
 
 def draw_frame(args):

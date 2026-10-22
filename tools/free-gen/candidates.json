@@ -1,0 +1,15 @@
+[
+ {"name": "pollinations_image", "type": "http", "url": "https://image.pollinations.ai/prompt/{prompt}?width=1280&height=720&nologo=true&seed=42"},
+ {"name": "pollinations_video", "type": "http", "url": "https://image.pollinations.ai/prompt/{prompt}?model=veo&width=1280&height=720&nologo=true"},
+ {"name": "hf_inf_ltx", "type": "hf_inference", "model": "Lightricks/LTX-Video"},
+ {"name": "hf_inf_wan", "type": "hf_inference", "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers"},
+ {"name": "ltx_distilled", "type": "space", "space": "Lightricks/ltx-video-distilled"},
+ {"name": "wan22_5b", "type": "space", "space": "Wan-AI/Wan2.2-5B"},
+ {"name": "wan22_aoti", "type": "space", "space": "zerogpu-aoti/wan2-2-fp8da-aoti-faster"},
+ {"name": "wan22_flf", "type": "space", "space": "multimodalart/wan-2-2-first-last-frame"},
+ {"name": "ltx2_space", "type": "space", "space": "Lightricks/LTX-2"},
+ {"name": "cogvideox", "type": "space", "space": "THUDM/CogVideoX-5B-Space"},
+ {"name": "hunyuan", "type": "space", "space": "tencent/HunyuanVideo"},
+ {"name": "animatediff_lightning", "type": "space", "space": "ByteDance/AnimateDiff-Lightning"},
+ {"name": "flux_schnell_img", "type": "space", "space": "black-forest-labs/FLUX.1-schnell"}
+]

@@ -34,7 +34,11 @@ def keep(cand, src, tag="out"):
     if not isinstance(src, str): return None
     if src.startswith("http"):
         ext = os.path.splitext(urllib.parse.urlparse(src).path)[1] or ".bin"
-        dst = os.path.join(d, tag + ext); urllib.request.urlretrieve(src, dst); return dst
+        dst = os.path.join(d, tag + ext); urllib.request.urlretrieve(src, dst)
+        if ext == ".m3u8":  # streamed chunks -> one mp4
+            mp4 = os.path.join(d, tag + ".mp4")
+            if os.system(f'ffmpeg -v error -y -protocol_whitelist file,http,https,tcp,tls -i "{src}" -c copy "{mp4}"') == 0: return mp4
+        return dst
     if os.path.exists(src):
         dst = os.path.join(d, tag + os.path.splitext(src)[1]); shutil.copy(src, dst); return dst
     return None
@@ -84,7 +88,9 @@ def fill_args(ep):
 
 
 def try_space(c):
-    from gradio_client import Client
+    from gradio_client import Client, handle_file
+    global A
+    if c.get("prompt"): A.prompt = c["prompt"]
     sid = c["space"]; stage, hw = space_status(sid); log(sid, "stage", stage, "hw", hw)
     row = {"name": c["name"], "space": sid, "stage": stage, "hardware": hw}
     if stage not in ("RUNNING", "RUNNING_APP_STARTING", "RUNNING_BUILDING", None) and not str(stage).startswith("ERR"):
@@ -98,7 +104,7 @@ def try_space(c):
     if not ep: row["result"] = "no usable endpoint"; return row
     name, spec = ep[1], ep[2]; args = fill_args(spec)
     if c.get("api_name"): name = c["api_name"]
-    if c.get("args"): args = c["args"]
+    if c.get("args"): args = [handle_file(A.image) if a == "@IMAGE" else a for a in c["args"]]
     row["api_name"] = name; row["args"] = [str(a)[:60] for a in args]
     job = cl.submit(*args, api_name=name)
     while not job.done():

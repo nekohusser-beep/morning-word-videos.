@@ -1,0 +1,35 @@
+[
+ {
+  "name": "ltx_i2v",
+  "type": "space",
+  "space": "Lightricks/ltx-video-distilled",
+  "api_name": "/image_to_video",
+  "args": [
+   "A flat 2D cartoon stick figure with a red shirt and blue pants sits on a purple couch, then stands up and walks to the right out of frame. Same room, same colors, clean ink outlines, smooth hand-drawn animation.",
+   "worst quality, blurry, jittery, distorted, new characters, scene change",
+   "@IMAGE",
+   null,
+   512,
+   704,
+   "image-to-video",
+   5.0,
+   9,
+   42,
+   true,
+   3.0,
+   true
+  ]
+ },
+ {
+  "name": "wan22_i2v",
+  "type": "space",
+  "space": "zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+  "prompt": "A flat 2D cartoon stick figure with a red shirt and blue pants sits on a purple couch, then stands up and walks to the right out of frame. Same room, same colors, clean ink outlines, smooth hand-drawn animation."
+ },
+ {
+  "name": "self_forcing_t2v",
+  "type": "space",
+  "space": "multimodalart/self-forcing",
+  "prompt": "A flat 2D cartoon stick figure with a red shirt and blue pants sits on a purple couch, then stands up and walks to the right out of frame. Same room, same colors, clean ink outlines, smooth hand-drawn animation."
+ }
+]

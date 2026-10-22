@@ -1,0 +1,12 @@
+[
+ {"name": "pollinations_image", "type": "http", "url": "https://image.pollinations.ai/prompt/{prompt}?width=1280&height=720&nologo=true&seed=42"},
+ {"name": "pollinations_video", "type": "http", "url": "https://gen.pollinations.ai/video/{prompt}?duration=5&aspectRatio=16:9"},
+ {"name": "ltx_distilled_t2v", "type": "space", "space": "Lightricks/ltx-video-distilled", "api_name": "/text_to_video",
+  "args": ["A simple colorful cartoon stick figure walking across green hills at sunrise, flat 2D animation, smooth motion", "worst quality, blurry, jittery, distorted", null, null, 512, 704, "text-to-video", 5.0, 9, 42, true, 3.0, true]},
+ {"name": "wan22_i2v_aoti", "type": "space", "space": "zerogpu-aoti/wan2-2-fp8da-aoti-faster"},
+ {"name": "ltx23_t2v", "type": "space", "space": "Lightricks/LTX-2-3"},
+ {"name": "wan21_fast_i2v", "type": "space", "space": "multimodalart/wan2-1-fast"},
+ {"name": "ltx2_turbo", "type": "space", "space": "alexnasa/ltx-2-TURBO"},
+ {"name": "self_forcing_t2v", "type": "space", "space": "multimodalart/self-forcing"},
+ {"name": "flux_schnell_img", "type": "space", "space": "black-forest-labs/FLUX.1-schnell"}
+]

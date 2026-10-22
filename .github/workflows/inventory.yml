@@ -1,0 +1,36 @@
+name: inventory
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "release tag holding vNN.mp4 clips", required: true, default: "week1"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env: {GH_TOKEN: "${{ github.token }}", TAG: "${{ inputs.tag }}"}
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null && pip install faster-whisper==1.0.3
+      - run: |
+          mkdir -p in && T=$'\t'
+          bash tools/rel.sh down "$TAG" in "${T}[vnb][0-9]+\.mp4${T}"
+          ls in
+      - run: |
+          python - <<'PY'
+          import json, glob, subprocess, os
+          from faster_whisper import WhisperModel
+          m = WhisperModel("small.en", device="cpu", compute_type="int8")
+          out = {}
+          for p in sorted(glob.glob("in/[vnb]*.mp4")):
+              wav = p[:-4] + ".wav"
+              subprocess.run(["ffmpeg","-v","error","-y","-i",p,"-vn","-ac","1","-ar","16000",wav],check=True)
+              segs,_ = m.transcribe(wav, word_timestamps=True, vad_filter=False)
+              ws = [w.word.strip() for s in segs for w in s.words]
+              dur = float(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",p]).decode())
+              out[os.path.basename(p)] = {"text": " ".join(ws), "dur": round(dur,2)}
+          json.dump(out, open("inventory.json","w"), indent=1)
+          print(json.dumps(out, indent=1))
+          PY
+      - run: bash tools/rel.sh up "$TAG" inventory.json

@@ -1,0 +1,31 @@
+name: transcribe
+on:
+  workflow_dispatch:
+    inputs:
+      path: {description: "repo path of audio file", required: true}
+      tag: {description: "release tag", required: true, default: "inbox"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install faster-whisper==1.0.3
+      - run: |
+          python - <<'PY'
+          import json
+          from faster_whisper import WhisperModel
+          m = WhisperModel("small.en", device="cpu", compute_type="int8")
+          out = {}
+          for p in "${{ inputs.path }}".split():
+              segs, _ = m.transcribe(p, word_timestamps=True, vad_filter=False)
+              words = [{"text": w.word.strip(), "start": round(w.start, 2), "end": round(w.end, 2)} for s in segs for w in s.words]
+              out[p] = {"words": words, "text": " ".join(w["text"] for w in words)}
+          json.dump(out, open("transcript.json", "w"))
+          PY
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh release view "${{ inputs.tag }}" || gh release create "${{ inputs.tag }}" --draft -t inbox -n inbox
+          cp transcript.json "transcript-${{ github.run_id }}.json"
+          gh release upload "${{ inputs.tag }}" "transcript-${{ github.run_id }}.json" --clobber

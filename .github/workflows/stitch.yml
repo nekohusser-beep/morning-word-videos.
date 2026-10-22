@@ -1,0 +1,225 @@
+name: stitch
+# ONE tap: clips on a release -> voice convert -> hiss removal -> Whisper gate -> stitch to the Derrick standard -> ONE captioned MP4 back on the same release.
+#
+# Neko attaches to the draft release <tag>:
+#   clip01.mp4, clip02.mp4, ...   one per script line, numbered in order
+#   script.json                   {"lines":[{"text":"...","display":"optional caption text","pause":0.4}, ...]}
+#   ref.wav                       (optional) approved Derrick voice reference; without it voice conversion is skipped and STATUS.txt says so
+# Output on the same release: Morning_Word_<tag>.mp4 plus STATUS.txt (also copied into the release notes).
+# Extras (no-captions cut, .srt, report) stay in this run's Artifacts; they are not put on the release.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "release tag holding the clips", required: true, default: "episode"}
+      convert: {description: "voice-convert every clip to ref.wav (Seed-VC)", required: true, type: boolean, default: true}
+      enhance: {description: "remove hiss (DeepFilterNet3)", required: true, type: boolean, default: true}
+      force: {description: "build even if the Whisper gate flags a clip", required: true, type: boolean, default: false}
+permissions:
+  contents: write
+concurrency:
+  group: stitch-${{ inputs.tag }}
+  cancel-in-progress: false
+env:
+  TAG: ${{ inputs.tag }}
+
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      clips: ${{ steps.list.outputs.clips }}
+      haveref: ${{ steps.list.outputs.haveref }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
+      - name: Pull release assets
+        id: list
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          fail() {  # one plain message on the release, readable on a phone, then stop
+            printf 'GATE FAILED\n%s\n' "$1" > STATUS.txt
+            id=$(bash tools/rel.sh id "$TAG")
+            if [ -n "$id" ]; then
+              bash tools/rel.sh up "$TAG" STATUS.txt
+              gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -f tag_name="$TAG" -F draft=true -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
+            fi
+            cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::$1"
+            exit 1
+          }
+          id=$(bash tools/rel.sh id "$TAG")
+          [ -n "$id" ] || { echo "::error::No release tagged '$TAG'. Create a draft release with that tag and attach the clips."; exit 1; }
+          T=$'\t'
+          bash tools/rel.sh down "$TAG" in "${T}(clip[0-9]+\.mp4|script\.json|ref\.wav)${T}"
+          [ -f in/script.json ] || fail "No script.json on release '$TAG'. Attach script.json (one line of text per clip, in order)."
+          python3 - <<'PY' || fail "script.json is not valid. It must look like {\"lines\":[{\"text\":\"...\"}]}."
+          import json
+          d = json.load(open("in/script.json"))
+          assert isinstance(d["lines"], list) and all("text" in l for l in d["lines"])
+          PY
+          mkdir -p clips audio_raw
+          n=0
+          for f in $(ls in/ | grep -E '^clip0*[0-9]+\.mp4$' | sort -V); do cp "in/$f" "clips/$f"; n=$((n+1)); done
+          [ "$n" -gt 0 ] || fail "No clipNN.mp4 files on release '$TAG'. Attach clip01.mp4, clip02.mp4, ... in order."
+          lines=$(python3 -c "import json;print(len(json.load(open('in/script.json'))['lines']))")
+          [ "$n" = "$lines" ] || fail "Count: $n clips attached but script.json has $lines lines. Attach exactly one clip per line."
+          for f in clips/*.mp4; do s=$(basename "$f" .mp4); ffmpeg -v error -y -i "$f" -vn -ac 1 -ar 48000 "audio_raw/$s.wav" || fail "Could not read audio from $s.mp4 (corrupt or still uploading?). Re-attach it."; done
+          cp in/script.json script.json
+          [ -f in/ref.wav ] && cp in/ref.wav ref.wav
+          echo "clips=$(ls clips | sed 's/\.mp4$//' | python3 -c "import sys,json;print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))")" >> "$GITHUB_OUTPUT"
+          [ -f ref.wav ] && echo "haveref=true" >> "$GITHUB_OUTPUT" || echo "haveref=false" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prep
+          path: |
+            clips
+            audio_raw
+            script.json
+            ref.wav
+          if-no-files-found: ignore
+
+  convert:
+    needs: prep
+    if: ${{ inputs.convert && needs.prep.outputs.haveref == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        clip: ${{ fromJSON(needs.prep.outputs.clips) }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with: {name: prep}
+      - run: |
+          git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
+          cd sv && pip install -q -r requirements.txt > ../log.txt 2>&1 || true
+      - run: |
+          mkdir -p out
+          cd sv
+          python inference.py --source ../audio_raw/${{ matrix.clip }}.wav --target ../ref.wav --output ../out/tmp --diffusion-steps 20 --length-adjust 1.0 --inference-cfg-rate 0.7 --f0-condition False --fp16 False >> ../log.txt 2>&1 || echo FAILED >> ../log.txt
+          g=$(ls ../out/tmp/*.wav 2>/dev/null | head -1); [ -n "$g" ] && mv "$g" ../out/${{ matrix.clip }}.wav; rm -rf ../out/tmp
+          tail -c 1500 ../log.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vc-${{ matrix.clip }}
+          path: out/${{ matrix.clip }}.wav
+          if-no-files-found: ignore
+
+  finish:
+    needs: [prep, convert]
+    if: ${{ always() && needs.prep.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
+      - uses: actions/download-artifact@v4
+        with: {name: prep}
+      - name: Download converted audio
+        if: ${{ needs.convert.result == 'success' }}
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: vc-*
+          path: vc
+          merge-multiple: true
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Choose audio per clip (voice-converted if it exists, else the clip's own)
+        run: |
+          mkdir -p audio_pick
+          : > notes.txt
+          if [ "${{ inputs.convert }}" != "true" ]; then echo "Voice conversion: off (you turned it off)." >> notes.txt
+          elif [ ! -f ref.wav ]; then echo "WARNING voice conversion: skipped, no ref.wav on the release. Voices are NOT unified. Attach ref.wav to fix." >> notes.txt
+          else echo "Voice conversion: on." >> notes.txt; fi
+          for f in clips/*.mp4; do
+            s=$(basename "$f" .mp4)
+            if [ -s "vc/$s.wav" ]; then cp "vc/$s.wav" "audio_pick/$s.wav"
+            else
+              cp "audio_raw/$s.wav" "audio_pick/$s.wav"
+              if [ -f ref.wav ] && [ "${{ inputs.convert }}" = "true" ]; then
+                echo "WARNING $s: voice conversion failed, used the clip's own voice. Re-run to retry it." >> notes.txt
+              fi
+            fi
+          done
+      - name: Hiss removal (DeepFilterNet3)
+        if: ${{ inputs.enhance }}
+        run: |
+          python -m venv dfv && . dfv/bin/activate
+          pip install -q "torch==2.0.1" "torchaudio==2.0.2" --index-url https://download.pytorch.org/whl/cpu
+          pip install -q deepfilternet "numpy<2" soundfile
+          mkdir -p audio_final df_out
+          for w in audio_pick/*.wav; do
+            s=$(basename "$w" .wav)
+            if deepFilter -o df_out "$w" > df.log 2>&1; then
+              g=$(ls df_out/${s}*.wav 2>/dev/null | head -1)
+              [ -n "$g" ] && cp "$g" "audio_final/$s.wav" || { cp "$w" "audio_final/$s.wav"; echo "WARNING $s: hiss removal produced no file, used unfiltered audio." >> notes.txt; }
+            else
+              cp "$w" "audio_final/$s.wav"; echo "WARNING $s: hiss removal failed, used unfiltered audio." >> notes.txt
+            fi
+          done
+      - name: No hiss removal
+        if: ${{ !inputs.enhance }}
+        run: |
+          mkdir -p audio_final
+          cp audio_pick/*.wav audio_final/
+          echo "Hiss removal is off (you turned it off)." >> notes.txt
+      - name: Transcribe and gate
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          die() { echo "::error::$1 :: $(tail -c 900 tr.log | tr '\n' ' ')"; printf 'BUILD FAILED\n%s (not a clip problem). See the run summary.\n' "$1" > STATUS.txt; bash tools/rel.sh up "$TAG" STATUS.txt || true; exit 1; }
+          pip install -q faster-whisper==1.0.3 requests > tr.log 2>&1 || die "Could not install the speech checker"
+          python tools/stitch/stitch.py transcribe --clips clips --audio audio_final --words words.json > tr.log 2>&1 || die "Speech check crashed"
+          tail -n 12 tr.log
+          rc=0
+          python tools/stitch/stitch.py gate --clips clips --script script.json --words words.json --status STATUS.txt ${{ inputs.force && '--force' || '' }} || rc=$?
+          { echo; cat notes.txt; } >> STATUS.txt
+          cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"
+          if [ "$rc" != 0 ]; then
+            id=$(bash tools/rel.sh id "$TAG")
+            bash tools/rel.sh up "$TAG" STATUS.txt
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -f tag_name="$TAG" -F draft=true -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
+            echo "::error::$(head -3 STATUS.txt | tr '\n' ' ')"
+            exit 1
+          fi
+      - name: Fonts
+        run: |
+          mkdir -p fonts
+          for f in Poppins-Bold Poppins-Medium; do curl -sSfL -o "fonts/$f.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/$f.ttf" || echo "font $f not downloaded, falling back" ; done
+      - name: Stitch
+        run: |
+          name="Morning_Word_$(echo "$TAG" | tr -c 'A-Za-z0-9._-' '_')"
+          python tools/stitch/stitch.py build --clips clips --audio audio_final --script script.json --words words.json --out out --name "$name" --fonts fonts
+          echo "NAME=$name" >> "$GITHUB_ENV"
+      - name: Put the ONE MP4 and STATUS on the release
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          python - <<'PY'
+          import json
+          r = json.load(open("out/report.json"))
+          open("STATUS.txt", "a").write(f"\nBuilt {r['clips']} clips, {r['total']} s, {r['mb']} MB, loudness {r['lufs_before']:.1f} -> -14 LUFS.\nWatch Morning_Word on this release. Reply \"approved\" in the thread, or name the clip to change.\n")
+          PY
+          bash tools/rel.sh up "$TAG" "out/$NAME.mp4" STATUS.txt
+          id=$(bash tools/rel.sh id "$TAG")
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/releases/$id" -f tag_name="$TAG" -F draft=true -F body=@STATUS.txt > /dev/null || echo "note: could not update release notes (STATUS.txt asset and run summary still carry the message)"
+          cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extras
+          path: |
+            out/*_nocaptions.mp4
+            out/*.srt
+            out/report.json
+            words.json
+      - name: Report an unexpected failure
+        if: ${{ failure() }}
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          if [ ! -s STATUS.txt ] || ! grep -q "^GATE" STATUS.txt; then
+            printf 'BUILD FAILED\nSomething broke before the video was finished (not a clip problem). Open the run: %s/%s/actions/runs/%s\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > STATUS.txt
+          fi
+          bash tools/rel.sh up "$TAG" STATUS.txt || true
+          cat STATUS.txt >> "$GITHUB_STEP_SUMMARY"

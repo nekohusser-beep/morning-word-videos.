@@ -1,0 +1,102 @@
+name: sleep-qa
+# Full check of every rendered chapter: decodes, silences, peaks, and a word-by-word
+# transcript diff against the KJV text. Writes qa-<i>.json reports to the release.
+on:
+  workflow_dispatch:
+    inputs:
+      book: {description: "Bible book file name, e.g. Psalms", required: true}
+      tag: {description: "release tag holding the FLACs", required: true}
+      chunks: {description: "parallel chunks", required: true, default: "20"}
+      model: {description: "whisper model", required: true, default: "medium.en"}
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      idx: ${{ steps.p.outputs.idx }}
+    steps:
+      - id: p
+        run: python3 -c "import json;print('idx='+json.dumps(list(range(int('${{ inputs.chunks }}')))))" >> $GITHUB_OUTPUT
+  qa:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        i: ${{ fromJson(needs.plan.outputs.idx) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: tools}
+      - name: Setup
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          sleep $(( ${{ matrix.i }} * 4 ))
+          sudo apt-get -qq install -y ffmpeg >/dev/null
+          pip install -q faster-whisper==1.0.3 2>&1 | tail -1 || true
+          curl -sSL --retry 5 -o book.json "https://raw.githubusercontent.com/aruljohn/Bible-kjv/master/${{ inputs.book }}.json"
+          mkdir -p flac
+          R=${{ github.repository }}
+          RID=$(gh api "repos/$R/releases?per_page=100" --jq '.[]|select(.tag_name=="${{ inputs.tag }}")|.id' | head -1)
+          (gh api --paginate "repos/$R/releases/$RID/assets?per_page=100" --jq '.[]|select(.name|endswith(".flac"))|[.name,.id]|@tsv') | sort > all.tsv
+          awk -v i=${{ matrix.i }} -v n=${{ inputs.chunks }} '(NR-1)%n==i' all.tsv > mine.tsv
+          echo "assets $(wc -l < all.tsv), mine $(wc -l < mine.tsv)"
+          while IFS=$'\t' read name id; do
+            for t in 1 2 3 4 5; do
+              gh api -H "Accept: application/octet-stream" "repos/$R/releases/assets/$id" > "flac/$name" && [ -s "flac/$name" ] && break
+              echo "retry $name"; sleep $((t*10))
+            done
+            [ -s "flac/$name" ] || { echo "::error::could not download $name"; exit 1; }
+          done < mine.tsv
+          python3 -c "import faster_whisper" || { echo "::error::faster-whisper import failed"; exit 1; }
+      - name: Check chunk
+        run: |
+          cat > qa.py <<'PY'
+          import json, os, re, subprocess, difflib
+          from faster_whisper import WhisperModel
+          i, N = int("${{ matrix.i }}"), int("${{ inputs.chunks }}")
+          book = json.load(open("book.json"))
+          chs = {int(c["chapter"]): c for c in book["chapters"]}
+          mine = sorted(f for f in os.listdir("flac") if f.endswith(".flac"))
+          model = WhisperModel("${{ inputs.model }}", device="cpu", compute_type="int8")
+          norm = lambda s: re.sub(r"[^a-z0-9' ]", " ", s.lower().replace("’", "'")).split()
+          report = []
+          for f in mine:
+              p = "flac/" + f
+              r = {"file": f}
+              dec = subprocess.run(["ffmpeg", "-v", "error", "-i", p, "-f", "null", "-"], capture_output=True, text=True)
+              r["decode_errors"] = dec.stderr.strip()[:300]
+              sd = subprocess.run(["ffmpeg", "-i", p, "-af", "silencedetect=n=-50dB:d=4.5,volumedetect", "-f", "null", "-"],
+                                  capture_output=True, text=True).stderr
+              r["long_silences"] = [float(x) for x in re.findall(r"silence_duration: ([\d.]+)", sd)]
+              m = re.search(r"max_volume: (-?[\d.]+) dB", sd); r["peak_db"] = float(m.group(1)) if m else None
+              m = re.search(r"Duration: (\d+):(\d+):([\d.]+)", sd)
+              r["seconds"] = int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3)) if m else None
+              segs, _ = model.transcribe(p, language="en", beam_size=5, vad_filter=True, condition_on_previous_text=False)
+              heard = norm(" ".join(s.text for s in segs))
+              n = int(f[:3])
+              label = "Psalm" if "${{ inputs.book }}" == "Psalms" else "Chapter"
+              if n == 0:
+                  ref = norm("${{ inputs.book }} King James Version")
+              else:
+                  ref = norm(f"{label} {n} " + " ".join(v["text"] for v in chs[n]["verses"]))
+              sm = difflib.SequenceMatcher(a=ref, b=heard, autojunk=False)
+              miss, extra, runs = 0, 0, []
+              for op, a1, a2, b1, b2 in sm.get_opcodes():
+                  if op in ("delete", "replace"): miss += a2 - a1
+                  if op in ("insert", "replace"): extra += b2 - b1
+                  if op == "delete" and a2 - a1 >= 3: runs.append(" ".join(ref[a1:a2]))
+                  if op == "replace" and a2 - a1 >= 4: runs.append(" ".join(ref[a1:a2]) + "  ->  " + " ".join(heard[b1:b2]))
+              r.update(ref_words=len(ref), heard_words=len(heard), missed=miss, extra=extra,
+                       wer=round((miss + extra) / max(1, len(ref)), 4), suspect_runs=runs)
+              print(f, r["seconds"], r["wer"], len(runs), flush=True)
+              report.append(r)
+          json.dump(report, open(f"qa-{i:02d}.json", "w"), indent=1)
+          PY
+          python3 qa.py 2> err.txt || { echo "::error::$(tail -c 600 err.txt | tr '\n' ' ')"; exit 1; }
+      - name: Upload report
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          sleep $(( ${{ matrix.i }} * 5 ))
+          bash tools/rel.sh up "${{ inputs.tag }}" qa-*.json 2> up.err || { echo "::error::upload failed: $(head -c 300 up.err)"; exit 1; }

@@ -1,0 +1,45 @@
+name: scene-engine
+# Script-to-video build: scenes JSON + pictures in the repo -> captioned MP4 in a draft release. Free runner minutes, no credits.
+on:
+  workflow_dispatch:
+    inputs:
+      scenes: {description: "repo path to the planned scenes JSON", required: true, default: "tools/scene-engine/sample/scenes_planned.json"}
+      assets_dir: {description: "repo folder with s001.png / s001.mp4 ... (and optional vo/)", required: true, default: "tools/scene-engine/sample/assets"}
+      script: {description: "repo path to the approved script (word-for-word check), or blank", required: false, default: "tools/scene-engine/sample/script.txt"}
+      name: {description: "output file base name", required: true, default: "Scene_Engine_Test"}
+      tag: {description: "draft release tag for outputs", required: true, default: "scene-engine"}
+      voice: {description: "Kokoro voice", required: true, default: "af_nicole"}
+      aspect: {description: "16:9 or 9:16", required: true, default: "16:9"}
+      dry_run: {description: "true = placeholder pictures and tone voice (pipeline test)", required: true, default: "true"}
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: |
+          sudo apt-get -qq update >/dev/null; sudo apt-get -qq install -y ffmpeg espeak-ng >/dev/null
+          pip install -q pillow numpy soundfile kokoro-onnx
+          mkdir -p tools/scene-engine/fonts
+          for f in Poppins-Bold Poppins-Medium; do curl -sSfL -o "tools/scene-engine/fonts/$f.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/$f.ttf" || echo "font $f not downloaded, falling back"; done
+          if [ "${{ inputs.dry_run }}" != "true" ]; then
+            curl -sSL -o kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+            curl -sSL -o voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+          fi
+      - name: Check plan
+        run: |
+          S="${{ inputs.script }}"
+          if [ -n "$S" ]; then python3 tools/scene-engine/plan.py check "${{ inputs.scenes }}" --script "$S"; else python3 tools/scene-engine/plan.py check "${{ inputs.scenes }}"; fi
+      - name: Build
+        run: |
+          mkdir -p "${{ inputs.assets_dir }}"
+          F=""; [ "${{ inputs.dry_run }}" = "true" ] && F="--dry-run"
+          python3 tools/scene-engine/build.py "${{ inputs.scenes }}" "${{ inputs.assets_dir }}" out --name "${{ inputs.name }}" --aspect "${{ inputs.aspect }}" --voice "${{ inputs.voice }}" $F
+      - name: Publish
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          bash tools/rel.sh ensure "${{ inputs.tag }}" > /dev/null
+          bash tools/rel.sh up "${{ inputs.tag }}" out/*.mp4 out/*.srt out/timeline.csv out/contact.jpg out/qa.json

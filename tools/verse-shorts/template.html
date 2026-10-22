@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Cormorant"; src: url("fonts/CormorantGaramond.ttf"); font-weight: 300 700; }
+      @font-face { font-family: "Cormorant"; src: url("fonts/CormorantGaramond-Italic.ttf"); font-style: italic; font-weight: 300 700; }
+      @font-face { font-family: "Montserrat"; src: url("fonts/Montserrat.ttf"); font-weight: 100 900; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0c0b0a; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0c0b0a; }
+      #bg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; display: __BGDISPLAY__; }
+      #shade { position: absolute; inset: 0; background: linear-gradient(rgba(12,11,10,0.72), rgba(12,11,10,0.58) 45%, rgba(12,11,10,0.80)); display: __BGDISPLAY__; }
+      #glow { position: absolute; left: 40px; top: 470px; width: 1000px; height: 1000px; border-radius: 50%;
+              background: radial-gradient(circle, rgba(120,88,30,0.55) 0%, rgba(60,44,16,0.25) 40%, rgba(12,11,10,0) 70%); }
+      .drop { position: absolute; top: -200px; width: 2px; background: linear-gradient(rgba(242,234,218,0), rgba(242,234,218,0.38)); }
+      #eyebrow { position: absolute; top: 380px; width: 100%; text-align: center; font-family: Montserrat; font-weight: 600;
+                 font-size: 34px; letter-spacing: 9px; color: #d4af37; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+      #rule1 { position: absolute; top: 450px; left: 500px; width: 80px; height: 2px; background: #d4af37; }
+      #verse { position: absolute; top: 560px; left: 90px; width: 900px; height: 780px; display: flex; flex-direction: column; justify-content: center;
+               text-align: center; font-family: Cormorant; font-weight: 600; font-size: __FS__px; line-height: 1.2; color: #f2eada;
+               text-shadow: 0 3px 18px rgba(0,0,0,0.65); }
+      .w { display: inline-block; opacity: 0; }
+      #ref { position: absolute; top: 1380px; width: 100%; text-align: center; font-family: Montserrat; font-weight: 500;
+             font-size: 38px; letter-spacing: 7px; color: #d4af37; opacity: 0; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+      #cta { position: absolute; top: 1480px; left: 110px; width: 860px; text-align: center; font-family: Cormorant;
+             font-style: italic; font-weight: 600; font-size: 48px; line-height: 1.28; color: #e6dcc8; opacity: 0;
+             text-shadow: 0 2px 14px rgba(0,0,0,0.7); }
+      #brand { position: absolute; bottom: 105px; width: 100%; text-align: center; font-family: Montserrat; font-weight: 600;
+               font-size: 30px; letter-spacing: 11px; color: #d4af37; opacity: 0.85; }
+      #fade { position: absolute; inset: 0; background: #000; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="__DUR__" data-width="1080" data-height="1920">
+      <audio id="bed" class="clip" src="assets/mix.m4a" data-start="0" data-duration="__DUR__" data-has-audio="true"></audio>
+      <img id="bg" src="assets/bg.png" />
+      <div id="shade"></div>
+      <div id="glow"></div>
+      <div id="rain"></div>
+      <div id="eyebrow">__EYEBROW__</div>
+      <div id="rule1"></div>
+      <div id="verse"><div id="vtext"></div></div>
+      <div id="ref">__REF__ &nbsp;·&nbsp; KJV</div>
+      <div id="cta">__CTA__</div>
+      <div id="brand">BLESSED PRAYERS</div>
+      <div id="fade"></div>
+    </div>
+    <script>
+      const DUR = __DUR__;
+      const LINES = __LINES__;
+      const RAIN = __RAIN__;
+      const REF_T = __REF_T__, CTA_T = __CTA_T__, FADE_T = __FADE_T__, VERSE_END = __VERSE_END__;
+      const vtext = document.getElementById("vtext");
+      const words = [];
+      LINES.forEach((ln) => {
+        const ws = ln.text.split(" ");
+        ws.forEach((w, i) => {
+          const s = document.createElement("span");
+          s.className = "w"; s.textContent = w;
+          vtext.appendChild(s); vtext.appendChild(document.createTextNode(" "));
+          words.push({ el: s, t: ln.start + (ln.end - ln.start) * (i / ws.length) });
+        });
+      });
+
+      const rain = document.getElementById("rain");
+      const drops = [];
+      if (RAIN) for (let i = 0; i < 46; i++) {
+        const d = document.createElement("div");
+        d.className = "drop";
+        const r1 = (Math.sin(i * 12.9898) * 43758.5453) % 1, r2 = (Math.sin(i * 78.233) * 12345.678) % 1;
+        const x = Math.abs(r1) * 1080, h = 90 + Math.abs(r2) * 140;
+        d.style.left = x + "px"; d.style.height = h + "px";
+        rain.appendChild(d); drops.push({ d, speed: 1.1 + Math.abs(r2) * 0.9, off: Math.abs(r1) * 2 });
+      }
+
+      const tl = gsap.timeline({ paused: true });
+      drops.forEach(({ d, speed, off }) => {
+        tl.fromTo(d, { y: 0 }, { y: 2300, duration: speed, ease: "none", repeat: Math.ceil(DUR / speed) + 1 }, -off);
+      });
+      tl.fromTo("#glow", { scale: 0.92, opacity: 0.7 }, { scale: 1.06, opacity: 1, duration: DUR / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      tl.fromTo("#bg", { scale: 1.0 }, { scale: 1.12, duration: DUR, ease: "none" }, 0);
+      tl.fromTo("#eyebrow", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.0, ease: "power2.out" }, 0.3);
+      tl.fromTo("#rule1", { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.8, ease: "power2.out" }, 0.6);
+      words.forEach(({ el, t }) => tl.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, t));
+      tl.fromTo("#ref", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" }, REF_T);
+      tl.to("#verse", { opacity: 0.55, duration: 1.2, ease: "sine.inOut" }, CTA_T - 0.6);
+      tl.fromTo("#cta", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }, CTA_T);
+      tl.to("#fade", { opacity: 0.85, duration: 1.8, ease: "sine.in" }, FADE_T);
+      tl.set({}, {}, DUR);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

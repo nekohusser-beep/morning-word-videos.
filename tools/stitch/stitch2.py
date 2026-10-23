@@ -97,8 +97,11 @@ def main(cfgp):
         d = probe_dur(c); w = cfg["words"][i]
         hpi = cfg["heads"][i] if cfg.get("heads") else hp; tpi = cfg["tails"][i] if cfg.get("tails") else tp_
         a = max(0.0, w[0]["start"] - hpi); b = min(d, w[-1]["end"] + tpi)
+        # snap trims to the frame grid so every segment has a whole number of frames
+        a = round(a * fps) / fps; b = max(a + 1.0 / fps, round(b * fps) / fps)
         ab.append((a, b))
     L = [b - a for a, b in ab]
+    dis = max(1, round(dis * fps)) / fps; hard = max(1, round(hard * fps)) / fps  # whole frames
     # 2. per-seam SSIM decision
     seam = []
     for i in range(n - 1):
@@ -112,7 +115,7 @@ def main(cfgp):
     if cfg.get("seam_force"):
         for i, ty in enumerate(cfg["seam_force"]):
             if ty: seam[i]["type"] = ty
-    d = [dis if s["type"] == "dissolve" else hard for s in seam]
+    d = [dis if s["type"] == "dissolve" else 0.0 for s in seam]  # hard cut = true butt join (no overlap)
     # 3. punch scale per clip: alternate only across hard seams
     scale = [1.0]
     for i in range(n - 1):
@@ -141,9 +144,13 @@ def main(cfgp):
     for i in range(n - 1):
         cum += L[i]; cumd += d[i]
         off = cum - cumd
-        vf.append(f"[{cur}][v{i + 1}]xfade=transition=fade:duration={d[i]:.3f}:offset={off:.3f}[x{i}]")
+        if d[i] > 0:
+            vf.append(f"[{cur}][v{i + 1}]xfade=transition=fade:duration={d[i]:.5f}:offset={off:.5f}[x{i}]")
+            af.append(f"[{acur}][a{i + 1}]acrossfade=d={d[i]:.5f}:c1=tri:c2=tri[ax{i}]")
+        else:
+            vf.append(f"[{cur}][v{i + 1}]concat=n=2:v=1:a=0,fps={fps},settb=1/{fps}[x{i}]")
+            af.append(f"[{acur}][a{i + 1}]concat=n=2:v=0:a=1[ax{i}]")
         cur = f"x{i}"
-        af.append(f"[{acur}][a{i + 1}]acrossfade=d={d[i]:.3f}:c1=tri:c2=tri[ax{i}]")
         acur = f"ax{i}"
     total = sum(L) - sum(d)
     # captions: output timeline offsets
@@ -190,11 +197,13 @@ def main(cfgp):
     sh(["ffmpeg", "-v", "error", "-y", "-i", amix, "-af", ln, "-ar", "48000", amaster])
     # video + captions + mux, one encode
     vgraph = ";".join(vf) + f";[{cur}]subtitles={ass}:fontsdir=/usr/share/fonts/truetype/google-fonts[vout]"
-    cmd = ["ffmpeg", "-v", "error", "-y"] + inputs + ["-i", amaster, "-filter_complex", vgraph, "-map", "[vout]", "-map", f"{n}:a",
+    cmd = ["ffmpeg", "-v", "warning", "-y"] + inputs + ["-i", amaster, "-filter_complex", vgraph, "-map", "[vout]", "-map", f"{n}:a",
            "-c:v", "libx264", "-preset", "slow"] + (["-b:v", cfg["vb"], "-maxrate", cfg["vb"], "-bufsize", "4M"] if cfg.get("vb") else ["-crf", str(cfg.get("crf", 20))]) + [ "-pix_fmt", "yuv420p", "-profile:v", "high", "-bf", "2", "-g", str(fps // 2),
            "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-r", str(fps),
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", "-shortest", out]
     r = sh(cmd)
+    if r.stderr.strip():
+        print("FFMPEG:", r.stderr[-1200:], file=sys.stderr)
     if r.returncode:
         print(r.stderr[-1500:]); sys.exit(1)
     rep = {"trims": ab, "seams": seam, "scale": scale, "gains": gains, "total_expected": total, "cues": len(cues), "out": out}

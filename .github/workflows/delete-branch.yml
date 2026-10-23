@@ -1,0 +1,16 @@
+name: delete-branch
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "temp branch to delete"
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  del:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git push origin --delete "${{ inputs.branch }}"

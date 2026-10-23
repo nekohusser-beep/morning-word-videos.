@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 23 stats pull (partial: vidIQ credits 0, resets Nov 13; subs 2,670)
+Last updated: Oct 23 stats pull NOT done (needs Studio browser; vidIQ retired)
 
 Counts: Built, partly scheduled 1, Done 42, In progress 12, Not started 13, On hold 16, Shelved 4, Stopped 1, Waiting on Neko 2, Waiting on approval 2
 
@@ -142,6 +142,7 @@ Counts: Built, partly scheduled 1, Done 42, In progress 12, Not started 13, On h
 - Neko-only taps :: Some steps only Neko can do and Claude must not route around: Windows admin (UAC) prompts, picking a Google account on a new sign-in, data-use authorization boxes, passwords, payments, 3 YouTube keys. Ask once, in one line, with the exact tap.
 - Memory home :: Neko Oct 19, 2026: the private repo nekohusser-beep/kingdom-brain is where rules, decisions, project status, workflows and lessons live. Read it every session (attach with add_repo, push). This public tracker stays the task list. Nothing personal in this public repo.
 - Repo downloads :: Neko Oct 20, 2026: anything Claude pulls from the repo (videos, releases, files) downloads straight into the laptop folder Desktop\Claude-Work (sleep videos in Desktop\Claude-Work\Sleep-Videos), never loose in Downloads, so Claude can reach it without Neko saving or moving anything. Desktop and Downloads folder access is granted on request. Also Oct 20: verify live whenever possible (YouTube, Buffer, repo) before stating status; threads are leads only. Lead with the fix already in motion, not the problem.
+- NO vidIQ (Neko, Oct 23, said 5+ times in 2 days) :: We do NOT use vidIQ any more. Stats, keywords, outliers, titles, thumbnails: use our in-house method (skill inhouse-vidiq: YouTube Studio Analytics in the built-in browser + Gemini). Never call vidiq_* tools, never mention vidIQ credits. Needs the browser pane, so a cloud-only scheduled run cannot pull stats; say so in one line and stop, do not fall back to vidIQ.
 
 ## How it was done
 - Derrick episode in Flow :: Open Derrick project in Chrome (signed in as neko.husser@gmail.com). Add derrick-gray still as reference, type script clip (about 15 words), generate Veo 3.1 Lite 9:16. Stitch, caption, -14 LUFS in ffmpeg. Send ONE captioned MP4 for approval. :: Project flow.google.com/u/0/project/0a90fb26-707c-45ae-aae4-61a8d163a56b. Keep other Chrome tabs closed. Screenshots in Chrome often time out; use get_page_text.

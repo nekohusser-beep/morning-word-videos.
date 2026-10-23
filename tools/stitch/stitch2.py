@@ -22,7 +22,7 @@ def probe_dur(p):
 def norm(w):
     return re.sub(r"[^a-z0-9]", "", w.lower())
 
-NUMS = {"1":"one","2":"two","3":"three","4":"four","5":"five","6":"six","7":"seven","8":"eight","9":"nine","10":"ten",
+NUMS = {"derek":"derrick","1":"one","2":"two","3":"three","4":"four","5":"five","6":"six","7":"seven","8":"eight","9":"nine","10":"ten",
         "11":"eleven","12":"twelve","20":"twenty","28":"twentyeight","29":"twentynine"}
 
 def n2(w):
@@ -95,7 +95,8 @@ def main(cfgp):
     ab = []
     for i, c in enumerate(clips):
         d = probe_dur(c); w = cfg["words"][i]
-        a = max(0.0, w[0]["start"] - hp); b = min(d, w[-1]["end"] + tp_)
+        hpi = cfg["heads"][i] if cfg.get("heads") else hp; tpi = cfg["tails"][i] if cfg.get("tails") else tp_
+        a = max(0.0, w[0]["start"] - hpi); b = min(d, w[-1]["end"] + tpi)
         ab.append((a, b))
     L = [b - a for a, b in ab]
     # 2. per-seam SSIM decision
@@ -108,6 +109,9 @@ def main(cfgp):
         m = re.search(r"All:([0-9.]+)", r.stderr)
         s = float(m.group(1)) if m else 0.0
         seam.append({"ssim": s, "type": "dissolve" if s >= ssim_min else "hard"})
+    if cfg.get("seam_force"):
+        for i, ty in enumerate(cfg["seam_force"]):
+            if ty: seam[i]["type"] = ty
     d = [dis if s["type"] == "dissolve" else hard for s in seam]
     # 3. punch scale per clip: alternate only across hard seams
     scale = [1.0]
@@ -116,6 +120,8 @@ def main(cfgp):
             scale.append(punch if scale[-1] == 1.0 else 1.0)
         else:
             scale.append(scale[-1])
+    if cfg.get("scales"):
+        scale = list(cfg["scales"])
     # 4. per-clip gain to common -20 LUFS speech level
     gains = []
     for i, c in enumerate(clips):
@@ -127,7 +133,8 @@ def main(cfgp):
     vf = []; af = []
     for i in range(n):
         a, b = ab[i]; s = scale[i]
-        crop = "" if s == 1.0 else f"crop=iw/{s}:ih/{s}:(iw-iw/{s})/2:(ih-ih/{s})/2,"
+        asp = f"crop=min(iw\\,trunc(ih*{W}/{H}/2)*2):min(ih\\,trunc(iw*{H}/{W}/2)*2),"
+        crop = asp + ("" if s == 1.0 else f"crop=iw/{s}:ih/{s}:(iw-iw/{s})/2:(ih-ih/{s})/2,")
         vf.append(f"[{i}:v]trim=start={a:.3f}:end={b:.3f},setpts=PTS-STARTPTS,fps={fps},{crop}scale={W}:{H}:flags=lanczos,cas=0.25,setsar=1,format=yuv420p[v{i}]")
         af.append(f"[{i}:a]atrim=start={a:.3f}:end={b:.3f},asetpts=PTS-STARTPTS,aresample=48000,highpass=f=70,volume={gains[i]:.2f}dB[a{i}]")
     cur = "v0"; acur = "a0"; cum = 0.0; cumd = 0.0
@@ -184,7 +191,7 @@ def main(cfgp):
     # video + captions + mux, one encode
     vgraph = ";".join(vf) + f";[{cur}]subtitles={ass}:fontsdir=/usr/share/fonts/truetype/google-fonts[vout]"
     cmd = ["ffmpeg", "-v", "error", "-y"] + inputs + ["-i", amaster, "-filter_complex", vgraph, "-map", "[vout]", "-map", f"{n}:a",
-           "-c:v", "libx264", "-preset", "slow", "-crf", str(cfg.get("crf", 20)), "-pix_fmt", "yuv420p", "-profile:v", "high", "-bf", "2", "-g", str(fps // 2),
+           "-c:v", "libx264", "-preset", "slow"] + (["-b:v", cfg["vb"], "-maxrate", cfg["vb"], "-bufsize", "4M"] if cfg.get("vb") else ["-crf", str(cfg.get("crf", 20))]) + [ "-pix_fmt", "yuv420p", "-profile:v", "high", "-bf", "2", "-g", str(fps // 2),
            "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-r", str(fps),
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", "-shortest", out]
     r = sh(cmd)

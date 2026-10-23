@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 23 11:00 AM ET - Neko Zion group push run
+Last updated: Oct 23 stats pull NOT done (needs Studio browser; vidIQ retired)
 
 Counts: Built, partly scheduled 1, Done 42, In progress 12, Not started 13, On hold 16, Shelved 4, Stopped 1, Waiting on Neko 2, Waiting on approval 2
 

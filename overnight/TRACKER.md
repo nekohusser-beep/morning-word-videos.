@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 23 6:45 PM ET (E4 Mr. Etsy: tags cleaned on apparel/totes/journals, Say Something listing restored, digital retitle next)
+Last updated: Oct 24 4:50 AM ET (stats run: NOT PULLED, vidIQ at 0 credits and retired Oct 23; subs 2,670; E4 Etsy work continues)
 
 Counts: Built, partly scheduled 1, Done 43, In progress 13, Not started 13, On hold 16, Shelved 4, Stopped 1, Waiting on Neko 3, Waiting on approval 2
 

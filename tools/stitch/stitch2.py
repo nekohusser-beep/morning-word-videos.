@@ -177,7 +177,11 @@ def main(cfgp):
             cues.append((s0, e0, " ".join(x[0] for x in g)))
     k = W / 720.0
     ass = f"{work}/caps.ass"
-    build_ass(cues, W, H, ass, round(52 * k), round(4.2 * k, 1), round(205 * k))
+    cap = cfg.get("cap")  # landscape/other canvases: {"font":px,"outline":px,"marginv":px} (default is tuned for 1080x1920)
+    if cap:
+        build_ass(cues, W, H, ass, cap["font"], cap["outline"], cap["marginv"])
+    else:
+        build_ass(cues, W, H, ass, round(52 * k), round(4.2 * k, 1), round(205 * k))
     with open(f"{work}/caps.srt", "w") as f:
         for ci, (s0, e0, t) in enumerate(cues, 1):
             def st(x):

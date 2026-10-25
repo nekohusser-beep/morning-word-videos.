@@ -104,7 +104,7 @@ def main(ids):
         v = verses[vid]
         text = kjv(v["book"], v["ch"], v["v"])
         eyebrow, cta_html, cta_say = CTA[v["set"]]
-        vo, sp, gap = (DAY_VOICE, DAY_SPEED, DAY_GAP) if v["set"] == "day" else (VOICE, SPEED, 0.9)
+        vo, sp, gap = (DAY_VOICE, DAY_SPEED, DAY_GAP) if v["set"] in ("day", "morning") else (VOICE, SPEED, 0.9)
         say = lambda t, vo=vo, sp=sp: k.create(t, voice=vo, speed=sp, lang="en-us")[0].astype(np.float32)
         parts = [sil(1.5)]; t = 1.5; lines = []
         for ch_ in chunks(text):
@@ -129,7 +129,7 @@ def main(ids):
         voice = np.concatenate(parts)
         sf.write(f"{out}/assets/voice.wav", voice, SR)
         # rain bed (soft pink noise) under the voice, loudness-matched, gentle fade at the end
-        if v["set"] == "day":
+        if v["set"] in ("day", "morning"):
             birdbed(f"{out}/assets/bed.wav", dur)
             fc = ("[0:a]aresample=44100[v];[1:a]volume=0.12[r];"
                   "[v][r]amix=inputs=2:duration=first:normalize=0,"

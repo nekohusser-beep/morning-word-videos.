@@ -2,7 +2,7 @@
 
 # TRACKER (auto-generated mirror of Claude-Work-Tracker.xlsx; edit the xlsx, never this file)
 
-Last updated: Oct 24 8:58 PM ET (MU1 Muse alignment reply drafted; Etsy and other rows unchanged)
+Last updated: Oct 25 4:46 AM ET (stats run: vidIQ out of credits, only sub total pulled; 2,670 subs; other rows unchanged)
 
 Counts: Built, partly scheduled 1, Done 43, In progress 14, Needs Neko 1, Not started 13, On hold 16, Shelved 4, Stopped 1, Waiting on Neko 3, Waiting on Neko verdict (v2-clean sent) 1, Waiting on approval 2
 

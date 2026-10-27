@@ -1,0 +1,100 @@
+name: pexels-fetch
+# Free stock B-roll discovery + download from the Actions runner (Pexels licence: free, no credit needed).
+# inputs: branch = temp branch to commit to (delete after pulling); queries = one search per line; per = results per query;
+# quality = sd (small previews for picking) or hd. Writes files/<query>-<id>-<quality>.mp4 + files/index.json.
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "temp branch (delete after pulling)"
+        required: true
+        type: string
+      queries:
+        description: "search terms, one per line"
+        required: true
+        type: string
+      per:
+        description: "results per query"
+        required: false
+        default: "6"
+        type: string
+      quality:
+        description: "sd or hd"
+        required: false
+        default: "sd"
+        type: string
+      ids:
+        description: "optional: explicit video ids, one per line (skips search)"
+        required: false
+        default: ""
+        type: string
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      QUERIES: ${{ inputs.queries }}
+      PER: ${{ inputs.per }}
+      QUALITY: ${{ inputs.quality }}
+      IDS: ${{ inputs.ids }}
+      BRANCH: ${{ inputs.branch }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Discover and download
+        shell: bash
+        run: |
+          set -e
+          git checkout --orphan "$BRANCH"
+          git rm -rf . >/dev/null 2>&1 || true
+          mkdir -p files
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+          python3 - <<'PY'
+          import os, re, json, subprocess, urllib.parse
+          UA=os.environ["UA"] if "UA" in os.environ else "Mozilla/5.0"
+          PER=int(os.environ.get("PER","6") or 6); Q=os.environ.get("QUALITY","sd") or "sd"
+          def curl(url):
+              r=subprocess.run(["curl","-fsSL","--retry","2","-A","Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36",url],capture_output=True,text=True)
+              return r.stdout if r.returncode==0 else ""
+          index=[]
+          ids_in=[l.strip() for l in os.environ.get("IDS","").splitlines() if l.strip()]
+          jobs=[]
+          if ids_in:
+              jobs=[("ids",i) for i in ids_in]
+          else:
+              for q in [l.strip() for l in os.environ["QUERIES"].splitlines() if l.strip()]:
+                  html=curl("https://www.pexels.com/search/videos/"+urllib.parse.quote(q)+"/")
+                  found=[]
+                  for m in re.finditer(r'/video/([a-z0-9-]+?-(\d+))/', html):
+                      vid=m.group(2)
+                      if vid not in found: found.append(vid)
+                      if len(found)>=PER: break
+                  print(q, "->", found)
+                  jobs+= [(q,v) for v in found]
+          for q,vid in jobs:
+              page=curl(f"https://www.pexels.com/video/{vid}/")
+              files=sorted(set(re.findall(r'https://videos\.pexels\.com/video-files/'+vid+r'/[^"\'\s\\]+\.mp4', page)))
+              title=re.search(r'<title>([^<]*)</title>', page); title=title.group(1) if title else ""
+              # pick: sd = smallest "sd_" file; hd = a 1080-ish vertical or landscape "hd_" file (largest height <= 1920)
+              def h_of(u):
+                  m=re.search(r'_(\d+)_(\d+)_', u); return int(m.group(2)) if m else 0
+              sd=[f for f in files if "-sd_" in f]; hd=[f for f in files if "-hd_" in f or "-uhd_" in f]
+              pick=None
+              if Q=="sd" and sd: pick=sorted(sd,key=h_of)[0]
+              elif hd: pick=sorted([f for f in hd if h_of(f)<=1920] or hd,key=h_of)[-1]
+              elif files: pick=files[0]
+              slug=re.sub(r'[^a-z0-9]+','-',q.lower()).strip('-')
+              rec={"query":q,"id":vid,"page":f"https://www.pexels.com/video/{vid}/","title":title,"files":files,"picked":pick}
+              if pick:
+                  out=f"files/{slug}-{vid}-{Q}.mp4"
+                  r=subprocess.run(["curl","-fsSL","--retry","2","-A","Mozilla/5.0","-o",out,pick])
+                  rec["local"]=out if r.returncode==0 else None
+              index.append(rec); print(vid, title[:60], pick)
+          json.dump(index,open("files/index.json","w"),indent=1)
+          PY
+          ls -la files | head -60
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add files
+          git commit -m "pexels fetch"
+          git push -f origin "$BRANCH"

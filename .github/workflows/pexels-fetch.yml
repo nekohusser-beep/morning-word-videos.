@@ -28,6 +28,11 @@ on:
         required: false
         default: ""
         type: string
+      orientation:
+        description: "optional: portrait or landscape (filters the Pexels search)"
+        required: false
+        default: ""
+        type: string
 permissions:
   contents: write
 jobs:
@@ -39,6 +44,7 @@ jobs:
       PER: ${{ inputs.per }}
       QUALITY: ${{ inputs.quality }}
       IDS: ${{ inputs.ids }}
+      ORIENT: ${{ inputs.orientation }}
       BRANCH: ${{ inputs.branch }}
     steps:
       - uses: actions/checkout@v4
@@ -64,7 +70,8 @@ jobs:
               jobs=[("ids",i) for i in ids_in]
           else:
               for q in [l.strip() for l in os.environ["QUERIES"].splitlines() if l.strip()]:
-                  html=curl("https://www.pexels.com/search/videos/"+urllib.parse.quote(q)+"/")
+                  ori=os.environ.get("ORIENT","").strip()
+                  html=curl("https://www.pexels.com/search/videos/"+urllib.parse.quote(q)+"/"+(("?orientation="+ori) if ori else ""))
                   found=[]
                   for m in re.finditer(r'/video/([a-z0-9-]+?-(\d+))/', html):
                       vid=m.group(2)

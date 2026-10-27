@@ -63,6 +63,8 @@ jobs:
           def curl(url):
               r=subprocess.run(["curl","-fsSL","--retry","2","-A","Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36",url],capture_output=True,text=True)
               return r.stdout if r.returncode==0 else ""
+          ORI=os.environ.get("ORIENT","").strip().lower()
+          kept={}
           index=[]
           ids_in=[l.strip() for l in os.environ.get("IDS","").splitlines() if l.strip()]
           jobs=[]
@@ -70,18 +72,27 @@ jobs:
               jobs=[("ids",i) for i in ids_in]
           else:
               for q in [l.strip() for l in os.environ["QUERIES"].splitlines() if l.strip()]:
-                  ori=os.environ.get("ORIENT","").strip()
-                  html=curl("https://www.pexels.com/search/videos/"+urllib.parse.quote(q)+"/"+(("?orientation="+ori) if ori else ""))
+                  base="https://www.pexels.com/search/videos/"+urllib.parse.quote(q)+"/"
+                  html=curl(base+(("?orientation="+ORI) if ORI else ""))
+                  if "/video/" not in html and ORI: html=curl(base)
                   found=[]
                   for m in re.finditer(r'/video/([a-z0-9-]+?-(\d+))/', html):
                       vid=m.group(2)
                       if vid not in found: found.append(vid)
-                      if len(found)>=PER: break
+                      if len(found)>=PER*(5 if ORI else 1): break
                   print(q, "->", found)
                   jobs+= [(q,v) for v in found]
           for q,vid in jobs:
+              if ORI and kept.get(q,0)>=PER: continue
               page=curl(f"https://www.pexels.com/video/{vid}/")
               files=sorted(set(re.findall(r'https://videos\.pexels\.com/video-files/'+vid+r'/[^"\'\s\\]+\.mp4', page)))
+              if ORI=="portrait":
+                  def _wh(u):
+                      m=re.search(r'_(\d+)_(\d+)_', u); return (int(m.group(1)),int(m.group(2))) if m else (0,0)
+                  files=[f for f in files if _wh(f)[0]<_wh(f)[1]]
+                  if not files:
+                      print("skip landscape", vid); continue
+              kept[q]=kept.get(q,0)+1
               title=re.search(r'<title>([^<]*)</title>', page); title=title.group(1) if title else ""
               # pick: sd = smallest "sd_" file; hd = a 1080-ish vertical or landscape "hd_" file (largest height <= 1920)
               def h_of(u):

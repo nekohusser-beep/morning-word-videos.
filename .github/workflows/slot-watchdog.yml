@@ -32,10 +32,18 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           TEST: ${{ github.event.inputs.test }}
         run: |
+          set +e
           if [ "$TEST" = "true" ]; then
-            python3 tools/watchdog.py --test
+            python3 tools/watchdog.py --test > watchdog.out 2>&1
           else
-            python3 tools/watchdog.py
+            python3 tools/watchdog.py > watchdog.out 2>&1
+          fi
+          rc=$?
+          cat watchdog.out
+          if [ "$rc" -ne 0 ]; then
+            # Put the real error on the run's annotations so it can be read without downloading logs.
+            echo "::error title=watchdog exit $rc::$(tail -n 6 watchdog.out | tr '\n' ' ' | cut -c1-500)"
+            exit "$rc"
           fi
       - name: Tell the phone if the watchdog itself broke
         if: failure()

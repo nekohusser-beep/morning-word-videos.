@@ -1,0 +1,46 @@
+name: slot-watchdog
+# Every 30 min: checks the Blessed Prayers slots in Buffer (YouTube, TikTok, Instagram) and pushes a phone alert
+# through ntfy for any empty or missed slot. Free: GitHub runner + ntfy.sh, no card.
+# Needs repo secrets BUFFER_API_KEY (already used by buffer.yml) and NTFY_TOPIC (a long random string).
+# The repo is public, so the topic name only ever lives in the secret, never in a file.
+# Test now: Actions > slot-watchdog > Run workflow > test = true (sends one alert to the phone).
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "true = send one test alert to the phone"
+        required: false
+        default: "false"
+permissions:
+  contents: read
+concurrency:
+  group: slot-watchdog
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: tools
+      - name: Check slots
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          TEST: ${{ github.event.inputs.test }}
+        run: |
+          if [ "$TEST" = "true" ]; then
+            python3 tools/watchdog.py --test
+          else
+            python3 tools/watchdog.py
+          fi
+      - name: Tell the phone if the watchdog itself broke
+        if: failure()
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          curl -fsS -H "Title: Watchdog broke" -H "Priority: 4" -H "Tags: rotating_light" -H "Click: https://github.com/nekohusser-beep/morning-word-videos./actions/workflows/slot-watchdog.yml" \
+            -d "The slot watchdog failed to run. Slots are not being watched until it is fixed." "https://ntfy.sh/$NTFY_TOPIC" || true

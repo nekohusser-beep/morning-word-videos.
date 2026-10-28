@@ -2,8 +2,10 @@
 # $0 test: MuseTalk 1.5 lip-sync on Kaggle's free GPU, Kokoro voice, Whisper word check, loudness and size check.
 # Re-run safe: finished stages are skipped. Run from a Kaggle notebook (GPU on, Internet on).
 set -u
+export MPLBACKEND=Agg   # Kaggle sets an inline backend that venv matplotlib rejects
+export PYTHONUNBUFFERED=1
 W=/kaggle/working
-RAW=https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tests/kaggle-musetalk
+RAW=https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./${SHA:-main}/tests/kaggle-musetalk
 mkdir -p $W/t && cd $W/t
 log(){ echo "== $(date +%H:%M:%S) $*"; }
 fail(){ echo "!! FAILED: $1"; [ -n "${2:-}" ] && [ -f "$2" ] && tail -n 45 "$2"; exit 1; }

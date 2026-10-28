@@ -103,15 +103,22 @@ def cmd_delete(a):
     print(d["deletePost"])
 
 
-p = argparse.ArgumentParser()
-s = p.add_subparsers(dest="cmd", required=True)
-l = s.add_parser("list"); l.add_argument("--days", type=int, default=10)
-c = s.add_parser("post")
-c.add_argument("--channel", choices=CHANNELS, required=True)
-c.add_argument("--video", required=True); c.add_argument("--text", required=True)
-c.add_argument("--title"); c.add_argument("--due")
-c.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"])
-m = s.add_parser("move"); m.add_argument("--id", required=True); m.add_argument("--due", required=True)
-x = s.add_parser("delete"); x.add_argument("--id", required=True)
-a = p.parse_args()
-{"list": cmd_list, "post": cmd_post, "move": cmd_move, "delete": cmd_delete}[a.cmd](a)
+def main():
+    # Command line only runs when this file is executed, never when another script imports it
+    # (tools/watchdog.py imports gql and ORG from here).
+    p = argparse.ArgumentParser()
+    s = p.add_subparsers(dest="cmd", required=True)
+    l = s.add_parser("list"); l.add_argument("--days", type=int, default=10)
+    c = s.add_parser("post")
+    c.add_argument("--channel", choices=CHANNELS, required=True)
+    c.add_argument("--video", required=True); c.add_argument("--text", required=True)
+    c.add_argument("--title"); c.add_argument("--due")
+    c.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"])
+    m = s.add_parser("move"); m.add_argument("--id", required=True); m.add_argument("--due", required=True)
+    x = s.add_parser("delete"); x.add_argument("--id", required=True)
+    a = p.parse_args()
+    {"list": cmd_list, "post": cmd_post, "move": cmd_move, "delete": cmd_delete}[a.cmd](a)
+
+
+if __name__ == "__main__":
+    main()

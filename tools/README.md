@@ -21,3 +21,8 @@ Everything the connectors did now has a free GitHub route. Secrets live in repo 
 | Long YouTube uploads | Buffer | `youtube-upload.yml` (YouTube Data API) | secrets `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` |
 | Sleep video master + MP4 | local ffmpeg | `sleep-master.yml` | nothing |
 | Sleep reading with animated scenes | ffmpeg | `sleep-scenes.yml` (tools/sleep-scenes/build.py) | nothing |
+
+## Pronunciation guard and re-cuts (Oct 28 2026)
+- `stitch/word_risk.py`: `scan script.md` before any credits (flags rare words not proven in `word_ledger.json`), `check script.md transcript.json` after each clip (strict word-for-word diff, risky words heard exactly, non-words fail), `compare a.json b.json` (medium.en vs large-v3 must agree), `seed`. Process: kingdom-brain workflows/pronunciation-guard.md.
+- `transcribe.yml` takes `model` (medium.en default, large-v3 for the strict pass); `phonemes.yml` prints the phones actually spoken.
+- `stitch/recut.py`: re-cut an old finished master (strip old jingle bookends, trim to speech, loudnorm, add current bumpers). `WORK=dir TP=-1.5 CRF=22 python3 tools/stitch/recut.py [tag...]`; cut points are in `JOBS`.

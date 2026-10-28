@@ -1,0 +1,98 @@
+{
+ "__alias__": {
+  "derek": "derrick"
+ },
+ "anointing": {
+  "src": "whisper-heard-transcript-39861788868.json",
+  "status": "ok"
+ },
+ "apollos": {
+  "src": "whisper-heard-transcript-39861788868.json",
+  "status": "ok"
+ },
+ "beseech": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "blesser": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "careth": {
+  "src": "whisper-heard-transcript-38357894716.json",
+  "status": "ok"
+ },
+ "dismayed": {
+  "src": "whisper-heard-transcript-39067372256.json",
+  "status": "ok"
+ },
+ "doers": {
+  "src": "whisper-heard-transcript-39861788868.json",
+  "status": "ok"
+ },
+ "forgives": {
+  "src": "whisper-heard-transcript-40193957651.json",
+  "status": "ok"
+ },
+ "graduations": {
+  "src": "whisper-heard-transcript-39010365949.json",
+  "status": "ok"
+ },
+ "gritting": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "hearers": {
+  "src": "whisper-heard-transcript-39861788868.json",
+  "status": "ok"
+ },
+ "mercies": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "overthinking": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "philippians": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "rocha": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "saith": {
+  "src": "whisper-heard-transcript-39010550763.json",
+  "status": "ok"
+ },
+ "sayeth": {
+  "src": "whisper-heard-transcript-39010365949.json",
+  "status": "ok"
+ },
+ "strengtheneth": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "supplication": {
+  "note": "Hailuo said 'supplation' (no k) twice. Respell 'sup-pli-kay-shun' in the prompt, generate that block FIRST, check it before any other spend.",
+  "src": "Eph 6:18 build, Oct 28 2026",
+  "status": "bad"
+ },
+ "therewith": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "verily": {
+  "src": "whisper-heard-transcript-40109273954.json",
+  "status": "ok"
+ },
+ "weaned": {
+  "src": "whisper-heard-transcript-40109273954.json",
+  "status": "ok"
+ },
+ "whatever's": {
+  "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ }
+}

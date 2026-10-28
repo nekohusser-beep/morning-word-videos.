@@ -21,10 +21,15 @@ for f in script.txt tts.py check.py dl_weights.py grid.py derrick-base-5s.mp4 de
 done
 
 if [ ! -f voice.wav ]; then
-  log "STAGE 1 Kokoro voice (system Python, CPU)"
+  log "STAGE 1 Kokoro voice (Python 3.11 venv, CPU)"
   apt-get install -y -qq espeak-ng >/dev/null 2>&1
-  pip install -q kokoro soundfile faster-whisper > tts.log 2>&1 || fail "pip kokoro" tts.log
-  python3 tts.py am_michael 0.92 >> tts.log 2>&1 || fail "tts" tts.log
+  pip install -q uv > s1.log 2>&1 || fail "pip uv" s1.log
+  uv venv --python 3.11 ttsenv >> s1.log 2>&1 || fail "uv venv 3.11" s1.log
+  TT="uv pip install --python $W/t/ttsenv/bin/python"
+  $TT torch --index-url https://download.pytorch.org/whl/cpu >> s1.log 2>&1 || fail "torch cpu" s1.log
+  $TT pip "numpy<2" kokoro soundfile faster-whisper >> s1.log 2>&1 || fail "kokoro install" s1.log
+  $TT "en_core_web_sm@https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" >> s1.log 2>&1 || echo "spacy model wheel failed (kokoro may fetch it itself)"
+  $W/t/ttsenv/bin/python tts.py am_michael 0.92 > tts.log 2>&1 || fail "tts" tts.log
 fi
 grep VOICE_SECONDS tts.log
 
@@ -79,7 +84,7 @@ for arm in base still; do
   ffmpeg -nostats -i out/final_$arm.mp4 -filter_complex ebur128=peak=true -f null - 2>&1 | tail -n 14 | grep -E "I:|Peak:"
   ffprobe -v error -show_entries stream=codec_type,width,height,r_frame_rate,duration -of csv=p=0 out/final_$arm.mp4 | tr '\n' ' '; echo
 done
-python3 check.py out/final_base.mp4 out/final_still.mp4 | grep -E "^CHECK"
+$W/t/ttsenv/bin/python check.py out/final_base.mp4 out/final_still.mp4 | grep -E "^CHECK"
 # frames: full and mouth zoom at three times
 for arm in base still; do
   if [ $arm = base ]; then CX=322; CY=816; else CX=322; CY=547; fi

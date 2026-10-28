@@ -4,6 +4,7 @@ on:
     inputs:
       path: {description: "repo path of audio file", required: true}
       tag: {description: "release tag", required: true, default: "inbox"}
+      model: {description: "whisper model (medium.en default; large-v3 for the strict pronunciation check)", required: false, default: "medium.en"}
 permissions:
   contents: write
 jobs:
@@ -16,7 +17,7 @@ jobs:
           python - <<'PY'
           import json
           from faster_whisper import WhisperModel
-          m = WhisperModel("medium.en", device="cpu", compute_type="int8")
+          m = WhisperModel("${{ inputs.model }}", device="cpu", compute_type="int8")
           out = {}
           for p in "${{ inputs.path }}".split():
               segs, _ = m.transcribe(p, word_timestamps=True, vad_filter=False)

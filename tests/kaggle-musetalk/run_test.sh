@@ -59,6 +59,12 @@ if [ ! -f .s3 ]; then
   touch .s3
 fi
 
+# pkg_resources (setuptools) is missing in a fresh uv venv and mmengine/mmpose import it
+$MT "setuptools<81" >> s2.log 2>&1 || echo "setuptools install failed"
+log "PREFLIGHT imports"
+( cd MuseTalk && $W/t/mtenv/bin/python -c "import torch; print('torch', torch.__version__, torch.cuda.is_available()); import mmcv, mmdet, mmpose; print('mm', mmcv.__version__, mmdet.__version__, mmpose.__version__); from mmpose.apis import inference_topdown, init_model; print('IMPORT OK')" > ../imp.log 2>&1 ) || fail "imports" imp.log
+cat imp.log
+
 run_arm(){
   arm=$1
   cat > cfg_$arm.yaml <<EOC

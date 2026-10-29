@@ -43,6 +43,7 @@ jobs:
           echo "go=$go args=$args (hedra key set: $([ -n "$HEDRA_API_KEY" ] && echo yes || echo no), runway key set: $([ -n "$RUNWAY_API_KEY" ] && echo yes || echo no))"
       - if: steps.gate.outputs.go == 'yes'
         run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
           pip install -q requests numpy faster-whisper==1.0.3
           pip install -q opencv-python-headless mediapipe || echo "mediapipe not installed; face metrics will be skipped"
           ffmpeg -version | head -1
@@ -60,7 +61,9 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add -A tests/avatar-engine-test/out
           git commit -m "avatar engine test: clips A/B and results" || exit 0
+          ok=0
           for i in 1 2 3 4; do
-            git pull --rebase origin main && git push origin HEAD:main && break
+            if git pull --rebase origin main && git push origin HEAD:main; then ok=1; break; fi
             sleep 6
           done
+          [ "$ok" = 1 ]

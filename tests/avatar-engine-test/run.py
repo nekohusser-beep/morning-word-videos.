@@ -477,4 +477,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except BaseException:
+        import traceback
+        OUT.mkdir(parents=True, exist_ok=True)
+        (OUT / "error.txt").write_text(traceback.format_exc())
+        raise

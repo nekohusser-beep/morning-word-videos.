@@ -51,10 +51,11 @@ jobs:
       - run: |
           sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
           pip install -q torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q "speechbrain==1.0.2" soundfile numpy
+          pip install -q "speechbrain==1.0.2" "huggingface_hub==0.23.5" "numpy<2" soundfile
       - env: {GH_TOKEN: "${{ github.token }}"}
         run: |
           mkdir -p cands && gh release download "${{ inputs.tag }}" -p "vcfix_${{ github.run_id }}_*.wav" -D cands --clobber || true
           python tmp/vcfix/score.py cands tmp/vcfix > scores.json 2> score.err || true
-          cp scores.json "vcfix_${{ github.run_id }}_scores.json"; tail -c 2500 score.err > "vcfix_${{ github.run_id }}_scoreerr.txt"
-          gh release upload "${{ inputs.tag }}" "vcfix_${{ github.run_id }}_scores.json" "vcfix_${{ github.run_id }}_scoreerr.txt" --clobber
+          [ -s scores.json ] && cp scores.json "vcfix_${{ github.run_id }}_scores.json" || true
+          tail -c 2500 score.err > "vcfix_${{ github.run_id }}_scoreerr.txt"; [ -s "vcfix_${{ github.run_id }}_scoreerr.txt" ] || echo "no errors" > "vcfix_${{ github.run_id }}_scoreerr.txt"
+          for f in "vcfix_${{ github.run_id }}_scores.json" "vcfix_${{ github.run_id }}_scoreerr.txt"; do [ -s "$f" ] && gh release upload "${{ inputs.tag }}" "$f" --clobber || true; done

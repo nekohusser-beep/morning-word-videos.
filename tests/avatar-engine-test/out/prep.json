@@ -1,0 +1,12 @@
+{
+  "audio": {
+    "start_s": 21.74,
+    "end_s": 42.34,
+    "duration_s": 20.6,
+    "ref_words": 45,
+    "source_cut_word_errors": 2,
+    "span_similarity": 0.9783
+  },
+  "engines": {},
+  "started": "2026-10-29 02:12:08 UTC"
+}

@@ -1,0 +1,93 @@
+name: voice-audition
+# Free narrator voice audition for the KJV sleep channel. Voices come from a DESCRIPTION of the sound (Qwen3-TTS, VoxCPM2)
+# or from Chatterbox using its default voice or a SYNTHETIC reference (a deepened Kokoro voice). No real person is cloned.
+# Outputs land in the draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "aud"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t voice-audition -n "voice audition outputs"
+
+  qwen:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: Q1
+            instruct: "A warm, low-pitched, mature woman's voice. Slow and unhurried, smooth and resonant, with a gentle storytelling cadence. Calm and reassuring, soft volume, very little pitch variation, as if reading Scripture aloud at bedtime."
+          - id: Q2
+            instruct: "A soft, breathy, gentle woman's voice, very slow and soothing, quiet and intimate. A calm near-monotone with kind warmth, like a bedtime storyteller speaking close to the listener."
+          - id: Q3
+            instruct: "A deep, rich, velvety female narrator voice. Measured and steady, slow pace, dignified and kind, with a slightly husky warmth and a faint Southern storytelling lilt."
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts soundfile numpy
+          mkdir -p out
+      - env: {INSTRUCT: "${{ matrix.instruct }}"}
+        run: python tools/sleep-story/audition/eng_qwen.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+
+  voxcpm:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: V1
+            desc: "A warm, low, mature woman's voice, slow and calm, a gentle storyteller"
+          - id: V2
+            desc: "A deep, velvety female narrator, slow, steady and kind, slightly husky"
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy
+          mkdir -p out
+      - env: {DESC: "${{ matrix.desc }}"}
+        run: python tools/sleep-story/audition/eng_voxcpm.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+
+  chatterbox:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: CD, ref: default}
+          - {id: C3, ref: tools/sleep-story/audition/refs/ref_K3.wav}
+          - {id: C5, ref: tools/sleep-story/audition/refs/ref_K5.wav}
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q chatterbox-tts
+          mkdir -p out
+      - run: python tools/sleep-story/audition/eng_chatterbox.py "${{ matrix.id }}" "${{ matrix.ref }}" 2>&1 | tee out/C_${{ matrix.id }}.log
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

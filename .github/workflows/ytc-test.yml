@@ -1,0 +1,53 @@
+name: ytc-test
+on:
+  push:
+    branches: [test-yt-script]
+permissions:
+  contents: read
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r ytc-test/requirements.txt
+      - name: Real run, no paid Claude call
+        working-directory: ytc-test
+        env:
+          YT_CHANNEL_ID: UCaKI8Xsi-MHu78UnJTY1xpg
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YT_PROXY: ${{ secrets.YT_PROXY }}
+        run: |
+          python - <<'PY'
+          import os, xml.etree.ElementTree as ET, requests
+          import yt_to_claude as y
+          print("anthropic key secret present:", bool(os.environ.get("ANTHROPIC_API_KEY")))
+          print("proxy secret present:", bool(os.environ.get("YT_PROXY")))
+          r = requests.get(f"https://www.youtube.com/feeds/videos.xml?channel_id={y.CHANNEL_ID}", timeout=20)
+          print("RSS status", r.status_code)
+          ents = ET.fromstring(r.content).findall("a:entry", y.ATOM)
+          print("RSS entries", len(ents))
+          print("latest_video_id():", y.latest_video_id())
+          ok = 0
+          for e in ents[:4]:
+              vid = e.find("yt:videoId", y.ATOM).text
+              title = e.find("a:title", y.ATOM).text
+              try:
+                  t = y.get_transcript(vid)
+                  ok += 1
+                  print("TRANSCRIPT OK", vid, len(t), "chars |", title[:60])
+              except Exception as ex:
+                  print("TRANSCRIPT FAIL", vid, type(ex).__name__, str(ex)[:160].replace("\n", " "), "|", title[:60])
+          print("transcripts ok:", ok, "of", min(4, len(ents)))
+          if os.environ.get("ANTHROPIC_API_KEY"):
+              import anthropic
+              try:
+                  c = anthropic.Anthropic(max_retries=0, timeout=30)
+                  n = c.messages.count_tokens(model=y.MODEL, messages=[{"role": "user", "content": "test"}])
+                  print("ANTHROPIC KEY+MODEL OK (count_tokens, free):", y.MODEL, n.input_tokens)
+              except Exception as ex:
+                  print("ANTHROPIC CHECK FAIL", type(ex).__name__, str(ex)[:200])
+          PY

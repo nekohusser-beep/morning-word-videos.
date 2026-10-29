@@ -1,0 +1,38 @@
+name: sleep-voice
+# Renders every unit of a sleep-story script in ONE locked voice (VoxCPM2 prompt-clone of the voice Neko picked), 20 CPU jobs in parallel.
+# Outputs land in the draft release `tag` as uNNN.wav plus a log per chunk.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "voice2"}
+      units: {description: "units json", required: true, default: "tools/sleep-story/pilot2/units.json"}
+      ref: {description: "reference wav (the picked voice)", required: true, default: "tools/sleep-story/pilot2/ref_voice4.wav"}
+      ref_text: {description: "exact words spoken in the reference", required: true, default: "tools/sleep-story/pilot2/ref_voice4.txt"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t sleep-voice -n "sleep voice units"
+  render:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        chunk: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy
+          mkdir -p out
+      - run: python tools/sleep-story/eng_units_voxcpm.py "${{ inputs.units }}" "${{ inputs.ref }}" "${{ inputs.ref_text }}" ${{ matrix.chunk }} 20 out 2>&1 | tee out/log_chunk${{ matrix.chunk }}.log
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

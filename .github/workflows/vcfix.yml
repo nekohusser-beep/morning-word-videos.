@@ -1,0 +1,60 @@
+name: vcfix
+# Eph 6:18 fix: convert the two Flow "supplication" words into Derrick's own (Hailuo) voice with Seed-VC, then score the
+# speaker match with ECAPA against Derrick's own words. Inputs live in tmp/vcfix/. Outputs land in the release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "release tag", required: true, default: "inbox"}
+permissions:
+  contents: write
+jobs:
+  vc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {v: A, ref: ref1, steps: "30", cfg: "0.7"}
+          - {v: B, ref: ref1, steps: "50", cfg: "0.7"}
+          - {v: C, ref: ref2, steps: "30", cfg: "0.7"}
+          - {v: D, ref: ref1, steps: "30", cfg: "0.3"}
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
+      - run: |
+          git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
+          cd sv && pip install -q -r requirements.txt > ../log.txt 2>&1 || true
+      - run: |
+          mkdir -p out
+          cd sv
+          for s in seg1 seg2; do
+            rm -rf ../tmpo; mkdir -p ../tmpo
+            python inference.py --source ../tmp/vcfix/$s.wav --target ../tmp/vcfix/${{ matrix.ref }}.wav --output ../tmpo --diffusion-steps ${{ matrix.steps }} --length-adjust 1.0 --inference-cfg-rate ${{ matrix.cfg }} --f0-condition False --fp16 False >> ../log.txt 2>&1 || echo "FAILED $s" >> ../log.txt
+            g=$(ls ../tmpo/*.wav 2>/dev/null | head -1); [ -n "$g" ] && cp "$g" ../out/vcfix_${{ github.run_id }}_${{ matrix.v }}_$s.wav
+          done
+          ls -la ../out
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh release view "${{ inputs.tag }}" || gh release create "${{ inputs.tag }}" --draft -t inbox -n inbox
+          ls out/*.wav >/dev/null 2>&1 && gh release upload "${{ inputs.tag }}" out/*.wav --clobber || true
+          tail -c 3000 log.txt > vcfixlog_${{ github.run_id }}_${{ matrix.v }}.txt; gh release upload "${{ inputs.tag }}" vcfixlog_${{ github.run_id }}_${{ matrix.v }}.txt --clobber
+
+  score:
+    needs: vc
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "speechbrain==1.0.2" soundfile numpy
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p cands && gh release download "${{ inputs.tag }}" -p "vcfix_${{ github.run_id }}_*.wav" -D cands --clobber || true
+          python tmp/vcfix/score.py cands tmp/vcfix > scores.json 2> score.err || true
+          cp scores.json "vcfix_${{ github.run_id }}_scores.json"; tail -c 2500 score.err > "vcfix_${{ github.run_id }}_scoreerr.txt"
+          gh release upload "${{ inputs.tag }}" "vcfix_${{ github.run_id }}_scores.json" "vcfix_${{ github.run_id }}_scoreerr.txt" --clobber

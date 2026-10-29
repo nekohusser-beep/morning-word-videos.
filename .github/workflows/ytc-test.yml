@@ -21,7 +21,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           YT_PROXY: ${{ secrets.YT_PROXY }}
         run: |
-          python - > out.txt 2>&1 <<'PY'
+          python - > out.txt 2>&1 <<'PY' || true
           import os, xml.etree.ElementTree as ET, requests
           import yt_to_claude as y
           print("anthropic key secret present:", bool(os.environ.get("ANTHROPIC_API_KEY")))

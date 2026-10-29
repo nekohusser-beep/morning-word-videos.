@@ -1,0 +1,66 @@
+name: avatar-engine-test
+# Derrick face-engine proof test: Hedra Character-3 vs Runway avatar_videos, same still, same audio.
+# Spend guard: one attempt per engine, audio capped at 25 s, scheduled runs only fire when BOTH
+# secrets exist and out/results.json does not exist yet. Manual/push runs use whatever keys exist.
+on:
+  workflow_dispatch:
+    inputs:
+      engines: {description: "comma list: hedra,runway", required: false, default: "hedra,runway"}
+      prep_only: {description: "true = only cut the test audio, spend nothing", required: false, default: "false"}
+  push:
+    paths: ["tests/avatar-engine-test/GO", "tests/avatar-engine-test/PREP"]
+  schedule:
+    - cron: "17,47 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: avatar-engine-test
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      HEDRA_API_KEY: ${{ secrets.HEDRA_API_KEY }}
+      RUNWAY_API_KEY: ${{ secrets.RUNWAY_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: gate
+        run: |
+          go=no
+          args="--engines ${{ inputs.engines || 'hedra,runway' }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ -n "$HEDRA_API_KEY" ] && [ -n "$RUNWAY_API_KEY" ] && [ ! -f tests/avatar-engine-test/out/results.json ]; then go=yes; fi
+          elif [ "${{ inputs.prep_only }}" = "true" ] || { [ "${{ github.event_name }}" = "push" ] && git diff --name-only HEAD~1 HEAD | grep -q 'avatar-engine-test/PREP'; }; then
+            go=yes; args="--prep-only"
+          else
+            if [ -n "$HEDRA_API_KEY" ] || [ -n "$RUNWAY_API_KEY" ]; then go=yes; fi
+          fi
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+          echo "args=$args" >> "$GITHUB_OUTPUT"
+          echo "go=$go args=$args (hedra key set: $([ -n "$HEDRA_API_KEY" ] && echo yes || echo no), runway key set: $([ -n "$RUNWAY_API_KEY" ] && echo yes || echo no))"
+      - if: steps.gate.outputs.go == 'yes'
+        run: |
+          pip install -q requests numpy faster-whisper==1.0.3
+          pip install -q opencv-python-headless mediapipe || echo "mediapipe not installed; face metrics will be skipped"
+          ffmpeg -version | head -1
+      - if: steps.gate.outputs.go == 'yes'
+        run: python tests/avatar-engine-test/run.py ${{ steps.gate.outputs.args }}
+      - if: steps.gate.outputs.go == 'yes' && always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: avatar-engine-test
+          path: tests/avatar-engine-test/out
+          if-no-files-found: ignore
+      - if: steps.gate.outputs.go == 'yes' && always()
+        run: |
+          git config user.name "avatar-engine-test"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A tests/avatar-engine-test/out
+          git commit -m "avatar engine test: clips A/B and results" || exit 0
+          for i in 1 2 3 4; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            sleep 6
+          done

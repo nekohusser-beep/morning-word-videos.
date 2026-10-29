@@ -1,0 +1,25 @@
+name: vcscore
+# Score converted words (release assets vcfix_<rid>_*.wav) against Derrick's own voice with ECAPA. Inputs in tmp/vcfix/.
+on:
+  workflow_dispatch:
+    inputs:
+      rid: {description: "vcfix run id", required: true}
+      tag: {description: "release tag", required: true, default: "inbox"}
+permissions:
+  contents: write
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "speechbrain==1.0.2" "huggingface_hub==0.23.5" "numpy<2" soundfile
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p cands && gh release download "${{ inputs.tag }}" -p "vcfix_${{ inputs.rid }}_*.wav" -D cands --clobber
+          python tmp/vcfix/score.py cands tmp/vcfix > scores.json 2> score.err || true
+          cp scores.json "vcscore_${{ github.run_id }}.json"; tail -c 2500 score.err > "vcscore_${{ github.run_id }}_err.txt"
+          gh release upload "${{ inputs.tag }}" "vcscore_${{ github.run_id }}.json" "vcscore_${{ github.run_id }}_err.txt" --clobber

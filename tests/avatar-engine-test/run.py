@@ -106,6 +106,11 @@ def find_span(words, ref):
 def prep_audio():
     """Cut the Psalm 51:10-12 reading out of the locked build as one lossless 48 kHz mono WAV."""
     OUT.mkdir(parents=True, exist_ok=True)
+    locked = OUT / "test.wav"
+    if locked.exists() and (OUT / "prep.json").exists():   # audio was cut and checked once; reuse the exact same bytes
+        info = json.loads((OUT / "prep.json").read_text())["audio"]
+        log("reusing locked test.wav:", info)
+        return locked, info
     full = OUT / "source_full.wav"
     sh(["ffmpeg", "-y", "-v", "error", "-i", str(SRC), "-vn", "-ac", "1", "-ar", "48000", str(full)])
     words = whisper_words(full)

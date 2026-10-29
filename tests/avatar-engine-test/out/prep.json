@@ -1,11 +1,9 @@
 {
   "audio": {
-    "start_s": 21.74,
-    "end_s": 42.34,
-    "duration_s": 20.6,
+    "duration_s": 17.68,
     "ref_words": 45,
-    "source_cut_word_errors": 2,
-    "span_similarity": 0.9783
+    "source_cut_word_errors": 0,
+    "note": "Psalm 51:10-12 from the locked Oct 25 build, cut at word timestamps (Whisper medium.en) into 3 pieces so the spoken 'verse 11'/'verse 12' markers are dropped; 0.35 s gap between pieces; lossless 48 kHz mono WAV; built locally from source_transcript.json, 3 cut points sit in near-silence (rms 0-11 of 32768)."
   },
   "engines": {},
   "started": "2026-10-29 02:12:08 UTC"

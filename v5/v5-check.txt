@@ -1,11 +1,27 @@
 case=v5 audio_duration_s=43.032000
-integrated_loudness=-16.4 LUFS
-decoded_samples=688000 (43.0 s at 16 kHz)
-ref_words=22 heard_words=23 matched_words=12 match_rate=0.55
---- diff (KJV -> heard) ---
-replace: KJV 'thou preparest a table' -> HEARD 'now i'll prepare us the tables'
-replace: KJV 'mine enemies' -> HEARD 'my nanniness'
-replace: KJV 'anointest my head' -> HEARD 'anointed smile'
-replace: KJV 'oil' -> HEARD 'all'
---- whisper transcript ---
-Now I'll prepare us the tables before me In the presence of my nanniness  Thou anointed smile with all my cup runneth over
+BEST TAKE: v5-t4.mp3 match_rate=0.59 of 4 take(s)
+integrated_loudness=-15.0 LUFS
+=== v5-t1.mp3: 43.0 s, ref_words=22 heard_words=18 matched_words=9 match_rate=0.41
+   replace: KJV 'preparest a' -> HEARD 'propers the'
+   replace: KJV 'before me in the presence of mine enemies' -> HEARD 'heaven oint thee'
+   replace: KJV 'oil' -> HEARD 'the wind'
+   replace: KJV 'cup runneth' -> HEARD 'compromise is'
+   whisper: Thou propers the table, Heaven oint thee, Thou anointest my head with the wind.  My compromise is over.
+=== v5-t2.mp3: 43.0 s, ref_words=22 heard_words=17 matched_words=10 match_rate=0.45
+   replace: KJV 'thou preparest' -> HEARD 'they'll prepare us'
+   replace: KJV 'before' -> HEARD 'for'
+   replace: KJV 'in the presence of mine enemies thou anointest' -> HEARD 'low anointess'
+   replace: KJV 'over' -> HEARD 'old'
+   whisper: They'll prepare us a table for me  Low anointess, my head with oil, my cup runneth old
+=== v5-t3.mp3: 43.0 s, ref_words=22 heard_words=12 matched_words=6 match_rate=0.27
+   replace: KJV 'thou preparest a table before me in the presence of mine enemies thou anointest' -> HEARD 'so annoying to'
+   replace: KJV 'oil' -> HEARD 'all'
+   replace: KJV 'runneth' -> HEARD 'run is'
+   whisper: So annoying to my head with all my cup  Run is over
+=== v5-t4.mp3: 43.0 s, ref_words=22 heard_words=25 matched_words=13 match_rate=0.59
+   replace: KJV 'thou preparest a' -> HEARD 'there will purge the'
+   replace: KJV 'before' -> HEARD 'for'
+   replace: KJV 'mine' -> HEARD 'my'
+   replace: KJV 'thou anointest' -> HEARD 'delano it's just'
+   replace: KJV 'cup runneth' -> HEARD 'current run is'
+   whisper: There will purge the table for me In the presence of my enemies  Delano, it's just my head with oil My current run is over

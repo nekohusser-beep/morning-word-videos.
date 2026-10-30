@@ -1,0 +1,8 @@
+case=fp2_d audio_duration_s=62.040000
+BEST TAKE: fp2_d.mp3 score=0.60 of 1 take(s)
+integrated_loudness=-14.9 LUFS
+=== fp2_d.mp3: 62.0 s, ref_words=46 heard_words=36 matched_words=30 match_rate=0.65 longest_gap_s=2.1 gaps_over_1.5s=1 first_word_s=16.1 last_word_s=50.3 score=0.60
+   replace: KJV 'he restoreth my soul he leadeth me in the paths of righteousness' -> HEARD 'thank you so much'
+   replace: KJV 'his name's sake' -> HEARD 'watching'
+   replace: KJV 'staff' -> HEARD 'star'
+   whisper: Thank you so much for watching.  Yea, though I walk through the valley of the shadow of death  I will fear no evil for thou art with me  Thy rod and thy star, they comfort me

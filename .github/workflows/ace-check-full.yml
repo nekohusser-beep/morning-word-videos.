@@ -1,0 +1,65 @@
+name: ace-check-full
+# FREE: runs the Whisper word-check on an ACE-Step sung-Psalm mp3 already on branch ace-out (the full case skipped its check step).
+# Reads <case>/<case>.mp3 from ace-out, runs tests/ace-psalm/check.py, writes <case>/<case>-check.txt back to ace-out. No keys, no spend.
+on:
+  workflow_dispatch:
+    inputs:
+      case:
+        description: "Case folder on ace-out (short or full)"
+        required: true
+        default: "full"
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CASE: ${{ inputs.case }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ace-out
+          path: aceout
+
+      - name: Install ffmpeg if missing
+        run: |
+          which ffmpeg >/dev/null 2>&1 || (sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null)
+          ls -la "aceout/${CASE}/"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install faster-whisper
+        run: python -m pip install -q faster-whisper numpy
+
+      - name: Word-check the sung audio with Whisper
+        run: |
+          mkdir -p "out/${CASE}"
+          cp "aceout/${CASE}/${CASE}.mp3" "out/${CASE}/"
+          python tests/ace-psalm/check.py "$CASE" "out/${CASE}"
+          cat "out/${CASE}/${CASE}-check.txt"
+
+      - name: Publish the check file to branch ace-out
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          rm -rf "$RUNNER_TEMP/pub" && mkdir -p "$RUNNER_TEMP/pub" && cd "$RUNNER_TEMP/pub"
+          git init -q
+          git config user.name "ace-bot"; git config user.email "ace-bot@users.noreply.github.com"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}"
+          for i in 1 2 3 4 5 6 7 8; do
+            git -c http.extraheader="$AUTH" fetch -q --depth 1 origin ace-out && git checkout -q -f -B ace-out FETCH_HEAD
+            mkdir -p "./${CASE}"
+            cp "$GITHUB_WORKSPACE/out/${CASE}/${CASE}-check.txt" "./${CASE}/" 2>/dev/null
+            git add -A
+            git commit -qm "ace-step ${CASE} whisper check run ${GITHUB_RUN_ID}"
+            if git -c http.extraheader="$AUTH" push -q origin ace-out; then echo "pushed on try $i"; break; fi
+            sleep $((RANDOM % 12 + 4))
+          done

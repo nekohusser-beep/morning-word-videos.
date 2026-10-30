@@ -45,7 +45,11 @@ def whisper():
     from faster_whisper import WhisperModel
     norm = lambda s: re.findall(r"[a-z']+", s.lower().replace("\u2019", "'"))  # noqa: E731
     ref = norm(plain_for(case))
-    segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(str(mp3), language="en", beam_size=5)
+    import numpy as np  # decode with ffmpeg ourselves: faster-whisper's PyAV decoder crashed on the runner (av.open metadata_errors)
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(mp3), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True).stdout
+    audio = np.frombuffer(raw, dtype=np.float32)
+    lines.append(f"decoded_samples={len(audio)} ({len(audio) / 16000:.1f} s at 16 kHz)")
+    segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(audio, language="en", beam_size=5)
     text = " ".join(s.text for s in segs)
     hyp = norm(text)
     sm = difflib.SequenceMatcher(a=ref, b=hyp, autojunk=False)

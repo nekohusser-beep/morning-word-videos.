@@ -1,0 +1,19 @@
+case=v6 audio_duration_s=48.024000
+BEST TAKE: v6-t1.mp3 match_rate=0.88 of 4 take(s)
+integrated_loudness=-14.9 LUFS
+=== v6-t1.mp3: 48.0 s, ref_words=25 heard_words=22 matched_words=22 match_rate=0.88
+   delete: KJV 'in the house' -> HEARD ''
+   whisper: 1 Surely goodness and mercy shall follow me all the days of my life.  2 And I will dwell of the Lord for ever.
+=== v6-t2.mp3: 48.0 s, ref_words=25 heard_words=15 matched_words=10 match_rate=0.40
+   replace: KJV 'surely goodness and mercy shall follow me all the days of my life' -> HEARD 'thank you very much'
+   replace: KJV 'for ever' -> HEARD 'forever'
+   whisper: Thank you very much.  And I will dwell in the house of the Lord forever.
+=== v6-t3.mp3: 48.0 s, ref_words=25 heard_words=16 matched_words=15 match_rate=0.60
+   delete: KJV 'and mercy shall follow me all the days' -> HEARD ''
+   replace: KJV 'for ever' -> HEARD 'forever'
+   whisper: Surely goodness of my life  And I will dwell in the house of the Lord forever
+=== v6-t4.mp3: 48.0 s, ref_words=25 heard_words=18 matched_words=12 match_rate=0.48
+   delete: KJV 'surely goodness' -> HEARD ''
+   replace: KJV 'mercy shall follow me all the days of my life' -> HEARD 'i will dwell in hope'
+   replace: KJV 'house' -> HEARD 'host'
+   whisper: 1 And I will dwell in hope.  2 And I will dwell in the host of the Lord for ever.

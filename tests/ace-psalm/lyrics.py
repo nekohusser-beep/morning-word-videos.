@@ -14,11 +14,14 @@ CASES = {
     "short": {"verses": V[:3], "duration": 75},
     "full": {"verses": V, "duration": 150},
 }
+# One verse per generation (the 6-verse pass skipped, repeated and dropped lines): duration scales with word count.
+for _i, _v in enumerate(V, 1):
+    CASES[f"v{_i}"] = {"verses": [_v], "duration": max(20, round(len(_v.split()) * 1.6 + 8))}
 
 
 def lyrics_for(case):
     vs = CASES[case]["verses"]
-    return "\n\n".join(f"[Verse {i + 1}]\n{v}" for i, v in enumerate(vs))
+    return "\n\n".join(f"[Verse {i + 1}]\n{v}" for i, v in enumerate(vs)) if len(vs) > 1 else f"[Verse]\n{vs[0]}"
 
 
 def plain_for(case):

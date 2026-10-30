@@ -40,7 +40,7 @@ stamp("server healthy")
 # 2) submit: DiT only (thinking off), one sample, exact KJV lyrics
 body = {
     "prompt": CAPTION,
-    "lyrics": lyrics_for(case),
+    "lyrics": lyrics_for(case, os.environ.get("ACE_FLOW", "verse")),
     "thinking": False,
     "use_cot_caption": False,
     "use_cot_language": False,

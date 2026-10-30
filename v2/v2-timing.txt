@@ -1,0 +1,6 @@
+case=v2 audio_seconds_requested=34 server_ready_s=30 generate_s=300 bytes=544941
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2F8a053a60-d6bf-2cb8-b5e3-6316849ce808.mp3
+metas={'bpm': 60, 'duration': 34.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'Slow reverent chanted solo male voice, warm and gentle, clear American English diction, every word sung clearly, ancient harp and lyre with soft arpeggios, calm ambient pad, 60 BPM, D minor, no drums, no percussion, sleep-friendly, meditative, reverb', 'lyrics': '[Verse]\nHe maketh me to lie down in green pastures: he leadeth me beside the still waters.'}
+generation_info=**🎵 Total generation time (1 song): 216.20s**
+- 216.20s per song
+- DiT phase (1 song): 216.20s

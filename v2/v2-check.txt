@@ -1,0 +1,10 @@
+case=v2 audio_duration_s=34.032000
+integrated_loudness=-15.7 LUFS
+decoded_samples=544000 (34.0 s at 16 kHz)
+ref_words=16 heard_words=6 matched_words=5 match_rate=0.31
+--- diff (KJV -> heard) ---
+delete: KJV 'he maketh me to lie down in green pastures' -> HEARD ''
+delete: KJV 'beside' -> HEARD ''
+replace: KJV 'waters' -> HEARD 'hoarders'
+--- whisper transcript ---
+He leadeth me, the still hoarders

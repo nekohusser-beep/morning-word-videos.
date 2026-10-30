@@ -1,0 +1,23 @@
+case=v5 audio_duration_s=43.032000
+BEST TAKE: v5-t4.mp3 match_rate=0.59 of 4 take(s)
+integrated_loudness=-15.0 LUFS
+=== v5-t1.mp3: 43.0 s, ref_words=22 heard_words=17 matched_words=11 match_rate=0.50
+   replace: KJV 'thou preparest a table before me' -> HEARD 'oh propercity'
+   replace: KJV 'mine enemies' -> HEARD 'my nanny'
+   replace: KJV 'with oil' -> HEARD 'boy'
+   replace: KJV 'runneth' -> HEARD 'runness'
+   whisper: Oh, Propercity, In the presence of my nanny,  Thou anointest my head, boy  My cup runness over
+=== v5-t2.mp3: 43.0 s, ref_words=22 heard_words=5 matched_words=0 match_rate=0.00
+   replace: KJV 'thou preparest a table before me in the presence of mine enemies thou anointest my head with oil my cup runneth over' -> HEARD 'thanks for watching thank you'
+   whisper: Thanks for watching!  Thank you.
+=== v5-t3.mp3: 43.0 s, ref_words=22 heard_words=20 matched_words=11 match_rate=0.50
+   replace: KJV 'thou preparest a' -> HEARD 'they'll propose the'
+   replace: KJV 'mine enemies' -> HEARD 'my nanny'
+   replace: KJV 'anointest' -> HEARD 'and i just'
+   replace: KJV 'head with oil my cup' -> HEARD 'club'
+   whisper: They'll propose the table before me In the presence of my nanny  Thou and I just, my club runneth over
+=== v5-t4.mp3: 43.0 s, ref_words=22 heard_words=24 matched_words=13 match_rate=0.59
+   replace: KJV 'thou preparest a table' -> HEARD 'they'll prepare us to take'
+   replace: KJV 'enemies thou anointest' -> HEARD 'and his how annoyed is'
+   replace: KJV 'with oil' -> HEARD 'boy'
+   whisper: They'll prepare us to take before me, In the presence of mine and his.  How annoyed is my head, boy? My cup runneth over.

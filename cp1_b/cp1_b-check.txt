@@ -1,0 +1,12 @@
+case=cp1_b audio_duration_s=38.040000
+BEST TAKE: cp1_b.mp3 score=0.50 of 1 take(s)
+integrated_loudness=-14.0 LUFS
+=== cp1_b.mp3: 38.0 s, ref_words=25 heard_words=24 matched_words=15 match_rate=0.60 longest_gap_s=2.3 gaps_over_1.5s=2 first_word_s=0.0 last_word_s=31.5 score=0.50
+   replace: KJV 'the lord' -> HEARD 'my love'
+   insert: KJV '' -> HEARD 'who'
+   replace: KJV 'want' -> HEARD 'mourn'
+   replace: KJV 'maketh me' -> HEARD 'nakedly'
+   replace: KJV 'lie down in' -> HEARD 'light and'
+   replace: KJV 'leadeth' -> HEARD 'leads'
+   replace: KJV 'waters' -> HEARD 'water'
+   whisper: My love is my shepherd, who I shall not mourn  He nakedly to light and green pastures  He leads me beside the still water

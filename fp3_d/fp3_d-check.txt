@@ -1,0 +1,11 @@
+case=fp3_d audio_duration_s=62.040000
+BEST TAKE: fp3_d.mp3 score=0.31 of 1 take(s)
+integrated_loudness=-14.6 LUFS
+=== fp3_d.mp3: 62.0 s, ref_words=47 heard_words=39 matched_words=31 match_rate=0.66 longest_gap_s=6.0 gaps_over_1.5s=4 first_word_s=8.9 last_word_s=54.0 score=0.31
+   replace: KJV 'thou preparest a table before me in' -> HEARD 'ooh oh'
+   replace: KJV 'mine' -> HEARD 'my'
+   replace: KJV 'anointest' -> HEARD 'anoint us'
+   replace: KJV 'head with oil' -> HEARD 'heaven'
+   replace: KJV 'in the' -> HEARD 'a'
+   replace: KJV 'for ever' -> HEARD 'forever'
+   whisper: Ooh Oh  The presence of my enemies  Thou anoint us, my heaven, my cup runneth over  Surely goodness and mercy shall follow me all the days of my life  And I will dwell a house of the Lord forever

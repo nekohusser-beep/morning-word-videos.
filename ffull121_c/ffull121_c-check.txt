@@ -1,0 +1,11 @@
+case=ffull121_c audio_duration_s=140.040000
+BEST TAKE: ffull121_c.mp3 score=0.35 of 1 take(s)
+integrated_loudness=-13.7 LUFS
+=== ffull121_c.mp3: 140.0 s, ref_words=110 heard_words=95 matched_words=88 match_rate=0.80 longest_gap_s=7.8 gaps_over_1.5s=6 first_word_s=7.1 last_word_s=122.7 score=0.35
+   insert: KJV '' -> HEARD 'cometh'
+   delete: KJV 'slumber nor sleep the lord is thy keeper the lord is' -> HEARD ''
+   replace: KJV 'the' -> HEARD 'a'
+   delete: KJV 'the lord shall preserve thee from all evil' -> HEARD ''
+   insert: KJV '' -> HEARD 'from this time forth'
+   replace: KJV 'for evermore' -> HEARD 'forevermore'
+   whisper: I will lift up mine eyes unto the hills From whence cometh, cometh my help  My help cometh from the Lord, which made heaven and earth  He will not suffer thy foot, to be moved He that keepeth thee will not slumber  Behold, he that keepeth Israel Shall neither thy shade upon thy right hand  A sun shall not smite thee by day Nor the moon by night  He shall preserve thy soul The Lord shall preserve thy going out and thy coming in  From this time forth, from this time forth And even forevermore

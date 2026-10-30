@@ -1,0 +1,7 @@
+case=fpA121_a audio_duration_s=64.032000
+BEST TAKE: fpA121_a.mp3 score=0.22 of 1 take(s)
+integrated_loudness=-15.2 LUFS
+=== fpA121_a.mp3: 64.0 s, ref_words=51 heard_words=11 matched_words=11 match_rate=0.22 longest_gap_s=0.0 gaps_over_1.5s=0 first_word_s=19.9 last_word_s=33.7 score=0.22
+   delete: KJV 'i will lift up mine eyes unto the hills from whence cometh my help' -> HEARD ''
+   delete: KJV 'he will not suffer thy foot to be moved he that keepeth thee will not slumber behold he that keepeth israel shall neither slumber nor sleep' -> HEARD ''
+   whisper: My help cometh from the Lord  Which made heaven and earth

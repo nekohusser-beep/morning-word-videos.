@@ -1,0 +1,13 @@
+[      0s] waiting for server health
+[     30s] server healthy
+1 200 {"data":{"task_id":"3a169c67-173b-4444-a1ce-c48ffb8d1d66","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793354229683,"extra":null}
+[     30s] submitted 3a169c67-173b-4444-a1ce-c48ffb8d1d66
+[     90s] poll 1: status=0
+[    150s] poll 2: status=0
+[    210s] poll 3: status=0
+[    270s] poll 4: status=0
+[    330s] poll 5: status=0
+[    390s] poll 6: status=0
+[    450s] poll 7: status=0
+[    510s] poll 8: status=1
+[    510s] saved fpA121_a.mp3 (1024941 bytes); generate took 480s for 64s of audio

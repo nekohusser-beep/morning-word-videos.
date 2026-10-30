@@ -39,6 +39,8 @@ ap.add_argument("--verse-gap", type=float, default=0.9)
 ap.add_argument("--outro", type=float, default=9.0)
 ap.add_argument("--bed", default="", help="force a bed case, e.g. ffull150_c")
 ap.add_argument("--choir", default="auto", choices=["auto", "alto", "lift", "none"])
+ap.add_argument("--rounds", type=int, default=1, help="with --choir none: sing the whole psalm this many times (each pass = next-best take of every line)")
+ap.add_argument("--round-gap", type=float, default=3.0)
 ap.add_argument("--only", default="", help="only use take folders whose name contains this text (e.g. 121)")
 a = ap.parse_args()
 OUT = Path(a.out)
@@ -252,7 +254,7 @@ for g in GLOBAL:
         sys.exit(2)
     lead_pick[g] = pool[0]
     runner = pool[1] if len(pool) > 1 else pool[0]
-    choir_pick[g] = (cpool[0], "alto") if (cpool and cpool[0]["cov"] >= 0.7 and a.choir != "lift") else (runner, "lift")
+    choir_pick[g] = (cpool[0], "alto") if (cpool and cpool[0]["cov"] >= 0.7 and a.choir not in ("lift", "none")) else (runner, "lift")
     if a.choir == "alto" and cpool:
         choir_pick[g] = (cpool[0], "alto")
 
@@ -283,50 +285,66 @@ log("bed chosen:", bed_case, round(len(bed) / SR, 1), "s")
 # ---------- build ----------
 IR = make_ir()
 LEAD_DB, CHOIR_DB = -19.0, -22.0
-leads, answers = {}, {}
-lead_removed_map = {}
-for g in GLOBAL:
-    lp = lead_pick[g]
-    leads[g] = set_rms(takes[lp["case"]].cut(g), LEAD_DB)
-    lead_removed_map[g] = takes[lp["case"]].removed
+NONE = a.choir == "none"  # lead voice only (Neko Oct 30 2026: the lifted 'choir' sounded like demons); --rounds N sings the whole psalm N times, each pass using the next-best take of every line
+pools = {g: sorted([t.cands[g] for c, t in takes.items() if c in lead_cases and g in t.cands], key=lambda d: -d["score"]) for g in GLOBAL}
+ROUNDS = a.rounds if NONE else 1
+
+
+def make_answer(g):
     cp, kind = choir_pick[g]
     seg = takes[cp["case"]].cut(g)
     if kind == "alto":
-        ans = set_rms(seg, CHOIR_DB)
-    else:  # lift the voice into an alto + a quieter soprano shimmer
-        alto = lift(seg, 1.4983, "shifted")  # up a fifth, formants follow = lighter, female-leaning
-        sop = lift(seg, 2.0, "preserved")  # up an octave, quieter
-        n = max(len(alto), len(sop))
-        m = np.zeros((n, 2), np.float32)
-        m[: len(alto)] += alto * 1.0
-        m[: len(sop)] += sop * 0.5
-        # a little left/right spread so it sounds like several voices
-        d = int(0.022 * SR)
-        m2 = m.copy()
-        m2[d:, 0] = m[:-d, 0]
-        m2[:-d, 1] = m[d:, 1]
-        ans = set_rms((m + m2) * 0.5, CHOIR_DB)
-    answers[g] = ans
+        return set_rms(seg, CHOIR_DB), cp, kind
+    # lift the voice into an alto + a quieter soprano shimmer
+    alto = lift(seg, 1.4983, "shifted")  # up a fifth, formants follow = lighter, female-leaning
+    sop = lift(seg, 2.0, "preserved")  # up an octave, quieter
+    n = max(len(alto), len(sop))
+    m = np.zeros((n, 2), np.float32)
+    m[: len(alto)] += alto * 1.0
+    m[: len(sop)] += sop * 0.5
+    d = int(0.022 * SR)  # a little left/right spread so it sounds like several voices
+    m2 = m.copy()
+    m2[d:, 0] = m[:-d, 0]
+    m2[:-d, 1] = m[d:, 1]
+    return set_rms((m + m2) * 0.5, CHOIR_DB), cp, kind
+
 
 t = a.intro
 events = []
-lead_bus = np.zeros((int((a.intro + 400) * SR), 2), np.float32)
+lead_bus = np.zeros((int((a.intro + 900) * SR), 2), np.float32)
 choir_bus = np.zeros_like(lead_bus)
 verse_first = {}
-for n, g in enumerate(GLOBAL):
-    L, A = leads[g], answers[g]
+SEQ = [(r, g) for r in range(ROUNDS) for g in GLOBAL]
+for n, (r, g) in enumerate(SEQ):
+    if NONE:
+        good = [d for d in pools[g] if d["cov"] >= 0.85] or pools[g][:1]
+        pk = good[r % len(good)]
+    else:
+        pk = lead_pick[g]
+    L = set_rms(takes[pk["case"]].cut(g), LEAD_DB)
+    removed = takes[pk["case"]].removed
+    if NONE:
+        A, cp, kind = np.zeros((0, 2), np.float32), pk, "none"
+    else:
+        A, cp, kind = make_answer(g)
     s0 = int(t * SR)
     lead_bus[s0: s0 + len(L)] += L
     lead_end = t + len(L) / SR
     ca = lead_end + 0.12
     s1 = int(ca * SR)
     choir_bus[s1: s1 + len(A)] += A
-    ans_end = ca + len(A) / SR
-    events.append(dict(line=list(g), text=LINES[g[0]][g[1]], lead_start=round(t, 2), lead_end=round(lead_end, 2), choir_start=round(ca, 2), choir_end=round(ans_end, 2),
-                       lead_removed_s=round(lead_removed_map[g], 2), lead_take=lead_pick[g]["case"], lead_cov=round(lead_pick[g]["cov"], 2), choir_take=choir_pick[g][0]["case"], choir_kind=choir_pick[g][1], choir_cov=round(choir_pick[g][0]["cov"], 2)))
-    verse_first.setdefault(g[0], t)
-    nxt = GLOBAL[n + 1] if n + 1 < len(GLOBAL) else None
-    t = ans_end - 0.25 + (a.verse_gap if (nxt and nxt[0] != g[0]) else a.gap)
+    ans_end = (ca + len(A) / SR) if len(A) else lead_end
+    events.append(dict(round=r, line=list(g), text=LINES[g[0]][g[1]], lead_start=round(t, 2), lead_end=round(lead_end, 2), choir_start=round(ca, 2), choir_end=round(ans_end, 2),
+                       lead_removed_s=round(removed, 2), lead_take=pk["case"], lead_cov=round(pk["cov"], 2), choir_take=cp["case"], choir_kind=kind, choir_cov=round(cp["cov"], 2)))
+    if r == 0:
+        verse_first.setdefault(g[0], t)
+    nxt = SEQ[n + 1] if n + 1 < len(SEQ) else None
+    if NONE:
+        base = lead_end + 0.05
+        gap = a.round_gap if (nxt and nxt[0] != r) else (a.verse_gap if (nxt and nxt[1][0] != g[0]) else a.gap)
+        t = base + max(0.05, gap - 0.25)
+    else:
+        t = ans_end - 0.25 + (a.verse_gap if (nxt and nxt[1][0] != g[0]) else a.gap)
 voice_end = events[-1]["choir_end"]
 total = voice_end + a.outro
 N = int(total * SR)
@@ -372,10 +390,15 @@ for q in quiet[int(a.intro / 0.05): int(voice_end / 0.05)]:
     longest = max(longest, run)
 cuts, prev_end = [], None
 for v in range(1, len(LINES)):
-    prev = [ev for ev in events if ev["line"][0] == v - 1][-1]["choir_end"]
+    prev = [ev for ev in events if ev["line"][0] == v - 1 and ev["round"] == 0][-1]["choir_end"]
     nxt = verse_first[v]
     cuts.append(round((prev + nxt) / 2, 2))
-plan = dict(bed=bed_case, total=round(total, 2), voice_start=a.intro, voice_end=round(voice_end, 2), longest_voice_silence_s=round(longest * 0.05, 2), cuts=cuts, events=events)
+verse_bounds = []
+for r_ in range(ROUNDS):
+    for v_ in range(len(LINES)):
+        evs_ = [ev for ev in events if ev["round"] == r_ and ev["line"][0] == v_]
+        verse_bounds.append(dict(round=r_, verse=v_, start=evs_[0]["lead_start"], end=evs_[-1]["choir_end"]))
+plan = dict(verse_bounds=verse_bounds, bed=bed_case, total=round(total, 2), voice_start=a.intro, voice_end=round(voice_end, 2), longest_voice_silence_s=round(longest * 0.05, 2), cuts=cuts, events=events)
 json.dump(plan, open(OUT / "plan.json", "w"), indent=1)
 log(json.dumps({k: plan[k] for k in ("bed", "total", "voice_start", "voice_end", "longest_voice_silence_s", "cuts")}))
 for ev in events:

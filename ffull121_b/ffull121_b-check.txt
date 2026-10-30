@@ -1,0 +1,12 @@
+case=ffull121_b audio_duration_s=140.040000
+BEST TAKE: ffull121_b.mp3 score=0.07 of 1 take(s)
+integrated_loudness=-14.3 LUFS
+=== ffull121_b.mp3: 140.0 s, ref_words=110 heard_words=88 matched_words=74 match_rate=0.67 longest_gap_s=5.9 gaps_over_1.5s=9 first_word_s=17.9 last_word_s=127.0 score=0.07
+   replace: KJV 'i will lift up mine eyes unto the hills' -> HEARD 'from whence cometh my help'
+   delete: KJV 'he will not suffer thy foot to be moved he that keepeth thee will not slumber' -> HEARD ''
+   replace: KJV 'he' -> HEARD 'ye'
+   insert: KJV '' -> HEARD 'shall neither slumber nor sleep'
+   replace: KJV 'keeper the lord is thy shade' -> HEARD 'shape'
+   replace: KJV 'smite' -> HEARD 'smile'
+   replace: KJV 'coming in from' -> HEARD 'come'
+   whisper: From whence cometh my help  From whence cometh my help  My help cometh from the Lord  Which made heaven and earth  Behold, ye that keepeth Israel  Shall neither slumber nor sleep  Shall neither slumber nor sleep  The Lord is thy shape upon thy right hand  The sun shall not smile thee by day  Nor the moon by night  The Lord shall preserve thee  From all evil  He shall preserve thy soul  The Lord shall preserve thy going out  And thy come this time forth  And even for evermore

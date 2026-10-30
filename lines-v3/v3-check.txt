@@ -1,0 +1,20 @@
+case=v3 audio_duration_s=34.032000
+BEST TAKE: v3-t2.mp3 match_rate=0.75 of 4 take(s)
+integrated_loudness=-16.4 LUFS
+=== v3-t1.mp3: 34.0 s, ref_words=16 heard_words=6 matched_words=6 match_rate=0.38
+   delete: KJV 'he restoreth my soul he leadeth me in the paths' -> HEARD ''
+   whisper: Of righteousness for His name's sake
+=== v3-t2.mp3: 34.0 s, ref_words=16 heard_words=16 matched_words=12 match_rate=0.75
+   replace: KJV 'he restoreth' -> HEARD 'heli restored'
+   replace: KJV 'leadeth' -> HEARD 'readeth'
+   replace: KJV 'paths' -> HEARD 'path'
+   whisper: Heli restored my soul, he readeth me in the path  of righteousness for his name's sake
+=== v3-t3.mp3: 34.0 s, ref_words=16 heard_words=5 matched_words=1 match_rate=0.06
+   replace: KJV 'he restoreth my soul he leadeth me in the paths of righteousness' -> HEARD 'thank you thanks'
+   replace: KJV 'his name's sake' -> HEARD 'watching'
+   whisper: Thank you.  Thanks for watching!
+=== v3-t4.mp3: 34.0 s, ref_words=16 heard_words=26 matched_words=9 match_rate=0.56
+   replace: KJV 'he restoreth my soul he leadeth' -> HEARD 'hail it at'
+   replace: KJV 'paths' -> HEARD 'plans'
+   insert: KJV '' -> HEARD 'hail it at me in the plans of righteousness for his name's sake'
+   whisper: 1 Hail it at me in the plans of righteousness for his name's sake.  1 Hail it at me in the plans of righteousness for his name's sake.

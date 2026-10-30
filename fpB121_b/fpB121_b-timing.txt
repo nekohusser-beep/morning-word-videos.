@@ -1,0 +1,6 @@
+case=fpB121_b audio_seconds_requested=72 server_ready_s=30 generate_s=420 takes=1 bytes=1152813
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2Ff2d23999-cc37-29ce-aad4-f4aa885ef259.mp3
+metas={'bpm': 60, 'duration': 72.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'Gentle flowing sacred folk hymn, one warm male singer, smooth legato melody with continuous phrasing and no long pauses, each line flows straight into the next, clear English diction, fingerpicked harp and soft acoustic guitar, warm ambient pad, steady 72 BPM, D minor, calm and comforting, quiet restaurant dinner background music, no drums, no percussion', 'lyrics': '[Verse 1]\nThe Lord is thy keeper:\nthe Lord is thy shade upon thy right hand.\n\n[Verse 2]\nThe sun shall not smite thee by day,\nnor the moon by night.\n\n[Verse 3]\nThe Lord shall preserve thee from all evil:\nhe shall preserve thy soul.\n\n[Verse 4]\nThe Lord shall preserve thy going out and thy coming in\nfrom this time forth, and even for evermore.'}
+generation_info=**🎵 Total generation time (1 song): 379.94s**
+- 379.94s per song
+- DiT phase (1 song): 379.94s

@@ -1,0 +1,10 @@
+case=fpB121_b audio_duration_s=72.024000
+BEST TAKE: fpB121_b.mp3 score=0.29 of 1 take(s)
+integrated_loudness=-14.9 LUFS
+=== fpB121_b.mp3: 72.0 s, ref_words=59 heard_words=39 matched_words=35 match_rate=0.59 longest_gap_s=6.8 gaps_over_1.5s=3 first_word_s=19.8 last_word_s=68.1 score=0.29
+   delete: KJV 'the lord is thy keeper the lord is thy shade upon thy right hand' -> HEARD ''
+   replace: KJV 'smite thee' -> HEARD 'smile'
+   insert: KJV '' -> HEARD 'shall'
+   replace: KJV 'going out and thy coming in' -> HEARD 'glory'
+   replace: KJV 'for evermore' -> HEARD 'forevermore'
+   whisper: The sun shall not smile by day  Nor the moon by night  The Lord shall preserve thee from all evil  He shall, shall preserve thy soul  The Lord shall preserve thy glory  From this time forth and even forevermore

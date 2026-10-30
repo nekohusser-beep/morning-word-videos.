@@ -1,0 +1,7 @@
+case=fp1_c audio_duration_s=38.040000
+BEST TAKE: fp1_c.mp3 score=0.12 of 1 take(s)
+integrated_loudness=-18.2 LUFS
+=== fp1_c.mp3: 38.0 s, ref_words=25 heard_words=5 matched_words=3 match_rate=0.12 longest_gap_s=0.0 gaps_over_1.5s=0 first_word_s=9.8 last_word_s=19.0 score=0.12
+   delete: KJV 'the lord is my shepherd' -> HEARD ''
+   replace: KJV 'want he maketh me to lie down in green pastures he leadeth me beside the still waters' -> HEARD 'one hear'
+   whisper: I shall not one hear

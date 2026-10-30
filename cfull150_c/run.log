@@ -1,0 +1,17 @@
+[      0s] waiting for server health
+[     30s] server healthy
+1 200 {"data":{"task_id":"ec9eabf4-ee25-4070-a257-6988559c82a3","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793342556082,"extra":null}
+[     30s] submitted ec9eabf4-ee25-4070-a257-6988559c82a3
+[     90s] poll 1: status=0
+[    150s] poll 2: status=0
+[    210s] poll 3: status=0
+[    270s] poll 4: status=0
+[    330s] poll 5: status=0
+[    390s] poll 6: status=0
+[    450s] poll 7: status=0
+[    510s] poll 8: status=0
+[    570s] poll 9: status=0
+[    630s] poll 10: status=0
+[    690s] poll 11: status=0
+[    750s] poll 12: status=0
+[    810s] poll 13: status=0

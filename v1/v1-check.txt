@@ -1,0 +1,8 @@
+case=v1 audio_duration_s=22.032000
+integrated_loudness=-13.5 LUFS
+decoded_samples=352000 (22.0 s at 16 kHz)
+ref_words=9 heard_words=9 matched_words=8 match_rate=0.89
+--- diff (KJV -> heard) ---
+replace: KJV 'want' -> HEARD 'mourn'
+--- whisper transcript ---
+The Lord is my shepherd, I shall not mourn.

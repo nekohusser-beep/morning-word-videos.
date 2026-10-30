@@ -1,0 +1,6 @@
+case=v1 audio_seconds_requested=22 server_ready_s=30 generate_s=180 bytes=352941
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2F1e053d4f-5494-2e2a-fe94-760ee489c706.mp3
+metas={'bpm': 60, 'duration': 22.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'Slow reverent chanted solo male voice, warm and gentle, clear American English diction, every word sung clearly, ancient harp and lyre with soft arpeggios, calm ambient pad, 60 BPM, D minor, no drums, no percussion, sleep-friendly, meditative, reverb', 'lyrics': '[Verse]\nThe Lord is my shepherd; I shall not want.'}
+generation_info=**🎵 Total generation time (1 song): 123.74s**
+- 123.74s per song
+- DiT phase (1 song): 123.74s

@@ -1,0 +1,10 @@
+case=cp3_b audio_duration_s=62.040000
+BEST TAKE: cp3_b.mp3 score=0.50 of 1 take(s)
+integrated_loudness=-14.7 LUFS
+=== cp3_b.mp3: 62.0 s, ref_words=47 heard_words=51 matched_words=26 match_rate=0.55 longest_gap_s=1.9 gaps_over_1.5s=1 first_word_s=14.4 last_word_s=55.1 score=0.50
+   delete: KJV 'thou preparest a table before me in' -> HEARD ''
+   replace: KJV 'presence of mine enemies thou anointest' -> HEARD 'pool anoints'
+   delete: KJV 'me all the' -> HEARD ''
+   replace: KJV 'in the house' -> HEARD 'at halls'
+   replace: KJV 'for ever' -> HEARD 'forever and i will dwell at halls of the lord forever and i will dwell at halls of the lord forever'
+   whisper: The pool anoints my head with oil My cup runneth over  Surely goodness and mercy shall follow days of my life  And I will dwell at halls of the Lord forever  And I will dwell at halls of the Lord forever  And I will dwell at halls of the Lord forever

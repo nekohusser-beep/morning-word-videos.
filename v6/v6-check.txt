@@ -1,8 +1,24 @@
 case=v6 audio_duration_s=48.024000
-integrated_loudness=-15.0 LUFS
-decoded_samples=768000 (48.0 s at 16 kHz)
-ref_words=25 heard_words=4 matched_words=0 match_rate=0.00
---- diff (KJV -> heard) ---
-replace: KJV 'surely goodness and mercy shall follow me all the days of my life and i will dwell in the house of the lord for ever' -> HEARD 'thank you very much'
---- whisper transcript ---
-Thank you very much.
+BEST TAKE: v6-t2.mp3 match_rate=0.56 of 4 take(s)
+integrated_loudness=-14.7 LUFS
+=== v6-t1.mp3: 48.0 s, ref_words=25 heard_words=14 matched_words=11 match_rate=0.44
+   delete: KJV 'me all' -> HEARD ''
+   replace: KJV 'days' -> HEARD 'means'
+   replace: KJV 'life' -> HEARD 'lives'
+   replace: KJV 'will dwell in the house of the lord for ever' -> HEARD 'forever'
+   whisper: 1 Surely goodness and mercy shall follow the means of my lives.  And I...  forever.
+=== v6-t2.mp3: 48.0 s, ref_words=25 heard_words=16 matched_words=14 match_rate=0.56
+   delete: KJV 'all the days of my life' -> HEARD ''
+   replace: KJV 'the house' -> HEARD 'hearts'
+   replace: KJV 'lord for ever' -> HEARD 'river'
+   whisper: 🎵  🎵Surely goodness and mercy shall follow me🎵  🎵And I will dwell in hearts of the river🎵
+=== v6-t3.mp3: 48.0 s, ref_words=25 heard_words=16 matched_words=14 match_rate=0.56
+   replace: KJV 'mercy' -> HEARD 'mercies'
+   delete: KJV 'all the days of my life' -> HEARD ''
+   delete: KJV 'in' -> HEARD ''
+   replace: KJV 'lord for ever' -> HEARD 'lover'
+   whisper: Surely goodness and mercies shall follow me  And I will dwell the house of the lover
+=== v6-t4.mp3: 48.0 s, ref_words=25 heard_words=6 matched_words=1 match_rate=0.04
+   replace: KJV 'surely goodness and mercy shall follow me all the days of my life and i will dwell in the house of the lord' -> HEARD 'thank you'
+   replace: KJV 'ever' -> HEARD 'watching thank you'
+   whisper: Thank you for watching!  Thank you.

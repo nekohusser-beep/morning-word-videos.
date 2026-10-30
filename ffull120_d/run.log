@@ -1,0 +1,14 @@
+[      0s] waiting for server health
+[     30s] server healthy
+1 200 {"data":{"task_id":"9f5bb542-a524-4a24-a17c-0269b8ee68a8","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793341074641,"extra":null}
+[     30s] submitted 9f5bb542-a524-4a24-a17c-0269b8ee68a8
+[     90s] poll 1: status=0
+[    150s] poll 2: status=0
+[    210s] poll 3: status=0
+[    270s] poll 4: status=0
+[    330s] poll 5: status=0
+[    390s] poll 6: status=0
+[    450s] poll 7: status=0
+[    510s] poll 8: status=0
+[    570s] poll 9: status=1
+[    570s] saved ffull120_d.mp3 (1920813 bytes); generate took 540s for 120s of audio

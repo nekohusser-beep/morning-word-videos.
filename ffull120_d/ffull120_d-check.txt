@@ -1,0 +1,15 @@
+case=ffull120_d audio_duration_s=120.024000
+BEST TAKE: ffull120_d.mp3 score=0.07 of 1 take(s)
+integrated_loudness=-13.5 LUFS
+=== ffull120_d.mp3: 120.0 s, ref_words=118 heard_words=79 matched_words=67 match_rate=0.57 longest_gap_s=28.5 gaps_over_1.5s=7 first_word_s=13.0 last_word_s=120.0 score=0.07
+   delete: KJV 'the lord is my shepherd' -> HEARD ''
+   replace: KJV 'want' -> HEARD 'walk'
+   delete: KJV 'he restoreth my soul' -> HEARD ''
+   replace: KJV 'thy rod' -> HEARD 'i run'
+   replace: KJV 'thy staff' -> HEARD 'i stand'
+   replace: KJV 'preparest a' -> HEARD 'prepares the'
+   delete: KJV 'in the presence of mine enemies' -> HEARD ''
+   replace: KJV 'anointest' -> HEARD 'anoints'
+   replace: KJV 'my cup runneth over surely goodness and mercy shall follow' -> HEARD 'yea thou art with'
+   delete: KJV 'all the days of my life and i will dwell in the house of the lord for ever' -> HEARD ''
+   whisper: I shall not walk  He maketh me to lie down in green pastures  He leadeth me beside the still waters  He leadeth me in the paths of righteousness  For His name's sake  Yea, though I walk through the valley of the shadow of death  I will fear no evil for Thou art with me  I run and I stand, they comfort me  Thou prepares the table before me  Thou anoints my head with oil  Yea, thou art with me

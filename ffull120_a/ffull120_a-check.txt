@@ -1,0 +1,12 @@
+case=ffull120_a audio_duration_s=120.024000
+BEST TAKE: ffull120_a.mp3 score=0.11 of 1 take(s)
+integrated_loudness=-14.5 LUFS
+=== ffull120_a.mp3: 120.0 s, ref_words=118 heard_words=78 matched_words=66 match_rate=0.56 longest_gap_s=17.9 gaps_over_1.5s=6 first_word_s=16.0 last_word_s=120.0 score=0.11
+   replace: KJV 'shepherd' -> HEARD 'shipper'
+   delete: KJV 'to' -> HEARD ''
+   delete: KJV 'the still waters he restoreth my soul he leadeth me in the paths of righteousness' -> HEARD ''
+   replace: KJV 'preparest a table before me in the presence of mine enemies thou anointest' -> HEARD 'anoint is'
+   replace: KJV 'surely goodness and mercy shall follow me all' -> HEARD 'yea though i walk through'
+   replace: KJV 'days of my life and i will dwell in the house' -> HEARD 'valley'
+   replace: KJV 'lord for ever' -> HEARD 'shadow of death'
+   whisper: The Lord is my shipper, I shall not want  He maketh me lie down in green pastures  He leadeth me beside for His name's sake  Yea, though I walk through the valley of the shadow of death  I will fear no evil for Thou art with me  Thy rod and Thy staff, they comfort me  Thou anoint is my head with oil, my cup runneth over  Yea, though I walk through the valley of the shadow of death

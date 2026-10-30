@@ -1,10 +1,19 @@
 case=v2 audio_duration_s=34.032000
-integrated_loudness=-15.7 LUFS
-decoded_samples=544000 (34.0 s at 16 kHz)
-ref_words=16 heard_words=6 matched_words=5 match_rate=0.31
---- diff (KJV -> heard) ---
-delete: KJV 'he maketh me to lie down in green pastures' -> HEARD ''
-delete: KJV 'beside' -> HEARD ''
-replace: KJV 'waters' -> HEARD 'hoarders'
---- whisper transcript ---
-He leadeth me, the still hoarders
+BEST TAKE: v2-t3.mp3 match_rate=0.94 of 4 take(s)
+integrated_loudness=-14.3 LUFS
+=== v2-t1.mp3: 34.0 s, ref_words=16 heard_words=16 matched_words=11 match_rate=0.69
+   replace: KJV 'lie down' -> HEARD 'life'
+   replace: KJV 'pastures' -> HEARD 'passions'
+   replace: KJV 'leadeth me' -> HEARD 'lead us made'
+   whisper: He maketh me to life in green passions  He lead us made beside the still waters
+=== v2-t2.mp3: 34.0 s, ref_words=16 heard_words=14 matched_words=14 match_rate=0.88
+   delete: KJV 'in' -> HEARD ''
+   delete: KJV 'the' -> HEARD ''
+   whisper: He maketh me to lie down green pastures  He leadeth me beside still waters
+=== v2-t3.mp3: 34.0 s, ref_words=16 heard_words=23 matched_words=15 match_rate=0.94
+   replace: KJV 'pastures' -> HEARD 'postures'
+   insert: KJV '' -> HEARD 'he leadeth me beside the still waters'
+   whisper: He maketh me to lie down in green postures He leadeth me beside the still waters  He leadeth me beside the still waters
+=== v2-t4.mp3: 34.0 s, ref_words=16 heard_words=3 matched_words=0 match_rate=0.00
+   replace: KJV 'he maketh me to lie down in green pastures he leadeth me beside the still waters' -> HEARD 'thanks for watching'
+   whisper: 🎵  🎵  Thanks for watching!

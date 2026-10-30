@@ -69,6 +69,16 @@ for _name, (_rng, _dur) in _FLOW.items():
         CASES[f"{_name}_{_t}"] = {"verses": [V[i] for i in _rng], "lines": [LINES[i] for i in _rng], "duration": _dur, "caption": CAPTION_FLOW}
 
 
+# ---- CHOIR cases (Neko Oct 30 2026 2:36 AM ET: the baritone sings a line, then the ANGELS (altos) answer the same line, so there is no gap) ----
+# Same exact KJV phrase lines, but a female alto choir, a cappella, so the stem can be laid in as the "angels" answer.
+CAPTION_CHOIR = ("A cappella heavenly female alto choir, soft ethereal angelic voices in close harmony, smooth legato phrases that begin right away, "
+                 "warm cathedral reverb, slow sacred hymn, steady 72 BPM, D minor, clear English diction, no instruments, no drums, no percussion")
+_CHOIR = {"cfull150": (range(6), 150, "abcd"), "cp1": (range(0, 2), 38, "ab"), "cp2": (range(2, 4), 62, "ab"), "cp3": (range(4, 6), 62, "ab")}
+for _name, (_rng, _dur, _ts) in _CHOIR.items():
+    for _t in _ts:
+        CASES[f"{_name}_{_t}"] = {"verses": [V[i] for i in _rng], "lines": [LINES[i] for i in _rng], "duration": _dur, "caption": CAPTION_CHOIR}
+
+
 def lyrics_for(case, flow="verse"):  # accepts run.py's 2nd arg (ACE_FLOW); flow cases carry their own phrase lines
     c = CASES[case]
     if "lines" in c:

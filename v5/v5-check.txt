@@ -1,0 +1,11 @@
+case=v5 audio_duration_s=43.032000
+integrated_loudness=-16.4 LUFS
+decoded_samples=688000 (43.0 s at 16 kHz)
+ref_words=22 heard_words=23 matched_words=12 match_rate=0.55
+--- diff (KJV -> heard) ---
+replace: KJV 'thou preparest a table' -> HEARD 'now i'll prepare us the tables'
+replace: KJV 'mine enemies' -> HEARD 'my nanniness'
+replace: KJV 'anointest my head' -> HEARD 'anointed smile'
+replace: KJV 'oil' -> HEARD 'all'
+--- whisper transcript ---
+Now I'll prepare us the tables before me In the presence of my nanniness  Thou anointed smile with all my cup runneth over

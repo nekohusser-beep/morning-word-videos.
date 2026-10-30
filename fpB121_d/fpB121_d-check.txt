@@ -1,0 +1,8 @@
+case=fpB121_d audio_duration_s=72.024000
+BEST TAKE: fpB121_d.mp3 score=0.38 of 1 take(s)
+integrated_loudness=-14.7 LUFS
+=== fpB121_d.mp3: 72.0 s, ref_words=59 heard_words=56 matched_words=40 match_rate=0.68 longest_gap_s=24.2 gaps_over_1.5s=3 first_word_s=0.0 last_word_s=72.0 score=0.38
+   delete: KJV 'the lord is thy keeper' -> HEARD ''
+   replace: KJV 'thy going out and thy coming in' -> HEARD 'thee'
+   replace: KJV 'this time forth and even for evermore' -> HEARD 'all evil the sun shall not smite thee by day nor the moon by night'
+   whisper: 1 The Lord is thy shade upon thy right hand, the sun shall not smite thee by day, nor the moon by night.  2 The Lord shall preserve thee from all evil, he shall preserve thy soul.  The Lord shall preserve thee from all evil, the sun shall not smite thee by day, nor the moon by night.

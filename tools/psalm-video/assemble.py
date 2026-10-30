@@ -137,10 +137,49 @@ class Take:
         if e <= s + 0.5:
             s, e = c["t0"] - 0.05, c["t1"] + 0.25
         seg = self.wav[int(s * SR): int(e * SR)].copy()
+        seg, self.removed = tighten(seg)
         fi, fo = int(0.03 * SR), int(0.12 * SR)
         seg[:fi] *= np.linspace(0, 1, fi)[:, None]
         seg[-fo:] *= np.linspace(1, 0, fo)[:, None]
         return seg
+
+
+def tighten(seg, min_run=0.7, keep=0.2, xf=0.04):
+    """Voice-stem only: shorten any silence longer than min_run inside a line to 2*keep, so the singer never stalls mid-line."""
+    hop = int(SR * 0.01)
+    n = len(seg) // hop
+    if n < 10:
+        return seg, 0.0
+    env = np.sqrt((seg[: n * hop].mean(axis=1).reshape(n, hop) ** 2).mean(axis=1) + 1e-12)
+    thr = np.percentile(env, 95) * 0.02
+    quiet = env < thr
+    cuts, i = [], 0
+    while i < n:
+        if quiet[i]:
+            j = i
+            while j < n and quiet[j]:
+                j += 1
+            if i > 0 and j < n and (j - i) * 0.01 > min_run:
+                cuts.append((i + int(keep / 0.01), j - int(keep / 0.01)))
+            i = j
+        else:
+            i += 1
+    if not cuts:
+        return seg, 0.0
+    out, pos, removed = [], 0, 0
+    x = int(xf * SR)
+    for a0, a1 in cuts:
+        p0, p1 = a0 * hop, a1 * hop
+        out.append(seg[pos:p0])
+        pos = p1
+        removed += (p1 - p0) / SR
+    out.append(seg[pos:])
+    res = out[0]
+    for part in out[1:]:
+        k = min(x, len(res), len(part))
+        fade = np.linspace(0, 1, k)[:, None]
+        res = np.vstack([res[:-k], res[-k:] * (1 - fade) + part[:k] * fade, part[k:]])
+    return res, removed
 
 
 def rms_db(x):
@@ -184,9 +223,9 @@ def reverb(x, ir, wet):
     n = len(x)
     w = np.stack([ss.fftconvolve(x[:, c], ir[:, c]) for c in range(2)], axis=1)
     w = w / (np.abs(w).max() + 1e-9) * np.abs(x).max()
-    out = np.zeros((len(w), 2), np.float32)
-    out[:n] += x * (1 - wet)
-    out += w * wet
+    out = np.zeros((n, 2), np.float32)
+    out += x * (1 - wet)
+    out += w[:n] * wet  # the reverb tail past the end is covered by the outro fade
     return out
 
 
@@ -244,9 +283,11 @@ log("bed chosen:", bed_case, round(len(bed) / SR, 1), "s")
 IR = make_ir()
 LEAD_DB, CHOIR_DB = -19.0, -22.0
 leads, answers = {}, {}
+lead_removed_map = {}
 for g in GLOBAL:
     lp = lead_pick[g]
     leads[g] = set_rms(takes[lp["case"]].cut(g), LEAD_DB)
+    lead_removed_map[g] = takes[lp["case"]].removed
     cp, kind = choir_pick[g]
     seg = takes[cp["case"]].cut(g)
     if kind == "alto":
@@ -281,7 +322,7 @@ for n, g in enumerate(GLOBAL):
     choir_bus[s1: s1 + len(A)] += A
     ans_end = ca + len(A) / SR
     events.append(dict(line=list(g), text=LINES[g[0]][g[1]], lead_start=round(t, 2), lead_end=round(lead_end, 2), choir_start=round(ca, 2), choir_end=round(ans_end, 2),
-                       lead_take=lead_pick[g]["case"], lead_cov=round(lead_pick[g]["cov"], 2), choir_take=choir_pick[g][0]["case"], choir_kind=choir_pick[g][1], choir_cov=round(choir_pick[g][0]["cov"], 2)))
+                       lead_removed_s=round(lead_removed_map[g], 2), lead_take=lead_pick[g]["case"], lead_cov=round(lead_pick[g]["cov"], 2), choir_take=choir_pick[g][0]["case"], choir_kind=choir_pick[g][1], choir_cov=round(choir_pick[g][0]["cov"], 2)))
     verse_first.setdefault(g[0], t)
     nxt = GLOBAL[n + 1] if n + 1 < len(GLOBAL) else None
     t = ans_end - 0.25 + (a.verse_gap if (nxt and nxt[0] != g[0]) else a.gap)

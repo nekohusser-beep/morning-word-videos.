@@ -10,6 +10,10 @@ on:
         description: "ACE-Step commit to test"
         required: true
         default: "ca1e85fe9430179831e6bc6be790c332190a3866"
+      takes:
+        description: "takes per case (batch_size); the checker keeps the best by Whisper word match"
+        required: false
+        default: "1"
       cases:
         description: "JSON list of cases: short, full, v1..v6 (one verse each)"
         required: true
@@ -26,6 +30,7 @@ jobs:
         case: ${{ fromJSON(inputs.cases) }}
     env:
       CASE: ${{ matrix.case }}
+      TAKES: ${{ inputs.takes }}
       ACESTEP_DEVICE: cpu
       ACESTEP_INIT_LLM: "false"
       ACESTEP_USE_FLASH_ATTENTION: "false"

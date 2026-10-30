@@ -41,26 +41,35 @@ def facts():
 
 
 def whisper():
+    import shutil
+    import numpy as np  # decode with ffmpeg ourselves: faster-whisper's PyAV decoder crashed on the runner (av.open metadata_errors)
     from lyrics import plain_for
     from faster_whisper import WhisperModel
     norm = lambda s: re.findall(r"[a-z']+", s.lower().replace("\u2019", "'"))  # noqa: E731
     ref = norm(plain_for(case))
-    import numpy as np  # decode with ffmpeg ourselves: faster-whisper's PyAV decoder crashed on the runner (av.open metadata_errors)
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(mp3), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True).stdout
-    audio = np.frombuffer(raw, dtype=np.float32)
-    lines.append(f"decoded_samples={len(audio)} ({len(audio) / 16000:.1f} s at 16 kHz)")
-    segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(audio, language="en", beam_size=5)
-    text = " ".join(s.text for s in segs)
-    hyp = norm(text)
-    sm = difflib.SequenceMatcher(a=ref, b=hyp, autojunk=False)
-    ok = sum(b.size for b in sm.get_matching_blocks())
-    lines.append(f"ref_words={len(ref)} heard_words={len(hyp)} matched_words={ok} match_rate={ok / max(1, len(ref)):.2f}")
-    lines.append("--- diff (KJV -> heard) ---")
-    for tag, i1, i2, j1, j2 in sm.get_opcodes():
-        if tag != "equal":
-            lines.append(f"{tag}: KJV '{' '.join(ref[i1:i2])}' -> HEARD '{' '.join(hyp[j1:j2])}'")
-    lines.append("--- whisper transcript ---")
-    lines.append(text.strip())
+    model = WhisperModel("small.en", device="cpu", compute_type="int8")
+    takes = sorted(out.glob(f"{case}-t*.mp3")) or [mp3]
+    best = None
+    for tk in takes:
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(tk), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True).stdout
+        audio = np.frombuffer(raw, dtype=np.float32)
+        segs, _ = model.transcribe(audio, language="en", beam_size=5)
+        text = " ".join(s.text for s in segs)
+        hyp = norm(text)
+        sm = difflib.SequenceMatcher(a=ref, b=hyp, autojunk=False)
+        ok = sum(b.size for b in sm.get_matching_blocks())
+        rate = ok / max(1, len(ref))
+        lines.append(f"=== {tk.name}: {len(audio) / 16000:.1f} s, ref_words={len(ref)} heard_words={len(hyp)} matched_words={ok} match_rate={rate:.2f}")
+        for tag, i1, i2, j1, j2 in sm.get_opcodes():
+            if tag != "equal":
+                lines.append(f"   {tag}: KJV '{' '.join(ref[i1:i2])}' -> HEARD '{' '.join(hyp[j1:j2])}'")
+        lines.append("   whisper: " + text.strip())
+        if best is None or rate > best[0]:
+            best = (rate, tk)
+        flush()
+    lines.insert(1, f"BEST TAKE: {best[1].name} match_rate={best[0]:.2f} of {len(takes)} take(s)")
+    if len(takes) > 1:
+        shutil.copy(best[1], out / f"{case}-best.mp3")
 
 
 stage("facts", facts)

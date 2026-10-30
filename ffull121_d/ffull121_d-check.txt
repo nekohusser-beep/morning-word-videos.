@@ -1,0 +1,13 @@
+case=ffull121_d audio_duration_s=140.040000
+BEST TAKE: ffull121_d.mp3 score=0.26 of 1 take(s)
+integrated_loudness=-14.1 LUFS
+=== ffull121_d.mp3: 140.0 s, ref_words=110 heard_words=94 matched_words=78 match_rate=0.71 longest_gap_s=9.7 gaps_over_1.5s=6 first_word_s=14.0 last_word_s=129.9 score=0.26
+   replace: KJV 'hills from whence cometh my help' -> HEARD 'hill'
+   replace: KJV 'he will not suffer thy foot to be moved he that' -> HEARD 'which might'
+   delete: KJV 'thee' -> HEARD ''
+   replace: KJV 'sun' -> HEARD 'lord is thy shade upon thy right hand the lord'
+   replace: KJV 'nor' -> HEARD 'you're'
+   delete: KJV 'shall' -> HEARD ''
+   replace: KJV 'thee from all evil he shall preserve thy soul' -> HEARD 'us'
+   replace: KJV 'for evermore' -> HEARD 'forever'
+   whisper: I will lift up mine eyes unto the hill My help cometh from the Lord which made  heaven and earth Which might keepeth, will not slumber  Behold, he that keepeth Israel Shall neither slumber nor sleep  The Lord is thy keeper, the Lord is thy shade upon thy right hand  The Lord is thy shade upon thy right hand  The Lord shall not smite thee by day, You're the moon by night  The Lord preserve us, the Lord shall preserve thy going out and thy coming in  From this time forth and even forever

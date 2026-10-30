@@ -1,0 +1,14 @@
+case=ffull150_d audio_duration_s=150.024000
+BEST TAKE: ffull150_d.mp3 score=0.16 of 1 take(s)
+integrated_loudness=-15.4 LUFS
+=== ffull150_d.mp3: 150.0 s, ref_words=118 heard_words=93 matched_words=72 match_rate=0.61 longest_gap_s=35.7 gaps_over_1.5s=6 first_word_s=8.1 last_word_s=150.0 score=0.16
+   replace: KJV 'restoreth' -> HEARD 'restored'
+   replace: KJV 'he leadeth me in the paths of righteousness for his name's sake yea' -> HEARD 'yet'
+   delete: KJV 'of the shadow of death' -> HEARD ''
+   insert: KJV '' -> HEARD 'evil for thou art'
+   replace: KJV 'staff' -> HEARD 'stuff they comfort me'
+   replace: KJV 'preparest a' -> HEARD 'prepares the'
+   insert: KJV '' -> HEARD 'thou anointest my head with oil'
+   delete: KJV 'surely goodness and mercy shall follow me all the days of' -> HEARD ''
+   replace: KJV 'life and i will dwell in the house of the lord for ever' -> HEARD 'cup runneth over'
+   whisper: The Lord is my shepherd I shall not want  He maketh me to lie down in green pastures  He leadeth me beside the still waters  He restored my soul  Yet though I walk through the valley  I will fear no evil for Thou art evil  For Thou art with me, Thy rod and Thy stuff  They comfort me, they comfort me  Thou prepares the table before me in the presence of mine enemies  Thou anointest my head with oil, Thou anointest my head with oil  My cup runneth over  My cup runneth over

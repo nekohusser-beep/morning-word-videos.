@@ -26,6 +26,10 @@ ap.add_argument("--h", type=int, default=1080)
 ap.add_argument("--fps", type=int, default=30)
 ap.add_argument("--xfade", type=float, default=3.0)
 ap.add_argument("--limit", type=float, default=0.0, help="render only the first N seconds (preview)")
+ap.add_argument("--loop", type=float, default=0.0, help="make a seamless loop: crossfade the last N s of the song into its start, dissolve the last scene back into the first, no fades")
+ap.add_argument("--crf", type=int, default=21)
+ap.add_argument("--maxrate", default="", help="e.g. 1500k (adds a bitrate cap)")
+ap.add_argument("--audio-out", default="", help="write the (loop) audio used, as wav")
 a = ap.parse_args()
 
 W, H, FPS, XF = a.w, a.h, a.fps, a.xfade
@@ -37,6 +41,25 @@ dur = float(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", a.audio], text=True
     ).strip()
 )
+LOOP = a.loop > 0
+SRA = 44100
+audio_path = a.audio
+if LOOP:
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", a.audio, "-f", "f32le", "-ac", "2", "-ar", str(SRA), "-"], capture_output=True, check=True).stdout
+    au = np.frombuffer(raw, np.float32).reshape(-1, 2)
+    X = int(a.loop * SRA)
+    Ln = len(au) - X
+    loop_au = au[:Ln].copy()
+    th = np.linspace(0, np.pi / 2, X)[:, None]
+    loop_au[:X] = au[:X] * np.sin(th) + au[Ln:Ln + X] * np.cos(th)  # tail fades out while the head fades in: the join is the song continuing into its own intro
+    import wave
+    audio_path = a.audio_out or (a.out + ".loop.wav")
+    with wave.open(audio_path, "wb") as wf:
+        wf.setnchannels(2)
+        wf.setsampwidth(2)
+        wf.setframerate(SRA)
+        wf.writeframes((np.clip(loop_au, -1, 1) * 32767).astype("<i2").tobytes())
+    dur = Ln / SRA
 total = a.limit or dur
 bounds = [0.0] + cuts + [dur]
 glow_pts = [tuple(float(v) for v in g.split(":")) for g in a.glows.split(",")] if a.glows else [(0.5, 0.3)] * len(scenes)
@@ -72,7 +95,9 @@ rng = np.random.default_rng(23)
 NP = 70
 px = rng.random(NP)
 py = rng.random(NP)
-pv = 0.006 + 0.012 * rng.random(NP)
+ncy = rng.integers(4, 11, NP)  # whole drift cycles per loop so the sparks are in the same place at the end as at the start
+msw = rng.integers(20, 60, NP)
+mtw = rng.integers(80, 200, NP)
 pr = 2 + 5 * rng.random(NP)
 pph = rng.random(NP) * 6.28
 sprite = {}
@@ -103,17 +128,18 @@ def scene_frame(i, t):
     M = np.array([[sc, 0, -x0 * sc], [0, sc, -y0 * sc]], np.float32)
     f = cv2.warpAffine(im, M, (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE).astype(np.float32)
     # breathing light at the source
-    breath = 0.10 + 0.05 * math.sin(2 * math.pi * t / 7.0 + i)
+    breath = 0.10 + 0.05 * math.sin(2 * math.pi * max(1, round(dur / 7.0)) * t / dur + i)
     f += glows[i] * WARM * 255.0 * breath
     return f
 
 
 def motes(f, t):
     for k in range(NP):
-        y = (py[k] - pv[k] * t) % 1.0
-        x = (px[k] + 0.02 * math.sin(t * 0.4 + pph[k])) % 1.0
+        ph = t / dur
+        y = (py[k] - ncy[k] * ph) % 1.0
+        x = (px[k] + 0.02 * math.sin(2 * math.pi * msw[k] * ph + pph[k])) % 1.0
         r = int(pr[k]) if int(pr[k]) in sprite else 3
-        tw = 0.35 + 0.35 * math.sin(t * 1.3 + pph[k])
+        tw = 0.35 + 0.35 * math.sin(2 * math.pi * mtw[k] * ph + pph[k])
         sp = sprite[r]
         cx, cy = int(x * W), int(y * H)
         h = sp.shape[0] // 2
@@ -138,16 +164,21 @@ def frame_at(t):
         w = (t - (cuts[i] - XF / 2)) / XF
         w = w * w * (3 - 2 * w)
         f = f * (1 - w) + scene_frame(i + 1, t) * w
+    if LOOP and t > dur - XF:
+        w = (t - (dur - XF)) / XF
+        w = w * w * (3 - 2 * w)
+        f = scene_frame(len(cuts), t) * (1 - w) + scene_frame(0, t - dur) * w
     f = motes(f * vig, t)
-    fade = min(1.0, t / 2.0, max(0.0, (total - t) / 3.0))
+    fade = 1.0 if LOOP else min(1.0, t / 2.0, max(0.0, (total - t) / 3.0))
     return np.clip(f * fade, 0, 255).astype(np.uint8)
 
 
 cmd = [
     "ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-    "-i", a.audio, "-t", f"{total:.3f}",
-    "-af", f"afade=t=in:d=1.5,afade=t=out:st={max(total - 3.5, 0):.2f}:d=3.5",
-    "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+    "-i", audio_path, "-t", f"{total:.3f}",
+    *([] if LOOP else ["-af", f"afade=t=in:d=1.5,afade=t=out:st={max(total - 3.5, 0):.2f}:d=3.5"]),
+    "-c:v", "libx264", "-preset", "veryfast", "-crf", str(a.crf), *(["-maxrate", a.maxrate, "-bufsize", str(int(a.maxrate.rstrip("k")) * 2) + "k"] if a.maxrate else []),
+    "-pix_fmt", "yuv420p", "-movflags", "+faststart",
     "-c:a", "aac", "-b:a", "192k", "-shortest", a.out,
 ]
 pr_ = subprocess.Popen(cmd, stdin=subprocess.PIPE)

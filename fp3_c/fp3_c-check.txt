@@ -1,0 +1,11 @@
+case=fp3_c audio_duration_s=62.040000
+BEST TAKE: fp3_c.mp3 score=0.20 of 1 take(s)
+integrated_loudness=-14.0 LUFS
+=== fp3_c.mp3: 62.0 s, ref_words=47 heard_words=33 matched_words=19 match_rate=0.40 longest_gap_s=27.0 gaps_over_1.5s=1 first_word_s=6.5 last_word_s=61.8 score=0.20
+   delete: KJV 'preparest a table before me in' -> HEARD ''
+   replace: KJV 'presence' -> HEARD 'persons'
+   insert: KJV '' -> HEARD 'thou anointest my head'
+   replace: KJV 'cup' -> HEARD 'car'
+   replace: KJV 'surely goodness and mercy shall follow me all' -> HEARD 'i'll occur'
+   replace: KJV 'and i will dwell in the house of the lord for ever' -> HEARD 'thou anointest my head with oil'
+   whisper: Thou the persons of mine enemies Thou anointest my head  Thou anointest my head with oil My car runneth over  I'll occur the days of my life  Thou anointest my head with oil

@@ -1,0 +1,9 @@
+case=cp3_a audio_duration_s=62.040000
+BEST TAKE: cp3_a.mp3 score=0.35 of 1 take(s)
+integrated_loudness=-14.3 LUFS
+=== cp3_a.mp3: 62.0 s, ref_words=47 heard_words=39 matched_words=26 match_rate=0.55 longest_gap_s=8.9 gaps_over_1.5s=1 first_word_s=6.3 last_word_s=62.0 score=0.35
+   replace: KJV 'thou preparest a table before me in the presence of mine enemies thou anointest my head with oil my' -> HEARD 'oooooo oooooo oooooo oooooo oooooo oooooo one black'
+   replace: KJV 'runneth' -> HEARD 'run is'
+   insert: KJV '' -> HEARD 'forever thanks'
+   replace: KJV 'ever' -> HEARD 'watching'
+   whisper: Oooooo oooooo oooooo Oooooo oooooo oooooo  One black cup run is over Surely goodness and mercy shall follow me all the days of my life  And I will dwell in the house of the Lord forever  Thanks for watching!

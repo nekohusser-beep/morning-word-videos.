@@ -1,0 +1,12 @@
+[      0s] waiting for server health
+[     30s] server healthy
+1 200 {"data":{"task_id":"16f3e884-27b4-4e4d-b3b0-133fa5eff8a9","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793342512131,"extra":null}
+[     30s] submitted 16f3e884-27b4-4e4d-b3b0-133fa5eff8a9
+[     90s] poll 1: status=0
+[    150s] poll 2: status=0
+[    210s] poll 3: status=0
+[    270s] poll 4: status=0
+[    330s] poll 5: status=0
+[    390s] poll 6: status=0
+[    450s] poll 7: status=1
+[    450s] saved cp3_a.mp3 (993069 bytes); generate took 420s for 62s of audio

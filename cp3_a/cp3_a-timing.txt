@@ -1,0 +1,6 @@
+case=cp3_a audio_seconds_requested=62 server_ready_s=30 generate_s=420 takes=1 bytes=993069
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2F64f229f2-14f4-31e3-2563-3052e03dcf13.mp3
+metas={'bpm': 60, 'duration': 62.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'A cappella heavenly female alto choir, soft ethereal angelic voices in close harmony, smooth legato phrases that begin right away, warm cathedral reverb, slow sacred hymn, steady 72 BPM, D minor, clear English diction, no instruments, no drums, no percussion', 'lyrics': '[Verse 1]\nThou preparest a table before me in the presence of mine enemies:\nthou anointest my head with oil;\nmy cup runneth over.\n\n[Verse 2]\nSurely goodness and mercy shall follow me all the days of my life:\nand I will dwell in the house of the Lord for ever.'}
+generation_info=**🎵 Total generation time (1 song): 389.86s**
+- 389.86s per song
+- DiT phase (1 song): 389.86s

@@ -126,7 +126,7 @@ def scene_frame(i, t):
     y0 = (ih - ch) * fy
     sc = W / cw
     M = np.array([[sc, 0, -x0 * sc], [0, sc, -y0 * sc]], np.float32)
-    f = cv2.warpAffine(im, M, (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE).astype(np.float32)
+    f = cv2.warpAffine(im, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE).astype(np.float32)
     # breathing light at the source
     breath = 0.10 + 0.05 * math.sin(2 * math.pi * max(1, round(dur / 7.0)) * t / dur + i)
     f += glows[i] * WARM * 255.0 * breath

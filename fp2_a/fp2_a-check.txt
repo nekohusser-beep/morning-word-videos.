@@ -1,0 +1,8 @@
+case=fp2_a audio_duration_s=62.040000
+BEST TAKE: fp2_a.mp3 score=0.43 of 1 take(s)
+integrated_loudness=-15.4 LUFS
+=== fp2_a.mp3: 62.0 s, ref_words=46 heard_words=33 matched_words=29 match_rate=0.63 longest_gap_s=10.0 gaps_over_1.5s=1 first_word_s=14.3 last_word_s=50.0 score=0.43
+   replace: KJV 'he restoreth my soul he leadeth' -> HEARD 'in the path'
+   replace: KJV 'righteousness' -> HEARD 'righteous'
+   delete: KJV 'death i will fear no evil for thou art with' -> HEARD ''
+   whisper: In the path, me in the paths of righteous For his name's sake  Yea, though I walk through the valley of the shadow of me  Thy rod and thy staff, they comfort me

@@ -1,1 +1,1 @@
-uv_sync_s=47 model_download_s=48
+uv_sync_s=38 model_download_s=47

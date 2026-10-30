@@ -1,0 +1,23 @@
+case=v2 audio_duration_s=34.032000
+BEST TAKE: v2-t3.mp3 match_rate=0.75 of 4 take(s)
+integrated_loudness=-16.1 LUFS
+=== v2-t1.mp3: 34.0 s, ref_words=16 heard_words=20 matched_words=8 match_rate=0.50
+   delete: KJV 'he maketh me to lie down' -> HEARD ''
+   replace: KJV 'green' -> HEARD 'grain'
+   replace: KJV 'waters' -> HEARD 'water in grain pastures he leadeth me beside the still water'
+   whisper: In grain pastures he leadeth me Beside the still water  In grain pastures he leadeth me Beside the still water
+=== v2-t2.mp3: 34.0 s, ref_words=16 heard_words=12 matched_words=7 match_rate=0.44
+   delete: KJV 'he maketh me to lie down' -> HEARD ''
+   insert: KJV '' -> HEARD 'the'
+   delete: KJV 'he leadeth me' -> HEARD ''
+   insert: KJV '' -> HEARD 'in the green pastures'
+   whisper: In the green pastures  Beside the still waters  In the green pastures
+=== v2-t3.mp3: 34.0 s, ref_words=16 heard_words=13 matched_words=12 match_rate=0.75
+   delete: KJV 'to lie down' -> HEARD ''
+   replace: KJV 'pastures' -> HEARD 'pushers'
+   whisper: He maketh me, in green pushers He leadeth me, beside the still waters
+=== v2-t4.mp3: 34.0 s, ref_words=16 heard_words=12 matched_words=5 match_rate=0.31
+   delete: KJV 'he maketh me to lie down' -> HEARD ''
+   replace: KJV 'pastures he leadeth' -> HEARD 'fashion you leaded'
+   replace: KJV 'still waters' -> HEARD 'steel wall of this'
+   whisper: In green fashion, you leaded me beside the steel wall of this

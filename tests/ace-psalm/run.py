@@ -54,10 +54,24 @@ body = {
     "batch_size": int(os.environ.get("TAKES", "1")),
     "use_random_seed": True,
 }
-r = requests.post(f"{BASE}/release_task", json=body, timeout=60)
-print(r.status_code, r.text[:400], flush=True)
-r.raise_for_status()
-tid = r.json()["data"]["task_id"]
+# retry the submit: right after /health the server can still answer 5xx while it lazy-loads; every failure is written to <case>-run-error.txt
+tid = None
+for attempt in range(1, 9):
+    try:
+        r = requests.post(f"{BASE}/release_task", json=body, timeout=120)
+        print(attempt, r.status_code, r.text[:400], flush=True)
+        if r.status_code == 200 and (r.json().get("data") or {}).get("task_id"):
+            tid = r.json()["data"]["task_id"]
+            break
+        with open(out / f"{case}-run-error.txt", "a", encoding="utf-8") as fh:
+            fh.write(f"submit try {attempt}: HTTP {r.status_code} {r.text[:600]}\n")
+    except Exception as e:  # noqa: BLE001
+        print(attempt, "EXC", repr(e), flush=True)
+        with open(out / f"{case}-run-error.txt", "a", encoding="utf-8") as fh:
+            fh.write(f"submit try {attempt}: {e!r}\n")
+    time.sleep(30 * attempt)
+if not tid:
+    sys.exit("could not submit the task after 8 tries (see run-error.txt)")
 t_sub = time.time()
 stamp(f"submitted {tid}")
 
@@ -65,7 +79,11 @@ stamp(f"submitted {tid}")
 res = None
 for i in range(150):
     time.sleep(60)
-    q = requests.post(f"{BASE}/query_result", json={"task_id_list": [tid]}, timeout=60).json()
+    try:
+        q = requests.post(f"{BASE}/query_result", json={"task_id_list": [tid]}, timeout=60).json()
+    except Exception as e:  # noqa: BLE001
+        stamp(f"poll {i + 1}: transient {e!r}")
+        continue
     d = (q.get("data") or [{}])[0]
     st = d.get("status")
     stamp(f"poll {i + 1}: status={st}")

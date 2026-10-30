@@ -83,7 +83,7 @@ jobs:
           LOG="$GITHUB_WORKSPACE/out/${CASE}/server.log"
           nohup uv run acestep-api > "$LOG" 2>&1 &
           SRV=$!
-          python "$GITHUB_WORKSPACE/tests/ace-psalm/run.py" "$CASE" "$GITHUB_WORKSPACE/out/${CASE}" &
+          python -u "$GITHUB_WORKSPACE/tests/ace-psalm/run.py" "$CASE" "$GITHUB_WORKSPACE/out/${CASE}" > "$GITHUB_WORKSPACE/out/${CASE}/run.log" 2>&1 &
           RUN=$!
           # if the server dies before the generation finishes, stop waiting
           while kill -0 "$RUN" 2>/dev/null; do
@@ -91,6 +91,7 @@ jobs:
             sleep 10
           done
           wait "$RUN"; RC=$?
+          echo "run.py exit code $RC"; tail -25 "$GITHUB_WORKSPACE/out/${CASE}/run.log" || true
           kill "$SRV" 2>/dev/null || true
           tail -30 "$LOG" || true
           exit $RC

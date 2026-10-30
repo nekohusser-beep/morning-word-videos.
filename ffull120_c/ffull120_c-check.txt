@@ -1,0 +1,14 @@
+case=ffull120_c audio_duration_s=120.024000
+BEST TAKE: ffull120_c.mp3 score=0.27 of 1 take(s)
+integrated_loudness=-13.8 LUFS
+=== ffull120_c.mp3: 120.0 s, ref_words=118 heard_words=100 matched_words=85 match_rate=0.72 longest_gap_s=5.2 gaps_over_1.5s=6 first_word_s=12.6 last_word_s=108.0 score=0.27
+   replace: KJV 'want he maketh me to lie down in green pastures' -> HEARD 'walk'
+   replace: KJV 'restoreth' -> HEARD 'restored my soul he restored'
+   replace: KJV 'name's' -> HEARD 'main'
+   replace: KJV 'yea' -> HEARD 'yeah'
+   replace: KJV 'thy staff' -> HEARD 'i stealth'
+   replace: KJV 'preparest a' -> HEARD 'prepares the'
+   replace: KJV 'enemies' -> HEARD 'and he's'
+   delete: KJV 'surely goodness and mercy shall follow me all the days of my life' -> HEARD ''
+   replace: KJV 'for ever' -> HEARD 'forever'
+   whisper: The Lord is my shepherd, I shall not walk He leadeth me beside the still waters  He restored my soul, he restored my soul He leadeth me in the paths of righteousness  for his main sake Yeah, though I walk through the valley of the shadow of death  I will fear no evil, for Thou art with me Thy rod and I stealth, they comfort me  Thou prepares the table before me In the presence of mine and He's  Thou anointest my head with oil, my cup runneth over  And I will dwell in the house of the Lord forever

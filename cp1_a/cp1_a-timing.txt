@@ -1,0 +1,6 @@
+case=cp1_a audio_seconds_requested=38 server_ready_s=20 generate_s=240 takes=1 bytes=609069
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2F27698218-d60a-9213-a305-c7db2a5281a9.mp3
+metas={'bpm': 60, 'duration': 38.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'A cappella heavenly female alto choir, soft ethereal angelic voices in close harmony, smooth legato phrases that begin right away, warm cathedral reverb, slow sacred hymn, steady 72 BPM, D minor, clear English diction, no instruments, no drums, no percussion', 'lyrics': '[Verse 1]\nThe Lord is my shepherd;\nI shall not want.\n\n[Verse 2]\nHe maketh me to lie down in green pastures:\nhe leadeth me beside the still waters.'}
+generation_info=**🎵 Total generation time (1 song): 173.48s**
+- 173.48s per song
+- DiT phase (1 song): 173.48s

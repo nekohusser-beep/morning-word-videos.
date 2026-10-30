@@ -1,0 +1,8 @@
+case=cp1_a audio_duration_s=38.040000
+BEST TAKE: cp1_a.mp3 score=0.48 of 1 take(s)
+integrated_loudness=-14.2 LUFS
+=== cp1_a.mp3: 38.0 s, ref_words=25 heard_words=16 matched_words=12 match_rate=0.48 longest_gap_s=0.0 gaps_over_1.5s=0 first_word_s=15.6 last_word_s=33.0 score=0.48
+   delete: KJV 'the lord is my shepherd i shall not want' -> HEARD ''
+   replace: KJV 'in green' -> HEARD 'and bring'
+   replace: KJV 'he leadeth' -> HEARD 'he'll leave'
+   whisper: He maketh me to lie down and bring pastures  He'll leave me beside the still waters

@@ -1,0 +1,73 @@
+name: verse-voice-audition
+# Free voice audition for the morning verse card: designed voices (Qwen3-TTS VoiceDesign, VoxCPM2) from a DESCRIPTION of the sound.
+# No real person is cloned. Text = exact KJV (tools/verse-voice/text.json). Outputs + Whisper word check land in the draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "vv1"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t verse-voice-audition -n "verse voice audition outputs"
+
+  qwen:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: QA
+            instruct: "An elderly Black grandmother's voice from the rural American South, in her late seventies. Warm, deep, slightly raspy and weathered, slow and unhurried, with a gentle church-mother cadence, kind and full of faith, as if reading Scripture aloud to her grandchildren on the porch at sunrise."
+          - id: QB
+            instruct: "A very old Southern Black woman, gravelly and gentle, with a soft Georgia drawl. She speaks slowly and tenderly, with a touch of a hum in her tone, like a church mother giving a morning blessing. Calm, loving, and sure."
+          - id: QC
+            instruct: "A mature Black woman in her sixties from the Carolinas, a rich low alto. Warm and steady, with a slow, sermon-like cadence, gentle authority and quiet joy, comforting and unhurried."
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {INSTRUCT: "${{ matrix.instruct }}"}
+        run: python tools/verse-voice/eng_qwen.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+
+  voxcpm:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: VA
+            desc: "An elderly Black grandmother from the rural South, warm, deep and slightly raspy, slow and unhurried, a gentle church-mother cadence"
+          - id: VB
+            desc: "A very old Southern Black woman, gravelly and gentle with a soft drawl, slow and tender, like a church mother giving a morning blessing"
+          - id: VC
+            desc: "A mature Black woman in her sixties from the Carolinas, rich low alto, warm and steady, slow sermon-like cadence, gentle authority"
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {DESC: "${{ matrix.desc }}"}
+        run: python tools/verse-voice/eng_voxcpm.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

@@ -1,0 +1,12 @@
+case=ffull150_b audio_duration_s=150.024000
+BEST TAKE: ffull150_b.mp3 score=0.41 of 1 take(s)
+integrated_loudness=-14.1 LUFS
+=== ffull150_b.mp3: 150.0 s, ref_words=118 heard_words=94 matched_words=84 match_rate=0.71 longest_gap_s=14.5 gaps_over_1.5s=3 first_word_s=0.0 last_word_s=133.5 score=0.41
+   replace: KJV 'i shall not want he maketh me to lie down in green pastures' -> HEARD 'the lord is my shepherd'
+   replace: KJV 'restoreth' -> HEARD 'restore'
+   replace: KJV 'yea' -> HEARD 'yet'
+   replace: KJV 'the valley of' -> HEARD 'thou'
+   insert: KJV '' -> HEARD 'thy rod'
+   delete: KJV 'surely goodness and mercy shall follow me all the days of my life' -> HEARD ''
+   delete: KJV 'of the lord' -> HEARD ''
+   whisper: 1 The Lord is my shepherd, the Lord is my shepherd.  2 He leadeth me beside the still waters, he restore my soul.  3 He leadeth me in the paths of righteousness for his name's sake.  4 Yet though I walk through thou the shadow of death, I will fear no evil.  5 For thou art with me, thy rod, thy rod, and thy staff, they comfort me.  6 Thou preparest a table before me in the presence of mine enemies.  7 Thou anointest my head with oil, my cup runneth over.  8 And I will dwell in the house for ever.

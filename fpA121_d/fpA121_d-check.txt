@@ -1,0 +1,10 @@
+case=fpA121_d audio_duration_s=64.032000
+BEST TAKE: fpA121_d.mp3 score=0.10 of 1 take(s)
+integrated_loudness=-15.7 LUFS
+=== fpA121_d.mp3: 64.0 s, ref_words=51 heard_words=30 matched_words=18 match_rate=0.35 longest_gap_s=16.7 gaps_over_1.5s=2 first_word_s=14.3 last_word_s=64.0 score=0.10
+   replace: KJV 'lift up mine eyes unto the hills from whence cometh my help my help' -> HEARD 'live'
+   insert: KJV '' -> HEARD 'that keep thee'
+   delete: KJV 'thy foot to be moved he that keepeth thee will not slumber' -> HEARD ''
+   replace: KJV 'that keepeth' -> HEARD 'met'
+   replace: KJV 'shall neither slumber nor sleep' -> HEARD 'i will live cometh from the lord'
+   whisper: I will live cometh from the Lord Which made heaven and earth  He that keep thee will not suffer Behold, he met Israel  I will live cometh from the Lord

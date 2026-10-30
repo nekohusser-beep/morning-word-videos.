@@ -1,0 +1,16 @@
+case=full audio_duration_s=150.024000
+integrated_loudness=-15.3 LUFS
+decoded_samples=2400000 (150.0 s at 16 kHz)
+ref_words=118 heard_words=89 matched_words=67 match_rate=0.57
+--- diff (KJV -> heard) ---
+replace: KJV 'want he maketh me to lie down in green pastures' -> HEARD 'walk'
+replace: KJV 'restoreth' -> HEARD 'restores he restored'
+replace: KJV 'he leadeth' -> HEARD 'i will fear no evil for thou art with'
+replace: KJV 'in the paths of righteousness for his name's sake yea though i walk' -> HEARD 'thy rod walks'
+replace: KJV 'preparest a' -> HEARD 'prepares the'
+delete: KJV 'of mine enemies' -> HEARD ''
+replace: KJV 'anointest' -> HEARD 'anoints'
+delete: KJV 'shall follow me all the days of my life and i will dwell in the house of' -> HEARD ''
+replace: KJV 'for ever' -> HEARD 'is my shepherd'
+--- whisper transcript ---
+The Lord is my shepherd, I shall not walk  He leadeth me beside the still waters  He restores  He restored my soul  I will fear no evil  For Thou art with me  Thy rod walks through the valley  Of the shadow of death  I will fear no evil  For Thou art with me  Thy rod and thy staff  They comfort me  Thou prepares the table before me in the presence  Thou anoints my head with oil  My cup runneth over  Surely goodness and mercy  The Lord is my shepherd

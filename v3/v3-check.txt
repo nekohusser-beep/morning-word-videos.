@@ -1,0 +1,11 @@
+case=v3 audio_duration_s=34.032000
+integrated_loudness=-16.7 LUFS
+decoded_samples=544000 (34.0 s at 16 kHz)
+ref_words=16 heard_words=14 matched_words=7 match_rate=0.44
+--- diff (KJV -> heard) ---
+replace: KJV 'restoreth my soul he leadeth' -> HEARD 'leaded'
+delete: KJV 'in' -> HEARD ''
+replace: KJV 'paths of righteousness' -> HEARD 'pryson'
+insert: KJV '' -> HEARD 'he leaded me the pryson'
+--- whisper transcript ---
+He leaded me, the pryson, for his name's sake  He leaded me, the pryson

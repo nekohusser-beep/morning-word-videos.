@@ -1,0 +1,8 @@
+case=v6 audio_duration_s=48.024000
+integrated_loudness=-15.0 LUFS
+decoded_samples=768000 (48.0 s at 16 kHz)
+ref_words=25 heard_words=4 matched_words=0 match_rate=0.00
+--- diff (KJV -> heard) ---
+replace: KJV 'surely goodness and mercy shall follow me all the days of my life and i will dwell in the house of the lord for ever' -> HEARD 'thank you very much'
+--- whisper transcript ---
+Thank you very much.

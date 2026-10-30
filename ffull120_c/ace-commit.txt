@@ -1,0 +1,6 @@
+commit ca1e85fe9430179831e6bc6be790c332190a3866 Sat Aug 29 16:25:18 2026 +0800
+MIT License
+
+Copyright (c) 2026 ACEStep
+
+Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,0 +1,11 @@
+total 2404
+drwxr-xr-x  2 runner runner    4096 Oct 30 06:36 .
+drwxr-xr-x 35 runner runner    4096 Oct 30 06:36 ..
+-rw-r--r--  1 runner runner     197 Oct 30 06:36 ace-commit.txt
+-rw-r--r--  1 runner runner    1162 Oct 30 06:36 ffull150_a-check.txt
+-rw-r--r--  1 runner runner    3121 Oct 30 06:36 ffull150_a-task.json
+-rw-r--r--  1 runner runner    1519 Oct 30 06:36 ffull150_a-timing.txt
+-rw-r--r--  1 runner runner 2400813 Oct 30 06:36 ffull150_a.mp3
+-rw-r--r--  1 runner runner      33 Oct 30 06:36 install-timing.txt
+-rw-r--r--  1 runner runner     828 Oct 30 06:36 run.log
+-rw-r--r--  1 runner runner   22088 Oct 30 06:36 server.log

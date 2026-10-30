@@ -1,0 +1,9 @@
+case=fpA121_b audio_duration_s=64.032000
+BEST TAKE: fpA121_b.mp3 score=0.43 of 1 take(s)
+integrated_loudness=-15.3 LUFS
+=== fpA121_b.mp3: 64.0 s, ref_words=51 heard_words=33 matched_words=27 match_rate=0.53 longest_gap_s=3.6 gaps_over_1.5s=2 first_word_s=18.0 last_word_s=55.4 score=0.43
+   replace: KJV 'mine eyes' -> HEARD 'my knives'
+   replace: KJV 'whence cometh my help my help cometh from the lord which made heaven and earth' -> HEARD 'wends' caverns'
+   replace: KJV 'keepeth' -> HEARD 'keeps'
+   replace: KJV 'he that keepeth israel shall neither' -> HEARD 'the'
+   whisper: I will lift up my knives unto the hills, From Wends' Caverns.  He will not suffer thy foot to be moved, He that keeps thee will not slumber,  Behold the slumber nor sleep.

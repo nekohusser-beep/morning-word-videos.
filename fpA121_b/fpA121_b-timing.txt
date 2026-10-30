@@ -1,0 +1,6 @@
+case=fpA121_b audio_seconds_requested=64 server_ready_s=30 generate_s=360 takes=1 bytes=1024941
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2Febcc3ce6-33cf-d7a6-f6b2-e20db602f82c.mp3
+metas={'bpm': 60, 'duration': 64.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'Gentle flowing sacred folk hymn, one warm male singer, smooth legato melody with continuous phrasing and no long pauses, each line flows straight into the next, clear English diction, fingerpicked harp and soft acoustic guitar, warm ambient pad, steady 72 BPM, D minor, calm and comforting, quiet restaurant dinner background music, no drums, no percussion', 'lyrics': '[Verse 1]\nI will lift up mine eyes unto the hills,\nfrom whence cometh my help.\n\n[Verse 2]\nMy help cometh from the Lord,\nwhich made heaven and earth.\n\n[Verse 3]\nHe will not suffer thy foot to be moved:\nhe that keepeth thee will not slumber.\n\n[Verse 4]\nBehold, he that keepeth Israel\nshall neither slumber nor sleep.'}
+generation_info=**🎵 Total generation time (1 song): 298.26s**
+- 298.26s per song
+- DiT phase (1 song): 298.26s

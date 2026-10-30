@@ -1,6 +1,6 @@
-case=v3 audio_seconds_requested=34 server_ready_s=30 generate_s=301 bytes=544941
-file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2F5a6d08aa-7da3-3725-7016-7aa2cb4cade8.mp3
+case=v3 audio_seconds_requested=34 server_ready_s=30 generate_s=600 takes=4 bytes=544941
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2Fefc62250-00ee-7e5d-7739-e4f7394c177b.mp3
 metas={'bpm': 60, 'duration': 34.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'Slow reverent chanted solo male voice, warm and gentle, clear American English diction, every word sung clearly, ancient harp and lyre with soft arpeggios, calm ambient pad, 60 BPM, D minor, no drums, no percussion, sleep-friendly, meditative, reverb', 'lyrics': "[Verse]\nHe restoreth my soul: he leadeth me in the paths of righteousness for his name's sake."}
-generation_info=**🎵 Total generation time (1 song): 218.57s**
-- 218.57s per song
-- DiT phase (1 song): 218.57s
+generation_info=**🎵 Total generation time (4 songs): 525.17s**
+- 131.29s per song
+- DiT phase (4 songs): 525.17s

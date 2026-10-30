@@ -1,11 +1,22 @@
 case=v3 audio_duration_s=34.032000
-integrated_loudness=-16.7 LUFS
-decoded_samples=544000 (34.0 s at 16 kHz)
-ref_words=16 heard_words=14 matched_words=7 match_rate=0.44
---- diff (KJV -> heard) ---
-replace: KJV 'restoreth my soul he leadeth' -> HEARD 'leaded'
-delete: KJV 'in' -> HEARD ''
-replace: KJV 'paths of righteousness' -> HEARD 'pryson'
-insert: KJV '' -> HEARD 'he leaded me the pryson'
---- whisper transcript ---
-He leaded me, the pryson, for his name's sake  He leaded me, the pryson
+BEST TAKE: v3-t1.mp3 match_rate=0.81 of 4 take(s)
+integrated_loudness=-14.5 LUFS
+=== v3-t1.mp3: 34.0 s, ref_words=16 heard_words=16 matched_words=13 match_rate=0.81
+   replace: KJV 'restoreth' -> HEARD 'restore'
+   replace: KJV 'the paths' -> HEARD 'a pulse'
+   whisper: He restore my soul He leadeth me in a pulse of righteousness  For his name's sake
+=== v3-t2.mp3: 34.0 s, ref_words=16 heard_words=22 matched_words=12 match_rate=0.75
+   replace: KJV 'restoreth' -> HEARD 'restored'
+   replace: KJV 'leadeth' -> HEARD 'leaders'
+   replace: KJV 'paths' -> HEARD 'piles'
+   replace: KJV 'righteousness' -> HEARD 'rice of raisins'
+   insert: KJV '' -> HEARD 'for his name's sake'
+   whisper: He restored my soul  He leaders me in the piles of rice of raisins  For his name's sake  For his name's sake
+=== v3-t3.mp3: 34.0 s, ref_words=16 heard_words=8 matched_words=3 match_rate=0.19
+   replace: KJV 'restoreth my' -> HEARD 'was stolen one'
+   replace: KJV 'he leadeth me in' -> HEARD 'for'
+   replace: KJV 'paths of righteousness for his name's sake' -> HEARD 'namesake'
+   whisper: He was stolen, one soul.  For the namesake.
+=== v3-t4.mp3: 34.0 s, ref_words=16 heard_words=2 matched_words=0 match_rate=0.00
+   replace: KJV 'he restoreth my soul he leadeth me in the paths of righteousness for his name's sake' -> HEARD 'thank you'
+   whisper: Thank you.  .

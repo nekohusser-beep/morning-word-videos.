@@ -1,0 +1,11 @@
+case=ffull150_a audio_duration_s=150.024000
+BEST TAKE: ffull150_a.mp3 score=0.33 of 1 take(s)
+integrated_loudness=-14.7 LUFS
+=== ffull150_a.mp3: 150.0 s, ref_words=118 heard_words=98 matched_words=92 match_rate=0.78 longest_gap_s=10.4 gaps_over_1.5s=6 first_word_s=20.2 last_word_s=128.6 score=0.33
+   replace: KJV 'he leadeth' -> HEARD 'he'll eateth'
+   replace: KJV 'restoreth' -> HEARD 'restore'
+   delete: KJV 'yea though i walk through the valley of the shadow of death i will fear no evil' -> HEARD ''
+   replace: KJV 'preparest a' -> HEARD 'prepares to'
+   delete: KJV 'before me' -> HEARD ''
+   replace: KJV 'for ever' -> HEARD 'forever'
+   whisper: The Lord is my shepherd  I shall not want  He maketh me to lie down in green pastures  He'll eateth me beside the still waters  He restore my soul  He leadeth me in the paths of righteousness  For His name's sake  For Thou art with me  Thy rod and Thy staff, they comfort me  Thou prepares to table in the presence of mine enemies  Thou anointest my head with oil  My cup runneth over  Surely goodness and mercy  Shall follow me all the days of my life  And I will dwell in the house of the Lord forever

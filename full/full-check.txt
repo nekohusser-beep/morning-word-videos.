@@ -1,16 +1,17 @@
 case=full audio_duration_s=150.024000
 integrated_loudness=-15.3 LUFS
 decoded_samples=2400000 (150.0 s at 16 kHz)
-ref_words=118 heard_words=89 matched_words=67 match_rate=0.57
+ref_words=118 heard_words=94 matched_words=70 match_rate=0.59
 --- diff (KJV -> heard) ---
-replace: KJV 'want he maketh me to lie down in green pastures' -> HEARD 'walk'
-replace: KJV 'restoreth' -> HEARD 'restores he restored'
+delete: KJV 'maketh me to lie down in green pastures he' -> HEARD ''
+replace: KJV 'restoreth' -> HEARD 'restore he restore'
 replace: KJV 'he leadeth' -> HEARD 'i will fear no evil for thou art with'
-replace: KJV 'in the paths of righteousness for his name's sake yea though i walk' -> HEARD 'thy rod walks'
-replace: KJV 'preparest a' -> HEARD 'prepares the'
+replace: KJV 'in the paths of righteousness for his name's sake yea though i' -> HEARD 'thy rye'
+replace: KJV 'preparest a' -> HEARD 'repairs the'
 delete: KJV 'of mine enemies' -> HEARD ''
 replace: KJV 'anointest' -> HEARD 'anoints'
-delete: KJV 'shall follow me all the days of my life and i will dwell in the house of' -> HEARD ''
-replace: KJV 'for ever' -> HEARD 'is my shepherd'
+delete: KJV 'shall follow me all the days of my life and' -> HEARD ''
+replace: KJV 'dwell in the house of the lord' -> HEARD 'fear no evil'
+replace: KJV 'ever' -> HEARD 'thou art with me'
 --- whisper transcript ---
-The Lord is my shepherd, I shall not walk  He leadeth me beside the still waters  He restores  He restored my soul  I will fear no evil  For Thou art with me  Thy rod walks through the valley  Of the shadow of death  I will fear no evil  For Thou art with me  Thy rod and thy staff  They comfort me  Thou prepares the table before me in the presence  Thou anoints my head with oil  My cup runneth over  Surely goodness and mercy  The Lord is my shepherd
+The Lord is my shepherd, I shall not want  He leadeth me beside the still waters  He restore, He restore my soul  I will fear no evil, for Thou art with me  Thy rye walk through the valley of the shadow of death  I will fear no evil, for Thou art with me  Thy rod and thy staff, they comfort me  Thou repairs the table before me in the presence  Thou anoints my head with oil, my cup runneth over  Surely goodness and mercy  I will fear no evil, for Thou art with me

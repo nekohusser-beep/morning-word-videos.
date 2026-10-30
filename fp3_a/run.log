@@ -1,7 +1,12 @@
 [      0s] waiting for server health
 [     30s] server healthy
-Traceback (most recent call last):
-  File "/home/runner/work/morning-word-videos./morning-word-videos./tests/ace-psalm/run.py", line 43, in <module>
-    "lyrics": lyrics_for(case, os.environ.get("ACE_FLOW", "verse")),
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: lyrics_for() takes 1 positional argument but 2 were given
+1 200 {"data":{"task_id":"d7278c98-d3fc-489b-b01b-03c347a14147","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793341068106,"extra":null}
+[     30s] submitted d7278c98-d3fc-489b-b01b-03c347a14147
+[     90s] poll 1: status=0
+[    150s] poll 2: status=0
+[    210s] poll 3: status=0
+[    270s] poll 4: status=0
+[    330s] poll 5: status=0
+[    390s] poll 6: status=0
+[    450s] poll 7: status=1
+[    450s] saved fp3_a.mp3 (993069 bytes); generate took 420s for 62s of audio

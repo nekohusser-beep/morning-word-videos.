@@ -1,0 +1,9 @@
+case=fp3_a audio_duration_s=62.040000
+BEST TAKE: fp3_a.mp3 score=0.10 of 1 take(s)
+integrated_loudness=-15.3 LUFS
+=== fp3_a.mp3: 62.0 s, ref_words=47 heard_words=17 matched_words=7 match_rate=0.15 longest_gap_s=2.8 gaps_over_1.5s=1 first_word_s=19.8 last_word_s=34.6 score=0.10
+   insert: KJV '' -> HEARD 'love prepares the table for me'
+   replace: KJV 'preparest a table before me in the presence of mine enemies thou anointest' -> HEARD 'an orange is'
+   replace: KJV 'with oil' -> HEARD 'or'
+   delete: KJV 'surely goodness and mercy shall follow me all the days of my life and i will dwell in the house of the lord for ever' -> HEARD ''
+   whisper: Love prepares the table for me  Thou an orange is my head or my cup runneth over

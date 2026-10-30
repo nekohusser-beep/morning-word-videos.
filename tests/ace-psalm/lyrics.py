@@ -47,3 +47,31 @@ def lyrics_for(case, flow="verse"):
 
 def plain_for(case):
     return " ".join(CASES[case]["verses"])
+
+
+# ---- FLOW cases (Neko Oct 30 2026 1:56 AM ET: "large gaps between the wording ... I need it to sing, to flow, like a restaurant soundtrack") ----
+# Same exact KJV words, split into phrase lines so the singer phrases them; song-style caption instead of "chant"; pass length ~1 s per word.
+LINES = [
+    ["The Lord is my shepherd;", "I shall not want."],
+    ["He maketh me to lie down in green pastures:", "he leadeth me beside the still waters."],
+    ["He restoreth my soul:", "he leadeth me in the paths of righteousness for his name's sake."],
+    ["Yea, though I walk through the valley of the shadow of death,", "I will fear no evil:", "for thou art with me;", "thy rod and thy staff they comfort me."],
+    ["Thou preparest a table before me in the presence of mine enemies:", "thou anointest my head with oil;", "my cup runneth over."],
+    ["Surely goodness and mercy shall follow me all the days of my life:", "and I will dwell in the house of the Lord for ever."],
+]
+assert [" ".join(x) for x in LINES] == V, "phrase lines must rejoin to the exact KJV verses"
+CAPTION_FLOW = ("Gentle flowing sacred folk hymn, one warm male singer, smooth legato melody with continuous phrasing and no long pauses, "
+                "each line flows straight into the next, clear English diction, fingerpicked harp and soft acoustic guitar, warm ambient pad, "
+                "steady 72 BPM, D minor, calm and comforting, quiet restaurant dinner background music, no drums, no percussion")
+_FLOW = {"ffull120": (range(6), 120), "ffull150": (range(6), 150), "fp1": (range(0, 2), 38), "fp2": (range(2, 4), 62), "fp3": (range(4, 6), 62)}
+for _name, (_rng, _dur) in _FLOW.items():
+    for _t in "abcd":
+        CASES[f"{_name}_{_t}"] = {"verses": [V[i] for i in _rng], "lines": [LINES[i] for i in _rng], "duration": _dur, "caption": CAPTION_FLOW}
+
+
+def lyrics_for(case):  # noqa: F811  (overrides the earlier definition; handles phrase lines)
+    c = CASES[case]
+    if "lines" in c:
+        return "\n\n".join(f"[Verse {i + 1}]\n" + "\n".join(ls) for i, ls in enumerate(c["lines"]))
+    vs = c["verses"]
+    return "\n\n".join(f"[Verse {i + 1}]\n{v}" for i, v in enumerate(vs)) if len(vs) > 1 else f"[Verse]\n{vs[0]}"

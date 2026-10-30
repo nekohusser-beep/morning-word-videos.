@@ -53,21 +53,28 @@ def whisper():
     for tk in takes:
         raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(tk), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True).stdout
         audio = np.frombuffer(raw, dtype=np.float32)
-        segs, _ = model.transcribe(audio, language="en", beam_size=5)
+        segs, _ = model.transcribe(audio, language="en", beam_size=5, word_timestamps=True)
+        segs = list(segs)
         text = " ".join(s.text for s in segs)
+        W = [(w.start, w.end) for sg in segs for w in (sg.words or [])]
+        gaps = [W[i + 1][0] - W[i][1] for i in range(len(W) - 1)]
+        longest = max(gaps) if gaps else 0.0
+        n15 = sum(1 for g in gaps if g > 1.5)
+        first, last = (W[0][0], W[-1][1]) if W else (0.0, 0.0)
         hyp = norm(text)
         sm = difflib.SequenceMatcher(a=ref, b=hyp, autojunk=False)
         ok = sum(b.size for b in sm.get_matching_blocks())
         rate = ok / max(1, len(ref))
-        lines.append(f"=== {tk.name}: {len(audio) / 16000:.1f} s, ref_words={len(ref)} heard_words={len(hyp)} matched_words={ok} match_rate={rate:.2f}")
+        score = rate - 0.05 * n15 - (0.15 if longest > 4 else 0.0)
+        lines.append(f"=== {tk.name}: {len(audio) / 16000:.1f} s, ref_words={len(ref)} heard_words={len(hyp)} matched_words={ok} match_rate={rate:.2f} longest_gap_s={longest:.1f} gaps_over_1.5s={n15} first_word_s={first:.1f} last_word_s={last:.1f} score={score:.2f}")
         for tag, i1, i2, j1, j2 in sm.get_opcodes():
             if tag != "equal":
                 lines.append(f"   {tag}: KJV '{' '.join(ref[i1:i2])}' -> HEARD '{' '.join(hyp[j1:j2])}'")
         lines.append("   whisper: " + text.strip())
-        if best is None or rate > best[0]:
-            best = (rate, tk)
+        if best is None or score > best[0]:
+            best = (score, tk)
         flush()
-    lines.insert(1, f"BEST TAKE: {best[1].name} match_rate={best[0]:.2f} of {len(takes)} take(s)")
+    lines.insert(1, f"BEST TAKE: {best[1].name} score={best[0]:.2f} of {len(takes)} take(s)")
     if len(takes) > 1:
         shutil.copy(best[1], out / f"{case}-best.mp3")
 

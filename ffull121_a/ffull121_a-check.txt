@@ -1,0 +1,12 @@
+case=ffull121_a audio_duration_s=140.040000
+BEST TAKE: ffull121_a.mp3 score=0.31 of 1 take(s)
+integrated_loudness=-14.2 LUFS
+=== ffull121_a.mp3: 140.0 s, ref_words=110 heard_words=80 matched_words=73 match_rate=0.66 longest_gap_s=4.2 gaps_over_1.5s=4 first_word_s=15.0 last_word_s=127.3 score=0.31
+   delete: KJV 'i will lift up mine eyes unto the hills' -> HEARD ''
+   delete: KJV 'will not suffer thy foot to be moved he' -> HEARD ''
+   replace: KJV 'he' -> HEARD 'ye'
+   delete: KJV 'the lord is thy keeper' -> HEARD ''
+   insert: KJV '' -> HEARD 'nor the moon by night'
+   delete: KJV 'the lord shall preserve thy going out and thy coming in' -> HEARD ''
+   replace: KJV 'for evermore' -> HEARD 'forevermore'
+   whisper: From whence cometh my help My help cometh from the Lord  Which made heaven and earth He that keepeth thee will not slumber  Behold, ye that keepeth Israel Shall neither slumber nor sleep  The Lord is thy shade upon thy right hand The sun shall not smite thee by day  Nor the moon by night nor the moon by night The Lord shall preserve thee from all evil  He shall preserve thy soul From this time forth and even forevermore

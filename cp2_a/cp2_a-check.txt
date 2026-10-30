@@ -1,0 +1,14 @@
+case=cp2_a audio_duration_s=62.040000
+BEST TAKE: cp2_a.mp3 score=0.29 of 1 take(s)
+integrated_loudness=-14.4 LUFS
+=== cp2_a.mp3: 62.0 s, ref_words=46 heard_words=42 matched_words=25 match_rate=0.54 longest_gap_s=13.2 gaps_over_1.5s=2 first_word_s=0.0 last_word_s=57.8 score=0.29
+   replace: KJV 'he restoreth' -> HEARD 'who hear'
+   replace: KJV 'he leadeth' -> HEARD 'with'
+   replace: KJV 'paths' -> HEARD 'pants'
+   replace: KJV 'yea though i walk through the valley of the shadow of' -> HEARD 'my'
+   delete: KJV 'no evil' -> HEARD ''
+   delete: KJV 'art' -> HEARD ''
+   replace: KJV 'thy' -> HEARD 'i'
+   replace: KJV 'comfort' -> HEARD 'come for'
+   insert: KJV '' -> HEARD 'my rod and i staff they come for me'
+   whisper: Who hear my soul with me in the pants of righteousness for His name's sake?  My death, I will fear for Thou with me Thy rod and I staff they come for me  My rod and I staff they come for me

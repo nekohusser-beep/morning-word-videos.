@@ -1,0 +1,8 @@
+case=fp1_b audio_duration_s=38.040000
+BEST TAKE: fp1_b.mp3 score=0.47 of 1 take(s)
+integrated_loudness=-17.2 LUFS
+=== fp1_b.mp3: 38.0 s, ref_words=25 heard_words=16 matched_words=13 match_rate=0.52 longest_gap_s=1.5 gaps_over_1.5s=1 first_word_s=16.7 last_word_s=31.7 score=0.47
+   delete: KJV 'the lord is my shepherd i shall not want' -> HEARD ''
+   replace: KJV 'maketh' -> HEARD 'may give'
+   replace: KJV 'to lie' -> HEARD 'light'
+   whisper: He may give me light down in green pastures  He leadeth me beside the still waters

@@ -1,0 +1,19 @@
+case=short audio_duration_s=75.024000
+integrated_loudness=-15.7 LUFS
+!! stage 'whisper' failed:
+Traceback (most recent call last):
+  File "/home/runner/work/morning-word-videos./morning-word-videos./tests/ace-psalm/check.py", line 26, in stage
+    fn()
+  File "/home/runner/work/morning-word-videos./morning-word-videos./tests/ace-psalm/check.py", line 48, in whisper
+    segs, _ = WhisperModel("small.en", device="cpu", compute_type="int8").transcribe(str(mp3), language="en", beam_size=5)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/transcribe.py", line 876, in transcribe
+    audio = decode_audio(audio, sampling_rate=sampling_rate)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/audio.py", line 46, in decode_audio
+    with av.open(input_file, mode="r", metadata_errors="ignore") as container:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "av/container/core.py", line 479, in av.container.core.open
+    def open(
+TypeError: open() got an unexpected keyword argument 'metadata_errors'
+

@@ -1,0 +1,66 @@
+[32m2026-10-30 06:08:05.904[0m | [34m[1mDEBUG   [0m | [36macestep.core.generation.handler.init_service_memory_basic[0m:[36m_apply_malloc_mmap_threshold[0m:[36m50[0m - [34m[1m[memory] Set M_MMAP_THRESHOLD=131072 for immediate OS reclaim of large frees[0m
+/home/runner/work/_temp/ace/.venv/lib/python3.12/site-packages/torchao/quantization/quant_api.py:1825: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+[32m2026-10-30 06:08:20.439[0m | [33m[1mWARNING [0m | [36macestep.training.trainer[0m:[36m<module>[0m:[36m40[0m - [33m[1mbitsandbytes not installed. Using standard AdamW.[0m
+INFO:     Started server process [3882]
+INFO:     Waiting for application startup.
+[32m2026-10-30 06:08:21.086[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m645[0m - [33m[1m================================================================================[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m646[0m - [33m[1m⚠️ GPU NOT DETECTED - DIAGNOSTIC INFORMATION[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m647[0m - [33m[1m================================================================================[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m707[0m - [33m[1m✓ PyTorch CUDA build detected[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m708[0m - [33m[1m  CUDA version: 12.8[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m709[0m - [33m[1m[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m710[0m - [33m[1m❌ torch.cuda.is_available() returned False[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m711[0m - [33m[1m[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m712[0m - [33m[1mCommon causes for NVIDIA GPUs:[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m713[0m - [33m[1m  1. NVIDIA drivers not installed[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m714[0m - [33m[1m  2. CUDA runtime not installed or version mismatch[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m715[0m - [33m[1m  3. GPU not supported by installed CUDA version[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m716[0m - [33m[1m[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m717[0m - [33m[1mTroubleshooting steps:[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m718[0m - [33m[1m  1. Verify NVIDIA driver installation:[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m719[0m - [33m[1m     nvidia-smi  # Should list your GPU[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m720[0m - [33m[1m  2. Check CUDA version compatibility[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m721[0m - [33m[1m  3. Reinstall PyTorch with CUDA support:[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m722[0m - [33m[1m     pip install torch --index-url https://download.pytorch.org/whl/cu121[0m
+[32m2026-10-30 06:08:21.087[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m740[0m - [33m[1m================================================================================[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m645[0m - [33m[1m================================================================================[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m646[0m - [33m[1m⚠️ GPU NOT DETECTED - DIAGNOSTIC INFORMATION[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m647[0m - [33m[1m================================================================================[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m707[0m - [33m[1m✓ PyTorch CUDA build detected[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m708[0m - [33m[1m  CUDA version: 12.8[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m709[0m - [33m[1m[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m710[0m - [33m[1m❌ torch.cuda.is_available() returned False[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m711[0m - [33m[1m[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m712[0m - [33m[1mCommon causes for NVIDIA GPUs:[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m713[0m - [33m[1m  1. NVIDIA drivers not installed[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m714[0m - [33m[1m  2. CUDA runtime not installed or version mismatch[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m715[0m - [33m[1m  3. GPU not supported by installed CUDA version[0m
+[32m2026-10-30 06:08:21.351[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m716[0m - [33m[1m[0m
+[32m2026-10-30 06:08:21.352[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m717[0m - [33m[1mTroubleshooting steps:[0m
+[32m2026-10-30 06:08:21.352[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m718[0m - [33m[1m  1. Verify NVIDIA driver installation:[0m
+[32m2026-10-30 06:08:21.352[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m719[0m - [33m[1m     nvidia-smi  # Should list your GPU[0m
+[32m2026-10-30 06:08:21.352[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m720[0m - [33m[1m  2. Check CUDA version compatibility[0m
+[32m2026-10-30 06:08:21.352[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m721[0m - [33m[1m  3. Reinstall PyTorch with CUDA support:[0m
+[32m2026-10-30 06:08:21.352[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m722[0m - [33m[1m     pip install torch --index-url https://download.pytorch.org/whl/cu121[0m
+[32m2026-10-30 06:08:21.352[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m740[0m - [33m[1m================================================================================[0m
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+
+============================================================
+[API Server] GPU Configuration Detected:
+============================================================
+  GPU Memory: 0.00 GB
+  Configuration Tier: tier1
+  Max Duration (with LM): 240s
+  Max Duration (without LM): 360s
+  Max Batch Size (with LM): 1
+  Max Batch Size (without LM): 1
+  Default LM Init: False
+  Available LM Models: None
+============================================================
+
+[API Server] Models will be lazy-loaded on first request
+[API Server] Set ACESTEP_NO_INIT=false to load models at startup
+[API Server] Server is ready to accept requests (models not loaded yet)
+INFO:     127.0.0.1:51790 - "GET /health HTTP/1.1" 200 OK

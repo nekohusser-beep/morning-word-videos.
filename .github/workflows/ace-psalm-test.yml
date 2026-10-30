@@ -1,0 +1,117 @@
+name: ace-psalm-test
+# FREE test: can ACE-Step 1.5 (MIT, open source) SING the exact KJV words of Psalm 23 in a slow reverent chant, on a plain free CPU runner?
+# No keys, no paid services. Two cases run in parallel: "short" (verses 1-3, ~75 s) is the speed + quality probe, "full" (all 6 verses, ~150 s).
+# Output lands on branch ace-out under <case>/ : <case>.mp3, <case>-check.txt (Whisper word-check vs the KJV text), timing, server log.
+# Pinned to the ACE-Step commit that was read and vetted (MIT license).
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: "ACE-Step commit to test"
+        required: true
+        default: "ca1e85fe9430179831e6bc6be790c332190a3866"
+permissions:
+  contents: write
+jobs:
+  sing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [short, full]
+    env:
+      CASE: ${{ matrix.case }}
+      ACESTEP_DEVICE: cpu
+      ACESTEP_INIT_LLM: "false"
+      ACESTEP_USE_FLASH_ATTENTION: "false"
+      ACESTEP_API_HOST: 127.0.0.1
+      ACESTEP_API_PORT: "8001"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Free disk and install system tools
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost || true
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 git >/dev/null
+          df -h / | tail -1
+          nproc; free -g | head -2
+          mkdir -p "out/${CASE}"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install helpers (uv, requests, faster-whisper)
+        run: |
+          python -m pip install -q uv requests faster-whisper
+
+      - name: Fetch ACE-Step at the pinned commit
+        run: |
+          set -e
+          git clone -q https://github.com/ACE-Step/ACE-Step-1.5 "$RUNNER_TEMP/ace"
+          cd "$RUNNER_TEMP/ace"
+          git checkout -q "${{ inputs.commit }}"
+          git log -1 --format='commit %H %cd' | tee "$GITHUB_WORKSPACE/out/${CASE}/ace-commit.txt"
+          head -5 LICENSE | tee -a "$GITHUB_WORKSPACE/out/${CASE}/ace-commit.txt"
+
+      - name: Install ACE-Step (uv sync) and download the model
+        run: |
+          set -e
+          cd "$RUNNER_TEMP/ace"
+          T0=$(date +%s)
+          uv sync 2>&1 | tail -25
+          T1=$(date +%s)
+          uv run acestep-download 2>&1 | tail -15
+          T2=$(date +%s)
+          echo "uv_sync_s=$((T1-T0)) model_download_s=$((T2-T1))" | tee "$GITHUB_WORKSPACE/out/${CASE}/install-timing.txt"
+          df -h / | tail -1
+
+      - name: Start server, generate, stop server
+        run: |
+          cd "$RUNNER_TEMP/ace"
+          LOG="$GITHUB_WORKSPACE/out/${CASE}/server.log"
+          nohup uv run acestep-api > "$LOG" 2>&1 &
+          SRV=$!
+          python "$GITHUB_WORKSPACE/tests/ace-psalm/run.py" "$CASE" "$GITHUB_WORKSPACE/out/${CASE}" &
+          RUN=$!
+          # if the server dies before the generation finishes, stop waiting
+          while kill -0 "$RUN" 2>/dev/null; do
+            if ! kill -0 "$SRV" 2>/dev/null; then echo "SERVER DIED"; tail -40 "$LOG"; kill "$RUN" 2>/dev/null; break; fi
+            sleep 10
+          done
+          wait "$RUN"; RC=$?
+          kill "$SRV" 2>/dev/null || true
+          tail -30 "$LOG" || true
+          exit $RC
+
+      - name: Word-check the sung audio with Whisper
+        if: success()
+        run: python tests/ace-psalm/check.py "$CASE" "out/${CASE}"
+
+      - name: Publish results to branch ace-out
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          ls -la "out/${CASE}"
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          rm -rf "$RUNNER_TEMP/pub" && mkdir -p "$RUNNER_TEMP/pub" && cd "$RUNNER_TEMP/pub"
+          git init -q
+          git config user.name "ace-bot"; git config user.email "ace-bot@users.noreply.github.com"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}"
+          for i in 1 2 3 4 5 6 7 8; do
+            if git -c http.extraheader="$AUTH" fetch -q --depth 1 origin ace-out 2>/dev/null; then
+              git checkout -q -f -B ace-out FETCH_HEAD
+            else
+              git checkout -q -f --orphan ace-out 2>/dev/null || git checkout -q -f -B ace-out
+            fi
+            rm -rf "./${CASE}" && mkdir -p "./${CASE}"
+            cp -r "$GITHUB_WORKSPACE/out/${CASE}/." "./${CASE}/"
+            git add -A
+            git commit -qm "ace-step psalm23 ${CASE} run ${GITHUB_RUN_ID}"
+            if git -c http.extraheader="$AUTH" push -q origin ace-out; then echo "pushed on try $i"; break; fi
+            sleep $((RANDOM % 12 + 4))
+          done

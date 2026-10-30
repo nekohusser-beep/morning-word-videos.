@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""Drive a local ACE-Step 1.5 REST server (documented API: /health, /release_task, /query_result, /v1/audio).
+Usage: run.py <short|full> <outdir>. Writes <outdir>/<case>.mp3, <case>-task.json, <case>-timing.txt. Exit 1 on failure."""
+import json
+import sys
+import time
+from pathlib import Path
+
+import requests
+
+sys.path.insert(0, str(Path(__file__).parent))
+from lyrics import CAPTION, CASES, lyrics_for  # noqa: E402
+
+BASE = "http://127.0.0.1:8001"
+case, out = sys.argv[1], Path(sys.argv[2])
+out.mkdir(parents=True, exist_ok=True)
+t0 = time.time()
+
+
+def stamp(msg):
+    print(f"[{time.time() - t0:7.0f}s] {msg}", flush=True)
+
+
+# 1) wait for the server (it downloads the model weights on first start)
+for i in range(60 * 60 // 10):
+    try:
+        if requests.get(f"{BASE}/health", timeout=5).status_code == 200:
+            break
+    except Exception:
+        pass
+    if i % 12 == 0:
+        stamp("waiting for server health")
+    time.sleep(10)
+else:
+    sys.exit("server never became healthy")
+t_up = time.time() - t0
+stamp("server healthy")
+
+# 2) submit: DiT only (thinking off), one sample, exact KJV lyrics
+body = {
+    "prompt": CAPTION,
+    "lyrics": lyrics_for(case),
+    "thinking": False,
+    "use_cot_caption": False,
+    "use_cot_language": False,
+    "vocal_language": "en",
+    "audio_format": "mp3",
+    "bpm": 60,
+    "key_scale": "D minor",
+    "time_signature": "4",
+    "audio_duration": CASES[case]["duration"],
+    "inference_steps": 8,
+    "batch_size": 1,
+    "use_random_seed": True,
+}
+r = requests.post(f"{BASE}/release_task", json=body, timeout=60)
+print(r.status_code, r.text[:400], flush=True)
+r.raise_for_status()
+tid = r.json()["data"]["task_id"]
+t_sub = time.time()
+stamp(f"submitted {tid}")
+
+# 3) poll
+res = None
+for i in range(150):
+    time.sleep(60)
+    q = requests.post(f"{BASE}/query_result", json={"task_id_list": [tid]}, timeout=60).json()
+    d = (q.get("data") or [{}])[0]
+    st = d.get("status")
+    stamp(f"poll {i + 1}: status={st}")
+    if st in (1, 2):
+        res = d
+        break
+if not res:
+    sys.exit("timed out waiting for the task")
+(out / f"{case}-task.json").write_text(json.dumps(res, indent=1)[:20000], encoding="utf-8")
+if res.get("status") != 1:
+    sys.exit(f"task failed: {str(res)[:600]}")
+t_gen = time.time() - t_sub
+
+# 4) download
+items = json.loads(res["result"])
+f = items[0]["file"]
+a = requests.get(BASE + f, timeout=300)
+a.raise_for_status()
+(out / f"{case}.mp3").write_bytes(a.content)
+(out / f"{case}-timing.txt").write_text(
+    f"case={case} audio_seconds_requested={CASES[case]['duration']} server_ready_s={t_up:.0f} generate_s={t_gen:.0f} "
+    f"bytes={len(a.content)}\nfile={f}\nmetas={items[0].get('metas')}\ngeneration_info={items[0].get('generation_info')}\n",
+    encoding="utf-8",
+)
+stamp(f"saved {case}.mp3 ({len(a.content)} bytes); generate took {t_gen:.0f}s for {CASES[case]['duration']}s of audio")

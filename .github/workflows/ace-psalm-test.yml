@@ -15,9 +15,13 @@ on:
         required: false
         default: "1"
       cases:
-        description: "JSON list of cases: short, full, v1..v6 (one verse each)"
+        description: "JSON list of cases: short, full, v1..v6 (one verse each); Psalm 121: ffull121_a-d, fpA121_a-f, fpB121_a-f"
         required: true
         default: '["short","full"]'
+      psalm:
+        description: "empty = Psalm 23 cases; 121 = Psalm 121 cases (exact KJV, phrase lines, no filter)"
+        required: false
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -31,6 +35,7 @@ jobs:
     env:
       CASE: ${{ matrix.case }}
       TAKES: ${{ inputs.takes }}
+      ACE_PSALM: ${{ inputs.psalm }}
       ACESTEP_DEVICE: cpu
       ACESTEP_INIT_LLM: "false"
       ACESTEP_USE_FLASH_ATTENTION: "false"
@@ -121,7 +126,7 @@ jobs:
             rm -rf "./${CASE}" && mkdir -p "./${CASE}"
             cp -r "$GITHUB_WORKSPACE/out/${CASE}/." "./${CASE}/"
             git add -A
-            git commit -qm "ace-step psalm23 ${CASE} run ${GITHUB_RUN_ID}"
+            git commit -qm "ace-step psalm ${CASE} run ${GITHUB_RUN_ID}"
             if git -c http.extraheader="$AUTH" push -q origin ace-out; then echo "pushed on try $i"; break; fi
             sleep $((RANDOM % 12 + 4))
           done

@@ -1,4 +1,5 @@
 """KJV Psalm 23, exact words (LORD written Lord so a singer does not shout it). Two cases for the ACE-Step test."""
+import os
 import re
 V = [
     "The Lord is my shepherd; I shall not want.",
@@ -84,3 +85,9 @@ def lyrics_for(case, flow="verse"):  # accepts run.py's 2nd arg (ACE_FLOW); flow
     if "lines" in c:
         return "\n\n".join(f"[Verse {i + 1}]\n" + "\n".join(ls) for i, ls in enumerate(c["lines"]))
     return _lyrics_for_v1(case, flow)
+
+
+# Psalm 121 mode (Neko Oct 30 2026 5:51 AM ET: Suno would not take it; the free route sings the exact words, no filter). Rebinding the module names is enough:
+# every function above looks CASES/V/LINES up at call time.
+if os.environ.get("ACE_PSALM") == "121":
+    from lyrics121 import CAPTION_FLOW, CASES, LINES, V  # noqa: E402,F811

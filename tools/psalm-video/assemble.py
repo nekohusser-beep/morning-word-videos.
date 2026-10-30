@@ -38,7 +38,8 @@ ap.add_argument("--gap", type=float, default=0.35, help="seconds between a choir
 ap.add_argument("--verse-gap", type=float, default=0.9)
 ap.add_argument("--outro", type=float, default=9.0)
 ap.add_argument("--bed", default="", help="force a bed case, e.g. ffull150_c")
-ap.add_argument("--choir", default="auto", choices=["auto", "alto", "lift"])
+ap.add_argument("--choir", default="auto", choices=["auto", "alto", "lift", "none"])
+ap.add_argument("--only", default="", help="only use take folders whose name contains this text (e.g. 121)")
 a = ap.parse_args()
 OUT = Path(a.out)
 OUT.mkdir(parents=True, exist_ok=True)
@@ -59,7 +60,7 @@ def norm(w):
 
 
 # ---------- reference lines ----------
-GLOBAL = [(v, k) for v in range(6) for k in range(len(LINES[v]))]
+GLOBAL = [(v, k) for v in range(len(LINES)) for k in range(len(LINES[v]))]
 REFW = {g: [norm(w) for w in LINES[g[0]][g[1]].split()] for g in GLOBAL}
 VOCAB = sorted({w for ws in REFW.values() for w in ws})
 
@@ -230,7 +231,7 @@ def reverb(x, ir, wet):
 
 
 # ---------- load takes ----------
-cases = sorted(p.name for p in ACE.iterdir() if (p / f"{p.name}-words.json").exists() and (p / f"{p.name}-vocals.mp3").exists())
+cases = sorted(p.name for p in ACE.iterdir() if (p / f"{p.name}-words.json").exists() and (p / f"{p.name}-vocals.mp3").exists() and a.only in p.name)
 lead_cases = [c for c in cases if c.startswith(("ffull", "fp"))]
 choir_cases = [c for c in cases if c.startswith(("cfull", "cp"))]
 log("lead takes:", lead_cases)
@@ -370,7 +371,7 @@ for q in quiet[int(a.intro / 0.05): int(voice_end / 0.05)]:
     run = run + 1 if q else 0
     longest = max(longest, run)
 cuts, prev_end = [], None
-for v in range(1, 6):
+for v in range(1, len(LINES)):
     prev = [ev for ev in events if ev["line"][0] == v - 1][-1]["choir_end"]
     nxt = verse_first[v]
     cuts.append(round((prev + nxt) / 2, 2))

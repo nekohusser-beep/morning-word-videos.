@@ -1,0 +1,8 @@
+case=fp2_b audio_duration_s=62.040000
+BEST TAKE: fp2_b.mp3 score=0.48 of 1 take(s)
+integrated_loudness=-15.5 LUFS
+=== fp2_b.mp3: 62.0 s, ref_words=46 heard_words=42 matched_words=36 match_rate=0.78 longest_gap_s=8.6 gaps_over_1.5s=3 first_word_s=18.7 last_word_s=59.3 score=0.48
+   replace: KJV 'he restoreth my soul he leadeth me in' -> HEARD 'you mean'
+   delete: KJV 'of the' -> HEARD ''
+   insert: KJV '' -> HEARD 'thank you for watching'
+   whisper: You mean the paths of righteousness for His name's sake  Yea, though I walk through the valley, shadow of death  I will fear no evil for Thou art with me  Thy rod and thy staff, they comfort me  Thank you for watching!

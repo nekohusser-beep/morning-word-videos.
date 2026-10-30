@@ -1,1 +1,12 @@
 [      0s] waiting for server health
+[     40s] server healthy
+1 200 {"data":{"task_id":"cc7fb70b-5716-4b17-a093-67f696fcdfef","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793341130606,"extra":null}
+[     40s] submitted cc7fb70b-5716-4b17-a093-67f696fcdfef
+[    100s] poll 1: status=0
+[    160s] poll 2: status=0
+[    220s] poll 3: status=0
+[    280s] poll 4: status=0
+[    340s] poll 5: status=0
+[    400s] poll 6: status=0
+[    460s] poll 7: status=1
+[    461s] saved fp2_b.mp3 (993069 bytes); generate took 420s for 62s of audio

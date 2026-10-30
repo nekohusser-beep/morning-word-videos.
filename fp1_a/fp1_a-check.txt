@@ -1,0 +1,6 @@
+case=fp1_a audio_duration_s=38.040000
+BEST TAKE: fp1_a.mp3 score=0.28 of 1 take(s)
+integrated_loudness=-17.1 LUFS
+=== fp1_a.mp3: 38.0 s, ref_words=25 heard_words=12 matched_words=12 match_rate=0.48 longest_gap_s=4.9 gaps_over_1.5s=1 first_word_s=0.0 last_word_s=13.8 score=0.28
+   delete: KJV 'i shall not want he maketh me to lie down in green pastures' -> HEARD ''
+   whisper: 1 The Lord is my shepherd, he leadeth me beside the still waters.

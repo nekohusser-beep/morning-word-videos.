@@ -1,0 +1,6 @@
+case=fp1_a audio_seconds_requested=38 server_ready_s=40 generate_s=240 takes=1 bytes=609069
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2F654feae4-07a4-e819-59fe-61b33a68f78e.mp3
+metas={'bpm': 60, 'duration': 38.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'Gentle flowing sacred folk hymn, one warm male singer, smooth legato melody with continuous phrasing and no long pauses, each line flows straight into the next, clear English diction, fingerpicked harp and soft acoustic guitar, warm ambient pad, steady 72 BPM, D minor, calm and comforting, quiet restaurant dinner background music, no drums, no percussion', 'lyrics': '[Verse 1]\nThe Lord is my shepherd;\nI shall not want.\n\n[Verse 2]\nHe maketh me to lie down in green pastures:\nhe leadeth me beside the still waters.'}
+generation_info=**🎵 Total generation time (1 song): 207.93s**
+- 207.93s per song
+- DiT phase (1 song): 207.93s

@@ -1,0 +1,6 @@
+case=v4 audio_seconds_requested=56 server_ready_s=30 generate_s=420 bytes=897069
+file=/v1/audio?path=%2Fhome%2Frunner%2Fwork%2F_temp%2Face%2F.cache%2Facestep%2Ftmp%2Fapi_audio%2F4164a6f8-41cd-ebff-c199-58cc17a81d59.mp3
+metas={'bpm': 60, 'duration': 56.0, 'genres': 'N/A', 'keyscale': 'D minor', 'timesignature': '4', 'prompt': 'Slow reverent chanted solo male voice, warm and gentle, clear American English diction, every word sung clearly, ancient harp and lyre with soft arpeggios, calm ambient pad, 60 BPM, D minor, no drums, no percussion, sleep-friendly, meditative, reverb', 'lyrics': '[Verse]\nYea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.'}
+generation_info=**🎵 Total generation time (1 song): 355.35s**
+- 355.35s per song
+- DiT phase (1 song): 355.35s

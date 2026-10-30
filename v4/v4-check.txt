@@ -1,0 +1,11 @@
+case=v4 audio_duration_s=56.040000
+integrated_loudness=-16.0 LUFS
+decoded_samples=896000 (56.0 s at 16 kHz)
+ref_words=30 heard_words=35 matched_words=26 match_rate=0.87
+--- diff (KJV -> heard) ---
+replace: KJV 'yea' -> HEARD 'yeah'
+replace: KJV 'of the' -> HEARD 'for'
+insert: KJV '' -> HEARD 'for thou art with me'
+replace: KJV 'comfort' -> HEARD 'come to'
+--- whisper transcript ---
+Yeah, though I walk through the valley for shadow of death  I will fear no evil, for thou art with me, for thou art with me  Thy rod and thy staff, they come to me

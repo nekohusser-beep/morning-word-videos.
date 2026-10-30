@@ -1,0 +1,12 @@
+case=fp2_c audio_duration_s=62.040000
+BEST TAKE: fp2_c.mp3 score=0.48 of 1 take(s)
+integrated_loudness=-14.3 LUFS
+=== fp2_c.mp3: 62.0 s, ref_words=46 heard_words=46 matched_words=36 match_rate=0.78 longest_gap_s=8.2 gaps_over_1.5s=3 first_word_s=14.8 last_word_s=62.0 score=0.48
+   replace: KJV 'restoreth' -> HEARD 'restored'
+   replace: KJV 'leadeth' -> HEARD 'leads'
+   replace: KJV 'paths' -> HEARD 'piles'
+   replace: KJV 'righteousness' -> HEARD 'righteous'
+   replace: KJV 'yea' -> HEARD 'yeah'
+   delete: KJV 'for thou art with me' -> HEARD ''
+   insert: KJV '' -> HEARD 'i will fear no evil'
+   whisper: He restored my soul, He leads me in the piles of righteous  For His name's sake  Yeah, though I walk through the valley of the shadow of death  I will fear no evil  Thy rod and thy staff, they comfort me  I will fear no evil

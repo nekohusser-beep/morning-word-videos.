@@ -1,0 +1,12 @@
+[      0s] waiting for server health
+[     30s] server healthy
+1 200 {"data":{"task_id":"6d5c05f9-1444-49fb-93d1-5924c7036d60","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793354268832,"extra":null}
+[     30s] submitted 6d5c05f9-1444-49fb-93d1-5924c7036d60
+[     90s] poll 1: status=0
+[    150s] poll 2: status=0
+[    210s] poll 3: status=0
+[    270s] poll 4: status=0
+[    330s] poll 5: status=0
+[    390s] poll 6: status=0
+[    450s] poll 7: status=1
+[    450s] saved fpB121_e.mp3 (1152813 bytes); generate took 420s for 72s of audio

@@ -35,7 +35,7 @@ for _v, _l in zip(V, LINES):
     assert " ".join(_l).split() == _v.split(), (_v, _l)
 
 
-def lyrics_for(case, flow="verse"):
+def _lyrics_for_v1(case, flow="verse"):
     vs = CASES[case]["verses"]
     if flow == "lines":
         idx = [int(case[1:]) - 1] if re.fullmatch(r"v[1-6]", case) else list(range(len(vs)))
@@ -69,9 +69,8 @@ for _name, (_rng, _dur) in _FLOW.items():
         CASES[f"{_name}_{_t}"] = {"verses": [V[i] for i in _rng], "lines": [LINES[i] for i in _rng], "duration": _dur, "caption": CAPTION_FLOW}
 
 
-def lyrics_for(case):  # noqa: F811  (overrides the earlier definition; handles phrase lines)
+def lyrics_for(case, flow="verse"):  # accepts run.py's 2nd arg (ACE_FLOW); flow cases carry their own phrase lines
     c = CASES[case]
     if "lines" in c:
         return "\n\n".join(f"[Verse {i + 1}]\n" + "\n".join(ls) for i, ls in enumerate(c["lines"]))
-    vs = c["verses"]
-    return "\n\n".join(f"[Verse {i + 1}]\n{v}" for i, v in enumerate(vs)) if len(vs) > 1 else f"[Verse]\n{vs[0]}"
+    return _lyrics_for_v1(case, flow)

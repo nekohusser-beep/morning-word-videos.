@@ -1,7 +1,7 @@
-import json, numpy as np, soundfile as sf
+import json, os, numpy as np, soundfile as sf
 GAP = 1.0
 def segs():
-    return json.load(open("tools/verse-voice/text.json"))["segments"]
+    return json.load(open(os.environ.get("TEXT_JSON","tools/verse-voice/text.json")))["segments"]
 def join(chunks, sr, out):
     parts = []
     for i, c in enumerate(chunks):

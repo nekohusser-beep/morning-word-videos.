@@ -1,8 +1,8 @@
 """Whisper word check of an audition wav against the exact KJV text (numerals/punctuation normalised)."""
-import sys, re, json
+import sys, re, json, os
 from faster_whisper import WhisperModel
 wav = sys.argv[1]
-want = " ".join(json.load(open("tools/verse-voice/text.json"))["segments"])
+want = " ".join(json.load(open(os.environ.get("TEXT_JSON","tools/verse-voice/text.json")))["segments"])
 norm = lambda s: re.sub(r"[^a-z ]", "", s.lower().replace("-", " ")).split()
 m = WhisperModel("medium.en", device="cpu", compute_type="int8")
 segs, _ = m.transcribe(wav, language="en", beam_size=5)

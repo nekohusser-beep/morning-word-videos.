@@ -8,7 +8,15 @@ from spoken import spoken
 units_path, ref, ref_text_path, chunk, n, outdir = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), sys.argv[6]
 os.makedirs(outdir, exist_ok=True)
 ref_text = open(ref_text_path, encoding="utf-8").read().strip()
-units = [u for u in json.load(open(units_path)) if u["idx"] % n == chunk]
+_all = json.load(open(units_path))
+_have_path = os.environ.get("HAVE_LIST")
+if _have_path:  # fill mode: render only the units not already done, balanced round-robin over the missing list
+    _have = {int(x) for x in open(_have_path).read().split()}
+    _miss = [u for u in _all if u["idx"] not in _have]
+    units = [u for i, u in enumerate(_miss) if i % n == chunk]
+    print("fill mode:", len(_miss), "missing,", len(units), "in this chunk", flush=True)
+else:
+    units = [u for u in _all if u["idx"] % n == chunk]
 from voxcpm import VoxCPM
 src = ""
 for obj in (VoxCPM,):

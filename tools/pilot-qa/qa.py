@@ -1,4 +1,5 @@
-import glob, json, sys, traceback
+import glob, json, subprocess, sys, traceback
+import numpy as np
 from faster_whisper import WhisperModel
 
 out, txt, log = {}, [], []
@@ -13,7 +14,9 @@ for name in ("large-v3", "medium.en", "small.en"):
 if model is not None:
     for f in sorted(glob.glob("in/*.mp3")):
         try:
-            segs, _ = model.transcribe(f, language="en", word_timestamps=True, beam_size=5)
+            raw = subprocess.run(["ffmpeg", "-v", "error", "-i", f, "-f", "f32le", "-ac", "1", "-ar", "16000", "-"], capture_output=True, check=True).stdout
+            audio = np.frombuffer(raw, dtype=np.float32)
+            segs, _ = model.transcribe(audio, language="en", word_timestamps=True, beam_size=5)
             words = [[round(w.start, 2), round(w.end, 2), w.word.strip()] for s in segs for w in s.words]
             out[f] = words
             txt.append("== " + f + "\n" + " ".join(w[2] for w in words) + "\n")

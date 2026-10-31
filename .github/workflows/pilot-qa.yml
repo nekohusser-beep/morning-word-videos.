@@ -1,0 +1,57 @@
+name: pilot-qa
+# Whisper large-v3 word check for Lumi's pilot Shorts. Audio sits on branch pilot-in (<id>.mp3); result goes to branch pilot-out (pilot-qa.txt, pilot-qa.json).
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -q faster-whisper
+      - name: Get audio
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          mkdir -p in
+          git -c http.extraheader="$AUTH" fetch -q --depth 1 origin pilot-in
+          for f in $(git ls-tree --name-only FETCH_HEAD); do git show "FETCH_HEAD:$f" > "in/$f"; done
+          ls -l in
+      - name: Transcribe
+        run: |
+          python - <<'PY'
+          import glob, json
+          from faster_whisper import WhisperModel
+          m = WhisperModel("large-v3", device="cpu", compute_type="int8")
+          out, txt = {}, []
+          for f in sorted(glob.glob("in/*.mp3")):
+              segs, _ = m.transcribe(f, language="en", word_timestamps=True, beam_size=5)
+              words = [[round(w.start, 2), round(w.end, 2), w.word.strip()] for s in segs for w in s.words]
+              out[f] = words
+              txt.append("== " + f + "\n" + " ".join(w[2] for w in words) + "\n")
+          open("pilot-qa.txt", "w").write("\n".join(txt))
+          json.dump(out, open("pilot-qa.json", "w"))
+          print("\n".join(txt))
+          PY
+      - name: Publish result to pilot-out
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          cp pilot-qa.txt pilot-qa.json "$RUNNER_TEMP/" 
+          rm -rf "$RUNNER_TEMP/pub" && mkdir -p "$RUNNER_TEMP/pub" && cd "$RUNNER_TEMP/pub"
+          git init -q -b pilot-out
+          git config user.name "qa-bot"; git config user.email "qa-bot@users.noreply.github.com"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}"
+          cp "$RUNNER_TEMP/pilot-qa.txt" "$RUNNER_TEMP/pilot-qa.json" .
+          git add -A && git commit -qm "pilot-qa run ${GITHUB_RUN_ID}"
+          git -c http.extraheader="$AUTH" push -q -f origin pilot-out

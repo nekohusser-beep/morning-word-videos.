@@ -1,0 +1,59 @@
+name: rev-voice-full
+# Voices the WHOLE Revelation reading (503 read units + 50 card ref lines) in the locked RQA clone (Neko picked RQA Oct 31 2026 12:35 AM ET).
+# 16 parallel CPU runners (idx % 16), then one QC job (Whisper word check + pitch vs ref). Outputs: draft release `tag` (rev-voice.tar, qc.txt, logs).
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "rvfull"}
+      units: {description: "units json", required: true, default: "tools/verse-voice/cards/rev-reading.json"}
+      ref: {description: "reference wav", required: true, default: "tools/verse-voice/lock/ref_rev_rqa.wav"}
+      ref_text: {description: "exact words in the reference", required: true, default: "tools/verse-voice/lock/ref_rev_rqa.txt"}
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        chunk: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy
+          mkdir -p out
+      - run: python tools/sleep-story/eng_units_voxcpm.py "${{ inputs.units }}" "${{ inputs.ref }}" "${{ inputs.ref_text }}" ${{ matrix.chunk }} 16 out 2>&1 | grep -v "it/s\]" | tee out/render-${{ matrix.chunk }}.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rv-chunk-${{ matrix.chunk }}
+          path: out/
+          retention-days: 14
+  qc:
+    needs: render
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rv-chunk-*
+          path: out
+          merge-multiple: true
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t rev-voice -n "revelation voice"
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q faster-whisper==1.0.3 praat-parselmouth soundfile numpy
+          ls out | head -3; ls out/u*.wav | wc -l
+      - run: python tools/verse-voice/qc.py "${{ inputs.units }}" "${{ inputs.ref }}" 2>&1 | grep -v Warning | tee out/qc.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          cd out && tar -cf ../rev-voice.tar u*.wav && cd ..
+          cat out/render-*.log > render-all.log || true
+          gh release upload "${{ inputs.tag }}" rev-voice.tar out/qc.txt render-all.log --clobber -R "$GITHUB_REPOSITORY"

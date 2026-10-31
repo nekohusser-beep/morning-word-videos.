@@ -1,0 +1,221 @@
+[32m2026-10-31 05:10:07.432[0m | [34m[1mDEBUG   [0m | [36macestep.core.generation.handler.init_service_memory_basic[0m:[36m_apply_malloc_mmap_threshold[0m:[36m50[0m - [34m[1m[memory] Set M_MMAP_THRESHOLD=131072 for immediate OS reclaim of large frees[0m
+/home/runner/work/_temp/ace/.venv/lib/python3.12/site-packages/torchao/quantization/quant_api.py:1825: SyntaxWarning: invalid escape sequence '\.'
+  * regex for parameter names, must start with `re:`, e.g. `re:language\.layers\..+\.q_proj.weight`.
+[32m2026-10-31 05:10:21.996[0m | [33m[1mWARNING [0m | [36macestep.training.trainer[0m:[36m<module>[0m:[36m40[0m - [33m[1mbitsandbytes not installed. Using standard AdamW.[0m
+INFO:     Started server process [3927]
+INFO:     Waiting for application startup.
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m645[0m - [33m[1m================================================================================[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m646[0m - [33m[1m⚠️ GPU NOT DETECTED - DIAGNOSTIC INFORMATION[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m647[0m - [33m[1m================================================================================[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m707[0m - [33m[1m✓ PyTorch CUDA build detected[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m708[0m - [33m[1m  CUDA version: 12.8[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m709[0m - [33m[1m[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m710[0m - [33m[1m❌ torch.cuda.is_available() returned False[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m711[0m - [33m[1m[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m712[0m - [33m[1mCommon causes for NVIDIA GPUs:[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m713[0m - [33m[1m  1. NVIDIA drivers not installed[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m714[0m - [33m[1m  2. CUDA runtime not installed or version mismatch[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m715[0m - [33m[1m  3. GPU not supported by installed CUDA version[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m716[0m - [33m[1m[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m717[0m - [33m[1mTroubleshooting steps:[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m718[0m - [33m[1m  1. Verify NVIDIA driver installation:[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m719[0m - [33m[1m     nvidia-smi  # Should list your GPU[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m720[0m - [33m[1m  2. Check CUDA version compatibility[0m
+[32m2026-10-31 05:10:22.851[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m721[0m - [33m[1m  3. Reinstall PyTorch with CUDA support:[0m
+[32m2026-10-31 05:10:22.852[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m722[0m - [33m[1m     pip install torch --index-url https://download.pytorch.org/whl/cu121[0m
+[32m2026-10-31 05:10:22.852[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m740[0m - [33m[1m================================================================================[0m
+[32m2026-10-31 05:10:22.938[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m645[0m - [33m[1m================================================================================[0m
+[32m2026-10-31 05:10:22.938[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m646[0m - [33m[1m⚠️ GPU NOT DETECTED - DIAGNOSTIC INFORMATION[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m647[0m - [33m[1m================================================================================[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m707[0m - [33m[1m✓ PyTorch CUDA build detected[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m708[0m - [33m[1m  CUDA version: 12.8[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m709[0m - [33m[1m[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m710[0m - [33m[1m❌ torch.cuda.is_available() returned False[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m711[0m - [33m[1m[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m712[0m - [33m[1mCommon causes for NVIDIA GPUs:[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m713[0m - [33m[1m  1. NVIDIA drivers not installed[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m714[0m - [33m[1m  2. CUDA runtime not installed or version mismatch[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m715[0m - [33m[1m  3. GPU not supported by installed CUDA version[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m716[0m - [33m[1m[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m717[0m - [33m[1mTroubleshooting steps:[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m718[0m - [33m[1m  1. Verify NVIDIA driver installation:[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m719[0m - [33m[1m     nvidia-smi  # Should list your GPU[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m720[0m - [33m[1m  2. Check CUDA version compatibility[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m721[0m - [33m[1m  3. Reinstall PyTorch with CUDA support:[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m722[0m - [33m[1m     pip install torch --index-url https://download.pytorch.org/whl/cu121[0m
+[32m2026-10-31 05:10:22.939[0m | [33m[1mWARNING [0m | [36macestep.gpu_config[0m:[36m_log_gpu_diagnostic_info[0m:[36m740[0m - [33m[1m================================================================================[0m
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+
+============================================================
+[API Server] GPU Configuration Detected:
+============================================================
+  GPU Memory: 0.00 GB
+  Configuration Tier: tier1
+  Max Duration (with LM): 240s
+  Max Duration (without LM): 360s
+  Max Batch Size (with LM): 1
+  Max Batch Size (without LM): 1
+  Default LM Init: False
+  Available LM Models: None
+============================================================
+
+[API Server] Models will be lazy-loaded on first request
+[API Server] Set ACESTEP_NO_INIT=false to load models at startup
+[API Server] Server is ready to accept requests (models not loaded yet)
+INFO:     127.0.0.1:38510 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38514 - "POST /release_task HTTP/1.1" 200 OK
+[32m2026-10-31 05:10:31.505[0m | [1mINFO    [0m | [36macestep.core.generation.handler.init_service_loader[0m:[36m_load_main_model_from_checkpoint[0m:[36m174[0m - [1m[initialize_service] Attempting to load model with attention implementation: sdpa[0m
+[32m2026-10-31 05:10:48.588[0m | [1mINFO    [0m | [36macestep.core.generation.handler.mlx_dit_init[0m:[36m_init_mlx_dit[0m:[36m22[0m - [1m[MLX-DiT] MLX not available on this platform; skipping.[0m
+[32m2026-10-31 05:10:48.591[0m | [1mINFO    [0m | [36macestep.core.generation.handler.mlx_vae_init[0m:[36m_init_mlx_vae[0m:[36m37[0m - [1m[MLX-VAE] MLX not available on this platform; skipping.[0m
+[32m2026-10-31 05:10:48.635[0m | [1mINFO    [0m | [36macestep.inference[0m:[36mgenerate_music[0m:[36m662[0m - [1m[generate_music] LLM usage decision: thinking=False, use_cot_caption=False, use_cot_language=False, use_cot_metas=True, need_lm_for_cot=True, llm_initialized=False, use_lm=False[0m
+[32m2026-10-31 05:10:48.638[0m | [1mINFO    [0m | [36macestep.core.generation.handler.generate_music[0m:[36mgenerate_music[0m:[36m313[0m - [1m[generate_music] Turbo model detected: overriding guidance_scale 7.0 -> 1.0 (turbo does not use CFG).[0m
+[32m2026-10-31 05:10:48.638[0m | [1mINFO    [0m | [36macestep.core.generation.handler.generate_music[0m:[36mgenerate_music[0m:[36m329[0m - [1m[generate_music] Starting generation...[0m
+[32m2026-10-31 05:10:48.640[0m | [1mINFO    [0m | [36macestep.core.generation.handler.generate_music[0m:[36mgenerate_music[0m:[36m332[0m - [1m[generate_music] Preparing inputs...[0m
+[32m2026-10-31 05:10:48.724[0m | [1mINFO    [0m | [36macestep.core.generation.handler.progress[0m:[36m_start_diffusion_progress_estimator[0m:[36m179[0m - [1m[progress] No timing history — using fallback estimate (5.0s/step for batch_size=2).  This will self-calibrate after the first generation.[0m
+[32m2026-10-31 05:10:48.933[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_text[0m:[36m_prepare_text_conditioning_inputs[0m:[36m119[0m - [1m
+======================================================================[0m
+[32m2026-10-31 05:10:48.934[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_text[0m:[36m_prepare_text_conditioning_inputs[0m:[36m120[0m - [1m🔍 [DEBUG] DiT TEXT ENCODER INPUT (Inference)[0m
+[32m2026-10-31 05:10:48.934[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_text[0m:[36m_prepare_text_conditioning_inputs[0m:[36m121[0m - [1m======================================================================[0m
+[32m2026-10-31 05:10:48.934[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_text[0m:[36m_prepare_text_conditioning_inputs[0m:[36m122[0m - [1mtext_prompt:
+# Instruction
+Fill the audio semantic mask based on the given conditions:
+
+# Caption
+Epic cinematic battle-cry anthem, instrumental only, no vocals, massive taiko and frame drums driving a steady marching pulse, low brass fanfares, French horns and trombones, dark minor key rising to triumphant major, bold and ominous and heroic, steady loopable groove with no tempo change and no big ending, leaves space in the midrange for a spoken voice
+
+# Metas
+- bpm: 92
+- timesignature: 4
+- keyscale: D minor
+- duration: 150 seconds
+<|endoftext|>
+[0m
+[32m2026-10-31 05:10:48.934[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_text[0m:[36m_prepare_text_conditioning_inputs[0m:[36m123[0m - [1m======================================================================[0m
+[32m2026-10-31 05:10:48.934[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_text[0m:[36m_prepare_text_conditioning_inputs[0m:[36m124[0m - [1mlyrics_text:
+# Languages
+unknown
+
+# Lyric
+[Instrumental]<|endoftext|>[0m
+[32m2026-10-31 05:10:48.934[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_text[0m:[36m_prepare_text_conditioning_inputs[0m:[36m125[0m - [1m======================================================================
+[0m
+[32m2026-10-31 05:10:48.957[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_embed[0m:[36mpreprocess_batch[0m:[36m110[0m - [1m[preprocess_batch] Inferring prompt embeddings...[0m
+[32m2026-10-31 05:10:51.113[0m | [1mINFO    [0m | [36macestep.core.generation.handler.conditioning_embed[0m:[36mpreprocess_batch[0m:[36m113[0m - [1m[preprocess_batch] Inferring lyric embeddings...[0m
+[32m2026-10-31 05:10:51.114[0m | [1mINFO    [0m | [36macestep.core.generation.handler.service_generate_execute[0m:[36m_execute_service_generate_diffusion[0m:[36m173[0m - [1m[service_generate] Generating audio... (DiT backend: PyTorch (cpu))[0m
+[32m2026-10-31 05:11:18.129[0m | [1mINFO    [0m | [36macestep.core.generation.handler.service_generate_execute[0m:[36m_execute_service_generate_diffusion[0m:[36m276[0m - [1m[service_generate] DiT diffusion via PyTorch (cpu)...[0m
+[API Server] First request received — lazy-loading models...
+[API Server] Initializing models...
+[API Server] No GPU detected, running on CPU
+[Model Download] Model acestep-v15-turbo already exists at /home/runner/work/_temp/ace/checkpoints/acestep-v15-turbo
+[Model Download] Model vae already exists at /home/runner/work/_temp/ace/checkpoints/vae
+[API Server] Loading primary DiT model: acestep-v15-turbo
+[API Server] Primary model loaded: acestep-v15-turbo
+[API Server] GPU auto-detection: init_llm=False (VRAM: 0.0GB, tier: tier1)
+[API Server] ACESTEP_INIT_LLM=false (GPU already disabled LLM, no override needed)
+[API Server] Skipping LLM initialization (disabled or not supported for this GPU)
+[API Server] LLM lazy loading disabled. To enable LLM:
+[API Server]   - Set ACESTEP_INIT_LLM=true in .env or environment
+[API Server]   - Or use --init-llm command line flag
+[API Server] All models initialized successfully!
+INFO:     127.0.0.1:48208 - "POST /query_result HTTP/1.1" 200 OK
+[32m2026-10-31 05:11:44.942[0m | [1mINFO    [0m | [36macestep.models.common.dcw_correction[0m:[36m__init__[0m:[36m98[0m - [1m[DCW] Active — mode=double, scaler=0.0500, high_scaler=0.0200, wavelet='haar'[0m
+INFO:     127.0.0.1:35050 - "POST /query_result HTTP/1.1" 200 OK
+[32m2026-10-31 05:13:29.863[0m | [1mINFO    [0m | [36macestep.models.common.dcw_loader[0m:[36mget[0m:[36m84[0m - [1m[DCW] Built DWT1D for wavelet='haar' (low-pass filter taps=2, device=cpu, dtype=torch.float32).[0m
+INFO:     127.0.0.1:49212 - "POST /query_result HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33010 - "POST /query_result HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49824 - "POST /query_result HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36408 - "POST /query_result HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44712 - "POST /query_result HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58534 - "POST /query_result HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47872 - "POST /query_result HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38962 - "POST /query_result HTTP/1.1" 200 OK
+[32m2026-10-31 05:20:48.729[0m | [31m[1mERROR   [0m | [36macestep.core.generation.handler.generate_music_execute[0m:[36m_run_generate_music_service_with_progress[0m:[36m148[0m - [31m[1m[generate_music] service_generate exceeded 600s timeout (batch=2, steps=8, duration=150.0s).  The CUDA operation may still be running in the background.[0m
+[32m2026-10-31 05:20:48.731[0m | [31m[1mERROR   [0m | [36macestep.core.generation.handler.generate_music[0m:[36mgenerate_music[0m:[36m522[0m - [31m[1m[generate_music] Generation failed[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7f1312c532e0>
+    └ <Thread(ThreadPoolExecutor-0_0, started 139714118633152)>
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7f1312c52fc0>
+    └ <Thread(ThreadPoolExecutor-0_0, started 139714118633152)>
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ThreadPoolExecutor-0_0, started 139714118633152)>
+    │    │        │    └ (<weakref at 0x7f11c0502660; to 'ThreadPoolExecutor' at 0x7f11c08dafc0>, <_queue.SimpleQueue object at 0x7f11c02554e0>, None,...
+    │    │        └ <Thread(ThreadPoolExecutor-0_0, started 139714118633152)>
+    │    └ <function _worker at 0x7f11e61b9940>
+    └ <Thread(ThreadPoolExecutor-0_0, started 139714118633152)>
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/thread.py", line 93, in _worker
+    work_item.run()
+    │         └ <function _WorkItem.run at 0x7f11e61b9a80>
+    └ <concurrent.futures.thread._WorkItem object at 0x7f11b95d6a20>
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │    │   │    │       │    └ {}
+             │    │   │    │       └ <concurrent.futures.thread._WorkItem object at 0x7f11b95d6a20>
+             │    │   │    └ ()
+             │    │   └ <concurrent.futures.thread._WorkItem object at 0x7f11b95d6a20>
+             │    └ <function run_one_job_runtime.<locals>._blocking_generate at 0x7f11c021a160>
+             └ <concurrent.futures.thread._WorkItem object at 0x7f11b95d6a20>
+
+  File "[32m/home/runner/work/_temp/ace/acestep/api/[0m[32m[1mjob_execution_runtime.py[0m", line [33m78[0m, in [35m_blocking_generate[0m
+    [35m[1mreturn[0m [1mbuild_blocking_result_fn[0m[1m([0m[1mselected_handler[0m[1m,[0m [1mselected_model_name[0m[1m)[0m
+    [36m       │                        │                 └ [0m[36m[1m'acestep-v15-turbo'[0m
+    [36m       │                        └ [0m[36m[1m<acestep.handler.AceStepHandler object at 0x7f11c061a030>[0m
+    [36m       └ [0m[36m[1m<function create_app.<locals>.lifespan.<locals>._run_one_job.<locals>._build_blocking_result at 0x7f11c021a020>[0m
+
+  File "[32m/home/runner/work/_temp/ace/acestep/[0m[32m[1mapi_server.py[0m", line [33m239[0m, in [35m_build_blocking_result[0m
+    [35m[1mreturn[0m [1mrun_blocking_generate[0m[1m([0m
+    [36m       └ [0m[36m[1m<function run_blocking_generate at 0x7f11c0786660>[0m
+
+  File "[32m/home/runner/work/_temp/ace/acestep/api/[0m[32m[1mjob_blocking_generation.py[0m", line [33m173[0m, in [35mrun_blocking_generate[0m
+    [1mresult[0m [35m[1m=[0m [1mrun_generation_with_optional_sequential_cover_mode[0m[1m([0m
+    [36m         └ [0m[36m[1m<function run_generation_with_optional_sequential_cover_mode at 0x7f11c0784e00>[0m
+
+  File "[32m/home/runner/work/_temp/ace/acestep/api/[0m[32m[1mjob_generation_runtime.py[0m", line [33m87[0m, in [35mrun_generation_with_optional_sequential_cover_mode[0m
+    [1mresult[0m [35m[1m=[0m [1mgenerate_music_fn[0m[1m([0m
+    [36m         └ [0m[36m[1m<function generate_music at 0x7f11c07cd800>[0m
+
+  File "[32m/home/runner/work/_temp/ace/acestep/[0m[32m[1minference.py[0m", line [33m916[0m, in [35mgenerate_music[0m
+    [1mresult[0m [35m[1m=[0m [1mdit_handler[0m[35m[1m.[0m[1mgenerate_music[0m[1m([0m[35m[1m**[0m[1mfiltered_generate_kwargs[0m[1m)[0m
+    [36m         │           │                └ [0m[36m[1m{'captions': 'Epic cinematic battle-cry anthem, instrumental only, no vocals, massive taiko and frame drums driving a steady ...[0m
+    [36m         │           └ [0m[36m[1m<function GenerateMusicMixin.generate_music at 0x7f11e4b35760>[0m
+    [36m         └ [0m[36m[1m<acestep.handler.AceStepHandler object at 0x7f11c061a030>[0m
+
+> File "[32m/home/runner/work/_temp/ace/acestep/core/generation/handler/[0m[32m[1mgenerate_music.py[0m", line [33m424[0m, in [35mgenerate_music[0m
+    [1mservice_run[0m [35m[1m=[0m [1mself[0m[35m[1m.[0m[1m_run_generate_music_service_with_progress[0m[1m([0m
+    [36m              │    └ [0m[36m[1m<function GenerateMusicExecuteMixin._run_generate_music_service_with_progress at 0x7f11e4b35b20>[0m
+    [36m              └ [0m[36m[1m<acestep.handler.AceStepHandler object at 0x7f11c061a030>[0m
+
+  File "[32m/home/runner/work/_temp/ace/acestep/core/generation/handler/[0m[32m[1mgenerate_music_execute.py[0m", line [33m154[0m, in [35m_run_generate_music_service_with_progress[0m
+    [35m[1mraise[0m [1mTimeoutError[0m[1m([0m
+
+[31m[1mTimeoutError[0m:[1m Music generation timed out after 600 seconds.  This usually means the GPU ran out of VRAM or the diffusion loop stalled.  Try reducing batch size, duration, or inference steps.[0m
+[API Server] Job fd9e990b-b43d-46ce-a3ea-39c297cbdcaf FAILED: Music generation failed: Music generation timed out after 600 seconds.  This usually means the GPU ran out of VRAM or the diffusion loop stalled.  Try reducing batch size, duration, or inference steps.
+[API Server] Traceback:
+Traceback (most recent call last):
+  File "/home/runner/work/_temp/ace/acestep/api/job_execution_runtime.py", line 83, in run_one_job_runtime
+    result = await loop.run_in_executor(executor, _blocking_generate)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/ace/acestep/api/job_execution_runtime.py", line 78, in _blocking_generate
+    return build_blocking_result_fn(selected_handler, selected_model_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/ace/acestep/api_server.py", line 239, in _build_blocking_result
+    return run_blocking_generate(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/ace/acestep/api/job_blocking_generation.py", line 173, in run_blocking_generate
+    result = run_generation_with_optional_sequential_cover_mode(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_temp/ace/acestep/api/job_generation_runtime.py", line 96, in run_generation_with_optional_sequential_cover_mode
+    raise RuntimeError(f"Music generation failed: {result.error or result.status_message}")
+RuntimeError: Music generation failed: Music generation timed out after 600 seconds.  This usually means the GPU ran out of VRAM or the diffusion loop stalled.  Try reducing batch size, duration, or inference steps.
+
+INFO:     127.0.0.1:58856 - "POST /query_result HTTP/1.1" 200 OK

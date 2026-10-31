@@ -1,0 +1,16 @@
+[      0s] waiting for server health
+[     30s] server healthy
+1 200 {"data":{"task_id":"fd9e990b-b43d-46ce-a3ea-39c297cbdcaf","status":"queued","queue_position":1},"code":200,"error":null,"timestamp":1793423431503,"extra":null}
+[     30s] submitted fd9e990b-b43d-46ce-a3ea-39c297cbdcaf
+[     90s] poll 1: status=0
+[    150s] poll 2: status=0
+[    210s] poll 3: status=0
+[    270s] poll 4: status=0
+[    330s] poll 5: status=0
+[    390s] poll 6: status=0
+[    450s] poll 7: status=0
+[    510s] poll 8: status=0
+[    570s] poll 9: status=0
+[    630s] poll 10: status=0
+[    690s] poll 11: status=2
+failed: {'task_id': 'fd9e990b-b43d-46ce-a3ea-39c297cbdcaf', 'result': '[{"file": "", "wave": "", "status": 2, "create_time": 1793423431, "env": "development", "progress": 0.0, "stage": "failed"}]', 'status': 2, 'progress_text': '05:20:48 | ERROR | [generate_music] Generation failed\nTraceback (most recent call last):\n\n  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/threading.py", line 1032, in _bootstrap\n    self._bootstrap_inner()\n    │    └ <function Thread._bootstrap_inner at 0x7f1

@@ -53,7 +53,7 @@ jobs:
           git clone --recursive --depth 1 https://github.com/FunAudioLLM/CosyVoice.git cv
           pip install -q --upgrade pip wheel "setuptools<70" "cython<3"
           pip install -q torch==2.3.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cpu
-          for p in conformer==0.3.2 diffusers==0.29.0 hydra-core==1.3.2 HyperPyYAML==1.2.3 inflect==7.3.1 librosa==0.10.2 lightning==2.2.4 matplotlib==3.7.5 modelscope==1.20.0 networkx==3.1 numpy==1.26.4 omegaconf==2.3.0 onnx==1.16.0 onnxruntime==1.18.0 protobuf==4.25 pyarrow==18.1.0 pydantic==2.7.0 rich==13.7.1 soundfile==0.12.1 transformers==4.51.3 x-transformers==2.11.24 wetext==0.0.4 wget==3.2 huggingface_hub tiktoken more-itertools numba tqdm; do
+          for p in conformer==0.3.2 diffusers==0.29.0 hydra-core==1.3.2 HyperPyYAML==1.2.3 inflect==7.3.1 librosa==0.10.2 lightning==2.2.4 matplotlib==3.7.5 modelscope==1.20.0 networkx==3.1 numpy==1.26.4 omegaconf==2.3.0 onnx==1.16.0 onnxruntime==1.18.0 protobuf==4.25 pyarrow==18.1.0 pydantic==2.7.0 rich==13.7.1 soundfile==0.12.1 transformers==4.51.3 x-transformers==2.11.24 wetext==0.0.4 wget==3.2 huggingface_hub tiktoken more-itertools numba tqdm gdown einops regex scipy packaging pandas Unidecode phonemizer rootutils pyyaml; do
             pip install -q "$p" || echo "FAILED $p"
           done
           pip install -q --no-build-isolation pyworld==0.3.4 || echo "FAILED pyworld"
@@ -76,10 +76,22 @@ jobs:
           ls pretrained_models/Fun-CosyVoice3-0.5B | tee -a ../out/CV3_disk.txt
           head -20 pretrained_models/Fun-CosyVoice3-0.5B/README.md | tee ../out/CV3_license.txt
           cp LICENSE ../out/CV3_code_LICENSE.txt
-      - name: run test
+      - name: run test (auto-installs any module the import chain still reports missing, then retries)
         run: |
           cd cv
-          python ../tools/voice-test/cv3_test.py 2>&1 | tee ../out/CV3.log
+          : > ../out/CV3.log
+          for i in 1 2 3 4 5 6 7 8; do
+            python ../tools/voice-test/cv3_test.py > ../out/CV3_try$i.log 2>&1 && ok=1 || ok=0
+            cat ../out/CV3_try$i.log >> ../out/CV3.log
+            if [ "$ok" = 1 ]; then echo "run ok on try $i" | tee -a ../out/CV3.log; break; fi
+            miss=$(grep -o "No module named '[A-Za-z0-9_.]*'" ../out/CV3_try$i.log | tail -1 | sed -E "s/No module named '([A-Za-z0-9_]*).*/\\1/")
+            if [ -z "$miss" ]; then echo "failed with no missing module; see log" | tee -a ../out/CV3.log; break; fi
+            case "$miss" in sklearn) pkg=scikit-learn;; yaml) pkg=pyyaml;; cv2) pkg=opencv-python-headless;; PIL) pkg=pillow;; *) pkg="$miss";; esac
+            echo "installing missing module $miss as $pkg" | tee -a ../out/CV3.log
+            pip install -q "$pkg" 2>&1 | tail -3 | tee -a ../out/CV3.log
+          done
+          rm -f ../out/CV3_try*.log
+          test -s ../out/CV3_summary.json
       - if: always()
         env: {GH_TOKEN: "${{ github.token }}"}
         run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

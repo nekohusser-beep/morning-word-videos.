@@ -1,0 +1,93 @@
+name: cosyvoice-test
+# Free commercial-safe narrator test for Blessed Prayers (Lumi handoffs L-044). Psalm 23:1-3 KJV through
+#  (1) CosyVoice 3 (Fun-CosyVoice3-0.5B-2512, Apache-2.0) cloned from SYNTHETIC Kokoro reference voices (no real person), and
+#  (2) KittenTTS mini 0.8 (80M, Apache-2.0) preset male voices.
+# CPU runner on purpose: the laptop has no usable GPU, so the real-time factor here is the honest speed check.
+# Outputs (wav, json summary, log) land in the draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "cv3"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t cosyvoice-test -n "CosyVoice 3 and KittenTTS test outputs"
+
+  refs:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y libsndfile1 espeak-ng >/dev/null
+          pip install -q kokoro-onnx soundfile
+          curl -sSL -o kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sSL -o voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+          python tools/voice-test/make_refs.py
+      - uses: actions/upload-artifact@v4
+        with: {name: refs, path: refs}
+
+  cv3:
+    needs: refs
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.10"}
+      - uses: actions/download-artifact@v4
+        with: {name: refs, path: refs}
+      - name: install CosyVoice (CPU)
+        run: |
+          mkdir -p out
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsox-dev libsndfile1 >/dev/null
+          git clone --recursive --depth 1 https://github.com/FunAudioLLM/CosyVoice.git cv
+          pip install -q --upgrade pip setuptools wheel "cython<3"
+          pip install -q torch==2.3.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cpu
+          for p in conformer==0.3.2 diffusers==0.29.0 hydra-core==1.3.2 HyperPyYAML==1.2.3 inflect==7.3.1 librosa==0.10.2 lightning==2.2.4 matplotlib==3.7.5 modelscope==1.20.0 networkx==3.1 numpy==1.26.4 omegaconf==2.3.0 onnx==1.16.0 onnxruntime==1.18.0 protobuf==4.25 pyarrow==18.1.0 pydantic==2.7.0 rich==13.7.1 soundfile==0.12.1 transformers==4.51.3 x-transformers==2.11.24 wetext==0.0.4 wget==3.2 huggingface_hub; do
+            pip install -q "$p" 2>&1 | tail -2 || echo "FAILED $p"
+          done
+          pip install -q --no-build-isolation pyworld==0.3.4 2>&1 | tail -2 || echo "FAILED pyworld"
+          pip install -q openai-whisper==20231117 2>&1 | tail -2 || echo "FAILED whisper"
+          pip list 2>/dev/null | grep -i -E "^(torch|torchaudio|numpy|transformers|onnxruntime|conformer|diffusers|pyworld|openai-whisper|wetext) " || true
+      - name: download weights and print the license
+        run: |
+          cd cv
+          python -c "from huggingface_hub import snapshot_download; snapshot_download('FunAudioLLM/Fun-CosyVoice3-0.5B-2512', local_dir='pretrained_models/Fun-CosyVoice3-0.5B')" 2>&1 | tail -3
+          du -sh pretrained_models/Fun-CosyVoice3-0.5B | tee ../out/CV3_disk.txt
+          ls pretrained_models/Fun-CosyVoice3-0.5B | tee -a ../out/CV3_disk.txt
+          head -20 pretrained_models/Fun-CosyVoice3-0.5B/README.md | tee ../out/CV3_license.txt
+          cp LICENSE ../out/CV3_code_LICENSE.txt
+      - name: run test
+        run: |
+          cd cv
+          python ../tools/voice-test/cv3_test.py 2>&1 | tee ../out/CV3.log
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+
+  kitten:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: |
+          mkdir -p out
+          sudo apt-get -qq update && sudo apt-get -qq install -y libsndfile1 espeak-ng >/dev/null
+          pip install -q https://github.com/KittenML/KittenTTS/releases/download/0.8/kittentts-0.8.0-py3-none-any.whl soundfile numpy
+      - run: python tools/voice-test/kitten_test.py 2>&1 | tee out/KT.log
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

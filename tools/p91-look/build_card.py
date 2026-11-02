@@ -16,7 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SR = 44100
 LEAD, GAP, REF_GAP, END_GAP, END_LEN = 1.0, 0.45, 0.85, 0.7, 3.3
 TITLE_LEN = 2.4
-MAXSLOW = 1.35
+MAXSLOW = 1.8
 
 
 def run(cmd):
@@ -158,7 +158,7 @@ def main():
           f"[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[bg];"
           f"[b]scale=-2:800,crop=1080:800:{fg_x}:0[fg];"
           f"[bg][fg]overlay=0:560,ass={assp},format=yuv420p[v];"
-          f"[1:a]afade=t=in:st=0:d=0.8,afade=t=out:st={total-1.2:.2f}:d=1.2,loudnorm=I=-16:TP=-1.5:LRA=11[aud]")
+          f"[1:a]afade=t=in:st=0:d=0.8,afade=t=out:st={total-1.2:.2f}:d=1.2,loudnorm=I=-15.5:TP=-1.5:LRA=11[aud]")
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", motion, "-i", mixp, "-filter_complex", fc, "-map", "[v]", "-map", "[aud]",
          "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-profile:v", "high", "-pix_fmt", "yuv420p", "-r", "30",
          "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2", "-movflags", "+faststart", a.out])

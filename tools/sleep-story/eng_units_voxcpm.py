@@ -31,7 +31,14 @@ except Exception:
     pass
 keys = ["prompt_wav_path", "prompt_text", "reference_wav_path", "cfg_value", "inference_timesteps", "denoise", "normalize"]
 print("source mentions:", [k for k in keys if k in src], flush=True)
-model = VoxCPM.from_pretrained("openbmb/VoxCPM2")
+model = None
+for _kw in ({"load_denoiser": False}, {"enable_denoiser": False}, {}):
+    try:
+        model = VoxCPM.from_pretrained("openbmb/VoxCPM2", **_kw)
+        print("model loaded with", _kw, flush=True)
+        break
+    except TypeError:
+        continue
 sr = int(getattr(getattr(model, "tts_model", model), "sample_rate", 48000))
 base = {"cfg_value": 2.0, "inference_timesteps": 10}
 modes = [("prompt+text", {"prompt_wav_path": ref, "prompt_text": ref_text, **base}),

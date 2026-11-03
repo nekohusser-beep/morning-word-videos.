@@ -54,6 +54,20 @@ OPEN = 5.7333; CLOSE_LEN = 12.4667
 XF = 0.36          # crossfade into / out of B-roll
 CUT = 1.0 / FPS    # hard cut
 
+# ---------------- pace gate (Neko, Nov 3 2026: "remember the voice count") ----------------
+# Every spoken line must land between PACE_MIN and PACE_MAX words per second of speech, measured on the
+# clip bounds in clipmap.json. Day 1 / Psalm 118:24 gauge is about 2.7 w/s. A slow clip is re-generated
+# (or, under 1.35x off, tempo-matched in clips/ before the build); the build refuses to run otherwise.
+PACE_MIN = float(os.environ.get("PACE_MIN", "2.4")); PACE_MAX = 3.6
+_bad = []
+for k in ORDER:
+    clip, s, e, ge, gap = CLIP[k]
+    n = len(LINES[k].split()); wps = n / max(0.01, e - s)
+    print(f"pace L{k:>2} {clip} {n:>2} words / {e - s:4.2f}s = {wps:4.2f} w/s" + ("" if PACE_MIN <= wps <= PACE_MAX else "   <-- OUT OF RANGE"))
+    if not (PACE_MIN <= wps <= PACE_MAX): _bad.append(k)
+if _bad and os.environ.get("PACE_OVERRIDE") != "1":
+    print("PACE GATE FAILED on lines", _bad, f"(allowed {PACE_MIN}-{PACE_MAX} w/s). Re-generate or tempo-match those clips first."); sys.exit(2)
+
 # ---------------- timeline ----------------
 T = {}; D = {}
 t = OPEN + 0.30

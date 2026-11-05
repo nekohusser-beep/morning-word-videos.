@@ -1,0 +1,6 @@
+seg/
+out/
+qc/
+raw/
+vc/
+__pycache__/

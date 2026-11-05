@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "verse",
+  "text": "The Revelation of Jesus Christ, which God gave unto him, to shew unto his servants things which must shortly come to pass; and he sent and signified it by his angel unto his servant John:",
+  "para_end": false,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "verse",
+  "text": "Blessed is he that readeth, and they that hear the words of this prophecy, and keep those things which are written therein: for the time is at hand.",
+  "para_end": false,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "verse",
+  "text": "I am he that liveth, and was dead; and, behold, I am alive for evermore, Amen; and have the keys of hell and of death.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "ref",
+  "text": "Revelation, chapter one, verse eighteen.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ }
+]

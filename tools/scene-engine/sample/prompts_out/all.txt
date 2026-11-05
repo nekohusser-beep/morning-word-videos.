@@ -1,0 +1,66 @@
+=== s001 (character) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+CHARACTER Hero: a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene.
+SCENE: A stick figure sits on the edge of a bed in a dim stone room, head bowed, a small glowing rectangle in his hands. A closed Bible rests on a wooden stool beside him.
+--- motion: Slow push in on the bowed figure; the glow in his hands flickers softly.
+
+=== s002 (character) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+CHARACTER Hero: a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene.
+SCENE: The stick figure stands with heavy sagging shoulders. Grey scribbled clouds of envelopes and papers float above his head.
+--- motion: Gentle pull back as the grey clouds drift slowly overhead.
+
+=== s003 (character) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+CHARACTER Hero: a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene.
+SCENE: The stick figure sits at a plain wooden table with the Bible open in front of him. A warm gold light rises from the blank pages and lifts the grey away.
+--- motion: Slow push in as the gold light brightens and rises from the pages.
+
+=== s004 (abstract) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+SCENE: An open Bible lying in soft gold light, pages blank and glowing, rays spreading outward across a cream background.
+--- motion: Slow drift upward as the gold light rays shimmer gently.
+
+=== s005 (abstract) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+SCENE: Green-gold hills at dawn, a still blue stream winding between them, a wooden shepherd's staff standing upright in the grass. No figures.
+--- motion: Slow pan right across the hills as the sun edges up.
+
+=== s006 (character) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+CHARACTER Hero: a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene.
+SCENE: The stick figure stands among small round cloud-shaped sheep, all gathered close around his feet and looking the same direction.
+--- motion: Slow pan left across the flock; one sheep nudges closer.
+
+=== s007 (character) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+CHARACTER Hero: a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene.
+SCENE: The stick figure holds a wooden staff upside down and looks puzzled, scattered sheep wandering off in different directions.
+--- motion: Gentle push in on the puzzled figure; sheep drift apart slowly.
+
+=== s008 (character) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+CHARACTER Hero: a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene.
+SCENE: The stick figure at the start of a long tangled path of scribbled loops that winds across the page toward a small far-off tent.
+--- motion: Slow pull back to reveal the whole tangled path.
+
+=== s009 (character) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+CHARACTER Hero: a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene.
+SCENE: The stick figure kneels in front of one small gold flame on a plain stone ledge, a single open page beside it, everything else empty and calm.
+--- motion: Very slow push in on the flame; the glow breathes softly.
+
+=== s010 (abstract) ===
+Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.
+Frame: 16:9 landscape.
+SCENE: A night sky turning to dawn over quiet hills, one gold path of light stretching ahead across the land. No figures.
+--- motion: Slow pan right along the golden path as the sky brightens.

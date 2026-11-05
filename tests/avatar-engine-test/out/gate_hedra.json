@@ -1,0 +1,28 @@
+{
+  "probe": {
+    "width": 480,
+    "height": 832,
+    "fps": 25.0,
+    "duration_s": 17.76,
+    "audio_codec": "aac",
+    "audio_rate": "48000",
+    "has_audio": true
+  },
+  "audio_vs_input": {
+    "envelope_corr": 0.9951,
+    "lag_s": -0.04
+  },
+  "whisper": "unavailable here: 403 Forbidden",
+  "loudness": {
+    "lufs": "-17.71",
+    "true_peak": "-5.02"
+  },
+  "motion_proxy": {
+    "mean_frame_diff": 3.51,
+    "max": 12.94,
+    "frames": 444
+  },
+  "face": {
+    "error": "module 'mediapipe' has no attribute 'solutions'"
+  }
+}

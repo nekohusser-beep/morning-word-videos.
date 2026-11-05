@@ -1,0 +1,58 @@
+[
+ {
+  "kind": "verse",
+  "text": "Peace I leave with you,",
+  "para_end": false,
+  "in_line": false,
+  "idx": 680
+ },
+ {
+  "kind": "verse",
+  "text": "Let not your heart be troubled,",
+  "para_end": false,
+  "in_line": false,
+  "idx": 683
+ },
+ {
+  "kind": "ref",
+  "text": "Nahum one, verse seven.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 739
+ },
+ {
+  "kind": "verse",
+  "text": "for I lift up my soul unto thee.",
+  "para_end": false,
+  "in_line": false,
+  "idx": 743
+ },
+ {
+  "kind": "verse",
+  "text": "Peace I leave with you,",
+  "para_end": false,
+  "in_line": false,
+  "idx": 1680
+ },
+ {
+  "kind": "verse",
+  "text": "Let not your heart be troubled,",
+  "para_end": false,
+  "in_line": false,
+  "idx": 1683
+ },
+ {
+  "kind": "ref",
+  "text": "Nahum one, verse seven.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1739
+ },
+ {
+  "kind": "verse",
+  "text": "for I lift up my soul unto thee.",
+  "para_end": false,
+  "in_line": false,
+  "idx": 1743
+ }
+]

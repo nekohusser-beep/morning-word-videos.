@@ -1,0 +1,161 @@
+{
+ "title": "Psalm 23 Stick Test",
+ "aspect": "16:9",
+ "wps": 1.9,
+ "max_sec": 8.0,
+ "script_sha": "4e21252eb7fb14dc",
+ "base_prompt": "Hand-drawn stick-figure storybook illustration. Warm cream parchment background with soft paper grain. Thick, rounded, slightly uneven black ink lines. Stick figures have round white heads with two dot eyes, no nose, no mouth, simple limbs and plain flat-color robes. One accent color only: warm gold (#C8963E) for light, glory and sacred things. Flat shading, generous empty space, one clear focal subject per frame, simple ancient-world settings (desert, olive trees, stone houses, tents, hills, night sky). No text, no letters, no numbers, no logos, no watermark, no borders, no photorealism, no 3D.",
+ "characters": {
+  "Hero": "a stick figure with a plain brown robe, a short curved beard line, and a gold cord belt. Same outfit and proportions in every scene."
+ },
+ "scenes": [
+  {
+   "id": "s001",
+   "vo": "Most mornings I grab my phone before I grab my Bible.",
+   "words": 11,
+   "est_sec": 5.79,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure sits on the edge of a bed in a dim stone room, head bowed, a small glowing rectangle in his hands. A closed Bible rests on a wooden stool beside him.",
+   "motion_prompt": "Slow push in on the bowed figure; the glow in his hands flickers softly.",
+   "motion": "push_in"
+  },
+  {
+   "id": "s002",
+   "vo": "I check the news, the bills, the messages,",
+   "words": 8,
+   "est_sec": 4.21,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure stands under a cloud of grey scribbled envelopes and papers floating above his head.",
+   "motion_prompt": "Gentle pull back as the grey clouds drift slowly overhead.",
+   "motion": "pull_out"
+  },
+  {
+   "id": "s003",
+   "vo": "and by the time my feet hit the floor I am already tired.",
+   "words": 13,
+   "est_sec": 6.84,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure stands alone on grey hills under a flat grey sky, shoulders sagging, head bowed.",
+   "motion_prompt": "Slow pan left across the grey hills; the figure stays still.",
+   "motion": "pan_left"
+  },
+  {
+   "id": "s004",
+   "vo": "Then I read one old verse and the whole day changes.",
+   "words": 11,
+   "est_sec": 5.79,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure sits at a plain wooden table with the Bible open in front of him. A warm gold light rises from the blank pages.",
+   "motion_prompt": "Slow push in as the gold light brightens and rises from the pages.",
+   "motion": "push_in"
+  },
+  {
+   "id": "s005",
+   "vo": "Psalm 23:1 says, \"The LORD is my shepherd; I shall not want.\"",
+   "words": 12,
+   "est_sec": 6.32,
+   "kind": "abstract",
+   "chars": [],
+   "image_prompt": "An open Bible in soft gold light, pages blank and glowing, rays spreading outward across a cream background.",
+   "motion_prompt": "Slow drift upward as the gold light rays shimmer gently.",
+   "motion": "drift_up"
+  },
+  {
+   "id": "s006",
+   "vo": "A shepherd walks ahead of the sheep and knows where the water is.",
+   "words": 13,
+   "est_sec": 6.84,
+   "kind": "abstract",
+   "chars": [],
+   "image_prompt": "Green-gold hills at dawn, a still blue stream winding between them, a wooden shepherd's staff standing upright in the grass. No figures.",
+   "motion_prompt": "Slow pan right across the hills as the sun edges up.",
+   "motion": "pan_right"
+  },
+  {
+   "id": "s007",
+   "vo": "The sheep do not need a map. They need to stay close.",
+   "words": 12,
+   "est_sec": 6.32,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure stands among small round cloud-shaped sheep, all gathered close around his feet.",
+   "motion_prompt": "Slow pan left across the flock; one sheep nudges closer.",
+   "motion": "pan_left"
+  },
+  {
+   "id": "s008",
+   "vo": "That is a lot easier than what I was doing,",
+   "words": 10,
+   "est_sec": 5.26,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure holds a wooden staff upside down and looks puzzled, scattered sheep wandering off in different directions.",
+   "motion_prompt": "Gentle push in on the figure; sheep drift apart slowly.",
+   "motion": "push_in"
+  },
+  {
+   "id": "s009",
+   "vo": "which was trying to be my own shepherd before breakfast.",
+   "words": 10,
+   "est_sec": 5.26,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure at the start of a long tangled path of scribbled loops that winds toward a small far-off tent.",
+   "motion_prompt": "Slow pull back to reveal the whole tangled path.",
+   "motion": "pull_out"
+  },
+  {
+   "id": "s010",
+   "vo": "So the plan is not a bigger morning routine. The plan is one verse.",
+   "words": 14,
+   "est_sec": 7.37,
+   "kind": "abstract",
+   "chars": [],
+   "image_prompt": "One small gold flame on a stone ledge beside a single open page, everything else calm and empty.",
+   "motion_prompt": "Very slow push in on the flame; the glow breathes softly.",
+   "motion": "push_in"
+  },
+  {
+   "id": "s011",
+   "vo": "Pick it, read it slowly, and let it be the first voice you hear.",
+   "words": 14,
+   "est_sec": 7.37,
+   "kind": "character",
+   "chars": [
+    "Hero"
+   ],
+   "image_prompt": "The stick figure kneels on a green hill at sunrise with an open Bible glowing in front of him.",
+   "motion_prompt": "Slow pan right as the sun rises and the Bible's glow warms.",
+   "motion": "pan_right"
+  },
+  {
+   "id": "s012",
+   "vo": "The Lord who walked ahead of David still walks ahead of you.",
+   "words": 12,
+   "est_sec": 6.32,
+   "kind": "abstract",
+   "chars": [],
+   "image_prompt": "A night sky turning to dawn over quiet hills, one gold path of light stretching ahead across the land. No figures.",
+   "motion_prompt": "Slow drift upward along the golden path as the sky brightens.",
+   "motion": "drift_up"
+  }
+ ]
+}

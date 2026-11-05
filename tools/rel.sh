@@ -8,10 +8,14 @@ set -euo pipefail
 R=${GITHUB_REPOSITORY:-nekohusser-beep/morning-word-videos.}
 cmd=$1; tag=$2; shift 2
 rid() {
-  for t in 1 2 3 4 5 6; do
-    id=$(gh api "repos/$R/releases?per_page=100" --jq ".[]|select(.tag_name==\"$tag\" or .name==\"$tag\")|.id" | head -1)
+  # Nov 5 2026 fix: the repo now has more than 100 releases, so the first-page list missed the verse-shorts release,
+  # ensure then tried to create it and got HTTP 422. Look it up by tag first (published/prerelease), then page the list (drafts).
+  for t in 1 2 3; do
+    id=$(gh api "repos/$R/releases/tags/$tag" --jq .id 2>/dev/null || true)
     [ -n "$id" ] && { echo "$id"; return; }
-    sleep $((t * 5))
+    id=$(gh api --paginate "repos/$R/releases?per_page=100" --jq ".[]|select(.tag_name==\"$tag\" or .name==\"$tag\")|.id" 2>/dev/null | head -1 || true)
+    [ -n "$id" ] && { echo "$id"; return; }
+    sleep $((t * 4))
   done
 }
 case $cmd in

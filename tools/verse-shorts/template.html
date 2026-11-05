@@ -23,6 +23,11 @@
                text-align: center; font-family: Cormorant; font-weight: 600; font-size: __FS__px; line-height: 1.2; color: #f2eada;
                text-shadow: 0 3px 18px rgba(0,0,0,0.65); }
       .w { display: inline-block; opacity: 0; }
+      #eyebrow2 { position: absolute; top: 380px; width: 100%; text-align: center; font-family: Montserrat; font-weight: 600;
+                 font-size: 34px; letter-spacing: 9px; color: #d4af37; opacity: 0; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+      #prayer { position: absolute; top: 560px; left: 90px; width: 900px; height: 780px; display: flex; flex-direction: column; justify-content: center;
+               text-align: center; font-family: Cormorant; font-style: italic; font-weight: 600; font-size: __PFS__px; line-height: 1.2; color: #f2eada;
+               text-shadow: 0 3px 18px rgba(0,0,0,0.65); }
       #ref { position: absolute; top: 1380px; width: 100%; text-align: center; font-family: Montserrat; font-weight: 500;
              font-size: 38px; letter-spacing: 7px; color: #d4af37; opacity: 0; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
       #cta { position: absolute; top: 1480px; left: 110px; width: 860px; text-align: center; font-family: Cormorant;
@@ -41,8 +46,10 @@
       <div id="glow"></div>
       <div id="rain"></div>
       <div id="eyebrow">__EYEBROW__</div>
+      <div id="eyebrow2">__PEYEBROW__</div>
       <div id="rule1"></div>
       <div id="verse"><div id="vtext"></div></div>
+      <div id="prayer"><div id="ptext"></div></div>
       <div id="ref">__REF__ &nbsp;·&nbsp; KJV</div>
       <div id="cta">__CTA__</div>
       <div id="brand">BLESSED PRAYERS</div>
@@ -52,6 +59,7 @@
       const DUR = __DUR__;
       const LINES = __LINES__;
       const RAIN = __RAIN__;
+      const PLINES = __PLINES__, PRAYER_T = __PRAYER_T__;
       const REF_T = __REF_T__, CTA_T = __CTA_T__, FADE_T = __FADE_T__, VERSE_END = __VERSE_END__;
       const vtext = document.getElementById("vtext");
       const words = [];
@@ -62,6 +70,18 @@
           s.className = "w"; s.textContent = w;
           vtext.appendChild(s); vtext.appendChild(document.createTextNode(" "));
           words.push({ el: s, t: ln.start + (ln.end - ln.start) * (i / ws.length) });
+        });
+      });
+
+      const ptext = document.getElementById("ptext");
+      const pwords = [];
+      PLINES.forEach((ln) => {
+        const ws = ln.text.split(" ");
+        ws.forEach((w, i) => {
+          const s = document.createElement("span");
+          s.className = "w"; s.textContent = w;
+          ptext.appendChild(s); ptext.appendChild(document.createTextNode(" "));
+          pwords.push({ el: s, t: ln.start + (ln.end - ln.start) * (i / ws.length) });
         });
       });
 
@@ -86,7 +106,12 @@
       tl.fromTo("#rule1", { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.8, ease: "power2.out" }, 0.6);
       words.forEach(({ el, t }) => tl.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, t));
       tl.fromTo("#ref", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" }, REF_T);
-      tl.to("#verse", { opacity: 0.55, duration: 1.2, ease: "sine.inOut" }, CTA_T - 0.6);
+      if (PLINES.length) {
+        tl.to(["#verse", "#ref", "#eyebrow"], { opacity: 0, duration: 0.9, ease: "sine.inOut" }, PRAYER_T - 1.0);
+        tl.fromTo("#eyebrow2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" }, PRAYER_T - 0.5);
+        pwords.forEach(({ el, t }) => tl.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, t));
+      }
+      tl.to("__DIMTARGET__", { opacity: 0.55, duration: 1.2, ease: "sine.inOut" }, CTA_T - 0.6);
       tl.fromTo("#cta", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }, CTA_T);
       tl.to("#fade", { opacity: 0.85, duration: 1.8, ease: "sine.in" }, FADE_T);
       tl.set({}, {}, DUR);

@@ -21,6 +21,9 @@ CTA = {
     "day": ("START THE DAY IN THE WORD",
             "Check out the Blessed Prayers channel<br />for more of the Word<br />to carry through your day.",
             "Check out the Blessed Prayers channel for more of the Word to carry through your day."),
+    "workday": ("TODAY'S WORD",
+                "Follow Blessed Prayers<br />so the Word finds you<br />on the hard days.",
+                "Follow Blessed Prayers so the Word finds you on the hard days."),
     "morning": ("START THE DAY IN THE WORD",
                 "Start every morning in the Word.<br />The full Bible reading<br />is on the Blessed Prayers channel.",
                 "Start every morning in the Word. The full Bible reading is on the Blessed Prayers channel."),
@@ -104,7 +107,7 @@ def main(ids):
         v = verses[vid]
         text = kjv(v["book"], v["ch"], v["v"])
         eyebrow, cta_html, cta_say = CTA[v["set"]]
-        vo, sp, gap = (DAY_VOICE, DAY_SPEED, DAY_GAP) if v["set"] in ("day", "morning") else (VOICE, SPEED, 0.9)
+        vo, sp, gap = (DAY_VOICE, DAY_SPEED, DAY_GAP) if v["set"] in ("day", "morning", "workday") else (VOICE, SPEED, 0.9)
         say = lambda t, vo=vo, sp=sp: k.create(t, voice=vo, speed=sp, lang="en-us")[0].astype(np.float32)
         parts = [sil(1.5)]; t = 1.5; lines = []
         for ch_ in chunks(text):
@@ -118,6 +121,15 @@ def main(ids):
         parts.append(sil(0.5)); t += 0.5
         ref_t = t
         a = say(v["say"]); parts += [a, sil(gap)]; t += len(a) / SR + gap
+        plines = []; prayer_t = 0.0; pfs = 60
+        if v.get("prayer"):
+            parts.append(sil(0.6)); t += 0.6
+            prayer_t = t
+            for ch_ in chunks(v["prayer"]):
+                a = say(ch_); d = len(a) / SR
+                plines.append({"text": ch_, "start": round(t, 2), "end": round(t + d, 2)})
+                parts += [a, sil(gap)]; t += d + gap
+            pfs = font_size(v["prayer"])
         cta_t = t
         a = say(cta_say); parts += [a, sil(3.0)]; t += len(a) / SR + 3.0
         dur = round(t, 1)
@@ -129,7 +141,7 @@ def main(ids):
         voice = np.concatenate(parts)
         sf.write(f"{out}/assets/voice.wav", voice, SR)
         # rain bed (soft pink noise) under the voice, loudness-matched, gentle fade at the end
-        if v["set"] in ("day", "morning"):
+        if v["set"] in ("day", "morning", "workday"):
             birdbed(f"{out}/assets/bed.wav", dur)
             fc = ("[0:a]aresample=44100[v];[1:a]volume=0.12[r];"
                   "[v][r]amix=inputs=2:duration=first:normalize=0,"
@@ -155,9 +167,12 @@ def main(ids):
                .replace("__CTA__", cta_html).replace("__LINES__", json.dumps(lines)).replace("__FS__", str(font_size(text)))
                .replace("__RAIN__", "false" if bg else "true").replace("__BGDISPLAY__", "block" if bg else "none")
                .replace("__REF_T__", str(round(ref_t, 2))).replace("__CTA_T__", str(round(cta_t, 2)))
-               .replace("__FADE_T__", str(round(dur - 2.2, 2))).replace("__VERSE_END__", str(round(verse_end, 2))))
+               .replace("__FADE_T__", str(round(dur - 2.2, 2)))
+               .replace("__PLINES__", json.dumps(plines)).replace("__PRAYER_T__", str(round(prayer_t, 2)))
+               .replace("__PFS__", str(pfs)).replace("__PEYEBROW__", v.get("peyebrow", "A PRAYER FOR TODAY"))
+               .replace("__DIMTARGET__", "#prayer" if plines else "#verse").replace("__VERSE_END__", str(round(verse_end, 2))))
         open(f"{out}/index.html", "w").write(html)
-        json.dump({"id": vid, "ref": v["ref"], "text": text, "duration": dur, "lines": lines}, open(f"{out}/info.json", "w"), indent=1)
+        json.dump({"id": vid, "ref": v["ref"], "text": text, "duration": dur, "lines": lines, "prayer": v.get("prayer", ""), "prayer_lines": plines}, open(f"{out}/info.json", "w"), indent=1)
         print(f"built {vid}: {dur}s fs={font_size(text)} :: {text[:60]}", flush=True)
 
 

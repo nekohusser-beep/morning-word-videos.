@@ -5,7 +5,7 @@ import json, os, sys
 W = os.path.dirname(os.path.abspath(__file__))
 S = os.environ["SCR"]
 SRC = {1:"c12",2:"c13",3:"c11",4:"c14",5:"c04",6:"r00",7:"c10",8:"c18",9:"c05",10:"c06",11:"c09",12:"c08",13:"c03",14:"c02",15:"c07"}
-STRETCH = {2: 1.30}      # slowed in the edit (picture and voice together, never a speed-up)
+STRETCH = {2: 1.20}      # slowed in the edit (picture and voice together, never a speed-up)
 VCSTRETCH = {9: 1.10}    # Seed-VC run with --length-adjust 1.1 so the unstressed 'a' in 'for a living' survives (picture is B-roll, so no lip-sync to keep)
 # measured speech bounds on the source clip: (on, off). 10 ms RMS, onset pk-16 dB, end = min(last frame above pk-24 dB, last word end + 0.25)
 B = {1:(0.66,6.69),2:(0.11,3.83),3:(0.55,6.41),4:(0.57,6.67),5:(0.89,6.40),6:(0.88,4.04),7:(1.00,3.62),8:(0.55,4.27),

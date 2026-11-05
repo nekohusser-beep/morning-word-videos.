@@ -9,7 +9,7 @@ import json, os, sys, numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import eyes
 W = os.path.dirname(os.path.abspath(__file__)); OPEN = 5.7333; ABS = float(os.environ.get("EYE_ABS", "0.045")); REL = 0.80
-CLIP = json.load(open(f"{W}/clipmap.json")); VIS_CAM = [str(i) for i in range(1, 16) if str(i) not in ("9", "10")]
+CLIP = json.load(open(f"{W}/clipmap.json")); VIS_CAM = [str(i) for i in range(1, 16) if str(i) != "9"]
 T = {}; t = OPEN + 0.30
 for k in [str(i) for i in range(1, 16)]:
     c, s, e, ge, gap = CLIP[k][:5]; T[k] = t; t += (e - s) + gap

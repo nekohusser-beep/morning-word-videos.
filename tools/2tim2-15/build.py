@@ -47,12 +47,14 @@ if os.path.exists(f"{W}/bounds_override.json"):
 VIS = {
  "1": ("cam", 1.00), "2": ("cam", 1.08), "3": ("cam", 1.00), "4": ("cam", 1.08), "5": ("cam", 1.00),
  "6": ("cam", 1.08), "7": ("cam", 1.00), "8": ("cam", 1.08),
- "9": ("broll", ["br_canvas"]), "10": ("broll", ["br_bible"]),
+ "9": ("broll", ["br_canvas"]), "10": ("cam", 1.08),   # Nov 5 9:30 AM v2: Neko called the second B-roll (br_bible) terrible; Derrick on camera for line 10 until a new shot is generated
+
  "11": ("cam", 1.00), "12": ("cam", 1.08), "13": ("cam", 1.00), "14": ("cam", 1.08), "15": ("cam", 1.00),
 }
 ORDER = [str(i) for i in range(1, 16)]
 LAST = "15"
 PRE = {}
+LATE_IN = {"10": 0.25}   # c10 blinks 0.10-0.30 s, speech starts 0.17 s: dissolve in from T+0.07 so the first face frame is already open
 OPEN = 5.7333; CLOSE_LEN = 12.4667
 XF = 0.36          # crossfade into / out of B-roll
 CUT = 1.0 / FPS    # hard cut
@@ -116,6 +118,7 @@ for i in range(len(segs) - 1):
         c = endA + gap / 2
         if B["kind"] == "cam":                            # never run out of real footage before his first word
             c = min(T[kb] - 0.08, max(c, T[kb] - sB + XF / 2))
+            if kb in LATE_IN: c = T[kb] + LATE_IN[kb]          # his line starts mid-blink: let the voice run over the B-roll, reveal him once the eyes are open
         trans.append((c, XF))
 
 def fr(x): return int(round(x * FPS))

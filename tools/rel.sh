@@ -12,6 +12,7 @@ rid() {
   # ensure then tried to create it and got HTTP 422. Look it up by tag first (published/prerelease), then page the list (drafts).
   for t in 1 2 3; do
     id=$(gh api "repos/$R/releases/tags/$tag" --jq .id 2>/dev/null || true)
+    case "$id" in (*[!0-9]*) id="";; esac   # a 404 body is not an id (draft releases are not served by the tag route)
     [ -n "$id" ] && { echo "$id"; return; }
     id=$(gh api --paginate "repos/$R/releases?per_page=100" --jq ".[]|select(.tag_name==\"$tag\" or .name==\"$tag\")|.id" 2>/dev/null | head -1 || true)
     [ -n "$id" ] && { echo "$id"; return; }

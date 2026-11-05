@@ -50,6 +50,11 @@
   "src": "whisper-heard-tr_old.json",
   "status": "ok"
  },
+ "needeth": {
+  "note": "phones n i\u02d0 d \u026a \u03b8 (NEED-eth)",
+  "src": "phones-42016414382.json",
+  "status": "ok"
+ },
  "overthinking": {
   "src": "whisper-heard-tr_old.json",
   "status": "ok"
@@ -70,6 +75,11 @@
   "src": "whisper-heard-transcript-39010365949.json",
   "status": "ok"
  },
+ "shew": {
+  "note": "Nov 5 2026: Whisper large-v3 and medium.en both wrote 'shew' but wav2vec2 phones were s \u0283 u\u02d0 ('shoo'). Veo reads it as 'shoo'. Put 'show' (rhymes with go) in the generator prompt only; captions keep KJV 'shew'. Phones check is mandatory for every risky word before PASS.",
+  "src": "phones-42016414382.json",
+  "status": "bad"
+ },
  "strengtheneth": {
   "src": "whisper-heard-tr_old.json",
   "status": "ok"
@@ -83,6 +93,11 @@
   "src": "whisper-heard-tr_old.json",
   "status": "ok"
  },
+ "thyself": {
+  "note": "phones \u00f0 a\u026a s \u025b l f",
+  "src": "phones-42016414382.json",
+  "status": "ok"
+ },
  "verily": {
   "src": "whisper-heard-transcript-40109273954.json",
   "status": "ok"
@@ -93,6 +108,10 @@
  },
  "whatever's": {
   "src": "whisper-heard-tr_old.json",
+  "status": "ok"
+ },
+ "workman": {
+  "src": "phones-42016414382.json",
   "status": "ok"
  }
 }

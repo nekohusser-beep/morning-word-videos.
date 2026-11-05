@@ -89,6 +89,9 @@ def check(path, trpath):
         for w in script:
             if risky(w) and w in heard: led[w] = {'status': 'ok', 'src': os.path.basename(trpath)}
         save(led); print("PASS - risky words heard as spelled, no non-words; ledger updated")
+        rw = sorted(w for w in script if risky(w) and led.get(w, {}).get('src') == os.path.basename(trpath))
+        if rw: print("NOTE: Whisper repairs bad reads ('shew' passed as text but Veo said 'shoo', Nov 5 2026). For " + ", ".join(rw) +
+                     " run .github/workflows/phonemes.yml on the clip and read the phones BEFORE spending on other blocks.")
     return fails
 def compare(a, b):
     A = json.load(open(a)); B = json.load(open(b)); n = 0

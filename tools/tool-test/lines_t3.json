@@ -1,0 +1,10 @@
+[
+ {"say": "We're testing our new tool again. It shows what people are searching on YouTube, right now.", "big": "TESTING OUR NEW TOOL", "small": "what are people searching right now?", "kind": "radar"},
+ {"say": "This week, people are searching for a miracle prayer. And they're searching, nothing is impossible with God.", "big": "\"NOTHING IS IMPOSSIBLE WITH GOD\"", "small": "searched this week, right next to miracle prayer", "kind": "search"},
+ {"say": "That comes from one verse. Luke chapter one, verse thirty seven.", "big": "LUKE 1:37", "small": "", "kind": "plain"},
+ {"say": "For with God nothing shall be impossible.", "big": "For with God nothing shall be impossible.", "small": "Luke 1:37", "kind": "verse"},
+ {"say": "The angel Gabriel told Mary that. Her cousin Elisabeth was old, everybody called her barren, and she was six months along.", "big": "CALLED BARREN. SIX MONTHS ALONG.", "small": "Elisabeth, Luke 1:36", "kind": "light"},
+ {"say": "So whatever you already called impossible this morning, bring it to him.", "big": "BRING IT TO HIM", "small": "whatever you already called impossible", "kind": "water"},
+ {"say": "Lord, I'm bringing you the thing I stopped asking about. You know what it is. I'm trusting you with it today. In Jesus' name, amen.", "big": "I'M TRUSTING YOU WITH IT TODAY", "small": "in Jesus' name, amen", "kind": "light"},
+ {"say": "If you're believing God for something, type amen. You don't have to say what it is.", "big": "TYPE AMEN", "small": "no need to say what it is", "kind": "end"}
+]

@@ -1,0 +1,260 @@
+{
+"title": "ADHD vs Non-ADHD Leaving the House 😂 #adhd #shorts",
+"desc": "Keys → phone → wallet → back inside → keys again. 😂 Can you relate? Drop your loop in the comments 👇\n\nTip: keep one \"launch pad\" by the door. Keys, wallet, phone live there. Nowhere else.\n\n#adhd #adhdlife #adhdbrain #adhdproblems #adhdhumor #shorts #relatable #funny",
+"beats": [
+{
+"say": "Here's how a normal person leaves the house. Keys. Wallet. Phone. Out the door. Done.",
+"label": "NON-ADHD:",
+"set": "door",
+"gray": true,
+"pose": "hold",
+"holding": "keys",
+"cap": "Keys. Wallet. Phone. Gone.",
+"chip": "purple",
+"cap2": "Time: 30 seconds",
+"x": 430
+},
+{
+"say": "Now here's me. I'm already late. So I'm moving fast.",
+"label": "ADHD:",
+"set": "door",
+"pose": "walk",
+"eyes": "wide",
+"mouth": "o",
+"cap": "Already late.",
+"sfx": "whoosh",
+"x": 430
+},
+{
+"say": "Where are my keys? They were right here. They are always right here.",
+"label": "ADHD:",
+"set": "door",
+"pose": "panic",
+"eyes": "wide",
+"mouth": "o",
+"bubble": "keys",
+"cap": "Where are my keys?",
+"x": 430
+},
+{
+"say": "Found them. In the fridge. Don't ask.",
+"label": "ADHD:",
+"set": "kitchen",
+"props": [
+[
+"fridge",
+820,
+1240,
+1.0
+]
+],
+"pose": "hold",
+"holding": "keys",
+"eyes": "happy",
+"mouth": "grin",
+"arrow": [
+640,
+860
+],
+"cap": "In the fridge. Don't ask.",
+"sfx": "ding",
+"x": 420
+},
+{
+"say": "Okay, walking out. Wait. Wallet.",
+"label": "ADHD:",
+"set": "door",
+"pose": "think",
+"eyes": "side",
+"mouth": "flat",
+"props": [
+[
+"wallet",
+780,
+640,
+0.9
+]
+],
+"cap": "Wait. Wallet.",
+"counter": "Trips back inside: 1",
+"sfx": "pop",
+"x": 430
+},
+{
+"say": "Got the wallet. Out the door. Car's running. Where's my phone?",
+"label": "ADHD:",
+"set": "door",
+"pose": "panic",
+"eyes": "wide",
+"mouth": "o",
+"bubble": "phone",
+"cap": "Where's my phone?",
+"counter": "Trips back inside: 2",
+"sfx": "pop",
+"x": 430
+},
+{
+"say": "I'm calling my phone. From my phone. Because I'm holding it.",
+"label": "ADHD:",
+"set": "door",
+"pose": "phone",
+"eyes": "spiral",
+"mouth": "flat",
+"cap": "It was in my hand.",
+"counter": "Trips back inside: 2",
+"x": 430
+},
+{
+"say": "Okay. Really leaving now. Did I turn the stove off? I didn't even cook today. But did I?",
+"label": "ADHD:",
+"set": "kitchen",
+"pose": "think",
+"eyes": "side",
+"mouth": "frown",
+"sweat": true,
+"cap": "Did I turn the stove off?",
+"cap2": "(didn't even cook)",
+"counter": "Trips back inside: 3",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "While I'm in here, might as well grab a snack. And water the plant. And read this one letter.",
+"label": "ADHD:",
+"set": "kitchen",
+"pose": "hold",
+"holding": "bag",
+"eyes": "happy",
+"mouth": "smile",
+"props": [
+[
+"snack",
+640,
+760,
+0.8
+],
+[
+"envelope",
+140,
+760,
+0.8
+]
+],
+"cap": "Might as well...",
+"chip": "dark",
+"x": 420
+},
+{
+"say": "Twenty five minutes later.",
+"card": "25 MINUTES|LATER...",
+"sfx": "boing"
+},
+{
+"say": "Made it to the car. Where are my keys? I put them down. To grab the snack.",
+"label": "ADHD:",
+"set": "door",
+"pose": "panic",
+"eyes": "wide",
+"mouth": "o",
+"sweat": true,
+"bubble": "keys",
+"cap": "Keys. Again.",
+"counter": "Trips back inside: 4",
+"x": 430
+},
+{
+"say": "Finally. Keys, wallet, phone. Driving. Halfway down the road, did I lock the door?",
+"label": "ADHD:",
+"set": "blank",
+"props": [
+[
+"door",
+820,
+1240,
+0.8
+]
+],
+"pose": "panic",
+"eyes": "wide",
+"mouth": "o",
+"sweat": true,
+"cap": "Did I lock the door?",
+"counter": "Trips back inside: 5",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "I did. I always do. I still had to go check.",
+"label": "ADHD:",
+"set": "door",
+"pose": "stand",
+"eyes": "tired",
+"mouth": "flat",
+"cap": "I did. Still had to check.",
+"chip": "dark",
+"counter": "Trips back inside: 5",
+"x": 430
+},
+{
+"say": "Total time to leave the house. Forty one minutes. And I'm still late.",
+"label": "ADHD:",
+"set": "blank",
+"props": [
+[
+"clock",
+780,
+900,
+1.3
+]
+],
+"pose": "thumbs",
+"eyes": "tired",
+"mouth": "smile",
+"cap": "Problem solved. Kinda.",
+"chip": "purple",
+"cap2": "Time: 41 minutes",
+"x": 400
+},
+{
+"say": "Here's why. Your brain holds about one thing at a time, and every new thing knocks the old one out. So give your stuff one home. One spot by the door. Keys, wallet, phone. Every single time.",
+"set": "blank",
+"pose": "thumbs",
+"eyes": "happy",
+"mouth": "grin",
+"props": [
+[
+"keys",
+700,
+900,
+1.1
+],
+[
+"wallet",
+860,
+900,
+1.0
+],
+[
+"phone",
+770,
+700,
+0.8
+]
+],
+"cap": "Can you relate?",
+"cap2": "Tip: one launch pad by the door. Keys, wallet, phone live there.",
+"chip2": "purple",
+"x": 360
+},
+{
+"say": "How many trips back inside did it take you today? Tell me in the comments.",
+"set": "blank",
+"pose": "point",
+"eyes": "happy",
+"mouth": "smile",
+"cap": "How many trips back in?",
+"cap2": "Drop it in the comments 👇",
+"x": 420
+}
+]
+}

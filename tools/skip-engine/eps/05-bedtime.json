@@ -1,0 +1,17 @@
+{"title":"ADHD vs Non-ADHD Going to Sleep 😂 #adhd #shorts","desc":"Lights off → brain turns ON → octopus facts at 3 AM. 😂 What does YOUR brain do at bedtime? 👇\n\nTip: keep a notepad by the bed. Dump every thought on paper so your brain can stop holding it.\n\n#adhd #adhdlife #adhdbrain #adhdproblems #adhdhumor #adhdsleep #shorts #relatable",
+"beats":[
+{"say":"Here's how a normal person goes to sleep. Lights off. Eyes closed. Asleep.","label":"NON-ADHD:","set":"bedroom","gray":true,"pose":"sleep","eyes":"happy","mouth":"smile","cap":"Lights off. Asleep.","chip":"purple","cap2":"Time: 10 minutes","x":300},
+{"say":"Now here's me. Big day tomorrow. Early night. I got this.","label":"ADHD:","set":"bedroom","pose":"thumbs","eyes":"happy","mouth":"grin","cap":"Early night. I got this.","x":300},
+{"say":"Lights off. And my brain says, perfect, now we can think.","label":"ADHD:","set":"bedroom","pose":"stand","eyes":"wide","mouth":"o","cap":"Brain: \"Now we can think.\"","chip":"dark","sfx":"ding","x":300},
+{"say":"Remember that thing you said in the seventh grade? Let's replay it. Forty times.","label":"ADHD:","set":"bedroom","pose":"panic","eyes":"wide","mouth":"frown","sweat":true,"cap":"Replaying 7th grade. 40 times.","counter":"Thoughts: 12","x":300},
+{"say":"Do octopuses sleep? I need to know. Right now.","label":"ADHD:","set":"bedroom","pose":"phone","eyes":"side","mouth":"o","cap":"Do octopuses sleep?","counter":"Thoughts: 19","sfx":"pop","x":300},
+{"say":"They do. They change colors when they dream. That's incredible. Now I'm watching a video about deep sea fish.","label":"ADHD:","set":"bedroom","pose":"phone","eyes":"spiral","mouth":"grin","cap":"Deep sea fish now.","chip":"purple","counter":"Videos watched: 9","x":300},
+{"say":"Two hours later.","card":"2 HOURS|LATER...","sfx":"boing"},
+{"say":"Okay. Phone down. For real. Eyes closed.","label":"ADHD:","set":"bedroom","pose":"stand","eyes":"tired","mouth":"flat","cap":"Phone down. For real.","x":300},
+{"say":"Did I pay the light bill? Did I answer that email? What if I just started a podcast?","label":"ADHD:","set":"bedroom","pose":"think","eyes":"wide","mouth":"o","bubble":"envelope","cap":"Light bill? Email? Podcast?","counter":"Thoughts: 47","sfx":"pop","x":300},
+{"say":"Now I'm planning the podcast. I've got a name. I've got a logo. I've got episode twelve.","label":"ADHD:","set":"bedroom","pose":"point","eyes":"happy","mouth":"grin","cap":"Already on episode 12.","chip":"purple","counter":"Thoughts: 63","x":300},
+{"say":"Three A M.","card":"3:00 AM","sfx":"boing"},
+{"say":"Alarm goes off. I just fell asleep. Twelve minutes ago.","label":"ADHD:","set":"bedroom","pose":"panic","eyes":"tired","mouth":"frown","sweat":true,"props":[["clock",620,780,0.8]],"cap":"Fell asleep 12 minutes ago.","cap2":"Sleep: 2 hours","sfx":"buzz","x":300},
+{"say":"Here's why. Your brain finally has no other noise, so every open thought gets loud. Keep a notepad by the bed. Write every thought down. Bill, email, podcast, octopus. Once it's on paper, your brain can let go of it.","set":"blank","pose":"thumbs","eyes":"happy","mouth":"grin","props":[["list",780,1000,1.2]],"cap":"Can you relate?","cap2":"Tip: notepad by the bed. Dump every thought on paper.","chip2":"purple","x":360},
+{"say":"What does your brain do the second the lights go off? Tell me in the comments.","set":"blank","pose":"point","eyes":"happy","mouth":"smile","cap":"What does YOUR brain do at bedtime?","cap2":"Drop it in the comments 👇","x":420}
+]}

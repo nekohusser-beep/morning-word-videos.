@@ -1,0 +1,17 @@
+{"title":"ADHD vs Non-ADHD Texting Back 😂 #adhd #shorts","desc":"Read it. Answer it in my head. Three weeks later... 😂 Who are YOU leaving on read right now? 👇\n\nTip: if it takes under two minutes, answer it right now. Even just \"saw this, will reply tonight.\"\n\n#adhd #adhdlife #adhdbrain #adhdproblems #adhdhumor #shorts #relatable #funny",
+"beats":[
+{"say":"Here's how a normal person texts back. Phone buzzes. Read it. Reply. Done.","label":"NON-ADHD:","set":"living","gray":true,"pose":"phone","cap":"Read. Reply. Done.","chip":"purple","cap2":"Time: 1 minute","x":560},
+{"say":"Now here's me. My best friend texts me. Hey, you good?","label":"ADHD:","set":"living","pose":"phone","eyes":"happy","mouth":"smile","cap":"\"Hey, you good?\"","chip":"dark","sfx":"buzz","x":560},
+{"say":"I read it. I answer it. In my head. Perfect answer. Funny too.","label":"ADHD:","set":"living","pose":"think","eyes":"happy","mouth":"grin","bubble":"phone","cap":"Answered it. In my head.","x":560},
+{"say":"I'll reply when I can give it my full attention. That's respect.","label":"ADHD:","set":"living","pose":"thumbs","eyes":"normal","mouth":"grin","cap":"That's respect.","chip":"purple","x":560},
+{"say":"One week later.","card":"1 WEEK|LATER...","sfx":"boing"},
+{"say":"Wait. Did I ever text her back? I can see the reply. I remember sending it.","label":"ADHD:","set":"living","pose":"think","eyes":"side","mouth":"frown","cap":"I remember sending it...","x":560},
+{"say":"I did not send it.","label":"ADHD:","set":"living","pose":"phone","eyes":"wide","mouth":"o","cap":"I did not send it.","sfx":"buzz","x":560},
+{"say":"Now it's been too long. I can't just say yeah I'm good. I need a whole explanation.","label":"ADHD:","set":"living","pose":"panic","eyes":"wide","mouth":"o","sweat":true,"cap":"Now it needs a whole speech.","counter":"Unread texts: 14","x":560},
+{"say":"So I'll wait until I have time to write the speech.","label":"ADHD:","set":"living","pose":"stand","eyes":"tired","mouth":"flat","cap":"Waiting for speech time.","chip":"dark","counter":"Unread texts: 22","x":560},
+{"say":"Two more weeks later.","card":"2 MORE WEEKS|LATER...","sfx":"boing"},
+{"say":"She calls me. I panic. I let it ring. Then I text her. Sorry, can't talk right now.","label":"ADHD:","set":"living","pose":"phone","eyes":"spiral","mouth":"o","sweat":true,"cap":"\"Sorry, can't talk right now.\"","counter":"Unread texts: 31","sfx":"buzz","x":560},
+{"say":"I was not busy. I was on the couch. Holding the phone.","label":"ADHD:","set":"living","pose":"phone","eyes":"tired","mouth":"flat","cap":"Not busy. On the couch.","chip":"purple","cap2":"Time to reply: 3 weeks","x":560},
+{"say":"Here's why. An answer you planned feels done to your brain, even when you never sent it. So if a reply takes under two minutes, send it right now. Even just, saw this, I'll call you tonight. Short beats perfect.","set":"blank","pose":"thumbs","eyes":"happy","mouth":"grin","props":[["phone",780,800,1.1]],"cap":"Can you relate?","cap2":"Tip: under 2 minutes? Reply now. Short beats perfect.","chip2":"purple","x":360},
+{"say":"Who are you leaving on read right now? Go text them. Then tell me in the comments.","set":"blank","pose":"point","eyes":"happy","mouth":"smile","cap":"Who's on read right now?","cap2":"Go text them. Then comment 👇","x":420}
+]}

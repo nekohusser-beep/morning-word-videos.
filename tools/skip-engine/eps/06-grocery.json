@@ -1,17 +1,254 @@
-{"title":"ADHD vs Non-ADHD Grocery Shopping 😂 #adhd #shorts","desc":"Went in for milk. Came out with 14 things. No milk. 😂 What did YOU forget at the store? 👇\n\nTip: put the list in your phone, not on the counter, and check it before you hit the register.\n\n#adhd #adhdlife #adhdbrain #adhdproblems #adhdhumor #shorts #relatable #funny",
-"beats":[
-{"say":"Here's how a normal person goes grocery shopping. Bring the list. Get the stuff. Leave.","label":"NON-ADHD:","set":"store","gray":true,"pose":"hold","holding":"bag","props":[["list",160,900,0.7]],"cap":"List. Stuff. Leave.","chip":"purple","cap2":"Time: 20 minutes","x":420},
-{"say":"Now here's me. I need one thing. Milk. Just milk. I don't even need a list.","label":"ADHD:","set":"kitchen","pose":"thumbs","eyes":"happy","mouth":"grin","bubble":"milk","cap":"Just milk. No list needed.","x":420},
-{"say":"I made a list anyway. Just in case. And I left it on the counter.","label":"ADHD:","set":"kitchen","pose":"point","eyes":"side","mouth":"flat","props":[["list",800,950,0.7]],"arrow":[640,860],"cap":"List: still on the counter.","chip":"dark","x":420},
-{"say":"Okay, I'm in the store. Ooh. Snacks are on sale.","label":"ADHD:","set":"store","pose":"stand","eyes":"wide","mouth":"grin","props":[["snack",160,1240,1.0]],"cap":"Ooh. Snacks are on sale.","counter":"Items in cart: 1","sfx":"ding","x":420},
-{"say":"I should start cooking more. Let me get stuff for a whole recipe I saw one time.","label":"ADHD:","set":"store","pose":"hold","holding":"bag","eyes":"happy","mouth":"grin","cap":"Ingredients for a recipe I saw once.","counter":"Items in cart: 7","sfx":"pop","x":420},
-{"say":"A plant. I don't have plants. I'm a plant person now.","label":"ADHD:","set":"store","pose":"hold","holding":"bag","eyes":"happy","mouth":"smile","props":[["plant",160,1240,1.0]],"cap":"I'm a plant person now.","chip":"purple","counter":"Items in cart: 11","sfx":"pop","x":420},
-{"say":"Batteries. Phone charger. Candle that smells like a cabin.","label":"ADHD:","set":"store","pose":"hold","holding":"bag","eyes":"spiral","mouth":"grin","cap":"Candle that smells like a cabin.","counter":"Items in cart: 14","sfx":"pop","x":420},
-{"say":"Forty five minutes later.","card":"45 MINUTES|LATER...","sfx":"boing"},
-{"say":"Checked out. Eighty seven dollars. I feel great. I'm so prepared.","label":"ADHD:","set":"blank","pose":"hold","holding":"bag","eyes":"happy","mouth":"grin","props":[["cart",780,1240,1.0]],"cap":"$87. So prepared.","chip":"purple","x":420},
-{"say":"Get home. Open the fridge. Where's the milk?","label":"ADHD:","set":"kitchen","pose":"panic","eyes":"wide","mouth":"o","sweat":true,"props":[["fridge",820,1240,1.0]],"bubble":"milk","cap":"Where's the milk?","sfx":"buzz","x":420},
-{"say":"I didn't get the milk. The one thing. I went there for the milk.","label":"ADHD:","set":"kitchen","pose":"stand","eyes":"tired","mouth":"frown","cap":"Didn't get the milk.","cap2":"Items bought: 14. Milk: 0","x":420},
-{"say":"So I go back. And come home with a cookbook. Still no milk.","label":"ADHD:","set":"kitchen","pose":"thumbs","eyes":"spiral","mouth":"grin","cap":"Trip #2: a cookbook. No milk.","chip":"purple","cap2":"Time: 2 hours","x":420},
-{"say":"Here's why. New and shiny wins the fight for your attention every time, and the boring milk loses. So keep the list in your phone, not on the counter. And check it before you get in line. Every time.","set":"blank","pose":"thumbs","eyes":"happy","mouth":"grin","props":[["phone",770,820,1.0],["milk",900,1000,0.8]],"cap":"Can you relate?","cap2":"Tip: list in your phone. Check it before the register.","chip2":"purple","x":360},
-{"say":"What's the one thing you always forget at the store? Tell me in the comments.","set":"blank","pose":"point","eyes":"happy","mouth":"smile","cap":"What do YOU always forget?","cap2":"Drop it in the comments 👇","x":420}
-]}
+{
+"title": "ADHD vs Non-ADHD Grocery Shopping 😂 This Is What It's Really Like to Live with ADHD #shorts",
+"desc": "This is what it's really like to live with ADHD: one trip for milk.\n\nWent in for milk. Came out with 14 things. No milk. 😂 What did YOU forget at the store? 👇\n\nTip: put the list in your phone, not on the counter, and check it before you hit the register.\n\n#adhd #adhdlife #adhdbrain #adhdproblems #adhdhumor #shorts #relatable #funny",
+"beats": [
+{
+"say": "Here's how a normal person goes grocery shopping. Bring the list. Get the stuff. Leave.",
+"label": "NON-ADHD:",
+"set": "store",
+"gray": true,
+"pose": "hold",
+"holding": "bag",
+"props": [
+[
+"list",
+160,
+900,
+0.7
+]
+],
+"cap": "List. Stuff. Leave.",
+"chip": "purple",
+"cap2": "Time: 20 minutes",
+"x": 420
+},
+{
+"say": "Now here's me. I need one thing. Milk. Just milk. I don't even need a list.",
+"label": "ADHD:",
+"set": "kitchen",
+"pose": "thumbs",
+"eyes": "happy",
+"mouth": "grin",
+"bubble": "milk",
+"cap": "Just milk. No list needed.",
+"x": 420
+},
+{
+"say": "I made a list anyway. Just in case. And I left it on the counter.",
+"label": "ADHD:",
+"set": "kitchen",
+"pose": "point",
+"eyes": "side",
+"mouth": "flat",
+"props": [
+[
+"list",
+800,
+950,
+0.7
+]
+],
+"arrow": [
+640,
+860
+],
+"cap": "List: still on the counter.",
+"chip": "dark",
+"x": 420
+},
+{
+"say": "Okay, I'm in the store. Ooh. Snacks are on sale.",
+"label": "ADHD:",
+"set": "store",
+"pose": "stand",
+"eyes": "wide",
+"mouth": "grin",
+"props": [
+[
+"snack",
+160,
+1240,
+1.0
+]
+],
+"cap": "Ooh. Snacks are on sale.",
+"counter": "Items in cart: 1",
+"sfx": "ding",
+"x": 420
+},
+{
+"say": "I should start cooking more. Let me get stuff for a whole recipe I saw one time.",
+"label": "ADHD:",
+"set": "store",
+"pose": "hold",
+"holding": "bag",
+"eyes": "happy",
+"mouth": "grin",
+"cap": "Ingredients for a recipe I saw once.",
+"counter": "Items in cart: 7",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "A plant. I don't have plants. I'm a plant person now.",
+"label": "ADHD:",
+"set": "store",
+"pose": "hold",
+"holding": "bag",
+"eyes": "happy",
+"mouth": "smile",
+"props": [
+[
+"plant",
+160,
+1240,
+1.0
+]
+],
+"cap": "I'm a plant person now.",
+"chip": "purple",
+"counter": "Items in cart: 11",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "Batteries. Phone charger. Candle that smells like a cabin.",
+"label": "ADHD:",
+"set": "store",
+"pose": "hold",
+"holding": "bag",
+"eyes": "spiral",
+"mouth": "grin",
+"cap": "Candle that smells like a cabin.",
+"counter": "Items in cart: 14",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "Forty five minutes later.",
+"card": "45 MINUTES|LATER...",
+"sfx": "boing"
+},
+{
+"say": "Checked out. Eighty seven dollars. I feel great. I'm so prepared.",
+"label": "ADHD:",
+"set": "blank",
+"pose": "hold",
+"holding": "bag",
+"eyes": "happy",
+"mouth": "grin",
+"props": [
+[
+"cart",
+780,
+1240,
+1.0
+]
+],
+"cap": "$87. So prepared.",
+"chip": "purple",
+"x": 420
+},
+{
+"say": "Get home. Open the fridge. Where's the milk?",
+"label": "ADHD:",
+"set": "kitchen",
+"pose": "panic",
+"eyes": "wide",
+"mouth": "o",
+"sweat": true,
+"props": [
+[
+"fridge",
+820,
+1240,
+1.0
+]
+],
+"bubble": "milk",
+"cap": "Where's the milk?",
+"sfx": "buzz",
+"x": 420
+},
+{
+"say": "I didn't get the milk. The one thing. I went there for the milk.",
+"label": "ADHD:",
+"set": "kitchen",
+"pose": "stand",
+"eyes": "tired",
+"mouth": "frown",
+"cap": "Didn't get the milk.",
+"cap2": "Items bought: 14. Milk: 0",
+"x": 420
+},
+{
+"say": "So I go back. And come home with a cookbook. Still no milk.",
+"label": "ADHD:",
+"set": "kitchen",
+"pose": "thumbs",
+"eyes": "spiral",
+"mouth": "grin",
+"cap": "Trip #2: a cookbook. No milk.",
+"chip": "purple",
+"cap2": "Time: 2 hours",
+"x": 420
+},
+{
+"say": "Here's why. New and shiny wins the fight for your attention every time, and the boring milk loses. So keep the list in your phone, not on the counter. And check it before you get in line. Every time.",
+"set": "blank",
+"pose": "thumbs",
+"eyes": "happy",
+"mouth": "grin",
+"props": [
+[
+"phone",
+770,
+820,
+1.0
+],
+[
+"milk",
+900,
+1000,
+0.8
+]
+],
+"cap": "Can you relate?",
+"cap2": "Tip: list in your phone. Check it before the register.",
+"chip2": "purple",
+"x": 360
+},
+{
+"say": "What's the one thing you always forget at the store? Tell me in the comments.",
+"set": "blank",
+"pose": "point",
+"eyes": "happy",
+"mouth": "smile",
+"cap": "What do YOU always forget?",
+"cap2": "Drop it in the comments 👇",
+"x": 420
+}
+],
+"tags": [
+"grocery shopping",
+"forgetting things",
+"adhd",
+"adhd vs non adhd",
+"what it's like to have adhd",
+"a day in the life with adhd",
+"what does adhd look like",
+"adhd humor",
+"adhd brain",
+"adhd life",
+"adhd problems",
+"adhd memes",
+"adhd skit",
+"adhd animation",
+"relatable adhd",
+"adult adhd",
+"adhd struggles",
+"adhd shorts",
+"funny adhd",
+"stick figure animation"
+]
+}

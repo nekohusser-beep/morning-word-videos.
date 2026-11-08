@@ -1,8 +1,300 @@
 [
- {"id":"n1-psalm23","date":"2026-11-09","title":"Bible Verse For Sleep | Psalm 23 KJV","hook":"Bible verses for sleep. Psalm twenty three, before you close your eyes.","hookBig":"Bible Verses For Sleep","hookSmall":"Psalm 23, before you close your eyes","v":[["Psalms",23,[1,2],"Psalm twenty three, verses one and two.","Psalm 23:1-2"],["Psalms",23,[4],"Psalm twenty three, verse four.","Psalm 23:4"]],"prayer":"Lord, lead me beside the still waters tonight. Quiet my mind. In Jesus' name, amen.","read":"Psalms 1-31","vid":"BFwsZGyPw70"},
- {"id":"n2-cast-thy-burden","date":"2026-11-10","title":"Scripture For Sleep When Your Mind Won't Rest | Psalm 55:22 KJV","hook":"Scripture for sleep, for the nights your mind won't rest.","hookBig":"Scripture For Sleep","hookSmall":"For the nights your mind won't rest","v":[["Psalms",55,[22],"Psalm fifty five, verse twenty two.","Psalm 55:22"],["Psalms",46,[10],"Psalm forty six, verse ten.","Psalm 46:10"]],"prayer":"Lord, I'm putting it down. I'm not carrying it into the night. In Jesus' name, amen.","read":"Psalms 32-56","vid":"enLUGzduXXE"},
- {"id":"n3-night-watches","date":"2026-11-11","title":"Bedtime Scripture For Deep Sleep | Psalm 63:6 KJV","hook":"Bedtime scripture for deep sleep. For when you're lying awake.","hookBig":"Bedtime Scripture For Deep Sleep","hookSmall":"For when you're lying awake","v":[["Psalms",63,[6,7],"Psalm sixty three, verses six and seven.","Psalm 63:6-7"],["Psalms",62,[1],"Psalm sixty two, verse one.","Psalm 62:1"]],"prayer":"Lord, if I'm awake, let me be awake thinking on you. In Jesus' name, amen.","read":"Psalms 57-78","vid":"aXGIzNACPO8"},
- {"id":"n4-psalm91","date":"2026-11-12","title":"Sleep Scriptures For Protection | Psalm 91 KJV","hook":"Sleep scriptures for protection. Read these over your house tonight.","hookBig":"Sleep Scriptures For Protection","hookSmall":"Read these over your house tonight","v":[["Psalms",91,[1],"Psalm ninety one, verse one.","Psalm 91:1"],["Psalms",91,[4,5],"Psalm ninety one, verses four and five.","Psalm 91:4-5"]],"prayer":"Lord, cover this house and everybody in it tonight. In Jesus' name, amen.","read":"Psalms 79-104","vid":"9omyQM3ULPU"},
- {"id":"n5-psalm121","date":"2026-11-13","title":"Fall Asleep With God's Word | Psalm 121 KJV","hook":"Fall asleep with God's word. He stays up so you can rest.","hookBig":"Fall Asleep With God's Word","hookSmall":"He stays up so you can rest","v":[["Psalms",121,[3,4],"Psalm one twenty one, verses three and four.","Psalm 121:3-4"],["Psalms",121,[8],"Psalm one twenty one, verse eight.","Psalm 121:8"]],"prayer":"Lord, you don't sleep, so I can. Keep watch tonight. In Jesus' name, amen.","read":"Psalms 105-124","vid":"JJQjAr3xG0g"},
- {"id":"n6-psalm127","date":"2026-11-14","title":"Sleep Scriptures From The Holy Bible | Psalm 127:2 KJV","hook":"Sleep scriptures from the Holy Bible. For the one who worked all week.","hookBig":"Sleep Scriptures From The Holy Bible","hookSmall":"For the one who worked all week","v":[["Psalms",127,[2],"Psalm one twenty seven, verse two.","Psalm 127:2"],["Psalms",131,[2],"Psalm one thirty one, verse two.","Psalm 131:2"]],"prayer":"Lord, the week is in your hands now. Give me rest. In Jesus' name, amen.","read":"Psalms 125-150","vid":"2V6mjKBs0yo"}
+ {
+  "id": "n1-psalm23",
+  "date": "2026-11-09",
+  "title": "Bible Verse For Sleep | Psalm 23 KJV",
+  "hook": "Bible verses for sleep. Psalm twenty three, before you close your eyes.",
+  "hookBig": "Bible Verses For Sleep",
+  "hookSmall": "Psalm 23, before you close your eyes",
+  "v": [
+   [
+    "Psalms",
+    23,
+    [
+     1,
+     2
+    ],
+    "Psalm twenty three, verses one and two.",
+    "Psalm 23:1-2"
+   ],
+   [
+    "Psalms",
+    23,
+    [
+     4
+    ],
+    "Psalm twenty three, verse four.",
+    "Psalm 23:4"
+   ]
+  ],
+  "prayer": "Lord, lead me beside the still waters tonight. Quiet my mind. In Jesus' name, amen.",
+  "read": "Psalms 1-31",
+  "vid": "BFwsZGyPw70",
+  "tags": [
+   "sleep scriptures",
+   "bible verses for sleep",
+   "sleep scriptures from the holy bible",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "scripture for sleep",
+   "kjv bible verses",
+   "bible verse for sleep",
+   "psalms for sleep",
+   "bedtime prayer",
+   "kjv",
+   "night prayer",
+   "peaceful sleep",
+   "bible reading for sleep",
+   "psalm 23:1-2",
+   "psalm 23 1-2"
+  ]
+ },
+ {
+  "id": "n2-cast-thy-burden",
+  "date": "2026-11-10",
+  "title": "Scripture For Sleep When Your Mind Won't Rest | Psalm 55:22 KJV",
+  "hook": "Scripture for sleep, for the nights your mind won't rest.",
+  "hookBig": "Scripture For Sleep",
+  "hookSmall": "For the nights your mind won't rest",
+  "v": [
+   [
+    "Psalms",
+    55,
+    [
+     22
+    ],
+    "Psalm fifty five, verse twenty two.",
+    "Psalm 55:22"
+   ],
+   [
+    "Psalms",
+    46,
+    [
+     10
+    ],
+    "Psalm forty six, verse ten.",
+    "Psalm 46:10"
+   ]
+  ],
+  "prayer": "Lord, I'm putting it down. I'm not carrying it into the night. In Jesus' name, amen.",
+  "read": "Psalms 32-56",
+  "vid": "enLUGzduXXE",
+  "tags": [
+   "sleep scriptures",
+   "bible verses for sleep",
+   "sleep scriptures from the holy bible",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "scripture for sleep",
+   "kjv bible verses",
+   "bible verse for sleep",
+   "psalms for sleep",
+   "bedtime prayer",
+   "kjv",
+   "night prayer",
+   "peaceful sleep",
+   "bible reading for sleep",
+   "psalm 55:22",
+   "psalm 55 22"
+  ]
+ },
+ {
+  "id": "n3-night-watches",
+  "date": "2026-11-11",
+  "title": "Bedtime Scripture For Deep Sleep | Psalm 63:6 KJV",
+  "hook": "Bedtime scripture for deep sleep. For when you're lying awake.",
+  "hookBig": "Bedtime Scripture For Deep Sleep",
+  "hookSmall": "For when you're lying awake",
+  "v": [
+   [
+    "Psalms",
+    63,
+    [
+     6,
+     7
+    ],
+    "Psalm sixty three, verses six and seven.",
+    "Psalm 63:6-7"
+   ],
+   [
+    "Psalms",
+    62,
+    [
+     1
+    ],
+    "Psalm sixty two, verse one.",
+    "Psalm 62:1"
+   ]
+  ],
+  "prayer": "Lord, if I'm awake, let me be awake thinking on you. In Jesus' name, amen.",
+  "read": "Psalms 57-78",
+  "vid": "aXGIzNACPO8",
+  "tags": [
+   "sleep scriptures",
+   "bible verses for sleep",
+   "sleep scriptures from the holy bible",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "scripture for sleep",
+   "kjv bible verses",
+   "bible verse for sleep",
+   "psalms for sleep",
+   "bedtime prayer",
+   "kjv",
+   "night prayer",
+   "peaceful sleep",
+   "bible reading for sleep",
+   "psalm 63:6-7",
+   "psalm 63 6-7"
+  ]
+ },
+ {
+  "id": "n4-psalm91",
+  "date": "2026-11-12",
+  "title": "Sleep Scriptures For Protection | Psalm 91 KJV",
+  "hook": "Sleep scriptures for protection. Read these over your house tonight.",
+  "hookBig": "Sleep Scriptures For Protection",
+  "hookSmall": "Read these over your house tonight",
+  "v": [
+   [
+    "Psalms",
+    91,
+    [
+     1
+    ],
+    "Psalm ninety one, verse one.",
+    "Psalm 91:1"
+   ],
+   [
+    "Psalms",
+    91,
+    [
+     4,
+     5
+    ],
+    "Psalm ninety one, verses four and five.",
+    "Psalm 91:4-5"
+   ]
+  ],
+  "prayer": "Lord, cover this house and everybody in it tonight. In Jesus' name, amen.",
+  "read": "Psalms 79-104",
+  "vid": "9omyQM3ULPU",
+  "tags": [
+   "sleep scriptures",
+   "bible verses for sleep",
+   "sleep scriptures from the holy bible",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "scripture for sleep",
+   "kjv bible verses",
+   "bible verse for sleep",
+   "psalms for sleep",
+   "bedtime prayer",
+   "kjv",
+   "night prayer",
+   "peaceful sleep",
+   "bible reading for sleep",
+   "psalm 91:1",
+   "psalm 91 1"
+  ]
+ },
+ {
+  "id": "n5-psalm121",
+  "date": "2026-11-13",
+  "title": "Fall Asleep With God's Word | Psalm 121 KJV",
+  "hook": "Fall asleep with God's word. He stays up so you can rest.",
+  "hookBig": "Fall Asleep With God's Word",
+  "hookSmall": "He stays up so you can rest",
+  "v": [
+   [
+    "Psalms",
+    121,
+    [
+     3,
+     4
+    ],
+    "Psalm one twenty one, verses three and four.",
+    "Psalm 121:3-4"
+   ],
+   [
+    "Psalms",
+    121,
+    [
+     8
+    ],
+    "Psalm one twenty one, verse eight.",
+    "Psalm 121:8"
+   ]
+  ],
+  "prayer": "Lord, you don't sleep, so I can. Keep watch tonight. In Jesus' name, amen.",
+  "read": "Psalms 105-124",
+  "vid": "JJQjAr3xG0g",
+  "tags": [
+   "sleep scriptures",
+   "bible verses for sleep",
+   "sleep scriptures from the holy bible",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "scripture for sleep",
+   "kjv bible verses",
+   "bible verse for sleep",
+   "psalms for sleep",
+   "bedtime prayer",
+   "kjv",
+   "night prayer",
+   "peaceful sleep",
+   "bible reading for sleep",
+   "psalm 121:3-4",
+   "psalm 121 3-4"
+  ]
+ },
+ {
+  "id": "n6-psalm127",
+  "date": "2026-11-14",
+  "title": "Sleep Scriptures From The Holy Bible | Psalm 127:2 KJV",
+  "hook": "Sleep scriptures from the Holy Bible. For the one who worked all week.",
+  "hookBig": "Sleep Scriptures From The Holy Bible",
+  "hookSmall": "For the one who worked all week",
+  "v": [
+   [
+    "Psalms",
+    127,
+    [
+     2
+    ],
+    "Psalm one twenty seven, verse two.",
+    "Psalm 127:2"
+   ],
+   [
+    "Psalms",
+    131,
+    [
+     2
+    ],
+    "Psalm one thirty one, verse two.",
+    "Psalm 131:2"
+   ]
+  ],
+  "prayer": "Lord, the week is in your hands now. Give me rest. In Jesus' name, amen.",
+  "read": "Psalms 125-150",
+  "vid": "2V6mjKBs0yo",
+  "tags": [
+   "sleep scriptures",
+   "bible verses for sleep",
+   "sleep scriptures from the holy bible",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "scripture for sleep",
+   "kjv bible verses",
+   "bible verse for sleep",
+   "psalms for sleep",
+   "bedtime prayer",
+   "kjv",
+   "night prayer",
+   "peaceful sleep",
+   "bible reading for sleep",
+   "psalm 127:2",
+   "psalm 127 2"
+  ]
+ }
 ]

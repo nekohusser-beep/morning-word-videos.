@@ -1,19 +1,224 @@
-{"title":"ADHD vs Non-ADHD Doing Laundry 😂 #adhd #shorts","desc":"Wash → forget → smells → wash again → forget again. 😂 Can you relate? How many times have YOU rewashed the same load? 👇\n\nTip: set a phone alarm the second you hit start. Name it \"MOVE THE LAUNDRY.\"\n\n#adhd #adhdlife #adhdbrain #adhdproblems #adhdhumor #shorts #relatable #funny",
-"beats":[
-{"say":"Here's how a normal person does laundry. Wash it. Dry it. Fold it. Put it away. One afternoon.","label":"NON-ADHD:","set":"laundry","gray":true,"pose":"hold","holding":"clothes","cap":"Wash. Dry. Fold. Done.","chip":"purple","cap2":"Time: 1 afternoon","x":430},
-{"say":"Now here's me. I'm out of clean socks. So today's the day.","label":"ADHD:","set":"laundry","pose":"thumbs","eyes":"happy","mouth":"grin","cap":"Out of socks. Today's the day.","sfx":"ding","x":430},
-{"say":"Clothes in. Soap in. Start. Look at me. Adulting.","label":"ADHD:","set":"laundry","pose":"point","eyes":"normal","mouth":"grin","arrow":[640,1060],"cap":"Look at me. Adulting.","sfx":"pop","x":420},
-{"say":"Forty minutes left. I'll just sit down for a second.","label":"ADHD:","set":"living","pose":"stand","eyes":"normal","mouth":"smile","cap":"Just for a second.","chip":"dark","x":560},
-{"say":"One episode. Okay, the next one starts automatically. That's not my fault.","label":"ADHD:","set":"living","pose":"stand","eyes":"spiral","mouth":"o","cap":"It started automatically.","counter":"Episodes: 4","x":560},
-{"say":"Three days later.","card":"3 DAYS|LATER...","sfx":"boing"},
-{"say":"Why does the hallway smell like a swamp?","label":"ADHD:","set":"laundry","pose":"think","eyes":"side","mouth":"frown","cap":"Why does it smell like a swamp?","x":430},
-{"say":"Oh. Oh no. The laundry. It's been sitting in there wet. For three days.","label":"ADHD:","set":"laundry","pose":"panic","eyes":"wide","mouth":"o","sweat":true,"arrow":[640,1060],"cap":"The laundry. Three days.","sfx":"buzz","x":420},
-{"say":"No problem. Wash it again. This time I'm watching it.","label":"ADHD:","set":"laundry","pose":"point","eyes":"normal","mouth":"flat","cap":"Wash #2. Watching it this time.","counter":"Times washed: 2","sfx":"pop","x":420},
-{"say":"I watched it for four minutes. Then my phone buzzed.","label":"ADHD:","set":"laundry","pose":"phone","eyes":"side","mouth":"o","cap":"*bzzz*","chip":"dark","counter":"Times washed: 2","sfx":"buzz","x":430},
-{"say":"Two days later.","card":"2 DAYS|LATER...","sfx":"boing"},
-{"say":"Swamp smell. Again. Wash number three.","label":"ADHD:","set":"laundry","pose":"stand","eyes":"tired","mouth":"flat","cap":"Wash #3.","counter":"Times washed: 3","x":430},
-{"say":"Okay, it's finally dry. Now it lives in the basket. Forever. I just dig through it every morning like it's a treasure chest.","label":"ADHD:","set":"laundry","pose":"hold","holding":"clothes","eyes":"happy","mouth":"grin","arrow":[260,1020],"cap":"The basket is the dresser now.","chip":"purple","counter":"Times washed: 3","x":430},
-{"say":"And I still don't have clean socks. They're in the washer. Wet.","label":"ADHD:","set":"laundry","pose":"panic","eyes":"spiral","mouth":"o","sweat":true,"cap":"Socks still in the washer.","cap2":"Time: 6 days","x":430},
-{"say":"Here's why. Your brain doesn't feel time going by. Out of sight is out of mind. So the second you hit start, set an alarm on your phone. Name it move the laundry. Let the phone remember for you.","set":"blank","pose":"thumbs","eyes":"happy","mouth":"grin","props":[["phone",770,800,1.0],["washer",780,1240,0.6]],"cap":"Can you relate?","cap2":"Tip: set an alarm the second you hit start. Name it MOVE THE LAUNDRY.","chip2":"purple","x":360},
-{"say":"How many times have you washed the same load? Be honest. Tell me in the comments.","set":"blank","pose":"point","eyes":"happy","mouth":"smile","cap":"How many rewashes? Be honest.","cap2":"Drop it in the comments 👇","x":420}
-]}
+{
+"title": "ADHD vs Non-ADHD Doing Laundry 😂 A Day in the Life with ADHD #shorts",
+"desc": "A day in the life with ADHD: the laundry loop.\n\nWash → forget → smells → wash again → forget again. 😂 Can you relate? How many times have YOU rewashed the same load? 👇\n\nTip: set a phone alarm the second you hit start. Name it \"MOVE THE LAUNDRY.\"\n\n#adhd #adhdlife #adhdbrain #adhdproblems #adhdhumor #shorts #relatable #funny",
+"beats": [
+{
+"say": "Here's how a normal person does laundry. Wash it. Dry it. Fold it. Put it away. One afternoon.",
+"label": "NON-ADHD:",
+"set": "laundry",
+"gray": true,
+"pose": "hold",
+"holding": "clothes",
+"cap": "Wash. Dry. Fold. Done.",
+"chip": "purple",
+"cap2": "Time: 1 afternoon",
+"x": 430
+},
+{
+"say": "Now here's me. I'm out of clean socks. So today's the day.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "thumbs",
+"eyes": "happy",
+"mouth": "grin",
+"cap": "Out of socks. Today's the day.",
+"sfx": "ding",
+"x": 430
+},
+{
+"say": "Clothes in. Soap in. Start. Look at me. Adulting.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "point",
+"eyes": "normal",
+"mouth": "grin",
+"arrow": [
+640,
+1060
+],
+"cap": "Look at me. Adulting.",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "Forty minutes left. I'll just sit down for a second.",
+"label": "ADHD:",
+"set": "living",
+"pose": "stand",
+"eyes": "normal",
+"mouth": "smile",
+"cap": "Just for a second.",
+"chip": "dark",
+"x": 560
+},
+{
+"say": "One episode. Okay, the next one starts automatically. That's not my fault.",
+"label": "ADHD:",
+"set": "living",
+"pose": "stand",
+"eyes": "spiral",
+"mouth": "o",
+"cap": "It started automatically.",
+"counter": "Episodes: 4",
+"x": 560
+},
+{
+"say": "Three days later.",
+"card": "3 DAYS|LATER...",
+"sfx": "boing"
+},
+{
+"say": "Why does the hallway smell like a swamp?",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "think",
+"eyes": "side",
+"mouth": "frown",
+"cap": "Why does it smell like a swamp?",
+"x": 430
+},
+{
+"say": "Oh. Oh no. The laundry. It's been sitting in there wet. For three days.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "panic",
+"eyes": "wide",
+"mouth": "o",
+"sweat": true,
+"arrow": [
+640,
+1060
+],
+"cap": "The laundry. Three days.",
+"sfx": "buzz",
+"x": 420
+},
+{
+"say": "No problem. Wash it again. This time I'm watching it.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "point",
+"eyes": "normal",
+"mouth": "flat",
+"cap": "Wash #2. Watching it this time.",
+"counter": "Times washed: 2",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "I watched it for four minutes. Then my phone buzzed.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "phone",
+"eyes": "side",
+"mouth": "o",
+"cap": "*bzzz*",
+"chip": "dark",
+"counter": "Times washed: 2",
+"sfx": "buzz",
+"x": 430
+},
+{
+"say": "Two days later.",
+"card": "2 DAYS|LATER...",
+"sfx": "boing"
+},
+{
+"say": "Swamp smell. Again. Wash number three.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "stand",
+"eyes": "tired",
+"mouth": "flat",
+"cap": "Wash #3.",
+"counter": "Times washed: 3",
+"x": 430
+},
+{
+"say": "Okay, it's finally dry. Now it lives in the basket. Forever. I just dig through it every morning like it's a treasure chest.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "hold",
+"holding": "clothes",
+"eyes": "happy",
+"mouth": "grin",
+"arrow": [
+260,
+1020
+],
+"cap": "The basket is the dresser now.",
+"chip": "purple",
+"counter": "Times washed: 3",
+"x": 430
+},
+{
+"say": "And I still don't have clean socks. They're in the washer. Wet.",
+"label": "ADHD:",
+"set": "laundry",
+"pose": "panic",
+"eyes": "spiral",
+"mouth": "o",
+"sweat": true,
+"cap": "Socks still in the washer.",
+"cap2": "Time: 6 days",
+"x": 430
+},
+{
+"say": "Here's why. Your brain doesn't feel time going by. Out of sight is out of mind. So the second you hit start, set an alarm on your phone. Name it move the laundry. Let the phone remember for you.",
+"set": "blank",
+"pose": "thumbs",
+"eyes": "happy",
+"mouth": "grin",
+"props": [
+[
+"phone",
+770,
+800,
+1.0
+],
+[
+"washer",
+780,
+1240,
+0.6
+]
+],
+"cap": "Can you relate?",
+"cap2": "Tip: set an alarm the second you hit start. Name it MOVE THE LAUNDRY.",
+"chip2": "purple",
+"x": 360
+},
+{
+"say": "How many times have you washed the same load? Be honest. Tell me in the comments.",
+"set": "blank",
+"pose": "point",
+"eyes": "happy",
+"mouth": "smile",
+"cap": "How many rewashes? Be honest.",
+"cap2": "Drop it in the comments 👇",
+"x": 420
+}
+],
+"tags": [
+"laundry",
+"rewashing laundry",
+"adhd",
+"adhd vs non adhd",
+"what it's like to have adhd",
+"a day in the life with adhd",
+"what does adhd look like",
+"adhd humor",
+"adhd brain",
+"adhd life",
+"adhd problems",
+"adhd memes",
+"adhd skit",
+"adhd animation",
+"relatable adhd",
+"adult adhd",
+"adhd struggles",
+"adhd shorts",
+"funny adhd",
+"stick figure animation"
+]
+}

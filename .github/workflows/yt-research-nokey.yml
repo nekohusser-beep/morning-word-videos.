@@ -26,7 +26,7 @@ jobs:
           printf '%s' "$QUERY" | tr '|' '\n' | while IFS= read -r q; do
             q="$(echo "$q" | sed 's/^ *//;s/ *$//')"; [ -z "$q" ] && continue
             echo "################" | tee -a "$OUT"
-            python3 tools/yt-research-nokey/research.py "$q" "${COUNT:-30}" 2>&1 | tee -a "$OUT"
+            python3 tools/yt-research-nokey/research.py "$q" "${COUNT:-30}" 2>&1 | tee -a "$OUT" || true
           done
       - name: Commit report
         run: |

@@ -8,23 +8,27 @@ from collections import Counter
 from datetime import datetime, timezone
 
 q = sys.argv[1]; n = int(sys.argv[2]) if len(sys.argv) > 2 else 30
-out = subprocess.run(["yt-dlp", f"ytsearch{n}:{q}", "--dump-json", "--skip-download",
-                      "--no-warnings", "--ignore-errors"], capture_output=True, text=True).stdout
+# flat search reads the results page only (datacenter IPs get bot-checked on full video pages)
+res = subprocess.run(["yt-dlp", f"ytsearch{n}:{q}", "--flat-playlist", "--dump-json",
+                      "--ignore-errors"], capture_output=True, text=True)
+out = res.stdout
+if not out.strip():
+    print("yt-dlp stderr:", res.stderr[-800:])
 rows = []
 now = datetime.now(timezone.utc)
 for line in out.splitlines():
     try: v = json.loads(line)
     except Exception: continue
-    ud = v.get("upload_date")
+    ud = v.get("upload_date") or (datetime.fromtimestamp(v["timestamp"], timezone.utc).strftime("%Y%m%d") if v.get("timestamp") else None)
     age = max(1, (now - datetime.strptime(ud, "%Y%m%d").replace(tzinfo=timezone.utc)).days) if ud else None
     views = v.get("view_count") or 0
-    rows.append(dict(id=v.get("id"), title=v.get("title", ""), ch=v.get("channel", ""),
+    rows.append(dict(id=v.get("id"), title=v.get("title", ""), ch=v.get("channel") or v.get("uploader") or "",
                      subs=v.get("channel_follower_count"), views=views, age=age,
                      vpd=round(views / age) if age else None, dur=v.get("duration"),
                      tags=v.get("tags") or []))
 print(f"QUERY: {q}  results: {len(rows)}")
 if not rows:
-    sys.exit(1)
+    sys.exit(0)
 med = statistics.median([r["views"] for r in rows]) or 1
 print(f"median views: {int(med)}")
 print("\nTOP RESULTS (views | views/day | x median | length | channel subs | title)")

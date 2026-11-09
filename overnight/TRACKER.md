@@ -310,3 +310,4 @@ Oct 31 2026 6:15 AM ET: J-006 DONE (YouTube Short 2QVNmnGV2Nw refreshed to SEO v
 - Nov 8 2026 9:45 PM ET: angel Shorts redone with Lumi footage only (5), Grok cherub versions cut.
 - Nov 8 2026 10:40 PM ET: IQ Vid on angel Shorts (psalm 91/angels/protection prayer = top demand). Psalm 91:11 scheduled Nov 14 6 PM ET on all 3; rest queued in shorts/angels/SEO.md.
 - Nov 8 2026 11:45 PM ET: [IMPROVE] Applied all Nov 8 fixes: 3 rules + 2 lessons pushed, 3 skills proposed, Daily Studio readout task 8:41 PM ET created; Buffer refill already existed (duplicate removed).
+- Nov 8 2026 11:58 PM ET: [ALBUM-PIPE] Album start-to-finish workflow written (kingdom-brain workflows/album-pipeline.md, 16 steps, 4 Neko gates); album-pipeline skill proposed. Next: test the 3 NEW steps (prescreen, Demucs+Seed-VC, Matchering) on one Good Old Days track.

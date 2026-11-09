@@ -1,0 +1,46 @@
+name: maps-leads
+# Google Maps lead list (Mahanaicoach/google-maps-scraper-kit, MIT, pinned 15dd80b).
+# Output is ENCRYPTED to tools/leads/leads_public.pem; only the private key in kingdom-brain opens it.
+on:
+  workflow_dispatch:
+    inputs:
+      keywords: {description: "business types, one per | (e.g. junk removal|lawn care)", required: true}
+      city: {description: "City, ST", required: true, default: "Kinston, NC"}
+      depth: {description: "batches of ~20 per keyword", required: false, default: "3"}
+      flags: {description: "extra flags e.g. --no-website --has-phone", required: false, default: ""}
+permissions:
+  contents: write
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Get kit
+        run: |
+          git clone https://github.com/Mahanaicoach/google-maps-scraper-kit kit
+          cd kit && git checkout 15dd80b584dfeab550271ba383b540af8f44d1d2
+      - name: Start engine and scrape
+        working-directory: kit
+        run: |
+          echo "SCRAPER_NO_UPDATE_CHECK=1" > .env
+          python3 scripts/engine.py start
+          echo "${{ inputs.keywords }}" | tr '|' '\n' | sed 's/^ *//;s/ *$//' | grep . > kw.txt
+          cat kw.txt
+          python3 scripts/scrape.py --keywords-file kw.txt --city "${{ inputs.city }}" --depth ${{ inputs.depth }} ${{ inputs.flags }} --out ../leads.csv || true
+          python3 scripts/engine.py stop || true
+          wc -l ../leads.csv || echo "no csv"
+      - name: Encrypt and commit
+        run: |
+          test -s leads.csv || { echo "empty result"; exit 1; }
+          rows=$(($(wc -l < leads.csv)-1))
+          id="$(date -u +%Y%m%d-%H%M)-${GITHUB_RUN_ID}"
+          openssl rand -hex 32 > k.txt
+          openssl enc -aes-256-cbc -pbkdf2 -salt -pass file:k.txt -in leads.csv -out leads/$id.csv.enc
+          openssl pkeyutl -encrypt -pubin -inkey tools/leads/leads_public.pem -in k.txt -out leads/$id.key.enc
+          rm -f k.txt leads.csv
+          echo "$id rows=$rows" >> leads/INDEX.txt
+          git config user.name "leads-bot"; git config user.email "actions@users.noreply.github.com"
+          git add leads && git commit -m "leads $id ($rows rows, encrypted)" && git pull --rebase && git push

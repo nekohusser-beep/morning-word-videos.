@@ -1,0 +1,31 @@
+name: yt-channel-nokey
+on:
+  workflow_dispatch:
+    inputs:
+      channel: {description: "@handle", required: true}
+permissions:
+  contents: write
+concurrency:
+  group: yt-channel-nokey
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: tools/yt-channel-nokey}
+      - run: pip install -q -U yt-dlp
+      - name: Dump
+        env: {CH: "${{ inputs.channel }}"}
+        run: |
+          SLUG=$(echo "$CH" | tr -cd 'A-Za-z0-9_-')
+          python3 tools/yt-channel-nokey/dump.py "$CH" "reports/yt-channels/$SLUG" 2>&1 | tee "reports-log.txt"
+          mkdir -p reports/yt-channels/$SLUG && cp reports-log.txt reports/yt-channels/$SLUG/log.txt
+      - name: Commit
+        run: |
+          git config user.name "yt-channel-bot"; git config user.email "actions@users.noreply.github.com"
+          git sparse-checkout disable || true
+          git add reports/yt-channels
+          git commit -m "yt-channel-nokey ${{ inputs.channel }} run ${{ github.run_id }}" || exit 0
+          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 5; done

@@ -1,0 +1,36 @@
+name: yt-research-nokey
+on:
+  workflow_dispatch:
+    inputs:
+      query: {description: "queries separated by |", required: true}
+      count: {description: "results per query", required: false, default: "30"}
+permissions:
+  contents: write
+concurrency:
+  group: yt-research-nokey
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q yt-dlp
+      - name: Research
+        shell: bash
+        env:
+          QUERY: ${{ inputs.query }}
+          COUNT: ${{ inputs.count }}
+        run: |
+          mkdir -p reports/yt-research
+          OUT="reports/yt-research/run-${{ github.run_id }}.txt"
+          printf '%s' "$QUERY" | tr '|' '\n' | while IFS= read -r q; do
+            q="$(echo "$q" | sed 's/^ *//;s/ *$//')"; [ -z "$q" ] && continue
+            echo "################" | tee -a "$OUT"
+            python3 tools/yt-research-nokey/research.py "$q" "${COUNT:-30}" 2>&1 | tee -a "$OUT"
+          done
+      - name: Commit report
+        run: |
+          git config user.name "yt-research-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/yt-research
+          git commit -m "yt-research-nokey report ${{ github.run_id }}" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 5; done

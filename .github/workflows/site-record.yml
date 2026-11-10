@@ -13,6 +13,7 @@ permissions:
 jobs:
   rec:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,15 +25,13 @@ jobs:
           npm init -y >/dev/null && npm i playwright@1.48.2 >/dev/null
           npx playwright install --with-deps chromium >/dev/null
           JOBS='${{ inputs.jobs }}' node record.js
-          sudo apt-get install -y ffmpeg >/dev/null
-          for f in rec/*.webm; do ffmpeg -v error -y -i "$f" -c:v libx264 -crf 20 -pix_fmt yuv420p -r 30 "${f%.webm}.mp4" && rm "$f"; done
-          rm -rf rec/raw
+          rm -rf rec/raw rec/*-full.png
           ls -la rec
       - run: |
           mkdir -p tmp/rec/${{ inputs.tag }}
           mv tools/site-record/rec/* tmp/rec/${{ inputs.tag }}/
           git config user.name "site-record bot"; git config user.email "actions@github.com"
-          git sparse-checkout disable || true
+          git sparse-checkout add tmp/rec
           git add tmp/rec/${{ inputs.tag }}
           git commit -m "tmp: site-record ${{ inputs.tag }}"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 5; done

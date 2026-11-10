@@ -16,6 +16,16 @@ const fs = require('fs');
       await page.goto(j.url, { waitUntil: 'networkidle', timeout: 60000 });
     } catch (e) { console.log('goto warn', j.name, e.message); }
     await page.waitForTimeout(2500);
+    if (j.hideFixed !== false) await page.evaluate(() => {
+      // hide floating badges/chat bubbles (e.g. 'Built on Wix Headless') so footage is clean
+      for (const el of document.querySelectorAll('body *')) {
+        const cs = getComputedStyle(el);
+        if ((cs.position === 'fixed' || cs.position === 'sticky') && el.getBoundingClientRect().top > 200) el.style.display = 'none';
+      }
+      for (const el of document.querySelectorAll('a,div,iframe')) {
+        if (/Built on\s*WIX|wix-headless|Got a job\?/i.test((el.innerText || '') + (el.id || '') + (el.className || '')) && el.getBoundingClientRect().height < 120) el.style.display = 'none';
+      }
+    });
     await page.screenshot({ path: `rec/${j.name}-top.png` });
     await page.screenshot({ path: `rec/${j.name}-full.png`, fullPage: true });
     const h = await page.evaluate(() => document.body.scrollHeight);

@@ -1,0 +1,32 @@
+name: branch-to-release
+# Joins the split parts of one big file from a temp branch (parts/<name>.partNN, each under 100 MB)
+# and uploads the joined file to a release, then deletes the temp branch. Used by sessions that
+# cannot upload release assets directly.
+on:
+  workflow_dispatch:
+    inputs:
+      branch: {description: "temp branch holding parts/", required: true}
+      tag: {description: "release tag to upload into (created public if missing)", required: true}
+permissions:
+  contents: write
+jobs:
+  join:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: tools}
+      - env: {GH_TOKEN: "${{ github.token }}", BRANCH: "${{ inputs.branch }}", TAG: "${{ inputs.tag }}"}
+        run: |
+          set -e
+          git clone -q --depth 1 --single-branch --branch "$BRANCH" "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}" src
+          mkdir -p out
+          for first in src/parts/*.part00; do
+            name=$(basename "${first%.part00}")
+            cat src/parts/"$name".part* > "out/$name"
+            ls -la "out/$name"
+          done
+          bash tools/rel.sh ensure "$TAG" public >/dev/null
+          bash tools/rel.sh up "$TAG" out/* 2> up.err || { echo "::error::$(head -c 300 up.err)"; exit 1; }
+          git -C src push -q origin --delete "$BRANCH" || true
+          echo "::notice::uploaded $(ls out | tr '\n' ' ') to $TAG"

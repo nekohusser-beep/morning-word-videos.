@@ -1,0 +1,36 @@
+name: thumbs-grid
+# One frame per candidate clip (name|url lines), labeled 8-wide grids, pushed to a temp branch. For picking stock B-roll by eye without downloading whole clips.
+on:
+  workflow_dispatch:
+    inputs:
+      branch: {description: "temp branch for the grids", required: true, type: string}
+      urls: {description: "name|url pairs, one per line", required: true, type: string}
+permissions:
+  contents: write
+jobs:
+  grid:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env: {URLS: "${{ inputs.urls }}", BRANCH: "${{ inputs.branch }}"}
+    steps:
+      - uses: actions/checkout@v4
+      - name: frames and grids
+        shell: bash
+        run: |
+          sudo apt-get -qq update >/dev/null && sudo apt-get -qq install -y ffmpeg >/dev/null
+          mkdir -p fr out
+          printf '%s\n' "$URLS" > list.txt
+          while IFS='|' read -r name url; do
+            name="$(echo "$name"|xargs)"; url="$(echo "$url"|xargs)"; [ -z "$name" ] && continue
+            timeout 60 ffmpeg -nostdin -loglevel error -user_agent "Mozilla/5.0" -ss 3 -i "$url" -frames:v 1 -vf "scale=320:180,drawtext=text='$name':x=4:y=4:fontsize=20:fontcolor=yellow:box=1:boxcolor=black@0.6" "fr/$name.png" || echo "miss $name"
+          done < list.txt
+          python3 - <<'PY'
+          from PIL import Image; import glob
+          fs=sorted(glob.glob('fr/*.png')); W=8; per=48
+          for g in range(0,len(fs),per):
+              ch=fs[g:g+per]; im=Image.new('RGB',(320*W,180*((len(ch)+W-1)//W)))
+              for i,f in enumerate(ch): im.paste(Image.open(f),((i%W)*320,(i//W)*180))
+              im.save(f'out/grid_{g//per}.jpg',quality=82)
+          PY
+          git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true
+          git add out; git -c user.name=github-actions -c user.email=actions@github.com commit -qm grids; git push -f origin "$BRANCH"

@@ -17,7 +17,7 @@ jobs:
       - name: frames and grids
         shell: bash
         run: |
-          sudo apt-get -qq update >/dev/null && sudo apt-get -qq install -y ffmpeg >/dev/null
+          sudo apt-get -qq update >/dev/null && sudo apt-get -qq install -y ffmpeg >/dev/null; pip install -q pillow
           mkdir -p fr out
           printf '%s\n' "$URLS" > list.txt
           while IFS='|' read -r name url; do

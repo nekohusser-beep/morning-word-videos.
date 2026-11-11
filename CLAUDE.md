@@ -7,7 +7,7 @@ Attach it with add_repo (push) and read its CLAUDE.md first every session: rules
 
 ## Read first, every session
 1. README.md START HERE section. The ONE tracker is overnight/Claude-Work-Tracker.xlsx (mirror overnight/TRACKER.md). Never create another. Hermes' own tracker is hermes/Hermes-Tracker.xlsx.
-2. 3-project WIP cap. Shelve new ideas until something in flight closes.
+2. No project cap (Neko turned the 3-project WIP cap OFF on Nov 6 2026; never mention it).
 3. "Done" = live on Etsy with illustrations.
 4. Rule Zero: never stop after one failed attempt; try every route, report results not reasons.
 

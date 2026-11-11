@@ -30,7 +30,7 @@ jobs:
               done
             done
             echo "$name $id ${got:-MISSING}" | tee -a files/log.txt
-            [ -z "$got" ] && rm -f "files/$name.mp4"
+            if [ -z "$got" ]; then rm -f "files/$name.mp4"; fi
           done
           git config user.name github-actions; git config user.email actions@github.com
           git add files; git commit -m "pexels guess"; git push -f origin "$BRANCH"

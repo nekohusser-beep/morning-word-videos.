@@ -22,5 +22,5 @@ Shorts bridge: every long video gets at least one Short whose Related video is t
 Thumbnail: CTR under 4% after 1,000 impressions = new thumbnail (ADHD long is at 1.0%).
 
 ## Not done yet (needs Neko)
-- The nightly Studio task prompt update (adds Part B) was blocked by the scheduled-task permission check; Neko must OK it.
-- Duplicate long videos: unlist or keep is Neko's call.
+- DONE Nov 11: nightly Studio task now has Part B (long videos).
+- DONE Nov 11: duplicate twins unlisted, better-viewed one kept (see TRACKER).

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I've Got An Agent That Can Do That | Autonomous AI Agents for Your Business</title>
+<meta name="description" content="We build autonomous AI agents and automation pipelines for your business: n8n, Docker, Claude, Gemini, AI video, auto-posting. Built and running on our own businesses first.">
+<meta property="og:title" content="I've Got An Agent That Can Do That">
+<meta property="og:description" content="We build autonomous AI agents for your business.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://static.wixstatic.com/media/a31c6c_3a2f373b140d44c0bca1263ea07e7cbe~mv2.png/v1/fill/w_1200,h_630,q_85,enc_jpg/agent-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://static.wixstatic.com/media/a31c6c_3a2f373b140d44c0bca1263ea07e7cbe~mv2.png/v1/fill/w_1200,h_630,q_85,enc_jpg/agent-preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060a14;--bg2:#0b1222;--panel:#0e1729;--line:#1d2a44;
+  --text:#e8eefc;--mute:#8b9ab8;
+  --trig:#22d39a;--ai:#a77bff;--tool:#3fa9ff;--store:#ffb547;--out:#ff5f8f;
+  --glow:0 0 24px rgba(63,169,255,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Space Grotesk",system-ui,sans-serif;overflow-x:hidden;line-height:1.5}
+a{color:inherit}
+.mono{font-family:"JetBrains Mono",monospace}
+.grid-bg{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(rgba(63,169,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(63,169,255,.06) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 80%)}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:rgba(6,10,20,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;font-size:15px;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+.logo i{width:10px;height:10px;border-radius:50%;background:var(--trig);box-shadow:0 0 12px var(--trig);animation:blink 2s infinite}
+@keyframes blink{50%{opacity:.35}}
+.navcta{font-size:13px;font-weight:700;padding:9px 14px;border-radius:999px;background:linear-gradient(90deg,var(--tool),var(--ai));color:#fff;text-decoration:none}
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;overflow:hidden}
+#globe{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.75}
+.hero-inner{position:relative;text-shadow:0 2px 18px rgba(6,10,20,.95)}
+.hero-inner{max-width:880px}
+.kicker{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--trig);border:1px solid rgba(34,211,154,.4);padding:6px 12px;border-radius:999px;margin-bottom:22px;background:rgba(34,211,154,.06)}
+h1{font-size:clamp(40px,8vw,88px);line-height:1.02;font-weight:700;letter-spacing:-1.5px}
+h1 .grad{background:linear-gradient(90deg,var(--tool),var(--ai) 50%,var(--out));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(18px,2.6vw,24px);color:var(--mute);margin:22px auto 0;max-width:640px}
+.sub b{color:var(--text)}
+.ctas{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 24px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .2s,box-shadow .2s}
+.btn.p{background:linear-gradient(90deg,var(--tool),var(--ai));color:#fff;box-shadow:var(--glow)}
+.btn.s{border:1px solid var(--line);background:rgba(14,23,41,.7)}
+.btn:hover{transform:translateY(-3px)}
+.term{margin:38px auto 0;max-width:560px;text-align:left;background:rgba(9,14,27,.85);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:13px;color:var(--mute);min-height:142px}
+.term .ok{color:var(--trig)}.term .ai{color:var(--ai)}.term .cur{display:inline-block;width:8px;height:14px;background:var(--trig);vertical-align:middle;animation:blink 1s infinite}
+/* STACK MARQUEE */
+.stack{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;background:var(--bg2)}
+.track{display:flex;gap:12px;width:max-content;animation:scroll 40s linear infinite}
+.chip{font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);white-space:nowrap;color:var(--mute)}
+.chip b{color:var(--text);font-weight:600}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* SECTIONS */
+section.blk{max-width:1100px;margin:0 auto;padding:90px 20px}
+.eyebrow{font-size:12px;letter-spacing:2px;color:var(--tool);margin-bottom:10px}
+h2{font-size:clamp(30px,5vw,52px);line-height:1.08;letter-spacing:-1px}
+.lead{color:var(--mute);font-size:18px;margin-top:14px;max-width:700px}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+/* PIPELINES */
+.pipe{margin-top:44px;background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.pipe-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.pipe-head h3{font-size:20px}
+.pipe-head p{color:var(--mute);font-size:14px;max-width:560px}
+.live{font-size:11px;color:var(--trig);border:1px solid rgba(34,211,154,.4);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.live:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--trig);margin-right:6px;animation:blink 1.4s infinite}
+.canvas{position:relative;padding:14px;background-image:radial-gradient(rgba(139,154,184,.18) 1px,transparent 1px);background-size:18px 18px}
+.canvas svg{width:100%;max-width:860px;margin:0 auto;height:auto;display:block}
+.legend{display:flex;gap:14px;flex-wrap:wrap;padding:12px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--mute)}
+.legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;vertical-align:middle;background:var(--c)}
+/* SERVICES */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:40px;perspective:1000px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .15s ease,box-shadow .3s,border-color .3s;transform-style:preserve-3d}
+.card:hover{border-color:var(--tool);box-shadow:var(--glow)}
+.card .ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-size:20px;margin-bottom:14px;background:rgba(63,169,255,.1);border:1px solid var(--line)}
+.card h4{font-size:19px;margin-bottom:6px}
+.card p{color:var(--mute);font-size:15px}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:40px;counter-reset:s}
+.step{position:relative;padding:22px;border-left:2px solid var(--ai);background:linear-gradient(90deg,rgba(167,123,255,.08),transparent)}
+.step:before{counter-increment:s;content:"0" counter(s);font-family:"JetBrains Mono",monospace;color:var(--ai);font-size:13px;display:block;margin-bottom:8px}
+.step h4{font-size:18px}.step p{color:var(--mute);font-size:15px;margin-top:4px}
+/* PROOF */
+.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:36px}
+.pf{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--bg2)}
+.pf b{display:block;font-size:30px;background:linear-gradient(90deg,var(--trig),var(--tool));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf span{color:var(--mute);font-size:14px}
+/* CTA */
+.final{text-align:center;padding:100px 20px;background:radial-gradient(ellipse at 50% 0%,rgba(167,123,255,.25),transparent 60%)}
+.final h2{max-width:800px;margin:0 auto}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:30px 20px 50px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){.track,.reveal{animation:none;transition:none;opacity:1;transform:none}}
+
+/* BOT CREW */
+.crew{display:flex;justify-content:center;gap:clamp(8px,3vw,26px);margin-top:34px;flex-wrap:wrap}
+.crew figure{display:flex;flex-direction:column;align-items:center;gap:6px}
+.crew figcaption{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--mute);letter-spacing:1px}
+.bot{width:clamp(46px,9vw,64px);height:auto;overflow:visible;animation:dance 1.1s ease-in-out infinite;filter:drop-shadow(0 6px 14px rgba(0,0,0,.5))}
+.bot .al,.bot .ar,.bot .ey,.bot .tip{transform-box:fill-box}
+.bot .al{transform-origin:100% 0;animation:armL .55s ease-in-out infinite alternate}
+.bot .ar{transform-origin:0 0;animation:armR .55s ease-in-out infinite alternate}
+.bot .ey{transform-origin:50% 50%;animation:wink 3.2s infinite}
+.bot .tip{animation:blink 1s infinite}
+@keyframes dance{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-12px) rotate(7deg)}}
+@keyframes armL{from{transform:rotate(10deg)}to{transform:rotate(-70deg)}}
+@keyframes armR{from{transform:rotate(-10deg)}to{transform:rotate(70deg)}}
+@keyframes wink{0%,90%,100%{transform:scaleY(1)}94%{transform:scaleY(.1)}}
+.mascot{position:fixed;right:14px;bottom:14px;z-index:30;display:flex;align-items:flex-end;gap:8px;text-decoration:none}
+.mascot .bot{width:62px;animation:dance 1.6s ease-in-out infinite}
+.mascot .bot .ar{animation:wave .4s ease-in-out infinite alternate}
+@keyframes wave{from{transform:rotate(-20deg)}to{transform:rotate(-110deg)}}
+.bubble{background:#fff;color:#0b1222;font-weight:700;font-size:13px;padding:9px 12px;border-radius:14px 14px 2px 14px;box-shadow:0 8px 24px rgba(0,0,0,.4);opacity:0;transform:translateY(8px);transition:.4s;margin-bottom:34px;white-space:nowrap}
+.mascot.show .bubble{opacity:1;transform:none}
+.pipe-head h3 .bot{width:26px;vertical-align:-6px;margin-right:8px;animation-duration:1.4s}
+</style>
+<script id="wix-site-script" src="https://manage.wix.com/_api/headless-business-setup/v1/headless-business/site-script.js" data-client-id="1c2d2ce2-25e1-4a1b-8b56-9747274a88e1" async></script></head>
+<body>
+<div class="grid-bg"></div>
+<nav>
+  <div class="logo"><i></i>I'VE GOT AN AGENT</div>
+  <a class="navcta" href="#talk">Get your agent</a>
+</nav>
+
+<header class="hero">
+  <canvas id="globe" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="kicker mono">AUTONOMOUS AI · AGENTS · AUTOMATION</div>
+    <h1>I've Got An Agent<br><span class="grad">That Can Do That.</span></h1>
+    <p class="sub">We build <b>autonomous AI agents</b> for your business. They research, write, create, post and follow up while you run the shop.</p>
+    <div class="ctas">
+      <a class="btn p" href="#talk">Tell us what eats your day</a>
+      <a class="btn s" href="#pipelines">See the pipelines</a>
+    </div>
+    <div class="crew" id="crew"></div>
+    <div class="term mono" id="term"></div>
+  </div>
+</header>
+
+<div class="stack" aria-label="Tools we build with">
+  <div class="track" id="track"></div>
+</div>
+
+<section class="blk" id="pipelines">
+  <div class="reveal">
+    <div class="eyebrow mono">// PIPELINES WE BUILT AND RUN</div>
+    <h2>Not slides. Systems that run.</h2>
+    <p class="lead">Every one of these runs our own businesses first. We prove it on ourselves, then we build it for you.</p>
+  </div>
+  <div id="pipes"></div>
+</section>
+
+<section class="blk" id="build">
+  <div class="reveal">
+    <div class="eyebrow mono">// WHAT WE CAN BUILD FOR YOU</div>
+    <h2>If you do it every week, an agent can do it.</h2>
+  </div>
+  <div class="cards">
+    <div class="card reveal"><div class="ic">📞</div><h4>AI Receptionist</h4><p>Answers calls and texts, books the appointment, sends you the summary. No missed leads after hours.</p></div>
+    <div class="card reveal"><div class="ic">🎯</div><h4>Lead Finder</h4><p>Pulls new business filings in your area, profiles each owner, and drafts a pitch made for them.</p></div>
+    <div class="card reveal"><div class="ic">🎬</div><h4>Content Engine</h4><p>Trend research, scripts, AI video, captions and SEO. You approve, it publishes.</p></div>
+    <div class="card reveal"><div class="ic">📲</div><h4>Auto-Poster</h4><p>One post goes out to Instagram, TikTok, Facebook and YouTube on schedule, every day.</p></div>
+    <div class="card reveal"><div class="ic">📄</div><h4>Document Machine</h4><p>Resumes, quotes, invoices, reports. Data in, finished file out, saved where you need it.</p></div>
+    <div class="card reveal"><div class="ic">🐳</div><h4>Your Own Stack</h4><p>n8n workflows self-hosted on Docker, so you own it instead of renting five subscriptions.</p></div>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="reveal">
+    <div class="eyebrow mono">// HOW IT WORKS</div>
+    <h2>From "I'm drowning" to "it's handled."</h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><h4>Talk it out</h4><p>Tell us the job that keeps you up late. We listen for what repeats.</p></div>
+    <div class="step reveal"><h4>Map the pipeline</h4><p>You get a schematic like the ones above, drawn for your business.</p></div>
+    <div class="step reveal"><h4>Build and prove it</h4><p>We build it and run it on real work before you pay the balance.</p></div>
+    <div class="step reveal"><h4>Hand off, keep running</h4><p>It runs on its own. You approve what matters. We keep it tuned.</p></div>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="reveal">
+    <div class="eyebrow mono">// RUNNING RIGHT NOW</div>
+    <h2>Our own shop is the test lab.</h2>
+  </div>
+  <div class="proof">
+    <div class="pf reveal"><b>5</b><span>pipelines built across video, social, research and documents</span></div>
+    <div class="pf reveal"><b>4</b><span>AI agents working as one team, each with its own job</span></div>
+    <div class="pf reveal"><b>24/7</b><span>keeps running while the owner tends to other business</span></div>
+    <div class="pf reveal"><b>1</b><span>person running all of it, because the agents carry the load</span></div>
+  </div>
+</section>
+
+<section class="final" id="talk">
+  <div class="reveal">
+    <div class="eyebrow mono">// LET'S BUILD YOURS</div>
+    <h2>Whatever is eating your day, I've got an agent that can do that.</h2>
+    <div class="ctas">
+      <a class="btn p" href="sms:+12525439014?&body=I%20want%20an%20AI%20agent%20for%20my%20business.%20What%20I%20need%20it%20to%20do%3A%20">Text us</a>
+      <a class="btn s" href="tel:+12525439014">Call 252-543-9014</a>
+    </div>
+  </div>
+</section>
+
+<a class="mascot" id="mascot" href="#talk" aria-label="Talk to us"><span class="bubble">Got a job? I've got an agent.</span></a>
+
+<footer>
+  I've Got An Agent That Can Do That · A Cord of Three Strands LLC company<br>
+  <span class="mono">Kinston, NC · Summerville, SC</span>
+</footer>
+
+<script>
+/* ---------- tool marquee ---------- */
+(function(){
+  var tools=["Claude","n8n","Docker","GitHub Actions","Gemini","Grok","Google Flow","Hailuo","HeyGen","FFmpeg","Kokoro TTS","Stripe","AWS S3","Vercel","Buffer","Postiz","YouTube Data API","Google Sheets","Gmail","Wix","Canva","Suno"];
+  var html=tools.concat(tools).map(function(t){return '<span class="chip mono"><b>'+t+'</b></span>'}).join("");
+  document.getElementById("track").innerHTML=html;
+})();
+
+/* ---------- terminal typer ---------- */
+(function(){
+  var lines=[
+    ['ok','✓ agent.research  pulled 24 trending searches'],
+    ['ai','◆ agent.write     script drafted, scripture checked'],
+    ['ok','✓ agent.render    video stitched, captions burned in'],
+    ['ai','◆ agent.seo       title, tags, description set'],
+    ['ok','✓ agent.publish   queued for 5:00 AM on 3 platforms']
+  ];
+  var el=document.getElementById("term"),i=0,c=0,out="";
+  function tick(){
+    if(i>=lines.length){setTimeout(function(){i=0;c=0;out="";tick()},3500);return}
+    var cls=lines[i][0],txt=lines[i][1];
+    c++;
+    el.innerHTML=out+'<span class="'+cls+'">'+txt.slice(0,c)+'</span><span class="cur"></span>';
+    if(c>=txt.length){out+='<span class="'+cls+'">'+txt+'</span><br>';i++;c=0;setTimeout(tick,420)}
+    else setTimeout(tick,22);
+  }
+  tick();
+})();
+
+/* ---------- 3D neural globe ---------- */
+(function(){
+  var cv=document.getElementById("globe"),ctx=cv.getContext("2d");
+  var W,H,DPR=Math.min(window.devicePixelRatio||1,2),pts=[],N=window.innerWidth<700?140:260,mx=0,my=0;
+  var cols=["#3fa9ff","#a77bff","#22d39a","#ff5f8f"];
+  for(var k=0;k<N;k++){
+    var y=1-(k/(N-1))*2,r=Math.sqrt(1-y*y),t=k*2.399963;
+    pts.push({x:Math.cos(t)*r,y:y,z:Math.sin(t)*r,c:cols[k%4]});
+  }
+  function size(){W=cv.clientWidth;H=cv.clientHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0)}
+  size();window.addEventListener("resize",size);
+  window.addEventListener("pointermove",function(e){mx=(e.clientX/window.innerWidth-.5);my=(e.clientY/window.innerHeight-.5)});
+  var a=0;
+  function frame(){
+    a+=0.0025;
+    ctx.clearRect(0,0,W,H);
+    var R=Math.min(W,H)*0.42,cx=W/2,cy=H/2;
+    var ay=a+mx*0.8,ax=0.35+my*0.6;
+    var sy=Math.sin(ay),cy2=Math.cos(ay),sx=Math.sin(ax),cx2=Math.cos(ax);
+    var P=pts.map(function(p){
+      var x=p.x*cy2-p.z*sy,z=p.x*sy+p.z*cy2,y=p.y*cx2-z*sx;z=p.y*sx+z*cx2;
+      var s=2.2/(2.2+z);
+      return{x:cx+x*R*s,y:cy+y*R*s,z:z,s:s,c:p.c};
+    });
+    ctx.lineWidth=0.6;
+    for(var i=0;i<P.length;i++){
+      for(var j=i+1;j<P.length;j++){
+        var dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=dx*dx+dy*dy,lim=(R*0.2)*(R*0.2);
+        if(d<lim){
+          var al=(1-d/lim)*0.35*((P[i].s+P[j].s)/2-0.55);
+          if(al>0){ctx.strokeStyle="rgba(63,169,255,"+al.toFixed(3)+")";ctx.beginPath();ctx.moveTo(P[i].x,P[i].y);ctx.lineTo(P[j].x,P[j].y);ctx.stroke()}
+        }
+      }
+    }
+    P.sort(function(u,v){return v.z-u.z});
+    P.forEach(function(p){
+      var o=Math.max(0.15,(p.s-0.6)*1.6);
+      ctx.globalAlpha=Math.min(o,1);ctx.fillStyle=p.c;
+      ctx.beginPath();ctx.arc(p.x,p.y,1.8*p.s,0,6.283);ctx.fill();
+    });
+    ctx.globalAlpha=1;
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
+
+/* ---------- pipeline schematics ---------- */
+var COL={trig:"#22d39a",ai:"#a77bff",tool:"#3fa9ff",store:"#ffb547",out:"#ff5f8f"};
+var PIPES=[
+  {t:"Kinetic Resume · AI video resumes",st:"BUILT",d:"A resume and a headshot go in. A talking avatar video comes out, selling that person for the job.",n:[
+    ["trig","Resume + Headshot","upload form"],["tool","n8n Webhook","orchestrator"],["ai","Gemini","writes the pitch"],
+    ["ai","HeyGen Avatar","renders talking video"],["store","AWS S3","stores media"],["tool","Stripe","checkout"],
+    ["out","Video Page","shareable, on Vercel"]]},
+  {t:"YouTube content engine",d:"Finds what people are searching, writes the script, makes the video, and sets up the SEO before it posts.",n:[
+    ["trig","Trend Scan","YouTube API + Trends"],["ai","Claude","writes the script"],["ai","Scripture Check","word-for-word guard"],
+    ["tool","Flow + Hailuo","AI video clips"],["tool","FFmpeg","stitch + captions"],["ai","IQ Vid SEO","titles + tags"],
+    ["out","YouTube","scheduled upload"]]},
+  {t:"Social auto-poster · Instagram, TikTok, Facebook",d:"One daily verse becomes a branded card and a short, then goes out to every platform on schedule.",n:[
+    ["trig","Daily Trigger","cron, every morning"],["ai","Content Pick","verse of the day"],["tool","Card Render","branded template"],
+    ["store","GitHub Host","public media URL"],["tool","Buffer / Postiz","queue + schedule"],["out","Instagram","Reels"],
+    ["out","TikTok + Shorts","same post, all feeds"]]},
+  {t:"Multi-agent AI team",d:"One owner gives the order. A team of agents splits the work, checks each other, and reports back once.",n:[
+    ["trig","Owner","gives the order"],["ai","Claude · COO","plans + assigns"],["ai","Rex · Grok","deep web research"],
+    ["ai","Lumi","builds the media"],["ai","Gemini","second opinion"],["store","Shared Tracker","Google Sheets"],
+    ["out","One Report","finished work back"]]},
+  {t:"Audio Bible factory · long-form sleep readings",d:"Text in, hours of narrated audio out, checked for glitches and published with its own thumbnail.",n:[
+    ["trig","Book of the Bible","text source"],["tool","Chunker","splits by chapter"],["ai","Kokoro TTS","natural narrator voice"],
+    ["tool","Audio QA","glitch + level scan"],["ai","Thumbnail Gen","AI cover art"],["tool","FFmpeg Render","long-form video"],
+    ["out","YouTube","hours of watch time"]]}
+];
+
+function svgEl(tag,attrs){var e=document.createElementNS("http://www.w3.org/2000/svg",tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e}
+
+function buildPipe(p,idx){
+  var wrap=document.createElement("div");wrap.className="pipe reveal";
+  wrap.innerHTML='<div class="pipe-head"><div><h3>'+p.t+'</h3><p>'+p.d+'</p></div><span class="live mono">'+(p.st||'RUNNING')+'</span></div><div class="canvas"></div><div class="legend mono"><span style="--c:'+COL.trig+'">trigger</span><span style="--c:'+COL.ai+'">AI agent</span><span style="--c:'+COL.tool+'">tool</span><span style="--c:'+COL.store+'">storage</span><span style="--c:'+COL.out+'">output</span></div>';
+  var MOB=window.innerWidth<700,PER=MOB?2:3,NW=200,NH=74,GX=MOB?40:60,GY=MOB?56:70,PAD=16;
+  var rows=Math.ceil(p.n.length/PER);
+  var VW=PAD*2+PER*NW+(PER-1)*GX,VH=PAD*2+rows*NH+(rows-1)*GY;
+  var svg=svgEl("svg",{viewBox:"0 0 "+VW+" "+VH,role:"img","aria-label":p.t+" pipeline"});
+  var defs=svgEl("defs",{});
+  var f=svgEl("filter",{id:"g"+idx,x:"-50%",y:"-50%",width:"200%",height:"200%"});
+  f.appendChild(svgEl("feGaussianBlur",{stdDeviation:"4",result:"b"}));
+  var m=svgEl("feMerge",{});m.appendChild(svgEl("feMergeNode",{in:"b"}));m.appendChild(svgEl("feMergeNode",{in:"SourceGraphic"}));f.appendChild(m);
+  defs.appendChild(f);svg.appendChild(defs);
+  var pos=p.n.map(function(_,i){
+    var r=Math.floor(i/PER),c=i%PER;if(r%2===1)c=PER-1-c;
+    return{x:PAD+c*(NW+GX),y:PAD+r*(NH+GY),r:r};
+  });
+  var wires=svgEl("g",{}),paths=[];
+  for(var i=0;i<pos.length-1;i++){
+    var a=pos[i],b=pos[i+1],d;
+    if(a.r===b.r){
+      var ltr=b.x>a.x;
+      var x1=ltr?a.x+NW:a.x,x2=ltr?b.x:b.x+NW,y=a.y+NH/2;
+      d="M"+x1+" "+y+" C"+(x1+(ltr?30:-30))+" "+y+" "+(x2+(ltr?-30:30))+" "+y+" "+x2+" "+y;
+    }else{
+      var cx=a.x+NW/2,y1=a.y+NH,y2=b.y;
+      d="M"+cx+" "+y1+" C"+cx+" "+(y1+GY*0.6)+" "+cx+" "+(y2-GY*0.6)+" "+cx+" "+y2;
+    }
+    var col=COL[p.n[i+1][0]];
+    wires.appendChild(svgEl("path",{d:d,fill:"none",stroke:"#1d2a44","stroke-width":"3"}));
+    var flow=svgEl("path",{d:d,fill:"none",stroke:col,"stroke-width":"2","stroke-dasharray":"6 8",opacity:".85"});
+    flow.style.animation="dash 1.2s linear infinite";
+    wires.appendChild(flow);
+    var dot=svgEl("circle",{r:"4.5",fill:col,filter:"url(#g"+idx+")"});
+    wires.appendChild(dot);
+    paths.push({p:flow,dot:dot,off:i*0.18});
+  }
+  svg.appendChild(wires);
+  p.n.forEach(function(n,i){
+    var g=svgEl("g",{transform:"translate("+pos[i].x+","+pos[i].y+")"}),col=COL[n[0]];
+    g.appendChild(svgEl("rect",{width:NW,height:NH,rx:"12",fill:"#0b1324",stroke:col,"stroke-opacity":".55","stroke-width":"1.5"}));
+    g.appendChild(svgEl("rect",{width:"5",height:NH-24,x:"0",y:"12",rx:"2",fill:col,filter:"url(#g"+idx+")"}));
+    var ic=svgEl("circle",{cx:NW-18,cy:"18",r:"5",fill:col});
+    ic.style.animation="pulse 2s "+(i*0.3)+"s infinite";g.appendChild(ic);
+    var t1=svgEl("text",{x:"18",y:"32",fill:"#e8eefc","font-size":"16","font-weight":"700","font-family":"Space Grotesk,sans-serif"});t1.textContent=n[1];g.appendChild(t1);
+    var t2=svgEl("text",{x:"18",y:"55",fill:"#8b9ab8","font-size":"12","font-family":"JetBrains Mono,monospace"});t2.textContent=n[2];g.appendChild(t2);
+    // ports
+    g.appendChild(svgEl("circle",{cx:"0",cy:NH/2,r:"3.5",fill:"#060a14",stroke:col,"stroke-width":"1.5"}));
+    g.appendChild(svgEl("circle",{cx:NW,cy:NH/2,r:"3.5",fill:"#060a14",stroke:col,"stroke-width":"1.5"}));
+    svg.appendChild(g);
+  });
+  wrap.querySelector(".canvas").appendChild(svg);
+  var start=performance.now();
+  function run(now){
+    var t=(now-start)/1000;
+    paths.forEach(function(w){
+      var L=w.p.getTotalLength(),u=((t*0.55+w.off)%1),pt=w.p.getPointAtLength(u*L);
+      w.dot.setAttribute("cx",pt.x);w.dot.setAttribute("cy",pt.y);
+    });
+    requestAnimationFrame(run);
+  }
+  requestAnimationFrame(run);
+  return wrap;
+}
+var st=document.createElement("style");
+st.textContent="@keyframes dash{to{stroke-dashoffset:-28}}@keyframes pulse{50%{opacity:.25}}";
+document.head.appendChild(st);
+var host=document.getElementById("pipes");
+PIPES.forEach(function(p,i){host.appendChild(buildPipe(p,i))});
+
+
+/* ---------- bot crew ---------- */
+function botSVG(c){
+  return '<svg class="bot" viewBox="0 0 60 74" aria-hidden="true">'+
+  '<line x1="30" y1="5" x2="30" y2="15" stroke="'+c+'" stroke-width="2.5"/>'+
+  '<circle class="tip" cx="30" cy="5" r="3.6" fill="'+c+'"/>'+
+  '<rect x="9" y="15" width="42" height="31" rx="11" fill="#0e1729" stroke="'+c+'" stroke-width="2.5"/>'+
+  '<rect x="14" y="21" width="32" height="17" rx="8" fill="#03060d"/>'+
+  '<g class="ey"><ellipse cx="23.5" cy="29.5" rx="3.4" ry="4" fill="'+c+'"/><ellipse cx="36.5" cy="29.5" rx="3.4" ry="4" fill="'+c+'"/></g>'+
+  '<path d="M26 34 Q30 37 34 34" stroke="'+c+'" stroke-width="1.6" fill="none" stroke-linecap="round"/>'+
+  '<line class="al" x1="17" y1="51" x2="8" y2="60" stroke="'+c+'" stroke-width="4.5" stroke-linecap="round"/>'+
+  '<line class="ar" x1="43" y1="51" x2="52" y2="60" stroke="'+c+'" stroke-width="4.5" stroke-linecap="round"/>'+
+  '<rect x="17" y="47" width="26" height="17" rx="6" fill="'+c+'"/>'+
+  '<circle cx="30" cy="55.5" r="2.6" fill="#fff" opacity=".9"/>'+
+  '<rect x="20" y="64" width="6" height="8" rx="3" fill="'+c+'" opacity=".8"/><rect x="34" y="64" width="6" height="8" rx="3" fill="'+c+'" opacity=".8"/>'+
+  '</svg>';
+}
+(function(){
+  var crew=[["#3fa9ff","RESEARCH"],["#a77bff","WRITE"],["#22d39a","BUILD"],["#ff5f8f","POST"],["#ffb547","FOLLOW-UP"]];
+  var el=document.getElementById("crew");
+  el.innerHTML=crew.map(function(b,i){return '<figure>'+botSVG(b[0]).replace('class="bot"','class="bot" style="animation-delay:'+(i*0.18)+'s"')+'<figcaption>'+b[1]+'</figcaption></figure>'}).join("");
+  var m=document.getElementById("mascot");
+  m.insertAdjacentHTML("beforeend",botSVG("#3fa9ff"));
+  setTimeout(function(){m.classList.add("show")},2500);
+  setTimeout(function(){m.classList.remove("show")},9000);
+  document.querySelectorAll(".pipe-head h3").forEach(function(h,i){
+    var cs=["#3fa9ff","#a77bff","#22d39a","#ff5f8f","#ffb547"];
+    h.insertAdjacentHTML("afterbegin",botSVG(cs[i%5]));
+  });
+})();
+
+/* ---------- scroll reveal ---------- */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+
+/* ---------- 3D tilt cards ---------- */
+document.querySelectorAll(".card").forEach(function(c){
+  c.addEventListener("pointermove",function(e){
+    var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    c.style.transform="rotateY("+(x*12)+"deg) rotateX("+(-y*12)+"deg) translateZ(6px)";
+  });
+  c.addEventListener("pointerleave",function(){c.style.transform=""});
+});
+</script>
+</body>
+</html>

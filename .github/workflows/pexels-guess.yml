@@ -1,0 +1,36 @@
+name: pexels-guess
+# Pexels search pages block the runner (Nov 11 2026), but the video CDN does not.
+# Give name|id lines (ids from a web search); the runner tries the usual HD file names and keeps the first that downloads.
+on:
+  workflow_dispatch:
+    inputs:
+      branch: {description: "temp branch (delete after pulling)", required: true, type: string}
+      items: {description: "name|pexels_id, one per line", required: true, type: string}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ITEMS: ${{ inputs.items }}
+      BRANCH: ${{ inputs.branch }}
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash
+        run: |
+          git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true; mkdir -p files
+          echo "$ITEMS" | while IFS='|' read -r name id; do
+            [ -z "$id" ] && continue; got=""
+            for res in 1920_1080 2048_1080 2560_1440 1920_1012 1920_1018 1280_720; do
+              for fps in 25 30 24 50 60; do
+                u="https://videos.pexels.com/video-files/$id/$id-hd_${res}_${fps}fps.mp4"
+                [[ $res == 2560_1440 ]] && u="https://videos.pexels.com/video-files/$id/$id-uhd_${res}_${fps}fps.mp4"
+                if curl -fsSL -A "Mozilla/5.0" -o "files/$name.mp4" "$u"; then got=$u; break 2; fi
+              done
+            done
+            echo "$name $id ${got:-MISSING}" | tee -a files/log.txt
+            [ -z "$got" ] && rm -f "files/$name.mp4"
+          done
+          git config user.name github-actions; git config user.email actions@github.com
+          git add files; git commit -m "pexels guess"; git push -f origin "$BRANCH"

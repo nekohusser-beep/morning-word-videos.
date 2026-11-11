@@ -1,0 +1,44 @@
+name: clone-voice
+on:
+  workflow_dispatch:
+    inputs:
+      ref: {description: "reference wav path", required: true}
+      lines: {description: "json list of {name,text}", required: true}
+      outdir: {description: "output dir in repo", required: true}
+      split: {description: "yes = sentence by sentence", required: false, default: "no"}
+      only: {description: "comma list of names", required: false, default: ""}
+      seedoff: {description: "added to every seed (re-roll a bad line)", required: false, default: "0"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install chatterbox-tts soundfile
+      - run: |
+          python - <<'PY'
+          import json, os, torch, torchaudio
+          from chatterbox.tts import ChatterboxTTS
+          m = ChatterboxTTS.from_pretrained(device="cpu")
+          out = "${{ inputs.outdir }}"; os.makedirs(out, exist_ok=True)
+          only=[x for x in "${{ inputs.only }}".split(",") if x]
+          for L in json.load(open("${{ inputs.lines }}")):
+              if only and L["name"] not in only: continue
+              import re
+              parts = [x.strip() for x in re.split(r'(?<=[.!?:])\s+', L["text"]) if x.strip()] if "${{ inputs.split }}"=="yes" else [L["text"]]
+              chunks = []
+              for i, sent in enumerate(parts):
+                  torch.manual_seed(1234 + i + int("${{ inputs.seedoff }}"))
+                  w = m.generate(sent, audio_prompt_path="${{ inputs.ref }}", exaggeration=L.get("exag",0.45), cfg_weight=L.get("cfg",0.5), temperature=L.get("temp",0.6))
+                  chunks += [w, torch.zeros(1, int(m.sr*0.38))]
+                  torchaudio.save(f"{out}/{L['name']}_s{i:02d}.wav", w, m.sr)
+              torchaudio.save(f"{out}/{L['name']}.wav", torch.cat(chunks, dim=1), m.sr); print("done", L["name"], flush=True)
+          PY
+      - run: |
+          git config user.name "voice-bot" && git config user.email "noreply@github.com"
+          git add "${{ inputs.outdir }}" && git commit -m "voice render ${{ github.run_id }}"
+          for i in 1 2 3 4 5 6 7 8; do git pull --rebase && git push && break; sleep $((RANDOM % 12 + 4)); done

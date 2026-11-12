@@ -190,7 +190,7 @@
  },
  {
   "kind": "dre",
-  "text": "You remember when you lost your wallet on Thursday?",
+  "text": "You remember. You lost your wallet. Thursday.",
   "para_end": true,
   "in_line": false,
   "idx": 27
@@ -225,7 +225,7 @@
  },
  {
   "kind": "dre",
-  "text": "So, what you bringing for lunch tomorrow?",
+  "text": "So. What you bringing for lunch tomorrow.",
   "para_end": true,
   "in_line": false,
   "idx": 32

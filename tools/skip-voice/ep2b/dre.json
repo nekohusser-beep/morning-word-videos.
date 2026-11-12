@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "dre",
+  "text": "Whoa. That's a strong word, Skip.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "dre",
+  "text": "And it taste like it.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 25
+ },
+ {
+  "kind": "dre",
+  "text": "I'm talking about the pudding. Not your mama.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 27
+ },
+ {
+  "kind": "dre",
+  "text": "Nah. I gave it back. Minus forty.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 37
+ }
+]

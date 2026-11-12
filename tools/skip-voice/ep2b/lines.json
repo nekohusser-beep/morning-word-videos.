@@ -1,0 +1,282 @@
+[
+ {
+  "kind": "skip",
+  "text": "Alright. Everybody freeze. Somebody in this break room is a thief.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "Whoa. That's a strong word, Skip.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "Dre. Where is my lunch?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "dre",
+  "text": "What lunch?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "skip",
+  "text": "The lunch in the fridge. My bag. My name on it. In Sharpie. Two times.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "dre",
+  "text": "Man, I ain't seen no bag.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "skip",
+  "text": "There's barbecue sauce on your eyebrow.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "dre",
+  "text": "That's my barbecue sauce.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "skip",
+  "text": "You don't bring lunch, Dre. You have never brought lunch. Not one time in three years.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "dre",
+  "text": "I'm trying something new. Meal prep.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "skip",
+  "text": "Meal prep? That's my mama's chicken. She cut the crust off my sandwich, because I asked her to. And your sandwich? No crust.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 10
+ },
+ {
+  "kind": "dre",
+  "text": "A lot of people cut the crust off.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 11
+ },
+ {
+  "kind": "skip",
+  "text": "Your napkin says, Skip, have a good day. Love, Mama.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ },
+ {
+  "kind": "dre",
+  "text": "She seem real sweet.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 13
+ },
+ {
+  "kind": "skip",
+  "text": "Bro!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 14
+ },
+ {
+  "kind": "dre",
+  "text": "Look. It was in the fridge. The fridge is for everybody. That's the rules.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 15
+ },
+ {
+  "kind": "skip",
+  "text": "There's no fridge rules! Who told you that?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 16
+ },
+ {
+  "kind": "dre",
+  "text": "It's on the paper. On the door.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 17
+ },
+ {
+  "kind": "skip",
+  "text": "The paper says, clean out your old food on Friday. It's Tuesday!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 18
+ },
+ {
+  "kind": "dre",
+  "text": "I was getting a head start.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 19
+ },
+ {
+  "kind": "skip",
+  "text": "You ate my chicken, my sandwich, and my pudding cup.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 20
+ },
+ {
+  "kind": "dre",
+  "text": "The pudding was mid, though.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 21
+ },
+ {
+  "kind": "skip",
+  "text": "Mid?! So you ate it, and then you gave it a review?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 22
+ },
+ {
+  "kind": "dre",
+  "text": "I'm just being honest. Two stars.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 23
+ },
+ {
+  "kind": "skip",
+  "text": "Two stars?! My mama been making that pudding since nineteen ninety four!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 24
+ },
+ {
+  "kind": "dre",
+  "text": "And it taste like it.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 25
+ },
+ {
+  "kind": "skip",
+  "text": "Don't talk about my mama's pudding!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 26
+ },
+ {
+  "kind": "dre",
+  "text": "I'm talking about the pudding. Not your mama.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 27
+ },
+ {
+  "kind": "skip",
+  "text": "You owe me lunch.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 28
+ },
+ {
+  "kind": "dre",
+  "text": "Bet. I got you Friday.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 29
+ },
+ {
+  "kind": "skip",
+  "text": "No. Not Friday. Last Friday you paid me forty dollars.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 30
+ },
+ {
+  "kind": "dre",
+  "text": "Right. And we good.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 31
+ },
+ {
+  "kind": "skip",
+  "text": "Hold up. Where did that forty dollars come from?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 32
+ },
+ {
+  "kind": "dre",
+  "text": "You remember. You lost your wallet. Thursday.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 33
+ },
+ {
+  "kind": "skip",
+  "text": "Yeah.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 34
+ },
+ {
+  "kind": "dre",
+  "text": "I found it.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 35
+ },
+ {
+  "kind": "skip",
+  "text": "You found my wallet. And you kept it?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 36
+ },
+ {
+  "kind": "dre",
+  "text": "Nah. I gave it back. Minus forty.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 37
+ },
+ {
+  "kind": "skip",
+  "text": "So you used my own money, to pay me back?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 38
+ },
+ {
+  "kind": "dre",
+  "text": "Technically, I paid you back. You're welcome.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 39
+ }
+]

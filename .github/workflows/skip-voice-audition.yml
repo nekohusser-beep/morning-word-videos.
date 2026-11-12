@@ -1,0 +1,66 @@
+name: skip-voice-audition
+# Free designed-voice audition for Skip and Dre (Qwen3-TTS VoiceDesign + VoxCPM2). No real person cloned.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "sv1"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t skip-voice-audition -n "Skip and Dre voice audition"
+  qwen:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: SKIP-Q1, who: skip, instruct: "An energetic Black man in his early thirties from North Carolina, a delivery driver. Quick, expressive, comedic delivery, exasperated and fed up but funny, his voice rises when he gets worked up, natural everyday street talk, not a narrator."}
+          - {id: SKIP-Q2, who: skip, instruct: "An energetic Black man in his early thirties from North Carolina, a delivery driver. Quick, expressive, comedic delivery, exasperated and fed up but funny, his voice rises when he gets worked up, natural everyday street talk, not a narrator. Slightly higher and faster."}
+          - {id: DRE-Q1, who: dre, instruct: "A laid-back Black man in his late twenties from North Carolina. Smooth, slightly raspy, lazy relaxed drawl, playing innocent and dodging, a little chuckle in his voice, casual everyday talk, not a narrator."}
+          - {id: DRE-Q2, who: dre, instruct: "A laid-back Black man in his late twenties from North Carolina. Smooth, slightly raspy, lazy relaxed drawl, playing innocent and dodging, a little chuckle in his voice, casual everyday talk, not a narrator. Deeper and slower."}
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {INSTRUCT: "${{ matrix.instruct }}", TEXT_JSON: "tools/skip-voice/${{ matrix.who }}.json"}
+        run: python tools/verse-voice/eng_qwen.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - env: {TEXT_JSON: "tools/skip-voice/${{ matrix.who }}.json"}
+        run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+  voxcpm:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: SKIP-V1, who: skip, desc: "An energetic Black man in his early thirties, quick and expressive, exasperated but funny, voice rising when worked up"}
+          - {id: DRE-V1, who: dre, desc: "A laid-back Black man in his late twenties, smooth and slightly raspy, lazy drawl, playing innocent with a chuckle"}
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {DESC: "${{ matrix.desc }}", TEXT_JSON: "tools/skip-voice/${{ matrix.who }}.json"}
+        run: python tools/verse-voice/eng_voxcpm.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - env: {TEXT_JSON: "tools/skip-voice/${{ matrix.who }}.json"}
+        run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

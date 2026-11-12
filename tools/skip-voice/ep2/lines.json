@@ -15,7 +15,7 @@
  },
  {
   "kind": "skip",
-  "text": "The lunch in the fridge. White bag. My name on it. In Sharpie. Two times.",
+  "text": "The lunch in the fridge. My bag. My name on it. In Sharpie. Two times.",
   "para_end": true,
   "in_line": false,
   "idx": 2
@@ -29,7 +29,7 @@
  },
  {
   "kind": "skip",
-  "text": "You got barbecue sauce on your eyebrow.",
+  "text": "There's barbecue sauce on your eyebrow.",
   "para_end": true,
   "in_line": false,
   "idx": 4
@@ -57,7 +57,7 @@
  },
  {
   "kind": "skip",
-  "text": "Meal prep? That's my mama's chicken. She cut the crust off my sandwich, because I asked her to. Your sandwich got no crust, Dre.",
+  "text": "Meal prep? That's my mama's chicken. She cut the crust off my sandwich, because I asked her to. And your sandwich? No crust.",
   "para_end": true,
   "in_line": false,
   "idx": 8
@@ -141,7 +141,7 @@
  },
  {
   "kind": "skip",
-  "text": "Mid? You ate it, and you gave it a review?",
+  "text": "Mid?! So you ate it, and then you gave it a review?",
   "para_end": true,
   "in_line": false,
   "idx": 20
@@ -183,7 +183,7 @@
  },
  {
   "kind": "skip",
-  "text": "Dre. Where did that forty dollars come from?",
+  "text": "Hold up. Where did that forty dollars come from?",
   "para_end": true,
   "in_line": false,
   "idx": 26
@@ -211,7 +211,7 @@
  },
  {
   "kind": "skip",
-  "text": "So you paid me back. With my own money.",
+  "text": "So you used my own money, to pay me back?",
   "para_end": true,
   "in_line": false,
   "idx": 30

@@ -15,7 +15,7 @@ CAP = {5: "Then I texted you. Twice. You left me on READ both times. That's ten 
        12: "Your cousin's name is \"Dre, gate code 4040\"?",
        16: "Oh, I know you do. Same job. Same payday. Same bank. That deposit hits at 6 AM Friday. I'll be in your driveway at 5:59. Lawn chair. Snacks.",
        3: "It WAS $20. You said you'd pay me back last Friday. You didn't. Now it's $30.",
-       10: "Yours. You tipped me $2. With MY money.", 18: "It is now. Forty."}
+       10: "Yours. You tipped me $2. With MY money.", 18: "6 o'clock. Run me my forty."}
 
 # ---- timing: rebuild the same stitch as the dialogue track
 sr = 44100

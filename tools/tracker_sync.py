@@ -30,5 +30,20 @@ for name in ['Standing rules','How it was done']:
         for r in wb[name].iter_rows(min_row=2,values_only=True):
             if any(r): out.append('- '+' :: '.join(str(c) for c in r if c))
         out.append('')
+# Keep log lines that other runs appended straight to the .md (they are not in the xlsx yet):
+# copy them into the 'How it was done' tab and the mirror, so a rebuild never wipes them.
+import re
+if os.path.exists(M):
+    gen=set(out);hw=wb['How it was done'] if 'How it was done' in wb.sheetnames else None
+    have={str(r[0]) for r in hw.iter_rows(min_row=2,values_only=True) if r[0]} if hw else set()
+    keep=[l for l in open(M).read().split('\n') if l.startswith('- ') and l not in gen and re.match(r'- [A-Z][a-z]{2} \d{1,2} \d{4} ', l)]
+    if keep:
+        add=[l for l in keep if l[2:] not in have]
+        if hw and add:
+            for l in add: hw.append([l[2:]])
+            wb.save(X)
+        while out and out[-1]=='': out.pop()
+        out+=keep+['']
+        print('kept',len(keep),'md-only log lines (%d added to xlsx)'%len(add))
 open(M,'w').write('\n'.join(out))
 print('wrote',M,len(rows),'task rows')

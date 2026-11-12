@@ -1,0 +1,89 @@
+{
+ "name": "s1_money",
+ "out": "Hook-Short-1-Money.mp4",
+ "hook_text": "GOD DOESN'T\\NWANT YOU\\NRICH.",
+ "verse": [
+  8,
+  9
+ ],
+ "verse_ref": "Matthew 6:11",
+ "verse_text": "Give us this day our daily bread.",
+ "verse_bg": [
+  "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+  221
+ ],
+ "yellow": [
+  "rich",
+  "bread",
+  "daily",
+  "every",
+  "morning",
+  "manna"
+ ],
+ "shots": {
+  "0": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    76
+   ]
+  ],
+  "1": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    13
+   ]
+  ],
+  "2": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    122
+   ]
+  ],
+  "3": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    66
+   ]
+  ],
+  "4": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    307
+   ]
+  ],
+  "5": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    231
+   ],
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    262
+   ]
+  ],
+  "6": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    237
+   ]
+  ],
+  "7": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    272
+   ]
+  ],
+  "10": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    361
+   ]
+  ],
+  "11": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    10
+   ]
+  ]
+ }
+}

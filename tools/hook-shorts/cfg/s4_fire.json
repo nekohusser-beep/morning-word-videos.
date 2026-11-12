@@ -1,0 +1,75 @@
+{
+ "name": "s4_fire",
+ "out": "Hook-Short-4-Fourth-Man.mp4",
+ "hook_text": "STOP ASKING GOD\\NTO TAKE YOUR\\NPROBLEMS AWAY.",
+ "verse": [
+  6,
+  7
+ ],
+ "verse_ref": "Daniel 3:25",
+ "verse_text": "He answered and said, Lo, I see four men loose, walking in the midst of the fire, and they have no hurt; and the form of the fourth is like the Son of God.",
+ "verse_bg": [
+  "fire52287",
+  4
+ ],
+ "yellow": [
+  "fire",
+  "four",
+  "fourth",
+  "with"
+ ],
+ "shots": {
+  "0": [
+   [
+    "fire52294",
+    3
+   ]
+  ],
+  "1": [
+   [
+    "Heaven-Without-God-Would-You-Still-Go",
+    66
+   ]
+  ],
+  "2": [
+   [
+    "fire52306",
+    5
+   ]
+  ],
+  "3": [
+   [
+    "fire52287",
+    1
+   ],
+   [
+    "Heaven-Without-God-Would-You-Still-Go",
+    81
+   ]
+  ],
+  "4": [
+   [
+    "fire52294",
+    9
+   ]
+  ],
+  "5": [
+   [
+    "fire52306",
+    9
+   ]
+  ],
+  "8": [
+   [
+    "fire52287",
+    13
+   ]
+  ],
+  "9": [
+   [
+    "When-Anxiety-Wont-Let-Go-Give-It-To-God",
+    381
+   ]
+  ]
+ }
+}

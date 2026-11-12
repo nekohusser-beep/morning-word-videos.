@@ -1,0 +1,87 @@
+{
+ "name": "s2_heaven",
+ "out": "Hook-Short-2-Heaven.mp4",
+ "hook_text": "MOST CHRISTIANS\\NDON'T ACTUALLY\\NWANT HEAVEN.",
+ "verse": [
+  8,
+  10
+ ],
+ "verse_ref": "Psalm 73:25",
+ "verse_text": "Whom have I in heaven but thee? and there is none upon earth that I desire beside thee.",
+ "verse_bg": [
+  "Night-Prayer-Heaven-Is-Where-He-Is",
+  211
+ ],
+ "yellow": [
+  "heaven",
+  "god",
+  "test",
+  "tonight"
+ ],
+ "shots": {
+  "0": [
+   [
+    "Heaven-Without-God-Would-You-Still-Go",
+    110
+   ]
+  ],
+  "1": [
+   [
+    "Heaven-Without-God-Would-You-Still-Go",
+    460
+   ]
+  ],
+  "2": [
+   [
+    "Night-Prayer-Heaven-Is-Where-He-Is",
+    225
+   ]
+  ],
+  "3": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    13
+   ]
+  ],
+  "4": [
+   [
+    "Heaven-Without-God-Would-You-Still-Go",
+    95
+   ]
+  ],
+  "5": [
+   [
+    "Heaven-Without-God-Would-You-Still-Go",
+    110
+   ],
+   [
+    "Heaven-Without-God-Would-You-Still-Go",
+    125
+   ]
+  ],
+  "6": [
+   [
+    "Night-Prayer-Heaven-Is-Where-He-Is",
+    6
+   ]
+  ],
+  "7": [
+   [
+    "Night-Prayer-Heaven-Is-Where-He-Is",
+    278
+   ]
+  ],
+  "11": [
+   [
+    "Night-Prayer-Heaven-Is-Where-He-Is",
+    430
+   ]
+  ],
+  "12": [
+   [
+    "Night-Prayer-Heaven-Is-Where-He-Is",
+    410
+   ]
+  ]
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "name": "s3_sleep",
+ "out": "Hook-Short-3-Sleep.mp4",
+ "hook_text": "PRAYING BEFORE\\NBED WON'T FIX\\NYOUR PROBLEMS.",
+ "verse": [
+  7,
+  8
+ ],
+ "verse_ref": "Psalm 121:4",
+ "verse_text": "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+ "verse_bg": [
+  "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+  346
+ ],
+ "yellow": [
+  "night",
+  "shift",
+  "sleep",
+  "guard"
+ ],
+ "shots": {
+  "0": [
+   [
+    "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+    25
+   ]
+  ],
+  "1": [
+   [
+    "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+    110
+   ]
+  ],
+  "2": [
+   [
+    "Morning-Prayer-Give-Us-This-Day-God-Is-Your-Provider",
+    13
+   ]
+  ],
+  "3": [
+   [
+    "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+    215
+   ]
+  ],
+  "4": [
+   [
+    "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+    175
+   ]
+  ],
+  "5": [
+   [
+    "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+    270
+   ]
+  ],
+  "6": [
+   [
+    "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+    66
+   ]
+  ],
+  "9": [
+   [
+    "Night-Prayer-Lay-It-Down-Before-You-Sleep",
+    225
+   ]
+  ]
+ }
+}

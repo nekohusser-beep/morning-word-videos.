@@ -1,0 +1,80 @@
+name: long-voice-audition
+# Nov 12 2026: new narrator voices for Blessed Prayers long videos (replace Michael-only).
+# Designed from a DESCRIPTION of the sound (Qwen3-TTS VoiceDesign, VoxCPM2). No real person is cloned.
+# Text = exact KJV (tools/verse-voice/text.json). Outputs + Whisper word check land in draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "lv1"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t long-voice-audition -n "long video narrator audition"
+
+  qwen:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: F1-warm-mother
+            instruct: "A warm, soothing American woman in her late thirties, soft-spoken and gentle, low and calm, like a loving mother praying over her family at night. Slow, tender pacing, breathy warmth but clear words, peaceful and comforting."
+          - id: F2-velvet-storyteller
+            instruct: "A rich, velvety Black American woman in her fifties, deep and soothing alto, wise and graceful, slow deliberate delivery like a beloved storyteller reading scripture by candlelight. Calm, dignified, full of quiet strength."
+          - id: F3-soft-british
+            instruct: "A soft-spoken British woman in her forties, gentle, warm and reassuring, smooth and unhurried, the calm voice of a late-night prayer narrator. Clear diction, tender and peaceful."
+          - id: F4-bright-morning
+            instruct: "A bright, friendly American woman in her early thirties, warm and encouraging, a gentle smile in her voice, steady and clear, perfect for a hopeful morning prayer. Not rushed, not sleepy."
+          - id: M1-gentle-pastor
+            instruct: "A warm, gentle American man in his forties, smooth baritone, compassionate and calm, like a caring pastor praying with a friend. Slow, steady and sincere, never preachy."
+          - id: M2-grandfather
+            instruct: "An older Black Southern man in his sixties, warm gravelly bass, kind and fatherly, slow and soothing, like a grandfather reading the Bible on the porch at dusk. Peaceful and sure."
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {INSTRUCT: "${{ matrix.instruct }}"}
+        run: python tools/verse-voice/eng_qwen.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - run: ffmpeg -y -loglevel error -i out/${{ matrix.id }}.wav -af loudnorm=I=-16:TP=-1.5 -ar 44100 -b:a 192k out/${{ matrix.id }}.mp3
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+
+  voxcpm:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: F5-vox-warm-mother
+            desc: "A warm, soothing American woman in her late thirties, soft-spoken, low and calm, gentle and tender like a mother praying at night, slow peaceful pacing"
+          - id: F6-vox-velvet
+            desc: "A rich velvety Black American woman in her fifties, deep soothing alto, wise and graceful, slow and dignified, reading scripture by candlelight"
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {DESC: "${{ matrix.desc }}"}
+        run: python tools/verse-voice/eng_voxcpm.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - run: ffmpeg -y -loglevel error -i out/${{ matrix.id }}.wav -af loudnorm=I=-16:TP=-1.5 -ar 44100 -b:a 192k out/${{ matrix.id }}.mp3
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

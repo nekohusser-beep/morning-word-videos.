@@ -1,0 +1,67 @@
+name: site-audit
+# SEO + AI-answer (GEO) audit of one public site. Free: geo-optimizer-skill (MIT, pinned) + Lighthouse + raw fetches.
+# Result lands on branch audit-<slug> (geo-audit.json/.txt, lighthouse.json, raw-*, headers-*). This repo is PUBLIC: read the branch, then delete it (delete-branch.yml).
+# Third-party tools run in a job with NO repo token; a second job only pushes the files.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Site address, no trailing slash
+        required: true
+      slug:
+        description: Short name for the result branch
+        required: true
+permissions: {}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions: {}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install geo-optimizer
+        run: pip install -q "geo-optimizer-skill==4.19.10"
+      - name: Run audits
+        env:
+          URL: ${{ inputs.url }}
+        run: |
+          mkdir -p out
+          geo audit --url "$URL" --no-plugins --format json > out/geo-audit.json 2> out/geo-audit.err || true
+          geo audit --url "$URL" --no-plugins > out/geo-audit.txt 2>&1 || true
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+          curl -sSL -A "$UA" -D out/headers-index.txt -o out/raw-index.html "$URL/" || true
+          for p in robots.txt sitemap.xml llms.txt llms-full.txt ai.txt; do
+            curl -sSL -A "$UA" -D "out/headers-$p.txt" -o "out/raw-$p" "$URL/$p" || true
+          done
+          npx -y lighthouse@12 "$URL/" --quiet --chrome-flags="--headless=new --no-sandbox" \
+            --only-categories=performance,seo,accessibility,best-practices \
+            --output=json --output-path=out/lighthouse.json || true
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit
+          path: out
+  save:
+    needs: audit
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: audit
+          path: out
+      - name: Push result branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SLUG: ${{ inputs.slug }}
+          REPO: ${{ github.repository }}
+        run: |
+          cd out
+          git init -q
+          git checkout -q --orphan "audit-$SLUG"
+          git add -A
+          git -c user.name=site-audit -c user.email=noreply@anthropic.com commit -qm "site audit $SLUG"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${REPO}" "HEAD:audit-$SLUG"

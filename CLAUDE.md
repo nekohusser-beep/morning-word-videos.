@@ -6,7 +6,8 @@
 Attach it with add_repo (push) and read its CLAUDE.md first every session: rules, decisions, project STATUS files, workflows, lessons live there. This public repo holds only the pipeline and the tracker. Never put personal rules or finances here.
 
 ## Read first, every session
-1. README.md START HERE section. The ONE tracker is overnight/Claude-Work-Tracker.xlsx (mirror overnight/TRACKER.md). Never create another. Hermes' own tracker is hermes/Hermes-Tracker.xlsx.
+1. NEKO'S ONE LIST (Nov 12 2026): the FINISH LIST Google Sheet 1CXWa_DY-ggI9h4yZxneGTeDolC5jl7s2gOkHqFi4ZLU. Every row has a Folder (col M) + Subfolder (col N); col O "Now" is a formula (Need you / Doing / Later / Done). Neko only reads its MY FOLDERS and NEED YOU tabs. overnight/Claude-Work-Tracker.xlsx + TRACKER.md are Claude's back-office log (keep logging there). Never create another list. Hermes' own tracker is hermes/Hermes-Tracker.xlsx.
+1b. FILING RULE, every chat: Neko can talk about several things in one chat. File every new ask/idea/finished thing into the Finish List with its folder the same turn, and end the reply with one line: "Filed: <thing> to <Folder > Subfolder>". "Open <folder>" = read that folder's rows first and stay on it. Folders: YouTube (Blessed Prayers: Long prayer videos, Shorts, Sleep Bible readings, Derrick, Channel growth; Naomi show; Skip ADHD: Shorts, Long videos), Kingdom Impact (Etsy, Books, Apparel), Neko Zion (Songs + albums, Registration + royalties, Promotion), Famous 'Round Here (Leads, Clients, Services, Our own setup), I've Got An Agent (Promos + posts, Clients + offers, Phone + tools), Side jobs, Idea jar, Toolbox.
 2. No project cap (Neko turned the 3-project WIP cap OFF on Nov 6 2026; never mention it).
 3. "Done" = live on Etsy with illustrations.
 4. Rule Zero: never stop after one failed attempt; try every route, report results not reasons.

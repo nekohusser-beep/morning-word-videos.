@@ -1,0 +1,46 @@
+name: kids-voice
+# Kids Bible story character voices (free): Qwen3-TTS VoiceDesign makes one reference line per character, VoxCPM2 clones it for every line, Whisper QC per line.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "kdg1"}
+      dir: {description: "story folder", required: true, default: "tools/kids-story/dg-long"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t kids-voice -n "Kids story character lines"
+  voice:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {who: david, instruct: "A brave, bright boy about thirteen years old. Clear young boy's voice, earnest and confident, warm and kind, speaking with courage. Natural, not a narrator."}
+          - {who: goliath, instruct: "A huge giant warrior with a very deep, booming, gravelly voice. Loud, proud and mocking, slow and heavy, like a big cartoon villain, not too scary for children."}
+          - {who: saul, instruct: "An older king in his fifties. Deep, warm, tired voice, worried and serious, speaking slowly and carefully."}
+          - {who: eliab, instruct: "An annoyed older brother in his early twenties. Impatient and irritated, scolding his little brother, sharp but not cruel."}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts voxcpm soundfile numpy faster-whisper==1.0.3 praat-parselmouth
+          mkdir -p out
+      - env: {INSTRUCT: "${{ matrix.instruct }}", TEXT_JSON: "${{ inputs.dir }}/ref_${{ matrix.who }}.json"}
+        run: python tools/verse-voice/eng_qwen.py "ref_${{ matrix.who }}" 2>&1 | tee out/ref-${{ matrix.who }}.log
+      - run: python tools/sleep-story/eng_units_voxcpm.py "${{ inputs.dir }}/${{ matrix.who }}.json" out/ref_${{ matrix.who }}.wav "${{ inputs.dir }}/ref_${{ matrix.who }}.txt" 0 1 out/${{ matrix.who }} 2>&1 | tee out/render-${{ matrix.who }}.log
+      - run: |
+          mkdir -p qcwork && cp out/${{ matrix.who }}/u*.wav qcwork/ 2>/dev/null; cd qcwork && mkdir -p out && mv u*.wav out/ ; cd ..
+          (cd qcwork && python ../tools/verse-voice/qc.py "../${{ inputs.dir }}/${{ matrix.who }}.json" ../out/ref_${{ matrix.who }}.wav) 2>&1 | tee out/qc-${{ matrix.who }}.txt
+          for f in out/${{ matrix.who }}/u*.wav; do cp "$f" "out/${{ matrix.who }}_$(basename $f)"; done
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/*.wav out/*.txt out/*.log --clobber -R "$GITHUB_REPOSITORY"

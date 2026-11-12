@@ -1,0 +1,37 @@
+name: skip-voice
+# Renders Skip ep lines in the LOCKED voices Neko picked Nov 12 2026 (Skip = audition SKIP-Q2, Dre = DRE-Q1), VoxCPM2 prompt-clone. Whisper pronunciation check per line in qc-*.txt.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "ep1v1"}
+      dir: {description: "episode folder", required: true, default: "tools/skip-voice/ep1"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t skip-voice -n "Skip episode lines"
+  render:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        who: [skip, dre]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy faster-whisper==1.0.3 praat-parselmouth
+          mkdir -p out
+      - run: python tools/sleep-story/eng_units_voxcpm.py "${{ inputs.dir }}/${{ matrix.who }}.json" tools/skip-voice/lock/ref_${{ matrix.who }}.wav tools/skip-voice/lock/ref_${{ matrix.who }}.txt 0 1 out 2>&1 | tee out/render-${{ matrix.who }}.log
+      - run: python tools/verse-voice/qc.py "${{ inputs.dir }}/${{ matrix.who }}.json" tools/skip-voice/lock/ref_${{ matrix.who }}.wav 2>&1 | tee out/qc-${{ matrix.who }}.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

@@ -376,3 +376,4 @@ Oct 31 2026 6:15 AM ET: J-006 DONE (YouTube Short 2QVNmnGV2Nw refreshed to SEO v
 - Nov 12 2026 8:56 AM ET: Kids Bible story Short #1 David and Goliath BUILT (66 s, 9:16, ICB 1 Sam 17:45, 13 Gemini pictures, Kokoro am_michael, -14.7 LUFS, humanize PASS). Sent to Neko; awaiting yes, then IQ Vid + schedule. Builder: tools/kids-story/. Finish List STORY1.
 - Nov 12 2026 10:00 AM ET: Kids David and Goliath ANIMATED cut built (13 Flow Veo 3.1 Lite clips, 150 credits = Neko's cap; 50 free BP + 100 Pro). Sent to Neko; awaiting yes. Builder tools/kids-story/build_anim.py.
 - Nov 12 2026 4:49 PM ET: [IMPROVE] review Nov 9-12 saved to kingdom-brain reports/improve/2026-11-12.md and sent to Neko; top pick: ship-check before anything goes out.
+- Nov 12 2026 6:19 PM ET: [SLEEP-SHORT] n4-psalm91 scheduled 7:30 PM ET on YouTube (draft 6af057d8229bf05dafa84e6c, text already clean), TikTok (6af649675ec1c9d5be482b27), Instagram reel (6af64968c1a0010a5be5f5b4).

@@ -1,0 +1,22 @@
+Loaded the voice encoder model on cpu in 0.03 seconds.
+u000 skip 0.930 PASS  Five fifty-nine. Good morning, Dre.
+u001 dre  0.831 PASS  Bro, why is there a lawn chair, in my driveway.
+u002 skip 0.886 PASS  Because the bank opens at six. And so does my hand
+u003 dre  0.886 PASS  Man, you really came. Okay. I respect it. I came p
+u004 skip 0.833 FAIL  Forty dollars.
+u005 dre  0.795 PASS  Better than that. A payment plan.
+u006 skip 0.906 PASS  Dre. That's a napkin.
+u007 dre  0.786 PASS  It's a legal napkin. Go ahead. Read it.
+u008 skip 0.935 PASS  Week one, five dollars. Week two, five dollars. We
+u010 skip 0.907 PASS  That's eight weeks for forty dollars. You'll be do
+u011 dre  0.795 PASS  Wow. So it's like that. I bring you a whole financ
+u012 skip 0.893 PASS  I'm not disrespecting the napkin. I'm disrespectin
+u013 dre  0.795 PASS  Nah, I'm hurt. Real friends take napkins.
+u014 skip 0.940 PASS  Real friends pay at six. It's six oh two.
+u015 dre  0.860 PASS  Fine. You want it right now. Here you go. Paid in 
+u016 skip 0.798 FAIL  A gift card?
+u017 dre  0.781 PASS  That's a forty dollar gift card, man. We good. Enj
+u018 skip 0.912 PASS  See? Was that so hard? Thank you, Dre.
+u019 skip 0.885 PASS  Balance. Three dollars. And twelve cents.
+u020 skip 0.678 FAIL  Dre!
+FAILS: 3

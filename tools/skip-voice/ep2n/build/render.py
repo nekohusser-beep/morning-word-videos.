@@ -13,11 +13,12 @@ ART = WORK + "art/"
 lines = json.load(open(os.path.join(os.path.dirname(__file__), "..", "lines.json")))
 N = len(lines)
 # captions use real spelling and digits (QC: every number on screen matches the script)
-CAP = {0: "5:59. Good morning, Dre.", 2: "Because the bank opens at 6. And so does my hand.", 4: "$40?", 8: "Week 1: $5. Week 2: $5. Week 3: $5. Week 4: see week 3.",
+CAP = {0: "5:59. Good morning, Dre.", 1: "Bro. Why is there a lawn chair in my driveway?", 2: "Because the bank opens at 6. And so does my hand.", 4: "$40.", 8: "Week 1: $5. Week 2: $5. Week 3: $5. Week 4: see week 3.",
        10: "That's 8 weeks for $40. You'll be done paying me in January.", 14: "Real friends pay at 6. It's 6:02.",
-       15: "Fine. You want it right now. Here you go. Paid in full.", 17: "$40 gift card. We good. Enjoy your breakfast, Skip.",
-       18: "See? Was that so hard? Thank you, Dre.", 19: "Balance... $3.12", 20: "DRE."}
-GAP = {17: 0.5, 18: 2.0}            # beat before 'thank you' lands; time cut + phone ding before the balance
+       15: "Fine. You want it right now. Here you go. Paid in full.", 17: "That's a $40 gift card, man. We good. Enjoy your breakfast.",
+       18: "See? Was that so hard? Thank you, Dre.", 19: "Balance... $3.12", 20: "DRE!"}
+GAP = {17: 0.5, 18: 2.0}
+DROP = {9}                          # "See? Structure." cut: no take matched Dre's voice            # beat before 'thank you' lands; time cut + phone ding before the balance
 SHOT = {0: "driveway", 1: "driveway", 2: "skip_chair", 3: "dre_napkin", 4: "skip_chair", 5: "dre_napkin",
         6: "skip_chair", 7: "dre_napkin", 8: "skip_chair", 9: "dre_napkin", 10: "skip_chair", 11: "dre_napkin",
         12: "skip_chair", 13: "dre_napkin", 14: "skip_chair", 15: "dre_card", 16: "skip_chair", 17: "dre_card",
@@ -35,6 +36,8 @@ def build_mix():
     parts, starts, durs, t = [], [], [], 0.6
     out = np.zeros(int(SR * 0.6))
     for i in range(N):
+        if i in DROP:
+            starts.append(t); durs.append(0.0); continue
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{WORK}final/u{i:03d}.wav", "-ar", str(SR), "-ac", "1", tmp], check=True)
         a, _ = sf.read(tmp)
         nz = np.where(np.abs(a) > 0.01)[0]

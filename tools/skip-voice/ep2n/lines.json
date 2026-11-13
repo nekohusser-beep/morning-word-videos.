@@ -8,7 +8,7 @@
  },
  {
   "kind": "dre",
-  "text": "Bro. Why is there a lawn chair in my driveway?",
+  "text": "Bro, why is there a lawn chair, in my driveway.",
   "para_end": true,
   "in_line": false,
   "idx": 1
@@ -29,14 +29,14 @@
  },
  {
   "kind": "skip",
-  "text": "Forty dollars?",
+  "text": "Forty dollars.",
   "para_end": true,
   "in_line": false,
   "idx": 4
  },
  {
   "kind": "dre",
-  "text": "Better. A payment plan.",
+  "text": "Better than that. A payment plan.",
   "para_end": true,
   "in_line": false,
   "idx": 5
@@ -50,7 +50,7 @@
  },
  {
   "kind": "dre",
-  "text": "It's a legal napkin. Read it.",
+  "text": "It's a legal napkin. Go ahead. Read it.",
   "para_end": true,
   "in_line": false,
   "idx": 7
@@ -106,7 +106,7 @@
  },
  {
   "kind": "dre",
-  "text": "Fine. You want it right now? Here. Paid in full.",
+  "text": "Fine. You want it right now. Here you go. Paid in full.",
   "para_end": true,
   "in_line": false,
   "idx": 15
@@ -120,7 +120,7 @@
  },
  {
   "kind": "dre",
-  "text": "Forty dollar gift card. We good. Enjoy your breakfast, Skip.",
+  "text": "That's a forty dollar gift card, man. We good. Enjoy your breakfast.",
   "para_end": true,
   "in_line": false,
   "idx": 17
@@ -141,7 +141,7 @@
  },
  {
   "kind": "skip",
-  "text": "Dre.",
+  "text": "Dre!",
   "para_end": true,
   "in_line": false,
   "idx": 20

@@ -379,3 +379,4 @@ Oct 31 2026 6:15 AM ET: J-006 DONE (YouTube Short 2QVNmnGV2Nw refreshed to SEO v
 - Nov 12 2026 6:19 PM ET: [SLEEP-SHORT] n4-psalm91 scheduled 7:30 PM ET on YouTube (draft 6af057d8229bf05dafa84e6c, text already clean), TikTok (6af649675ec1c9d5be482b27), Instagram reel (6af64968c1a0010a5be5f5b4).
 - 2026-11-12 2:10 PM ET: Kids David and Goliath long episode built (6:27, 16:9, 16 Flow clips, mouths moving, quiz, ICB verse boxes, -15.8 LUFS). Sent to phone. Laptop save blocked: C: drive full. Flow 190/239 used. Waiting on Neko's yes (STORY2).
 - Nov 12 2026 7:20 PM ET: Skip Ep 2 'Six O'Clock' built (1:09), branch skip-ep2-napkin tools/skip-voice/ep2n; sent to Neko; not posted.
+- Nov 12 2026 7:49 PM ET: [SKIP-DAILY] skip-06-grocery scheduled Fri Nov 13 12:00 PM ET on YouTube (6af65e51ba218f32636c540f), TikTok (6af65e5eda25c4db3e87587e), Instagram reel (6af65e5efb90ccefdd0d4523). Queue row 6 SCHEDULED. Skip stack low: 0 left.

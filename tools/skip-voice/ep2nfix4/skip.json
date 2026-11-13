@@ -1,0 +1,65 @@
+[
+ {
+  "kind": "skip",
+  "text": "Forty dollars?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 240
+ },
+ {
+  "kind": "skip",
+  "text": "Forty dollars.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 241
+ },
+ {
+  "kind": "skip",
+  "text": "Forty dollars?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 242
+ },
+ {
+  "kind": "skip",
+  "text": "A gift card?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 360
+ },
+ {
+  "kind": "skip",
+  "text": "A gift card.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 361
+ },
+ {
+  "kind": "skip",
+  "text": "A gift card?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 362
+ },
+ {
+  "kind": "skip",
+  "text": "Dre.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 400
+ },
+ {
+  "kind": "skip",
+  "text": "Dre!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 401
+ },
+ {
+  "kind": "skip",
+  "text": "Dre.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 402
+ }
+]

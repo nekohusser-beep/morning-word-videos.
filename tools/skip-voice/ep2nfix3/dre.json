@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "dre",
+  "text": "Bro. Why is there a lawn chair in my driveway.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 101
+ },
+ {
+  "kind": "dre",
+  "text": "Man. Why is it a lawn chair in my driveway.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 102
+ },
+ {
+  "kind": "dre",
+  "text": "Bro, why is there a lawn chair, in my driveway.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 103
+ },
+ {
+  "kind": "dre",
+  "text": "Forty dollar gift card. We good. Enjoy your breakfast, Skip.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 171
+ },
+ {
+  "kind": "dre",
+  "text": "It's a forty dollar gift card. So we good. Go enjoy your breakfast, Skip.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 172
+ },
+ {
+  "kind": "dre",
+  "text": "That's a forty dollar gift card, man. We good. Enjoy your breakfast.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 173
+ }
+]

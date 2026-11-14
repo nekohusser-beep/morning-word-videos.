@@ -1,0 +1,15 @@
+=== LONG-VIDEO OUTLIERS: polycarp martyr story (searched: polycarp martyr story; polycarp martyr; polycarp martyrdom; polycarp story) ===
+pool 41 long videos, 0 scored against their channel's median, 0 at 3x or more
+outlier | views | views/day | age d | min | subs | channel median | title [channel] link
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 0
+WINNER TITLE WORDS: 
+=== LONG-VIDEO OUTLIERS: christian martyr story (searched: christian martyr story; christian martyrs story; 21 christian martyrs story; christian martyr stories) ===
+pool 48 long videos, 0 scored against their channel's median, 0 at 3x or more
+outlier | views | views/day | age d | min | subs | channel median | title [channel] link
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 0
+WINNER TITLE WORDS: 
+=== LONG-VIDEO OUTLIERS: early church martyrs (searched: early church martyrs; perpetua early church martyrs; early christian martyrs; early christian martyrdom) ===
+pool 37 long videos, 0 scored against their channel's median, 0 at 3x or more
+outlier | views | views/day | age d | min | subs | channel median | title [channel] link
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 0
+WINNER TITLE WORDS: 

@@ -62,14 +62,19 @@ UNITS = {"second": 1 / 86400, "minute": 1 / 1440, "hour": 1 / 24, "day": 1, "wee
 
 
 def age_days(s):
-    """'8 months ago' -> days. YouTube rounds down, so add half a unit for day and bigger."""
-    m = re.search(r"(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago", s or "")
+    """'8 months ago' or the short '8mo ago' -> days. YouTube rounds down, so add half a unit."""
+    m = re.search(r"(\d+)\s*([a-z]+)\s+ago", (s or "").lower())
     if not m:
         return None
     n, u = int(m.group(1)), m.group(2)
-    if u in ("day", "week", "month", "year"):
+    unit = ("year" if u.startswith("y") else "month" if u.startswith("mo") else "week" if u.startswith("w")
+            else "day" if u.startswith("d") else "hour" if u.startswith("h")
+            else "minute" if (u.startswith("mi") or u == "m") else "second" if u.startswith("s") else None)
+    if not unit:
+        return None
+    if unit in ("day", "week", "month", "year"):
         n += 0.5
-    return round(n * UNITS[u], 2)
+    return round(n * UNITS[unit], 2)
 
 
 def dur_s(s):
@@ -135,20 +140,32 @@ def parse_lockup(l):
     if l.get("contentType") not in (None, "LOCKUP_CONTENT_TYPE_VIDEO"):
         return None
     md = (l.get("metadata") or {}).get("lockupMetadataViewModel") or {}
-    parts = []
+    views = age = None
+    names = []
     rows = ((md.get("metadata") or {}).get("contentMetadataViewModel") or {}).get("metadataRows") or []
     for row in rows:
         for p in row.get("metadataParts") or []:
-            parts.append(txt(p.get("text")))
-    views = next((num(p) for p in parts if re.search(r"\bviews?\b", p)), None)
-    age = next((age_days(p) for p in parts if " ago" in p), None)
-    ch = next((p for p in parts if p and "view" not in p and " ago" not in p), "")
+            t = txt(p.get("text"))
+            lab = (p.get("accessibilityLabel") or t or "")
+            low = lab.lower()
+            if "view" in low or "watching" in low or (p.get("leadingIcon") or {}).get("name", "").startswith("PLAY_ARROW"):
+                if "watching" not in low and views is None:
+                    views = num(t)
+                    if views is None or (views < 1000 and re.search(r"thousand|million|billion", low)):
+                        v2 = re.search(r"([\d.,]+)\s*(thousand|million|billion)?", low)
+                        if v2:
+                            views = int(float(v2.group(1).replace(",", "")) * {"thousand": 1e3, "million": 1e6, "billion": 1e9}.get(v2.group(2), 1))
+            elif " ago" in low:
+                if age is None:
+                    age = age_days(lab)
+            elif t:
+                names.append(t)
     blob = json.dumps(l)
     d = re.search(r'"text":\s*"(\d+(?::\d\d){1,2})"', blob)
     cid = re.search(r'"browseId":\s*"(UC[\w-]{22})"', blob)
     return dict(id=l.get("contentId"), title=txt(md.get("title")), views=views, age=age,
-                dur=dur_s(d.group(1)) if d else None, ch=ch, chid=cid.group(1) if cid else "",
-                live=False, short=False)
+                dur=dur_s(d.group(1)) if d else None, ch=names[0] if names else "",
+                chid=cid.group(1) if cid else "", live=False, short=False)
 
 
 def rows_from(data):
@@ -165,11 +182,16 @@ def serp(q, pages=1, sp="EgIQAQ%3D%3D"):
     """Real YouTube search results for q (videos only). Returns (rows, estimated result count)."""
     url = ("https://www.youtube.com/results?search_query=" + urllib.parse.quote_plus(q) + "&hl=en&gl=US"
            + ("&sp=" + sp if sp else ""))
-    html = get(url)
-    data = initial_data(html)
+    rows, data, html = [], None, ""
+    for attempt in range(3):          # YouTube sometimes sends an empty or odd page; ask again
+        html = get(url)
+        data = initial_data(html)
+        rows = rows_from(data) if data else []
+        if len(rows) >= 3:
+            break
+        time.sleep(1.5)
     if not data:
         return [], None
-    rows = rows_from(data)
     est = data.get("estimatedResults")
     est = int(est) if est and str(est).isdigit() else None
     ver = re.search(r'"INNERTUBE_CLIENT_VERSION":"([\d.]+)"', html)

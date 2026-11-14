@@ -430,10 +430,13 @@ def mode_debug(queries, a):
     res, lines = [], []
     for q in queries:
         url = ("https://www.youtube.com/results?search_query=" + urllib.parse.quote_plus(q) + "&hl=en&gl=US&sp=EgIQAQ%3D%3D")
+        if re.match(r"^UC[\w-]{22}$", q):
+            url = "https://www.youtube.com/channel/%s/videos?hl=en&gl=US" % q
         html = get(url)
         data = initial_data(html)
         t = re.search(r"<title>(.*?)</title>", html)
         info = dict(q=q, html_len=len(html), title=t.group(1) if t else None, has_data=bool(data),
+                    subs=re.findall(r'"([^"]{0,40}subscribers?)"', html)[:6],
                     marker=[m.start() for m in re.finditer("ytInitialData", html)][:5])
         if data:
             found = walk(data, {"videoRenderer", "lockupViewModel", "gridVideoRenderer"})

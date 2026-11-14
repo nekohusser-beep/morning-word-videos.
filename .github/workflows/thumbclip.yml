@@ -21,7 +21,7 @@ jobs:
         with: {python-version: "3.11"}
       - name: Install
         run: |
-          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
           pip install -q open_clip_torch pillow numpy
       - name: Picture read
         shell: bash

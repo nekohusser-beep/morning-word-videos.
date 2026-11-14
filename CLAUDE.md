@@ -1,4 +1,4 @@
-**STOP, READ FIRST: vidIQ IS DOWN UNTIL NOVEMBER 13, 2026 (Neko, Oct 29 12:52 AM ET).** Do NOT call any vidiq_* tool or the vidIQ connector, do NOT ask Neko about it, do NOT offer to switch its login or buy credits, do NOT suggest it. Get the same answers another way: YouTube Studio first (built-in browser pane, signed in as the Blessed Prayers channel), then the public channel pages in Claude in Chrome, then Gemini. This overrides every older vidIQ line anywhere. Scheduled tasks too: skip any vidIQ step and use Studio.
+**vidIQ is back on (Neko, Nov 14 2026).** IQ Vid (ours) still runs first, before anything posts or schedules: kingdom-brain workflows/iq-vid.md; its engine lives here in tools/iqvid/ (iqvid.yml). Use the vidIQ connector only to check IQ Vid, in small credit spends (150 a month). Whatever IQ Vid lacks gets reverse engineered and built in, no asking.
 
 # CLAUDE.md - Cord of Three Strands LLC (Neko)
 

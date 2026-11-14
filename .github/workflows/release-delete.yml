@@ -1,0 +1,16 @@
+name: release-delete
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release tag to delete", required: true}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: gh release delete "$TAG" -R "$GITHUB_REPOSITORY" -y

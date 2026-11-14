@@ -12,6 +12,11 @@ For every image (repo path or https URL) and every model it writes:
   --ref            reference values for embedding dimensions from another scorer: the model and fit
                    whose dimensions land closest are reported, to identify which model that scorer uses
   --ref-entropy    reference gray-level entropy: reports which picture size reproduces it
+
+THIS IS A TEST HARNESS, NOT A SCORER (rule set Nov 14 2026). Its numbers rank the candidate thumbnails of
+one video. Nothing from here feeds the IQ Vid thumbnail score until one model predicts 3 fresh vidIQ
+thumbnail scores within 3 points each, with the predictions written down before the scores are bought
+(kingdom-brain tools/iqvid/thumb_score.py --gate; log each one with --log ... --candidate name=prediction).
 """
 import argparse, io, json, math, sys, urllib.request
 from pathlib import Path

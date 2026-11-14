@@ -1,0 +1,46 @@
+name: thumbclip
+on:
+  workflow_dispatch:
+    inputs:
+      images: {description: "repo paths or https image links, separated by |", required: true}
+      ref: {description: "reference embedding dims, e.g. 137:-0.0873,79:-0.0814", required: false, default: ""}
+      ref_entropy: {description: "reference entropy value", required: false, default: ""}
+      models: {description: "comma list name:pretrained (blank = default set)", required: false, default: ""}
+permissions:
+  contents: write
+concurrency:
+  group: thumbclip-${{ github.run_id }}
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Install
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q open_clip_torch pillow numpy
+      - name: Picture read
+        shell: bash
+        env:
+          IMAGES: ${{ inputs.images }}
+          REF: ${{ inputs.ref }}
+          REF_ENTROPY: ${{ inputs.ref_entropy }}
+          MODELS: ${{ inputs.models }}
+        run: |
+          mkdir -p reports/iqvid
+          ARGS=()
+          [ -n "$REF" ] && ARGS+=(--ref "$REF")
+          [ -n "$REF_ENTROPY" ] && ARGS+=(--ref-entropy "$REF_ENTROPY")
+          [ -n "$MODELS" ] && ARGS+=(--models "$MODELS")
+          python3 tools/iqvid/thumb_clip.py "$IMAGES" --out "reports/iqvid/thumbclip-${{ github.run_id }}" "${ARGS[@]}"
+      - name: Commit report
+        if: always()
+        run: |
+          git config user.name "iqvid-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/iqvid
+          git commit -q -m "thumbclip ${{ github.run_id }}" || exit 0
+          for i in 1 2 3 4; do git pull --rebase -X theirs -q origin main && git push -q origin HEAD:main && break; sleep 4; done

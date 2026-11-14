@@ -1,0 +1,32 @@
+name: iqvid
+on:
+  workflow_dispatch:
+    inputs:
+      mode: {description: "kw | out | batch", required: true, default: "kw"}
+      query: {description: "queries separated by |", required: true}
+      opts: {description: "extra flags, e.g. --n 12 --top 30", required: false, default: ""}
+permissions:
+  contents: write
+concurrency:
+  group: iqvid-${{ github.run_id }}
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: IQ Vid
+        shell: bash
+        env:
+          MODE: ${{ inputs.mode }}
+          QUERY: ${{ inputs.query }}
+          OPTS: ${{ inputs.opts }}
+        run: |
+          mkdir -p reports/iqvid
+          python3 tools/iqvid/iqvid.py "$MODE" "$QUERY" --out "reports/iqvid/run-${{ github.run_id }}" $OPTS
+      - name: Commit report
+        run: |
+          git config user.name "iqvid-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/iqvid
+          git commit -q -m "iqvid ${{ inputs.mode }} ${{ github.run_id }}" || exit 0
+          for i in 1 2 3 4; do git pull --rebase -X theirs -q origin main && git push -q origin HEAD:main && break; sleep 4; done

@@ -425,6 +425,32 @@ def mode_out(queries, a):
     return dict(mode="out", items=out), lines
 
 
+def mode_debug(queries, a):
+    """Dump the raw shape of what YouTube sent, to fix the parser when the page layout changes."""
+    res, lines = [], []
+    for q in queries:
+        url = ("https://www.youtube.com/results?search_query=" + urllib.parse.quote_plus(q) + "&hl=en&gl=US&sp=EgIQAQ%3D%3D")
+        html = get(url)
+        data = initial_data(html)
+        t = re.search(r"<title>(.*?)</title>", html)
+        info = dict(q=q, html_len=len(html), title=t.group(1) if t else None, has_data=bool(data),
+                    marker=[m.start() for m in re.finditer("ytInitialData", html)][:5])
+        if data:
+            found = walk(data, {"videoRenderer", "lockupViewModel", "gridVideoRenderer"})
+            info["kinds"] = dict(Counter(k for k, _ in found))
+            for kind in ("videoRenderer", "lockupViewModel"):
+                first = next((v for k, v in found if k == kind), None)
+                if first is not None:
+                    info[kind + "_keys"] = sorted(first.keys())
+                    info[kind + "_raw"] = json.dumps(first)[:6000]
+        else:
+            info["head"] = html[:1500]
+        res.append(info)
+        lines.append("%s | html %d | data %s | kinds %s | title %s" % (q, len(html), bool(data), info.get("kinds"), info["title"]))
+        time.sleep(0.5)
+    return dict(mode="debug", items=res), lines
+
+
 def velocity(result, state_path):
     """Real views/hour: compare today's view counts with the last time we saw the same video."""
     try:
@@ -457,7 +483,7 @@ def velocity(result, state_path):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("mode", choices=["kw", "out", "batch"])
+    p.add_argument("mode", choices=["kw", "out", "batch", "debug"])
     p.add_argument("query")
     p.add_argument("--out", default="iqvid-run")
     p.add_argument("--n", type=int, default=9, help="kw: autocomplete phrases to measure")
@@ -469,7 +495,7 @@ def main():
     p.add_argument("--top", type=int, default=25)
     a = p.parse_args()
     queries = [q.strip() for q in a.query.split("|") if q.strip()]
-    result, lines = {"kw": mode_kw, "out": mode_out, "batch": mode_batch}[a.mode](queries, a)
+    result, lines = {"kw": mode_kw, "out": mode_out, "batch": mode_batch, "debug": mode_debug}[a.mode](queries, a)
     vel = velocity(result, os.path.join(os.path.dirname(a.out) or ".", "seen.json"))
     if vel:
         lines += ["MOVING NOW (real views/hour since our last look):"] + vel

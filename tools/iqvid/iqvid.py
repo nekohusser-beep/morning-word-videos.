@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""IQ Vid v2 engine (our own vidIQ). No API key, standard library only.
+"""IQ Vid v2 engine: our own YouTube research tool. No API key, standard library only.
 Built to run on a GitHub runner (the Claude sandbox cannot reach YouTube).
 
 Modes (queries separated by |):
   kw    "seed|seed2"   keyword table: autocomplete tree (related / matching / questions),
                        real search-page stats per keyword, competition 0-100, views/day demand
   out   "topic|topic2" long-video outliers, scored against each channel's own median views
-                       (the way vidIQ and Studio score them), plus title patterns of the winners
+                       (views against that channel's typical video), plus title patterns of the winners
   batch "k1|k2|..."    search-page features only (used to calibrate the competition score)
   rank  "VIDEOID|k1|k2" where one of our videos sits in search for each keyword
   debug "query"        dump the raw page shape when YouTube changes its layout
@@ -299,12 +299,12 @@ def features(q, rows, est):
                 longshare=share(lambda r: (r["dur"] or 0) >= LONG_MIN))
 
 
-# Competition 0-100, fitted Nov 14 2026 against 37 vidIQ competition scores (R2 0.83, average miss 6,
-# never more than one band off). Inputs are all from the real search page: how fast the top 10 are
-# pulling views, how many of them already use the phrase, and how many results exist.
-# Refit when more vidIQ numbers are logged (kingdom-brain tools/iqvid/CALIBRATION.md).
+# Competition 0-100, calibrated Nov 14 2026 on 37 keywords (R2 0.83, average miss 6, never more than
+# one band off). Inputs are all from the real search page: how fast the top 10 are pulling views,
+# how many of them already use the phrase, and how many results exist.
+# Calibration notes live in the private notes repo (tools/iqvid/CALIBRATION.md).
 W = dict(b=-13.26, vpd=6.22, exact=8.47, est=5.40)
-BANDS = ["very low", "low", "medium", "high", "very high"]      # vidIQ's own bands: 20 points each
+BANDS = ["very low", "low", "medium", "high", "very high"]      # 20 points each
 
 
 def competition(f):
@@ -320,16 +320,14 @@ def band(c):
 
 
 def volume_score(searches):
-    """vidIQ's volume score, reverse engineered Nov 14 2026 (14 of 14 exact):
-    100 x log(monthly searches) / log(top keyword, about 4.5M). Under 750 searches scores 0."""
+    """Volume score 0-100: 100 x log(monthly searches) / log(4.5M). Under 750 searches scores 0."""
     if not searches or searches < 750:
         return 0
     return int(min(100, math.floor(15.03 * math.log10(searches))))
 
 
 def overall(vol_score, comp):
-    """vidIQ's keyword score, reverse engineered Nov 14 2026 (37 of 37 exact):
-    60% search volume + 40% low competition."""
+    """Keyword score: 60% search volume + 40% low competition."""
     return int(round(0.6 * vol_score + 0.4 * (100 - comp)))
 
 
@@ -448,7 +446,7 @@ def mode_out(queries, a):
         for r in cand:
             c = _CH.get(r["chid"]) or {}
             r["subs"], r["med"] = c.get("subs"), c.get("med")
-            # vidIQ's rules: no score under 1,000 views; a video under a day old only counts once it beats the median
+            # no score under 1,000 views; a video under a day old only counts once it beats the median
             ok = c.get("med") and r["views"] >= 1000 and not ((r["age"] or 99) < 1 and r["views"] <= c["med"])
             r["x"] = round(r["views"] / max(c["med"], 1), 1) if ok else None
             r["young"] = bool(r["age"] and r["age"] < 28)
@@ -532,7 +530,7 @@ def velocity(result, state_path):
         old = seen.get(r["id"])
         hours = (now - old[0]) / 3600 if old else None
         if old and 12 <= hours <= 168 and r["views"] >= old[1]:
-            r["vph"] = round((r["views"] - old[1]) / hours, 2)          # measured, the way vidIQ does it
+            r["vph"] = round((r["views"] - old[1]) / hours, 2)          # measured between two looks
             r["vph_how"] = "measured"
         elif r.get("age") and r["age"] < 7:
             r["vph"] = round(r["views"] / (r["age"] * 24), 2)           # under a week old: lifetime average

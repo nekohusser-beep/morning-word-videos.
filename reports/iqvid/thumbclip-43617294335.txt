@@ -1,0 +1,25 @@
+=== ViT-B-32-quickgelu:openai ===
+martyr/ep3/thumb-A-curse-him-no.jpg | payoff 99 question 64 color_pop 47 over_saturated 2 clear_subject 92 face_emotion 66
+martyr/ep3/thumb-B-he-wouldnt-say-it.jpg | payoff 100 question 53 color_pop 45 over_saturated 13 clear_subject 92 face_emotion 78
+martyr/ep3/thumb-C-one-sentence.jpg | payoff 100 question 24 color_pop 88 over_saturated 11 clear_subject 87 face_emotion 14
+martyr/ep1/thumb-A-21st-man.jpg | payoff 98 question 52 color_pop 29 over_saturated 30 clear_subject 91 face_emotion 5
+=== ViT-B-16-quickgelu:openai ===
+martyr/ep3/thumb-A-curse-him-no.jpg | payoff 100 question 69 color_pop 7 over_saturated 51 clear_subject 97 face_emotion 18
+martyr/ep3/thumb-B-he-wouldnt-say-it.jpg | payoff 100 question 87 color_pop 30 over_saturated 56 clear_subject 99 face_emotion 51
+martyr/ep3/thumb-C-one-sentence.jpg | payoff 100 question 52 color_pop 48 over_saturated 19 clear_subject 96 face_emotion 66
+martyr/ep1/thumb-A-21st-man.jpg | payoff 100 question 79 color_pop 32 over_saturated 65 clear_subject 72 face_emotion 1
+=== ViT-L-14-quickgelu:openai ===
+martyr/ep3/thumb-A-curse-him-no.jpg | payoff 100 question 58 color_pop 65 over_saturated 87 clear_subject 89 face_emotion 94
+martyr/ep3/thumb-B-he-wouldnt-say-it.jpg | payoff 100 question 25 color_pop 94 over_saturated 88 clear_subject 92 face_emotion 93
+martyr/ep3/thumb-C-one-sentence.jpg | payoff 100 question 12 color_pop 100 over_saturated 88 clear_subject 100 face_emotion 44
+martyr/ep1/thumb-A-21st-man.jpg | payoff 99 question 24 color_pop 65 over_saturated 56 clear_subject 99 face_emotion 2
+=== ViT-B-32:openai ===
+martyr/ep3/thumb-A-curse-him-no.jpg | payoff 92 question 37 color_pop 71 over_saturated 2 clear_subject 90 face_emotion 52
+martyr/ep3/thumb-B-he-wouldnt-say-it.jpg | payoff 88 question 16 color_pop 26 over_saturated 3 clear_subject 92 face_emotion 40
+martyr/ep3/thumb-C-one-sentence.jpg | payoff 99 question 13 color_pop 85 over_saturated 2 clear_subject 92 face_emotion 10
+martyr/ep1/thumb-A-21st-man.jpg | payoff 96 question 38 color_pop 24 over_saturated 10 clear_subject 95 face_emotion 6
+=== ViT-B-16:openai ===
+martyr/ep3/thumb-A-curse-him-no.jpg | payoff 100 question 53 color_pop 2 over_saturated 67 clear_subject 92 face_emotion 9
+martyr/ep3/thumb-B-he-wouldnt-say-it.jpg | payoff 100 question 82 color_pop 11 over_saturated 80 clear_subject 78 face_emotion 29
+martyr/ep3/thumb-C-one-sentence.jpg | payoff 100 question 55 color_pop 17 over_saturated 10 clear_subject 63 face_emotion 50
+martyr/ep1/thumb-A-21st-man.jpg | payoff 98 question 90 color_pop 9 over_saturated 47 clear_subject 67 face_emotion 1

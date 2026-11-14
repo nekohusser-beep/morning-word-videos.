@@ -1,0 +1,37 @@
+polycarp                           comp 60 | top10 median  161.7K |     230 views/day | exact 0.9 | weak 0.0 | results 96.6K
+polycarp of smyrna                 comp 38 | top10 median   14.5K |      21 views/day | exact 0.8 | weak 0.4 | results 20.5K
+martyrdom of polycarp              comp 36 | top10 median   14.3K |      21 views/day | exact 0.6 | weak 0.4 | results 9.4K
+church fathers                     comp 61 | top10 median  143.2K |     252 views/day | exact 0.6 | weak 0.0 | results 10.1M
+polycarp of smyrna death           comp 40 | top10 median   31.2K |      32 views/day | exact 0.0 | weak 0.1 | results 2.3K
+polycarp letter to the philippians comp 35 | top10 median   24.3K |      11 views/day | exact 0.2 | weak 0.3 | results 3.8K
+apostolic fathers                  comp 49 | top10 median   86.5K |      77 views/day | exact 0.6 | weak 0.4 | results 983.2K
+st polycarp of smyrna              comp 40 | top10 median   26.7K |      33 views/day | exact 0.2 | weak 0.2 | results 20.5K
+saint polycarp                     comp 37 | top10 median   15.1K |      28 views/day | exact 0.4 | weak 0.4 | results 52.8K
+st polycarp bishop of smyrna       comp 28 | top10 median    6.9K |      12 views/day | exact 0.2 | weak 0.5 | results 7.4K
+bishop polycarp of smyrna          comp 39 | top10 median   19.1K |      30 views/day | exact 0.3 | weak 0.2 | results 9.4K
+epistle of polycarp                comp 36 | top10 median     17K |       9 views/day | exact 0.6 | weak 0.4 | results 30.8K
+polycarp of smyrna martyrdom       comp 39 | top10 median   27.5K |      30 views/day | exact 0.1 | weak 0.2 | results 6.5K
+polycarp trailer                   comp 31 | top10 median   13.1K |       7 views/day | exact 0.5 | weak 0.5 | results 2.5K
+father polycarp                    comp 38 | top10 median   14.5K |      16 views/day | exact 0.7 | weak 0.3 | results 24.9K
+polycarp martyrdom                 comp 42 | top10 median   37.3K |      33 views/day | exact 0.3 | weak 0.2 | results 9.4K
+polycarp writings                  comp 28 | top10 median     11K |      10 views/day | exact 0.0 | weak 0.5 | results 1.8K
+early church fathers               comp 57 | top10 median  145.2K |     252 views/day | exact 0.1 | weak 0.0 | results 5.2M
+church history                     comp 66 | top10 median  393.1K |     174 views/day | exact 0.8 | weak 0.0 | results 50.3M
+christian martyrs                  comp 53 | top10 median   40.2K |     123 views/day | exact 0.6 | weak 0.0 | results 2.2M
+christian martyr                   comp 48 | top10 median   40.2K |      67 views/day | exact 0.6 | weak 0.3 | results 2.7M
+christian history                  comp 67 | top10 median  436.6K |    1.9K views/day | exact 0.3 | weak 0.1 | results 38.7M
+christianity                       comp 78 | top10 median    1.4M |    4.1K views/day | exact 0.5 | weak 0.0 | results 735.4M
+martyrdom                          comp 61 | top10 median  110.7K |     696 views/day | exact 0.7 | weak 0.1 | results 8.7M
+christian persecution              comp 53 | top10 median   39.8K |     135 views/day | exact 1.0 | weak 0.2 | results 2M
+art history                        comp 67 | top10 median  387.3K |     543 views/day | exact 0.6 | weak 0.0 | results 88.4M
+martyr                             comp 66 | top10 median  474.7K |     702 views/day | exact 1.0 | weak 0.3 | results 8.7M
+roman history                      comp 77 | top10 median    2.1M |    3.3K views/day | exact 0.4 | weak 0.0 | results 77.1M
+saints                             comp 58 | top10 median   16.8K |    7.1K views/day | exact 1.0 | weak 0.4 | results 100.9M
+bible                              comp 76 | top10 median  736.5K |    5.8K views/day | exact 0.8 | weak 0.0 | results 99.5M
+ancient rome                       comp 77 | top10 median    2.2M |    3.3K views/day | exact 0.6 | weak 0.0 | results 13.3M
+jesus christ                       comp 82 | top10 median    7.7M |    3.6K views/day | exact 0.4 | weak 0.0 | results 58.7M
+religion                           comp 81 | top10 median    1.4M |    5.6K views/day | exact 1.0 | weak 0.0 | results 542.1M
+what is a martyr                   comp 22 | top10 median    1.9K |       1 views/day | exact 0.6 | weak 0.8 | results 8.3M
+roman empire                       comp 77 | top10 median      2M |    2.8K views/day | exact 0.8 | weak 0.0 | results 12.2M
+roman persecution                  comp 53 | top10 median  174.2K |      91 views/day | exact 0.3 | weak 0.2 | results 1.1M
+early church                       comp 61 | top10 median  215.4K |     156 views/day | exact 0.8 | weak 0.1 | results 11.4M

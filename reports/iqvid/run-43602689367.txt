@@ -1,0 +1,37 @@
+=== KEYWORDS: polycarp ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+polycarp                               | 48 |  239.6K |       - |  90% |  10%
+polycarp of smyrna                     | 39 |   37.3K |       - |  50% |   0%
+polycarp movie                         | 20 |    4.1K |       - |  40% |  60%
+polycarp documentary                   | 40 |  127.9K |       - |   0% |  10%
+polycarp writings                      | 22 |     11K |       - |   0% |  50%
+polycarp martyrdom                     | 29 |   14.3K |       - |  50% |  40%
+polycarp trailer                       | 27 |   13.1K |       - |  50% |  50%
+polycarp audiobook                     | 24 |    6.2K |       - |  80% |  60%
+polycarp nakamoto                      | 10 |    1.2K |       - |  40% |  70%
+polycarp letters                       | 26 |   15.6K |       - |   0% |  40%
+how to pronounce polycarp              |  2 |     136 |       - |  90% | 100%
+who was polycarp                       | 35 |   28.9K |       - |  30% |  10%
+who is polycarp                        | 32 |   19.1K |       - |  30% |  20%
+MATCHING (110): polycarp of smyrna | polycarp movie | polycarp documentary | polycarp writings | polycarp martyrdom | polycarp trailer | polycarp audiobook | polycarp nakamoto | polycarp letters | polycarp epistle to the philippians | how to pronounce polycarp | who was polycarp | who is polycarp | polycarp teachings | polycarp story | who was polycarp of smyrna | polycarp martyr | polycarp biography | the epistle of polycarp | polycarp songs | polycarp and pals | polycarp and ignatius | polycarp and perpetua | polycarp and celestine | polycarp abel mutua | polycarp age | polycarp and brenda nyombo ceremony | polycarp 2015 | brother polycarp | st polycarp band | saint polycarp band | dj polycarp bongo mix | polycarp church father | polycarp christian movie | polycarp celestine ndinda | cta polycarp | st polycarp church | saint polycarp catholic church | st polycarp church smyrna de | st polycarp confirmation
+QUESTIONS (8): how to pronounce polycarp | who was polycarp | who is polycarp | what is polst | who was polycarp of smyrna | who are popes | where is antioch | what is pathos
+RELATED (1): milou polycarpe
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: christian martyrs ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+christian martyrs                      | 40 |   22.2K |       - |  70% |  10%
+christian martyrs animation            | 40 |    140K |       - |   0% |  10%
+christian martyrs documentary          | 44 |  196.4K |       - |   0% |  10%
+christian martyrs rome                 | 11 |     578 |       - |  20% |  80%
+christian martyrs today                | 41 |   69.8K |       - |   0% |   0%
+christian martyrs edit                 | 37 |  123.3K |       - |  10% |  40%
+christian martyrs stories              | 38 |  102.4K |       - |  10% |  20%
+christian martyrs 21                   | 45 |  196.4K |       - |  10% |   0%
+christian martyrs movie                | 47 |  505.9K |       - |   0% |  10%
+christian martyrs in japan             | 17 |    3.4K |       - |  10% |  70%
+why was jesus persecuted               | 42 |  231.7K |       - |   0% |  20%
+why are christians persecuted          | 38 |   57.3K |       - |   0% |  10%
+MATCHING (45): christian martyrs animation | christian martyrs documentary | christian martyrs rome | christian martyrs today | christian martyrs edit | christian martyrs stories | christian martyrs 21 | christian martyrs movie | christian martyrs in japan | christian martyrs libya | history of christian martyrs | christian martyrs throughout history | the christian martyrs | christian martyrs video | christian martyrs and their stories | 21 christian martyrs animation edit | christian martyrs full movie | christian martyrs in colosseum | coptic christian martyrs | coptic christian martyrs animation | coptic christian martyrs libya | 21 christian martyrs documentary | christian martyrs song | christian martyrs egypt | 21 christian martyrs reddit | early christian martyrs | egyptian christian martyrs | 21 christian martyrs short film | first christian martyrs | famous christian martyrs | christian martyrs history | 21 christian martyrs in hindi | christian martyrs in rome | christian martyrs in libya | japanese christian martyrs | the christian martyrs last prayer | christian martyrs malayalam | christian martyrs of libya | martyrs of christian faith | 21 christian martyrs original
+QUESTIONS (2): why was jesus persecuted | why are christians persecuted
+RELATED (4): christians martyrs | early christian martyrdom movie | christian martyrdom | lebanese christian martyr song
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

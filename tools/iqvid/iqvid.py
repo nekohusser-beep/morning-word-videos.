@@ -8,6 +8,8 @@ Modes (queries separated by |):
   out   "topic|topic2" long-video outliers, scored against each channel's own median views
                        (the way vidIQ and Studio score them), plus title patterns of the winners
   batch "k1|k2|..."    search-page features only (used to calibrate the competition score)
+  rank  "VIDEOID|k1|k2" where one of our videos sits in search for each keyword
+  debug "query"        dump the raw page shape when YouTube changes its layout
 
 Writes <out>.json (everything) and <out>.txt (short readout).
 Search volume itself comes from Google Trends in the browser pane (kingdom-brain tools/iqvid/trends.js);
@@ -297,18 +299,38 @@ def features(q, rows, est):
                 longshare=share(lambda r: (r["dur"] or 0) >= LONG_MIN))
 
 
-# Competition 0-100. Weights fitted Nov 14 2026 against 35 vidIQ competition scores (see
-# kingdom-brain tools/iqvid/CALIBRATION.md). Refit when more vidIQ numbers are logged.
-W = dict(b=-12.0, views=9.0, vpd=5.0, exact=6.0, lowbar=-14.0, old=0.0, est=1.5)
+# Competition 0-100, fitted Nov 14 2026 against 37 vidIQ competition scores (R2 0.83, average miss 6,
+# never more than one band off). Inputs are all from the real search page: how fast the top 10 are
+# pulling views, how many of them already use the phrase, and how many results exist.
+# Refit when more vidIQ numbers are logged (kingdom-brain tools/iqvid/CALIBRATION.md).
+W = dict(b=-13.26, vpd=6.22, exact=8.47, est=5.40)
+BANDS = ["very low", "low", "medium", "high", "very high"]      # vidIQ's own bands: 20 points each
 
 
 def competition(f):
     if not f:
         return None
-    x = (W["b"] + W["views"] * math.log10(f["med_views"] + 1) + W["vpd"] * math.log10((f["med_vpd"] or 0) + 1)
-         + W["exact"] * f["exact"] + W["lowbar"] * f["lowbar"] + W["old"] * f["old"]
+    x = (W["b"] + W["vpd"] * math.log10((f["med_vpd"] or 0) + 1) + W["exact"] * f["exact"]
          + W["est"] * math.log10((f["est"] or 0) + 1))
     return int(max(1, min(99, round(x))))
+
+
+def band(c):
+    return BANDS[min(int(c // 20), 4)] if c is not None else "-"
+
+
+def volume_score(searches):
+    """vidIQ's volume score, reverse engineered Nov 14 2026 (14 of 14 exact):
+    100 x log(monthly searches) / log(top keyword, about 4.5M). Under 750 searches scores 0."""
+    if not searches or searches < 750:
+        return 0
+    return int(min(100, math.floor(15.03 * math.log10(searches))))
+
+
+def overall(vol_score, comp):
+    """vidIQ's keyword score, reverse engineered Nov 14 2026 (37 of 37 exact):
+    60% search volume + 40% low competition."""
+    return int(round(0.6 * vol_score + 0.4 * (100 - comp)))
 
 
 def trends_try(kws):
@@ -356,9 +378,9 @@ def mode_batch(queries, a):
             lines.append("%s: ERROR %s" % (q, e))
         res.append(dict(q=q, f=f, comp=competition(f), rows=rows[:20]))
         if f:
-            lines.append("%-34s comp %2s | top10 median %7s | %7s views/day | exact %.1f | weak %.1f | results %s"
-                         % (q[:34], competition(f), fmt(f["med_views"]), fmt(f["med_vpd"]), f["exact"],
-                            f["lowbar"], fmt(f["est"])))
+            lines.append("%-34s comp %2s %-9s | top10 median %7s | %7s views/day | exact %.1f | weak %.1f | results %s"
+                         % (q[:34], competition(f), band(competition(f)), fmt(f["med_views"]), fmt(f["med_vpd"]),
+                            f["exact"], f["lowbar"], fmt(f["est"])))
         time.sleep(0.4)
     return dict(mode="batch", items=res), lines
 
@@ -390,9 +412,9 @@ def mode_kw(queries, a):
         for t in table:
             f = t["f"]
             if f:
-                lines.append("%-38s | %2s | %7s | %7s | %3d%% | %3d%%" % (
-                    t["kw"][:38], t["comp"], fmt(f["med_views"]), fmt(f["sum_vpd"]), f["exact"] * 100,
-                    f["lowbar"] * 100))
+                lines.append("%-38s | %2s %-9s | %7s | %7s | %3d%% | %3d%%" % (
+                    t["kw"][:38], t["comp"], band(t["comp"]), fmt(f["med_views"]), fmt(f["sum_vpd"]),
+                    f["exact"] * 100, f["lowbar"] * 100))
             else:
                 lines.append("%-38s | no data" % t["kw"][:38])
         lines.append("MATCHING (%d): %s" % (len(matching), " | ".join(matching[:40])))
@@ -426,7 +448,10 @@ def mode_out(queries, a):
         for r in cand:
             c = _CH.get(r["chid"]) or {}
             r["subs"], r["med"] = c.get("subs"), c.get("med")
-            r["x"] = round(r["views"] / c["med"], 1) if c.get("med") else None
+            # vidIQ's rules: no score under 1,000 views; a video under a day old only counts once it beats the median
+            ok = c.get("med") and r["views"] >= 1000 and not ((r["age"] or 99) < 1 and r["views"] <= c["med"])
+            r["x"] = round(r["views"] / max(c["med"], 1), 1) if ok else None
+            r["young"] = bool(r["age"] and r["age"] < 28)
             r["vps"] = round(r["views"] / c["subs"], 1) if c.get("subs") else None
             r["vpd"] = int(r["views"] / max(r["age"], 1)) if r["age"] else None
         scored = sorted([r for r in cand if r["x"] is not None], key=lambda r: -r["x"])
@@ -436,11 +461,11 @@ def mode_out(queries, a):
         lines.append("=== LONG-VIDEO OUTLIERS: %s (searched: %s) ===" % (topic, "; ".join(qs)))
         lines.append("pool %d long videos, %d scored against their channel's median, %d at 3x or more" % (
             len(cand), len(scored), len(wins)))
-        lines.append("outlier | views | views/day | age d | min | subs | channel median | title [channel] link")
+        lines.append("outlier (+ = under 28 days old, still climbing) | views | views/day | age d | min | subs | channel median | title [channel] link")
         for r in scored[:a.top]:
-            lines.append("%5.1fx | %7s | %6s | %5s | %3d | %6s | %6s | %s [%s] https://youtu.be/%s" % (
-                r["x"], fmt(r["views"]), fmt(r["vpd"]), int(r["age"] or 0), (r["dur"] or 0) // 60, fmt(r["subs"]),
-                fmt(r["med"]), r["title"][:90], r["ch"][:28], r["id"]))
+            lines.append("%6.1fx%s | %7s | %6s | %5s | %3d | %6s | %6s | %s [%s] https://youtu.be/%s" % (
+                r["x"], "+" if r["young"] else " ", fmt(r["views"]), fmt(r["vpd"]), int(r["age"] or 0),
+                (r["dur"] or 0) // 60, fmt(r["subs"]), fmt(r["med"]), r["title"][:90], r["ch"][:28], r["id"]))
         small = [r for r in scored if (r["subs"] or 1e12) < 50000 and r["x"] >= 3]
         lines.append("SMALL-CHANNEL WINS (under 50K subs, 3x+): %d" % len(small))
         lines.append("WINNER TITLE WORDS: " + ", ".join("%s(%d)" % (w, c) for w, c in words.most_common(20)))
@@ -476,6 +501,22 @@ def mode_debug(queries, a):
     return dict(mode="debug", items=res), lines
 
 
+def mode_rank(queries, a):
+    """Where does our video sit in search for each keyword? First item is the video id."""
+    vid, kws = queries[0], queries[1:]
+    res, lines = [], ["=== SEARCH RANK for https://youtu.be/%s ===" % vid]
+    for k in kws:
+        try:
+            rows, _ = serp(k, pages=2)
+        except Exception:  # noqa
+            rows = []
+        pos = next((i + 1 for i, r in enumerate(rows) if r["id"] == vid), None)
+        res.append(dict(kw=k, rank=pos, checked=len(rows)))
+        lines.append("%-40s %s" % (k[:40], ("#%d" % pos) if pos else "not in the top %d" % len(rows)))
+        time.sleep(0.4)
+    return dict(mode="rank", items=res), lines
+
+
 def velocity(result, state_path):
     """Real views/hour: compare today's view counts with the last time we saw the same video."""
     try:
@@ -489,11 +530,18 @@ def velocity(result, state_path):
         if not isinstance(r, dict) or not r.get("id") or r.get("views") is None:
             return
         old = seen.get(r["id"])
-        if old and now - old[0] > 6 * 3600 and r["views"] >= old[1]:
-            r["vph"] = round((r["views"] - old[1]) / ((now - old[0]) / 3600), 2)
-            if r["vph"] >= 5:
-                notes.append("%6.1f views/hour now | %s https://youtu.be/%s" % (r["vph"], r.get("title", "")[:80], r["id"]))
-        seen[r["id"]] = [int(now), r["views"]]
+        hours = (now - old[0]) / 3600 if old else None
+        if old and 12 <= hours <= 168 and r["views"] >= old[1]:
+            r["vph"] = round((r["views"] - old[1]) / hours, 2)          # measured, the way vidIQ does it
+            r["vph_how"] = "measured"
+        elif r.get("age") and r["age"] < 7:
+            r["vph"] = round(r["views"] / (r["age"] * 24), 2)           # under a week old: lifetime average
+            r["vph_how"] = "average"
+        if r.get("vph", 0) >= 5:
+            notes.append("%8.1f views/hour (%s) | %s https://youtu.be/%s" % (
+                r["vph"], r["vph_how"], r.get("title", "")[:80], r["id"]))
+        if not old or hours > 168:
+            seen[r["id"]] = [int(now), r["views"]]
 
     for it in result.get("items", []):
         for key in ("rows", "scored", "unscored"):
@@ -508,7 +556,7 @@ def velocity(result, state_path):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("mode", choices=["kw", "out", "batch", "debug"])
+    p.add_argument("mode", choices=["kw", "out", "batch", "rank", "debug"])
     p.add_argument("query")
     p.add_argument("--out", default="iqvid-run")
     p.add_argument("--n", type=int, default=9, help="kw: autocomplete phrases to measure")
@@ -520,7 +568,7 @@ def main():
     p.add_argument("--top", type=int, default=25)
     a = p.parse_args()
     queries = [q.strip() for q in a.query.split("|") if q.strip()]
-    result, lines = {"kw": mode_kw, "out": mode_out, "batch": mode_batch, "debug": mode_debug}[a.mode](queries, a)
+    result, lines = {"kw": mode_kw, "out": mode_out, "batch": mode_batch, "rank": mode_rank, "debug": mode_debug}[a.mode](queries, a)
     vel = velocity(result, os.path.join(os.path.dirname(a.out) or ".", "seen.json"))
     if vel:
         lines += ["MOVING NOW (real views/hour since our last look):"] + vel

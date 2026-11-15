@@ -37,7 +37,10 @@ jobs:
           pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
           pip install -q voxcpm soundfile numpy
           mkdir -p out
-      - run: python tools/sleep-story/eng_units_voxcpm.py "${{ inputs.dir }}/${{ matrix.who }}.json" tools/skip-voice/lock/ref_${{ matrix.who }}.wav tools/skip-voice/lock/ref_${{ matrix.who }}.txt ${{ matrix.chunk }} 8 out 2>&1 | tee out/render-${{ matrix.who }}-${{ matrix.chunk }}.log
+      - name: Split this voice's lines evenly (by position, not idx) and render this share
+        run: |
+          python -c "import json,sys;u=json.load(open(sys.argv[1]));json.dump([x for i,x in enumerate(u) if i%8==int(sys.argv[2])],open('mine.json','w'))" "${{ inputs.dir }}/${{ matrix.who }}.json" ${{ matrix.chunk }}
+          python tools/sleep-story/eng_units_voxcpm.py mine.json tools/skip-voice/lock/ref_${{ matrix.who }}.wav tools/skip-voice/lock/ref_${{ matrix.who }}.txt 0 1 out 2>&1 | tee out/render-${{ matrix.who }}-${{ matrix.chunk }}.log
       - if: always()
         env: {GH_TOKEN: "${{ github.token }}"}
         run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

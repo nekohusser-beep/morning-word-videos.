@@ -1,0 +1,49 @@
+name: moss-voice
+# MOSS-TTS-Nano (ONNX, CPU) voice clone of a whole episode from the locked refs. Same output names (u###.wav) as skip-voice-fast.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "release tag", required: true, default: "ep3moss"}
+      dir: {description: "episode folder with skip.json + dre.json", required: true, default: "tools/skip-voice/ep3"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t moss-voice -n "MOSS-TTS-Nano lines"
+  render:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        who: [skip, dre]
+        chunk: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          git clone --depth 1 https://github.com/OpenMOSS/MOSS-TTS-Nano.git moss
+          cd moss && (pip install -q -r requirements.txt || true) && (pip install -q -e . || true) && pip install -q onnxruntime soundfile
+      - run: |
+          mkdir -p up
+          python - <<'EOF' 2>&1 | tee up/moss-${{ matrix.who }}-${{ matrix.chunk }}.log
+          import json, subprocess, time, shutil, glob, os
+          units = [u for i, u in enumerate(json.load(open("${{ inputs.dir }}/${{ matrix.who }}.json"))) if i % 3 == ${{ matrix.chunk }}]
+          os.chdir("moss")
+          for u in units:
+              t0 = time.time()
+              r = subprocess.run(["python", "infer_onnx.py", "--prompt-audio-path", "../tools/skip-voice/lock/ref_${{ matrix.who }}.wav", "--text", u["text"]], capture_output=True, text=True)
+              outs = sorted(glob.glob("generated_audio/*.wav"), key=os.path.getmtime)
+              if r.returncode == 0 and outs:
+                  shutil.copy(outs[-1], f"../up/u{u['idx']:03d}.wav")
+              print(u["idx"], r.returncode, round(time.time() - t0, 1), "s", u["text"][:40], flush=True)
+          EOF
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" up/* --clobber -R "$GITHUB_REPOSITORY"

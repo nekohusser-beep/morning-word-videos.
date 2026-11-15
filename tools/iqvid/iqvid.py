@@ -429,7 +429,7 @@ def mode_out(queries, a):
         pool = OrderedDict()
         for q in qs:
             try:
-                rows, _ = serp(q, pages=a.pages)
+                rows, _ = serp(q, pages=a.pages, sp={"week": "EgQIAxAB", "month": "EgQIBBAB", "today": "EgQIAhAB"}.get(a.recent, "EgIQAQ%3D%3D"))
             except Exception:  # noqa
                 rows = []
             for r in rows:
@@ -564,6 +564,7 @@ def main():
     p.add_argument("--minlen", type=int, default=LONG_MIN, help="out: minimum seconds")
     p.add_argument("--channels", type=int, default=45, help="out: max channels to baseline")
     p.add_argument("--top", type=int, default=25)
+    p.add_argument("--recent", choices=["", "today", "week", "month"], default="", help="out: only videos uploaded in this window (trend scan)")
     a = p.parse_args()
     queries = [q.strip() for q in a.query.split("|") if q.strip()]
     result, lines = {"kw": mode_kw, "out": mode_out, "batch": mode_batch, "rank": mode_rank, "debug": mode_debug}[a.mode](queries, a)

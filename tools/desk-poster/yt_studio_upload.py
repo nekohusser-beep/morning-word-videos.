@@ -161,9 +161,37 @@ def upload_one(page, mp4: Path, job: dict) -> dict:
     raise RuntimeError("published but no link came back; check Studio")
 
 
+REPO_API = "https://api.github.com/repos/nekohusser-beep/morning-word-videos./releases/tags/desk-queue"
+
+
+def pull_remote():
+    """Claude drops jobs (name.mp4 + name.json + thumbnail) as assets on the public release 'desk-queue'.
+    The laptop pulls any it has not taken yet, so no laptop-linked chat is needed to load the queue."""
+    import urllib.request
+    taken_f = HOME / "pulled.txt"
+    taken = set(taken_f.read_text().split()) if taken_f.exists() else set()
+    try:
+        with urllib.request.urlopen(urllib.request.Request(REPO_API, headers={"User-Agent": "desk-poster"}), timeout=60) as r:
+            assets = json.loads(r.read()).get("assets", [])
+    except Exception as e:
+        log("pull skipped:", e)
+        return
+    for a in assets:
+        key = "%s:%s" % (a["name"], a["id"])
+        if key in taken:
+            continue
+        dest = QUEUE / a["name"]
+        urllib.request.urlretrieve(a["browser_download_url"], str(dest))
+        taken.add(key)
+        log("pulled", a["name"])
+    taken_f.write_text("\n".join(sorted(taken)))
+
+
 def main():
     for d in (QUEUE, DONE, PROFILE):
         d.mkdir(parents=True, exist_ok=True)
+    if "--login" not in sys.argv:
+        pull_remote()
     jobs = sorted(p for p in QUEUE.glob("*.mp4") if p.with_suffix(".json").exists())
     login_only = "--login" in sys.argv
     if not jobs and not login_only:

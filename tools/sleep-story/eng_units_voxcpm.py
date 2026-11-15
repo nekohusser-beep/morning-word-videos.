@@ -40,7 +40,7 @@ for _kw in ({"load_denoiser": False}, {"enable_denoiser": False}, {}):
     except TypeError:
         continue
 sr = int(getattr(getattr(model, "tts_model", model), "sample_rate", 48000))
-base = {"cfg_value": 2.0, "inference_timesteps": 10}
+base = {"cfg_value": float(os.environ.get("VOX_CFG", "2.0")), "inference_timesteps": int(os.environ.get("VOX_STEPS", "10"))}
 modes = [("prompt+text", {"prompt_wav_path": ref, "prompt_text": ref_text, **base}),
          ("reference", {"reference_wav_path": ref, **base})]
 modes = [(nm, kw) for nm, kw in modes if (not src) or all(k in src for k in kw)] or modes

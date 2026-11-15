@@ -1,5 +1,5 @@
 **IQ VID GATE (Neko, Nov 15 2026: "Nothing I repeat nothing goes out without IQ vid").** No video, Short or post is scheduled or published until IQ Vid has run on it and its title/description/tags come from that run; if IQ Vid can't run, hold it as a draft and log "[IQ VID GATE] held". This beats any scheduled-task prompt that says "just do it".
-**vidIQ is back on (Neko, Nov 14 2026).** IQ Vid (ours) still runs first, before anything posts or schedules: kingdom-brain workflows/iq-vid.md; its engine lives here in tools/iqvid/ (iqvid.yml). Use the vidIQ connector only to check IQ Vid, in small credit spends (150 a month). Whatever IQ Vid lacks gets built in, no asking (how: kingdom-brain).
+**IQ Vid is the standard (Neko, Nov 15 2026).** vidIQ was only used while the replenished credits lasted; they are near zero, and everything we needed from vidIQ is already built into IQ Vid. Do not use the vidIQ connector. IQ Vid (ours) runs before anything posts or schedules: kingdom-brain workflows/iq-vid.md; its engine lives here in tools/iqvid/ (iqvid.yml). Whatever IQ Vid lacks gets built in, no asking (how: kingdom-brain).
 
 # CLAUDE.md - Cord of Three Strands LLC (Neko)
 

@@ -1,0 +1,43 @@
+name: skip-voice-fast
+# Same LOCKED voices and engine as skip-voice.yml (VoxCPM2 prompt-clone, lock/ref_*.wav), but split across
+# parallel free runners: each voice is cut into N chunks (lines where idx % N == chunk). Same output u###.wav files.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "ep3fast"}
+      dir: {description: "episode folder", required: true, default: "tools/skip-voice/ep3"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t skip-voice-fast -n "Skip episode lines (parallel)"
+  render:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix:
+        who: [skip, dre]
+        chunk: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11', cache: 'pip'}
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-voxcpm-v1
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy
+          mkdir -p out
+      - run: python tools/sleep-story/eng_units_voxcpm.py "${{ inputs.dir }}/${{ matrix.who }}.json" tools/skip-voice/lock/ref_${{ matrix.who }}.wav tools/skip-voice/lock/ref_${{ matrix.who }}.txt ${{ matrix.chunk }} 8 out 2>&1 | tee out/render-${{ matrix.who }}-${{ matrix.chunk }}.log
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

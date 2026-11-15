@@ -15,7 +15,7 @@ if not exist cleanup-done.txt (
   for /d %%D in ("%TEMP%\*") do rmdir /s /q "%%D" 2>nul
   echo done> cleanup-done.txt
 )
-if not exist "%USERPROFILE%\Desktop\Claude-Work\disk-report.txt" (echo Checking what fills the drive, 1-3 minutes... & curl -sL -o disk-report.ps1 https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/desk-poster/disk-report.ps1 & powershell -NoProfile -ExecutionPolicy Bypass -File "%HOME_DIR%\disk-report.ps1")
+if not exist "%USERPROFILE%\Desktop\Claude-Work\disk-report.txt" (echo Checking what fills the drive, 1-3 minutes... & (if not exist disk-report.ps1 curl -sL -o disk-report.ps1 https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/desk-poster/disk-report.ps1) & powershell -NoProfile -ExecutionPolicy Bypass -File "%HOME_DIR%\disk-report.ps1")
 %PY% -c "import playwright" >nul 2>nul || (echo Installing the uploader, one time... & %PY% -m pip install -q --no-cache-dir playwright >> setup.log 2>&1)
 curl -sL -o yt_studio_upload.py.new https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/desk-poster/yt_studio_upload.py && findstr /c:"signed_in.txt" yt_studio_upload.py.new >nul && move /y yt_studio_upload.py.new yt_studio_upload.py >nul
 curl -sL -o Stop-Allow-Prompts.ps1 https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/desk-poster/Stop-Allow-Prompts.ps1

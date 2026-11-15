@@ -1,0 +1,38 @@
+{
+ "title": [
+  "When your coworker",
+  "starts a business"
+ ],
+ "wide": [
+  0,
+  1,
+  2,
+  3,
+  30,
+  31
+ ],
+ "punch": [
+  4,
+  8,
+  14,
+  18,
+  20,
+  26,
+  28,
+  30
+ ],
+ "gap": {
+  "5": 0.5,
+  "11": 0.5,
+  "21": 0.5,
+  "31": 0.8
+ },
+ "cap": {
+  "9": "For you? $35. Friends and family price.",
+  "11": "Normally it's $40. That's a $5 discount, Skip.",
+  "24": "Take it out of the $40 you owe me.",
+  "26": "I want my $40!",
+  "27": "Now you owe ME $5. Business is business.",
+  "29": "Jacket's $35. Debt's $40. Plus $5 shipping."
+ }
+}

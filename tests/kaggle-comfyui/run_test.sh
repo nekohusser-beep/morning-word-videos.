@@ -7,7 +7,7 @@ W=${W:-/kaggle/temp/comfy}; mkdir -p "$W" /kaggle/working 2>/dev/null || { W=/tm
 cd "$W"; T0=$(date +%s)
 log() { echo "[$(( $(date +%s) - T0 ))s] $*"; }
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader; df -h "$W" | tail -1; free -g | sed -n 2p
-for f in wf.py post.py skip_fridge.jpg; do curl -sfL "$RAW/$f" -o "$f" || { log "FAIL fetch $f"; exit 1; }; done
+for f in wf.py post.py skip_fridge.jpg derrick_ref.jpg; do curl -sfL "$RAW/$f" -o "$f" || { log "FAIL fetch $f"; exit 1; }; done
 if [ ! -d ComfyUI ]; then log "clone ComfyUI"; git clone -q --depth 1 https://github.com/comfyanonymous/ComfyUI || exit 1; fi
 ( cd ComfyUI && git log -1 --format='COMFYUI_COMMIT %h %cd' --date=short )
 log "pip install requirements (torch stays as Kaggle has it)"
@@ -32,16 +32,19 @@ for sub, name in want.items():
     os.makedirs(os.path.dirname(dst), exist_ok=True); shutil.move(p, dst); print("GOT", dst, os.path.getsize(dst) // 1048576, "MB")
 PY
 [ $? -eq 0 ] || { log "FAIL models"; exit 1; }
-cp skip_fridge.jpg ComfyUI/input/
+cp skip_fridge.jpg derrick_ref.jpg ComfyUI/input/
 if ! curl -s http://127.0.0.1:8188/system_stats >/dev/null; then
   log "start server"; ( cd ComfyUI && nohup python main.py --listen 127.0.0.1 --port 8188 --disable-auto-launch > ../comfy.log 2>&1 & )
   for i in $(seq 1 90); do curl -s http://127.0.0.1:8188/system_stats >/dev/null && break; sleep 2; done
 fi
 curl -s http://127.0.0.1:8188/system_stats | head -c 400; echo
 LEN=${LEN:-73}; WID=${WID:-480}; HGT=${HGT:-832}
-log "run workflow length=$LEN ${WID}x${HGT}"
-python wf.py skip_fridge.jpg wan5b/skip "$LEN" "$WID" "$HGT" 20261115 || { log "WORKFLOW FAILED"; tail -60 comfy.log; exit 2; }
-grep -E "Prompt executed|Requested to load|out of memory|OOM|tiled" comfy.log | tail -8
-log "post"
-python post.py ComfyUI/output/wan5b skip skip_fridge.jpg /kaggle/working || { log "POST FAILED"; tail -30 comfy.log; exit 3; }
+for K in skip derrick; do
+  IMG=skip_fridge.jpg; [ $K = derrick ] && IMG=derrick_ref.jpg
+  log "run workflow $K length=$LEN ${WID}x${HGT}"
+  python wf.py $IMG wan5b/$K "$LEN" "$WID" "$HGT" 20261115 $K || { log "WORKFLOW FAILED $K"; tail -60 comfy.log; continue; }
+  grep -E "Prompt executed|out of memory|OOM|tiled" comfy.log | tail -4
+  log "post $K"
+  python post.py ComfyUI/output/wan5b $K $IMG /kaggle/working || { log "POST FAILED $K"; tail -30 comfy.log; }
+done
 log "DONE"

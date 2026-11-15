@@ -74,7 +74,7 @@ ONE-TIME SETUP (Google credentials are Neko-only, his rule):
      > Google Auth Platform: User type External, add blessedprayers4 as a Test user, then Publish app
      (In production) so the sign-in never expires; no Google review needed for our own channel.
   2. Clients > Create client > "TV and Limited Input devices". Copy Client ID and Client secret.
-  3. github.com/nekohusser-beep/kingdom-brain > Settings > Secrets and variables > Actions:
+  3. github.com/nekohusser-beep/morning-word-videos. > Settings > Secrets and variables > Actions:
      New repository secret YT_CLIENT_ID, then YT_CLIENT_SECRET.
   4. Run the yt-push workflow with mode signin. It prints a code: open google.com/device on the
      phone, type it, pick Blessed Prayers, tap Allow ("not verified" screen: Continue).
@@ -261,7 +261,8 @@ def git_publish(paths, msg):
     if subprocess.run(["git", "commit", "-q", "-m", msg], cwd=REPO).returncode != 0:
         return
     for _ in range(5):
-        subprocess.run(["git", "pull", "--rebase", "-q"], cwd=REPO)
+        subprocess.run(["git", "fetch", "-q", "--depth=20", "origin", "main"], cwd=REPO)
+        subprocess.run(["git", "rebase", "-q", "origin/main"], cwd=REPO)
         if subprocess.run(["git", "push", "-q"], cwd=REPO).returncode == 0:
             return
         time.sleep(3)

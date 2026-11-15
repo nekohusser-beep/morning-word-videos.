@@ -1,0 +1,40 @@
+skip 2 0 56.1 s  language=en text_chars=16
+2026-11-15 06:04:04,589 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_skip.wav
+2026-11-15 06:04:12,476 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=26 sample_mode=fixed streaming=True execution_provider=cpu
+
+skip 8 0 13.8 s  language=en text_chars=25
+2026-11-15 06:04:18,990 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_skip.wav
+2026-11-15 06:04:26,468 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=28 sample_mode=fixed streaming=True execution_provider=cpu
+
+skip 28 0 14.6 s  language=en text_chars=15
+2026-11-15 06:04:32,752 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_skip.wav
+2026-11-15 06:04:40,935 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=26 sample_mode=fixed streaming=True execution_provider=cpu
+
+skip 32 0 12.6 s  language=en text_chars=18
+2026-11-15 06:04:47,350 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_skip.wav
+2026-11-15 06:04:53,648 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=19 sample_mode=fixed streaming=True execution_provider=cpu
+
+dre 5 0 12.7 s t language=en text_chars=21
+2026-11-15 06:04:59,882 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_dre.wav
+2026-11-15 06:05:06,344 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=23 sample_mode=fixed streaming=True execution_provider=cpu
+
+dre 9 0 19.7 s t language=en text_chars=45
+2026-11-15 06:05:12,720 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_dre.wav
+2026-11-15 06:05:25,973 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=57 sample_mode=fixed streaming=True execution_provider=cpu
+
+dre 11 0 60.6 s t language=en text_chars=7
+2026-11-15 06:05:32,273 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_dre.wav
+2026-11-15 06:06:26,535 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=284 sample_mode=fixed streaming=True execution_provider=cpu
+
+dre 17 0 14.6 s t language=en text_chars=16
+2026-11-15 06:06:32,940 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_dre.wav
+2026-11-15 06:06:41,052 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=29 sample_mode=fixed streaming=True execution_provider=cpu
+
+dre 21 0 13.0 s t language=en text_chars=18
+2026-11-15 06:06:47,524 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_dre.wav
+2026-11-15 06:06:54,116 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=22 sample_mode=fixed streaming=True execution_provider=cpu
+
+dre 25 0 18.1 s t language=en text_chars=53
+2026-11-15 06:07:00,344 INFO root: using direct reference audio path for voice cloning: ../tools/skip-voice/lock/ref_dre.wav
+2026-11-15 06:07:12,267 INFO root: saved generated audio to /home/runner/work/morning-word-videos./morning-word-videos./moss/generated_audio/infer_onnx_output.wav sample_rate=48000 frames=50 sample_mode=fixed streaming=True execution_provider=cpu
+

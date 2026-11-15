@@ -193,7 +193,13 @@ def main():
     if "--login" not in sys.argv:
         pull_remote()
     jobs = sorted(p for p in QUEUE.glob("*.mp4") if p.with_suffix(".json").exists())
-    login_only = "--login" in sys.argv
+    marker = PROFILE / "signed_in.txt"
+    auto = "--auto" in sys.argv
+    # first double-click (no saved sign-in yet) opens the sign-in window by itself
+    login_only = "--login" in sys.argv or (not marker.exists() and not auto)
+    if auto and not marker.exists():
+        log("not signed in yet: double-click Run-Uploader.cmd once and sign in")
+        return 0
     if not jobs and not login_only:
         log("nothing in", QUEUE)
         return 0
@@ -210,6 +216,15 @@ def main():
             page.goto("https://studio.youtube.com/")
             log("sign in to Blessed Prayers in this window; close it when Studio shows the channel")
             page.wait_for_event("close", timeout=0)
+            try:
+                ok = any(c.get("name") in ("SID", "SAPISID", "__Secure-3PSID") for c in ctx.cookies("https://www.youtube.com"))
+            except Exception:
+                ok = True
+            if ok:
+                marker.write_text(time.strftime("%Y-%m-%d %H:%M"), encoding="utf-8")
+                log("signed in and saved; uploads run on their own every 30 minutes")
+            else:
+                log("no YouTube sign-in found; double-click again and sign in")
             return 0
         failed = 0
         for mp4 in jobs:

@@ -64,16 +64,16 @@ ROLLBACK = os.path.join(REPORTS, "rollback")
 API = "https://www.googleapis.com/youtube/v3"
 UPLOAD_API = "https://www.googleapis.com/upload/youtube/v3"
 CHANNEL_ID = "UCaKI8Xsi-MHu78UnJTY1xpg"
-# force-ssl covers videos.update, playlistItems, comments and captions with one consent.
-SCOPE = "https://www.googleapis.com/auth/youtube.force-ssl"
+# Device sign-in only allows "youtube" (not force-ssl). It covers videos.update, playlistItems
+# and captions; posting comments needs force-ssl, so a comment that is refused is skipped, not failed.
+SCOPE = "https://www.googleapis.com/auth/youtube"
 MAX_TITLE, MAX_DESC, MAX_TAGS = 100, 5000, 500
 
 SETUP_TEXT = """\
 ONE-TIME SETUP (Google credentials are Neko-only, his rule):
-  1. console.cloud.google.com > the project that holds the YouTube Data API key
-     > Google Auth Platform: User type External, add blessedprayers4 as a Test user, then Publish app
-     (In production) so the sign-in never expires; no Google review needed for our own channel.
-  2. Clients > Create client > "TV and Limited Input devices". Copy Client ID and Client secret.
+  1. As blessedprayers4: console.cloud.google.com/auth/clients?project=curious-song-514322-u2
+     (project "BP Uploader": consent screen already In production).
+  2. Create client > "TV and Limited Input devices" > name yt-push > Create. Copy Client ID and secret.
   3. github.com/nekohusser-beep/morning-word-videos. > Settings > Secrets and variables > Actions:
      New repository secret YT_CLIENT_ID, then YT_CLIENT_SECRET.
   4. Run the yt-push workflow with mode signin. It prints a code: open google.com/device on the
@@ -506,8 +506,12 @@ def run_job(yt, job, mode):
         else:
             st, js = yt.send("POST", "commentThreads", {"part": "snippet"},
                              {"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": want["comment"]}}}})
-            (res["changed"] if st == 200 else res["errors"]).append(
-                "comment posted (pin it in Studio)" if st == 200 else "comment: %s %s" % (st, str(js)[:200]))
+            if st == 200:
+                res["changed"].append("comment posted (pin it in Studio)")
+            elif st == 403:
+                res["skipped"].append("comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio")
+            else:
+                res["errors"].append("comment: %s %s" % (st, str(js)[:200]))
 
     # captions
     if want.get("captions_file"):

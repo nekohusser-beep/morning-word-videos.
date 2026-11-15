@@ -7,7 +7,8 @@ from IPython.display import display
 
 W = "/kaggle/working"
 print("FILES", sorted((f, os.path.getsize(os.path.join(W, f))) for f in os.listdir(W) if f.endswith((".mp4", ".jpg", ".png"))))
-STILLS = {"skip": "/tmp/comfy/ComfyUI/input/skip_fridge.jpg", "derrick": "/tmp/comfy/ComfyUI/input/derrick_ref.jpg"}
+IN = next(d for d in ("/kaggle/temp/comfy/ComfyUI/input", "/tmp/comfy/ComfyUI/input") if os.path.isdir(d))
+STILLS = {"skip": IN + "/skip_fridge.jpg", "derrick": IN + "/derrick_ref.jpg"}
 for tag in ("skip", "derrick"):
     mp4 = os.path.join(W, f"wan22_5b_{tag}.mp4")
     if not os.path.exists(mp4):

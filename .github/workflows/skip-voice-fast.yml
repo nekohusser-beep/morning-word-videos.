@@ -6,6 +6,7 @@ on:
     inputs:
       tag: {description: "draft release for outputs", required: true, default: "ep3fast"}
       dir: {description: "episode folder", required: true, default: "tools/skip-voice/ep3"}
+      seed: {description: "take number (0 = first take; 1,2,3 = retakes)", required: false, default: "0"}
 permissions:
   contents: write
 jobs:
@@ -38,6 +39,7 @@ jobs:
           pip install -q voxcpm soundfile numpy
           mkdir -p out
       - name: Split this voice's lines evenly (by position, not idx) and render this share
+        env: {SEED_OFFSET: "${{ inputs.seed }}"}
         run: |
           python -c "import json,sys;u=json.load(open(sys.argv[1]));json.dump([x for i,x in enumerate(u) if i%8==int(sys.argv[2])],open('mine.json','w'))" "${{ inputs.dir }}/${{ matrix.who }}.json" ${{ matrix.chunk }}
           python tools/sleep-story/eng_units_voxcpm.py mine.json tools/skip-voice/lock/ref_${{ matrix.who }}.wav tools/skip-voice/lock/ref_${{ matrix.who }}.txt 0 1 out 2>&1 | tee out/render-${{ matrix.who }}-${{ matrix.chunk }}.log

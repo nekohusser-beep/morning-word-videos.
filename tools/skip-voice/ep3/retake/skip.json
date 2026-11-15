@@ -1,0 +1,51 @@
+[
+ {
+  "kind": "skip",
+  "text": "Chipped in what?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "skip",
+  "text": "You're collecting money.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "skip",
+  "text": "Dre, you still owe ME forty dollars.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "skip",
+  "text": "How much did you collect?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "skip",
+  "text": "You drove to the gas station across the street!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 20
+ },
+ {
+  "kind": "skip",
+  "text": "She hugged YOU?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 28
+ },
+ {
+  "kind": "skip",
+  "text": "Which Friday, Dre?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 32
+ }
+]

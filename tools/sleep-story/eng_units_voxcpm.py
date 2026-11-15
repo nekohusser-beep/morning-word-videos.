@@ -51,7 +51,7 @@ for u in units:
     words = max(1, len(text.split()))
     w = None
     for attempt in range(3):
-        torch.manual_seed(1000 + u["idx"] * 7 + attempt); np.random.seed(1000 + u["idx"]); random.seed(1000 + u["idx"])
+        torch.manual_seed(1000 + int(os.environ.get("SEED_OFFSET", "0")) * 9973 + u["idx"] * 7 + attempt); np.random.seed(1000 + u["idx"]); random.seed(1000 + u["idx"])
         for nm, kw in ([chosen] if chosen else modes):
             t0 = time.time()
             try:

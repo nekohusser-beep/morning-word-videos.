@@ -62,8 +62,8 @@ def upload_one(page, mp4: Path, job: dict) -> dict:
     if "accounts.google.com" in page.url:
         raise RuntimeError("not signed in: sign in to the Blessed Prayers account in this window, then rerun")
     dlg = page.locator("ytcp-uploads-dialog")
-    dlg.locator("input[type=file]").wait_for(state="attached", timeout=60000)
-    dlg.locator("input[type=file]").set_input_files(str(mp4))
+    dlg.locator("input[type=file]").first.wait_for(state="attached", timeout=60000)
+    dlg.locator("input[type=file]").first.set_input_files(str(mp4))
     step("file sent")
 
     boxes = dlg.locator("#textbox")

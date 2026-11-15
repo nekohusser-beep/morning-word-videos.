@@ -33,16 +33,20 @@ jobs:
       - run: |
           mkdir -p up
           python - <<'EOF' 2>&1 | tee up/moss-${{ matrix.who }}-${{ matrix.chunk }}.log
-          import json, subprocess, time, shutil, glob, os
+          import json, subprocess, time, shutil, glob, os, soundfile as sf
           units = [u for i, u in enumerate(json.load(open("${{ inputs.dir }}/${{ matrix.who }}.json"))) if i % 3 == ${{ matrix.chunk }}]
           os.chdir("moss")
           for u in units:
-              t0 = time.time()
-              r = subprocess.run(["python", "infer_onnx.py", "--prompt-audio-path", "../tools/skip-voice/lock/ref_${{ matrix.who }}.wav", "--text", u["text"]], capture_output=True, text=True)
-              outs = sorted(glob.glob("generated_audio/*.wav"), key=os.path.getmtime)
-              if r.returncode == 0 and outs:
-                  shutil.copy(outs[-1], f"../up/u{u['idx']:03d}.wav")
-              print(u["idx"], r.returncode, round(time.time() - t0, 1), "s", u["text"][:40], flush=True)
+              words = len(u["text"].split())
+              for attempt in range(4):  # MOSS can ramble on very short lines ("A card." -> 22 s): length check + retry
+                  t0 = time.time()
+                  r = subprocess.run(["python", "infer_onnx.py", "--prompt-audio-path", "../tools/skip-voice/lock/ref_${{ matrix.who }}.wav", "--text", u["text"]], capture_output=True, text=True)
+                  outs = sorted(glob.glob("generated_audio/*.wav"), key=os.path.getmtime)
+                  d = sf.info(outs[-1]).duration if (r.returncode == 0 and outs) else -1
+                  ok = 0.2 * words <= d <= 0.6 * words + 1.5
+                  print(u["idx"], "attempt", attempt, r.returncode, round(time.time() - t0, 1), "s gen", round(d, 1), "s audio", "ok" if ok else "BAD LENGTH", u["text"][:40], flush=True)
+                  if ok:
+                      shutil.copy(outs[-1], f"../up/u{u['idx']:03d}.wav"); break
           EOF
       - if: always()
         env: {GH_TOKEN: "${{ github.token }}"}

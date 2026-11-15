@@ -430,3 +430,4 @@ Oct 31 2026 6:15 AM ET: J-006 DONE (YouTube Short 2QVNmnGV2Nw refreshed to SEO v
 - Nov 15 2026 2:45 AM ET: [VOICE DECISION] Neko: keep VoxCPM2 (current locked voices). MOSS-TTS-Nano rejected: robotic undertone even sped up. Revisit only if VoxCPM2 breaks. Kept: skip-voice-fast (16 parallel runners) + best-of-3 takes. moss-voice.yml stays as a parked backup.
 - Nov 15 2026 7:36 AM ET: [MORNING NOTE] sent; need-you picks: TH1, C44, T20
 - Nov 15 2026 9:03 AM ET: [NEKO] Yes to C44 (schedule EP3 Polycarp; needs laptop run, file is on laptop). Doing T20 sign-ins now. TH1 Repent Short: he still has to watch it.
+- 2026-11-15 11:20 AM ET: [LINKS] 4 Neko links reviewed: animation consistency kit + Shorts feedback loop + finish-line prompt shape wired into kingdom-brain workflows; Money Finder (subscription audit) queued for his Gmail OK.

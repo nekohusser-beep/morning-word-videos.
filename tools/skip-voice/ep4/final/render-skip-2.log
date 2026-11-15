@@ -1,0 +1,25 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+source mentions: ['prompt_wav_path', 'prompt_text', 'reference_wav_path', 'cfg_value', 'inference_timesteps', 'denoise', 'normalize']
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 2390.22it/s]
+voxcpm_model_path: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd, zipenhancer_model_path: None, enable_denoiser: False
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Loading AudioVAE from pytorch: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/audiovae.pth
+Running on device: cpu, dtype: bfloat16
+Loading model from safetensors: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/model.safetensors
+Warning: torch.compile disabled - VoxCPMModel can only be optimized on CUDA device
+Loaded VoxCPM2Model
+Warm up VoxCPMModel...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.10s/it] 20%|██        | 2/10 [00:02<00:08,  1.09s/it] 30%|███       | 3/10 [00:03<00:07,  1.09s/it] 40%|████      | 4/10 [00:04<00:06,  1.08s/it] 50%|█████     | 5/10 [00:05<00:05,  1.08s/it] 60%|██████    | 6/10 [00:06<00:04,  1.08s/it] 70%|███████   | 7/10 [00:07<00:03,  1.08s/it] 80%|████████  | 8/10 [00:08<00:02,  1.08s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.08s/it]100%|██████████| 10/10 [00:10<00:00,  1.08s/it]100%|██████████| 10/10 [00:10<00:00,  1.08s/it]
+model loaded with {'load_denoiser': False}
+modes to try: ['prompt+text', 'reference']
+  0%|          | 0/22 [00:00<?, ?it/s]  5%|▍         | 1/22 [00:01<00:22,  1.08s/it]  9%|▉         | 2/22 [00:02<00:22,  1.11s/it] 14%|█▎        | 3/22 [00:03<00:20,  1.09s/it] 18%|█▊        | 4/22 [00:04<00:19,  1.09s/it] 23%|██▎       | 5/22 [00:05<00:18,  1.09s/it] 23%|██▎       | 5/22 [00:05<00:20,  1.18s/it]
+2 skip prompt+text attempt 0 1.0 s in 28 s ok : Inventory?
+  0%|          | 0/70 [00:00<?, ?it/s]  1%|▏         | 1/70 [00:01<01:14,  1.08s/it]  3%|▎         | 2/70 [00:02<01:12,  1.07s/it]  4%|▍         | 3/70 [00:03<01:12,  1.08s/it]  6%|▌         | 4/70 [00:04<01:10,  1.07s/it]  7%|▋         | 5/70 [00:05<01:09,  1.07s/it]  9%|▊         | 6/70 [00:06<01:08,  1.07s/it] 10%|█         | 7/70 [00:07<01:07,  1.07s/it] 11%|█▏        | 8/70 [00:08<01:06,  1.07s/it] 13%|█▎        | 9/70 [00:09<01:05,  1.07s/it] 14%|█▍        | 10/70 [00:10<01:04,  1.07s/it] 16%|█▌        | 11/70 [00:11<01:03,  1.07s/it] 16%|█▌        | 11/70 [00:12<01:05,  1.11s/it]
+10 skip prompt+text attempt 0 1.9 s in 22 s ok : You want me to BUY my own jacket?
+  0%|          | 0/52 [00:00<?, ?it/s]  2%|▏         | 1/52 [00:01<00:55,  1.08s/it]  4%|▍         | 2/52 [00:02<00:54,  1.08s/it]  6%|▌         | 3/52 [00:03<00:52,  1.08s/it]  8%|▊         | 4/52 [00:04<00:51,  1.08s/it] 10%|▉         | 5/52 [00:05<00:50,  1.08s/it] 12%|█▏        | 6/52 [00:06<00:49,  1.08s/it] 13%|█▎        | 7/52 [00:07<00:49,  1.09s/it] 15%|█▌        | 8/52 [00:08<00:47,  1.09s/it] 17%|█▋        | 9/52 [00:09<00:46,  1.09s/it] 19%|█▉        | 10/52 [00:10<00:45,  1.08s/it] 19%|█▉        | 10/52 [00:11<00:47,  1.13s/it]
+18 skip prompt+text attempt 0 1.8 s in 22 s ok : That's my lunch box!
+  0%|          | 0/46 [00:00<?, ?it/s]  2%|▏         | 1/46 [00:01<00:48,  1.07s/it]  4%|▍         | 2/46 [00:02<00:47,  1.08s/it]  7%|▋         | 3/46 [00:03<00:46,  1.08s/it]  9%|▊         | 4/46 [00:04<00:45,  1.08s/it] 11%|█         | 5/46 [00:05<00:44,  1.08s/it] 13%|█▎        | 6/46 [00:06<00:43,  1.08s/it] 15%|█▌        | 7/46 [00:07<00:42,  1.08s/it] 17%|█▋        | 8/46 [00:08<00:41,  1.08s/it] 20%|█▉        | 9/46 [00:09<00:40,  1.08s/it] 22%|██▏       | 10/46 [00:10<00:38,  1.08s/it] 22%|██▏       | 10/46 [00:11<00:40,  1.12s/it]
+26 skip prompt+text attempt 0 1.8 s in 20 s ok : I want my forty dollars!
+done chunk 2 mode prompt+text

@@ -26,7 +26,8 @@ JOB FILE (every field optional except video_id; a field left out is never touche
     "comment": "...",                                 posted as the channel (YouTube's API cannot pin)
     "captions_file": "projects/<p>/pack/captions.srt",
     "captions_lang": "en",
-    "captions_name": "English"
+    "captions_name": "English",
+    "thumbnail_file": "tools/yt-push/thumbs/x.jpg"     JPG/PNG, 2 MB max, 1280x720 best
   }
 
 MODES
@@ -145,6 +146,13 @@ class YT:
         h = self._h()
         h["Content-Type"] = "multipart/related; boundary=" + boundary
         return http("POST", self._u(path, p, upload=True), headers=h, raw=parts)
+
+    def upload_media(self, path, params, filedata, mime):
+        p = dict(params)
+        p["uploadType"] = "media"
+        h = self._h()
+        h["Content-Type"] = mime
+        return http("POST", self._u(path, p, upload=True), headers=h, raw=filedata)
 
 
 # ------------------------------------------------------------------ saved sign-in
@@ -315,7 +323,7 @@ def resolve_job(job):
         except Exception as e:
             problems.append("pack unreadable: %s" % e)
     for k in ("title", "description", "tags", "category_id", "default_language",
-              "localized_titles", "playlist_ids", "comment", "captions_file", "captions_lang", "captions_name"):
+              "localized_titles", "playlist_ids", "comment", "captions_file", "captions_lang", "captions_name", "thumbnail_file"):
         if job.get(k) not in (None, "", [], {}):
             want[k] = job[k]
     if "title" in want:
@@ -332,6 +340,12 @@ def resolve_job(job):
             problems.append("tags trimmed from %d to %d to stay under %d characters"
                             % (len(want["tags"]), len(fitted), MAX_TAGS))
         want["tags"] = fitted
+    if "thumbnail_file" in want:
+        tp = os.path.join(REPO, want["thumbnail_file"])
+        if not os.path.exists(tp):
+            problems.append("thumbnail not found: %s" % want["thumbnail_file"])
+        elif os.path.getsize(tp) > 2 * 1024 * 1024:
+            problems.append("thumbnail is over 2 MB (YouTube's limit)")
     if "captions_file" in want and not os.path.exists(os.path.join(REPO, want["captions_file"])):
         problems.append("captions file not found: %s" % want["captions_file"])
     return want, problems
@@ -457,7 +471,7 @@ def run_job(yt, job, mode):
     if mode in ("dry", "verify"):
         res["would_change"] = sorted(diff)
         if mode == "dry":
-            for extra in ("playlist_ids", "comment", "captions_file"):
+            for extra in ("playlist_ids", "comment", "captions_file", "thumbnail_file"):
                 if extra in want:
                     res["would_change"].append(extra)
         return res
@@ -512,6 +526,19 @@ def run_job(yt, job, mode):
                 res["skipped"].append("comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio")
             else:
                 res["errors"].append("comment: %s %s" % (st, str(js)[:200]))
+
+    # thumbnail (re-sent every apply only when the file differs from the last one we set)
+    if want.get("thumbnail_file"):
+        data = open(os.path.join(REPO, want["thumbnail_file"]), "rb").read()
+        mime = "image/png" if want["thumbnail_file"].lower().endswith(".png") else "image/jpeg"
+        st, js = yt.upload_media("thumbnails/set", {"videoId": vid}, data, mime)
+        if st == 200:
+            res["changed"].append("thumbnail")
+        elif st == 403:
+            res["errors"].append("thumbnail refused (403): the channel needs custom thumbnails turned on "
+                                 "(Studio > Settings > Channel > Feature eligibility, phone verification)")
+        else:
+            res["errors"].append("thumbnail: %s %s" % (st, str(js)[:200]))
 
     # captions
     if want.get("captions_file"):

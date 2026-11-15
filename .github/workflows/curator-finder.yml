@@ -1,0 +1,31 @@
+name: curator-finder
+# Our own PlaylistSupply: open, bot-screened playlists in our genres with price, share rate, listeners.
+on:
+  workflow_dispatch:
+    inputs:
+      genres:
+        description: "artist.tools genre slugs, space separated"
+        required: false
+        default: "gospel christian reggae afrobeats worship soul r-b"
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools/curator-finder
+            reports/curators
+      - name: Run
+        env: {GENRES: "${{ inputs.genres }}"}
+        run: python3 -u tools/curator-finder/curator_finder.py $GENRES
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name curator-bot; git config user.email noreply@github.com
+          git add reports/curators || true
+          git commit -q -m "curators $(date -u +%F)" || exit 0
+          for i in 1 2 3 4 5; do git fetch -q --depth=20 origin main && git rebase -q origin/main && git push -q && break; sleep 3; done

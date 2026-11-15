@@ -9,6 +9,8 @@ where py >nul 2>nul && (set PY=py -3) || (where python >nul 2>nul && (set PY=pyt
 %PY% -m pip install -q --upgrade playwright >> setup.log 2>&1
 %PY% -m playwright install chromium >> setup.log 2>&1
 curl -sL -o yt_studio_upload.py https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/desk-poster/yt_studio_upload.py
+curl -sL -o Stop-Allow-Prompts.ps1 https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/desk-poster/Stop-Allow-Prompts.ps1
+if not exist allow-done.txt (powershell -NoProfile -ExecutionPolicy Bypass -File "%HOME_DIR%\Stop-Allow-Prompts.ps1" && echo done> allow-done.txt)
 REM every 30 minutes on its own from now on (no admin needed)
 schtasks /query /tn DeskPoster >nul 2>nul || schtasks /create /tn DeskPoster /sc minute /mo 30 /tr "cmd /c \"%HOME_DIR%\Run-Uploader.cmd\" auto" /f >> setup.log 2>&1
 if /i "%1"=="login" (%PY% yt_studio_upload.py --login & goto :end)

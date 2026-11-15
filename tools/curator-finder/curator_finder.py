@@ -108,8 +108,9 @@ def main():
             seen.add(r["playlist_url"])
             r.update(curator_info(r["curator"], cache))
             r["risk"] = risk(r)
-            p = r["price"]
-            r["listeners_per_dollar"] = round(r["listeners"] / p, 1) if p else (r["listeners"] if p == 0 else "")
+            p, sh = r["price"], (r["share_rate"] or 0) / 100.0
+            # expected real listeners reached per dollar = listeners x chance they add you / price
+            r["listeners_per_dollar"] = round(r["listeners"] * sh / p, 1) if p else (round(r["listeners"] * sh, 1) if p == 0 else "")
             rows.append(r)
     def key(r):
         free = r["price"] == 0
@@ -125,9 +126,9 @@ def main():
         w.writerows(rows)
     free = [r for r in rows if r["price"] == 0]
     lines = ["# Curators open right now (%s) - genres: %s" % (day, ", ".join(genres)), "",
-             "%d playlists from %d curators. Free: %d. Bot-screened by artist.tools; listener counts from SubmitLink."
+             "%d playlists from %d curators. Free: %d. Bot-screened by artist.tools; listener counts from SubmitLink. Reach per $ = listeners x how often the curator adds songs / price (best value first)."
              % (len(rows), len(cache), len(free)), "",
-             "| # | Genre | Playlist | Followers | Listeners | Growing | Price | Adds songs | Listeners per $ | Note | Submit |",
+             "| # | Genre | Playlist | Followers | Listeners | Growing | Price | Adds songs | Reach per $ | Note | Submit |",
              "|---|---|---|---|---|---|---|---|---|---|---|"]
     for i, r in enumerate(rows, 1):
         price = "free" if r["price"] == 0 else ("$%g" % r["price"] if r["price"] is not None else "?")

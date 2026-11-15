@@ -11,3 +11,4 @@
 - Nov 12 2026: Hook Shorts voiced with a Chatterbox clone, one sentence at a time, so the voice drifted between sentences (Neko heard a different man, then Michael). Fix: voice the channel narrator with the same engine as the long videos (Kokoro am_michael 0.93), and listen-check the whole file before sending.
 - Nov 14 2026: n6-psalm127 sleep Short was scheduled without IQ Vid because the scheduled prompt said 'just do it'. Fix: IQ Vid gate added to CLAUDE.md and to the sleep Short + Skip ADHD scheduled tasks; nothing posts without it (Neko, Nov 15).
 - Nov 14 2026: Marked 5 Skip videos READY (auto-post) before Neko saw them. Fix: Neko watches every video first; build -> NEKO REVIEW -> READY only on his OK.
+- Nov 15 2026: Sent Neko a raw MOSS voice test (slow, unusable) instead of a finished version. Fix: tune first, send only the best finished version.

@@ -1,0 +1,125 @@
+=== LONG-VIDEO OUTLIERS: coworker skit (searched: coworker skit; druski coworker skit; funny coworker skits; toxic coworker skits) ===
+pool 54 long videos, 24 scored against their channel's median, 10 at 3x or more
+outlier (+ = under 28 days old, still climbing) | views | views/day | age d | min | subs | channel median | title [channel] link
+2583.0x+ |   36.2K |  24.1K |     1 |   2 |    744 |     14 | NVIDIA's Jensen Huang Gets a Job at Dunder Mifflin [5 minute concepts] https://youtu.be/3c-V-CE5I3E
+ 213.4x+ |    3.9M | 161.1K |    24 |   6 |   3.3M |  18.5K | Theranos whistleblower says he nearly jumped out of his seat watching Elizabeth Holmes doc [CBS Mornings] https://youtu.be/nj963-FoACI
+  89.9x+ |   38.5K |   2.9K |    13 |  22 |    405 |    428 | My Boss Promoted My 11-Month Trainee Over Me After 17 Years—So I Quit in 6 Minutes! [Bossquora] https://youtu.be/aH1og8HGp5E
+  12.7x+ |    5.4K |    309 |    17 |  42 |    405 |    428 | My Boss Gave Me an F After I Saved Her Biggest Client—So I Quit in 5 Minutes [Bossquora] https://youtu.be/r3jvKUme9bo
+  10.5x+ |  387.9K |  22.2K |    17 |   2 |   198K |    37K | He Shared the WRONG Cookies With His BOSS 😂 [Sarah Elizabeth Hyde] https://youtu.be/VWYdlnKqByQ
+   8.8x+ |    3.8K |    358 |    10 |  18 |    405 |    428 | My Boss Promoted a Board Member's Son Over Me — So I Quit in 6 Minutes [Bossquora] https://youtu.be/ixXvWwoLsEQ
+   7.1x+ |    5.1K |    375 |    13 |   1 |  13.4K |    713 | A Day In The Life Of A Microsoft H-1B Worker [Daily Soak] https://youtu.be/YxZBxALlC5w
+   7.0x+ |      3K |     3K |     0 |  26 |    405 |    428 | My Boss Gave My Promotion to His College Friend — He Didn't Know I'd Trained Every Executi [Bossquora] https://youtu.be/nYF0jC_FnME
+   4.4x+ |    7.6K |    436 |    17 |   3 |  22.1K |   1.8K | My coworker filed a complaint because I won’t talk to her, #coworkers #skit #skits #callce [Wanda] https://youtu.be/Keq_dbxTlCs
+   4.2x+ |    7.1M |   1.6M |     4 |   9 |  14.2M |   1.7M | The Nvidia Honey Trap Chinese Sexpionage Scandal, Explained | The Daily Show [The Daily Show] https://youtu.be/HA0ulwcacFI
+   2.8x+ |    1.2K |    478 |     2 |  26 |    405 |    428 | The CEO Mocked My Resignation Letter—Until the Board Read My Final Report [Bossquora] https://youtu.be/undWfiTLcz8
+   2.1x+ |    2.9M | 390.8K |     7 |   4 |  17.5M |   1.4M | Weekend Update: Elon Musk on His Tough Week After Midterms - SNL [Saturday Night Live] https://youtu.be/N5Ws09EYV3s
+   1.6x+ |    1.4K |    317 |     4 |  13 |  82.3K |    907 | Toxic Manager FRAMES Us… Then the VIP EXPOSES Her! 😳🔥🚨 #manager #corporate #comedy [Animation Hub] https://youtu.be/M466Gxc0HYA
+   1.4x+ |   15.2K |    869 |    17 |  15 |  46.1K |    11K | They Fired Her… Now She Gets The Promotion That Was Mine. [Ella animation ] https://youtu.be/U1Hg_TBOnAE
+   1.4x+ |    1.3K |    110 |    11 |  10 |  82.3K |    907 | Employee's EPIC Comeback Gets Corrupt Manager FIRED! 😳🔥🚨#animation #manager #corporate [Animation Hub] https://youtu.be/zCkgIrpdDGE
+   1.3x+ |  404.4K |  23.1K |    17 |  12 |   6.1M |   322K | Working-Class American Dad SNAPS Goes Viral…We Just Changed His Life [Benny Johnson] https://youtu.be/brspu6dpZ_8
+   1.2x+ |    1.7M |  95.2K |    17 |   4 |  17.5M |   1.4M | Plates - SNL [Saturday Night Live] https://youtu.be/AKWh8D8bSR0
+   1.2x+ |    5.8K |    503 |    11 |  10 |    905 |   4.9K | Passive-Aggressive Notes That Escalated Coworker Drama To Levels Nobody Was Ready For (New [angel56899] https://youtu.be/c6jIdavJYK8
+   1.1x+ |    3.1K |    270 |    11 |  22 |  59.3K |   2.7K | Worst Coworker Ever! ITSREAL85VIDS I Hate My Job Reaction [CYGG TV] https://youtu.be/waMNzkrktus
+   1.0x+ |    1.5M | 193.7K |     7 |   4 |  17.5M |   1.4M | Weekend Update: Two People Who Just Hooked Up on the Midterms - SNL [Saturday Night Live] https://youtu.be/ljMvm20rg-4
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 7
+WINNER TITLE WORDS: boss(5), quit(3), minutes(3), promoted(2), after(2), over(2), gave(2), dunder(1), job(1), gets(1), mifflin(1), jensen(1), nvidia's(1), huang(1), jumped(1), nearly(1), documentary(1), theranos(1), whistleblower(1), watching(1)
+=== LONG-VIDEO OUTLIERS: annoying coworker (searched: annoying coworker; annoying coworkers; annoying coworker memes; annoying coworker stories) ===
+pool 49 long videos, 13 scored against their channel's median, 8 at 3x or more
+outlier (+ = under 28 days old, still climbing) | views | views/day | age d | min | subs | channel median | title [channel] link
+ 405.2x+ |    1.7M |  67.8K |    24 |  20 |   1.1K |   4.1K | Clues Ethan Klein Was CHEATING With Tamara + Hypocrisy - h3 podcast clips compilation [SHOCKMOUTHS SLOP] https://youtu.be/VHgrce9VcRo
+  98.7x+ |   65.5K |   8.7K |     7 |  93 |   4.9K |    664 | [Full Movie] Betrayed at 40, She Becomes an Agent—Then a Younger Superstar Falls for Her! [Momeshorts TV] https://youtu.be/dkO31ys8OqI
+  37.9x  |  102.2K |   3.2K |    31 | 122 |  87.2K |   2.7K | Everyone Bullied the New Intern—Unaware She's the CEO's Secret Wife! Now They're in Big Tr [Heartthrob Dramas] https://youtu.be/zTO_0Nd9Aig
+  22.4x+ |  391.8K |  22.4K |    17 |   2 |   1.4M |  17.5K | Exhausted worker who had a meltdown over viral prank receives 250k [news.com.au] https://youtu.be/FtEDwx-1Sek
+  18.5x+ |  119.5K |   8.8K |    13 | 161 |  17.8K |   6.5K | CEO Tried to Humiliate His Country Wife—She Outsmarted Everyone and Saved His $10B Company [Swan Drama] https://youtu.be/2-hR0elgaRA
+   8.6x+ |  439.2K |  17.9K |    24 | 142 |   109K |    51K | She Kissed Her Doll—The Cold CEO Felt It! Strangers at Work, But Crazy About Each Other at [PeachShine Drama] https://youtu.be/0WdKD3t7IA8
+   4.9x+ |   21.1K |     6K |     3 | 173 |   1.8K |   4.3K | Everyone Wakes Up Underground… His SSS PICKAXE Turns a Cave Into an EMPIRE! [Stellar Manhwa] https://youtu.be/sLfC5Ic0fEE
+   3.2x  |   17.7K |    560 |    31 |  31 |   7.3K |   5.5K | Reddit Stories From WEIRD People  [Kaneisnotgood] https://youtu.be/v8Q2RSW4zgg
+   1.5x+ |    3.9K |    224 |    17 |  21 |    530 |   2.7K | 41 Dumbest Things Employees Did To Get Revenge On Their Annoying Managers [Cubicle Chaos] https://youtu.be/93ylURI7x2I
+   1.4x+ |    3.2K |    182 |    17 |  11 |   2.6K |   2.3K | ASMR - Annoying Nosy Coworker is BACK! 👀 Crunchy Eating & Whispering [Random Conversations with El] https://youtu.be/cGPnOZ0s_Zc
+   1.4x+ |   19.6K |   1.1K |    17 |  12 |   203K |  14.5K | [Dizzy lol🤣🤣] A female coworker who is smarter and better at her job than me was so annoyi [핫썰] https://youtu.be/b0HYJ4N0cCk
+   1.3x+ |    6.1K |    248 |    24 |  92 |   102K |   4.7K | FULL SHOW: Slap An Annoying Coworker Day, SBL: It's A Players Ball Every Weekend - 10.23.2 [Steve Harvey FM] https://youtu.be/hkmDMCcZcPM
+   0.2x+ |   25.7K |  17.1K |     1 |  47 |   3.2M | 145.5K | [다시 보기] 홍.건.데 역대 MC들과 함께한 넷플릭스 10주년 특집 축하하러 온 건 맞는데 | 넷플잔치 [Netflix Korea 넷플릭스 코리아] https://youtu.be/xOhDkxQTdU8
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 5
+WINNER TITLE WORDS: she(3), everyone(3), wife(2), ceo(2), cheating(1), ethan(1), tamara(1), hypocrisy(1), clips(1), compilation(1), klein(1), clues(1), podcast(1), full(1), then(1), superstar(1), younger(1), agent(1), falls(1), becomes(1)
+=== LONG-VIDEO OUTLIERS: when your coworker (searched: when your coworker; when your coworker joins a cult; when your coworker can't control their face; when your coworker joins a cult bistro huddy) ===
+pool 57 long videos, 21 scored against their channel's median, 12 at 3x or more
+outlier (+ = under 28 days old, still climbing) | views | views/day | age d | min | subs | channel median | title [channel] link
+ 213.4x+ |    3.9M | 161.1K |    24 |   6 |   3.3M |  18.5K | Theranos whistleblower says he nearly jumped out of his seat watching Elizabeth Holmes doc [CBS Mornings] https://youtu.be/nj963-FoACI
+  79.3x+ |  780.6K |  91.8K |     8 |  50 |   2.9K |   9.8K | 1 night, 7times! Pregnant with twins by cold CEO, she feared rejection but he demands marr [Oasis Binge] https://youtu.be/xHrJ0Wu9kgs
+  22.6x+ |   31.6K |   1.8K |    17 |  83 |   3.6K |   1.4K | She offered US$150 to sign for US$450,000 in gold. I refused to take the blame!#drama [Lottie Drama] https://youtu.be/I8fKvpGGTrM
+  15.7x+ |    1.1K |     46 |    24 |  22 |     52 |     72 | POV: Your Coworker Buys a $62,000 Truck. You Drive a $4,800 Civic With $187,400 Hidden in  [Real Finance ] https://youtu.be/z9mxifiJ5fQ
+   8.6x+ |  439.2K |  17.9K |    24 | 142 |   109K |    51K | She Kissed Her Doll—The Cold CEO Felt It! Strangers at Work, But Crazy About Each Other at [PeachShine Drama] https://youtu.be/0WdKD3t7IA8
+   6.6x+ |    1.1K |     44 |    24 |   0 |  76.3K |    163 | Slap Your Coworkers Day is not what you think [WDTNTV] https://youtu.be/ue-TqOQozTg
+   5.3x+ |    6.4K |   6.4K |     0 | 135 |  18.8K |   1.2K | 小伙以为老爸为钱财入赘豪门，归来才知后妈貌美、姐姐是重生女总裁！重生总裁姐姐一心倒追，他却醉心修仙医术，都市中开启了修仙大佬的爽燃人生！ [糖果屋剧场] https://youtu.be/rkyHLkHdVPY
+   4.6x+ |   23.7K |    969 |    24 | 130 |   142K |   5.2K | Fresh Out of Prison, She Cried Alone… BUT a Rich Old Lady & Her CEO Son Took Her In & Spoi [Blueberry Drama] https://youtu.be/lgQgcYpV-dI
+   3.7x+ |   46.3K |   2.6K |    17 |  15 |   6.3K |  12.5K | POV: Your Boss Refused Your $1.50 Raise After 9 Years — He Didn't Know You Retire in 6 Wee [POV Wealth] https://youtu.be/1DrgAOpF_3I
+   3.5x+ |    3.9K |   2.6K |     1 | 154 |   2.2K |   1.1K | I Hid My Love Letter After Seeing His Rolls-Royce—3 Years Later, He Tapped My Shoulder on  [Her Turn Drama] https://youtu.be/MupHK7e7L4s
+   3.4x+ |    8.9K |   3.5K |     2 | 156 |   268K |   2.6K | [ENG SUB]✨She Stole The Male Lead In A Novel, Then Ran Away When He Became A Billionaire H [Twilight Drama Dreams💫] https://youtu.be/mzqbgkFbbMw
+   3.1x+ |   22.6K |   4.1K |     5 | 145 |  11.9K |   7.3K | 修仙小夥剛下山就發現老爸竟然嫁入豪門了，直接獲得一個美女總裁姊姊！豈料美女總裁竟是重生歸來，知道小夥的修仙本領，一門心思要拿下他！ [甜屿短剧TV] https://youtu.be/C7RBon1rL-Y
+   2.6x  |    7.2K |    157 |    45 | 129 |   2.5M |   2.8K | Would you rather be a corn star or a snowman? [Blind Surfer Pete Gustin] https://youtu.be/FgspJbjUBe8
+   2.2x+ |    9.3K |    377 |    24 |  16 |   9.5K |   4.2K | Learning your Coworker's Secret | [M4A] [Vampire] [Blood Sucking] [AzariasVA] https://youtu.be/FgxBhL6wzAc
+   1.4x+ |    3.6K |   3.6K |     0 | 142 |  14.1K |   2.5K | 50岁的老爸''嫁''入豪门，小伙和美女总裁竟成了异父异母的姐弟！总裁一心想攻略小伙，小伙却一心修炼搞事业，岂料小伙的医术登峰造极赚取了100亿，美女总裁直接成了他的助理！ [好戏短剧社dramaclub] https://youtu.be/iFFPClVmT2k
+   1.2x+ |    1.9K |    110 |    17 |  73 |   1.8K |   1.6K | 【🎬FULL】A woman rids herself of a mooching coworker, who steals her sold car and frames her [Watch Dramas Quickly] https://youtu.be/EoorvJt1y_g
+   1.1x+ |    6.9K |    282 |    24 |  49 |  18.8K |   6.4K | WHAT’S YOUR COWORKERS PRIVATE THOUGHTS OF YOU? 🤔🤫💭|PICK A CARD| [Stella Beauty Tarot] https://youtu.be/lfdTwOslBfE
+   1.0x+ |   19.7K |   1.5K |    13 |  11 |    41K |    19K | How To Deal With Difficult Coworkers Without Losing Your Job [Dr. Cecelia Baldwin] https://youtu.be/0126lKTWGko
+   0.9x+ |    7.8K |   1.2K |     6 |   1 |   137K |   8.4K | When Your Coworker Thinks She's Your Boss 😂 [Tony Animation] https://youtu.be/yxQ6lB_vmew
+   0.4x+ |   13.6K |   9.1K |     1 |   0 |   239K |    33K | The Perfect Husband and a Happy Wife | Ep.2 [Mitoshi] https://youtu.be/B1b9a8SpFBA
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 7
+WINNER TITLE WORDS: she(5), ceo(3), but(3), out(2), night(2), cold(2), refused(2), 000(2), drama(2), pov(2), years(2), after(2), jumped(1), nearly(1), documentary(1), theranos(1), whistleblower(1), watching(1), elizabeth(1), says(1)
+=== LONG-VIDEO OUTLIERS: work comedy skit (searched: work comedy skit; comedy work skits; work comedy video; work wife comedy skit) ===
+pool 60 long videos, 35 scored against their channel's median, 9 at 3x or more
+outlier (+ = under 28 days old, still climbing) | views | views/day | age d | min | subs | channel median | title [channel] link
+  62.9x+ |  169.8K |  37.7K |     4 |   4 |   2.7K |   2.7K | I Told My AI Interviewer I Just Bought His Company [Tyler Cooper] https://youtu.be/zEgthOmOrc0
+  30.8x+ |    1.1M | 236.1K |     4 |  21 |   9.4M |  34.5K | Comedian Lucy Beaumont fears she may no longer work on TV after being whistleblower on Wal [Sky News] https://youtu.be/wiuOCjS62JI
+  17.3x+ |    328K |   328K |     0 |  38 |  11.1M |    19K | Drag Queens Trixie & Katya React to Cruel Intentions | Netflix [Still Watching Netflix] https://youtu.be/Kxn8DyAH8dQ
+   6.4x+ |  324.3K |  43.2K |     7 | 139 |   109K |    51K | She Thought She Was in Trouble for Hearing the CEO's Secret😱—Until He Proposed! ❤️ [PeachShine Drama] https://youtu.be/-atVgE3aTow
+   4.2x+ |  148.6K |    33K |     4 |   3 |   635K |    35K | Nobody Can Understand Bo | Aries Spears Comedy [AriesSpears] https://youtu.be/Sf3BbZ_v6gg
+   3.6x+ |  325.9K | 130.3K |     2 |   6 |   120K |    90K | Try Not to Laugh Challenge | rj saim funny video part 167 | job interview funny [Rj Saim] https://youtu.be/AvUgA1F_C5U
+   3.6x+ |   78.1K |  10.4K |     7 |  34 |   1.5K |    22K | TOTAL IDIOTS AT WORK #217 | Instant Regret Fails Compilation 2026 | Best of the Week [Oopsicious TV] https://youtu.be/a_7IclGAZMU
+   3.6x+ |    3.3K |    136 |    24 | 123 |   1.7K |    927 | Family Time 😂️🎨 Work Wife, Unhappy Life 🎁👑 UNSTOPPABLE LAUGHTER 2026 [FamFun Time] https://youtu.be/iCMaxEZsmb0
+   3.3x+ |  144.7K |  26.3K |     5 |  70 |  31.9K |    44K | 【🔥Eng Dub】His Wife Dumped Him as a Nobody—Unaware He Was the King of the Underworld [Zephyr Drama] https://youtu.be/iAfNCnOGrQM
+   2.8x+ |    1.6M |    67K |    24 |   8 |   216K | 596.5K | SOFTWARE ENGINEER VS AI | Gaurav Kapoor | Crowd Work [GauravKapoorLive - Shorts & ] https://youtu.be/yDtf7XsMSwY
+   2.2x+ |    2.1M |  85.7K |    24 |   3 |   7.6M | 969.5K | Taking a day off for GTA VI [Viva La Dirt League] https://youtu.be/uwiL3nDMdX4
+   1.9x+ |  198.4K |  30.5K |     6 |   5 |   1.5M | 104.5K | Woke Therapists Confront Me | Gianmarco Soresi | Stand Up Comedy Crowd Work [Gianmarco Soresi] https://youtu.be/Tkt3JjXEfYo
+   1.9x+ |  259.2K |  74.1K |     3 |   8 |   1.5M |   135K | Mojo Brookzz - Crowd Work - Just smile | Columbia, SC [Mojo Brookzz] https://youtu.be/uMlNZZTCWSo
+   1.9x  |    1.3M |  42.3K |    31 |  23 |   127K |   711K | WHY MNCs ARE BETTER THAN STARTUPS | Gautham Govindan | Stand-up Comedy [Gautham Govindan] https://youtu.be/aEUNrQRQnhk
+   1.7x+ |   66.5K |  26.6K |     2 |  75 |  24.1K |    39K | TOTAL IDIOTS AT WORK #305 | Instant Regret Fails Compilation 2026 | Best of the Month [FailSide Moment] https://youtu.be/fa1yXLX3wuE
+   1.4x+ |   49.1K |  49.1K |     0 | 121 |  83.5K |    36K | Try Not To Laugh Challenge 😆 Top Funniest Videos of the Week 2026 😅 #301 [FMW - Funny Moments] https://youtu.be/7LlErceGWcE
+   1.3x+ |   73.1K |  11.2K |     6 |  14 |   136K |    57K | When Does a Work Wife Become a SIDE CHICK? | Patreon Exclusive [Joe Budden Clips] https://youtu.be/FYBlTZn9xfY
+   1.2x+ |  124.1K |  16.5K |     7 |  20 |   927K |  99.5K | Ultimate Epic Fails Compilation 🤣 Try Not to Laugh Funny Videos [Life Awesome] https://youtu.be/8WTURB-FdAY
+   1.2x+ |    1.7M |  95.2K |    17 |   4 |  17.5M |   1.4M | Plates - SNL [Saturday Night Live] https://youtu.be/AKWh8D8bSR0
+   1.0x+ |   17.8K |   1.4K |    12 |  24 |   1.6K |    17K | Try Not To Laugh |🤪 Idiots at Work  🤣 | Funny Videos Compilation 2026 #114 [HILARIXORIGIN] https://youtu.be/uBBPP6W5I70
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 4
+WINNER TITLE WORDS: work(3), she(2), nobody(2), 2026(2), wife(2), interviewer(1), bought(1), just(1), company(1), told(1), beaumont(1), walliams(1), being(1), whistleblower(1), longer(1), may(1), lucy(1), comedian(1), fears(1), after(1)
+=== LONG-VIDEO OUTLIERS: ADHD skit (searched: ADHD skit; adhd comedy skit; adhd assessment skit; snl adhd skit) ===
+pool 46 long videos, 11 scored against their channel's median, 6 at 3x or more
+outlier (+ = under 28 days old, still climbing) | views | views/day | age d | min | subs | channel median | title [channel] link
+  16.6x+ |    1.8M | 102.5K |    17 |  10 |   812K |   108K | Get Ready to Cry Laughing with these Hilarious DONKEYS 🤣 Funniest Animals Video of 2026 [Funny Pet's Life] https://youtu.be/rN5WcBvARrk
+   9.1x  |    1.7K |     54 |    31 |   0 |     86 |    189 | 興味がなかったはずなのに高級車を見た瞬間、態度が一変 [ADHD Tyler] https://youtu.be/feCyuozkliI
+   7.0x+ |  142.6K |  31.7K |     4 |  47 |  70.6K |  20.5K | Sue Perkins on ADHD, Bake Off & Friendship [How To Fail with Elizabeth D] https://youtu.be/u3uMj_qH06c
+   5.4x+ |    9.8M |   560K |    17 |  22 |  10.1M |   1.8M | Dumb Things I Did During Recess [No sponsor for this one, jus] https://youtu.be/0z0_v28p80g
+   4.3x  |    2.2M |  69.8K |    31 |   4 |   407K |   507K | Hyperoptimized Engineer 2026 [Hyperoptimized Engineer Show] https://youtu.be/MhEL9cvLxQE
+   3.2x+ |    2.7K |    154 |    17 |  33 |   213K |    853 | " SCHOOL DAYS " (Episode 2 )  student comedy clinic | High School | yawa skits [STUDENTS COMEDY  CLINIC] https://youtu.be/21xc2E0jEGE
+   2.1x+ |    2.9M | 386.7K |     7 |   4 |  17.5M |   1.4M | Weekend Update: Elon Musk on His Tough Week After Midterms - SNL [Elon Musk (Jeremy Culhane) s] https://youtu.be/N5Ws09EYV3s
+   1.4x  |      1K |     31 |    31 |   9 |   3.8K |    724 | 10/17/26- KW SKIT RECAP (catching up) [] https://youtu.be/a9dshoDp_JA
+   1.2x+ |    1.9K |    152 |    12 |  43 |  90.3K |   1.6K | Catieosaurus: Wildly Unprepared | An ADHD Comedy & Storytelling Special | LIVE from Vancou [Catieosaurus] https://youtu.be/dvQFvoGphNM
+   0.7x  |     70K |   2.2K |    31 |  94 |   3.3M |    98K | How to make it as an actor in BOLLYWOOD  | Where were we? - Ep 14 with Saqib Ayub [Episode 14 It's Friday night] https://youtu.be/0vKnigsG4T4
+   0.6x+ |    1.6K |    151 |    10 |   4 |     5K |   2.5K | Living with ADHD! 😂 The Funny Reality of Life with an ADHD Partner | Just Julie & Neil [Living The Dream Julie] https://youtu.be/MnmauEGkFsk
+SMALL-CHANNEL WINS (under 50K subs, 3x+): 1
+WINNER TITLE WORDS: 2026(2), video(1), funniest(1), animals(1), cry(1), laughing(1), get(1), these(1), donkeys(1), ready(1), hilarious(1), off(1), sue(1), bake(1), perkins(1), friendship(1), adhd(1), things(1), recess(1), dumb(1)
+MOVING NOW (real views/hour since our last look):
+101768.8 views/hour (average) | WARDROBE CHECKING | Ep 920 | Family Life Vlog | Aayu and Pihu Show https://youtu.be/XX9eJNn_4AA
+ 74121.4 views/hour (average) | Dream Girl | Pranit More | Stand-up Comedy | Crowd Work Special https://youtu.be/jrn7yXOC21Y
+ 65994.1 views/hour (average) | The Nvidia Honey Trap Chinese Sexpionage Scandal, Explained | The Daily Show https://youtu.be/HA0ulwcacFI
+ 48220.8 views/hour (average) | Kathy - Coworker Drinks - SNL https://youtu.be/UrEbWMtkkDI
+ 48126.0 views/hour (average) | Kathy - Coworker Drinks - SNL https://youtu.be/UrEbWMtkkDI
+ 23566.3 views/hour (average) | Drag Queens Trixie & Katya React to Cruel Intentions | Netflix https://youtu.be/Kxn8DyAH8dQ
+ 15951.5 views/hour (average) | King of Kings | Stand Up Comedy Special by Mohd Suhel https://youtu.be/ULRqkT837Ic
+ 15882.1 views/hour (average) | FAKE SCRAP OF INSTAGRAM REELS 2.0 💀🤣 https://youtu.be/Gh9fWTLosZY
+ 11758.0 views/hour (average) | Idiots Laughing at AI Job Interviews https://youtu.be/S6Wh5WmuCoE
+  9836.5 views/hour (average) | Comedian Lucy Beaumont fears she may no longer work on TV after being whistleblo https://youtu.be/wiuOCjS62JI
+  5836.4 views/hour (average) | What Would Jon Stewart Be Doing if Not Comedy? Not Working for his Brother | The https://youtu.be/wnU1TzSwIH0
+  5430.8 views/hour (average) | Try Not to Laugh Challenge | rj saim funny video part 167 | job interview funny https://youtu.be/AvUgA1F_C5U
+  3085.7 views/hour (average) | Mojo Brookzz - Crowd Work - Just smile | Columbia, SC https://youtu.be/uMlNZZTCWSo
+  2756.4 views/hour (average) | Nate Jackson Crowd Work Pack ATLANTA COMEDY THEATRE https://youtu.be/VBJ8JTFFyEw
+  2322.9 views/hour (average) | Try Not To Laugh Challenge 😆 Top Funniest Videos of the Week 2026 😅 #301 https://youtu.be/7LlErceGWcE

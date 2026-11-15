@@ -13,6 +13,9 @@ JOBS: drop tools/etsy-push/queue/<name>.json (one job or a list) and push; the w
   {"cmd": "whoami"}
   {"cmd": "listings", "state": "active"}                     active | draft | inactive
   {"cmd": "get", "listing_id": 123}
+  {"cmd": "create_draft", "fields": {"title": "...", "description": "...", "price": 9.99, "quantity": 999,
+     "who_made": "i_did", "when_made": "made_to_order", "taxonomy_id": 2078, "type": "download", "tags": "a,b"}}
+  {"cmd": "image_from_url", "listing_id": 123, "url": "https://...jpg", "rank": 2}
   {"cmd": "upload_file", "listing_id": 123, "file": "Third-Shift-Prayers.pdf"}      file = in files/
   {"cmd": "upload_image", "listing_id": 123, "file": "L1-cover.jpg", "rank": 1}
   {"cmd": "delete_image", "listing_id": 123, "image_id": 456}
@@ -188,6 +191,23 @@ def run_job(e, job):
         return st, b
     if c == "get":
         return e.call("GET", "/listings/%s" % L)
+    if c == "create_draft":
+        f = dict(job["fields"])
+        f.setdefault("quantity", 999)
+        f.setdefault("who_made", "i_did")
+        f.setdefault("when_made", "made_to_order")
+        f.setdefault("type", "download")
+        st, b = e.call("POST", "/shops/%s/listings" % s, data=f)
+        if 200 <= st < 300:
+            b = {"listing_id": b.get("listing_id"), "state": b.get("state"), "url": b.get("url")}
+        return st, b
+    if c == "image_from_url":
+        r = requests.get(job["url"], timeout=120)
+        if r.status_code != 200:
+            return r.status_code, {"error": "could not download the image"}
+        name = os.path.basename(urllib.parse.urlparse(job["url"]).path) or "image.jpg"
+        return e.call("POST", "/shops/%s/listings/%s/images" % (s, L),
+                      files={"image": (name, r.content)}, data={"rank": job.get("rank", 1), "overwrite": "true"})
     if c == "upload_file":
         name = job["file"]
         return e.call("POST", "/shops/%s/listings/%s/files" % (s, L),
@@ -244,7 +264,7 @@ def main():
             print("%s %s -> %s" % ("OK " if good else "BAD", json.dumps(j)[:120], st))
             if not good:
                 print("   ", json.dumps(body)[:400])
-            results.append({"job": j, "status": st, "result": body if not good or j["cmd"] in ("whoami", "listings") else "ok"})
+            results.append({"job": j, "status": st, "result": body if not good or j["cmd"] in ("whoami", "listings", "create_draft") else "ok"})
             time.sleep(0.3)
         stamp = dt.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
         name = os.path.basename(f)[:-5] + "-" + stamp + ("" if ok else ".FAILED") + ".json"

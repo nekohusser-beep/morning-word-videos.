@@ -1,6 +1,6 @@
 """Headless ComfyUI Wan 2.2 5B image-to-video test. Run after the server is up on 127.0.0.1:8188.
 usage: python wf.py <image_name_in_comfy_input> <out_prefix> <length> <width> <height> <seed>"""
-import json, sys, time, urllib.request, uuid
+import json, os, sys, time, urllib.request, uuid
 img, prefix, length, width, height, seed = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6])
 key = sys.argv[7] if len(sys.argv) > 7 else "skip"
 POS = ("A cartoon man with spiky blue hair and an orange hoodie angrily points at an empty office break room fridge "
@@ -10,6 +10,7 @@ NEG = "blurry, distorted face, warped mouth, extra fingers, morphing, flicker, j
 if key == "derrick":
     POS = ("A man in a dark blazer and white t-shirt sits in a warm podcast studio and speaks calmly to the camera. Natural blinking, "
            "small head movements, a slight friendly smile, relaxed shoulders. Realistic photo, warm soft lighting, steady camera, shallow depth of field.")
+POS = os.environ.get("PROMPT", POS)
 wf = {
  "1": {"class_type": "UNETLoader", "inputs": {"unet_name": "wan2.2_ti2v_5B_fp16.safetensors", "weight_dtype": "default"}},
  "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors", "type": "wan", "device": "default"}},

@@ -1,0 +1,16 @@
+{
+ "episode": "Big Skip Ep2 (Coworker Ate My Lunch) pilot, lines 6 to 9",
+ "gap": 0.28,
+ "cap_frames": 97,
+ "seed": 20261115,
+ "shots": [
+  {"idx": 6, "audio": "u006.wav", "still": "skip_fridge.jpg", "caption": "There's barbecue sauce on your eyebrow.",
+   "prompt": "A cartoon man with spiky blue hair and an orange hoodie leans forward and accuses someone off-screen, pointing a finger with one hand while holding a crumpled paper lunch bag in the other. His eyebrows furrow and his mouth moves as he talks. Flat 2D cartoon style, bold black outlines, steady background, slow camera push-in."},
+  {"idx": 7, "audio": "u007.wav", "still": "dre_table.jpg", "caption": "That's my barbecue sauce.",
+   "prompt": "A cartoon man with a shaved head and a goatee in a gray work shirt sits at a break room table holding a chicken drumstick and a napkin. He answers defensively, eyes shifting sideways, a small shrug and head tilt, his mouth moves as he talks. Flat 2D cartoon style, bold black outlines, steady background."},
+  {"idx": 8, "audio": "u008.wav", "still": "skip_fridge.jpg", "caption": "You don't bring lunch, Dre. You have never brought lunch. Not one time in three years.",
+   "prompt": "A cartoon man with spiky blue hair and an orange hoodie rants angrily at someone off-screen, shaking a crumpled paper lunch bag and throwing his other arm out, eyebrows furrowed, his mouth moves as he complains. Flat 2D cartoon style, bold black outlines, steady background, slow camera push-in."},
+  {"idx": 9, "audio": "u009.wav", "still": "dre_table.jpg", "caption": "I'm trying something new. Meal prep.",
+   "prompt": "A cartoon man with a shaved head and a goatee in a gray work shirt sits at a break room table holding a chicken drumstick and a napkin. He gives a nervous half smile and nods while he talks, a small shrug, his mouth moves as he talks. Flat 2D cartoon style, bold black outlines, steady background."}
+ ]
+}

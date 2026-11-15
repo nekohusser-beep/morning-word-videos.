@@ -38,6 +38,16 @@ if ! curl -s http://127.0.0.1:8188/system_stats >/dev/null; then
   for i in $(seq 1 90); do curl -s http://127.0.0.1:8188/system_stats >/dev/null && break; sleep 2; done
 fi
 curl -s http://127.0.0.1:8188/system_stats | head -c 400; echo
+if [ "${MODE:-test}" = episode ]; then
+  RAWT=https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./$SHA/tools/skip-voice/ep2b/final
+  for f in episode.py shots.json dre_table.jpg; do curl -sfL "$RAW/$f" -o "$f" || { log "FAIL fetch $f"; exit 1; }; done
+  for a in $(python -c "import json;print(' '.join(s['audio'] for s in json.load(open('shots.json'))['shots']))"); do curl -sfL "$RAWT/$a" -o "$a" || { log "FAIL fetch $a"; exit 1; }; done
+  cp dre_table.jpg ComfyUI/input/
+  log "episode build"
+  python episode.py && log "EPISODE DONE" || log "EPISODE FAILED"
+  tail -5 comfy.log
+  exit 0
+fi
 LEN=${LEN:-73}; WID=${WID:-480}; HGT=${HGT:-832}
 for K in skip derrick; do
   IMG=skip_fridge.jpg; [ $K = derrick ] && IMG=derrick_ref.jpg

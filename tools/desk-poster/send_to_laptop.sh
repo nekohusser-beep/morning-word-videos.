@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
-# Claude side: queue a finished video for the laptop uploader.
-# usage: send_to_laptop.sh name.mp4 name.json [thumb.jpg]   (json = IQ Vid title/description/tags + when/playlist)
+# Claude side: queue finished videos for the laptop uploader (it pulls release "desk-queue" every 30 min).
+# usage: tools/desk-poster/send_to_laptop.sh name.mp4 name.json [thumb.jpg ...]
+# Sessions can't upload release assets directly, so: parts on a temp branch -> branch-to-release.yml joins + uploads.
 set -e
 R=nekohusser-beep/morning-word-videos.
-gh release view desk-queue -R "$R" >/dev/null 2>&1 || gh release create desk-queue -R "$R" --title "desk-poster queue" --notes "Jobs the laptop uploader pulls (desk-poster). Do not delete." --prerelease
-gh release upload desk-queue -R "$R" "$@" --clobber
-echo "queued: $*  (the laptop picks it up within 30 minutes)"
+BR="dq-$(date +%Y%m%d-%H%M%S)"
+W=$(mktemp -d); mkdir -p "$W/parts"
+for f in "$@"; do split -b 95m -d -a 2 "$f" "$W/parts/$(basename "$f").part"; done
+git -C "$W" init -q -b "$BR" && git -C "$W" add parts && git -C "$W" -c user.name=claude -c user.email=noreply@anthropic.com commit -q -m "desk-queue $BR"
+git -C "$W" push -q "https://github.com/$R" "$BR"
+gh api -X POST "repos/$R/actions/workflows/branch-to-release.yml/dispatches" -f ref=main -f "inputs[branch]=$BR" -f "inputs[tag]=desk-queue"
+rm -rf "$W"
+echo "queued $* via $BR (on the laptop within 30 minutes)"

@@ -1,0 +1,17 @@
+{
+"title": "ADHD vs Non-ADHD Starting a New Hobby 😂 ADHD Hobby Hopping #shorts",
+"desc": "ADHD hobby hopping: all in on Friday, done by Sunday.\n\nBought the guitar, the amp and 3 books. Played it once. It lives in the closet with the other 9 hobbies. 😂 What's in YOUR hobby graveyard? 👇\n\nTip: try a new hobby for free for two weeks before you buy the gear.\n\n#adhd #adhdlife #adhdbrain #adhdhobbies #adhdhumor #shorts #relatable #funny",
+"tags": ["adhd hobby hopping", "adhd hobbies", "adhd changing hobbies", "adhd hobby graveyard", "adhd new hobby", "adhd hobby jumping", "adhd vs non adhd", "what it's like to have adhd", "adhd humor", "adhd brain", "adhd life", "adhd skit", "adhd animation", "relatable adhd", "adult adhd", "adhd shorts", "funny adhd"],
+"beats": [
+{"say": "Here's how a normal person starts a hobby. Try it. Like it. Keep doing it.", "label": "NON-ADHD:", "set": "living", "gray": true, "pose": "stand", "props": [["couch", 800, 1240, 1.0]], "cap": "Try it. Like it. Keep it.", "chip": "purple", "cap2": "Hobbies: 1", "x": 420},
+{"say": "Now here's me. Friday night. I watched one video. I'm a guitar person now.", "label": "ADHD:", "set": "living", "pose": "phone", "eyes": "spiral", "mouth": "grin", "cap": "I'm a guitar person now.", "counter": "Friday 9 PM", "sfx": "ding", "x": 420},
+{"say": "Guitar. Amp. Strap. Picks in six colors. Three books. Next day shipping.", "label": "ADHD:", "set": "living", "pose": "hold", "holding": "bag", "eyes": "happy", "mouth": "grin", "props": [["wallet", 800, 1000, 0.9]], "cap": "Next-day shipping. Of course.", "counter": "Spent: $340", "sfx": "pop", "x": 420},
+{"say": "Saturday. Six hours of lessons. I learned one chord. I'm basically famous.", "label": "ADHD:", "set": "living", "pose": "thumbs", "eyes": "happy", "mouth": "grin", "props": [["tv", 820, 900, 0.9]], "cap": "One chord. Basically famous.", "chip": "purple", "counter": "Saturday", "sfx": "ding", "x": 420},
+{"say": "Sunday. My fingers hurt. This is hard. Ooh. Somebody's making pottery.", "label": "ADHD:", "set": "living", "pose": "phone", "eyes": "wide", "mouth": "o", "cap": "Ooh. Pottery.", "counter": "Sunday", "sfx": "boing", "x": 420},
+{"say": "One week later.", "card": "1 WEEK|LATER...", "sfx": "boing"},
+{"say": "The guitar lives in the closet now. Next to the paint set. And the skateboard. And the bread starter.", "label": "ADHD:", "set": "door", "pose": "point", "eyes": "tired", "mouth": "flat", "props": [["door", 820, 1240, 1.0]], "arrow": [820, 1050], "cap": "The hobby closet.", "cap2": "Hobbies started: 10. Hobbies kept: 0", "sfx": "buzz", "x": 420},
+{"say": "But pottery is different. This time it's for real.", "label": "ADHD:", "set": "living", "pose": "thumbs", "eyes": "spiral", "mouth": "grin", "cap": "Pottery is different. For real.", "counter": "Spent: $340 + $210", "x": 420},
+{"say": "Here's why. An ADHD brain gets a big rush from anything new, and the rush fades once it gets hard. So try it for free for two weeks before you buy the gear.", "set": "blank", "pose": "thumbs", "eyes": "happy", "mouth": "grin", "cap": "Can you relate?", "cap2": "Tip: two free weeks before you buy the gear.", "chip2": "purple", "x": 360},
+{"say": "What's in your hobby closet? Tell me in the comments.", "set": "blank", "pose": "point", "eyes": "happy", "mouth": "smile", "cap": "What's in YOUR hobby closet?", "cap2": "Drop it in the comments 👇", "x": 420}
+]
+}

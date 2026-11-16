@@ -48,6 +48,7 @@ def back(x):
 # ---------- rooms ----------
 ROOM = {
     'kitchen': dict(wall=(178, 226, 210), wall2=(150, 208, 190), floor=(214, 170, 120), deco=['window', 'clock_wall', 'lamp']),
+    'kitchen_n': dict(wall=(120, 160, 150), wall2=(100, 140, 132), floor=(170, 135, 95), deco=['window', 'clock_wall', 'lamp'], night=True),
     'bedroom': dict(wall=(92, 96, 168), wall2=(70, 72, 140), floor=(160, 120, 90), deco=['frame', 'lamp_dim'], night=True),
     'living':  dict(wall=(250, 214, 160), wall2=(236, 190, 130), floor=(190, 140, 95), deco=['window', 'frame', 'lamp']),
     'door':    dict(wall=(206, 226, 250), wall2=(180, 206, 240), floor=(200, 156, 108), deco=['frame', 'lamp']),
@@ -190,6 +191,8 @@ def skip2(d, x, y, b, t, lt, mouth_open):
         d.ellipse([hl[0] - 46, hl[1], hl[0] + 46, hl[1] + 100], fill=(30, 30, 34), outline=BLACK, width=3); d.polygon([(hl[0] - 14, hl[1] + 6), (hl[0] + 14, hl[1] + 6), (hl[0], hl[1] - 16)], fill=(30, 30, 34))
     elif held == 'keys':
         d.ellipse([hl[0] - 17, hl[1] + 6, hl[0] + 17, hl[1] + 40], outline=(230, 180, 40), width=8); d.rectangle([hl[0] - 5, hl[1] + 40, hl[0] + 5, hl[1] + 86], fill=(230, 180, 40))
+    elif held == 'meat':
+        v1.prop(d, 'meat', hl[0], hl[1] + 60, .8, t)
     elif held == 'clothes':
         d.rounded_rectangle([hl[0] - 58, hl[1] - 12, hl[0] + 58, hl[1] + 80], 16, fill=(120, 190, 255), outline=BLACK, width=5)
     # head
@@ -255,7 +258,7 @@ def skip2(d, x, y, b, t, lt, mouth_open):
             d.ellipse([bx - 100 * s, by - 78 * s, bx + 100 * s, by + 78 * s], fill=WHITE, outline=BLACK, width=6)
             v1.prop(d, b['bubble'], bx, by + 46 * s, .55 * s, t)
 
-STATIC = {'kitchen': [('trash', 130, 1.0), ('kitchen', 770, 1.0)], 'bedroom': [('bed', 720, .9)], 'living': [('couch', 330, .9), ('tv', 860, 1.0)],
+STATIC = {'kitchen': [('trash', 130, 1.0), ('kitchen', 770, 1.0)], 'kitchen_n': [('trash', 130, 1.0), ('kitchen', 770, 1.0)], 'bedroom': [('bed', 720, .9)], 'living': [('couch', 330, .9), ('tv', 860, 1.0)],
           'door': [('door', 880, 1.0), ('plant', 120, 1.0)], 'desk': [('desk', 790, 1.0), ('plant', 120, .9)], 'store': [('shelf', 790, 1.0)],
           'laundry': [('washer', 830, 1.0), ('basket', 130, 1.0)], 'blank': []}
 

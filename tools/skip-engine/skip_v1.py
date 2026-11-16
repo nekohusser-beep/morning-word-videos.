@@ -138,6 +138,20 @@ def prop(d, name, x, y, s, t):
         sh = math.sin(t * 40) * 6 if (t % 1.2) < .5 else 0
         d.rounded_rectangle([x - S(55) + sh, y - S(190), x + S(55) + sh, y], 18, fill=(40, 40, 50)); d.rectangle([x - S(45) + sh, y - S(175), x + S(45) + sh, y - S(20)], fill=(90, 170, 255))
         for k in range(3): d.arc([x + S(60) + sh - k * 15, y - S(150) - k * 15, x + S(90) + sh + k * 15, y - S(90) + k * 15], 300, 60, fill=(225, 45, 45), width=5)
+    elif name == 'alexa':  # smart speaker, ring pulses when "talking"
+        d.rounded_rectangle([x - S(55), y - S(170), x + S(55), y], 22, fill=(45, 48, 58), outline=BLACK, width=5)
+        for k in range(4): d.line([(x - S(40), y - S(120) + k * S(25)), (x + S(40), y - S(120) + k * S(25))], fill=(70, 74, 86), width=4)
+        glow = 0.5 + 0.5 * math.sin(t * 6)
+        d.ellipse([x - S(52), y - S(185), x + S(52), y - S(155)], fill=(int(40 + 60 * glow), int(150 + 80 * glow), 255), outline=BLACK, width=4)
+    elif name == 'meat':  # frozen meat pack
+        d.rounded_rectangle([x - S(80), y - S(70), x + S(80), y], 12, fill=(235, 240, 250), outline=BLACK, width=5)
+        d.ellipse([x - S(60), y - S(60), x + S(60), y - S(10)], fill=(200, 70, 80), outline=BLACK, width=4)
+        for k in range(3): d.line([(x - S(30) + k * S(30), y - S(95)), (x - S(20) + k * S(30), y - S(78))], fill=(140, 200, 255), width=4)
+    elif name == 'burger':
+        d.chord([x - S(80), y - S(150), x + S(80), y - S(40)], 180, 360, fill=(230, 160, 70), outline=BLACK, width=5)
+        d.rectangle([x - S(85), y - S(98), x + S(85), y - S(80)], fill=(90, 190, 80), outline=BLACK, width=3)
+        d.rectangle([x - S(80), y - S(80), x + S(80), y - S(55)], fill=(120, 70, 40), outline=BLACK, width=4)
+        d.rounded_rectangle([x - S(80), y - S(55), x + S(80), y - S(20)], 12, fill=(230, 160, 70), outline=BLACK, width=5)
     elif name == 'keys':
         d.ellipse([x - S(30), y - S(140), x + S(30), y - S(80)], outline=(200, 160, 30), width=10); d.rectangle([x - S(8), y - S(85), x + S(8), y], fill=(200, 160, 30)); d.rectangle([x, y - S(30), x + S(25), y - S(15)], fill=(200, 160, 30))
     elif name == 'wallet':

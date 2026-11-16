@@ -2,7 +2,7 @@
 Blessed Prayers Short, 2:47, already Public when Neko asked. Title and description were Neko's own; kept exactly as sent. IQ Vid only (runner kw 43941433908, out 43941437188, title score). vidIQ not used (his words: "Please do not use vidIQ").
 
 ## Checked, not changed
-- Title: Signs of the End Times Happening Right Now (Pray This), 53 chars, keyword first, IQ Vid title score 82 (note: "(Pray This)" reads as a generic tacked-on label; his call, kept).
+- Title (swapped Nov 16 2026 3:38 PM ET on Neko's "swap for the best"): All Flights Grounded, Banks Falling. Is This the End Times? 59 chars, IQ Vid title score 87. Saved and verified after reload in Studio. Rollback title (score 82): Signs of the End Times Happening Right Now (Pray This).
 - Description: matches his paste, 5 hashtags (3-7 rule), subscribe link, AI line present.
 - Scripture word for word against KJV: Matthew 24:7-8 and 2 Corinthians 5:17, both exact. Source: aruljohn/Bible-kjv (same source the Repent Short used).
 - Neko's correction 3:01 PM ET: the flights line comes from the FAA nationwide ground stop on Fri Nov 13 2026 (all US departures halted from 3:54 PM ET for 4+ hours, about 1.5M passengers hit, thousands cancelled; ABC, CNN, Al Jazeera/AP, Scientific American). First pass wrongly matched the Jan storm. No source found with the exact figure "12,000" for Nov 13: reports say "thousands of cancelled flights" - keep the number as Neko's, flagged.
@@ -27,7 +27,7 @@ bank collapse          | 50 medium   |  12K          | 229K
 tibet earthquake 2026  | 42 medium   |  39K          |  19.9K
 ```
 Biggest demand by far is the FAA grounding. Also found: Solomon Islands M6.4 (Nov 9, USGS), Paraguay's largest digital bank Ueno collapsed (Sept 2026), Nano Banc (Sept 25). Tags re-set to 22 (483/500): added faa ground stop, all flights grounded, nationwide ground stop, flights grounded, tibet earthquake 2026, bank collapse 2026, end times 2026; dropped low-value pray this, jesus, prayer, amen, christian shorts, kjv bible, second coming of jesus, end times signs, nation shall rise against nation.
-Spare title if Neko wants the news angle in the title (scores, IQ Vid): 'Every Flight Grounded, Banks Falling: Pray This Now' = 86 vs current 82. Not applied (title is his).
+Title candidates (IQ Vid scores): All Flights Grounded, Banks Falling. Is This the End Times? 87 (APPLIED); All US Flights Grounded: End Times Signs. Pray This Now 87 (runner-up, 55 chars); Every Flight Grounded, Banks Falling: Pray This Now 86; All Flights Grounded, Banks Falling: Pray This Now 85; All Flights Grounded, Earthquakes, Banks Falling: Pray This 84; original 82.
 
 ## Keyword numbers (runner kw, competition 0-100, top-10 median views)
 ```

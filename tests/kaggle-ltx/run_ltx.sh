@@ -57,6 +57,31 @@ curl -s http://127.0.0.1:8188/system_stats | head -c 500; echo
 grep -i -E "error|Traceback|import failed|IMPORT FAILED" comfy.log | head -10
 ( while true; do echo "$(( $(date +%s) - T0 ))s $(nvidia-smi --query-gpu=memory.used --format=csv,noheader | tr '\n' ' ') RAM_used_GB=$(free -g | awk 'NR==2{print $3}')" >> mem.log; sleep 20; done ) &
 MEMPID=$!
+if [ -n "${SCENES:-}" ]; then
+  # SCENES=<file in tests/kaggle-ltx> with one "name|prompt" per line: one clip per line, time + peak memory logged per clip.
+  curl -sfL "$RAW/$SCENES" -o scenes.txt || { log "FAIL fetch $SCENES"; kill $MEMPID; exit 1; }
+  echo "scene,wall_seconds,peak_gpu0_mib_sampled_20s,peak_ram_gb" > /kaggle/working/ltx_timings.csv
+  i=0
+  while IFS='|' read -r NAME PROMPT; do
+    [ -z "$NAME" ] && continue; i=$((i + 1)); S0=$(date +%s); log "SCENE $i $NAME start"
+    PROMPT="$PROMPT" SEED=$((20261200 + i)) UNET=$(cat unet_name.txt) GEMMA=$(cat gemma_name.txt) python wf_ltx.py "ltx/$NAME" \
+      || { log "SCENE $NAME FAILED"; tail -30 comfy.log; echo "$NAME,FAILED,," >> /kaggle/working/ltx_timings.csv; continue; }
+    S1=$(date +%s)
+    PEAKS=$(python - "$((S0 - T0))" "$((S1 - T0))" <<'PY'
+import re, sys
+a, b = int(sys.argv[1]), int(sys.argv[2]); g = r = 0
+for l in open("mem.log"):
+    m = re.match(r"(\d+)s (\d+) MiB .*RAM_used_GB=(\d+)", l)
+    if m and a <= int(m.group(1)) <= b: g = max(g, int(m.group(2))); r = max(r, int(m.group(3)))
+print(f"{g},{r}")
+PY
+)
+    NAME="$NAME" NOPUSH=1 python post_ltx.py ComfyUI/output "ltx/$NAME" /kaggle/working || log "POST FAILED $NAME"
+    echo "$NAME,$((S1 - S0)),$PEAKS" >> /kaggle/working/ltx_timings.csv
+    log "SCENE $NAME done: $((S1 - S0)) s wall, peaks gpu0,ram = $PEAKS"
+  done < scenes.txt
+  kill $MEMPID; echo "TIMINGS"; cat /kaggle/working/ltx_timings.csv; cp mem.log /kaggle/working/ltx_mem.log; log "DONE scenes"; exit 0
+fi
 log "run workflow ${WID:-480}x${HGT:-832} len=${LEN:-97}"
 UNET=$(cat unet_name.txt) GEMMA=$(cat gemma_name.txt) python wf_ltx.py ltx/verse || { log "WORKFLOW FAILED"; tail -80 comfy.log; kill $MEMPID; tail -15 mem.log; exit 2; }
 kill $MEMPID; echo "MEM LOG (peak lines)"; sort -t= -k1 mem.log | tail -3; tail -3 mem.log

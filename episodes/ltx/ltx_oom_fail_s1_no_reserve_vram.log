@@ -1,0 +1,120 @@
+    )
+    ^
+  File "/kaggle/temp/ltx/ComfyUI/comfy/ldm/lightricks/model.py", line 967, in forward
+    return comfy.patcher_extension.WrapperExecutor.new_class_executor(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ...<4 lines>...
+        ),
+        ~~
+    ).execute(x, timestep, context, attention_mask, frame_rate, transformer_options, keyframe_idxs, denoise_mask=denoise_mask, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/temp/ltx/ComfyUI/comfy/patcher_extension.py", line 113, in execute
+    return self.original(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/kaggle/temp/ltx/ComfyUI/comfy/ldm/lightricks/model.py", line 1006, in _forward
+    timestep, embedded_timestep, prompt_timestep = self._prepare_timestep(timestep, batch_size, input_dtype, **merged_args)
+                                                   ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/temp/ltx/ComfyUI/comfy/ldm/lightricks/av_model.py", line 761, in _prepare_timestep
+    v_timestep, v_embedded_timestep = self.adaln_single(
+                                      ~~~~~~~~~~~~~~~~~^
+        ts_input.flatten(),
+        ^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        hidden_dtype=hidden_dtype,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/kaggle/temp/ltx/ComfyUI/comfy/ldm/lightricks/model.py", line 246, in forward
+    return self.linear(self.silu(embedded_timestep)), embedded_timestep
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/kaggle/temp/ltx/ComfyUI/comfy/ops.py", line 664, in forward
+    return self.forward_comfy_cast_weights(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/kaggle/temp/ltx/ComfyUI/custom_nodes/ComfyUI-GGUF/ops.py", line 215, in forward_comfy_cast_weights
+    out = self.forward_ggml_cast_weights(input, *args, **kwargs)
+  File "/kaggle/temp/ltx/ComfyUI/custom_nodes/ComfyUI-GGUF/ops.py", line 243, in forward_ggml_cast_weights
+    weight, bias = self.cast_bias_weight(input)
+                   ~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/kaggle/temp/ltx/ComfyUI/custom_nodes/ComfyUI-GGUF/ops.py", line 209, in cast_bias_weight
+    weight = s.get_weight(s.weight.to(device), dtype)
+  File "/kaggle/temp/ltx/ComfyUI/custom_nodes/ComfyUI-GGUF/ops.py", line 177, in get_weight
+    weight = dequantize_tensor(tensor, dtype, self.dequant_dtype)
+  File "/kaggle/temp/ltx/ComfyUI/custom_nodes/ComfyUI-GGUF/dequant.py", line 23, in dequantize_tensor
+    return dequantize(tensor.data, qtype, oshape, dtype=dequant_dtype).to(dtype)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/temp/ltx/ComfyUI/custom_nodes/ComfyUI-GGUF/dequant.py", line 43, in dequantize
+    blocks = dequantize_blocks(blocks, block_size, type_size, dtype)
+  File "/kaggle/temp/ltx/ComfyUI/custom_nodes/ComfyUI-GGUF/dequant.py", line 62, in dequantize_blocks_BF16
+    return (blocks.view(torch.int16).to(torch.int32) << 16).view(torch.float32)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^~~~
+  File "/usr/local/lib/python3.13/dist-packages/torch/_tensor.py", line 1703, in __torch_function__
+    ret = func(*args, **kwargs)
+torch.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
+Currently allocated     : 12.75 GiB
+Requested               : 576.00 MiB
+Device limit            : 14.56 GiB
+Free (according to CUDA): 18.81 MiB
+PyTorch limit (set by user-supplied memory fraction)
+                        : 17179869184.00 GiB
+
+[32m[INFO][0m Memory summary:
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |  13056 MiB |  13725 MiB |      0 B   |      0 B   |
+|       from large pool |      0 MiB |      0 MiB |      0 B   |      0 B   |
+|       from small pool |      0 MiB |      0 MiB |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Active memory         |  13056 MiB |  13725 MiB |      0 B   |      0 B   |
+|       from large pool |      0 MiB |      0 MiB |      0 B   |      0 B   |
+|       from small pool |      0 MiB |      0 MiB |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Requested memory      |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |  13152 MiB |  13920 MiB |      0 B   |      0 B   |
+|       from large pool |      0 MiB |      0 MiB |      0 B   |      0 B   |
+|       from small pool |      0 MiB |      0 MiB |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+[1m[31m[ERROR][0m Got an OOM, unloading all loaded models.
+[32m[INFO][0m [32mPrompt executed in 76.56 seconds[0m

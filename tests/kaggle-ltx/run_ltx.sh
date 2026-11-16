@@ -60,12 +60,14 @@ MEMPID=$!
 if [ -n "${SCENES:-}" ]; then
   # SCENES=<file in tests/kaggle-ltx> with one "name|prompt" per line: one clip per line, time + peak memory logged per clip.
   curl -sfL "$RAW/$SCENES" -o scenes.txt || { log "FAIL fetch $SCENES"; kill $MEMPID; exit 1; }
-  echo "scene,wall_seconds,peak_gpu0_mib_sampled_20s,peak_ram_gb" > /kaggle/working/ltx_timings.csv
+  CSV=/kaggle/working/ltx_timings${TAG:-}.csv
+  echo "scene,wall_seconds,peak_gpu0_mib_sampled_20s,peak_ram_gb" > "$CSV"
   i=0
-  while IFS='|' read -r NAME PROMPT; do
+  # fd 3 for the scene list: ffmpeg/python inside the loop must not eat it (a stdin read swallowed scenes 4-5 on the first run)
+  while IFS='|' read -r NAME PROMPT <&3; do
     [ -z "$NAME" ] && continue; i=$((i + 1)); S0=$(date +%s); log "SCENE $i $NAME start"
-    PROMPT="$PROMPT" SEED=$((20261200 + i)) UNET=$(cat unet_name.txt) GEMMA=$(cat gemma_name.txt) python wf_ltx.py "ltx/$NAME" \
-      || { log "SCENE $NAME FAILED"; tail -30 comfy.log; echo "$NAME,FAILED,," >> /kaggle/working/ltx_timings.csv; continue; }
+    PROMPT="$PROMPT" SEED=$((${SEEDBASE:-20261200} + i)) UNET=$(cat unet_name.txt) GEMMA=$(cat gemma_name.txt) python wf_ltx.py "ltx/$NAME" </dev/null \
+      || { log "SCENE $NAME FAILED"; tail -30 comfy.log; echo "$NAME,FAILED,," >> "$CSV"; continue; }
     S1=$(date +%s)
     PEAKS=$(python - "$((S0 - T0))" "$((S1 - T0))" <<'PY'
 import re, sys
@@ -76,11 +78,11 @@ for l in open("mem.log"):
 print(f"{g},{r}")
 PY
 )
-    NAME="$NAME" NOPUSH=1 python post_ltx.py ComfyUI/output "ltx/$NAME" /kaggle/working || log "POST FAILED $NAME"
-    echo "$NAME,$((S1 - S0)),$PEAKS" >> /kaggle/working/ltx_timings.csv
+    NAME="$NAME" NOPUSH=1 python post_ltx.py ComfyUI/output "ltx/$NAME" /kaggle/working </dev/null || log "POST FAILED $NAME"
+    echo "$NAME,$((S1 - S0)),$PEAKS" >> "$CSV"
     log "SCENE $NAME done: $((S1 - S0)) s wall, peaks gpu0,ram = $PEAKS"
-  done < scenes.txt
-  kill $MEMPID; echo "TIMINGS"; cat /kaggle/working/ltx_timings.csv; cp mem.log /kaggle/working/ltx_mem.log; log "DONE scenes"; exit 0
+  done 3< scenes.txt
+  kill $MEMPID; echo "TIMINGS"; cat "$CSV"; cp mem.log "/kaggle/working/ltx_mem${TAG:-}.log"; log "DONE scenes"; exit 0
 fi
 log "run workflow ${WID:-480}x${HGT:-832} len=${LEN:-97}"
 UNET=$(cat unet_name.txt) GEMMA=$(cat gemma_name.txt) python wf_ltx.py ltx/verse || { log "WORKFLOW FAILED"; tail -80 comfy.log; kill $MEMPID; tail -15 mem.log; exit 2; }

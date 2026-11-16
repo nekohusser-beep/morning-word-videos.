@@ -54,7 +54,7 @@ start_server() {
   # fresh server each time when FRESH=1 (host RAM sits at 27-29 of 31 GB after one clip; a warm server was killed with the kernel)
   if [ "${1:-}" = "fresh" ]; then pkill -f "main.py --listen 127.0.0.1 --port 8188" 2>/dev/null; sleep 6; fi
   if ! curl -s http://127.0.0.1:8188/system_stats >/dev/null; then
-    log "start server"; ( cd ComfyUI && nohup python main.py --listen 127.0.0.1 --port 8188 --disable-auto-launch ${COMFY_ARGS:-} > ../comfy.log 2>&1 < /dev/null & )
+    log "start server"; ( cd ComfyUI && nohup python main.py --listen 127.0.0.1 --port 8188 --disable-auto-launch ${COMFY_ARGS---reserve-vram 3} > ../comfy.log 2>&1 < /dev/null & )
     for i in $(seq 1 120); do curl -s http://127.0.0.1:8188/system_stats >/dev/null && break; sleep 2; done
   fi
 }
@@ -71,7 +71,8 @@ if [ -n "${SCENES:-}" ]; then
   echo "scene,total_wall_s,final_attempt_gen_s,attempts,peak_gpu0_mib_sampled_20s,peak_ram_gb" > "$CSV"
   i=0
   UN=$(cat unet_name.txt); GE=$(cat gemma_name.txt)
-  # WARM-UP: the first clip on any fresh server OOMs in the sampler (Gemma text encoder still sits on the GPU when the 13 GB UNet loads); a retry on
+  # PROVEN FIX (Nov 16 2026, 5 of 5 clips on attempt 1): ComfyUI --reserve-vram 3 (default below). The 13 GB UNet otherwise fills the 15 GB T4 and the sampler OOMs (12.45 GiB allocated, 576 MiB requested, 22 MiB free). With it: 525 s per clip, GPU peak 12.6 GB.
+  # WARM-UP (WARM=1, off by default; it was only a workaround and costs 230 s per scene): the first clip on any fresh server OOMs in the sampler (Gemma text encoder still sits on the GPU when the 13 GB UNet loads); a retry on
   # the same server succeeds because the text encoding is cached and only the UNet has to fit. So encode this scene's prompt first with a tiny latent
   # (256x256, 9 frames), then the real run finds the encoding cached. A failed warm-up is not fatal.
   warm() {
@@ -84,10 +85,10 @@ if [ -n "${SCENES:-}" ]; then
     [ -z "$NAME" ] && continue; i=$((i + 1)); S0=$(date +%s); log "SCENE $i $NAME start"
     # host RAM sits near the 31 GB kill line after a clip: between scenes restart the server if more than 22 GB is in use
     USED=$(free -g | awk 'NR==2{print $3}'); [ "$USED" -gt 22 ] && { log "RAM ${USED} GB used, restarting server between scenes"; start_server fresh; }
-    warm "$PROMPT" "$NAME"
+    [ "${WARM:-0}" = "1" ] && warm "$PROMPT" "$NAME"
     OK=0; GEN=""
     for ATT in 1 2 3; do
-      [ "$ATT" = "3" ] && { log "attempt 3: fresh server + warm-up"; start_server fresh; warm "$PROMPT" "$NAME"; }
+      [ "$ATT" = "3" ] && { log "attempt 3: fresh server"; start_server fresh; [ "${WARM:-0}" = "1" ] && warm "$PROMPT" "$NAME"; }
       PROMPT="$PROMPT" SEED=$((${SEEDBASE:-20261200} + i)) UNET="$UN" GEMMA="$GE" python wf_ltx.py "ltx/$NAME" </dev/null 2>&1 | tee /tmp/main.out | grep -v '^\.\.\.running'
       if [ "${PIPESTATUS[0]}" = "0" ]; then OK=1; GEN=$(grep -o 'WALL_SECONDS [0-9.]*' /tmp/main.out | awk '{print $2}'); break; fi
       log "SCENE $NAME attempt $ATT FAILED"; tail -120 comfy.log > "/kaggle/working/ltx_fail_${NAME}_a${ATT}.log"; grep -E "OOM|out of memory|Allocation|Tried to allocate" comfy.log | tail -3

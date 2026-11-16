@@ -49,10 +49,15 @@ open("unet_name.txt", "w").write(os.path.basename(os.environ["QUANT"]))
 PY
 [ $? -eq 0 ] || { log "FAIL models"; exit 1; }
 df -h "$W" | tail -1
-if ! curl -s http://127.0.0.1:8188/system_stats >/dev/null; then
-  log "start server"; ( cd ComfyUI && nohup python main.py --listen 127.0.0.1 --port 8188 --disable-auto-launch ${COMFY_ARGS:-} > ../comfy.log 2>&1 & )
-  for i in $(seq 1 120); do curl -s http://127.0.0.1:8188/system_stats >/dev/null && break; sleep 2; done
-fi
+start_server() {
+  # fresh server each time when FRESH=1 (host RAM sits at 27-29 of 31 GB after one clip; a warm server was killed with the kernel)
+  if [ "${1:-}" = "fresh" ]; then pkill -f "main.py --listen 127.0.0.1 --port 8188" 2>/dev/null; sleep 6; fi
+  if ! curl -s http://127.0.0.1:8188/system_stats >/dev/null; then
+    log "start server"; ( cd ComfyUI && nohup python main.py --listen 127.0.0.1 --port 8188 --disable-auto-launch ${COMFY_ARGS:-} > ../comfy.log 2>&1 < /dev/null & )
+    for i in $(seq 1 120); do curl -s http://127.0.0.1:8188/system_stats >/dev/null && break; sleep 2; done
+  fi
+}
+start_server
 curl -s http://127.0.0.1:8188/system_stats | head -c 500; echo
 grep -i -E "error|Traceback|import failed|IMPORT FAILED" comfy.log | head -10
 ( while true; do echo "$(( $(date +%s) - T0 ))s $(nvidia-smi --query-gpu=memory.used --format=csv,noheader | tr '\n' ' ') RAM_used_GB=$(free -g | awk 'NR==2{print $3}')" >> mem.log; sleep 20; done ) &
@@ -66,8 +71,13 @@ if [ -n "${SCENES:-}" ]; then
   # fd 3 for the scene list: ffmpeg/python inside the loop must not eat it (a stdin read swallowed scenes 4-5 on the first run)
   while IFS='|' read -r NAME PROMPT <&3; do
     [ -z "$NAME" ] && continue; i=$((i + 1)); S0=$(date +%s); log "SCENE $i $NAME start"
-    PROMPT="$PROMPT" SEED=$((${SEEDBASE:-20261200} + i)) UNET=$(cat unet_name.txt) GEMMA=$(cat gemma_name.txt) python wf_ltx.py "ltx/$NAME" </dev/null \
-      || { log "SCENE $NAME FAILED"; tail -30 comfy.log; echo "$NAME,FAILED,," >> "$CSV"; continue; }
+    OK=0
+    for ATT in 1 2 3; do
+      [ "${FRESH:-1}" = "1" ] && start_server fresh
+      PROMPT="$PROMPT" SEED=$((${SEEDBASE:-20261200} + i)) UNET=$(cat unet_name.txt) GEMMA=$(cat gemma_name.txt) python wf_ltx.py "ltx/$NAME" </dev/null && { OK=1; break; }
+      log "SCENE $NAME attempt $ATT FAILED"; tail -120 comfy.log > "/kaggle/working/ltx_fail_${NAME}_a${ATT}.log"; tail -12 comfy.log
+    done
+    [ "$OK" = "1" ] || { log "SCENE $NAME GAVE UP"; echo "$NAME,FAILED,," >> "$CSV"; continue; }
     S1=$(date +%s)
     PEAKS=$(python - "$((S0 - T0))" "$((S1 - T0))" <<'PY'
 import re, sys

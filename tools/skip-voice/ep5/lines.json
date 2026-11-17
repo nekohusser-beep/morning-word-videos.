@@ -22,7 +22,7 @@
  },
  {
   "kind": "dre",
-  "text": "Skip. What day you think it is?",
+  "text": "Skip. What day do you think it is.",
   "para_end": true,
   "in_line": false,
   "idx": 3
@@ -148,7 +148,7 @@
  },
  {
   "kind": "dre",
-  "text": "Look at the bright side. You picked up overtime Thursday and Friday.",
+  "text": "Look on the bright side. You picked up overtime. Thursday and Friday.",
   "para_end": true,
   "in_line": false,
   "idx": 21

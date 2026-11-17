@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 121:8",
+ "kjv": "The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore.",
+ "audio_bible": "https://www.youtube.com/watch?v=JJQjAr3xG0g",
+ "audio_range": "105–124",
+ "lines": [
+  {
+   "say": "End the day with this promise.",
+   "big": "End the day with this promise",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "The LORD shall preserve thy going out and thy coming in from this time forth,",
+   "big": "The LORD shall preserve thy going out and thy coming in from this time forth,",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "and even for evermore. Psalm one twenty one, verse eight.",
+   "big": "and even for evermore.",
+   "small": "Psalm 121:8 (KJV)",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Going out this morning, coming in tonight. He covered both.",
+   "big": "Going out this morning, coming in tonight. He covered both.",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, thank you for keeping me today. Keep me tonight. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 105 through 124, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 105–124, read slowly. Link in the description.",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

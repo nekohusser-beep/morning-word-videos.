@@ -1,0 +1,49 @@
+{
+ "brand": "BLESSED MORNING",
+ "ref": "Psalms 143:8",
+ "kjv": "Cause me to hear thy lovingkindness in the morning; for in thee do I trust: cause me to know the way wherein I should walk; for I lift up my soul unto thee.",
+ "lines": [
+  {
+   "say": "Good morning. Not sure which way to go today? Start here.",
+   "big": "Good morning.",
+   "small": "Not sure which way to go today? Start here.",
+   "clip": "m-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Cause me to hear thy lovingkindness in the morning; for in thee do I trust:",
+   "big": "Cause me to hear thy lovingkindness in the morning; for in thee do I trust:",
+   "small": "",
+   "clip": "m-water1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "cause me to know the way wherein I should walk; for I lift up my soul unto thee. Psalm one forty three, verse eight.",
+   "big": "cause me to know the way wherein I should walk; for I lift up my soul unto thee.",
+   "small": "Psalm 143:8 (KJV)",
+   "clip": "m-forest1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "He doesn't hand you the whole map. He shows you the next step.",
+   "big": "He doesn't hand you the whole map. He shows you the next step.",
+   "small": "",
+   "clip": "m-eagle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, show me the way I should walk today, and I'll walk it. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "m-lake2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Have a blessed day. Type amen, and send this to somebody starting their day.",
+   "big": "Have a blessed day.",
+   "small": "Type amen, and send this to somebody starting their day",
+   "clip": "m-birds1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 62:1",
+ "kjv": "Truly my soul waiteth upon God: from him cometh my salvation.",
+ "audio_bible": "https://www.youtube.com/watch?v=aXGIzNACPO8",
+ "audio_range": "57–78",
+ "lines": [
+  {
+   "say": "Wind down with this one tonight.",
+   "big": "Wind down with this one tonight",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Truly my soul waiteth upon God: from him cometh my salvation. Psalm sixty two, verse one.",
+   "big": "Truly my soul waiteth upon God: from him cometh my salvation.",
+   "small": "Psalm 62:1 (KJV)",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Waiting isn't wasted time. It's where he does his work.",
+   "big": "Waiting isn't wasted time. It's where he does his work.",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, my soul waits on you tonight. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 57 through 78, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 57–78, read slowly. Link in the description.",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

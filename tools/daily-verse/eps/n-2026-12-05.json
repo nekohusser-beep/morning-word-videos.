@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 91:4-5",
+ "kjv": "He shall cover thee with his feathers, and under his wings shalt thou trust: his truth shall be thy shield and buckler. Thou shalt not be afraid for the terror by night; nor for the arrow that flieth by day;",
+ "audio_bible": "https://www.youtube.com/watch?v=9omyQM3ULPU",
+ "audio_range": "79–104",
+ "lines": [
+  {
+   "say": "Before you sleep, read these over your family.",
+   "big": "Before you sleep, read these over your family",
+   "small": "",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "He shall cover thee with his feathers, and under his wings shalt thou trust:",
+   "big": "He shall cover thee with his feathers, and under his wings shalt thou trust:",
+   "small": "",
+   "clip": "n-ocean1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "his truth shall be thy shield and buckler. Thou shalt not be afraid for the terror by night; nor for the arrow that flieth by day; Psalm ninety one, verses four and five.",
+   "big": "his truth shall be thy shield and buckler. Thou shalt not be afraid for the terror by night; nor for the arrow that flieth by day;",
+   "small": "Psalm 91:4-5 (KJV)",
+   "clip": "n-stars0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "His truth is your shield. The terror by night doesn't get the final say.",
+   "big": "His truth is your shield. The terror by night doesn't get the final say.",
+   "small": "",
+   "clip": "n-candle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, cover me with your feathers tonight. I won't be afraid. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-ocean0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 79 through 104, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 79–104, read slowly. Link in the description.",
+   "clip": "n-stars1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

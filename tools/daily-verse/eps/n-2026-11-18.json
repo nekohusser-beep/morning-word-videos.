@@ -31,11 +31,14 @@
    "ss": 0.5
   },
   {
-   "say": "Want the Word playing while you sleep? The whole Book of Psalms, read slow, is on our channel. The link is in the description.",
+   "say": "Want the Word playing while you sleep? Psalms one through thirty-one, read slowly, is on our channel. The link is in the description.",
    "big": "Fall asleep to the Word",
-   "small": "The whole Book of Psalms, read slow. Link in the description.",
+   "small": "Psalms 1–31, read slowly. Link in the description.",
    "clip": "n-moon1.mp4",
    "ss": 0.5
   }
- ]
+ ],
+ "audio_bible": "https://www.youtube.com/watch?v=BFwsZGyPw70",
+ "audio_range": "1–31",
+ "ref": "Psalms 4:8"
 }

@@ -1,0 +1,49 @@
+{
+ "brand": "BLESSED MORNING",
+ "ref": "Isaiah 40:31",
+ "kjv": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+ "lines": [
+  {
+   "say": "Good morning. Running on empty already? Hear this.",
+   "big": "Good morning.",
+   "small": "Running on empty already? Hear this.",
+   "clip": "m-forest1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles;",
+   "big": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles;",
+   "small": "",
+   "clip": "m-eagle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "they shall run, and not be weary; and they shall walk, and not faint. Isaiah forty, verse thirty one.",
+   "big": "they shall run, and not be weary; and they shall walk, and not faint.",
+   "small": "Isaiah 40:31 (KJV)",
+   "clip": "m-lake2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Eagles don't flap their way up. The wind carries them.",
+   "big": "Eagles don't flap their way up. The wind carries them.",
+   "small": "",
+   "clip": "m-birds1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I'm tired before I start. Renew my strength today. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "m-lake1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Have a blessed day. Type amen, and send this to somebody starting their day.",
+   "big": "Have a blessed day.",
+   "small": "Type amen, and send this to somebody starting their day",
+   "clip": "m-forest0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

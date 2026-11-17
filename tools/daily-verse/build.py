@@ -60,7 +60,7 @@ for i, l in enumerate(ep['lines']):
           f"[1:v]format=rgba,fade=in:st=0:d=0.35:alpha=1[t];[bg][t]overlay=0:0,fade=in:st=0:d=0.25,fade=out:st={D-0.25:.2f}:d=0.25[v]")
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-stream_loop', '-1', '-ss', str(l.get('ss', 0)), '-i', f"{FD}/{l['clip']}",
                     '-loop', '1', '-i', c, '-i', wav, '-filter_complex', vf, '-map', '[v]', '-map', '2:a', '-t', f'{D:.3f}',
-                    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-c:a', 'aac', '-ar', '48000', '-ac', '2', seg], check=True)
+                    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '23', '-maxrate', '3M', '-bufsize', '6M', '-c:a', 'aac', '-ar', '48000', '-ac', '2', seg], check=True)
     parts.append(seg)
 lst = f'{tmp}/list.txt'; open(lst, 'w').write(''.join(f"file '{p}'\n" for p in parts))
 subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lst,

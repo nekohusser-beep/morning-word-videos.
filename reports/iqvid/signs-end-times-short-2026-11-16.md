@@ -44,3 +44,4 @@ Outliers (long videos only, so a guide for the topic, not Shorts): top small-cha
 Tags are weight 1 of 100; the lever on this Short is the title (82) and the first 2 seconds. Duration 2:47 is long for a Short; watch retention at 48 h in Studio before judging title.
 
 Rollback if wanted: old tags empty, category Comedy, playlist Heaven Without God, both questions unanswered.
+- Nov 16 2026 9:45 PM ET (Neko: 'Change the opener'): description now opens 'All flights grounded, banks falling.' ahead of his line; rest unchanged. Saved in Studio, verified after reload. Rollback: delete that first sentence.

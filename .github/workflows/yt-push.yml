@@ -7,11 +7,11 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "check = secrets + sign-in test, dry = preview queue, apply = write queue, verify = re-read last 7 days, signin = one-time Google sign-in by code"
+        description: "check = secrets + sign-in test, dry = preview queue, apply = write queue, verify = re-read last 7 days, signin = one-time Google sign-in by code, recent = list last 3 days of uploads + playlists"
         required: true
         default: dry
         type: choice
-        options: [check, dry, apply, verify, signin]
+        options: [check, dry, apply, verify, signin, recent]
 permissions:
   contents: write
 concurrency:

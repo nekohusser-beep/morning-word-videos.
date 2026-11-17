@@ -37,6 +37,11 @@ MODES
   verify  re-reads the videos in queue/done/ from the last 7 days and compares.
   signin  one-time Google sign-in by device code; the sign-in is saved encrypted so later runs
           need no tap.
+  recent  lists the channel's uploads from the last 3 days (public, private AND scheduled, with
+          publish time, Short or long, category, language, tag count, playlists) plus every channel
+          playlist id+title, into reports/yt-push/recent.json. No writes. The nightly Studio finish
+          starts here instead of the browser (YT-PUSH FIRST rule, Neko Nov 16 2026).
+  A job may also carry "playlist_names": ["exact playlist title"]; they are resolved to ids.
 
 Exit codes: 0 ok / nothing queued, 1 a job failed, 2 missing credentials.
 """
@@ -323,7 +328,7 @@ def resolve_job(job):
         except Exception as e:
             problems.append("pack unreadable: %s" % e)
     for k in ("title", "description", "tags", "category_id", "default_language",
-              "localized_titles", "playlist_ids", "comment", "captions_file", "captions_lang", "captions_name", "thumbnail_file"):
+              "localized_titles", "playlist_ids", "playlist_names", "comment", "captions_file", "captions_lang", "captions_name", "thumbnail_file"):
         if job.get(k) not in (None, "", [], {}):
             want[k] = job[k]
     if "title" in want:
@@ -498,6 +503,14 @@ def run_job(yt, job, mode):
         res["skipped"].append("metadata already matches")
 
     # playlists
+    names = want.get("playlist_names") or job.get("playlist_names") or []
+    if names and mode == "apply":
+        found = my_playlists(yt)
+        for n in names:
+            if n.strip() in found:
+                want.setdefault("playlist_ids", []).append(found[n.strip()])
+            else:
+                res["errors"].append("playlist not found by name: " + n)
     for pl in want.get("playlist_ids", []):
         if in_playlist(yt, pl, vid):
             res["skipped"].append("already in playlist " + pl)
@@ -588,6 +601,76 @@ def finish_file(path, results, ok):
         pass
 
 
+def my_playlists(yt):
+    out, page = {}, None
+    while True:
+        p = {"part": "snippet", "mine": "true", "maxResults": 50}
+        if page:
+            p["pageToken"] = page
+        st, js = yt.get("playlists", p)
+        if st != 200:
+            break
+        for it in js.get("items", []):
+            out[it["snippet"]["title"].strip()] = it["id"]
+        page = js.get("nextPageToken")
+        if not page:
+            break
+    return out
+
+
+def _secs(iso):
+    import re
+    m = re.match(r"P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso or "")
+    if not m:
+        return 0
+    d, h, mi, se = (int(x or 0) for x in m.groups())
+    return d * 86400 + h * 3600 + mi * 60 + se
+
+
+def mode_recent():
+    tok = get_token(allow_device=False)
+    if not tok:
+        return 2
+    yt = YT(token=tok)
+    st, js = yt.get("channels", {"part": "contentDetails", "id": CHANNEL_ID})
+    if st != 200 or not js.get("items"):
+        print("channel read failed", st, str(js)[:200])
+        return 1
+    uploads = js["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    st, js = yt.get("playlistItems", {"part": "contentDetails", "playlistId": uploads, "maxResults": 40})
+    ids = [i["contentDetails"]["videoId"] for i in js.get("items", [])] if st == 200 else []
+    pls = my_playlists(yt)
+    cutoff = dt.datetime.utcnow() - dt.timedelta(days=3)
+    vids = []
+    if ids:
+        st, js = yt.get("videos", {"part": "snippet,status,contentDetails", "id": ",".join(ids)})
+        for v in js.get("items", []) if st == 200 else []:
+            sn, stt = v["snippet"], v["status"]
+            when = stt.get("publishAt") or sn.get("publishedAt")
+            try:
+                w = dt.datetime.strptime(when[:19], "%Y-%m-%dT%H:%M:%S")
+            except Exception:
+                w = cutoff
+            if w < cutoff and not stt.get("publishAt"):
+                continue
+            secs = _secs(v["contentDetails"].get("duration"))
+            vids.append({"id": v["id"], "title": sn.get("title"), "published_utc": sn.get("publishedAt"),
+                         "publish_at_utc": stt.get("publishAt"), "privacy": stt.get("privacyStatus"),
+                         "kind": "short" if secs and secs <= 180 else "long", "seconds": secs,
+                         "categoryId": sn.get("categoryId"), "language": sn.get("defaultLanguage") or sn.get("defaultAudioLanguage"),
+                         "tag_count": len(sn.get("tags", []))})
+    out = {"made_utc": dt.datetime.utcnow().isoformat() + "Z", "videos": vids, "playlists": pls}
+    os.makedirs(REPORTS, exist_ok=True)
+    path = os.path.join(REPORTS, "recent.json")
+    json.dump(out, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    for v in vids:
+        print(v["id"], v["kind"], v["privacy"], v["publish_at_utc"] or v["published_utc"], "cat", v["categoryId"],
+              "lang", v["language"], "tags", v["tag_count"], "|", v["title"])
+    print("playlists:", len(pls))
+    git_publish([os.path.relpath(REPORTS, REPO)], "yt-push recent list")
+    return 0
+
+
 def mode_check():
     cid, sec = creds()
     print("YOUTUBE_API_KEY:", bool(os.environ.get("YOUTUBE_API_KEY")))
@@ -611,9 +694,11 @@ def mode_check():
 
 def main():
     mode = (sys.argv[1] if len(sys.argv) > 1 else "dry").lower()
-    if mode not in ("check", "dry", "apply", "verify", "signin"):
-        print("mode must be check, dry, apply, verify or signin")
+    if mode not in ("check", "dry", "apply", "verify", "signin", "recent"):
+        print("mode must be check, dry, apply, verify, signin or recent")
         return 2
+    if mode == "recent":
+        return mode_recent()
     if mode == "check":
         return mode_check()
     if mode == "signin":

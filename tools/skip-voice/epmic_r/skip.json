@@ -1,0 +1,16 @@
+[
+ {
+  "kind": "skip",
+  "text": "For the microwave?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "More room for me.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 14
+ }
+]

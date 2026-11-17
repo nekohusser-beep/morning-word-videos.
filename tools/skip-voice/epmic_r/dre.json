@@ -1,0 +1,23 @@
+[
+ {
+  "kind": "dre",
+  "text": "Sir. Do you have a reservation?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "Is that... fish?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "dre",
+  "text": "No, no, no, no, no.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 10
+ }
+]

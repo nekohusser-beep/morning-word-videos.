@@ -371,6 +371,11 @@ def read_video(yt, vid):
     return items[0], None
 
 
+def _tagset(tags):
+    # YouTube may reorder tags and normalise spacing/quotes, so compare as a set
+    return {" ".join(str(t).replace("\u2019", "'").lower().split()) for t in tags}
+
+
 def plan_changes(live, want):
     sn = live.get("snippet", {})
     locs = live.get("localizations", {}) or {}
@@ -379,7 +384,7 @@ def plan_changes(live, want):
         diff["title"] = (sn.get("title"), want["title"])
     if "description" in want and want["description"].strip() != (sn.get("description") or "").strip():
         diff["description"] = (len(sn.get("description") or ""), len(want["description"]))
-    if "tags" in want and [t.lower() for t in want["tags"]] != [t.lower() for t in sn.get("tags", [])]:
+    if "tags" in want and _tagset(want["tags"]) != _tagset(sn.get("tags", [])):
         diff["tags"] = (len(sn.get("tags", [])), len(want["tags"]))
     if "category_id" in want and str(want["category_id"]) != str(sn.get("categoryId")):
         diff["categoryId"] = (sn.get("categoryId"), str(want["category_id"]))

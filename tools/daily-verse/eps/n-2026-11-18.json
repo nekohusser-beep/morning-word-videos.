@@ -1,0 +1,41 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "lines": [
+  {
+   "say": "Before you lay it all down tonight, hear this.",
+   "big": "Before you lay it all down tonight",
+   "small": "hear this.",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell in safety. Psalm four, verse eight.",
+   "big": "I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell in safety.",
+   "small": "Psalm 4:8 (KJV)",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "You don't have to stand guard tonight. He does.",
+   "big": "You don't have to stand guard tonight.",
+   "small": "He does.",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I give you tonight. Keep my house, and give me rest. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? The whole Book of Psalms, read slow, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "The whole Book of Psalms, read slow. Link in the description.",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

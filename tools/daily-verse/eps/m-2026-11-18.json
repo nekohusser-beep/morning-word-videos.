@@ -1,0 +1,47 @@
+{
+ "brand": "BLESSED MORNING",
+ "lines": [
+  {
+   "say": "Good morning. Before the day gets going, hear this.",
+   "big": "Good morning.",
+   "small": "Before the day gets going, hear this.",
+   "clip": "m-birds0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "It is of the LORD's mercies that we are not consumed, because his compassions fail not.",
+   "big": "It is of the LORD’s mercies that we are not consumed, because his compassions fail not.",
+   "small": "",
+   "clip": "m-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "They are new every morning: great is thy faithfulness. Lamentations three, twenty-two and twenty-three.",
+   "big": "They are new every morning: great is thy faithfulness.",
+   "small": "Lamentations 3:22-23 (KJV)",
+   "clip": "m-water1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Whatever yesterday was, his mercy did not run out overnight.",
+   "big": "His mercy didn't run out overnight.",
+   "small": "",
+   "clip": "m-forest1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, thank you for new mercy this morning. Walk with me through today. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "m-eagle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Have a blessed day. Type amen, and send this to somebody starting their day.",
+   "big": "Have a blessed day.",
+   "small": "Type amen, and send this to somebody starting their day",
+   "clip": "m-lake2.mp4",
+   "ss": 0.5
+  }
+ ]
+}

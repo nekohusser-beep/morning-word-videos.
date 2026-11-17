@@ -1,0 +1,40 @@
+name: assemble
+# Copies week1 clips into per-day draft releases wk-mon..wk-fri (clipNN.mp4 + script.json + ref.wav) so stitch.yml can run on each.
+on:
+  workflow_dispatch:
+    inputs:
+      thu5: {description: "clip name on week1 for Thursday line 5 (blank = skip Thursday)", required: false, default: ""}
+      bed2: {description: "clip name on week1 for bedtime line 2", required: false, default: "b05.mp4"}
+      days: {description: "space-separated days to assemble", required: false, default: "mon tue wed thu fri"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env: {GH_TOKEN: "${{ github.token }}"}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build releases
+        env: {THU5: "${{ inputs.thu5 }}", DAYS: "${{ inputs.days }}", BED2: "${{ inputs.bed2 }}"}
+        run: |
+          set -e
+          mkdir -p in && T=$'\t'
+          bash tools/rel.sh down week1 in "${T}[vnb][0-9]+\.mp4${T}"
+          declare -A M
+          M[mon]="v16 v13 v15 v14 n08"
+          M[tue]="v10 v12 v11 v09 n06"
+          M[wed]="v05 v08 v07 v06 n07"
+          M[thu]="n02 n01 n03 n04 ${THU5%.mp4}"
+          M[fri]="v04 v02 v01 v03 n05"
+          M[bed]="b03 ${BED2%.mp4} b04 b01"
+          for d in $DAYS; do
+            [ "$d" = thu ] && [ -z "$THU5" ] && { echo "skip thu"; continue; }
+            rm -rf out && mkdir out
+            i=1
+            for c in ${M[$d]}; do cp "in/$c.mp4" "out/clip0$i.mp4"; i=$((i+1)); done
+            cp tools/stitch/week/$d.json out/script.json
+            cp ref/week_ref.wav out/ref.wav
+            bash tools/rel.sh ensure "wk-$d" > /dev/null
+            bash tools/rel.sh up "wk-$d" out/*
+            echo "built wk-$d"
+          done

@@ -1,0 +1,82 @@
+name: war-voice-audition
+# Nov 12 2026: new narrator voices for Blessed Prayers long videos (replace Michael-only).
+# Designed from a DESCRIPTION of the sound (Qwen3-TTS VoiceDesign, VoxCPM2). No real person is cloned.
+# Text = exact KJV (tools/verse-voice/text.json). Outputs + Whisper word check land in draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "war1"}
+env:
+  TEXT_JSON: tools/verse-voice/war-text.json
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t war-voice-audition -n "war narrator audition"
+
+  qwen:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: W1-battle-commander
+            instruct: "A powerful, commanding American man in his forties, deep booming bass-baritone, bold and fearless like a battlefield general rallying troops before war. Strong chest voice, firm and urgent, every word lands like a hammer. Intense but clear, never shouting."
+          - id: W2-epic-trailer
+            instruct: "A deep, gritty, cinematic male voice like an epic movie trailer narrator, dark and dramatic, slow heavy delivery with weight and authority, rumbling low bass, ominous and powerful."
+          - id: W3-fire-preacher
+            instruct: "A bold Black American preacher in his fifties, strong resonant baritone full of fire and conviction, commanding and righteous, declaring scripture with power and authority like a revival preacher calling people to battle. Strong, not shouting."
+          - id: W4-warrior-king
+            instruct: "A strong, regal, battle-hardened man's voice, deep and steady, fierce resolve and authority like a warrior king speaking before battle, grave and powerful, measured pacing with force behind every line."
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {INSTRUCT: "${{ matrix.instruct }}"}
+        run: python tools/verse-voice/eng_qwen.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - run: ffmpeg -y -loglevel error -i out/${{ matrix.id }}.wav -af loudnorm=I=-16:TP=-1.5 -ar 44100 -b:a 192k out/${{ matrix.id }}.mp3
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+
+  voxcpm:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: W5-vox-general
+            desc: "A powerful commanding man with a deep booming bass voice, bold and fearless like a general rallying an army for war, firm, intense and authoritative"
+          - id: W6-vox-trailer
+            desc: "A deep gritty cinematic male movie trailer narrator, dark dramatic and heavy, rumbling bass, slow and powerful"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {DESC: "${{ matrix.desc }}"}
+        run: python tools/verse-voice/eng_voxcpm.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - run: ffmpeg -y -loglevel error -i out/${{ matrix.id }}.wav -af loudnorm=I=-16:TP=-1.5 -ar 44100 -b:a 192k out/${{ matrix.id }}.mp3
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

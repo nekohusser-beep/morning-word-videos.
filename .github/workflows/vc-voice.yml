@@ -1,0 +1,51 @@
+name: vc-voice
+# Convert Flow-voice Derrick lines into Derrick's Hailuo voice with Seed-VC (one parallel job per line), then score.
+# Inputs: <dir>/src*.wav (Flow lines), <dir>/<ref>.wav (target voice). Output: branch vc-out, <dir>/out-<run>/<line>.wav
+# Proven Oct 30 2026: speaker match raw 0.82-0.89 -> 0.92-0.95 (Hailuo's own clips 0.95-0.97), pitch lands 104-111 Hz.
+# CPU speed: about 6 min per 7 s line at 30 steps, so lines run in parallel.
+on:
+  workflow_dispatch:
+    inputs:
+      dir: {description: "repo dir with src*.wav + ref wav", required: true, default: "tmp/vcvoice"}
+      ref: {description: "reference wav name in dir", required: true, default: "ref1"}
+      steps: {description: "diffusion steps", required: true, default: "30"}
+      length: {description: "length-adjust (1.0 = same speed, 1.1 = 10% slower; gives short unstressed words like 'a' room to survive)", required: false, default: "1.0"}
+permissions:
+  contents: write
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    outputs: {files: "${{ steps.l.outputs.files }}"}
+    steps:
+      - uses: actions/checkout@v4
+      - id: l
+        run: echo "files=$(cd '${{ inputs.dir }}' && ls src*.wav | sed 's/\.wav$//' | python3 -c 'import sys,json;print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')" >> "$GITHUB_OUTPUT"
+  vc:
+    needs: list
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: {line: "${{ fromJson(needs.list.outputs.files) }}"}
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+      - run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
+          cd sv
+          pip install -q torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu > ../vc-run.log 2>&1
+          grep -v -i -E '^(--extra-index-url|torch|torchvision|torchaudio)' requirements.txt > req2.txt
+          pip install -q -r req2.txt >> ../vc-run.log 2>&1 || (tail -40 ../vc-run.log; true)
+      - run: |
+          D="${{ inputs.dir }}"; mkdir -p out tmpo
+          cd sv && python inference.py --source "../$D/${{ matrix.line }}.wav" --target "../$D/${{ inputs.ref }}.wav" --output ../tmpo --diffusion-steps ${{ inputs.steps }} --length-adjust ${{ inputs.length || '1.0' }} --inference-cfg-rate 0.7 --f0-condition False --fp16 False >> ../vc-run.log 2>&1 || echo "FAILED" >> ../vc-run.log
+          g=$(ls ../tmpo/*.wav 2>/dev/null | head -1); [ -n "$g" ] && cp "$g" "../out/${{ matrix.line }}.wav"
+      - if: always()
+        run: |
+          R="${{ inputs.dir }}/out-${{ github.run_id }}"; mkdir -p "$R"; cp out/*.wav "$R"/ 2>/dev/null || tail -c 3000 vc-run.log > "$R/${{ matrix.line }}_vc-run.log"
+          git config user.name "vc-bot"; git config user.email "noreply@github.com"
+          git fetch -q origin vc-out && git checkout -q -f -B vc-out origin/vc-out || git checkout -q -B vc-out
+          git add -f "$R"; git commit -qm "vc-voice ${{ github.run_id }} ${{ matrix.line }}" || true
+          for i in 1 2 3 4 5; do git push -q origin vc-out && break; git pull -q --rebase origin vc-out; done

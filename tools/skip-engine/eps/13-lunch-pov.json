@@ -1,0 +1,233 @@
+{
+"title": "POV: You Forgot Your Lunch on Night Shift (ADHD) 😂",
+"desc": "Made the best lunch of my life. Put it in the fridge so it stays cold. Then I left it there. 😂\n\nNight shift, 2 AM break, crackers and car gum for dinner.\n\nTip: put your car keys in the fridge right on top of your lunch. You can't leave without them.\n\nWhat's the best lunch YOU ever left at home? 👇\n\nIf this is you, you're not alone.\n\n#adhd #adhdlife #adhdproblems #adhdhumor #nightshift #relatable #funny #shorts",
+"tags": [
+"adhd forgot lunch",
+"forgot my lunch",
+"pov you forgot your lunch",
+"night shift life",
+"night shift humor",
+"adhd forgetting things",
+"adhd vs non adhd",
+"what it's like to have adhd",
+"adhd humor",
+"adhd brain",
+"adhd life",
+"adhd skit",
+"adhd animation",
+"relatable adhd",
+"adult adhd",
+"adhd tips"
+],
+"beats": [
+{
+"say": "Here's a normal person on night shift. Pack lunch. Grab lunch. Eat lunch at break.",
+"label": "NON-ADHD:",
+"set": "kitchen_n",
+"gray": true,
+"pose": "stand",
+"eyes": "happy",
+"mouth": "smile",
+"cap": "Pack. Grab. Eat.",
+"chip": "purple",
+"cap2": "Work at 11 PM",
+"x": 420
+},
+{
+"say": "Now me. Ten o'clock. I make the best lunch of my whole life. Leftover lasagna. Two cookies.",
+"label": "ADHD:",
+"set": "kitchen_n",
+"pose": "hold",
+"holding": "bag",
+"eyes": "happy",
+"mouth": "grin",
+"cap": "Best lunch of my LIFE",
+"counter": "Time: 10:02 PM",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "I put it in the fridge so it stays cold. Smart. Responsible. Grown.",
+"label": "ADHD:",
+"set": "kitchen_n",
+"pose": "thumbs",
+"eyes": "happy",
+"mouth": "smile",
+"props": [
+[
+"fridge",
+800,
+1200,
+1.0
+]
+],
+"cap": "In the fridge. Smart. Grown.",
+"chip": "green",
+"counter": "Time: 10:05 PM",
+"x": 380
+},
+{
+"say": "Keys. Badge. Phone. Water bottle. I check everything. Twice.",
+"label": "ADHD:",
+"set": "door",
+"pose": "hold",
+"holding": "keys",
+"eyes": "normal",
+"mouth": "smile",
+"cap": "Keys. Badge. Phone. Water.",
+"cap2": "Checked twice.",
+"counter": "Time: 10:40 PM",
+"x": 420
+},
+{
+"say": "Something feels missing. I pat my pockets. Nope. Everything's here.",
+"label": "ADHD:",
+"set": "door",
+"pose": "think",
+"eyes": "side",
+"mouth": "flat",
+"cap": "Something feels missing...",
+"counter": "Time: 10:41 PM",
+"x": 420
+},
+{
+"say": "Eleven. Clock in. I'm locked in. Nobody can stop me tonight.",
+"label": "ADHD:",
+"set": "desk_n",
+"pose": "point",
+"eyes": "happy",
+"mouth": "grin",
+"cap": "LOCKED IN.",
+"chip": "green",
+"counter": "Time: 11:00 PM",
+"x": 420
+},
+{
+"say": "One thirty. My stomach starts talking. I tell it, relax. Lasagna's coming.",
+"label": "ADHD:",
+"set": "desk_n",
+"pose": "think",
+"eyes": "happy",
+"mouth": "smile",
+"cap": "Relax. Lasagna's coming.",
+"counter": "Time: 1:30 AM",
+"x": 420
+},
+{
+"say": "Two o'clock. Break time.",
+"card": "2:00 AM|BREAK TIME",
+"sfx": "ding"
+},
+{
+"say": "I open my bag. Keys. Badge. Phone. Water. No lasagna.",
+"label": "ADHD:",
+"set": "kitchen_n",
+"pose": "panic",
+"eyes": "wide",
+"mouth": "o",
+"sweat": true,
+"cap": "NO. LASAGNA.",
+"chip": "red",
+"counter": "Time: 2:01 AM",
+"sfx": "buzz",
+"x": 420
+},
+{
+"say": "I text my wife. Is my lunch in the fridge? She sends a picture. It's in there. Living its best life.",
+"label": "ADHD:",
+"set": "kitchen_n",
+"pose": "phone",
+"eyes": "tired",
+"mouth": "frown",
+"cap": "It's in there.",
+"cap2": "Living its best life.",
+"chip2": "dark",
+"counter": "Time: 2:03 AM",
+"x": 420
+},
+{
+"say": "So dinner is vending machine crackers and a pack of gum I found in the car. I still said grace. Lord, thank You. And please let somebody bring donuts.",
+"label": "ADHD:",
+"set": "kitchen_n",
+"pose": "thumbs",
+"eyes": "spiral",
+"mouth": "grin",
+"props": [
+[
+"snack",
+760,
+1200,
+1.0
+]
+],
+"cap": "Dinner: crackers + car gum",
+"cap2": "Still said grace.",
+"chip": "yellow",
+"counter": "Time: 2:05 AM",
+"sfx": "boing",
+"x": 420
+},
+{
+"say": "Seven thirty in the morning. I get home. Open the fridge. There it is. Still perfect.",
+"label": "ADHD:",
+"set": "kitchen_n",
+"pose": "stand",
+"eyes": "tired",
+"mouth": "flat",
+"props": [
+[
+"fridge",
+800,
+1200,
+1.0
+]
+],
+"cap": "There it is. Still perfect.",
+"counter": "Time: 7:30 AM",
+"x": 380
+},
+{
+"say": "So I eat lasagna for breakfast. Honestly? Best part of the shift.",
+"label": "ADHD:",
+"set": "kitchen_n",
+"pose": "hold",
+"holding": "bag",
+"eyes": "happy",
+"mouth": "grin",
+"cap": "Lasagna for breakfast.",
+"cap2": "Best part of the shift.",
+"chip": "green",
+"counter": "Time: 7:32 AM",
+"sfx": "pop",
+"x": 420
+},
+{
+"say": "Here's the trick. If it's not in your hand, it's not in your head. Put your car keys in the fridge, right on top of your lunch. You can't leave without them.",
+"set": "blank",
+"pose": "thumbs",
+"eyes": "happy",
+"mouth": "grin",
+"props": [
+[
+"keys",
+820,
+900,
+1.0
+]
+],
+"cap": "Can you relate?",
+"cap2": "Tip: keys ON the lunch",
+"x": 420
+},
+{
+"say": "If this is you, you're not alone. What's the best lunch you ever left at home? Tell me in the comments.",
+"set": "blank",
+"pose": "point",
+"eyes": "happy",
+"mouth": "smile",
+"cap": "If this is you, you're not alone.",
+"cap2": "Best lunch YOU left at home?",
+"x": 420
+}
+]
+}

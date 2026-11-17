@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "dre",
+  "text": "Skip, my guy. What's up, man.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "Thirty? Come on, man.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "dre",
+  "text": "Bruh. You can't charge me for leaving you on red.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "dre",
+  "text": "Bro. It ain't even six yet.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 17
+ }
+]

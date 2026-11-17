@@ -1,0 +1,62 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Cap,Poppins,80,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6.3,0,2,60,60,330,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.52,0:00:01.27,Cap,,0,0,0,,{\fad(60,40)}If you're awake
+Dialogue: 0,0:00:01.27,0:00:02.08,Cap,,0,0,0,,{\fad(60,40)}right now while
+Dialogue: 0,0:00:02.08,0:00:02.63,Cap,,0,0,0,,{\fad(60,40)}the rest of
+Dialogue: 0,0:00:02.63,0:00:03.94,Cap,,0,0,0,,{\fad(60,40)}the street is asleep,
+Dialogue: 0,0:00:03.94,0:00:05.37,Cap,,0,0,0,,{\fad(60,40)}this one's for you.
+Dialogue: 0,0:00:06.20,0:00:07.04,Cap,,0,0,0,,{\fad(60,40)}My soul waiteth
+Dialogue: 0,0:00:07.04,0:00:07.69,Cap,,0,0,0,,{\fad(60,40)}for the LORD
+Dialogue: 0,0:00:07.69,0:00:08.47,Cap,,0,0,0,,{\fad(60,40)}more than they
+Dialogue: 0,0:00:08.47,0:00:09.25,Cap,,0,0,0,,{\fad(60,40)}that watch for
+Dialogue: 0,0:00:09.25,0:00:10.28,Cap,,0,0,0,,{\fad(60,40)}the morning:
+Dialogue: 0,0:00:10.89,0:00:11.57,Cap,,0,0,0,,{\fad(60,40)}I say, more than
+Dialogue: 0,0:00:11.57,0:00:12.49,Cap,,0,0,0,,{\fad(60,40)}they that watch for
+Dialogue: 0,0:00:12.49,0:00:13.58,Cap,,0,0,0,,{\fad(60,40)}the morning.
+Dialogue: 0,0:00:14.34,0:00:14.93,Cap,,0,0,0,,{\fad(60,40)}That's Psalm
+Dialogue: 0,0:00:14.93,0:00:16.87,Cap,,0,0,0,,{\fad(60,40)}130:6.
+Dialogue: 0,0:00:18.09,0:00:19.09,Cap,,0,0,0,,{\fad(60,40)}A night watchman
+Dialogue: 0,0:00:19.09,0:00:20.09,Cap,,0,0,0,,{\fad(60,40)}stood on the wall
+Dialogue: 0,0:00:20.09,0:00:20.87,Cap,,0,0,0,,{\fad(60,40)}for hours, and
+Dialogue: 0,0:00:20.87,0:00:21.72,Cap,,0,0,0,,{\fad(60,40)}the only thing
+Dialogue: 0,0:00:21.72,0:00:22.29,Cap,,0,0,0,,{\fad(60,40)}he wanted
+Dialogue: 0,0:00:22.29,0:00:23.70,Cap,,0,0,0,,{\fad(60,40)}was daylight.
+Dialogue: 0,0:00:24.26,0:00:25.14,Cap,,0,0,0,,{\fad(60,40)}I've worked enough
+Dialogue: 0,0:00:25.14,0:00:26.08,Cap,,0,0,0,,{\fad(60,40)}overnights to know
+Dialogue: 0,0:00:26.08,0:00:26.79,Cap,,0,0,0,,{\fad(60,40)}that wait,
+Dialogue: 0,0:00:26.79,0:00:27.49,Cap,,0,0,0,,{\fad(60,40)}with the clock
+Dialogue: 0,0:00:27.49,0:00:28.32,Cap,,0,0,0,,{\fad(60,40)}crawling toward
+Dialogue: 0,0:00:28.32,0:00:29.26,Cap,,0,0,0,,{\fad(60,40)}morning.
+Dialogue: 0,0:00:30.38,0:00:31.25,Cap,,0,0,0,,{\fad(60,40)}The writer says
+Dialogue: 0,0:00:31.25,0:00:32.05,Cap,,0,0,0,,{\fad(60,40)}he waits on God
+Dialogue: 0,0:00:32.05,0:00:32.99,Cap,,0,0,0,,{\fad(60,40)}harder than that
+Dialogue: 0,0:00:32.99,0:00:33.86,Cap,,0,0,0,,{\fad(60,40)}watchman waits
+Dialogue: 0,0:00:33.86,0:00:34.98,Cap,,0,0,0,,{\fad(60,40)}on the sun.
+Dialogue: 0,0:00:36.09,0:00:36.67,Cap,,0,0,0,,{\fad(60,40)}And the sun
+Dialogue: 0,0:00:36.67,0:00:37.89,Cap,,0,0,0,,{\fad(60,40)}always came up.
+Dialogue: 0,0:00:37.89,0:00:38.79,Cap,,0,0,0,,{\fad(60,40)}Every night that
+Dialogue: 0,0:00:38.79,0:00:40.14,Cap,,0,0,0,,{\fad(60,40)}watchman ever stood,
+Dialogue: 0,0:00:40.14,0:00:40.78,Cap,,0,0,0,,{\fad(60,40)}the morning
+Dialogue: 0,0:00:40.78,0:00:41.86,Cap,,0,0,0,,{\fad(60,40)}showed up.
+Dialogue: 0,0:00:43.02,0:00:44.26,Cap,,0,0,0,,{\fad(60,40)}Father, for everybody
+Dialogue: 0,0:00:44.26,0:00:45.49,Cap,,0,0,0,,{\fad(60,40)}still up tonight,
+Dialogue: 0,0:00:45.49,0:00:46.18,Cap,,0,0,0,,{\fad(60,40)}at work,
+Dialogue: 0,0:00:46.18,0:00:47.14,Cap,,0,0,0,,{\fad(60,40)}at a bedside,
+Dialogue: 0,0:00:47.14,0:00:48.45,Cap,,0,0,0,,{\fad(60,40)}or just wide awake,
+Dialogue: 0,0:00:48.45,0:00:49.73,Cap,,0,0,0,,{\fad(60,40)}be near them.
+Dialogue: 0,0:00:50.54,0:00:52.32,Cap,,0,0,0,,{\fad(60,40)}In Jesus' name, amen.
+Dialogue: 0,0:00:53.14,0:00:54.41,Cap,,0,0,0,,{\fad(60,40)}Morning's coming.
+Dialogue: 0,0:00:54.41,0:00:55.07,Cap,,0,0,0,,{\fad(60,40)}Follow so the
+Dialogue: 0,0:00:55.07,0:00:55.79,Cap,,0,0,0,,{\fad(60,40)}Word finds you
+Dialogue: 0,0:00:55.79,0:00:57.11,Cap,,0,0,0,,{\fad(60,40)}on the long nights.
+Dialogue: 0,0:00:57.11,0:00:58.56,Cap,,0,0,0,,{\fad(60,40)}Have a blessed day.

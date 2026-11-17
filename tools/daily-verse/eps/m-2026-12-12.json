@@ -1,0 +1,42 @@
+{
+ "brand": "BLESSED MORNING",
+ "ref": "Isaiah 26:3",
+ "kjv": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+ "lines": [
+  {
+   "say": "Good morning. Mind racing already? Hear this.",
+   "big": "Good morning.",
+   "small": "Mind racing already? Hear this.",
+   "clip": "m-birds2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Isaiah twenty six, verse three.",
+   "big": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+   "small": "Isaiah 26:3 (KJV)",
+   "clip": "m-birds0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Peace isn't the absence of problems. It's keeping your mind on him while you've got them.",
+   "big": "Peace isn't the absence of problems. It's keeping your mind on him while you've got them.",
+   "small": "",
+   "clip": "m-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, keep my mind on you today, and keep me in your peace. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "m-water1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Have a blessed day. Type amen, and send this to somebody starting their day.",
+   "big": "Have a blessed day.",
+   "small": "Type amen, and send this to somebody starting their day",
+   "clip": "m-forest1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

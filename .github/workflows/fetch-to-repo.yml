@@ -1,0 +1,34 @@
+name: fetch-to-repo
+# Pull a file from a public URL on the runner (open internet) and commit it into the repo,
+# so a Claude session (whose sandbox cannot reach most hosts) can read it. Files must stay under 100 MB.
+on:
+  workflow_dispatch:
+    inputs:
+      url: {description: "public URL to download", required: true}
+      path: {description: "repo path to write (e.g. tests/avatar-engine-test/out/hedra.mp4)", required: true}
+      sha256: {description: "expected sha256 (optional; mismatch fails the run)", required: false, default: ""}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          URL: ${{ inputs.url }}
+          DEST: ${{ inputs.path }}
+          SHA: ${{ inputs.sha256 }}
+        run: |
+          set -e
+          mkdir -p "$(dirname "$DEST")"
+          curl -fsSL --retry 3 -A "Mozilla/5.0" -o "$DEST" "$URL"
+          ls -la "$DEST"
+          got=$(sha256sum "$DEST" | cut -d' ' -f1); echo "sha256=$got"
+          if [ -n "$SHA" ] && [ "$got" != "$SHA" ]; then echo "::error::sha256 mismatch"; exit 1; fi
+          git config user.name "fetch-to-repo"
+          git config user.email "actions@users.noreply.github.com"
+          git add "$DEST"
+          git commit -m "fetch-to-repo: $DEST"
+          for i in 1 2 3 4; do git pull --rebase origin main && git push origin HEAD:main && exit 0; sleep 5; done
+          exit 1

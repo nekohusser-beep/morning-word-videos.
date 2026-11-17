@@ -1,0 +1,58 @@
+name: yt-push
+# Our own Zapier for YouTube: push a job file into tools/yt-push/queue/ and it applies itself.
+on:
+  push:
+    branches: [main]
+    paths: ["tools/yt-push/queue/*.json"]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check = secrets + sign-in test, dry = preview queue, apply = write queue, verify = re-read last 7 days, signin = one-time Google sign-in by code, recent = list last 3 days of uploads + playlists"
+        required: true
+        default: dry
+        type: choice
+        options: [check, dry, apply, verify, signin, recent]
+permissions:
+  contents: write
+concurrency:
+  group: yt-push
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      MODE: ${{ inputs.mode || 'apply' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools/yt-push
+            reports/yt-push
+      - name: Install
+        run: pip install -q cryptography
+      - name: Run
+        shell: bash
+        run: |
+          mkdir -p reports/yt-push
+          OUT="reports/yt-push/run-${{ github.run_id }}-$MODE.txt"
+          python3 -u tools/yt-push/yt_push.py "$MODE" 2>&1 | tee "$OUT"
+          exit "${PIPESTATUS[0]}"
+      - name: Scrub and commit the report
+        if: always()
+        shell: bash
+        run: |
+          OUT="reports/yt-push/run-${{ github.run_id }}-$MODE.txt"
+          [ -f "$OUT" ] || exit 0
+          for s in "$YOUTUBE_API_KEY" "$YT_CLIENT_SECRET" "$YT_REFRESH_TOKEN" "$YT_CLIENT_ID"; do
+            if [ -n "$s" ]; then sed -i "s|$s|[secret]|g" "$OUT"; fi
+          done
+          git config user.name "yt-push-bot"
+          git config user.email "noreply@github.com"
+          git add reports/yt-push
+          git commit -q -m "yt-push report ${{ github.run_id }} $MODE" || exit 0
+          for i in 1 2 3 4 5; do git fetch -q --depth=20 origin main && git rebase -q origin/main && git push -q && break; sleep 3; done

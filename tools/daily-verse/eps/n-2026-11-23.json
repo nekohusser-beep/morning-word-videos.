@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 31:24",
+ "kjv": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD.",
+ "audio_bible": "https://www.youtube.com/watch?v=BFwsZGyPw70",
+ "audio_range": "1–31",
+ "lines": [
+  {
+   "say": "Tired and discouraged tonight? This is for you.",
+   "big": "Tired and discouraged tonight",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD. Psalm thirty one, verse twenty four.",
+   "big": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD.",
+   "small": "Psalm 31:24 (KJV)",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Courage doesn't always look loud. Sometimes it's just hoping one more night.",
+   "big": "Courage doesn't always look loud. Sometimes it's just hoping one more night.",
+   "small": "",
+   "clip": "n-ocean1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, strengthen my heart tonight. My hope is in you. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-stars0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 1 through 31, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 1–31, read slowly. Link in the description.",
+   "clip": "n-candle0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

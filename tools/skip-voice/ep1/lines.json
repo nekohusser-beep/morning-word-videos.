@@ -1,0 +1,135 @@
+[
+ {
+  "kind": "dre",
+  "text": "Skip! My guy! What's up, man?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "You know what's up. My money.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "dre",
+  "text": "Oh. The twenty.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "skip",
+  "text": "It WAS twenty. You said you'd pay me back last Friday. You didn't. Now it's thirty.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "dre",
+  "text": "Thirty?!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "skip",
+  "text": "Then I texted you. Twice. You left me on red both times. That's ten more. Now it's forty.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "dre",
+  "text": "Bro, you can't charge me for leaving you on red!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "skip",
+  "text": "I just did. Red receipts cost money.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "dre",
+  "text": "Man, I been going through it this week. I'm broke broke.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "skip",
+  "text": "Broke? Dre. I deliver food for a living. Last night I dropped off large wings, cheese fries, and two milkshakes. Guess whose house it was.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "skip",
+  "text": "Yours. You tipped me two dollars. With MY money.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 10
+ },
+ {
+  "kind": "dre",
+  "text": "Man, that wasn't me. That was my cousin's order.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 11
+ },
+ {
+  "kind": "skip",
+  "text": "Your cousin's name is Dre, gate code forty forty?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ },
+ {
+  "kind": "dre",
+  "text": "Look, I ain't got no cash on me.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 13
+ },
+ {
+  "kind": "skip",
+  "text": "I don't need cash! You mean to tell me you don't got Cash App? Venmo? Zelle? Put it on a kite and fly it over my house! Tie it to a pigeon! I'll take it in quarters! I just want my money!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 14
+ },
+ {
+  "kind": "dre",
+  "text": "Alright, alright. I got you Friday.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 15
+ },
+ {
+  "kind": "skip",
+  "text": "Oh, I know you do. Same job. Same payday. Same bank. That deposit hits at six A M Friday. I'll be in your driveway at five fifty-nine. Lawn chair. Snacks.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 16
+ },
+ {
+  "kind": "dre",
+  "text": "Bro... it ain't even six.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 17
+ },
+ {
+  "kind": "skip",
+  "text": "It is now. Forty.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 18
+ }
+]

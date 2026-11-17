@@ -1,0 +1,76 @@
+=== KEYWORDS: adhd cleaning ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd cleaning                          | 39 low       |  296.3K |    3.1K |  10% |  10%
+adhd cleaning tips                     | 39 low       |  481.4K |    5.1K |   0% |  10%
+adhd cleaning motivation               | 39 low       |  433.7K |    4.8K |  10% |   0%
+adhd cleaning music                    | 43 medium    |      1M |   26.2K |   0% |   0%
+adhd cleaning planner                  | 32 low       |   23.3K |    1.7K |  30% |  40%
+adhd cleaning hacks                    | 37 low       |  178.9K |    2.4K |  10% |   0%
+adhd cleaning playlist                 | 44 medium    |  646.7K |   28.7K |   0% |  10%
+adhd cleaning and organizing           | 35 low       |  296.3K |    3.5K |   0% |  10%
+adhd cleaning body double              | 22 low       |     30K |     557 |   0% |  40%
+how to adhd cleaning                   | 39 low       |    461K |    5.2K |   0% |   0%
+how to use adhd cleaning planner       | 30 low       |   17.1K |    1.7K |  10% |  50%
+MATCHING (79): adhd cleaning tips | adhd cleaning motivation | adhd cleaning music | adhd cleaning planner | adhd cleaning hacks | adhd cleaning playlist | adhd cleaning and organizing | adhd cleaning body double | adhd cleaning schedule | adhd cleaning room | how to adhd cleaning | how to use adhd cleaning planner | adhd cleaning help | cleaning with me adhd | cleaning with adhd funny | cleaning when you have adhd | cleaning your room with adhd | deep cleaning with adhd | cleaning for people with adhd | adhd cleaning app | adhd and cleaning | adhd and cleaning house | adhd and cleaning room | adhd cleaning video | adhd cleaning bedroom | adhd cleaning book | adhd bathroom cleaning | adhd cleaning checklist | adhd cleaning clutterbug | adhd chatter cleaning | adhd car cleaning | adhd cleaning duck | adhd deep cleaning | adhd depression cleaning | asmr adhd ear cleaning | adhd cleaning funny | adhd cleaning focus music | adhd focus cleaning | adhd music for cleaning | adhd hacks for cleaning
+QUESTIONS (2): how to adhd cleaning | how to use adhd cleaning planner
+RELATED (8): clean your room adhd | adhd tidying | adhd clean joyner lucas | adhd clean kendrick lamar | adhd clean lyrics | adhd clean my room with me | adhd clean version | adhd clean with me real time
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd forgetting what i was saying ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd forgetting what i was saying      | 25 low       |     583 |    3.4K |   0% |  60%
+adhd and forgetting words              | 36 low       |     84K |    1.9K |   0% |  20%
+adhd forgetting people exist           | 20 low       |  276.9K |    2.3K |   0% |  50%
+when my adhd gets me into trouble      | 40 medium    |  513.7K |   10.4K |  10% |   0%
+how to tell that you have adhd         | 38 low       |  263.6K |    4.5K |  10% |  10%
+when my adhd gets me in trouble        | 42 medium    |  613.4K |   10.4K |  10% |   0%
+MATCHING (0): 
+QUESTIONS (7): when my adhd gets me into trouble | how to tell that you have adhd | when my adhd gets me in trouble | what adhd stand for | why you asking all these question | why you asking all them questions meme | when adhd kicks in
+RELATED (7): adhd and forgetting words | adhd forgetting people exist | could i have adhd | adhd forgetting words | adhd forgetting things | adhd saying the wrong thing | adhd forgetting to eat
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd paying bills ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd paying bills                      | 11 very low  |     907 |     231 |  20% |  60%
+adhd financial problems                | 31 low       |   61.8K |    2.5K |  10% |  20%
+how can i deal with adhd               | 40 medium    |  815.6K |    6.8K |   0% |   0%
+how i deal with adhd                   | 41 medium    |  894.8K |      8K |  10% |   0%
+how to manage money with adhd          | 34 low       |   22.4K |     863 |  10% |  30%
+MATCHING (0): 
+QUESTIONS (13): how can i deal with adhd | how i deal with adhd | how to manage money with adhd | who should pay the bill | why do we keep getting bills mail | who pays the bills | when my adhd gets me in trouble | when you have adhd | when your wife has adhd | what is adhd adults | what kind of adhd do i have | can you get rid of adhd | can adhd get worse
+RELATED (13): adhd financial problems | having a partner with adhd | adhd and money problems | adhd and quitting jobs | supporting a partner with adhd | what's the meaning of adhd | do i have adult adhd | adhd debt | adhd and bills | adhd and spending money | adhd get work done | adhd and financial problems | adhd and saving money
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd hobbies ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd hobbies                           | 36 low       |   44.9K |   29.7K |  30% |  20%
+adhd hobbies explained by ducks        | 22 low       |   35.5K |    3.7K |   0% |  40%
+adhd changing hobbies                  | 31 low       |   24.6K |   13.9K |  10% |  10%
+best adhd hobbies                      | 32 low       |   17.2K |     24K |  10% |  30%
+adhd friendly hobbies                  | 30 low       |   94.2K |    6.9K |   0% |  20%
+adhd and fidgeting                     | 26 low       |  152.2K |     847 |  30% |  30%
+adhd hobby jumping                     | 18 very low  |     13K |    9.8K |  10% |  40%
+adhd hobby cycle                       | 11 very low  |    6.4K |    9.6K |  30% |  50%
+adhd hobby duck                        | 21 low       |   19.4K |    2.8K |   0% |  40%
+how to adhd hobbies                    | 35 low       |   30.7K |   11.1K |  10% |   0%
+how adhd affects adults                | 40 medium    |  625.9K |      5K |  10% |   0%
+why adhd                               | 47 medium    |  464.1K |   15.7K |  60% |   0%
+MATCHING (11): adhd hobbies explained by ducks | adhd changing hobbies | best adhd hobbies | adhd friendly hobbies | how to adhd hobbies | hobbies for people with adhd | adhd and hobbies | hobbies for adhd | hobbies for adhd women | hobbies for adhd men | hobbies with adhd
+QUESTIONS (10): how to adhd hobbies | how adhd affects adults | why adhd | when u have adhd | when your friend has adhd | when you have adhd | what is adhd adults | how i deal with adhd | can adhd go away | how can i deal with adhd
+RELATED (13): adhd and fidgeting | adhd hobby jumping | adhd hobby cycle | adhd hobby duck | adhd and interests | adhd emotional regulation tips | adhd self regulation | adhd hobby graveyard | adhd hobby hopping | adhd job | adhd and no adhd | adhd new hobby | adhd and stimulants
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: coworker collecting money for gift ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+coworker collecting money for gift     | 39 low       |  422.5K |   27.8K |   0% |  30%
+MATCHING (0): 
+QUESTIONS (0): 
+RELATED (6): coworker trying to get you fired | coworker taking credit for my work | coworker gifts | gift with money inside | coworker birthday gift ideas | funny ways to gift money
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: coworker borrowing my stuff ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+coworker borrowing my stuff            | 29 low       |    1.7K |      2K |   0% |  60%
+coworker complains about everything    | 29 low       |   65.7K |    3.4K |   0% |  10%
+coworker taking credit for my work     | 25 low       |    2.7K |     211 |  40% |  80%
+when coworker undermines you           | 11 very low  |     32K |     387 |  10% |  30%
+why you shouldn't pay cash for a car   | 41 medium    |  964.5K |   23.3K |   0% |  10%
+MATCHING (0): 
+QUESTIONS (2): when coworker undermines you | why you shouldn't pay cash for a car
+RELATED (4): coworker complains about everything | coworker taking credit for my work | coworker hit by the car | coworker who's extremely busy doing seemingly nothing
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

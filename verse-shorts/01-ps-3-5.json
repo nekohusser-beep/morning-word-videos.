@@ -1,0 +1,18 @@
+{
+ "id": "01-ps-3-5",
+ "ref": "PSALM 3:5",
+ "text": "I laid me down and slept; I awaked; for the LORD sustained me.",
+ "duration": 24.3,
+ "lines": [
+  {
+   "text": "\u201cI laid me down and slept; I awaked;",
+   "start": 1.5,
+   "end": 5.43
+  },
+  {
+   "text": "for the LORD sustained me.\u201d",
+   "start": 6.33,
+   "end": 8.52
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+name: ace-stems
+# FREE: split each sung take on branch ace-out into VOICE and MUSIC (Demucs htdemucs, MIT), then Whisper word timestamps on the voice.
+# Output goes back into ace-out/<case>/: <case>-vocals.mp3, <case>-words.json, and <case>-bed.mp3 (the music-only stem) for the ffull cases.
+# Why: the singer's lines can then be placed back to back over ONE unbroken music bed, so the song flows with no dead air.
+on:
+  workflow_dispatch:
+    inputs:
+      cases:
+        description: "JSON list of ace-out case folders to split"
+        required: true
+        default: '["ffull150_c"]'
+permissions:
+  contents: write
+jobs:
+  stems:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        case: ${{ fromJSON(inputs.cases) }}
+    env:
+      CASE: ${{ matrix.case }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: System tools
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          mkdir -p "out/${CASE}"
+          git clone -q --depth 1 --branch ace-out --single-branch "https://github.com/${GITHUB_REPOSITORY}" "$RUNNER_TEMP/aceout"
+          ls -la "$RUNNER_TEMP/aceout/${CASE}" | tee "out/${CASE}/stems-input.txt"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Demucs (CPU torch) with a fallback separator
+        run: |
+          set +e
+          python -m pip install -q "torch==2.5.1" "torchaudio==2.5.1" --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q --no-deps "demucs==4.0.1"
+          python -m pip install -q dora-search einops julius lameenc openunmix pyyaml tqdm soundfile numpy faster-whisper
+          python -c "import demucs.pretrained, demucs.apply; print('demucs import ok')" 2>&1 | tee "out/${CASE}/stems-install.txt"
+          if ! grep -q "demucs import ok" "out/${CASE}/stems-install.txt"; then
+            echo "FALLBACK: audio-separator" | tee -a "out/${CASE}/stems-install.txt"
+            python -m pip install -q "audio-separator[cpu]" 2>&1 | tail -3
+          fi
+
+      - name: Separate voice from music
+        run: |
+          set +e
+          IN="$RUNNER_TEMP/aceout/${CASE}/${CASE}.mp3"
+          mkdir -p "$RUNNER_TEMP/sep"
+          if grep -q "demucs import ok" "out/${CASE}/stems-install.txt"; then
+            python -m demucs --two-stems vocals -n htdemucs -d cpu -j 2 -o "$RUNNER_TEMP/sep" "$IN" 2>&1 | tail -8 | tee -a "out/${CASE}/stems-install.txt"
+            V=$(find "$RUNNER_TEMP/sep" -name 'vocals.wav' | head -1); B=$(find "$RUNNER_TEMP/sep" -name 'no_vocals.wav' | head -1)
+          else
+            cd "$RUNNER_TEMP/sep" && audio-separator "$IN" --model_filename UVR-MDX-NET-Voc_FT.onnx 2>&1 | tail -8 | tee -a "$GITHUB_WORKSPACE/out/${CASE}/stems-install.txt"
+            V=$(find "$RUNNER_TEMP/sep" -iname '*Vocals*.wav' | head -1); B=$(find "$RUNNER_TEMP/sep" -iname '*Instrumental*.wav' | head -1)
+            cd "$GITHUB_WORKSPACE"
+          fi
+          echo "vocals=$V bed=$B" | tee -a "out/${CASE}/stems-install.txt"
+          [ -n "$V" ] && ffmpeg -y -v error -i "$V" -b:a 192k "out/${CASE}/${CASE}-vocals.mp3"
+          case "$CASE" in ffull*) [ -n "$B" ] && ffmpeg -y -v error -i "$B" -b:a 192k "out/${CASE}/${CASE}-bed.mp3";; esac
+          ls -la "out/${CASE}"
+
+      - name: Word timestamps on the voice stem
+        run: |
+          set +e
+          [ -f "out/${CASE}/${CASE}-vocals.mp3" ] && python tests/ace-psalm/stems.py "out/${CASE}/${CASE}-vocals.mp3" "out/${CASE}/${CASE}-words.json"
+
+      - name: Publish into ace-out
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          rm -rf "$RUNNER_TEMP/pub" && mkdir -p "$RUNNER_TEMP/pub" && cd "$RUNNER_TEMP/pub"
+          git init -q
+          git config user.name "ace-bot"; git config user.email "ace-bot@users.noreply.github.com"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}"
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            git -c http.extraheader="$AUTH" fetch -q --depth 1 origin ace-out && git checkout -q -f -B ace-out FETCH_HEAD
+            mkdir -p "./${CASE}"
+            cp -r "$GITHUB_WORKSPACE/out/${CASE}/." "./${CASE}/"
+            git add -A
+            git commit -qm "ace stems ${CASE} run ${GITHUB_RUN_ID}"
+            if git -c http.extraheader="$AUTH" push -q origin ace-out; then echo "pushed on try $i"; break; fi
+            sleep $((RANDOM % 15 + 5))
+          done

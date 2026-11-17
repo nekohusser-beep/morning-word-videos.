@@ -1,0 +1,42 @@
+name: fetch
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "draft release tag to put files on"
+        required: true
+        type: string
+      urls:
+        description: "name|url pairs, one per line"
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      URLS: ${{ inputs.urls }}
+      TAG: ${{ inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Download
+        shell: bash
+        run: |
+          set -e
+          mkdir -p out
+          printf '%s\n' "$URLS" > list.txt
+          while IFS='|' read -r name url; do
+            name="$(echo "$name" | xargs)"; url="$(echo "$url" | xargs)"
+            [ -z "$name" ] && continue
+            echo "fetching $name"
+            curl -fsSL --retry 3 -A "Mozilla/5.0" -o "out/$name" "$url"
+          done < list.txt
+          ls -la out
+      - name: Upload to draft release
+        shell: bash
+        run: |
+          set -e
+          gh release view "$TAG" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || gh release create "$TAG" -R "$GITHUB_REPOSITORY" --draft --title "$TAG" --notes "inbox"
+          gh release upload "$TAG" out/* -R "$GITHUB_REPOSITORY" --clobber

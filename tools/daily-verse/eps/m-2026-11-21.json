@@ -1,0 +1,42 @@
+{
+ "brand": "BLESSED MORNING",
+ "ref": "Psalms 118:24",
+ "kjv": "This is the day which the LORD hath made; we will rejoice and be glad in it.",
+ "lines": [
+  {
+   "say": "Good morning. This one is short. Carry it with you.",
+   "big": "Good morning.",
+   "small": "This one is short. Carry it with you.",
+   "clip": "m-water1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "This is the day which the LORD hath made; we will rejoice and be glad in it. Psalm one eighteen, verse twenty four.",
+   "big": "This is the day which the LORD hath made; we will rejoice and be glad in it.",
+   "small": "Psalm 118:24 (KJV)",
+   "clip": "m-forest1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "If he made today, nothing in it is going to surprise him.",
+   "big": "If he made today, nothing in it is going to surprise him.",
+   "small": "",
+   "clip": "m-eagle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, thank you for today. Help me be glad in it, even the hard parts. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "m-lake2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Have a blessed day. Type amen, and send this to somebody starting their day.",
+   "big": "Have a blessed day.",
+   "small": "Type amen, and send this to somebody starting their day",
+   "clip": "m-birds1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

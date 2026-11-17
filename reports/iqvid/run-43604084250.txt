@@ -1,0 +1,51 @@
+=== KEYWORDS: polycarp ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+polycarp                               | 36 low       |  161.7K |    5.9K |  90% |  10%
+polycarp of smyrna                     | 26 low       |   19.1K |    4.3K |  80% |  30%
+polycarp movie                         | 29 low       |  302.9K |   11.6K |  40% |  30%
+polycarp documentary                   | 24 low       |  127.9K |    4.8K |   0% |  10%
+polycarp writings                      | 10 very low  |    6.1K |    2.2K |   0% |  60%
+polycarp martyrdom                     | 22 low       |   14.3K |    1.7K |  60% |  40%
+polycarp trailer                       | 17 very low  |   13.1K |    1.7K |  50% |  50%
+polycarp audiobook                     | 18 very low  |    6.2K |     119 |  80% |  60%
+polycarp nakamoto                      |  1 very low  |    1.2K |     849 |  40% |  70%
+how to pronounce polycarp              |  7 very low  |     206 |       3 |  80% | 100%
+who was polycarp                       | 25 low       |   15.1K |    4.3K |  50% |  30%
+who is polycarp                        | 24 low       |   15.1K |    4.3K |  30% |  30%
+MATCHING (110): polycarp of smyrna | polycarp movie | polycarp documentary | polycarp writings | polycarp martyrdom | polycarp trailer | polycarp audiobook | polycarp nakamoto | polycarp letters | polycarp epistle to the philippians | how to pronounce polycarp | who was polycarp | who is polycarp | polycarp teachings | polycarp story | who was polycarp of smyrna | polycarp martyr | polycarp biography | the epistle of polycarp | polycarp songs | polycarp and pals | polycarp and ignatius | polycarp and perpetua | polycarp and celestine | polycarp abel mutua | polycarp age | polycarp and brenda nyombo ceremony | polycarp 2015 | brother polycarp | st polycarp band | saint polycarp band | dj polycarp bongo mix | polycarp church father | polycarp christian movie | polycarp celestine ndinda | cta polycarp | st polycarp church | saint polycarp catholic church | st polycarp church smyrna de | st polycarp confirmation
+QUESTIONS (8): how to pronounce polycarp | who was polycarp | who is polycarp | what is polst | who was polycarp of smyrna | who are popes | where is antioch | what is pathos
+RELATED (1): milou polycarpe
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: christian martyrs ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+christian martyrs                      | 40 medium    |  112.7K |   19.8K |  50% |   0%
+christian martyrs animation            | 29 low       |  165.2K |   11.4K |   0% |  10%
+christian martyrs documentary          | 37 low       |  219.8K |   22.6K |   0% |   0%
+christian martyrs rome                 | 30 low       |    170K |    4.9K |  10% |  40%
+christian martyrs today                | 36 low       |  126.3K |   19.4K |   0% |   0%
+christian martyrs edit                 | 37 low       |  314.1K |   20.2K |  10% |  10%
+christian martyrs stories              | 31 low       |   36.4K |   27.8K |  20% |  20%
+christian martyrs 21                   | 34 low       |  219.9K |   19.2K |  10% |   0%
+christian martyrs movie                | 32 low       |  295.3K |    4.5K |   0% |  10%
+why was jesus persecuted               | 33 low       |  231.7K |   12.5K |   0% |  10%
+why are christians persecuted          | 34 low       |   74.9K |    7.1K |   0% |  10%
+MATCHING (45): christian martyrs animation | christian martyrs documentary | christian martyrs rome | christian martyrs today | christian martyrs edit | christian martyrs stories | christian martyrs 21 | christian martyrs movie | christian martyrs in japan | christian martyrs libya | history of christian martyrs | christian martyrs throughout history | the christian martyrs | christian martyrs video | christian martyrs and their stories | 21 christian martyrs animation edit | christian martyrs full movie | christian martyrs in colosseum | coptic christian martyrs | coptic christian martyrs animation | coptic christian martyrs libya | 21 christian martyrs documentary | christian martyrs song | christian martyrs egypt | 21 christian martyrs reddit | early christian martyrs | egyptian christian martyrs | 21 christian martyrs short film | first christian martyrs | famous christian martyrs | christian martyrs history | 21 christian martyrs in hindi | christian martyrs in rome | christian martyrs in libya | japanese christian martyrs | the christian martyrs last prayer | christian martyrs malayalam | christian martyrs of libya | martyrs of christian faith | 21 christian martyrs original
+QUESTIONS (2): why was jesus persecuted | why are christians persecuted
+RELATED (4): christians martyrs | early christian martyrdom movie | christian martyrdom | lebanese christian martyr song
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: burned at the stake ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+burned at the stake                    | 35 low       |   13.1K |    8.6K |  60% |  40%
+burned at the stake scene              | 24 low       |     68K |     615 |   0% |  20%
+burned at the stake 1981               |  5 very low  |      4K |     107 |  20% |  60%
+burned at the stake scene spanish      | 16 very low  |   51.4K |    1.7K |   0% |  30%
+burned at the stake band               |  9 very low  |    2.3K |      15 |  10% |  90%
+burned at the stake crowned by the sea | 10 very low  |     551 |   31.4K |  40% |  90%
+burned at the stake morbid saint       |  9 very low  |    4.1K |       9 |  90% |  80%
+burned at the stake full movie         | 27 low       |      4K |     284 |   0% |  70%
+burned at the stake crowned            |  8 very low  |     118 |     629 |  30% |  80%
+why joan of arc was burned at the stak | 16 very low  |      1K |     485 |  20% |  80%
+MATCHING (51): burned at the stake scene | burned at the stake 1981 | burned at the stake scene spanish | burned at the stake band | burned at the stake crowned by the sea | burned at the stake morbid saint | burned at the stake full movie | burned at the stake crowned | burned at the stake game of thrones | burned at the stake crowned by the sea full movie | why joan of arc was burned at the stake | heretics burned at the stake | got burned at the stake | witch being burned at the stake | anime burned at the stake | anne askew burned at the stake | burned at the stake crowned at the sea | joan of arc burned at the stake | american horror story burned at the stake | latimer and ridley burned at the stake | st joan of arc burned at the stake | burned at the stake crowned by sea | balenciaga burned at the stake | bocchi burned at the stake | bruno burned at the stake | burned at the stake crowned by the sea movie | burned at the stake crowned by the sea hindi | giordano bruno burned at the stake | bocchi the rock burned at the stake | charmed phoebe burned at the stake | esmeralda burned at the stake | witches burned at the stake in europe | shuffles that would get you burned at the stake | hvitserk burned at the stake | silent hill burned at the stake | jan hus burned at the stake | john huss burned at the stake | knights templar burned at the stake | lisa burned at the stake | last of the mohicans burned at the stake
+QUESTIONS (1): why joan of arc was burned at the stake
+RELATED (9): burning at the stake scene | burning at the stake documentary | burning at the stake sound effect | burn at first stake | burning at the stake movie scene | burn at the stake song | versailles burning at the stake witch hunt preparations | burning stake witchfire | burn me at the stake you thought i was a witch
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

@@ -1,0 +1,11 @@
+[
+ {"say": "We're testing a new tool. It shows what people are searching on YouTube, right now.", "big": "TESTING A NEW TOOL", "small": "what are people searching right now?", "kind": "radar"},
+ {"say": "This week, searches for a November prayer jumped thirteen hundred and fifty percent.", "big": "+1,350%", "small": "YouTube searches for a November prayer this week", "kind": "counter"},
+ {"say": "And one Psalm keeps climbing right along with it. Psalm sixty three.", "big": "PSALM 63", "small": "climbing this week too", "kind": "plain"},
+ {"say": "O God, thou art my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is;", "big": "O God, thou art my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is;", "small": "Psalm 63:1", "kind": "verse"},
+ {"say": "David wrote that in the wilderness of Judah, worn out, with nothing around him but dry ground.", "big": "THE WILDERNESS OF JUDAH", "small": "where David wrote it", "kind": "desert"},
+ {"say": "So pray this with me for November. Lord, I'm coming to you first this month, before the job and before the bills.", "big": "LORD, I'M COMING TO YOU FIRST", "small": "this month, before the job and the bills", "kind": "light"},
+ {"say": "Where it feels dry, you're my water. Where I'm tired, you're my strength.", "big": "YOU'RE MY WATER", "small": "where it feels dry", "kind": "water"},
+ {"say": "Keep my family close to you, and keep me close too. In Jesus' name, amen.", "big": "IN JESUS' NAME, AMEN", "small": "", "kind": "light"},
+ {"say": "If you prayed it, type amen. And tell me, did the tool pick right?", "big": "TYPE AMEN", "small": "did the tool pick right?", "kind": "end"}
+]

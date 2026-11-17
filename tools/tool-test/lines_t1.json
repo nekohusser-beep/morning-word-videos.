@@ -1,0 +1,13 @@
+[
+ {"say": "We're testing a new tool, to see if it can make this video go viral.", "big": "TESTING A NEW TOOL", "small": "can it make this video go viral?", "kind": "hook"},
+ {"say": "It reads what America is searching, right now.", "big": "WHAT AMERICA IS SEARCHING", "small": "right now", "kind": "radar"},
+ {"say": "In the last twenty four hours, it flagged this. More than fifty thousand people searched the government's heavy snow map.", "big": "50,000+", "small": "searched the government's heavy snow map in 24 hours", "kind": "counter"},
+ {"say": "So here's what that map actually says.", "big": "WHAT THE MAP SAYS", "small": "", "kind": "plain"},
+ {"say": "The Climate Prediction Center's week two outlook, put out November fifth, shows a moderate risk of heavy snow in the West Coast mountains.", "big": "MODERATE RISK", "small": "heavy snow in the West Coast mountains", "kind": "map"},
+ {"say": "Friday the thirteenth, through Sunday the fifteenth.", "big": "FRI NOV 13 - SUN NOV 15", "small": "", "kind": "dates"},
+ {"say": "Lower down, most of it should come down as rain. And the coasts of Washington, Oregon and California carry a moderate risk of high winds.", "big": "HIGH WINDS", "small": "Washington, Oregon and California coasts", "kind": "wind"},
+ {"say": "Closer in, a cold front hits the Washington Cascades this weekend. Snow levels drop to around four to five thousand feet by Sunday morning.", "big": "4,000 - 5,000 FT", "small": "snow levels in the Washington Cascades by Sunday morning", "kind": "mountain"},
+ {"say": "Most of the rest of the country leans warm.", "big": "EVERYWHERE ELSE", "small": "leans warm", "kind": "warm"},
+ {"say": "Want to check your own area? Search, C P C hazards outlook. It's free.", "big": "SEARCH: CPC HAZARDS OUTLOOK", "small": "free and official", "kind": "search"},
+ {"say": "Now. Did the tool pick a winner? Tell me where you're watching from. We're counting every view.", "big": "DID THE TOOL PICK A WINNER?", "small": "comment where you're watching from", "kind": "end"}
+]

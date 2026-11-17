@@ -1,0 +1,79 @@
+name: voice-lab
+# Free voice tests for Derrick: Kokoro / Chatterbox sources, Seed-VC into a reference voice, ECAPA speaker-match score.
+# Dispatch on a branch that holds vl/ (ref.wav, lines.txt, held/*.wav, scripts). Outputs land in the draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "vlab"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t voice-lab -n "voice-lab outputs"
+
+  kokoro:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg espeak-ng >/dev/null
+          pip install -q kokoro-onnx soundfile numpy
+          curl -sSL -o kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sSL -o voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+          python vl/kokoro_src.py
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/K_*.wav --clobber -R "$GITHUB_REPOSITORY"
+
+  chatterbox:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
+          pip install -q chatterbox-tts
+          python vl/cb_src.py
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/C_*.wav --clobber -R "$GITHUB_REPOSITORY"
+
+  vc:
+    needs: [kokoro, chatterbox]
+    if: ${{ !cancelled() && needs.kokoro.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        clip: [K_1, K_2, C_1, C_2]
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
+      - env: {GH_TOKEN: "${{ github.token }}", TAG: "${{ inputs.tag }}", CLIP: "${{ matrix.clip }}", GH_REPO: "${{ github.repository }}"}
+        run: bash vl/vc_one.sh
+
+  score:
+    needs: [vc]
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q speechbrain soundfile numpy praat-parselmouth faster-whisper==1.0.3
+      - env: {GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}"}
+        run: |
+          mkdir -p in
+          for f in K_1 K_2 C_1 C_2 V_K_1 V_K_2 V_C_1 V_C_2; do gh release download "${{ inputs.tag }}" -p "$f.wav" -D in --clobber || true; done
+          ls -la in
+          python vl/score.py
+          cat metrics.json
+          gh release upload "${{ inputs.tag }}" metrics.json voice-test-block4.mp3 --clobber

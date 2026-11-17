@@ -1,0 +1,57 @@
+name: ace-check
+# Re-run the Whisper word-check (tests/ace-psalm/check.py) on a finished ACE-Step clip already on branch ace-out, and push <case>/<case>-check.txt back.
+on:
+  workflow_dispatch:
+    inputs:
+      case:
+        description: "short or full"
+        required: true
+        default: "short"
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CASE: ${{ inputs.case }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
+          python -m pip install -q faster-whisper
+      - name: Get the clip from ace-out
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          mkdir -p "out/${CASE}"
+          git -c http.extraheader="$AUTH" fetch -q --depth 1 origin ace-out
+          git show "FETCH_HEAD:${CASE}/${CASE}.mp3" > "out/${CASE}/${CASE}.mp3"
+          ls -l "out/${CASE}"
+      - name: Word-check
+        run: python tests/ace-psalm/check.py "$CASE" "out/${CASE}"
+      - name: Publish result to ace-out
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          AUTH="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          rm -rf "$RUNNER_TEMP/pub" && mkdir -p "$RUNNER_TEMP/pub" && cd "$RUNNER_TEMP/pub"
+          git init -q
+          git config user.name "ace-bot"; git config user.email "ace-bot@users.noreply.github.com"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}"
+          for i in 1 2 3 4 5 6 7 8; do
+            git -c http.extraheader="$AUTH" fetch -q --depth 1 origin ace-out && git checkout -q -f -B ace-out FETCH_HEAD
+            mkdir -p "./${CASE}"
+            cp "$GITHUB_WORKSPACE/out/${CASE}/${CASE}-check.txt" "./${CASE}/" 
+            git add -A
+            git commit -qm "ace-check ${CASE} run ${GITHUB_RUN_ID}"
+            if git -c http.extraheader="$AUTH" push -q origin ace-out; then echo "pushed on try $i"; break; fi
+            sleep $((RANDOM % 12 + 4))
+          done

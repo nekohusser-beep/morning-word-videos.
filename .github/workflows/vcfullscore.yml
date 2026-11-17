@@ -1,0 +1,28 @@
+name: vcfullscore
+# ECAPA speaker match + block-to-block consistency for raw vs Seed-VC converted blocks of one vcfull run. Result -> branch vcfull-out.
+on:
+  workflow_dispatch:
+    inputs:
+      rid: {description: "vcfull run id", required: true}
+permissions:
+  contents: write
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch==2.5.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "speechbrain==1.0.2" "huggingface_hub==0.23.5" "numpy<2" soundfile
+      - run: |
+          git fetch -q --depth 1 origin vcfull-out
+          mkdir -p conv && for f in $(git ls-tree -r --name-only FETCH_HEAD "tmp/vcfull/out-${{ inputs.rid }}/" | grep 'src.*wav$'); do git show FETCH_HEAD:"$f" > "conv/$(basename $f)"; done
+          ls conv | wc -l
+          python tmp/vcfull/score_full.py tmp/vcfull conv tmp/vcfull > scores.json 2> score.err || tail -c 2500 score.err
+          mkdir -p "tmp/vcfull/score-${{ inputs.rid }}"; cp scores.json "tmp/vcfull/score-${{ inputs.rid }}/scores.json"; tail -c 2500 score.err > "tmp/vcfull/score-${{ inputs.rid }}/err.txt"
+          git config user.name "vc-bot"; git config user.email "noreply@github.com"
+          git checkout -q -B vcfull-out FETCH_HEAD
+          git add -f "tmp/vcfull/score-${{ inputs.rid }}"; git commit -qm "vcfullscore ${{ inputs.rid }}" || true
+          for i in 1 2 3 4 5 6; do git push -q origin vcfull-out && break; git pull -q --rebase origin vcfull-out; done

@@ -1,0 +1,23 @@
+name: stitch-seed
+# Test helper: builds a draft release for the stitch workflow from the approved Psalm 118:24 clips (release w2d1). No credits spent.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release to create", required: true, default: "stitch-test"}
+permissions:
+  contents: write
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          T=$'\t'
+          bash tools/rel.sh down w2d1 src "${T}(t00|t01|t02|t03)\.mp4${T}"
+          mkdir -p up
+          cp src/t00.mp4 up/clip01.mp4; cp src/t01.mp4 up/clip02.mp4; cp src/t02.mp4 up/clip03.mp4; cp src/t03.mp4 up/clip04.mp4
+          cp tools/stitch/test/script.json up/script.json
+          for old in $(gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" --jq ".[]|select(.name==\"${{ inputs.tag }}\")|.id"); do gh api -X DELETE "repos/$GITHUB_REPOSITORY/releases/$old"; done
+          bash tools/rel.sh ensure "${{ inputs.tag }}" > /dev/null
+          bash tools/rel.sh up "${{ inputs.tag }}" up/*

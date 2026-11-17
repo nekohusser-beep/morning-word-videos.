@@ -1,0 +1,12 @@
+{"lines": ["I work a full-time shift. This channel still posts every day.",
+  "Six hundred forty-five videos. Twenty-seven hundred subscribers.",
+  "Automation writes the scripts, builds the videos, and schedules them.",
+  "Now I set up the same kind of automation for local businesses.",
+  "Comment AGENT, or call or text two five two, five four three, nine oh one four."],
+ "endcard": "/home/claude/kk/endcard.png",
+ "shots": [
+  {"until_line": 0, "image": "/home/claude/morning-word-videos./tmp/rec/proof2/bphome-full.png", "pan": [0, 0], "zoom": [1.0, 1.12], "cy": 0.3, "hook": ["I work a full-time shift.", "This channel posts daily."]},
+  {"until_line": 1, "image": "/home/claude/morning-word-videos./tmp/rec/proof2/bphome-full.png", "pan": [0, 0], "zoom": [1.5, 2.1], "cx": 0.4, "cy": 0.255, "label": "REAL PUBLIC NUMBERS", "label_y": 90},
+  {"until_line": 2, "image": "/home/claude/morning-word-videos./tmp/rec/proof2/bpshorts-full.png", "pan": [0.02, 0.2], "zoom": [1.0, 1.05], "label": "BUILT + SCHEDULED BY MY AUTOMATION", "label_y": 90},
+  {"until_line": 3, "image": "/home/claude/morning-word-videos./tmp/rec/proof3/agent-full.png", "pan": [0, 0.06], "zoom": [1.0, 1.06]},
+  {"until_line": 4}]}

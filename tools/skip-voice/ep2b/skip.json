@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "skip",
+  "text": "Alright. Everybody freeze. Somebody in this break room is a thief.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "Two stars?! My mama been making that pudding since nineteen ninety four!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 24
+ },
+ {
+  "kind": "skip",
+  "text": "Don't talk about my mama's pudding!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 26
+ },
+ {
+  "kind": "skip",
+  "text": "You found my wallet. And you kept it?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 36
+ }
+]

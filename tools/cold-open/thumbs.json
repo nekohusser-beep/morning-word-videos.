@@ -1,0 +1,84 @@
+[
+ {
+  "src": "Wednesday-Saved-Or-Just-Scared.mp4",
+  "t": 356,
+  "part": 1,
+  "series": "Heaven Without God",
+  "l1": "SAVED",
+  "l2": "OR JUST SCARED?",
+  "out": "thumbs/Wednesday-1-Saved-Or-Just-Scared.jpg",
+  "tint": [
+   190,
+   40,
+   10
+  ],
+  "y": 190,
+  "flip": true,
+  "bright": 1.5
+ },
+ {
+  "src": "Wednesday-What-Makes-Hell-Hell.mp4",
+  "t": 351,
+  "part": 2,
+  "series": "Heaven Without God",
+  "l1": "WHAT MAKES",
+  "l2": "HELL, HELL?",
+  "out": "thumbs/Wednesday-2-What-Makes-Hell-Hell.jpg",
+  "tint": [
+   190,
+   40,
+   10
+  ],
+  "tint_amt": 0.05,
+  "y": 200
+ },
+ {
+  "src": "Wednesday-I-Never-Knew-You.mp4",
+  "t": 20,
+  "part": 3,
+  "series": "Heaven Without God",
+  "l1": "\"I NEVER",
+  "l2": "KNEW YOU\"",
+  "out": "thumbs/Wednesday-3-I-Never-Knew-You.jpg",
+  "tint": [
+   150,
+   20,
+   20
+  ],
+  "y": 200,
+  "flip": true,
+  "bright": 1.6
+ },
+ {
+  "src": "Wednesday-Locked-From-The-Inside.mp4",
+  "t": 281,
+  "part": 4,
+  "series": "Heaven Without God",
+  "l1": "LOCKED",
+  "l2": "FROM THE INSIDE",
+  "out": "thumbs/Wednesday-4-Locked-From-The-Inside.jpg",
+  "tint": [
+   170,
+   30,
+   10
+  ],
+  "y": 200
+ },
+ {
+  "src": "Wednesday-He-Took-The-Forsaking.mp4",
+  "t": 67,
+  "part": 5,
+  "series": "Heaven Without God",
+  "l1": "HE TOOK",
+  "l2": "THE FORSAKING",
+  "out": "thumbs/Wednesday-5-He-Took-The-Forsaking.jpg",
+  "tint": [
+   255,
+   190,
+   90
+  ],
+  "tint_amt": 0.12,
+  "y": 200,
+  "bright": 1.2
+ }
+]

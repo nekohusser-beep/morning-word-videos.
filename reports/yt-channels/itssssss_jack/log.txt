@@ -1,0 +1,20 @@
+listed 430 {'videos': 213, 'shorts': 217, 'streams': 0}
+0 done 0 full
+25 done 0 full
+50 done 0 full
+75 done 0 full
+100 done 0 full
+125 done 0 full
+150 done 0 full
+175 done 0 full
+200 done 0 full
+225 done 0 full
+250 done 0 full
+275 done 0 full
+300 done 0 full
+325 done 0 full
+350 done 0 full
+375 done 0 full
+400 done 0 full
+425 done 0 full
+TOTAL 430 full metadata 0

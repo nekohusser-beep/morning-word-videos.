@@ -1,0 +1,20 @@
+audio ok; spectral centroid Hz 511
+shot 2 done
+shot 0 done
+shot 4 done
+shot 6 done
+shot 1 done
+shot 3 done
+shot 5 done
+shot 8 done
+shot 7 done
+frames in state files 1185 expected 1185
+max hand step 19.1 foot skate max 0
+decoded 1185
+lowest 1 s motion 0.11 brightness 8.0 125.4
+sound: -18.7 LUFS, range 3.8 LU, peak -1.1 dBFS. Target about -17 LUFS, peak under -1.
+view contact_sheet.jpg before delivering
+ISSUES 22
+  22 x still window at 1.0s mean 0.18 frozen 0% ... still window at 37.5s mean 0.11 frozen 0%
+OUTPUT /home/claude/skip2/skip2.mp4
+DONE

@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "skip",
+  "text": "The lunch in the fridge. My bag. My name on it. In Sharpie. Two times.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "skip",
+  "text": "There's barbecue sauce on your eyebrow.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "skip",
+  "text": "Meal prep? That's my mama's chicken. She cut the crust off my sandwich, because I asked her to. And your sandwich? No crust.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "skip",
+  "text": "Mid?! So you ate it, and then you gave it a review?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 20
+ },
+ {
+  "kind": "skip",
+  "text": "Hold up. Where did that forty dollars come from?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 26
+ },
+ {
+  "kind": "skip",
+  "text": "So you used my own money, to pay me back?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 30
+ }
+]

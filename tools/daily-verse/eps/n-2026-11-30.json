@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 61:2",
+ "kjv": "From the end of the earth will I cry unto thee, when my heart is overwhelmed: lead me to the rock that is higher than I.",
+ "audio_bible": "https://www.youtube.com/watch?v=aXGIzNACPO8",
+ "audio_range": "57–78",
+ "lines": [
+  {
+   "say": "Overwhelmed tonight? This is for you.",
+   "big": "Overwhelmed tonight",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "From the end of the earth will I cry unto thee,",
+   "big": "From the end of the earth will I cry unto thee,",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "when my heart is overwhelmed: lead me to the rock that is higher than I. Psalm sixty one, verse two.",
+   "big": "when my heart is overwhelmed: lead me to the rock that is higher than I.",
+   "small": "Psalm 61:2 (KJV)",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "When your heart is overwhelmed, ask him to lead you somewhere higher than the problem.",
+   "big": "When your heart is overwhelmed, ask him to lead you somewhere higher than the problem.",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, lead me to the rock that is higher than I. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 57 through 78, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 57–78, read slowly. Link in the description.",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

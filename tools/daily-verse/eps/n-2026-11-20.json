@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 4:4",
+ "kjv": "Stand in awe, and sin not: commune with your own heart upon your bed, and be still. Selah.",
+ "audio_bible": "https://www.youtube.com/watch?v=BFwsZGyPw70",
+ "audio_range": "1–31",
+ "lines": [
+  {
+   "say": "Lying awake tonight with a lot on your mind? Hear this.",
+   "big": "Lying awake tonight with a lot on your mind",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Stand in awe, and sin not: commune with your own heart upon your bed, and be still. Selah. Psalm four, verse four.",
+   "big": "Stand in awe, and sin not: commune with your own heart upon your bed, and be still. Selah.",
+   "small": "Psalm 4:4 (KJV)",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Talk to him about it on your bed, then let it be still.",
+   "big": "Talk to him about it on your bed, then let it be still.",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I'm handing you what's on my heart tonight. Make me still. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 1 through 31, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 1–31, read slowly. Link in the description.",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

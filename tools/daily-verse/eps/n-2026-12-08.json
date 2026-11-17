@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 107:29",
+ "kjv": "He maketh the storm a calm, so that the waves thereof are still.",
+ "audio_bible": "https://www.youtube.com/watch?v=JJQjAr3xG0g",
+ "audio_range": "105–124",
+ "lines": [
+  {
+   "say": "Storm going on in your life tonight? Hear this.",
+   "big": "Storm going on in your life tonight",
+   "small": "",
+   "clip": "n-candle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "He maketh the storm a calm, so that the waves thereof are still. Psalm one seven, verse twenty nine.",
+   "big": "He maketh the storm a calm, so that the waves thereof are still.",
+   "small": "Psalm 107:29 (KJV)",
+   "clip": "n-ocean0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "He can calm the storm, or calm you in the middle of it.",
+   "big": "He can calm the storm, or calm you in the middle of it.",
+   "small": "",
+   "clip": "n-stars1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, make the storm a calm tonight. Give me peace. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 105 through 124, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 105–124, read slowly. Link in the description.",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  }
+ ]
+}

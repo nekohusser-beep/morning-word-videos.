@@ -1,0 +1,22 @@
+name: pd-art
+on:
+  workflow_dispatch:
+    inputs:
+      per_query: {description: "results per search query", required: false, default: "30"}
+      min_width: {description: "minimum source width in px", required: false, default: "2400"}
+      tag: {description: "release tag", required: false, default: "pdart"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/pd-art/fetch.py "${{ inputs.per_query }}" "${{ inputs.min_width }}" 2>&1 | tee fetch.log
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          tar -cf pdart.tar out
+          du -sh out pdart.tar
+          gh release view "${{ inputs.tag }}" >/dev/null 2>&1 || gh release create "${{ inputs.tag }}" --draft -t pdart -n "public-domain ceiling art"
+          gh release upload "${{ inputs.tag }}" pdart.tar out/manifest.json fetch.log --clobber

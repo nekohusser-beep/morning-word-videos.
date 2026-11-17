@@ -1,0 +1,10 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+load 39 s
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/pocket_tts/models/tts_model.py", line 1020, in get_state_for_audio_prompt
+    raise ValueError(VOICE_CLONING_UNSUPPORTED)
+ValueError: We could not download the weights for the model with voice cloning, but you're trying to use voice cloning. Without voice cloning, you can use our catalog of voices ['cosette', 'marius', 'javert', 'alba', 'jean', 'anna', 'vera', 'fantine', 'charles', 'paul', 'eponine', 'azelma', 'george', 'mary', 'jane', 'michael', 'eve', 'bill_boerst', 'peter_yearsley', 'stuart_bell', 'caro_davy', 'giovanni', 'lola', 'juergen', 'rafael', 'daan', 'estelle']. If you want access to the model with voice cloning, go to https://huggingface.co/kyutai/pocket-tts and accept the terms, then make sure you're logged in locally with `uvx hf auth login`.

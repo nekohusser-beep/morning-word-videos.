@@ -1,0 +1,1 @@
+https://www.etsy.com/oauth/connect?response_type=code&redirect_uri=https%3A%2F%2Fcloud.anythingmcp.com%2Fapi%2Fmcp-oauth%2Fcallback&scope=email_r%20shops_r%20listings_r%20listings_w%20listings_d%20transactions_r&client_id=e589x6rqmm1xebohpq6ms6qv&state=1LfUvC1pptBAyZeR&code_challenge=ZXWuKgLiTzAjSu6N3ybTAasWDlCmSBWEyKqm6H0-g9s&code_challenge_method=S256

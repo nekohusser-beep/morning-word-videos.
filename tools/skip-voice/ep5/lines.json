@@ -1,0 +1,212 @@
+[
+ {
+  "kind": "skip",
+  "text": "Dre. You smell that? That's the weekend.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "Smells like burnt popcorn to me.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "Nah. That's freedom. Last night of the week. I already told my couch I'm coming home.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "dre",
+  "text": "Skip. What day do you think it is.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "skip",
+  "text": "Friday. Payday. Best day of the week.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "dre",
+  "text": "It's Tuesday.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "skip",
+  "text": "No. No, no, no. Don't play with me like that.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "dre",
+  "text": "It's only Tuesday. Check your phone.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "skip",
+  "text": "My phone says Tuesday. My phone is wrong.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "dre",
+  "text": "Your phone, my phone, and the calendar on the wall. All wrong?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "skip",
+  "text": "That calendar is from last year!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 10
+ },
+ {
+  "kind": "dre",
+  "text": "You wrote Friday on it. In pen. In Tuesday's box.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 11
+ },
+ {
+  "kind": "skip",
+  "text": "That was faith.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ },
+ {
+  "kind": "dre",
+  "text": "That was vandalism.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 13
+ },
+ {
+  "kind": "skip",
+  "text": "So you telling me I got three more nights?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 14
+ },
+ {
+  "kind": "dre",
+  "text": "Three more nights.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 15
+ },
+ {
+  "kind": "skip",
+  "text": "I wore my good shoes to work. My church shoes.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 16
+ },
+ {
+  "kind": "dre",
+  "text": "I noticed. You been sliding across this floor all night.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 17
+ },
+ {
+  "kind": "skip",
+  "text": "I don't want Wednesday. Wednesday don't even know what it wants to be.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 18
+ },
+ {
+  "kind": "dre",
+  "text": "Wednesday is a hill. You climb it.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 19
+ },
+ {
+  "kind": "skip",
+  "text": "I don't want a hill. I want a couch.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 20
+ },
+ {
+  "kind": "dre",
+  "text": "Look on the bright side. You picked up overtime. Thursday and Friday.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 21
+ },
+ {
+  "kind": "skip",
+  "text": "Overtime? When did I do that?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 22
+ },
+ {
+  "kind": "dre",
+  "text": "Yesterday. You were real excited. You said it was Friday.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 23
+ },
+ {
+  "kind": "skip",
+  "text": "Okay. Okay. New plan. I'm treating tonight like Friday anyway.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 24
+ },
+ {
+  "kind": "dre",
+  "text": "What does that mean?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 25
+ },
+ {
+  "kind": "skip",
+  "text": "It means pizza. And you're buying.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 26
+ },
+ {
+  "kind": "dre",
+  "text": "I only buy pizza on Fridays.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 27
+ },
+ {
+  "kind": "skip",
+  "text": "Perfect. Then today is Friday.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 28
+ },
+ {
+  "kind": "dre",
+  "text": "Man. I walked right into that.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 29
+ }
+]

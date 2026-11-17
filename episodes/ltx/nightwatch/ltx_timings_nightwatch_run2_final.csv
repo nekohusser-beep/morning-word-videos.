@@ -1,0 +1,6 @@
+scene,total_wall_s,final_attempt_gen_s,attempts,peak_gpu0_mib_sampled_20s,peak_ram_gb
+s1_night_lake,746,525.2,1,12617,28
+s2_watchtower,755,525.2,1,12621,29
+s3_lantern_wall,756,525.2,1,12589,28
+s4_first_light,757,525.2,1,12621,28
+s5_sunrise,755,525.2,1,12589,29

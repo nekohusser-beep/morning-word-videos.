@@ -1,0 +1,41 @@
+name: phonemes
+# Prints the PHONES actually spoken (wav2vec2 + espeak), so a mispronounced word shows up as wrong sounds
+# even when Whisper's language model guesses the right spelling. Use on the verse block of every clip.
+on:
+  workflow_dispatch:
+    inputs:
+      path: {description: "space-separated repo paths of 16k mono wav files", required: true}
+      tag: {description: "release tag", required: true, default: "inbox"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get install -y espeak-ng >/dev/null
+          pip install phonemizer soundfile numpy torch transformers --extra-index-url https://download.pytorch.org/whl/cpu >/dev/null
+      - run: |
+          python - <<'PY'
+          import json, soundfile as sf, torch
+          from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
+          proc = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-lv-60-espeak-cv-ft")
+          model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-lv-60-espeak-cv-ft").eval()
+          out = {}
+          for p in "${{ inputs.path }}".split():
+              a, sr = sf.read(p)
+              if a.ndim > 1: a = a.mean(1)
+              parts = []
+              for i in range(0, len(a), 16000 * 15):
+                  x = proc(a[i:i + 16000 * 15], sampling_rate=16000, return_tensors="pt").input_values
+                  with torch.no_grad(): ids = model(x).logits.argmax(-1)
+                  parts.append(proc.batch_decode(ids)[0])
+              out[p] = {"words": [{"text": " ".join(parts), "start": 0, "end": 0}], "text": " ".join(parts)}
+          json.dump(out, open("transcript.json", "w"))
+          PY
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh release view "${{ inputs.tag }}" || gh release create "${{ inputs.tag }}" --draft -t inbox -n inbox
+          cp transcript.json "phones-${{ github.run_id }}.json"
+          gh release upload "${{ inputs.tag }}" "phones-${{ github.run_id }}.json" --clobber

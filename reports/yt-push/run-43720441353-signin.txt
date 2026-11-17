@@ -1,0 +1,2 @@
+SIGN-IN NEEDED: open https://www.google.com/device and type ZVX-QMP-SHWL (good for 30 minutes)
+signed in and saved: later runs need no tap

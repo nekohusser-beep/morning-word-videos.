@@ -1,0 +1,18 @@
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/root/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/kaggle/working/LatentSync/scripts/inference.py", line 20, in <module>
+    from latentsync.models.unet import UNet3DConditionModel
+  File "/kaggle/working/LatentSync/latentsync/models/unet.py", line 27, in <module>
+    from ..utils.util import zero_rank_log
+  File "/kaggle/working/LatentSync/latentsync/utils/util.py", line 20, in <module>
+    import matplotlib.pyplot as plt
+  File "/kaggle/working/lsenv/lib/python3.10/site-packages/matplotlib/__init__.py", line 1299, in <module>
+    rcParams['backend'] = os.environ.get('MPLBACKEND')
+  File "/kaggle/working/lsenv/lib/python3.10/site-packages/matplotlib/__init__.py", line 774, in __setitem__
+    raise ValueError(f"Key {key}: {ve}") from None
+ValueError: Key backend: 'module://matplotlib_inline.backend_inline' is not a valid value for backend; supported values are ['gtk3agg', 'gtk3cairo', 'gtk4agg', 'gtk4cairo', 'macosx', 'nbagg', 'notebook', 'qtagg', 'qtcairo', 'qt5agg', 'qt5cairo', 'tkagg', 'tkcairo', 'webagg', 'wx', 'wxagg', 'wxcairo', 'agg', 'cairo', 'pdf', 'pgf', 'ps', 'svg', 'template']

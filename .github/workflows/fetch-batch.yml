@@ -1,0 +1,27 @@
+name: fetch-batch
+# Download a list of public URLs on the runner into an orphan temp branch (delete it after pulling).
+# inputs: branch = temp branch; urls = one URL per line. Files land at files/<basename>.
+on:
+  workflow_dispatch:
+    inputs:
+      branch: {description: "temp branch (delete after pulling)", required: true}
+      urls: {description: "one URL per line", required: true}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          BRANCH: ${{ inputs.branch }}
+          URLS: ${{ inputs.urls }}
+        run: |
+          set -e
+          git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true
+          mkdir -p files
+          while IFS= read -r u; do [ -z "$u" ] && continue; curl -fsSL --retry 3 -A "Mozilla/5.0" -o "files/$(basename "$u")" "$u" || echo "FAIL $u"; done <<< "$URLS"
+          ls -la files
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add files; git commit -m "fetch-batch"; git push -f origin "$BRANCH"

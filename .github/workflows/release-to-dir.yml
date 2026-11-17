@@ -1,0 +1,23 @@
+name: release-to-dir
+# Copies every u###.wav (and logs) from a release into <dir>/final on main, so cloud sessions can pull them with git.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "release tag", required: true}
+      dir: {description: "repo folder, e.g. tools/skip-voice/ep3", required: true}
+permissions:
+  contents: write
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p "${{ inputs.dir }}/final"
+          gh release download "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" -D "${{ inputs.dir }}/final" --clobber
+          ls "${{ inputs.dir }}/final" | head -80
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add "${{ inputs.dir }}/final"
+          git commit -qm "voices ${{ inputs.tag }} -> ${{ inputs.dir }}/final" || exit 0
+          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 4; done

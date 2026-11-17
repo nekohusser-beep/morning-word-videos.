@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 63:6",
+ "kjv": "When I remember thee upon my bed, and meditate on thee in the night watches.",
+ "audio_bible": "https://www.youtube.com/watch?v=aXGIzNACPO8",
+ "audio_range": "57–78",
+ "lines": [
+  {
+   "say": "Lying awake tonight? Use the time this way.",
+   "big": "Lying awake tonight",
+   "small": "",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "When I remember thee upon my bed, and meditate on thee in the night watches. Psalm sixty three, verse six.",
+   "big": "When I remember thee upon my bed, and meditate on thee in the night watches.",
+   "small": "Psalm 63:6 (KJV)",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "If you can't sleep, think on him instead of the problem.",
+   "big": "If you can't sleep, think on him instead of the problem.",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I'll remember you on my bed tonight. Give me rest. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 57 through 78, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 57–78, read slowly. Link in the description.",
+   "clip": "n-ocean1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

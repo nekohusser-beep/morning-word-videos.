@@ -1,0 +1,12 @@
+{"lines": ["Your customers look you up on their phone first.",
+  "This is a real site I built. One page, a call button, a text button.",
+  "This one is mine. It shows what my automation does, in plain words.",
+  "If your site is old, or you don't have one, I can build you one like this.",
+  "Comment SITE, or call or text two five two, five four three, nine oh one four."],
+ "endcard": "/home/claude/kk/endcard.png",
+ "shots": [
+  {"until_line": 0, "image": "/home/claude/morning-word-videos./tmp/rec/proof3/famous-full.png", "pan": [0, 0], "zoom": [1.15, 1.0], "cy": 0.3, "hook": ["Your customers look", "you up on their phone."]},
+  {"until_line": 1, "image": "/home/claude/morning-word-videos./tmp/rec/proof3/famous-full.png", "pan": [0, 0.1], "zoom": [1.0, 1.05], "label": "REAL SITE I BUILT", "label_y": 90},
+  {"until_line": 2, "image": "/home/claude/morning-word-videos./tmp/rec/proof3/agent-full.png", "pan": [0, 0.07], "zoom": [1.0, 1.06], "label": "REAL SITE I BUILT", "label_y": 90},
+  {"until_line": 3, "image": "/home/claude/morning-word-videos./tmp/rec/proof3/hub-full.png", "pan": [0, 0.6], "zoom": [1.03, 1.1]},
+  {"until_line": 4}]}

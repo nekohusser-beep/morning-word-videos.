@@ -1,0 +1,67 @@
+=== KEYWORDS: adhd trying to focus ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd trying to focus                   | 44 medium    |    1.1M |   31.7K |   0% |   0%
+adhd ways to focus                     | 43 medium    |  918.2K |   12.9K |   0% |   0%
+can't focus adhd                       | 41 medium    |  365.8K |    7.9K |  10% |  10%
+adhd hard to focus                     | 41 medium    |    1.3M |      9K |   0% |   0%
+how adhd feels like                    | 41 medium    |  621.7K |    5.1K |   0% |  10%
+how to concentrate when you have adhd  | 40 medium    |    1.1M |     11K |   0% |   0%
+how to focus when you have adhd        | 41 medium    |    1.3M |    8.5K |   0% |   0%
+MATCHING (0): 
+QUESTIONS (9): how adhd feels like | how to concentrate when you have adhd | how to focus when you have adhd | when adhd kicks in | when you have adhd meme | when adhd kicks in at night | what is it like with adhd | how to focus if you have adhd | how to focus if u have adhd
+RELATED (6): adhd ways to focus | can't focus adhd | adhd hard to focus | could i have adhd | i have adhd podcast | adhd video for focus
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd cleaning ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd cleaning                          | 43 medium    |  295.6K |    4.3K |  40% |   0%
+adhd cleaning tips                     | 39 low       |  450.7K |    4.8K |  10% |   0%
+adhd cleaning motivation               | 37 low       |  433.1K |    3.6K |  10% |   0%
+adhd cleaning music                    | 44 medium    |  587.5K |     19K |  10% |   0%
+adhd cleaning planner                  | 32 low       |   23.3K |    1.7K |  30% |  40%
+adhd cleaning hacks                    | 37 low       |  178.3K |    2.4K |  10% |   0%
+adhd cleaning playlist                 | 40 medium    |  295.9K |   15.2K |   0% |  20%
+how to adhd cleaning                   | 39 low       |  460.8K |      5K |   0% |  10%
+how to use adhd cleaning planner       | 30 low       |   23.3K |    1.7K |  10% |  40%
+MATCHING (76): adhd cleaning tips | adhd cleaning motivation | adhd cleaning music | adhd cleaning planner | adhd cleaning hacks | adhd cleaning playlist | adhd cleaning and organizing | adhd cleaning body double | adhd cleaning schedule | adhd cleaning planner review | how to adhd cleaning | how to use adhd cleaning planner | adhd cleaning help | cleaning with me adhd | cleaning with adhd funny | cleaning when you have adhd | deep cleaning with adhd | cleaning for people with adhd | adhd cleaning app | adhd and cleaning | adhd and cleaning house | adhd and cleaning room | adhd cleaning video | adhd cleaning bedroom | adhd cleaning book | adhd bathroom cleaning | adhd cleaning podcast | adhd cleaning checklist | adhd cleaning clutterbug | adhd chatter cleaning | adhd car cleaning | adhd deep cleaning | adhd depression cleaning | adhd cleaning funny | asmr adhd ear cleaning | adhd cleaning focus music | adhd focus cleaning | adhd music for cleaning | adhd hacks for cleaning | adhd tips for cleaning
+QUESTIONS (2): how to adhd cleaning | how to use adhd cleaning planner
+RELATED (8): clean your room adhd | adhd tidying | adhd clean joyner lucas | adhd clean kendrick lamar | adhd clean lyrics | adhd clean my room with me | adhd clean version | adhd clean with me real time
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd forgetting what i was saying ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd forgetting what i was saying      | 37 low       |    550K |    6.8K |   0% |  30%
+adhd and forgetting words              | 36 low       |    201K |    1.9K |   0% |  20%
+adhd forgetting people exist           | 15 very low  |    5.3K |    1.1K |   0% |  60%
+when my adhd gets me into trouble      | 42 medium    |    1.3M |   10.2K |  10% |   0%
+how to tell that you have adhd         | 39 low       |    451K |    5.4K |  10% |  10%
+when my adhd gets me in trouble        | 44 medium    |    2.2M |   16.4K |  10% |   0%
+MATCHING (0): 
+QUESTIONS (5): when my adhd gets me into trouble | how to tell that you have adhd | when my adhd gets me in trouble | why you asking all these question | when adhd kicks in
+RELATED (7): adhd and forgetting words | adhd forgetting people exist | could i have adhd | adhd forgetting words | adhd forgetting things | adhd saying the wrong thing | adhd forgetting to eat
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd paying bills ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd paying bills                      | 12 very low  |     907 |     231 |  20% |  60%
+adhd financial problems                | 32 low       |   47.7K |    2.6K |  10% |  20%
+how can i deal with adhd               | 40 medium    |    979K |    7.2K |   0% |   0%
+how i deal with adhd                   | 40 medium    |  893.1K |      7K |  10% |   0%
+how to work when you have adhd         | 40 medium    |  758.9K |    9.3K |   0% |   0%
+MATCHING (0): 
+QUESTIONS (14): how can i deal with adhd | how i deal with adhd | how to work when you have adhd | how to manage money with adhd | who should pay the bill | why do we keep getting bills mail | who pays the bills | when my adhd gets me in trouble | when you have adhd | when your wife has adhd | when your partner has adhd | what is adhd adults | can you get rid of adhd | can adhd get worse
+RELATED (12): adhd financial problems | having a partner with adhd | adhd and money problems | adhd and quitting jobs | what's the meaning of adhd | do i have adult adhd | adhd debt | adhd and spending money | adhd and getting fired | adhd get work done | adhd and financial problems | adhd and saving money
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd hobbies ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd hobbies                           | 35 low       |   30.4K |   15.5K |  40% |  20%
+adhd changing hobbies                  | 31 low       |   17.1K |   24.5K |  10% |  20%
+best adhd hobbies                      | 35 low       |   85.9K |   25.1K |  10% |  30%
+adhd friendly hobbies                  | 37 low       |    525K |   65.8K |  10% |  20%
+adhd and fidgeting                     | 26 low       |  152.2K |     847 |  30% |  30%
+adhd hobby jumping                     | 18 very low  |   12.9K |    9.7K |  10% |  40%
+adhd hobby hopping                     | 11 very low  |   22.4K |     11K |  20% |  30%
+how to adhd hobbies                    | 35 low       |   30.7K |     11K |  10% |  10%
+how adhd affects adults                | 40 medium    |  713.4K |    5.5K |  10% |   0%
+why adhd                               | 46 medium    |  445.6K |   14.8K |  60% |   0%
+MATCHING (10): adhd changing hobbies | best adhd hobbies | adhd friendly hobbies | how to adhd hobbies | hobbies for people with adhd | adhd and hobbies | hobbies for adhd | hobbies for adhd women | hobbies for adhd men | hobbies with adhd
+QUESTIONS (9): how to adhd hobbies | how adhd affects adults | why adhd | when u have adhd | when your friend has adhd | when you have adhd | what is adhd adults | how can i deal with adhd | can adhd go away
+RELATED (13): adhd and fidgeting | adhd hobby jumping | adhd hobby hopping | adhd hobby cycle | adhd hobby duck | adhd and interests | adhd emotional regulation tips | adhd emotional impulsivity | adhd hobby graveyard | adhd job | adhd and no adhd | adhd new hobby | adhd and stimulants
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

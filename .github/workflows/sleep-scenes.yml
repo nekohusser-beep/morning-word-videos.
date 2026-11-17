@@ -1,0 +1,36 @@
+name: sleep-scenes
+# Swaps the black screen of a finished sleep reading for slow dissolving scenes. Audio is copied untouched.
+on:
+  workflow_dispatch:
+    inputs:
+      src_tag: {description: "release tag holding the finished black-screen MP4", required: true}
+      src_file: {description: "MP4 file name in that release", required: true}
+      scenes_dir: {description: "repo folder of scene stills, e.g. sleep/scenes/proverbs", required: true}
+      out_tag: {description: "release tag for the output", required: true}
+      out_name: {description: "output file base name", required: true}
+      seg: {description: "seconds per scene", required: true, default: "240"}
+permissions:
+  contents: write
+jobs:
+  scenes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pull source
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          sudo apt-get -qq install -y ffmpeg >/dev/null
+          bash tools/rel.sh down "${{ inputs.src_tag }}" src "[[:space:]]${{ inputs.src_file }}[[:space:]]"
+          ls -la src
+      - name: Build
+        run: python3 tools/sleep-scenes/build.py "src/${{ inputs.src_file }}" "${{ inputs.scenes_dir }}" "${{ inputs.out_name }}.mp4" ${{ inputs.seg }} 10 6
+      - name: Check
+        run: |
+          ffmpeg -v error -i "${{ inputs.out_name }}.mp4" -f null - 2> d.txt; echo "decode errors: $(wc -c < d.txt) bytes"
+          ffprobe -v error -show_entries format=duration,size -of default=nw=1 "${{ inputs.out_name }}.mp4" | tee check.txt
+      - name: Publish
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          bash tools/rel.sh ensure "${{ inputs.out_tag }}" > /dev/null
+          bash tools/rel.sh up "${{ inputs.out_tag }}" "${{ inputs.out_name }}.mp4" check.txt

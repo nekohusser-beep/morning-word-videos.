@@ -1,0 +1,8 @@
+=== KEYWORDS: who was polycarp ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+who was polycarp                       | 20 low       |   26.7K |    4.3K |  30% |  20%
+who was polycarp of smyrna             | 22 low       |   37.3K |    4.4K |  20% |   0%
+MATCHING (1): who was polycarp of smyrna
+QUESTIONS (1): who was polycarp of smyrna
+RELATED (0): 
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

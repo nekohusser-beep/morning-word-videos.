@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 34:4",
+ "kjv": "I sought the LORD, and he heard me, and delivered me from all my fears.",
+ "audio_bible": "https://www.youtube.com/watch?v=enLUGzduXXE",
+ "audio_range": "32–56",
+ "lines": [
+  {
+   "say": "Afraid of something tonight? Read this before bed.",
+   "big": "Afraid of something tonight",
+   "small": "",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "I sought the LORD, and he heard me, and delivered me from all my fears. Psalm thirty four, verse four.",
+   "big": "I sought the LORD, and he heard me, and delivered me from all my fears.",
+   "small": "Psalm 34:4 (KJV)",
+   "clip": "n-ocean1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "David asked, God heard, and the fear had to leave.",
+   "big": "David asked, God heard, and the fear had to leave.",
+   "small": "",
+   "clip": "n-stars0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I'm seeking you tonight. Deliver me from my fears. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-candle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 32 through 56, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 32–56, read slowly. Link in the description.",
+   "clip": "n-ocean0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

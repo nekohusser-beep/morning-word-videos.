@@ -1,0 +1,60 @@
+name: vcfull
+# Convert every block of a Derrick/Hailuo episode into ONE reference voice with Seed-VC (one parallel job per block x reference),
+# so a stitched episode has an even voice. Same recipe as kingdom-brain vc-voice.yml (proven Oct 30 2026), run here on the public repo.
+# Inputs: <dir>/src*.wav (22.05 kHz mono blocks), <dir>/<ref>.wav. Output: branch vcfull-out, <dir>/out-<run>/<ref>_<line>.wav
+# Wall time: about 6 min per 7 s block at 30 steps plus about 4 min setup, all blocks in parallel.
+on:
+  workflow_dispatch:
+    inputs:
+      dir: {description: "repo dir with src*.wav + ref wavs", required: true, default: "tmp/vcfull"}
+      refs: {description: "space separated reference names in dir", required: true, default: "ref1 ref2"}
+      steps: {description: "diffusion steps", required: true, default: "30"}
+      cfg: {description: "inference cfg rate", required: true, default: "0.7"}
+permissions:
+  contents: write
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    outputs: {combos: "${{ steps.l.outputs.combos }}"}
+    steps:
+      - uses: actions/checkout@v4
+      - id: l
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, glob
+          d = "${{ inputs.dir }}"
+          refs = "${{ inputs.refs }}".split()
+          lines = sorted(os.path.basename(p)[:-4] for p in glob.glob(d + "/src*.wav"))
+          combos = [{"ref": r, "line": l} for r in refs for l in lines]
+          print("combos=" + json.dumps(combos))
+          PY
+  vc:
+    needs: list
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        include: ${{ fromJson(needs.list.outputs.combos) }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+      - run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
+          cd sv
+          pip install -q torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu > ../log.txt 2>&1
+          grep -v -i -E '^(--extra-index-url|torch|torchvision|torchaudio)' requirements.txt > req2.txt
+          pip install -q -r req2.txt >> ../log.txt 2>&1 || (tail -40 ../log.txt; true)
+      - run: |
+          D="${{ inputs.dir }}"; mkdir -p out tmpo
+          cd sv && python inference.py --source "../$D/${{ matrix.line }}.wav" --target "../$D/${{ matrix.ref }}.wav" --output ../tmpo --diffusion-steps ${{ inputs.steps }} --length-adjust 1.0 --inference-cfg-rate ${{ inputs.cfg }} --f0-condition False --fp16 False >> ../log.txt 2>&1 || echo "FAILED" >> ../log.txt
+          g=$(ls ../tmpo/*.wav 2>/dev/null | head -1); [ -n "$g" ] && cp "$g" "../out/${{ matrix.ref }}_${{ matrix.line }}.wav"
+      - if: always()
+        run: |
+          R="${{ inputs.dir }}/out-${{ github.run_id }}"; mkdir -p "$R"; cp out/*.wav "$R"/ 2>/dev/null || tail -c 3000 log.txt > "$R/${{ matrix.ref }}_${{ matrix.line }}_log.txt"
+          git config user.name "vc-bot"; git config user.email "noreply@github.com"
+          git fetch -q origin vcfull-out && git checkout -q -B vcfull-out origin/vcfull-out || git checkout -q -B vcfull-out
+          git add -f "$R"; git commit -qm "vcfull ${{ github.run_id }} ${{ matrix.ref }} ${{ matrix.line }}" || true
+          for i in 1 2 3 4 5 6 7 8; do git push -q origin vcfull-out && break; git pull -q --rebase origin vcfull-out; sleep $((RANDOM % 5 + 1)); done

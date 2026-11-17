@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 56:3",
+ "kjv": "What time I am afraid, I will trust in thee.",
+ "audio_bible": "https://www.youtube.com/watch?v=enLUGzduXXE",
+ "audio_range": "32–56",
+ "lines": [
+  {
+   "say": "Can't shake the fear tonight? Say this one with David.",
+   "big": "Can't shake the fear tonight",
+   "small": "",
+   "clip": "n-ocean0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "What time I am afraid, I will trust in thee. Psalm fifty six, verse three.",
+   "big": "What time I am afraid, I will trust in thee.",
+   "small": "Psalm 56:3 (KJV)",
+   "clip": "n-stars1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "He didn't say if I'm afraid. He said what time. Fear comes. Trust answers it.",
+   "big": "He didn't say if I'm afraid. He said what time. Fear comes. Trust answers it.",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, when I'm afraid, I'll trust in you. Tonight too. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 32 through 56, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 32–56, read slowly. Link in the description.",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  }
+ ]
+}

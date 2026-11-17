@@ -1,0 +1,1526 @@
+{
+ "images": {
+  "martyr/ep3/thumb-A-curse-him-no.jpg": {
+   "size": [
+    1280,
+    720
+   ],
+   "entropy_native": 6.8279,
+   "entropy_224sq": 7.1709,
+   "entropy_256sq": 7.1104,
+   "entropy_299sq": 7.0648,
+   "entropy_336sq": 7.0459,
+   "entropy_384sq": 7.0132,
+   "entropy_512sq": 6.9566,
+   "entropy_320x180": 7.0917,
+   "entropy_480x270": 6.9947,
+   "entropy_640x360": 6.9425,
+   "entropy_1280x720": 6.8279
+  },
+  "martyr/ep3/thumb-B-he-wouldnt-say-it.jpg": {
+   "size": [
+    1280,
+    720
+   ],
+   "entropy_native": 7.1698,
+   "entropy_224sq": 7.3518,
+   "entropy_256sq": 7.336,
+   "entropy_299sq": 7.3194,
+   "entropy_336sq": 7.3028,
+   "entropy_384sq": 7.2888,
+   "entropy_512sq": 7.2626,
+   "entropy_320x180": 7.3305,
+   "entropy_480x270": 7.2761,
+   "entropy_640x360": 7.2482,
+   "entropy_1280x720": 7.1698
+  },
+  "martyr/ep3/thumb-C-one-sentence.jpg": {
+   "size": [
+    1280,
+    720
+   ],
+   "entropy_native": 7.4521,
+   "entropy_224sq": 7.6228,
+   "entropy_256sq": 7.5879,
+   "entropy_299sq": 7.5773,
+   "entropy_336sq": 7.5554,
+   "entropy_384sq": 7.5419,
+   "entropy_512sq": 7.5117,
+   "entropy_320x180": 7.5866,
+   "entropy_480x270": 7.532,
+   "entropy_640x360": 7.502,
+   "entropy_1280x720": 7.4521
+  },
+  "martyr/ep1/thumb-A-21st-man.jpg": {
+   "size": [
+    1280,
+    720
+   ],
+   "entropy_native": 7.1257,
+   "entropy_224sq": 7.4112,
+   "entropy_256sq": 7.3891,
+   "entropy_299sq": 7.3813,
+   "entropy_336sq": 7.3547,
+   "entropy_384sq": 7.3255,
+   "entropy_512sq": 7.2728,
+   "entropy_320x180": 7.3782,
+   "entropy_480x270": 7.3,
+   "entropy_640x360": 7.2494,
+   "entropy_1280x720": 7.1257
+  }
+ },
+ "models": {
+  "ViT-B-32-quickgelu:openai": {
+   "martyr/ep3/thumb-A-curse-him-no.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.2,
+       "pos": 0.2282,
+       "neg": 0.1795
+      },
+      "question": {
+       "score": 64.4,
+       "pos": 0.2005,
+       "neg": 0.1946
+      },
+      "color_pop": {
+       "score": 47.0,
+       "pos": 0.1905,
+       "neg": 0.1917
+      },
+      "over_saturated": {
+       "score": 2.4,
+       "pos": 0.1652,
+       "neg": 0.2021
+      },
+      "clear_subject": {
+       "score": 92.3,
+       "pos": 0.2019,
+       "neg": 0.1771
+      },
+      "face_emotion": {
+       "score": 66.4,
+       "pos": 0.1982,
+       "neg": 0.1914
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.7,
+       "pos": 0.256,
+       "neg": 0.1985
+      },
+      "question": {
+       "score": 82.2,
+       "pos": 0.2033,
+       "neg": 0.188
+      },
+      "color_pop": {
+       "score": 44.3,
+       "pos": 0.193,
+       "neg": 0.1953
+      },
+      "over_saturated": {
+       "score": 8.7,
+       "pos": 0.1938,
+       "neg": 0.2173
+      },
+      "clear_subject": {
+       "score": 95.3,
+       "pos": 0.2233,
+       "neg": 0.1931
+      },
+      "face_emotion": {
+       "score": 55.8,
+       "pos": 0.2045,
+       "neg": 0.2021
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-B-he-wouldnt-say-it.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.7,
+       "pos": 0.2365,
+       "neg": 0.1793
+      },
+      "question": {
+       "score": 53.0,
+       "pos": 0.2006,
+       "neg": 0.1994
+      },
+      "color_pop": {
+       "score": 45.1,
+       "pos": 0.1943,
+       "neg": 0.1963
+      },
+      "over_saturated": {
+       "score": 12.6,
+       "pos": 0.1722,
+       "neg": 0.1916
+      },
+      "clear_subject": {
+       "score": 91.5,
+       "pos": 0.2023,
+       "neg": 0.1785
+      },
+      "face_emotion": {
+       "score": 78.5,
+       "pos": 0.1946,
+       "neg": 0.1817
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.6,
+       "pos": 0.2435,
+       "neg": 0.1874
+      },
+      "question": {
+       "score": 60.8,
+       "pos": 0.1972,
+       "neg": 0.1928
+      },
+      "color_pop": {
+       "score": 18.6,
+       "pos": 0.1914,
+       "neg": 0.2062
+      },
+      "over_saturated": {
+       "score": 5.0,
+       "pos": 0.1718,
+       "neg": 0.2012
+      },
+      "clear_subject": {
+       "score": 93.7,
+       "pos": 0.2044,
+       "neg": 0.1773
+      },
+      "face_emotion": {
+       "score": 37.6,
+       "pos": 0.1774,
+       "neg": 0.1824
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-C-one-sentence.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.7,
+       "pos": 0.226,
+       "neg": 0.1662
+      },
+      "question": {
+       "score": 24.5,
+       "pos": 0.1884,
+       "neg": 0.1997
+      },
+      "color_pop": {
+       "score": 88.5,
+       "pos": 0.1882,
+       "neg": 0.1678
+      },
+      "over_saturated": {
+       "score": 10.7,
+       "pos": 0.1761,
+       "neg": 0.1974
+      },
+      "clear_subject": {
+       "score": 87.2,
+       "pos": 0.1911,
+       "neg": 0.1719
+      },
+      "face_emotion": {
+       "score": 14.2,
+       "pos": 0.1686,
+       "neg": 0.1865
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.1,
+       "pos": 0.2438,
+       "neg": 0.1973
+      },
+      "question": {
+       "score": 41.4,
+       "pos": 0.2013,
+       "neg": 0.2048
+      },
+      "color_pop": {
+       "score": 54.4,
+       "pos": 0.2019,
+       "neg": 0.2001
+      },
+      "over_saturated": {
+       "score": 12.5,
+       "pos": 0.1939,
+       "neg": 0.2133
+      },
+      "clear_subject": {
+       "score": 96.7,
+       "pos": 0.2171,
+       "neg": 0.1833
+      },
+      "face_emotion": {
+       "score": 20.9,
+       "pos": 0.1832,
+       "neg": 0.1965
+      }
+     }
+    }
+   },
+   "martyr/ep1/thumb-A-21st-man.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 98.4,
+       "pos": 0.2171,
+       "neg": 0.1761
+      },
+      "question": {
+       "score": 51.6,
+       "pos": 0.2157,
+       "neg": 0.215
+      },
+      "color_pop": {
+       "score": 28.9,
+       "pos": 0.1918,
+       "neg": 0.2008
+      },
+      "over_saturated": {
+       "score": 30.4,
+       "pos": 0.18,
+       "neg": 0.1883
+      },
+      "clear_subject": {
+       "score": 90.8,
+       "pos": 0.1942,
+       "neg": 0.1712
+      },
+      "face_emotion": {
+       "score": 4.9,
+       "pos": 0.1619,
+       "neg": 0.1916
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 94.4,
+       "pos": 0.2148,
+       "neg": 0.1865
+      },
+      "question": {
+       "score": 71.2,
+       "pos": 0.2055,
+       "neg": 0.1964
+      },
+      "color_pop": {
+       "score": 16.9,
+       "pos": 0.1858,
+       "neg": 0.2018
+      },
+      "over_saturated": {
+       "score": 41.0,
+       "pos": 0.1652,
+       "neg": 0.1688
+      },
+      "clear_subject": {
+       "score": 78.6,
+       "pos": 0.1983,
+       "neg": 0.1853
+      },
+      "face_emotion": {
+       "score": 21.3,
+       "pos": 0.1751,
+       "neg": 0.1882
+      }
+     }
+    }
+   }
+  },
+  "ViT-B-16-quickgelu:openai": {
+   "martyr/ep3/thumb-A-curse-him-no.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.5,
+       "pos": 0.238,
+       "neg": 0.1842
+      },
+      "question": {
+       "score": 68.7,
+       "pos": 0.2068,
+       "neg": 0.1989
+      },
+      "color_pop": {
+       "score": 6.9,
+       "pos": 0.1761,
+       "neg": 0.2021
+      },
+      "over_saturated": {
+       "score": 50.7,
+       "pos": 0.1863,
+       "neg": 0.186
+      },
+      "clear_subject": {
+       "score": 96.6,
+       "pos": 0.2055,
+       "neg": 0.172
+      },
+      "face_emotion": {
+       "score": 17.8,
+       "pos": 0.1923,
+       "neg": 0.2076
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 98.2,
+       "pos": 0.2346,
+       "neg": 0.1945
+      },
+      "question": {
+       "score": 92.1,
+       "pos": 0.2056,
+       "neg": 0.181
+      },
+      "color_pop": {
+       "score": 2.5,
+       "pos": 0.1712,
+       "neg": 0.2078
+      },
+      "over_saturated": {
+       "score": 89.3,
+       "pos": 0.2017,
+       "neg": 0.1804
+      },
+      "clear_subject": {
+       "score": 95.6,
+       "pos": 0.1971,
+       "neg": 0.1662
+      },
+      "face_emotion": {
+       "score": 69.9,
+       "pos": 0.2063,
+       "neg": 0.1979
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-B-he-wouldnt-say-it.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.9,
+       "pos": 0.2425,
+       "neg": 0.1767
+      },
+      "question": {
+       "score": 86.9,
+       "pos": 0.2145,
+       "neg": 0.1956
+      },
+      "color_pop": {
+       "score": 30.2,
+       "pos": 0.1812,
+       "neg": 0.1896
+      },
+      "over_saturated": {
+       "score": 55.7,
+       "pos": 0.1773,
+       "neg": 0.1751
+      },
+      "clear_subject": {
+       "score": 99.2,
+       "pos": 0.2069,
+       "neg": 0.1581
+      },
+      "face_emotion": {
+       "score": 51.0,
+       "pos": 0.1808,
+       "neg": 0.1804
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.4,
+       "pos": 0.2474,
+       "neg": 0.1965
+      },
+      "question": {
+       "score": 84.4,
+       "pos": 0.2252,
+       "neg": 0.2083
+      },
+      "color_pop": {
+       "score": 19.4,
+       "pos": 0.186,
+       "neg": 0.2003
+      },
+      "over_saturated": {
+       "score": 66.0,
+       "pos": 0.1975,
+       "neg": 0.1908
+      },
+      "clear_subject": {
+       "score": 99.5,
+       "pos": 0.2185,
+       "neg": 0.1648
+      },
+      "face_emotion": {
+       "score": 52.8,
+       "pos": 0.1932,
+       "neg": 0.192
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-C-one-sentence.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 100.0,
+       "pos": 0.2492,
+       "neg": 0.1712
+      },
+      "question": {
+       "score": 52.1,
+       "pos": 0.2146,
+       "neg": 0.2138
+      },
+      "color_pop": {
+       "score": 47.5,
+       "pos": 0.1723,
+       "neg": 0.1733
+      },
+      "over_saturated": {
+       "score": 19.1,
+       "pos": 0.1652,
+       "neg": 0.1796
+      },
+      "clear_subject": {
+       "score": 96.2,
+       "pos": 0.2115,
+       "neg": 0.1793
+      },
+      "face_emotion": {
+       "score": 65.6,
+       "pos": 0.1846,
+       "neg": 0.1782
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.9,
+       "pos": 0.2461,
+       "neg": 0.1765
+      },
+      "question": {
+       "score": 47.0,
+       "pos": 0.2132,
+       "neg": 0.2145
+      },
+      "color_pop": {
+       "score": 83.6,
+       "pos": 0.1973,
+       "neg": 0.181
+      },
+      "over_saturated": {
+       "score": 62.6,
+       "pos": 0.1856,
+       "neg": 0.1805
+      },
+      "clear_subject": {
+       "score": 98.7,
+       "pos": 0.2206,
+       "neg": 0.1771
+      },
+      "face_emotion": {
+       "score": 28.2,
+       "pos": 0.181,
+       "neg": 0.1903
+      }
+     }
+    }
+   },
+   "martyr/ep1/thumb-A-21st-man.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.8,
+       "pos": 0.2385,
+       "neg": 0.174
+      },
+      "question": {
+       "score": 78.8,
+       "pos": 0.2244,
+       "neg": 0.2112
+      },
+      "color_pop": {
+       "score": 32.0,
+       "pos": 0.1849,
+       "neg": 0.1924
+      },
+      "over_saturated": {
+       "score": 65.2,
+       "pos": 0.1822,
+       "neg": 0.1759
+      },
+      "clear_subject": {
+       "score": 72.2,
+       "pos": 0.1882,
+       "neg": 0.1786
+      },
+      "face_emotion": {
+       "score": 1.0,
+       "pos": 0.1607,
+       "neg": 0.2062
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 98.9,
+       "pos": 0.2403,
+       "neg": 0.1954
+      },
+      "question": {
+       "score": 91.1,
+       "pos": 0.2299,
+       "neg": 0.2066
+      },
+      "color_pop": {
+       "score": 23.4,
+       "pos": 0.1954,
+       "neg": 0.2072
+      },
+      "over_saturated": {
+       "score": 94.9,
+       "pos": 0.2108,
+       "neg": 0.1816
+      },
+      "clear_subject": {
+       "score": 84.2,
+       "pos": 0.1995,
+       "neg": 0.1827
+      },
+      "face_emotion": {
+       "score": 0.8,
+       "pos": 0.1697,
+       "neg": 0.2183
+      }
+     }
+    }
+   }
+  },
+  "ViT-L-14-quickgelu:openai": {
+   "martyr/ep3/thumb-A-curse-him-no.jpg": {
+    "crop": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 99.9,
+       "pos": 0.2126,
+       "neg": 0.1397
+      },
+      "question": {
+       "score": 58.4,
+       "pos": 0.1403,
+       "neg": 0.1369
+      },
+      "color_pop": {
+       "score": 65.1,
+       "pos": 0.1246,
+       "neg": 0.1184
+      },
+      "over_saturated": {
+       "score": 86.6,
+       "pos": 0.1298,
+       "neg": 0.1112
+      },
+      "clear_subject": {
+       "score": 89.3,
+       "pos": 0.1486,
+       "neg": 0.1274
+      },
+      "face_emotion": {
+       "score": 94.4,
+       "pos": 0.1431,
+       "neg": 0.1148
+      }
+     }
+    },
+    "squash": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 99.7,
+       "pos": 0.2171,
+       "neg": 0.1582
+      },
+      "question": {
+       "score": 48.7,
+       "pos": 0.1389,
+       "neg": 0.1394
+      },
+      "color_pop": {
+       "score": 71.8,
+       "pos": 0.1521,
+       "neg": 0.1427
+      },
+      "over_saturated": {
+       "score": 93.3,
+       "pos": 0.1535,
+       "neg": 0.1272
+      },
+      "clear_subject": {
+       "score": 85.7,
+       "pos": 0.1659,
+       "neg": 0.148
+      },
+      "face_emotion": {
+       "score": 94.0,
+       "pos": 0.1596,
+       "neg": 0.132
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-B-he-wouldnt-say-it.jpg": {
+    "crop": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 100.0,
+       "pos": 0.2085,
+       "neg": 0.1187
+      },
+      "question": {
+       "score": 24.6,
+       "pos": 0.132,
+       "neg": 0.1432
+      },
+      "color_pop": {
+       "score": 94.2,
+       "pos": 0.1482,
+       "neg": 0.1203
+      },
+      "over_saturated": {
+       "score": 87.5,
+       "pos": 0.1197,
+       "neg": 0.1003
+      },
+      "clear_subject": {
+       "score": 91.8,
+       "pos": 0.1386,
+       "neg": 0.1144
+      },
+      "face_emotion": {
+       "score": 92.7,
+       "pos": 0.1398,
+       "neg": 0.1144
+      }
+     }
+    },
+    "squash": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 99.4,
+       "pos": 0.2002,
+       "neg": 0.1489
+      },
+      "question": {
+       "score": 33.6,
+       "pos": 0.1454,
+       "neg": 0.1522
+      },
+      "color_pop": {
+       "score": 82.6,
+       "pos": 0.1629,
+       "neg": 0.1473
+      },
+      "over_saturated": {
+       "score": 83.5,
+       "pos": 0.1426,
+       "neg": 0.1264
+      },
+      "clear_subject": {
+       "score": 95.2,
+       "pos": 0.159,
+       "neg": 0.1291
+      },
+      "face_emotion": {
+       "score": 89.7,
+       "pos": 0.1579,
+       "neg": 0.1363
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-C-one-sentence.jpg": {
+    "crop": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 100.0,
+       "pos": 0.2259,
+       "neg": 0.1364
+      },
+      "question": {
+       "score": 12.3,
+       "pos": 0.1391,
+       "neg": 0.1587
+      },
+      "color_pop": {
+       "score": 99.5,
+       "pos": 0.1492,
+       "neg": 0.0954
+      },
+      "over_saturated": {
+       "score": 88.4,
+       "pos": 0.1369,
+       "neg": 0.1166
+      },
+      "clear_subject": {
+       "score": 99.6,
+       "pos": 0.1658,
+       "neg": 0.1098
+      },
+      "face_emotion": {
+       "score": 44.3,
+       "pos": 0.136,
+       "neg": 0.1383
+      }
+     }
+    },
+    "squash": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 100.0,
+       "pos": 0.225,
+       "neg": 0.1307
+      },
+      "question": {
+       "score": 9.6,
+       "pos": 0.1516,
+       "neg": 0.174
+      },
+      "color_pop": {
+       "score": 99.6,
+       "pos": 0.1597,
+       "neg": 0.1044
+      },
+      "over_saturated": {
+       "score": 78.8,
+       "pos": 0.1446,
+       "neg": 0.1315
+      },
+      "clear_subject": {
+       "score": 98.2,
+       "pos": 0.1753,
+       "neg": 0.1355
+      },
+      "face_emotion": {
+       "score": 10.3,
+       "pos": 0.1244,
+       "neg": 0.146
+      }
+     }
+    }
+   },
+   "martyr/ep1/thumb-A-21st-man.jpg": {
+    "crop": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 99.4,
+       "pos": 0.1968,
+       "neg": 0.1451
+      },
+      "question": {
+       "score": 24.1,
+       "pos": 0.1764,
+       "neg": 0.1879
+      },
+      "color_pop": {
+       "score": 64.7,
+       "pos": 0.1464,
+       "neg": 0.1403
+      },
+      "over_saturated": {
+       "score": 56.0,
+       "pos": 0.1298,
+       "neg": 0.1273
+      },
+      "clear_subject": {
+       "score": 98.7,
+       "pos": 0.1632,
+       "neg": 0.1203
+      },
+      "face_emotion": {
+       "score": 2.2,
+       "pos": 0.114,
+       "neg": 0.1518
+      }
+     }
+    },
+    "squash": {
+     "dim": 768,
+     "concepts": {
+      "payoff": {
+       "score": 100.0,
+       "pos": 0.2092,
+       "neg": 0.1253
+      },
+      "question": {
+       "score": 77.0,
+       "pos": 0.1649,
+       "neg": 0.1528
+      },
+      "color_pop": {
+       "score": 47.4,
+       "pos": 0.1307,
+       "neg": 0.1317
+      },
+      "over_saturated": {
+       "score": 91.1,
+       "pos": 0.1236,
+       "neg": 0.1004
+      },
+      "clear_subject": {
+       "score": 97.2,
+       "pos": 0.1573,
+       "neg": 0.1217
+      },
+      "face_emotion": {
+       "score": 7.9,
+       "pos": 0.1102,
+       "neg": 0.1347
+      }
+     }
+    }
+   }
+  },
+  "ViT-B-32:openai": {
+   "martyr/ep3/thumb-A-curse-him-no.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 92.4,
+       "pos": 0.2135,
+       "neg": 0.1884
+      },
+      "question": {
+       "score": 36.8,
+       "pos": 0.2033,
+       "neg": 0.2087
+      },
+      "color_pop": {
+       "score": 70.8,
+       "pos": 0.2034,
+       "neg": 0.1946
+      },
+      "over_saturated": {
+       "score": 1.6,
+       "pos": 0.1517,
+       "neg": 0.1926
+      },
+      "clear_subject": {
+       "score": 90.1,
+       "pos": 0.2101,
+       "neg": 0.188
+      },
+      "face_emotion": {
+       "score": 52.5,
+       "pos": 0.2067,
+       "neg": 0.2057
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 96.9,
+       "pos": 0.2366,
+       "neg": 0.2021
+      },
+      "question": {
+       "score": 67.2,
+       "pos": 0.2064,
+       "neg": 0.1993
+      },
+      "color_pop": {
+       "score": 35.7,
+       "pos": 0.1871,
+       "neg": 0.1929
+      },
+      "over_saturated": {
+       "score": 1.4,
+       "pos": 0.1596,
+       "neg": 0.2022
+      },
+      "clear_subject": {
+       "score": 91.3,
+       "pos": 0.2207,
+       "neg": 0.1972
+      },
+      "face_emotion": {
+       "score": 34.2,
+       "pos": 0.2029,
+       "neg": 0.2095
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-B-he-wouldnt-say-it.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 88.1,
+       "pos": 0.2081,
+       "neg": 0.1881
+      },
+      "question": {
+       "score": 15.6,
+       "pos": 0.2031,
+       "neg": 0.22
+      },
+      "color_pop": {
+       "score": 26.3,
+       "pos": 0.1909,
+       "neg": 0.2012
+      },
+      "over_saturated": {
+       "score": 3.2,
+       "pos": 0.1549,
+       "neg": 0.1891
+      },
+      "clear_subject": {
+       "score": 92.0,
+       "pos": 0.2136,
+       "neg": 0.1892
+      },
+      "face_emotion": {
+       "score": 40.2,
+       "pos": 0.1991,
+       "neg": 0.2031
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 95.8,
+       "pos": 0.2165,
+       "neg": 0.1852
+      },
+      "question": {
+       "score": 16.6,
+       "pos": 0.1933,
+       "neg": 0.2094
+      },
+      "color_pop": {
+       "score": 17.8,
+       "pos": 0.188,
+       "neg": 0.2033
+      },
+      "over_saturated": {
+       "score": 0.9,
+       "pos": 0.1428,
+       "neg": 0.19
+      },
+      "clear_subject": {
+       "score": 93.3,
+       "pos": 0.2062,
+       "neg": 0.1799
+      },
+      "face_emotion": {
+       "score": 12.2,
+       "pos": 0.1754,
+       "neg": 0.1952
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-C-one-sentence.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 98.9,
+       "pos": 0.2152,
+       "neg": 0.1698
+      },
+      "question": {
+       "score": 12.9,
+       "pos": 0.1947,
+       "neg": 0.2138
+      },
+      "color_pop": {
+       "score": 85.3,
+       "pos": 0.1913,
+       "neg": 0.1737
+      },
+      "over_saturated": {
+       "score": 2.5,
+       "pos": 0.1622,
+       "neg": 0.1988
+      },
+      "clear_subject": {
+       "score": 91.8,
+       "pos": 0.1987,
+       "neg": 0.1746
+      },
+      "face_emotion": {
+       "score": 9.7,
+       "pos": 0.1733,
+       "neg": 0.1956
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 97.3,
+       "pos": 0.2289,
+       "neg": 0.1931
+      },
+      "question": {
+       "score": 32.8,
+       "pos": 0.2081,
+       "neg": 0.2152
+      },
+      "color_pop": {
+       "score": 55.6,
+       "pos": 0.1962,
+       "neg": 0.194
+      },
+      "over_saturated": {
+       "score": 1.9,
+       "pos": 0.1613,
+       "neg": 0.2008
+      },
+      "clear_subject": {
+       "score": 97.1,
+       "pos": 0.2203,
+       "neg": 0.1852
+      },
+      "face_emotion": {
+       "score": 11.2,
+       "pos": 0.1806,
+       "neg": 0.2013
+      }
+     }
+    }
+   },
+   "martyr/ep1/thumb-A-21st-man.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 95.5,
+       "pos": 0.2235,
+       "neg": 0.1928
+      },
+      "question": {
+       "score": 37.6,
+       "pos": 0.224,
+       "neg": 0.2291
+      },
+      "color_pop": {
+       "score": 23.6,
+       "pos": 0.1993,
+       "neg": 0.211
+      },
+      "over_saturated": {
+       "score": 9.6,
+       "pos": 0.1756,
+       "neg": 0.198
+      },
+      "clear_subject": {
+       "score": 94.8,
+       "pos": 0.2132,
+       "neg": 0.1841
+      },
+      "face_emotion": {
+       "score": 6.4,
+       "pos": 0.1777,
+       "neg": 0.2046
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 88.9,
+       "pos": 0.2174,
+       "neg": 0.1965
+      },
+      "question": {
+       "score": 52.1,
+       "pos": 0.2221,
+       "neg": 0.2212
+      },
+      "color_pop": {
+       "score": 20.7,
+       "pos": 0.1846,
+       "neg": 0.1981
+      },
+      "over_saturated": {
+       "score": 3.5,
+       "pos": 0.159,
+       "neg": 0.192
+      },
+      "clear_subject": {
+       "score": 98.1,
+       "pos": 0.2164,
+       "neg": 0.1771
+      },
+      "face_emotion": {
+       "score": 6.2,
+       "pos": 0.1821,
+       "neg": 0.2093
+      }
+     }
+    }
+   }
+  },
+  "ViT-B-16:openai": {
+   "martyr/ep3/thumb-A-curse-him-no.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.8,
+       "pos": 0.2589,
+       "neg": 0.1963
+      },
+      "question": {
+       "score": 52.8,
+       "pos": 0.2133,
+       "neg": 0.2122
+      },
+      "color_pop": {
+       "score": 2.5,
+       "pos": 0.182,
+       "neg": 0.2186
+      },
+      "over_saturated": {
+       "score": 66.9,
+       "pos": 0.1777,
+       "neg": 0.1707
+      },
+      "clear_subject": {
+       "score": 92.2,
+       "pos": 0.2099,
+       "neg": 0.1852
+      },
+      "face_emotion": {
+       "score": 9.0,
+       "pos": 0.1974,
+       "neg": 0.2204
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 98.9,
+       "pos": 0.2538,
+       "neg": 0.2084
+      },
+      "question": {
+       "score": 85.4,
+       "pos": 0.2103,
+       "neg": 0.1926
+      },
+      "color_pop": {
+       "score": 0.6,
+       "pos": 0.1702,
+       "neg": 0.2218
+      },
+      "over_saturated": {
+       "score": 88.4,
+       "pos": 0.181,
+       "neg": 0.1607
+      },
+      "clear_subject": {
+       "score": 89.1,
+       "pos": 0.2012,
+       "neg": 0.1802
+      },
+      "face_emotion": {
+       "score": 31.4,
+       "pos": 0.2064,
+       "neg": 0.2142
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-B-he-wouldnt-say-it.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.6,
+       "pos": 0.2493,
+       "neg": 0.1939
+      },
+      "question": {
+       "score": 81.8,
+       "pos": 0.2203,
+       "neg": 0.2053
+      },
+      "color_pop": {
+       "score": 11.0,
+       "pos": 0.1906,
+       "neg": 0.2115
+      },
+      "over_saturated": {
+       "score": 80.2,
+       "pos": 0.1785,
+       "neg": 0.1645
+      },
+      "clear_subject": {
+       "score": 77.8,
+       "pos": 0.205,
+       "neg": 0.1925
+      },
+      "face_emotion": {
+       "score": 29.1,
+       "pos": 0.1944,
+       "neg": 0.2033
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 97.6,
+       "pos": 0.243,
+       "neg": 0.2059
+      },
+      "question": {
+       "score": 88.3,
+       "pos": 0.2273,
+       "neg": 0.207
+      },
+      "color_pop": {
+       "score": 8.3,
+       "pos": 0.1922,
+       "neg": 0.2163
+      },
+      "over_saturated": {
+       "score": 87.6,
+       "pos": 0.1906,
+       "neg": 0.1711
+      },
+      "clear_subject": {
+       "score": 92.6,
+       "pos": 0.2147,
+       "neg": 0.1894
+      },
+      "face_emotion": {
+       "score": 17.4,
+       "pos": 0.1964,
+       "neg": 0.212
+      }
+     }
+    }
+   },
+   "martyr/ep3/thumb-C-one-sentence.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.7,
+       "pos": 0.2404,
+       "neg": 0.1823
+      },
+      "question": {
+       "score": 55.4,
+       "pos": 0.2068,
+       "neg": 0.2046
+      },
+      "color_pop": {
+       "score": 16.6,
+       "pos": 0.1736,
+       "neg": 0.1897
+      },
+      "over_saturated": {
+       "score": 9.8,
+       "pos": 0.1562,
+       "neg": 0.1783
+      },
+      "clear_subject": {
+       "score": 62.6,
+       "pos": 0.209,
+       "neg": 0.2038
+      },
+      "face_emotion": {
+       "score": 50.2,
+       "pos": 0.1879,
+       "neg": 0.1878
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.4,
+       "pos": 0.2367,
+       "neg": 0.1858
+      },
+      "question": {
+       "score": 64.2,
+       "pos": 0.2107,
+       "neg": 0.2049
+      },
+      "color_pop": {
+       "score": 66.6,
+       "pos": 0.2022,
+       "neg": 0.1953
+      },
+      "over_saturated": {
+       "score": 77.1,
+       "pos": 0.1814,
+       "neg": 0.1692
+      },
+      "clear_subject": {
+       "score": 94.1,
+       "pos": 0.2285,
+       "neg": 0.2008
+      },
+      "face_emotion": {
+       "score": 11.8,
+       "pos": 0.1817,
+       "neg": 0.2018
+      }
+     }
+    }
+   },
+   "martyr/ep1/thumb-A-21st-man.jpg": {
+    "crop": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 98.0,
+       "pos": 0.2325,
+       "neg": 0.1933
+      },
+      "question": {
+       "score": 89.6,
+       "pos": 0.234,
+       "neg": 0.2125
+      },
+      "color_pop": {
+       "score": 8.6,
+       "pos": 0.1931,
+       "neg": 0.2167
+      },
+      "over_saturated": {
+       "score": 47.1,
+       "pos": 0.1793,
+       "neg": 0.1805
+      },
+      "clear_subject": {
+       "score": 67.2,
+       "pos": 0.2024,
+       "neg": 0.1953
+      },
+      "face_emotion": {
+       "score": 0.9,
+       "pos": 0.1766,
+       "neg": 0.224
+      }
+     }
+    },
+    "squash": {
+     "dim": 512,
+     "concepts": {
+      "payoff": {
+       "score": 99.2,
+       "pos": 0.2505,
+       "neg": 0.2017
+      },
+      "question": {
+       "score": 95.8,
+       "pos": 0.2512,
+       "neg": 0.2199
+      },
+      "color_pop": {
+       "score": 12.0,
+       "pos": 0.2032,
+       "neg": 0.2231
+      },
+      "over_saturated": {
+       "score": 82.9,
+       "pos": 0.203,
+       "neg": 0.1872
+      },
+      "clear_subject": {
+       "score": 81.5,
+       "pos": 0.2151,
+       "neg": 0.2003
+      },
+      "face_emotion": {
+       "score": 0.3,
+       "pos": 0.1825,
+       "neg": 0.2412
+      }
+     }
+    }
+   }
+  }
+ },
+ "ref": {},
+ "errors": []
+}

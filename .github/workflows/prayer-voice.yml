@@ -1,0 +1,23 @@
+name: prayer-voice
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "release tag", required: true, default: "inbox"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y ffmpeg
+      - run: pip install chatterbox-tts
+      - run: |
+          ffmpeg -y -loglevel error -ss 3 -t 9 -i ref/derrick_voice_sample.mp3 -ar 24000 -ac 1 ref.wav
+          python tools/prayer-voice/tts_cpu.py tools/prayer-voice/script.txt ref.wav out.wav
+          ffmpeg -y -loglevel error -i out.wav -af loudnorm=I=-14:TP=-1 -ar 48000 -b:a 192k prayer-thanksgiving-derrick.mp3
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh release view "${{ inputs.tag }}" || gh release create "${{ inputs.tag }}" --draft -t inbox -n inbox
+          gh release upload "${{ inputs.tag }}" prayer-thanksgiving-derrick.mp3 --clobber

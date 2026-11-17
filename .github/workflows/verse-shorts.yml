@@ -1,0 +1,72 @@
+name: verse-shorts
+# Builds and renders Verse Shorts (KJV verse + Kokoro voice + rain or still) for free on GitHub runners.
+# Verses live in tools/verse-shorts/verses.json; MP4s land in the public release `verse-shorts`.
+on:
+  workflow_dispatch:
+    inputs:
+      ids: {description: "space-separated ids from verses.json, or 'all'", required: true, default: "all"}
+      per_job: {description: "verses per parallel job", required: true, default: "5"}
+      tag: {description: "release to put the MP4s in", required: true, default: "verse-shorts"}
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      groups: ${{ steps.p.outputs.groups }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          python3 - <<'PY' >> $GITHUB_OUTPUT
+          import json
+          ids = [v["id"] for v in json.load(open("tools/verse-shorts/verses.json"))]
+          want = "${{ inputs.ids }}".split()
+          if want != ["all"]:
+              missing = [w for w in want if w not in ids]
+              assert not missing, f"unknown ids {missing}"
+              ids = want
+          n = int("${{ inputs.per_job }}")
+          print("groups=" + json.dumps([" ".join(ids[i:i+n]) for i in range(0, len(ids), n)]))
+          PY
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        group: ${{ fromJson(needs.plan.outputs.groups) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - name: Setup
+        run: |
+          sudo apt-get -qq install -y ffmpeg >/dev/null
+          pip install -q kokoro-onnx soundfile numpy
+          curl -sSL -o kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sSL -o voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+      - name: Build projects
+        run: python3 tools/verse-shorts/build.py ${{ matrix.group }}
+      - name: Render
+        env: {HYPERFRAMES_SKIP_SKILLS: "1"}
+        run: |
+          npx -y hyperframes@0.8.157 telemetry disable || true
+          for id in ${{ matrix.group }}; do
+            ( cd "tools/shorts/$id"
+              npx -y hyperframes@0.8.157 browser ensure
+              npx -y hyperframes@0.8.157 lint
+              npx -y hyperframes@0.8.157 render -o "out/$id.mp4" --quality delivery
+              ffmpeg -v error -i "out/$id.mp4" -f null - && echo "::notice::$id decode ok"
+              ffmpeg -hide_banner -nostats -i "out/$id.mp4" -af ebur128 -f null - 2>&1 | grep -E "I:" | tail -1 | sed "s/^/::notice::$id loudness /"
+              ffmpeg -hide_banner -i "out/$id.mp4" -af silencedetect=n=-45dB:d=2 -f null - 2>&1 | grep -E "silence_(start|end)" | sed "s/^/::notice::$id /" || true )
+          done
+      - name: Publish
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          bash tools/rel.sh ensure "${{ inputs.tag }}" public > /dev/null
+          for id in ${{ matrix.group }}; do
+            cp "tools/shorts/$id/info.json" "tools/shorts/$id/out/$id.json"
+            bash tools/rel.sh up "${{ inputs.tag }}" "tools/shorts/$id/out/$id.mp4" "tools/shorts/$id/out/$id.json"
+          done

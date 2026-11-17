@@ -1,0 +1,36 @@
+name: ntfy-enc
+# Pull every attachment on an ntfy.sh topic, tar + ENCRYPT to tools/leads/leads_public.pem, commit to inbox-enc/.
+on:
+  workflow_dispatch:
+    inputs:
+      topic: {description: "ntfy topic", required: true}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1, sparse-checkout: "tools/leads\ninbox-enc", sparse-checkout-cone-mode: true}
+      - env: {TOPIC: "${{ inputs.topic }}"}
+        run: |
+          case "$TOPIC" in *[!A-Za-z0-9_-]*) echo bad; exit 1;; esac
+          mkdir -p dl inbox-enc
+          curl -fsSL --retry 3 "https://ntfy.sh/$TOPIC/json?poll=1&since=all" -o m.jsonl
+          python3 -c "
+          import json,urllib.request,re
+          n=0
+          for l in open('m.jsonl'):
+              m=json.loads(l) if l.strip() else {}
+              a=m.get('attachment')
+              if a:
+                  urllib.request.urlretrieve(a['url'],'dl/'+re.sub(r'[^A-Za-z0-9_.-]','_',a.get('name','x'))); n+=1
+          print('files',n)"
+          id="$TOPIC-${GITHUB_RUN_ID}"
+          tar czf p.tgz -C dl .
+          openssl rand -hex 32 > k.txt
+          openssl enc -aes-256-cbc -pbkdf2 -salt -pass file:k.txt -in p.tgz -out inbox-enc/$id.tgz.enc
+          openssl pkeyutl -encrypt -pubin -inkey tools/leads/leads_public.pem -in k.txt -out inbox-enc/$id.key.enc
+          rm -f k.txt p.tgz
+          git config user.name ntfy-bot; git config user.email actions@users.noreply.github.com
+          git add inbox-enc && git commit -m "ntfy-enc $id" && for i in 1 2 3 4; do git pull --rebase --depth 1 origin main && git push && break; sleep 5; done

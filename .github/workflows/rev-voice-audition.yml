@@ -1,0 +1,75 @@
+name: rev-voice-audition
+# Free voice audition for the bold Revelation reading (exact KJV Rev 1:1-3, 1:8, 1:17-18, tools/verse-voice/rev-text.json): designed voices (Qwen3-TTS VoiceDesign, VoxCPM2) from a DESCRIPTION of the sound.
+# No real person is cloned. Text = exact KJV (tools/verse-voice/text.json). Outputs + Whisper word check land in the draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "rv1"}
+permissions:
+  contents: write
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t rev-voice-audition -n "revelation voice audition outputs"
+
+  qwen:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: RQA
+            instruct: "A deep, commanding American male baritone in his fifties, with the weight of a trumpet-voiced herald. Slow, measured and powerful, every phrase landing like a decree, resonant chest voice, absolute certainty, never shouting."
+          - id: RQB
+            instruct: "An older Black Southern preacher, gravelly and thunderous in the low register, a slow building cadence, holy boldness, each line announced like a proclamation from the pulpit, controlled power, never shouting."
+          - id: RQC
+            instruct: "A cinematic epic narrator, very deep, smooth and dark resonance, calm authority, deliberate pacing with weighty pauses, like thunder held in reserve."
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg sox libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {INSTRUCT: "${{ matrix.instruct }}", TEXT_JSON: tools/verse-voice/rev-text.json}
+        run: python tools/verse-voice/eng_qwen.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - env: {TEXT_JSON: tools/verse-voice/rev-text.json}
+        run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"
+
+  voxcpm:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: RVA
+            desc: "A deep, commanding American male baritone in his fifties, slow and measured, each phrase a decree, resonant, absolute certainty, never shouting"
+          - id: RVB
+            desc: "An older Black Southern preacher, gravelly and thunderous in the low register, slow building cadence, holy boldness, controlled power"
+          - id: RVC
+            desc: "A cinematic epic narrator, very deep and smooth, calm authority, deliberate pacing with weighty pauses"
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy faster-whisper==1.0.3
+          mkdir -p out
+      - env: {DESC: "${{ matrix.desc }}", TEXT_JSON: tools/verse-voice/rev-text.json}
+        run: python tools/verse-voice/eng_voxcpm.py "${{ matrix.id }}" 2>&1 | tee out/${{ matrix.id }}.log
+      - env: {TEXT_JSON: tools/verse-voice/rev-text.json}
+        run: python tools/verse-voice/check.py out/${{ matrix.id }}.wav 2>&1 | tee out/${{ matrix.id }}.check.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

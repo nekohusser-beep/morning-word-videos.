@@ -1,0 +1,30 @@
+name: verse-voice
+# Renders short verse-card units in the LOCKED Voice 6 (VoxCPM2 prompt-clone of the audition sample Neko picked, Oct 30 2026), one job, serial.
+# Outputs (uNNN.wav + qc.txt with Whisper word check and pitch vs reference) land in the draft release `tag`.
+on:
+  workflow_dispatch:
+    inputs:
+      tag: {description: "draft release for outputs", required: true, default: "vv2"}
+      units: {description: "units json", required: true, default: "tools/verse-voice/cards/ps91-1-2.json"}
+      ref: {description: "reference wav (the picked voice)", required: true, default: "tools/verse-voice/lock/ref_voice6.wav"}
+      ref_text: {description: "exact words spoken in the reference", required: true, default: "tools/verse-voice/lock/ref_voice6.txt"}
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release view "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" || gh release create "${{ inputs.tag }}" -R "$GITHUB_REPOSITORY" --draft -t verse-voice -n "verse voice units"
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q voxcpm soundfile numpy faster-whisper==1.0.3 praat-parselmouth
+          mkdir -p out
+      - run: python tools/sleep-story/eng_units_voxcpm.py "${{ inputs.units }}" "${{ inputs.ref }}" "${{ inputs.ref_text }}" 0 1 out 2>&1 | tee out/render.log
+      - run: python tools/verse-voice/qc.py "${{ inputs.units }}" "${{ inputs.ref }}" 2>&1 | tee out/qc.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh release upload "${{ inputs.tag }}" out/* --clobber -R "$GITHUB_REPOSITORY"

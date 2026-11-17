@@ -1,0 +1,37 @@
+name: html-probe
+# Save the HTML of given URLs (as the runner sees them) to a temp branch, so a session can regex links the shell cannot reach.
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "temp branch (delete after pulling)"
+        required: true
+        type: string
+      urls:
+        description: "name|url pairs, one per line"
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      URLS: ${{ inputs.urls }}
+      BRANCH: ${{ inputs.branch }}
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash
+        run: |
+          set -e
+          git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true; mkdir -p files
+          printf '%s\n' "$URLS" > list.txt
+          while IFS='|' read -r name url; do
+            name="$(echo "$name" | xargs)"; url="$(echo "$url" | xargs)"; [ -z "$name" ] && continue
+            code=$(curl -sL --retry 2 -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" -H "Accept: text/html" -w "%{http_code}" -o "files/$name.html" "$url" || true)
+            echo "$name $code $(wc -c < files/$name.html)"
+          done < list.txt
+          rm -f list.txt
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add files; git commit -m "probe"; git push -f origin "$BRANCH"

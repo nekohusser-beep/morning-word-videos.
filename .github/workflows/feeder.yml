@@ -1,0 +1,36 @@
+name: feeder
+# Feeder robot (Nov 12 2026): every day at about 3 AM ET, tops each Buffer channel back up from queue/ready/.
+# Free GitHub runner, no laptop, no Claude. Needs BUFFER_API_KEY (already set). Optional NTFY_TOPIC for phone alerts.
+on:
+  schedule:
+    - cron: "7 8 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run: {description: "true = only show what it would post", required: false, default: "false"}
+permissions:
+  contents: write
+concurrency: {group: feeder, cancel-in-progress: false}
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          CAP: ${{ vars.BUFFER_CAP || '10' }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then python3 tools/feeder.py --dry-run; else python3 tools/feeder.py; fi
+      - if: hashFiles('low_stock.txt') != ''
+        env: {NTFY_TOPIC: "${{ secrets.NTFY_TOPIC }}"}
+        run: |
+          [ -n "$NTFY_TOPIC" ] && curl -s -H "Priority: high" -H "Tags: warning" -d "$(cat low_stock.txt)" "https://ntfy.sh/$NTFY_TOPIC" || echo "no NTFY_TOPIC set"
+      - if: inputs.dry_run != 'true'
+        run: |
+          git config user.name "feeder-bot" && git config user.email "noreply@github.com"
+          git add -A queue
+          git diff --cached --quiet && exit 0
+          git commit -m "feeder: queue update $(date -u +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase && git push && break; sleep 7; done

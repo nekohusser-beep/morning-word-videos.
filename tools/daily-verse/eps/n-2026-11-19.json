@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 3:5",
+ "kjv": "I laid me down and slept; I awaked; for the LORD sustained me.",
+ "audio_bible": "https://www.youtube.com/watch?v=BFwsZGyPw70",
+ "audio_range": "1–31",
+ "lines": [
+  {
+   "say": "Before you close your eyes tonight, hear this.",
+   "big": "Before you close your eyes tonight, hear this",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "I laid me down and slept; I awaked; for the LORD sustained me. Psalm three, verse five.",
+   "big": "I laid me down and slept; I awaked; for the LORD sustained me.",
+   "small": "Psalm 3:5 (KJV)",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "David slept with enemies outside, and woke up because God held him through the night.",
+   "big": "David slept with enemies outside, and woke up because God held him through the night.",
+   "small": "",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I lay me down tonight. Sustain me till morning. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 1 through 31, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 1–31, read slowly. Link in the description.",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

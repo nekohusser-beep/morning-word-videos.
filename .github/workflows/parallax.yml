@@ -1,0 +1,19 @@
+name: parallax
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu > log.txt 2>&1; pip install -q transformers pillow opencv-python-headless numpy >> log.txt 2>&1; echo pipdone >> log.txt
+      - run: sudo apt-get install -y -qq ffmpeg >> log.txt 2>&1
+      - run: python parallax.py >> log.txt 2>&1 || echo FAILED >> log.txt
+      - if: always()
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p anim; cp log.txt anim/
+          tar czf anim-${{ github.run_id }}.tgz anim
+          gh release upload inbox anim-${{ github.run_id }}.tgz --clobber

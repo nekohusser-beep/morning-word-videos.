@@ -1,0 +1,240 @@
+[
+{
+"kind": "skip",
+"text": "Dre. Why is there a birthday card going around with my name on it?",
+"para_end": true,
+"in_line": false,
+"idx": 0
+},
+{
+"kind": "dre",
+"text": "Oh, that's for Miss Linda. Her birthday's today. Everybody chipped in.",
+"para_end": true,
+"in_line": false,
+"idx": 1
+},
+{
+"kind": "skip",
+"text": "Chipped in what?",
+"para_end": true,
+"in_line": false,
+"idx": 2
+},
+{
+"kind": "dre",
+"text": "Twenty dollars. I'm collecting.",
+"para_end": true,
+"in_line": false,
+"idx": 3
+},
+{
+"kind": "skip",
+"text": "You're collecting money.",
+"para_end": true,
+"in_line": false,
+"idx": 4
+},
+{
+"kind": "dre",
+"text": "I'm the gift guy now.",
+"para_end": true,
+"in_line": false,
+"idx": 5
+},
+{
+"kind": "skip",
+"text": "Dre, you still owe ME forty dollars.",
+"para_end": true,
+"in_line": false,
+"idx": 6
+},
+{
+"kind": "dre",
+"text": "That's personal business. This is office business.",
+"para_end": true,
+"in_line": false,
+"idx": 7
+},
+{
+"kind": "skip",
+"text": "How much did you collect?",
+"para_end": true,
+"in_line": false,
+"idx": 8
+},
+{
+"kind": "dre",
+"text": "Two hundred and forty dollars. Twelve people.",
+"para_end": true,
+"in_line": false,
+"idx": 9
+},
+{
+"kind": "skip",
+"text": "Okay. So what did we get her?",
+"para_end": true,
+"in_line": false,
+"idx": 10
+},
+{
+"kind": "dre",
+"text": "A card.",
+"para_end": true,
+"in_line": false,
+"idx": 11
+},
+{
+"kind": "skip",
+"text": "A card. And what else?",
+"para_end": true,
+"in_line": false,
+"idx": 12
+},
+{
+"kind": "dre",
+"text": "The card is real nice, Skip. It sings.",
+"para_end": true,
+"in_line": false,
+"idx": 13
+},
+{
+"kind": "skip",
+"text": "Two hundred and forty dollars, and she gets a card that sings?",
+"para_end": true,
+"in_line": false,
+"idx": 14
+},
+{
+"kind": "dre",
+"text": "It sings Happy Birthday AND it got glitter.",
+"para_end": true,
+"in_line": false,
+"idx": 15
+},
+{
+"kind": "skip",
+"text": "Where's the rest of the money?",
+"para_end": true,
+"in_line": false,
+"idx": 16
+},
+{
+"kind": "dre",
+"text": "Processing fees.",
+"para_end": true,
+"in_line": false,
+"idx": 17
+},
+{
+"kind": "skip",
+"text": "Processing fees?! What are you, a bank?",
+"para_end": true,
+"in_line": false,
+"idx": 18
+},
+{
+"kind": "dre",
+"text": "Gas to the store. My time. Snacks for the drive.",
+"para_end": true,
+"in_line": false,
+"idx": 19
+},
+{
+"kind": "skip",
+"text": "You drove to the gas station across the street!",
+"para_end": true,
+"in_line": false,
+"idx": 20
+},
+{
+"kind": "dre",
+"text": "Traffic was crazy.",
+"para_end": true,
+"in_line": false,
+"idx": 21
+},
+{
+"kind": "skip",
+"text": "Let me see the card. Happy birthday, Linda. From Dre.",
+"para_end": true,
+"in_line": false,
+"idx": 22
+},
+{
+"kind": "dre",
+"text": "There wasn't room for all twelve names.",
+"para_end": true,
+"in_line": false,
+"idx": 23
+},
+{
+"kind": "skip",
+"text": "It's just your name! The whole card! Big letters!",
+"para_end": true,
+"in_line": false,
+"idx": 24
+},
+{
+"kind": "dre",
+"text": "I signed it on behalf of the team. That's leadership.",
+"para_end": true,
+"in_line": false,
+"idx": 25
+},
+{
+"kind": "skip",
+"text": "Miss Linda is gonna think you bought her a two hundred dollar card!",
+"para_end": true,
+"in_line": false,
+"idx": 26
+},
+{
+"kind": "dre",
+"text": "And she gave me a hug, too.",
+"para_end": true,
+"in_line": false,
+"idx": 27
+},
+{
+"kind": "skip",
+"text": "She hugged YOU?",
+"para_end": true,
+"in_line": false,
+"idx": 28
+},
+{
+"kind": "dre",
+"text": "Yeah. And she said I'm getting a raise.",
+"para_end": true,
+"in_line": false,
+"idx": 29
+},
+{
+"kind": "skip",
+"text": "Give me my twenty dollars back.",
+"para_end": true,
+"in_line": false,
+"idx": 30
+},
+{
+"kind": "dre",
+"text": "Bet. I got you Friday.",
+"para_end": true,
+"in_line": false,
+"idx": 31
+},
+{
+"kind": "skip",
+"text": "Which Friday, Dre?",
+"para_end": true,
+"in_line": false,
+"idx": 32
+},
+{
+"kind": "dre",
+"text": "A Friday. They come every week.",
+"para_end": true,
+"in_line": false,
+"idx": 33
+}
+]

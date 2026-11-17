@@ -1,0 +1,34 @@
+cam  L 1 c01 clip[0.02-7.32] pad 0.00 hold 0.00  tl[5.60-12.90]
+broll L 2 br_tag 7.33s  tl[12.53-19.87]
+cam  L 3 c03 clip[0.00-7.26] pad 0.00 hold 0.00  tl[19.50-26.77]
+cam  L 4 c04 clip[0.18-7.35] pad 0.00 hold 0.00  tl[26.73-33.90]
+cam  L 5 c05 clip[0.06-7.50] pad 0.00 hold 0.00  tl[33.87-41.30]
+broll L 6 br_bible 7.67s  tl[40.93-48.60]
+broll L 7 br_machine 7.33s  tl[48.23-55.57]
+broll L 8 br_truck 7.73s  tl[55.20-62.93]
+cam  L 9 c09 clip[0.00-7.66] pad 0.01 hold 0.00  tl[62.57-70.23]
+cam  L10 c10 clip[0.20-7.53] pad 0.00 hold 0.00  tl[70.20-77.53]
+cam  L11 c11 clip[0.13-7.26] pad 0.00 hold 0.00  tl[77.50-84.63]
+cam  L12 c12 clip[0.15-7.38] pad 0.00 hold 0.00  tl[84.60-91.83]
+cam  L13 c13 clip[0.19-7.55] pad 0.00 hold 0.00  tl[91.80-99.17]
+cam  L14 c14 clip[0.04-7.17] pad 0.00 hold 0.00  tl[99.13-106.27]
+cam  L15 c15 clip[0.50-6.20] pad 0.00 hold 0.00  tl[106.23-111.93]
+Day 1 speech level -12.1 dBFS
+audio L 1 c01 tone  -15.1 -> shelf -0.5 dB, gain +1.7 dB
+audio L 2 c02 tone  -13.1 -> shelf -1.7 dB, gain +1.6 dB
+audio L 3 c03 tone  -10.4 -> shelf -3.0 dB, gain +1.9 dB
+audio L 4 c04 tone  -16.3 -> shelf +0.3 dB, gain +1.8 dB
+audio L 5 c05 tone  -11.5 -> shelf -2.8 dB, gain +2.4 dB
+audio L 6 c06 tone  -17.0 -> shelf +0.8 dB, gain +1.8 dB
+audio L 7 c07 tone  -16.3 -> shelf +0.3 dB, gain +2.2 dB
+audio L 8 c08 tone  -19.0 -> shelf +2.1 dB, gain +1.9 dB
+audio L 9 c09 tone  -14.1 -> shelf -1.1 dB, gain +1.3 dB
+audio L10 c10 tone  -12.9 -> shelf -1.9 dB, gain +1.1 dB
+audio L11 c11 tone  -17.9 -> shelf +1.4 dB, gain +0.8 dB
+audio L12 c12 tone  -16.1 -> shelf +0.2 dB, gain +1.7 dB
+audio L13 c13 tone  -14.4 -> shelf -0.9 dB, gain +2.0 dB
+audio L14 c14 tone  -17.8 -> shelf +1.3 dB, gain +2.0 dB
+audio L15 c15 tone  -15.8 -> shelf +0.0 dB, gain -0.1 dB
+integrated -15.0 LUFS, gain 1.0 dB
+TOTAL 124.15  body 105.95  final 21.29 MB
+EXIT 0

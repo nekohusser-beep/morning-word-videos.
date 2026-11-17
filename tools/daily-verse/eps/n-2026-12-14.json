@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 139:11-12",
+ "kjv": "If I say, Surely the darkness shall cover me; even the night shall be light about me. Yea, the darkness hideth not from thee; but the night shineth as the day: the darkness and the light are both alike to thee.",
+ "audio_bible": "https://www.youtube.com/watch?v=2V6mjKBs0yo",
+ "audio_range": "125–150",
+ "lines": [
+  {
+   "say": "Afraid of the dark tonight? Hear this.",
+   "big": "Afraid of the dark tonight",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "If I say, Surely the darkness shall cover me; even the night shall be light about me. Yea,",
+   "big": "If I say, Surely the darkness shall cover me; even the night shall be light about me. Yea,",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "the darkness hideth not from thee; but the night shineth as the day: the darkness and the light are both alike to thee. Psalm one thirty nine, verses eleven and twelve.",
+   "big": "the darkness hideth not from thee; but the night shineth as the day: the darkness and the light are both alike to thee.",
+   "small": "Psalm 139:11-12 (KJV)",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "The dark doesn't hide anything from him, and it doesn't hide you either.",
+   "big": "The dark doesn't hide anything from him, and it doesn't hide you either.",
+   "small": "",
+   "clip": "n-ocean1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, the darkness is light to you. Watch over me tonight. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-stars0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 125 through 150, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 125–150, read slowly. Link in the description.",
+   "clip": "n-candle0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

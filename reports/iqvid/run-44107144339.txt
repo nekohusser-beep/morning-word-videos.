@@ -1,0 +1,23 @@
+=== KEYWORDS: coworker thinks it's friday ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+coworker thinks it's friday            | 46 medium    |    4.2M |   24.5K |   0% |  20%
+when coworkers ignore you              | 28 low       |   63.8K |    2.3K |   0% |  10%
+why coworkers are not your friends     | 32 low       |    9.8K |    2.7K |  40% |  50%
+when your favorite coworker is off     | 25 low       |     712 |   30.9K |  10% |  70%
+MATCHING (0): 
+QUESTIONS (5): when coworkers ignore you | why coworkers are not your friends | when your favorite coworker is off | when your friend has been to the restaurant | can coworkers be friends
+RELATED (4): coworker talks too much | coworkers that talk too much | friends who complain all the time | coworkers gossiping about you
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: forgot my lunch ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+forgot my lunch                        | 30 low       |     184 |      56 |  80% |  80%
+forgot my lunch box                    | 31 low       |    1.2K |    2.6K |  40% |  60%
+i forgot my lunch number jordan carter | 27 low       |    4.5M |  169.6K |   0% |  10%
+asmr i forgot my lunch                 | 39 low       |    236K |   15.2K |  10% |  20%
+i forgot my lunch at home              | 25 low       |      92 |       2 |  40% | 100%
+when you forgot your lunch box         | 33 low       |   63.4K |  302.3K |   0% |  40%
+when you forgot your lunch             | 32 low       |     12K |     473 |   0% |  40%
+MATCHING (13): forgot my lunch box | i forgot my lunch number jordan carter | asmr i forgot my lunch | i forgot my lunch at home | i forgot my lunch | when you forgot your lunch box | when you forgot your lunch | you forgot your lunch asmr | my brother forgot his lunch at school | my brother forgot his lunch | my dad forgot his lunch storytime reddit | my daughter forgot her lunch | my teenage forgot his lunch
+QUESTIONS (2): when you forgot your lunch box | when you forgot your lunch
+RELATED (2): notice lost my lunch box | forgot downtime passcode
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

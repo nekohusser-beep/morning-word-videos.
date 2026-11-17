@@ -1,0 +1,25 @@
+name: yt-channel-tx
+on:
+  workflow_dispatch:
+    inputs:
+      channel: {description: "@handle", required: true}
+      tabs: {description: "videos,shorts,streams", required: false, default: "videos,shorts,streams"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: tools/yt-channel-nokey}
+      - name: Pull
+        env: {CH: "${{ inputs.channel }}", TABS: "${{ inputs.tabs }}"}
+        run: python3 tools/yt-channel-nokey/tx.py "$CH" out "$TABS" 2>&1 | tee out-log.txt; cp out-log.txt out/log.txt; gzip -9 out/tx.jsonl || true
+      - name: Push branch
+        env: {CH: "${{ inputs.channel }}"}
+        run: |
+          SLUG=$(echo "$CH" | tr -cd 'A-Za-z0-9_-')
+          cd out && git init -q && git checkout -q -b tx-$SLUG && git add -A
+          git -c user.name=bot -c user.email=actions@users.noreply.github.com commit -qm "tx $CH"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" tx-$SLUG

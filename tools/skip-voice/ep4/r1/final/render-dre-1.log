@@ -1,0 +1,21 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+source mentions: ['prompt_wav_path', 'prompt_text', 'reference_wav_path', 'cfg_value', 'inference_timesteps', 'denoise', 'normalize']
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 1589.76it/s]
+voxcpm_model_path: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd, zipenhancer_model_path: None, enable_denoiser: False
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Loading AudioVAE from pytorch: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/audiovae.pth
+Running on device: cpu, dtype: bfloat16
+Loading model from safetensors: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/model.safetensors
+Warning: torch.compile disabled - VoxCPMModel can only be optimized on CUDA device
+Loaded VoxCPM2Model
+Warm up VoxCPMModel...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:04<00:44,  4.92s/it] 20%|██        | 2/10 [00:09<00:39,  4.94s/it] 30%|███       | 3/10 [00:14<00:34,  4.94s/it] 40%|████      | 4/10 [00:19<00:29,  4.94s/it] 50%|█████     | 5/10 [00:24<00:24,  4.97s/it] 60%|██████    | 6/10 [00:29<00:19,  4.99s/it] 70%|███████   | 7/10 [00:34<00:14,  4.98s/it] 80%|████████  | 8/10 [00:39<00:09,  4.99s/it] 90%|█████████ | 9/10 [00:44<00:04,  4.98s/it]100%|██████████| 10/10 [00:49<00:00,  4.98s/it]100%|██████████| 10/10 [00:49<00:00,  4.97s/it]
+model loaded with {'load_denoiser': False}
+modes to try: ['prompt+text', 'reference']
+  0%|          | 0/52 [00:00<?, ?it/s]  2%|▏         | 1/52 [00:04<04:12,  4.95s/it]  4%|▍         | 2/52 [00:09<04:07,  4.94s/it]  6%|▌         | 3/52 [00:14<04:02,  4.94s/it]  8%|▊         | 4/52 [00:19<03:57,  4.94s/it] 10%|▉         | 5/52 [00:24<03:51,  4.93s/it] 12%|█▏        | 6/52 [00:29<03:46,  4.93s/it] 13%|█▎        | 7/52 [00:34<03:42,  4.94s/it] 15%|█▌        | 8/52 [00:39<03:38,  4.98s/it] 17%|█▋        | 9/52 [00:44<03:33,  4.96s/it] 19%|█▉        | 10/52 [00:49<03:28,  4.96s/it] 21%|██        | 11/52 [00:54<03:23,  4.96s/it] 23%|██▎       | 12/52 [00:59<03:18,  4.96s/it] 25%|██▌       | 13/52 [01:04<03:13,  4.95s/it] 27%|██▋       | 14/52 [01:09<03:08,  4.95s/it] 29%|██▉       | 15/52 [01:14<03:03,  4.95s/it] 29%|██▉       | 15/52 [01:18<03:13,  5.22s/it]
+5 dre prompt+text attempt 0 2.6 s in 136 s ok : A lot of people named Skip.
+  0%|          | 0/58 [00:00<?, ?it/s]  2%|▏         | 1/58 [00:04<04:40,  4.91s/it]  3%|▎         | 2/58 [00:09<04:35,  4.92s/it]  5%|▌         | 3/58 [00:14<04:30,  4.92s/it]  7%|▋         | 4/58 [00:19<04:25,  4.92s/it]  9%|▊         | 5/58 [00:24<04:21,  4.93s/it] 10%|█         | 6/58 [00:29<04:16,  4.93s/it] 12%|█▏        | 7/58 [00:34<04:11,  4.93s/it] 14%|█▍        | 8/58 [00:39<04:08,  4.97s/it] 16%|█▌        | 9/58 [00:44<04:02,  4.96s/it] 17%|█▋        | 10/58 [00:49<03:57,  4.95s/it] 19%|█▉        | 11/58 [00:54<03:52,  4.95s/it] 21%|██        | 12/58 [00:59<03:47,  4.95s/it] 22%|██▏       | 13/58 [01:04<03:42,  4.95s/it] 24%|██▍       | 14/58 [01:09<03:37,  4.94s/it] 26%|██▌       | 15/58 [01:14<03:32,  4.94s/it] 28%|██▊       | 16/58 [01:19<03:27,  4.94s/it] 29%|██▉       | 17/58 [01:24<03:22,  4.94s/it] 29%|██▉       | 17/58 [01:28<03:32,  5.18s/it]
+25 dre prompt+text attempt 0 2.9 s in 130 s ok : Oh. So you want store credit.
+done chunk 0 mode prompt+text

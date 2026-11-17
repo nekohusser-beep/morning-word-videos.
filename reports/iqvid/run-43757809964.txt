@@ -1,0 +1,51 @@
+=== KEYWORDS: rapture ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+rapture                                | 55 medium    |   99.8K |   64.2K | 100% |  30%
+rapture 2026                           | 48 medium    |   19.6K |  106.5K |  60% |  40%
+rapture blondie                        | 36 low       |  616.4K |    7.6K |  60% |   0%
+rapture 2026 update                    | 42 medium    |    8.9K |   15.8K |   0% |  50%
+rapture soldier boy                    | 36 low       |  358.6K |   21.6K |  80% |  20%
+rapture dream                          | 46 medium    |    4.2K |    5.1K | 100% |  80%
+rapture movie                          | 49 medium    |  367.5K |   43.1K |  60% |   0%
+rapture in ruins                       | 48 medium    |  100.3K |     31K | 100% |  30%
+rapture anita baker                    | 40 medium    |    2.2M |    4.8K |  80% |   0%
+how rapture will look like             | 39 low       |    720K |   13.9K |   0% |  20%
+how rapture will happen                | 41 medium    |  891.6K |   16.3K |   0% |   0%
+how rapture will take place            | 42 medium    |  833.7K |   16.1K |   0% |   0%
+MATCHING (320): rapture 2026 | rapture blondie | rapture 2026 update | rapture soldier boy | rapture dream | rapture movie | rapture in ruins | rapture anita baker | rapture iio | rapture interworld | how rapture will look like | how rapture will happen | how rapture will take place | how rapture will be like | rapture how deep is your love | how the rapture will actually happen | how was rapture built bioshock | how the rapture will be | how to rapture shield break | why rapture failed | why the rapture is not biblical | why the rapture is false | why the rapture is wrong | why no rapture | why the rapture hasn't happened yet | why pre trib rapture | why is the rapture under attack | with uh why rapture | why is the rapture important greg laurie | what rapture will look like | what rapture | rapture what will happen | rapture what to do | what is rapture in bible | what is rapture day | what is rapture of the deep | who is rapture minecraft | who invented the rapture | who goes in the rapture | when rapture happens
+QUESTIONS (65): how rapture will look like | how rapture will happen | how rapture will take place | how rapture will be like | how the rapture will actually happen | how was rapture built bioshock | how the rapture will be | how to rapture shield break | why rapture failed | why the rapture is not biblical | why the rapture is false | why the rapture is wrong | why no rapture | why the rapture hasn't happened yet | why pre trib rapture | why is the rapture under attack | why is the rapture important greg laurie | what rapture will look like | what raptors actually sound like | what raptors actually looked like | what rapture | what raptor | what is rapture in bible | what is rapture day | what is rapture of the deep
+RELATED (4): raptor tech | rupture zzz | rupture zouk | rupture ziak
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: rapture short film ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+rapture short film                     | 40 medium    |   69.4K |    6.1K |  80% |  40%
+rapture short movie                    | 27 low       |   69.6K |    3.3K |   0% |  30%
+rapture malayalam short film           | 22 low       |   14.7K |    2.3K |  30% |  50%
+rapture christian short film           | 29 low       |   28.5K |    8.7K |  10% |  20%
+the rapture animated short film        | 38 low       |  298.7K |   10.9K |  20% |  10%
+rapture of the church short film       | 30 low       |  112.9K |     586 |  10% |  30%
+how rapture will take place            | 43 medium    |      1M |   19.2K |   0% |   0%
+what rapture will look like            | 40 medium    |  176.6K |    5.7K |  20% |  20%
+what will rapture be like              | 43 medium    |    580K |    7.1K |  30% |   0%
+MATCHING (7): rapture malayalam short film | rapture christian short film | the rapture animated short film | rapture of the church short film | short film on rapture | the rapture short film | short film about rapture
+QUESTIONS (5): how rapture will take place | what rapture will look like | what will rapture be like | is rapture coming soon | is the rapture coming
+RELATED (6): rapture short movie | short video about rapture | the rapture short movie | rapture short movies | rapture short films | rapture short video clip
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: repent ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+repent                                 | 49 medium    |  101.5K |    5.6K | 100% |   0%
+repentance                             | 47 medium    |  230.6K |   11.2K |  60% |   0%
+repentance prayer                      | 47 medium    |  376.3K |    5.6K |  70% |   0%
+repentless slayer                      | 37 low       |  681.7K |   16.7K |  90% |   0%
+repentance fnf                         | 26 low       |   35.2K |    4.2K |  50% |  20%
+repentless                             | 36 low       |    748K |   16.1K | 100% |  20%
+repent or perish                       | 27 low       |    2.6K |    1.7K |  90% |  60%
+repentance sermon                      | 38 low       |   91.6K |    3.2K |  10% |  10%
+repentance song                        | 41 medium    |  589.9K |   17.5K |  30% |   0%
+how repent                             | 45 medium    |  153.4K |    7.6K |  70% |   0%
+how repent for our sins                | 37 low       |   86.9K |    6.1K |  20% |   0%
+how to repent your sins to jesus       | 34 low       |  104.8K |    4.9K |  10% |  10%
+MATCHING (282): repent or perish | repent php | repent lil tony | repent mtm isaiah | repent shaggy | repent fredobagz | repent again | repent ye foolish gods | repent torey d'shaun | repent prayer | how repent | how repent for our sins | how to repent your sins to jesus | how to repent to allah | how to repent from lust | how to repent from zina | how to repent from sexual sin | how to repent after lust | how to repent to jesus | why repent | why can't i repent | why doesn't satan repent | i can't repent | why can't satan repent | what repent means | what repent actually means in the bible | repent what a joy it is | repent what a joy it is karaoke | what does repent mean | who is repent marvel | why should we repent | when you repent to allah | when anime fans repent | when they say repent | why do we repent | what it means to repent | what does it mean to repent | what is to repent | what to say to repent | did solomon repent
+QUESTIONS (62): how repent | how repent for our sins | how to repent your sins to jesus | how to repent to allah | how to repent from lust | how to repent from zina | how to repent from sexual sin | how to repent after lust | how to repent to jesus | why repentance is fantastic | why repent | why repentance is not working | why repentance is necessary | why is repentance important | why is repentance so hard | why can't i repent | why doesn't satan repent | why can't satan repent | what repentance really means | what repent means | what repent actually means in the bible | what does repent mean | what is repentance according to the bible | what does repentance mean in the bible | what does repentance look like
+RELATED (26): repentance | repentance prayer | repentless slayer | repentance fnf | repentless | repentance sermon | repentance song | repentogon install | repentogon how to install | magician who repented | people who repented | repentance is not turning from sin | repentance is not an apology | repentance is relationship | repentance is now | repentance is not what you think | repentance is a gift | de repente | the truth about repentance | repentance esham | repentance eleven | reprint kaise kare | repentance quran | repentance verses bible | repentance v3 | repentance zac poonen
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

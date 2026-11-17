@@ -1,0 +1,40 @@
+name: release-to-upload-branch
+# Turns one release mp4 + its meta JSON + thumbnail into an orphan temp branch the Studio pane can pull
+# (c00.. 16 MB chunks, m.json, t.jpg, size.txt, count.txt). Delete the branch after upload (delete-branch.yml).
+on:
+  workflow_dispatch:
+    inputs:
+      video_url: {description: "release download URL of the mp4", required: true}
+      meta_path: {description: "repo path of the meta JSON (title, description, tags)", required: true}
+      thumb_path: {description: "repo path of the thumbnail jpg", required: true}
+      branch: {description: "temp branch name, e.g. up-heaven-am", required: true}
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build branch
+        shell: bash
+        env:
+          URL: ${{ inputs.video_url }}
+          META: ${{ inputs.meta_path }}
+          THUMB: ${{ inputs.thumb_path }}
+          BR: ${{ inputs.branch }}
+        run: |
+          set -e
+          W=$(mktemp -d)
+          curl -fsSL --retry 3 -o "$W/v.mp4" "$URL"
+          cp "$META" "$W/m.json"; cp "$THUMB" "$W/t.jpg"
+          python3 -c "import json,sys;m=json.load(open('$W/m.json'));print('title:',m['title']);print('tags:',len(m.get('tags',[])))"
+          ( cd "$W" && split -b 16000000 -d -a 2 v.mp4 c && stat -c %s v.mp4 > size.txt && ls c?? | wc -l > count.txt && rm v.mp4 )
+          git checkout --orphan "$BR"
+          git rm -rfq . || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp "$W"/* .
+          echo "size $(cat size.txt) chunks $(cat count.txt)"
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add -A && git commit -qm "upload branch $BR"
+          git push -f origin "$BR"

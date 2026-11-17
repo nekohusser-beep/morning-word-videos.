@@ -1,0 +1,218 @@
+name: openshorts-test
+# FREE test: how does OpenShorts (MIT, github.com/mutonby/openshorts) actually run on a plain free CPU runner, with NO Gemini key?
+# Local LLM path: Ollama (qwen2.5:7b) answers the moment-picker prompts; faster-whisper "small" (CPU int8) does the word timestamps.
+# Two cases run in parallel:
+#   vertical   = four of Neko's own Derrick episodes stitched into one ~9.4 min 720x1280 source (captions already burned in, so OpenShorts captions are OFF)
+#   horizontal = a public-domain 1080p talking-head video (Wikimedia Commons, US government work), the case OpenShorts was built for (captions ON)
+# Output lands on branch openshorts-out under <variant>-<run_id>/ : RESULT.md (stage timings, peak RAM, clip table), timeline.tsv (job log with times),
+# stats.csv, clips, contact.png, backend.log, ollama.log. Pinned to the OpenShorts commit that was read (MIT license).
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: "OpenShorts commit to test"
+        required: true
+        default: "d797e20c4dafbda0e4ba1fe01eb2e185501a7b9a"
+      model:
+        description: "Ollama model for the moment picker"
+        required: true
+        default: "qwen2.5:7b"
+      variants:
+        description: "JSON list: vertical, horizontal"
+        required: true
+        default: '["vertical","horizontal"]'
+      horizontal_url:
+        description: "public-domain horizontal source"
+        required: false
+        default: "https://upload.wikimedia.org/wikipedia/commons/5/5a/2013-09-28_President_Obama%27s_Weekly_Address_HD.webm"
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: ${{ fromJSON(inputs.variants) }}
+    env:
+      VARIANT: ${{ matrix.variant }}
+      MODEL: ${{ inputs.model }}
+      OS_COMMIT: ${{ inputs.commit }}
+      HORIZ_URL: ${{ inputs.horizontal_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            tools/openshorts-test
+            day1/morning-word-day1.mp4
+            shorts/derrick/create-in-me-a-clean-heart-psalm-51.mp4
+            episodes/restore/ps118-24-this-is-the-day-v2.mp4
+            shorts/derrick/come-as-a-child-matthew-18-3.mp4
+          sparse-checkout-cone-mode: false
+
+      - name: Machine info and stage helper
+        run: |
+          mkdir -p out/result
+          cat > "$RUNNER_TEMP/stage.sh" <<'SH'
+          stage() { printf '%s\t%s\n' "$(date +%s)" "$1" >> "$GITHUB_WORKSPACE/out/stages.tsv"; echo "== $1 $(date -u +%H:%M:%S)"; }
+          SH
+          . "$RUNNER_TEMP/stage.sh"
+          stage start
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost || true
+          { echo "variant=$VARIANT"; echo "openshorts_commit=$OS_COMMIT"; echo "model=$MODEL"; echo "nproc=$(nproc)"; free -m | head -2; df -h / | tail -1; docker --version; } | tee out/machine.txt
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null
+          ffmpeg -version | head -1
+
+      - name: Start Ollama in Docker and pull the model
+        run: |
+          . "$RUNNER_TEMP/stage.sh"
+          stage ollama-start
+          mkdir -p "$HOME/ollama-models"
+          docker run -d --name ollama --network host -e OLLAMA_CONTEXT_LENGTH=16384 -e OLLAMA_KEEP_ALIVE=60m -v "$HOME/ollama-models:/root/.ollama" ollama/ollama:latest
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:11434/api/version && break; sleep 2; done
+          stage ollama-pull-start
+          docker exec ollama ollama pull "$MODEL"
+          stage ollama-pull-done
+          docker exec ollama ollama list
+
+      - name: Build OpenShorts image (CPU)
+        run: |
+          . "$RUNNER_TEMP/stage.sh"
+          git clone -q https://github.com/mutonby/openshorts os-src
+          git -C os-src checkout -q "$OS_COMMIT"
+          git -C os-src log -1 --format='%H %ad %s' | tee out/openshorts-commit.txt
+          stage docker-build-start
+          docker build -t openshorts-backend os-src > out/build.log 2>&1 || { tail -80 out/build.log; exit 1; }
+          stage docker-build-done
+          tail -5 out/build.log
+          docker image ls openshorts-backend
+
+      - name: Make the test source
+        run: |
+          . "$RUNNER_TEMP/stage.sh"
+          stage source-start
+          if [ "$VARIANT" = "vertical" ]; then
+            A=day1/morning-word-day1.mp4
+            B=shorts/derrick/create-in-me-a-clean-heart-psalm-51.mp4
+            C=episodes/restore/ps118-24-this-is-the-day-v2.mp4
+            D=shorts/derrick/come-as-a-child-matthew-18-3.mp4
+            for f in $A $B $C $D; do ls -la "$f"; ffprobe -v error -show_entries stream=codec_type,width,height,sample_rate -of csv=p=0 "$f" | tr '\n' ' '; echo; done
+            F=""
+            for n in 0 1 2 3; do F="$F[$n:v]scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=30[v$n];[$n:a]aresample=48000,aformat=channel_layouts=stereo[a$n];"; done
+            F="${F}[v0][a0][v1][a1][v2][a2][v3][a3]concat=n=4:v=1:a=1[v][a]"
+            ffmpeg -v error -y -i $A -i $B -i $C -i $D -filter_complex "$F" -map "[v]" -map "[a]" -c:v libx264 -preset veryfast -crf 20 -c:a aac -b:a 128k src.mp4
+          else
+            curl -fL --retry 4 --retry-delay 5 -A "morning-word-videos-test/1.0 (https://github.com/nekohusser-beep)" -o src-in.webm "$HORIZ_URL"
+            ffmpeg -v error -y -i src-in.webm -c:v libx264 -preset veryfast -crf 22 -c:a aac -b:a 128k src.mp4
+          fi
+          ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,r_frame_rate -show_entries format=duration,size -of default=nw=1 src.mp4 | tee out/source-probe.txt
+          stage source-done
+
+      - name: Run OpenShorts and process the video
+        run: |
+          . "$RUNNER_TEMP/stage.sh"
+          mkdir -p os-out && chmod 777 os-out
+          docker run -d --name openshorts --network host \
+            -e LLM_BASE_URL=http://127.0.0.1:11434/v1 -e LLM_MODEL="$MODEL" -e LLM_TIMEOUT=1800 \
+            -v "$PWD/os-out:/app/output" openshorts-backend
+          stage server-start
+          ok=0
+          for i in $(seq 1 90); do curl -sf http://127.0.0.1:8000/health/ready > /dev/null && ok=1 && break; sleep 2; done
+          if [ "$ok" != 1 ]; then docker logs openshorts 2>&1 | tail -60; exit 1; fi
+          stage server-ready
+          curl -s http://127.0.0.1:8000/api/config | tee out/api-config.json; echo
+          # resource monitor: epoch, used RAM MB, per-container CPU/mem
+          ( while true; do echo "$(date +%s),$(free -m | awk '/Mem:/{print $3}'),$(docker stats --no-stream --format '{{.Name}}={{.CPUPerc}}/{{.MemUsage}}' 2>/dev/null | tr '\n' ' ')" >> out/stats.csv; sleep 8; done ) &
+          MON=$!
+          FLAGS=""
+          [ "$VARIANT" = "vertical" ] && FLAGS="--no-captions"
+          stage process-start
+          set +e
+          python3 -I tools/openshorts-test/drive.py src.mp4 out/result $FLAGS 2>&1 | tee out/drive.log
+          RC=${PIPESTATUS[0]}
+          set -e
+          stage process-done
+          kill $MON 2>/dev/null || true
+          echo "drive exit code: $RC" | tee -a out/drive.log
+          echo "$RC" > out/drive.rc
+
+      - name: Probe clips, build contact sheet, write RESULT.md
+        if: always()
+        run: |
+          . "$RUNNER_TEMP/stage.sh"
+          docker logs openshorts > out/backend.log 2>&1 || true
+          docker logs ollama > out/ollama.log 2>&1 || true
+          : > out/clips.tsv
+          i=0
+          for f in out/result/clip*.mp4; do
+            [ -f "$f" ] || continue
+            i=$((i+1))
+            ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,codec_name -show_entries format=duration,size -of csv=p=0 "$f" | tr '\n' ' ' | sed "s|^|$(basename $f) |" >> out/clips.tsv; echo >> out/clips.tsv
+            ffmpeg -v error -y -ss 4 -i "$f" -frames:v 1 -vf scale=270:-2 "out/result/frame$(printf %02d $i).png" || true
+          done
+          N=$(ls out/result/frame*.png 2>/dev/null | wc -l)
+          if [ "$N" -gt 0 ]; then
+            COLS=$(( N < 5 ? N : 5 )); ROWS=$(( (N + COLS - 1) / COLS ))
+            ffmpeg -v error -y -framerate 1 -pattern_type glob -i 'out/result/frame*.png' -vf "tile=${COLS}x${ROWS}" -frames:v 1 out/contact.png || true
+            rm -f out/result/frame*.png
+          fi
+          python3 -I - <<'PY'
+          import csv, json, os
+          def load(p):
+              try:
+                  return open(p).read()
+              except Exception:
+                  return ""
+          stages = [l.rstrip("\n").split("\t") for l in load("out/stages.tsv").splitlines() if l.strip()]
+          lines = ["# OpenShorts runner test: " + os.environ.get("VARIANT", "?"), ""]
+          lines.append("## Stage wall time (free ubuntu-latest runner, no GPU)")
+          for (t0, a), (t1, b) in zip(stages, stages[1:]):
+              lines.append(f"- {a} -> {b}: {int(t1) - int(t0)} s")
+          peak = 0
+          for row in load("out/stats.csv").splitlines():
+              parts = row.split(",", 2)
+              try:
+                  peak = max(peak, int(parts[1]))
+              except Exception:
+                  pass
+          lines += ["", f"## Peak used RAM on the runner: {peak} MB", ""]
+          lines.append("## Machine"); lines.append("```"); lines.append(load("out/machine.txt").strip()); lines.append("```")
+          lines.append("## Source"); lines.append("```"); lines.append(load("out/source-probe.txt").strip()); lines.append("```")
+          lines.append("## Job summary")
+          try:
+              s = json.load(open("out/result/summary.json"))
+              lines.append("```"); lines.append(json.dumps({k: v for k, v in s.items() if k != "clips"}, indent=1)); lines.append("```")
+              lines.append("Clips (title, start, end):")
+              for c in s.get("clips", []):
+                  lines.append(f"- {c.get('file')} | {c.get('title')} | {c.get('start')} -> {c.get('end')}")
+          except Exception as e:
+              lines.append(f"(no summary.json: {e})")
+          lines.append("## Clip files (name, w,h,fps,codec, seconds, bytes)"); lines.append("```"); lines.append(load("out/clips.tsv").strip()); lines.append("```")
+          lines.append("## drive exit code: " + load("out/drive.rc").strip())
+          lines.append("## /api/config"); lines.append("```"); lines.append(load("out/api-config.json").strip()); lines.append("```")
+          open("out/RESULT.md", "w").write("\n".join(lines) + "\n")
+          open(os.environ["GITHUB_STEP_SUMMARY"], "a").write("\n".join(lines) + "\n")
+          PY
+          cat out/RESULT.md
+
+      - name: Push results to branch openshorts-out
+        if: always()
+        run: |
+          R="openshorts/${VARIANT}-${{ github.run_id }}"
+          mkdir -p "$R"
+          cp -r out/. "$R"/
+          # GitHub rejects files over 100 MB: drop any oversized clip and say so
+          find "$R" -type f -size +90M -print -delete > "$R/dropped-oversize.txt" || true
+          git config user.name "openshorts-bot"; git config user.email "noreply@github.com"
+          if git fetch -q origin openshorts-out; then
+            git checkout -q -B openshorts-out origin/openshorts-out
+          else
+            git checkout -q --orphan openshorts-out
+            git rm -rq --cached . > /dev/null 2>&1 || true
+          fi
+          git add --sparse -f "$R"
+          git commit -qm "openshorts-test ${VARIANT} ${{ github.run_id }}" || true
+          for i in 1 2 3 4 5 6 7 8; do git push -q origin openshorts-out && break; git pull -q --rebase origin openshorts-out; sleep $((RANDOM % 5 + 1)); done
+          git log --oneline -3

@@ -1,0 +1,29 @@
+name: buffer
+# Schedule or check Buffer posts without the connector. Needs repo secret BUFFER_API_KEY.
+on:
+  workflow_dispatch:
+    inputs:
+      cmd: {description: "list, post, move or delete", required: true, default: "list"}
+      args: {description: "extra arguments for tools/buffer.py", required: false, default: ""}
+      post_file: {description: "optional repo path of a JSON list of posts to schedule", required: false, default: ""}
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env: {BUFFER_API_KEY: "${{ secrets.BUFFER_API_KEY }}"}
+        run: |
+          if [ -n "${{ inputs.post_file }}" ]; then
+            python3 - <<'PY'
+          import json, subprocess
+          for p in json.load(open("${{ inputs.post_file }}")):
+              a = ["python3", "tools/buffer.py", "post", "--channel", p["channel"], "--video", p["video"], "--text", p["text"]]
+              for k in ("title", "due", "privacy"):
+                  if p.get(k): a += ["--" + k, p[k]]
+              subprocess.run(a, check=True)
+          PY
+          else
+            python3 tools/buffer.py ${{ inputs.cmd }} ${{ inputs.args }}
+          fi

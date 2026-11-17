@@ -12,3 +12,4 @@
 - Nov 14 2026: n6-psalm127 sleep Short was scheduled without IQ Vid because the scheduled prompt said 'just do it'. Fix: IQ Vid gate added to CLAUDE.md and to the sleep Short + Skip ADHD scheduled tasks; nothing posts without it (Neko, Nov 15).
 - Nov 14 2026: Marked 5 Skip videos READY (auto-post) before Neko saw them. Fix: Neko watches every video first; build -> NEKO REVIEW -> READY only on his OK.
 - Nov 15 2026: Sent Neko a raw MOSS voice test (slow, unusable) instead of a finished version. Fix: tune first, send only the best finished version.
+- Nov 16 2026: Nightly Studio finish skipped 2 nights because the browser pane crashed, though yt-push (API, no browser) was already signed in and could do most of it. Fix: YT-PUSH FIRST hard rule; browser only for Related video + pin; browser failure logs [BROWSER-PENDING], never skips the night.

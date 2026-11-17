@@ -494,11 +494,18 @@ def run_job(yt, job, mode):
         if st != 200:
             res["errors"].append("videos.update %s %s" % (st, str(js)[:300]))
             return res
-        again, err = read_video(yt, vid)
+        again, err, d2 = None, None, None
+        for wait in (0, 8, 20, 40):  # YouTube's read-back lags a few seconds behind a save
+            time.sleep(wait)
+            again, err = read_video(yt, vid)
+            if err:
+                continue
+            d2, _ = plan_changes(again, want)
+            if not d2:
+                break
         if err:
             res["errors"].append("re-read failed: " + err)
         else:
-            d2, _ = plan_changes(again, want)
             if d2:
                 res["errors"].append("saved but YouTube still shows a difference in: " + ", ".join(d2))
             else:

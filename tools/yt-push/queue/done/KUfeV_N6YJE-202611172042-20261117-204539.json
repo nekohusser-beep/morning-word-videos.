@@ -1,0 +1,20 @@
+{
+ "job": {
+  "video_id": "KUfeV_N6YJE",
+  "title": "David and Goliath Animated Bible Story for Kids | The Boy Who Beat a Giant (Quiz)",
+  "source": "IQ Vid kw run 44171019603 + Ask Studio diagnosis 2026-11-17"
+ },
+ "results": [
+  {
+   "video_id": "KUfeV_N6YJE",
+   "mode": "apply",
+   "time_utc": "2026-11-17T20:45:37",
+   "changed": [],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "David and Goliath Animated Bible Story for Kids | The Boy Who Beat a Giant (Quiz)"
+  }
+ ]
+}

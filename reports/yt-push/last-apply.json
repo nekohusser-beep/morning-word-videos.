@@ -3,42 +3,39 @@
   {
    "video_id": "KUfeV_N6YJE",
    "mode": "apply",
-   "time_utc": "2026-11-17T20:43:05",
+   "time_utc": "2026-11-17T20:45:37",
    "changed": [],
-   "skipped": [],
-   "errors": [
-    "saved but YouTube still shows a difference in: title"
+   "skipped": [
+    "metadata already matches"
    ],
-   "live_title": "David and Goliath for Kids | Bible Story Cartoon with Quiz (1 Samuel 17)",
-   "rollback": "reports/yt-push/rollback/KUfeV_N6YJE-20261117-204305.json"
+   "errors": [],
+   "live_title": "David and Goliath Animated Bible Story for Kids | The Boy Who Beat a Giant (Quiz)"
   }
  ],
  "Ljd1BwiVgGI-202611172042.json": [
   {
    "video_id": "Ljd1BwiVgGI",
    "mode": "apply",
-   "time_utc": "2026-11-17T20:43:06",
+   "time_utc": "2026-11-17T20:45:38",
    "changed": [],
-   "skipped": [],
-   "errors": [
-    "saved but YouTube still shows a difference in: title"
+   "skipped": [
+    "metadata already matches"
    ],
-   "live_title": "Why Do I Keep Falling Into The Same Sin? | Morning Prayer For Temptation (1 Corinthians 10:13)",
-   "rollback": "reports/yt-push/rollback/Ljd1BwiVgGI-20261117-204306.json"
+   "errors": [],
+   "live_title": "Why Do I Keep Falling Back Into Sin? A Morning Prayer to Break the Cycle (1 Corinthians 10:13)"
   }
  ],
  "W_SDNjJNupk-202611172042.json": [
   {
    "video_id": "W_SDNjJNupk",
    "mode": "apply",
-   "time_utc": "2026-11-17T20:43:08",
+   "time_utc": "2026-11-17T20:45:39",
    "changed": [],
-   "skipped": [],
-   "errors": [
-    "saved but YouTube still shows a difference in: title"
+   "skipped": [
+    "metadata already matches"
    ],
-   "live_title": "Morning Prayer Before You Worry About Money Today (Matthew 6:11)",
-   "rollback": "reports/yt-push/rollback/W_SDNjJNupk-20261117-204308.json"
+   "errors": [],
+   "live_title": "Morning Prayer About Money | When Bills Keep You Up at Night (Matthew 6:11)"
   }
  ]
 }

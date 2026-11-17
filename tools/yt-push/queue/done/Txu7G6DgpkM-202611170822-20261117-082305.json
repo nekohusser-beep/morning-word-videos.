@@ -1,0 +1,20 @@
+{
+ "job": {
+  "video_id": "Txu7G6DgpkM",
+  "comment": "Type amen, and send this to a friend who needs it."
+ },
+ "results": [
+  {
+   "video_id": "Txu7G6DgpkM",
+   "mode": "apply",
+   "time_utc": "2026-11-17T08:23:02",
+   "changed": [],
+   "skipped": [
+    "metadata already matches",
+    "comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio"
+   ],
+   "errors": [],
+   "live_title": "Will You Be Left Behind in the Rapture? He Was Warned"
+  }
+ ]
+}

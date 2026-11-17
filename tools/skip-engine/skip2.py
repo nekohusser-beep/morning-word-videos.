@@ -53,6 +53,7 @@ ROOM = {
     'living':  dict(wall=(250, 214, 160), wall2=(236, 190, 130), floor=(190, 140, 95), deco=['window', 'frame', 'lamp']),
     'door':    dict(wall=(206, 226, 250), wall2=(180, 206, 240), floor=(200, 156, 108), deco=['frame', 'lamp']),
     'desk':    dict(wall=(220, 210, 245), wall2=(196, 184, 232), floor=(190, 145, 100), deco=['window', 'shelf_wall', 'lamp']),
+    'desk_n':  dict(wall=(150, 140, 190), wall2=(126, 116, 168), floor=(150, 115, 80), deco=['window', 'shelf_wall', 'lamp'], night=True),
     'store':   dict(wall=(245, 245, 236), wall2=(225, 228, 214), floor=(210, 214, 220), deco=['sign'], tiles=True),
     'laundry': dict(wall=(200, 236, 246), wall2=(170, 220, 236), floor=(205, 205, 215), deco=['window', 'lamp'], tiles=True),
     'blank':   dict(wall=(255, 247, 228), wall2=(255, 236, 200), floor=None, deco=['burst']),
@@ -259,7 +260,7 @@ def skip2(d, x, y, b, t, lt, mouth_open):
             v1.prop(d, b['bubble'], bx, by + 46 * s, .55 * s, t)
 
 STATIC = {'kitchen': [('trash', 130, 1.0), ('kitchen', 770, 1.0)], 'kitchen_n': [('trash', 130, 1.0), ('kitchen', 770, 1.0)], 'bedroom': [('bed', 720, .9)], 'living': [('couch', 330, .9), ('tv', 860, 1.0)],
-          'door': [('door', 880, 1.0), ('plant', 120, 1.0)], 'desk': [('desk', 790, 1.0), ('plant', 120, .9)], 'store': [('shelf', 790, 1.0)],
+          'door': [('door', 880, 1.0), ('plant', 120, 1.0)], 'desk': [('desk', 790, 1.0), ('plant', 120, .9)], 'desk_n': [('desk', 790, 1.0), ('plant', 120, .9)], 'store': [('shelf', 790, 1.0)],
           'laundry': [('washer', 830, 1.0), ('basket', 130, 1.0)], 'blank': []}
 
 def mouth_curve(audio, sr, n):

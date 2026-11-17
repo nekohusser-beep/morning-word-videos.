@@ -1,19 +1,0 @@
-/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-source mentions: ['prompt_wav_path', 'prompt_text', 'reference_wav_path', 'cfg_value', 'inference_timesteps', 'denoise', 'normalize']
-Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 3166.31it/s]
-voxcpm_model_path: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd, zipenhancer_model_path: None, enable_denoiser: False
-/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
-  WeightNorm.apply(module, name, dim)
-Loading AudioVAE from pytorch: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/audiovae.pth
-Running on device: cpu, dtype: bfloat16
-Loading model from safetensors: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/model.safetensors
-Warning: torch.compile disabled - VoxCPMModel can only be optimized on CUDA device
-Loaded VoxCPM2Model
-Warm up VoxCPMModel...
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:06,  1.29it/s] 20%|██        | 2/10 [00:01<00:05,  1.36it/s] 30%|███       | 3/10 [00:02<00:05,  1.39it/s] 40%|████      | 4/10 [00:02<00:04,  1.40it/s] 50%|█████     | 5/10 [00:03<00:03,  1.41it/s] 60%|██████    | 6/10 [00:04<00:02,  1.41it/s] 70%|███████   | 7/10 [00:05<00:02,  1.41it/s] 80%|████████  | 8/10 [00:05<00:01,  1.42it/s] 90%|█████████ | 9/10 [00:06<00:00,  1.42it/s]100%|██████████| 10/10 [00:07<00:00,  1.41it/s]100%|██████████| 10/10 [00:07<00:00,  1.40it/s]
-model loaded with {'load_denoiser': False}
-modes to try: ['prompt+text', 'reference']
-  0%|          | 0/82 [00:00<?, ?it/s]  1%|          | 1/82 [00:00<00:57,  1.41it/s]  2%|▏         | 2/82 [00:01<00:56,  1.42it/s]  4%|▎         | 3/82 [00:02<00:55,  1.43it/s]  5%|▍         | 4/82 [00:02<00:54,  1.42it/s]  6%|▌         | 5/82 [00:03<00:54,  1.42it/s]  7%|▋         | 6/82 [00:04<00:53,  1.42it/s]  9%|▊         | 7/82 [00:04<00:52,  1.42it/s] 10%|▉         | 8/82 [00:05<00:51,  1.43it/s] 11%|█         | 9/82 [00:06<00:51,  1.42it/s] 12%|█▏        | 10/82 [00:07<00:50,  1.42it/s] 13%|█▎        | 11/82 [00:07<00:49,  1.43it/s] 15%|█▍        | 12/82 [00:08<00:49,  1.42it/s] 16%|█▌        | 13/82 [00:09<00:48,  1.42it/s] 17%|█▋        | 14/82 [00:09<00:47,  1.43it/s] 18%|█▊        | 15/82 [00:10<00:47,  1.43it/s] 20%|█▉        | 16/82 [00:11<00:46,  1.43it/s] 21%|██        | 17/82 [00:11<00:46,  1.41it/s] 22%|██▏       | 18/82 [00:12<00:45,  1.41it/s] 22%|██▏       | 18/82 [00:12<00:45,  1.39it/s]
-13 dre prompt+text attempt 0 3.0 s in 30 s ok : The card is real nice, Skip. It sings.
-done chunk 0 mode prompt+text

@@ -1,0 +1,65 @@
+[
+ {
+  "kind": "dre",
+  "text": "Sir. Do you have a reservation?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "We got a twelve-oh-five burrito, a twelve-oh-seven soup, and a twelve-oh-nine mystery Tupperware. I don't ask questions.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "dre",
+  "text": "Burrito, you are cleared for two minutes. Have a safe flight.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "dre",
+  "text": "It's the busiest runway in this building, Skip.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "dre",
+  "text": "Is that... fish?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "dre",
+  "text": "Mayday, mayday. We have fish in the terminal. Repeat. Fish in the terminal.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "dre",
+  "text": "No, no, no, no, no.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 10
+ },
+ {
+  "kind": "dre",
+  "text": "Attention. All flights are grounded until further notice.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 11
+ },
+ {
+  "kind": "dre",
+  "text": "That's what the F-A-A said on Friday the thirteenth. Next thing you know, seven thousand flights sitting on the ground.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 13
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "skip",
+  "text": "For the microwave?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "Dre. It's a microwave.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "skip",
+  "text": "It's salmon. It's healthy.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "skip",
+  "text": "Man, I'm just trying to eat.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "skip",
+  "text": "Dre, it's one piece of salmon.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ },
+ {
+  "kind": "skip",
+  "text": "More room for me.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 14
+ }
+]

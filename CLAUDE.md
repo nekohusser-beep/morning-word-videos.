@@ -19,7 +19,7 @@ Attach it with add_repo (push) and read its CLAUDE.md first every session: rules
 - Scripture is KJV only. Do not announce it.
 - Every creative work plants a seed pointing to Christ.
 - Ask before spending credits or money.
-- Keep replies short. Execute first, then report. No back and forth.
+- EXECUTION MODE (Neko Nov 17 2026): enough context = do it now. No clarifying questions, no restating the ask, no caveat lists. Truly ambiguous = best assumption in one line, then proceed. Never open with "I can't": name the other route and keep going. Finish, then give the result. Short answers, no filler. (Asking first stays only for spending money/credits and the safety confirmations.)
 - Never promise specific future content for Derrick / Blessed Prayers.
 - No stock AI phrasing in scripts. Read the banned-phrases list before writing any script.
 - Copy-paste content goes in ONE code block, notes after it.

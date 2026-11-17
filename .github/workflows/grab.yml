@@ -1,0 +1,25 @@
+name: grab-signs
+on:
+  push:
+    branches: [up-signs-grounded]
+    paths: [.github/workflows/grab.yml]
+permissions:
+  contents: write
+jobs:
+  grab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          pip install -q -U yt-dlp
+          sudo apt-get -qq install -y ffmpeg >/dev/null
+          yt-dlp -f "bv*[height<=1920][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b" --merge-output-format mp4 -o "signs-grounded.mp4" "https://www.youtube.com/shorts/LK7xDjq4cEY" 2>&1 | tail -20 || true
+          ls -la
+          ffprobe -v error -show_entries format=duration:stream=width,height -of compact signs-grounded.mp4 || true
+      - name: Commit
+        run: |
+          [ -f signs-grounded.mp4 ] || { echo "NO FILE"; exit 1; }
+          git config user.name grab; git config user.email grab@users.noreply.github.com
+          git add signs-grounded.mp4 && git commit -m "grounded short mp4" && git push origin HEAD:up-signs-grounded

@@ -1,0 +1,21 @@
+{
+ "job": {
+  "video_id": "8lt3eRoIOyA",
+  "thumbnail_file": "tools/yt-push/thumbs/8lt3eRoIOyA.jpg"
+ },
+ "results": [
+  {
+   "video_id": "8lt3eRoIOyA",
+   "mode": "apply",
+   "time_utc": "2026-11-17T22:45:22",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "What It's Like to Have ADHD (Animated) | Meet Skip"
+  }
+ ]
+}

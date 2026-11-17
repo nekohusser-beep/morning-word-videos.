@@ -1,0 +1,21 @@
+{
+ "job": {
+  "video_id": "sySDddc8YMw",
+  "thumbnail_file": "tools/yt-push/thumbs/sySDddc8YMw.jpg"
+ },
+ "results": [
+  {
+   "video_id": "sySDddc8YMw",
+   "mode": "apply",
+   "time_utc": "2026-11-17T22:45:33",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "Is Hell Real? The Part Nobody Tells You"
+  }
+ ]
+}

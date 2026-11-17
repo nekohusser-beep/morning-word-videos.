@@ -1,10 +1,27 @@
 {
- "KUfeV_N6YJE-202611172042.json": [
+ "8lt3eRoIOyA-202611172245.json": [
+  {
+   "video_id": "8lt3eRoIOyA",
+   "mode": "apply",
+   "time_utc": "2026-11-17T22:45:22",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "What It's Like to Have ADHD (Animated) | Meet Skip"
+  }
+ ],
+ "KUfeV_N6YJE-202611172245.json": [
   {
    "video_id": "KUfeV_N6YJE",
    "mode": "apply",
-   "time_utc": "2026-11-17T20:45:37",
-   "changed": [],
+   "time_utc": "2026-11-17T22:45:25",
+   "changed": [
+    "thumbnail"
+   ],
    "skipped": [
     "metadata already matches"
    ],
@@ -12,12 +29,14 @@
    "live_title": "David and Goliath Animated Bible Story for Kids | The Boy Who Beat a Giant (Quiz)"
   }
  ],
- "Ljd1BwiVgGI-202611172042.json": [
+ "Ljd1BwiVgGI-202611172245.json": [
   {
    "video_id": "Ljd1BwiVgGI",
    "mode": "apply",
-   "time_utc": "2026-11-17T20:45:38",
-   "changed": [],
+   "time_utc": "2026-11-17T22:45:27",
+   "changed": [
+    "thumbnail"
+   ],
    "skipped": [
     "metadata already matches"
    ],
@@ -25,17 +44,49 @@
    "live_title": "Why Do I Keep Falling Back Into Sin? A Morning Prayer to Break the Cycle (1 Corinthians 10:13)"
   }
  ],
- "W_SDNjJNupk-202611172042.json": [
+ "W_SDNjJNupk-202611172245.json": [
   {
    "video_id": "W_SDNjJNupk",
    "mode": "apply",
-   "time_utc": "2026-11-17T20:45:39",
-   "changed": [],
+   "time_utc": "2026-11-17T22:45:30",
+   "changed": [
+    "thumbnail"
+   ],
    "skipped": [
     "metadata already matches"
    ],
    "errors": [],
    "live_title": "Morning Prayer About Money | When Bills Keep You Up at Night (Matthew 6:11)"
+  }
+ ],
+ "sySDddc8YMw-202611172245.json": [
+  {
+   "video_id": "sySDddc8YMw",
+   "mode": "apply",
+   "time_utc": "2026-11-17T22:45:33",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "Is Hell Real? The Part Nobody Tells You"
+  }
+ ],
+ "xoOD_wOfmQU-202611172245.json": [
+  {
+   "video_id": "xoOD_wOfmQU",
+   "mode": "apply",
+   "time_utc": "2026-11-17T22:45:38",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "The 21 Martyrs of Libya: What the 21st Man Told ISIS (True Story)"
   }
  ]
 }

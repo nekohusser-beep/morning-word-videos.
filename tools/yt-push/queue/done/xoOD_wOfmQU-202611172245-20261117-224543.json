@@ -1,0 +1,21 @@
+{
+ "job": {
+  "video_id": "xoOD_wOfmQU",
+  "thumbnail_file": "tools/yt-push/thumbs/xoOD_wOfmQU.jpg"
+ },
+ "results": [
+  {
+   "video_id": "xoOD_wOfmQU",
+   "mode": "apply",
+   "time_utc": "2026-11-17T22:45:38",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "The 21 Martyrs of Libya: What the 21st Man Told ISIS (True Story)"
+  }
+ ]
+}

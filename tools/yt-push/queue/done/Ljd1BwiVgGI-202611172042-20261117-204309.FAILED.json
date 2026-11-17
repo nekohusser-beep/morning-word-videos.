@@ -1,0 +1,21 @@
+{
+ "job": {
+  "video_id": "Ljd1BwiVgGI",
+  "title": "Why Do I Keep Falling Back Into Sin? A Morning Prayer to Break the Cycle (1 Corinthians 10:13)",
+  "source": "IQ Vid kw run 44171019603 + Ask Studio diagnosis 2026-11-17"
+ },
+ "results": [
+  {
+   "video_id": "Ljd1BwiVgGI",
+   "mode": "apply",
+   "time_utc": "2026-11-17T20:43:06",
+   "changed": [],
+   "skipped": [],
+   "errors": [
+    "saved but YouTube still shows a difference in: title"
+   ],
+   "live_title": "Why Do I Keep Falling Into The Same Sin? | Morning Prayer For Temptation (1 Corinthians 10:13)",
+   "rollback": "reports/yt-push/rollback/Ljd1BwiVgGI-20261117-204306.json"
+  }
+ ]
+}

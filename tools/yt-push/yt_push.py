@@ -430,7 +430,7 @@ def build_body(vid, live, want, diff):
 
 def save_rollback(vid, live):
     os.makedirs(ROLLBACK, exist_ok=True)
-    stamp = dt.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+    stamp = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).strftime("%Y%m%d-%H%M%S")
     path = os.path.join(ROLLBACK, "%s-%s.json" % (vid, stamp))
     json.dump({"video_id": vid, "saved_utc": stamp, "snippet": live.get("snippet"),
                "localizations": live.get("localizations", {})},
@@ -453,7 +453,7 @@ def has_caption(yt, vid, lang):
 
 def run_job(yt, job, mode):
     vid = job["video_id"]
-    res = {"video_id": vid, "mode": mode, "time_utc": dt.datetime.utcnow().isoformat(timespec="seconds"),
+    res = {"video_id": vid, "mode": mode, "time_utc": dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds"),
            "changed": [], "skipped": [], "errors": []}
     want, problems = resolve_job(job)
     res["skipped"] += [p for p in problems if p not in blocking(problems)]
@@ -591,7 +591,7 @@ def finish_file(path, results, ok):
     os.makedirs(DONE, exist_ok=True)
     data = json.load(open(path, encoding="utf-8"))
     out = {"job": data, "results": results}
-    stamp = dt.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+    stamp = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).strftime("%Y%m%d-%H%M%S")
     name = os.path.basename(path)[:-5] + "-" + stamp + (".json" if ok else ".FAILED.json")
     json.dump(out, open(os.path.join(DONE, name), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     if ok:
@@ -640,7 +640,7 @@ def mode_recent():
     st, js = yt.get("playlistItems", {"part": "contentDetails", "playlistId": uploads, "maxResults": 40})
     ids = [i["contentDetails"]["videoId"] for i in js.get("items", [])] if st == 200 else []
     pls = my_playlists(yt)
-    cutoff = dt.datetime.utcnow() - dt.timedelta(days=3)
+    cutoff = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None) - dt.timedelta(days=3)
     vids = []
     if ids:
         st, js = yt.get("videos", {"part": "snippet,status,contentDetails", "id": ",".join(ids)})
@@ -659,7 +659,7 @@ def mode_recent():
                          "kind": "short" if secs and secs <= 180 else "long", "seconds": secs,
                          "categoryId": sn.get("categoryId"), "language": sn.get("defaultLanguage") or sn.get("defaultAudioLanguage"),
                          "tag_count": len(sn.get("tags", []))})
-    out = {"made_utc": dt.datetime.utcnow().isoformat() + "Z", "videos": vids, "playlists": pls}
+    out = {"made_utc": dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).isoformat() + "Z", "videos": vids, "playlists": pls}
     os.makedirs(REPORTS, exist_ok=True)
     path = os.path.join(REPORTS, "recent.json")
     json.dump(out, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

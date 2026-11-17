@@ -3,7 +3,7 @@
   {
    "video_id": "5hxfANOZDOk",
    "mode": "apply",
-   "time_utc": "2026-11-17T08:23:01",
+   "time_utc": "2026-11-17T08:24:38",
    "changed": [],
    "skipped": [
     "comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio"
@@ -12,28 +12,28 @@
     "saved but YouTube still shows a difference in: tags"
    ],
    "live_title": "ADHD vs Non-ADHD Trying to Focus 😂 Sitting Down to Work #shorts",
-   "rollback": "reports/yt-push/rollback/5hxfANOZDOk-20261117-082301.json"
+   "rollback": "reports/yt-push/rollback/5hxfANOZDOk-20261117-082438.json"
   }
  ],
- "Txu7G6DgpkM-202611170822.json": [
+ "5hxfANOZDOk-202611170824.json": [
   {
-   "video_id": "Txu7G6DgpkM",
+   "video_id": "5hxfANOZDOk",
    "mode": "apply",
-   "time_utc": "2026-11-17T08:23:02",
+   "time_utc": "2026-11-17T08:24:39",
    "changed": [],
-   "skipped": [
-    "metadata already matches",
-    "comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio"
+   "skipped": [],
+   "errors": [
+    "saved but YouTube still shows a difference in: tags"
    ],
-   "errors": [],
-   "live_title": "Will You Be Left Behind in the Rapture? He Was Warned"
+   "live_title": "ADHD vs Non-ADHD Trying to Focus 😂 Sitting Down to Work #shorts",
+   "rollback": "reports/yt-push/rollback/5hxfANOZDOk-20261117-082439.json"
   }
  ],
  "aZy8uPcYHrk-202611170822.json": [
   {
    "video_id": "aZy8uPcYHrk",
    "mode": "apply",
-   "time_utc": "2026-11-17T08:23:03",
+   "time_utc": "2026-11-17T08:24:40",
    "changed": [],
    "skipped": [
     "comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio"
@@ -42,14 +42,28 @@
     "saved but YouTube still shows a difference in: tags"
    ],
    "live_title": "ADHD vs Non-ADHD Snooze Alarm 😂 Late for Work Again #shorts",
-   "rollback": "reports/yt-push/rollback/aZy8uPcYHrk-20261117-082303.json"
+   "rollback": "reports/yt-push/rollback/aZy8uPcYHrk-20261117-082440.json"
+  }
+ ],
+ "aZy8uPcYHrk-202611170824.json": [
+  {
+   "video_id": "aZy8uPcYHrk",
+   "mode": "apply",
+   "time_utc": "2026-11-17T08:24:41",
+   "changed": [],
+   "skipped": [],
+   "errors": [
+    "saved but YouTube still shows a difference in: tags"
+   ],
+   "live_title": "ADHD vs Non-ADHD Snooze Alarm 😂 Late for Work Again #shorts",
+   "rollback": "reports/yt-push/rollback/aZy8uPcYHrk-20261117-082441.json"
   }
  ],
  "bM9U2AvVeMM-202611170822.json": [
   {
    "video_id": "bM9U2AvVeMM",
    "mode": "apply",
-   "time_utc": "2026-11-17T08:23:04",
+   "time_utc": "2026-11-17T08:24:42",
    "changed": [],
    "skipped": [
     "comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio"
@@ -58,7 +72,21 @@
     "saved but YouTube still shows a difference in: tags"
    ],
    "live_title": "Bible Verse for Night Shift Workers | Psalm 130:6 KJV",
-   "rollback": "reports/yt-push/rollback/bM9U2AvVeMM-20261117-082304.json"
+   "rollback": "reports/yt-push/rollback/bM9U2AvVeMM-20261117-082442.json"
+  }
+ ],
+ "bM9U2AvVeMM-202611170824.json": [
+  {
+   "video_id": "bM9U2AvVeMM",
+   "mode": "apply",
+   "time_utc": "2026-11-17T08:24:43",
+   "changed": [],
+   "skipped": [],
+   "errors": [
+    "saved but YouTube still shows a difference in: tags"
+   ],
+   "live_title": "Bible Verse for Night Shift Workers | Psalm 130:6 KJV",
+   "rollback": "reports/yt-push/rollback/bM9U2AvVeMM-20261117-082443.json"
   }
  ]
 }

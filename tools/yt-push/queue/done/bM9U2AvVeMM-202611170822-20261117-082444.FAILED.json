@@ -1,0 +1,39 @@
+{
+ "job": {
+  "video_id": "bM9U2AvVeMM",
+  "tags": [
+   "bible verse for night shift",
+   "bible verse for night shift workers",
+   "bible verse for when you can't sleep",
+   "bible verse for night time",
+   "night prayer bible verses",
+   "bible verses to sleep at night",
+   "can't sleep bible",
+   "my soul waiteth for the lord",
+   "psalm 130:6",
+   "psalm 130 6",
+   "psalm 130",
+   "kjv bible verses",
+   "kjv",
+   "bible verse of the day",
+   "blessed prayers"
+  ],
+  "comment": "Type amen, and send this to a friend who needs it."
+ },
+ "results": [
+  {
+   "video_id": "bM9U2AvVeMM",
+   "mode": "apply",
+   "time_utc": "2026-11-17T08:24:42",
+   "changed": [],
+   "skipped": [
+    "comment not allowed with this sign-in (YouTube needs a wider one): post + pin in Studio"
+   ],
+   "errors": [
+    "saved but YouTube still shows a difference in: tags"
+   ],
+   "live_title": "Bible Verse for Night Shift Workers | Psalm 130:6 KJV",
+   "rollback": "reports/yt-push/rollback/bM9U2AvVeMM-20261117-082442.json"
+  }
+ ]
+}

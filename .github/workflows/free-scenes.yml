@@ -1,0 +1,24 @@
+name: free-scenes
+# Free scene stills: edits a reference image on HF ZeroGPU Spaces (FLUX.1 Kontext, Qwen-Image-Edit fallback). Commits results.
+on:
+  workflow_dispatch:
+    inputs:
+      file: {description: "edits json", required: true, default: "tools/skip-voice/ep6/art_edits.json"}
+      out: {description: "output folder", required: true, default: "tools/skip-voice/ep6/art"}
+permissions:
+  contents: write
+jobs:
+  gen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: "tools\n.github", fetch-depth: 1}
+      - run: pip install -q gradio_client
+      - env: {HF_TOKEN: "${{ secrets.HF_TOKEN }}"}
+        run: python3 tools/free-gen/kontext_scenes.py "${{ inputs.file }}" "${{ inputs.out }}" 2>&1 | tee scenes.log; mkdir -p "${{ inputs.out }}"; cp scenes.log "${{ inputs.out }}/scenes.log"
+      - if: always()
+        run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add "${{ inputs.out }}"; git commit -qm "free-scenes -> ${{ inputs.out }}" || exit 0
+          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 4; done

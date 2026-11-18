@@ -1,0 +1,12 @@
+{
+ "ref": "tools/skip-voice/ep2b/build/breakroom.jpg",
+ "chain_from": "kitchen_6pm",
+ "edits": {
+  "kitchen_6pm": "Keep the man with spiky blue hair, white round cartoon head, orange hoodie and navy cargo pants exactly the same, same thick-outline cartoon art style. Replace the bald man with goatee with Skip's wife Nia: same white round-head cartoon style, big dark curly afro puff hair, small gold hoop earrings, lavender long-sleeve top, grey joggers. Change the break room into a cozy home kitchen at 6 PM with warm evening light. The man holds car keys and leans toward her asking a question; she leans on the counter looking at her phone, waving him off. Vertical, no text.",
+  "car_drivethru": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Show only the blue-haired man now, sitting in the driver seat of a car at a fast-food drive-thru speaker at dusk, side-eyeing the camera with a smug face, glowing menu board outside. No woman in this shot. No text.",
+  "couch_640": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Move them to a living room couch in the evening. He holds a burger, an open paper fast-food bag and large fries on the coffee table. She sits very close, holding four fries, sweet innocent face; he stares at her hand. No text.",
+  "couch_645": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Same living room couch. Fries box half empty, she holds a ketchup bottle, cheeks full, happy and chewing. He holds the fries box, annoyed, eyebrows raised. No text.",
+  "bedroom_10pm": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Dark bedroom at night with blue moonlight. He sits straight up in bed, eyes wide, looking at the camera in disbelief. She lies beside him under the blanket peeking at him with puppy eyes, hand on her stomach. No text.",
+  "kitchen_1005": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Home kitchen at night lit by an open microwave. He pulls a second fast-food paper bag out of the microwave with a proud grin. She is in pajamas hugging him from the side, delighted. No text."
+ }
+}

@@ -11,7 +11,8 @@ SPACES = [("black-forest-labs/FLUX.1-Kontext-Dev", "/infer"), ("Qwen/Qwen-Image-
 clients = {}
 def client(sp):
     if sp not in clients:
-        clients[sp] = Client(sp, hf_token=tok)
+        try: clients[sp] = Client(sp, token=tok)
+        except TypeError: clients[sp] = Client(sp, hf_token=tok)
         try: print(clients[sp].view_api(return_format="str", print_info=False)[:1500], flush=True)
         except Exception: pass
     return clients[sp]

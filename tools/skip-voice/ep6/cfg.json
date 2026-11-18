@@ -1,7 +1,7 @@
 {
  "title": [
   "She said she's",
-  "NOT hungry 😂"
+  "NOT hungry..."
  ],
  "hook_text": "SHE SAID SHE'S NOT HUNGRY",
  "scenes": {
@@ -64,5 +64,38 @@
   "15": 0.9,
   "20": 0.9
  },
- "end_card": "Tag somebody who's 10 o'clock hungry 😂"
+ "end_card": "Tag somebody who's 10 o'clock hungry 😂",
+ "art": {
+  "kitchen_6pm": "art/kitchen_6pm_22.webp",
+  "car_drivethru": "art/car_drivethru_11.webp",
+  "couch_640": "art/couch_640_11.webp",
+  "couch_645": "art/couch_645_11.webp",
+  "bedroom_10pm": "art/bedroom_10pm_11.webp",
+  "kitchen_1005": "art/kitchen_1005_11.webp"
+ },
+ "side": {
+  "kitchen_6pm": {
+   "skip": 0.3,
+   "nia": 0.62
+  },
+  "car_drivethru": {
+   "skip": 0.45
+  },
+  "couch_640": {
+   "skip": 0.28,
+   "nia": 0.65
+  },
+  "couch_645": {
+   "skip": 0.3,
+   "nia": 0.68
+  },
+  "bedroom_10pm": {
+   "skip": 0.36,
+   "nia": 0.7
+  },
+  "kitchen_1005": {
+   "skip": 0.41,
+   "nia": 0.66
+  }
+ }
 }

@@ -1,0 +1,19 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+source mentions: ['prompt_wav_path', 'prompt_text', 'reference_wav_path', 'cfg_value', 'inference_timesteps', 'denoise', 'normalize']
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 1617.69it/s]
+voxcpm_model_path: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd, zipenhancer_model_path: None, enable_denoiser: False
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Loading AudioVAE from pytorch: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/audiovae.pth
+Running on device: cpu, dtype: bfloat16
+Loading model from safetensors: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/model.safetensors
+Warning: torch.compile disabled - VoxCPMModel can only be optimized on CUDA device
+Loaded VoxCPM2Model
+Warm up VoxCPMModel...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:25,  2.78s/it] 20%|██        | 2/10 [00:05<00:22,  2.77s/it] 30%|███       | 3/10 [00:08<00:19,  2.77s/it] 40%|████      | 4/10 [00:11<00:16,  2.76s/it] 50%|█████     | 5/10 [00:13<00:13,  2.76s/it] 60%|██████    | 6/10 [00:16<00:11,  2.77s/it] 70%|███████   | 7/10 [00:19<00:08,  2.77s/it] 80%|████████  | 8/10 [00:22<00:05,  2.77s/it] 90%|█████████ | 9/10 [00:24<00:02,  2.77s/it]100%|██████████| 10/10 [00:27<00:00,  2.80s/it]100%|██████████| 10/10 [00:27<00:00,  2.78s/it]
+model loaded with {'load_denoiser': False}
+modes to try: ['prompt+text', 'reference']
+  0%|          | 0/106 [00:00<?, ?it/s]  1%|          | 1/106 [00:02<04:53,  2.80s/it]  2%|▏         | 2/106 [00:05<04:48,  2.78s/it]  3%|▎         | 3/106 [00:08<04:46,  2.78s/it]  4%|▍         | 4/106 [00:11<04:43,  2.78s/it]  5%|▍         | 5/106 [00:13<04:39,  2.77s/it]  6%|▌         | 6/106 [00:16<04:37,  2.77s/it]  7%|▋         | 7/106 [00:19<04:34,  2.77s/it]  8%|▊         | 8/106 [00:22<04:33,  2.79s/it]  8%|▊         | 9/106 [00:25<04:30,  2.79s/it]  9%|▉         | 10/106 [00:27<04:26,  2.77s/it] 10%|█         | 11/106 [00:30<04:23,  2.77s/it] 11%|█▏        | 12/106 [00:33<04:20,  2.77s/it] 12%|█▏        | 13/106 [00:36<04:16,  2.76s/it] 13%|█▎        | 14/106 [00:38<04:14,  2.76s/it] 14%|█▍        | 15/106 [00:41<04:11,  2.76s/it] 15%|█▌        | 16/106 [00:44<04:08,  2.76s/it] 16%|█▌        | 17/106 [00:47<04:05,  2.76s/it] 17%|█▋        | 18/106 [00:49<04:02,  2.76s/it] 18%|█▊        | 19/106 [00:52<03:59,  2.76s/it] 19%|█▉        | 20/106 [00:55<03:56,  2.75s/it] 20%|█▉        | 21/106 [00:58<03:54,  2.76s/it] 21%|██        | 22/106 [01:00<03:51,  2.76s/it] 21%|██        | 22/106 [01:02<03:59,  2.86s/it]
+13 nia prompt+text attempt 0 3.7 s in 104 s ok : I'm just tasting them. Making sure they're goo
+done chunk 0 mode prompt+text

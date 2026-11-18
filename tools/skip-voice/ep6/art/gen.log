@@ -1,0 +1,24 @@
+kitchen_6pm 11 kontext err HTTP Error 403: Forbidden
+kitchen_6pm 11 flux ok 57349
+kitchen_6pm 22 kontext err HTTP Error 403: Forbidden
+kitchen_6pm 22 flux ok 52338
+car_drivethru 11 kontext err HTTP Error 403: Forbidden
+car_drivethru 11 flux ok 49018
+car_drivethru 22 kontext err HTTP Error 403: Forbidden
+car_drivethru 22 flux ok 56736
+couch_640 11 kontext err HTTP Error 403: Forbidden
+couch_640 11 flux ok 70725
+couch_640 22 kontext err HTTP Error 403: Forbidden
+couch_640 22 flux ok 62739
+couch_645 11 kontext err HTTP Error 403: Forbidden
+couch_645 11 flux ok 70582
+couch_645 22 kontext err HTTP Error 403: Forbidden
+couch_645 22 flux ok 63307
+bedroom_10pm 11 kontext err HTTP Error 403: Forbidden
+bedroom_10pm 11 flux err HTTP Error 503: Service Unavailable
+bedroom_10pm 22 kontext err HTTP Error 403: Forbidden
+bedroom_10pm 22 flux ok 52225
+kitchen_1005 11 kontext err HTTP Error 403: Forbidden
+kitchen_1005 11 flux ok 62278
+kitchen_1005 22 kontext err HTTP Error 403: Forbidden
+kitchen_1005 22 flux err HTTP Error 402: Payment Required

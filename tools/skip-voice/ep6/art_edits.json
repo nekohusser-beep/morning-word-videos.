@@ -8,5 +8,9 @@
   "couch_645": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Same living room couch. Fries box half empty, she holds a ketchup bottle, cheeks full, happy and chewing. He holds the fries box, annoyed, eyebrows raised. No text.",
   "bedroom_10pm": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Dark bedroom at night with blue moonlight. He sits straight up in bed, eyes wide, looking at the camera in disbelief. She lies beside him under the blanket peeking at him with puppy eyes, hand on her stomach. No text.",
   "kitchen_1005": "Keep both characters (blue-haired man in orange hoodie, and the woman with the dark afro puff and lavender top) exactly the same, same art style. Home kitchen at night lit by an open microwave. He pulls a second fast-food paper bag out of the microwave with a proud grin. She is in pajamas hugging him from the side, delighted. No text."
- }
+ },
+ "chain_ref": "tools/skip-voice/ep6/art/kitchen_6pm_22.webp",
+ "seeds": [
+  11
+ ]
 }

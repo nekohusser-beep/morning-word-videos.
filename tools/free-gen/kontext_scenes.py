@@ -41,10 +41,14 @@ def edit(ref, prompt, seed):
             except Exception as e:
                 print("FAIL", sp, attempt, repr(e)[:400], flush=True); time.sleep(10)
     return None, None
-ref0 = cfg["ref"]; chain = None
+ref0 = cfg["ref"]; chain = cfg.get("chain_ref")
+import glob
 for name, prompt in cfg["edits"].items():
+    if glob.glob(f"{out}/{name}_*.*") and name != cfg.get("chain_from"):
+        print("have", name); continue
+    if name == cfg.get("chain_from") and chain: continue
     ref = chain if (chain and name != cfg.get("chain_from")) else ref0
-    for seed in (11, 22):
+    for seed in cfg.get("seeds", (11, 22)):
         p, sp = edit(ref, prompt, seed)
         print(name, seed, sp, p, flush=True)
         if p:

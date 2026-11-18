@@ -1,0 +1,3 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+HEARD: No, I'm good.  I'm not hungry.  Skip, I said I'm not hungry.  Ooh, that smells good.  Just one fry?  They were small.  I'm just tasting them, making sure they're good for you.
+WORD ERRORS: 0 of 32 words

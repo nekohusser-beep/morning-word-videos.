@@ -1,0 +1,104 @@
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+generate (self, *args, **kwargs) -> numpy.ndarray
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 9 files:  89%|████████▉ | 8/9 [00:04<00:00,  1.76it/s]Fetching 9 files: 100%|██████████| 9/9 [00:35<00:00,  5.15s/it]Fetching 9 files: 100%|██████████| 9/9 [00:35<00:00,  3.93s/it]
+voxcpm_model_path: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd, zipenhancer_model_path: iic/speech_zipenhancer_ans_multiloss_16k_base, enable_denoiser: True
+/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Loading AudioVAE from pytorch: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/audiovae.pth
+Running on device: cpu, dtype: bfloat16
+Loading model from safetensors: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/model.safetensors
+Warning: torch.compile disabled - VoxCPMModel can only be optimized on CUDA device
+Loaded VoxCPM2Model
+configuration.json:   0%|          | 0.00/973 [00:00<?, ?B/s]                                                             2026-11-18 18:41:58,803 | INFO    | modelscope_hub.download | Downloading 11 files from iic/speech_zipenhancer_ans_multiloss_16k_base@master
+Downloading:   0%|          | 0/11 [00:00<?, ?file/s]
+.gitattributes:   0%|          | 0.00/1.69k [00:00<?, ?B/s][A
+                                                           [ADownloading:  18%|█▊        | 2/11 [00:01<00:07,  1.27file/s]
+matrix.jpg:   0%|          | 0.00/166k [00:00<?, ?B/s][A
+
+README.md:   0%|          | 0.00/19.6k [00:00<?, ?B/s][A[A
+matrix.jpg:  10%|▉         | 16.6k/166k [00:00<00:01, 110kB/s][A
+
+README.md:  89%|████████▉ | 17.6k/19.6k [00:00<00:00, 115kB/s][A[A
+
+                                                              [A[ADownloading:  27%|██▋       | 3/11 [00:02<00:07,  1.05file/s]
+matrix.jpg:  25%|██▌       | 42.3k/166k [00:00<00:00, 145kB/s][A
+matrix.jpg:  62%|██████▏   | 102k/166k [00:00<00:00, 261kB/s] [A
+
+block.jpg:   0%|          | 0.00/91.7k [00:00<?, ?B/s][A[A
+                                                             [ADownloading:  36%|███▋      | 4/11 [00:03<00:04,  1.40file/s]
+
+block.jpg:  18%|█▊        | 16.6k/91.7k [00:00<00:00, 99.1kB/s][A[A
+matrix_voicebank.jpg:   0%|          | 0.00/273k [00:00<?, ?B/s][A
+
+block.jpg:  49%|████▉     | 45.2k/91.7k [00:00<00:00, 141kB/s] [A[A
+
+                                                              [A[ADownloading:  45%|████▌     | 5/11 [00:03<00:03,  1.68file/s]
+matrix_voicebank.jpg:   6%|▌         | 16.6k/273k [00:00<00:02, 91.5kB/s][A
+
+speech_with_noise.wav:   0%|          | 0.00/76.8k [00:00<?, ?B/s][A[A
+
+                                                                  [A[ADownloading:  55%|█████▍    | 6/11 [00:03<00:02,  2.28file/s]
+matrix_voicebank.jpg:  15%|█▌        | 41.2k/273k [00:00<00:01, 117kB/s] [A
+matrix_voicebank.jpg:  36%|███▌      | 98.0k/273k [00:00<00:00, 206kB/s][A
+
+model.jpg:   0%|          | 0.00/97.2k [00:00<?, ?B/s][A[A
+
+
+speech_with_noise1.wav:   0%|          | 0.00/156k [00:00<?, ?B/s][A[A[A
+
+
+                                                                  [A[A[ADownloading:  64%|██████▎   | 7/11 [00:03<00:01,  2.29file/s]
+matrix_voicebank.jpg:  79%|███████▉  | 217k/273k [00:00<00:00, 382kB/s] [A
+
+model.jpg:  17%|█▋        | 16.6k/97.2k [00:00<00:00, 100kB/s][A[A
+
+
+onnx_model.onnx:   0%|          | 0.00/9.81M [00:00<?, ?B/s][A[A[A
+                                                                       [A
+
+
+onnx_model.onnx:   3%|▎         | 298k/9.81M [00:00<00:03, 2.98MB/s][A[A[A
+
+model.jpg:  46%|████▌     | 44.8k/97.2k [00:00<00:00, 141kB/s][A[A
+
+
+onnx_model.onnx:  14%|█▍        | 1.37M/9.81M [00:00<00:01, 7.52MB/s][A[A[A
+
+                                                              [A[ADownloading:  82%|████████▏ | 9/11 [00:04<00:00,  3.50file/s]
+
+
+onnx_model.onnx:  55%|█████▍    | 5.38M/9.81M [00:00<00:00, 22.4MB/s][A[A[A
+
+
+                                                                     [A[A[ADownloading:  91%|█████████ | 10/11 [00:04<00:00,  4.07file/s]
+pytorch_model.bin:   0%|          | 0.00/8.42M [00:00<?, ?B/s][A
+pytorch_model.bin:   5%|▌         | 444k/8.42M [00:00<00:01, 4.42MB/s][A
+pytorch_model.bin:  25%|██▍       | 2.07M/8.42M [00:00<00:00, 11.3MB/s][A
+pytorch_model.bin:  91%|█████████ | 7.67M/8.42M [00:00<00:00, 31.6MB/s][A
+                                                                       [ADownloading: 100%|██████████| 11/11 [00:04<00:00,  3.44file/s]Downloading: 100%|██████████| 11/11 [00:04<00:00,  2.30file/s]
+2026-11-18 18:42:03,594 - modelscope - INFO - initiate model from /home/runner/.cache/modelscope/models/iic--speech_zipenhancer_ans_multiloss_16k_base/snapshots/master
+2026-11-18 18:42:03,594 - modelscope - INFO - initiate model from location /home/runner/.cache/modelscope/models/iic--speech_zipenhancer_ans_multiloss_16k_base/snapshots/master.
+2026-11-18 18:42:03,595 - modelscope - INFO - initialize model from /home/runner/.cache/modelscope/models/iic--speech_zipenhancer_ans_multiloss_16k_base/snapshots/master
+2026-11-18 18:42:03,708 - modelscope - WARNING - No preprocessor field found in cfg.
+2026-11-18 18:42:03,708 - modelscope - WARNING - No val key and type key found in preprocessor domain of configuration.json file.
+2026-11-18 18:42:03,708 - modelscope - WARNING - Cannot find available config to build preprocessor at mode inference, current config: {'model_dir': '/home/runner/.cache/modelscope/models/iic--speech_zipenhancer_ans_multiloss_16k_base/snapshots/master'}. trying to build by task and model information.
+2026-11-18 18:42:03,708 - modelscope - INFO - No preprocessor key ('speech_zipenhancer_ans_multiloss_16k_base', 'acoustic-noise-suppression') found in PREPROCESSOR_MAP, skip building preprocessor. If the pipeline runs normally, please ignore this log.
+2026-11-18 18:42:03,709 - modelscope - INFO - cuda is not available, using cpu instead.
+Warm up VoxCPMModel...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:23,  2.61s/it] 20%|██        | 2/10 [00:05<00:20,  2.61s/it] 30%|███       | 3/10 [00:07<00:18,  2.61s/it] 40%|████      | 4/10 [00:10<00:15,  2.61s/it] 50%|█████     | 5/10 [00:13<00:13,  2.60s/it] 60%|██████    | 6/10 [00:15<00:10,  2.60s/it] 70%|███████   | 7/10 [00:18<00:07,  2.62s/it] 80%|████████  | 8/10 [00:21<00:05,  2.66s/it] 90%|█████████ | 9/10 [00:23<00:02,  2.65s/it]100%|██████████| 10/10 [00:26<00:00,  2.64s/it]100%|██████████| 10/10 [00:26<00:00,  2.63s/it]
+loaded openbmb/VoxCPM2
+  0%|          | 0/262 [00:00<?, ?it/s]  0%|          | 1/262 [00:02<11:23,  2.62s/it]  1%|          | 2/262 [00:05<11:23,  2.63s/it]  1%|          | 3/262 [00:07<11:19,  2.62s/it]  2%|▏         | 4/262 [00:10<11:15,  2.62s/it]  2%|▏         | 5/262 [00:13<11:11,  2.61s/it]  2%|▏         | 6/262 [00:15<11:10,  2.62s/it]  3%|▎         | 7/262 [00:18<11:06,  2.61s/it]  3%|▎         | 8/262 [00:20<11:03,  2.61s/it]  3%|▎         | 9/262 [00:23<10:58,  2.60s/it]  4%|▍         | 10/262 [00:26<10:56,  2.61s/it]  4%|▍         | 11/262 [00:28<10:52,  2.60s/it]  5%|▍         | 12/262 [00:31<10:53,  2.61s/it]  5%|▍         | 13/262 [00:33<10:49,  2.61s/it]  5%|▌         | 14/262 [00:36<10:46,  2.61s/it]  5%|▌         | 14/262 [00:38<11:20,  2.74s/it]
+seg 0 2.4 s audio in 43 s
+  0%|          | 0/244 [00:00<?, ?it/s]  0%|          | 1/244 [00:02<10:31,  2.60s/it]  1%|          | 2/244 [00:05<10:31,  2.61s/it]  1%|          | 3/244 [00:07<10:37,  2.65s/it]  2%|▏         | 4/244 [00:10<10:32,  2.63s/it]  2%|▏         | 5/244 [00:13<10:27,  2.63s/it]  2%|▏         | 6/244 [00:15<10:25,  2.63s/it]  3%|▎         | 7/244 [00:18<10:21,  2.62s/it]  3%|▎         | 8/244 [00:21<10:19,  2.62s/it]  4%|▎         | 9/244 [00:23<10:15,  2.62s/it]  4%|▍         | 10/244 [00:26<10:12,  2.62s/it]  5%|▍         | 11/244 [00:28<10:09,  2.62s/it]  5%|▍         | 12/244 [00:31<10:06,  2.61s/it]  5%|▌         | 13/244 [00:34<10:03,  2.61s/it]  6%|▌         | 14/244 [00:36<10:01,  2.62s/it]  6%|▌         | 15/244 [00:39<10:00,  2.62s/it]  7%|▋         | 16/244 [00:41<09:57,  2.62s/it]  7%|▋         | 17/244 [00:44<09:54,  2.62s/it]  7%|▋         | 17/244 [00:46<10:19,  2.73s/it]
+seg 1 2.9 s audio in 51 s
+  0%|          | 0/232 [00:00<?, ?it/s]  0%|          | 1/232 [00:02<10:02,  2.61s/it]  1%|          | 2/232 [00:05<10:01,  2.61s/it]  1%|▏         | 3/232 [00:07<09:58,  2.62s/it]  2%|▏         | 4/232 [00:10<09:58,  2.62s/it]  2%|▏         | 5/232 [00:13<09:55,  2.63s/it]  3%|▎         | 6/232 [00:15<09:58,  2.65s/it]  3%|▎         | 7/232 [00:18<09:53,  2.64s/it]  3%|▎         | 8/232 [00:21<09:49,  2.63s/it]  4%|▍         | 9/232 [00:23<09:45,  2.63s/it]  4%|▍         | 10/232 [00:26<09:42,  2.62s/it]  5%|▍         | 11/232 [00:28<09:39,  2.62s/it]  5%|▌         | 12/232 [00:31<09:34,  2.61s/it]  5%|▌         | 12/232 [00:33<10:11,  2.78s/it]
+seg 2 2.1 s audio in 38 s
+  0%|          | 0/214 [00:00<?, ?it/s]  0%|          | 1/214 [00:02<09:17,  2.62s/it]  1%|          | 2/214 [00:05<09:15,  2.62s/it]  1%|▏         | 3/214 [00:07<09:11,  2.61s/it]  2%|▏         | 4/214 [00:10<09:08,  2.61s/it]  2%|▏         | 5/214 [00:13<09:05,  2.61s/it]  3%|▎         | 6/214 [00:15<09:03,  2.61s/it]  3%|▎         | 7/214 [00:18<08:59,  2.61s/it]  3%|▎         | 7/214 [00:20<09:55,  2.88s/it]
+seg 3 1.3 s audio in 24 s
+  0%|          | 0/208 [00:00<?, ?it/s]  0%|          | 1/208 [00:02<09:04,  2.63s/it]  1%|          | 2/208 [00:05<08:59,  2.62s/it]  1%|▏         | 3/208 [00:07<08:55,  2.61s/it]  2%|▏         | 4/208 [00:10<08:52,  2.61s/it]  2%|▏         | 5/208 [00:13<09:02,  2.67s/it]  3%|▎         | 6/208 [00:15<08:56,  2.65s/it]  3%|▎         | 6/208 [00:17<09:57,  2.96s/it]
+seg 4 1.1 s audio in 21 s
+  0%|          | 0/280 [00:00<?, ?it/s]  0%|          | 1/280 [00:02<12:05,  2.60s/it]  1%|          | 2/280 [00:05<12:07,  2.62s/it]  1%|          | 3/280 [00:07<12:03,  2.61s/it]  1%|▏         | 4/280 [00:10<11:59,  2.61s/it]  2%|▏         | 5/280 [00:13<11:58,  2.61s/it]  2%|▏         | 6/280 [00:15<11:57,  2.62s/it]  2%|▎         | 7/280 [00:18<11:54,  2.62s/it]  3%|▎         | 8/280 [00:20<11:53,  2.62s/it]  3%|▎         | 9/280 [00:23<11:49,  2.62s/it]  4%|▎         | 10/280 [00:26<11:47,  2.62s/it]  4%|▍         | 11/280 [00:28<11:43,  2.62s/it]  4%|▍         | 12/280 [00:31<11:39,  2.61s/it]  5%|▍         | 13/280 [00:33<11:36,  2.61s/it]  5%|▌         | 14/280 [00:36<11:32,  2.60s/it]  5%|▌         | 15/280 [00:39<11:29,  2.60s/it]  6%|▌         | 16/280 [00:41<11:26,  2.60s/it]  6%|▌         | 17/280 [00:44<11:25,  2.61s/it]  6%|▌         | 17/280 [00:46<11:55,  2.72s/it]
+seg 5 2.9 s audio in 51 s
+wrote out/NIA-V1.wav 18.0 s @ 48000

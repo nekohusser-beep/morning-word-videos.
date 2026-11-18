@@ -30,3 +30,10 @@ Use this for every Neko Zion / JUNG BLOOD / client music video.
 ## Chrome tips
 - Open a fresh tab per project; a second navigation in one tab can freeze it.
 - Typing into the prompt box: click it, ctrl+a Delete, type, Escape (autocomplete inserts junk otherwise); verify the text via JS.
+
+## Lesson from Word For Today v2 (Neko, Nov 17 2026: "not too terrible, but it don't really make much sense")
+- Write the story beat list FIRST, one line per lyric line, before any render. Every shot must answer "what is he doing right now in his day?"
+- Render the whole video as ONE Freebeat project in story order (same wardrobe/lighting refs), not 5 separate segments that each invent their own look and timeline.
+- Never reuse a shot to fill time; never slow footage below ~0.85x. Short on footage = render one more clip.
+- Ask for one action per clip (~6 s); the agent merges actions into long takes, so name each clip's single action.
+- QC every clip frame by frame for hands, doors, props, extra people BEFORE assembling.

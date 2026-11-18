@@ -1,3 +1,4 @@
+have car_drivethru
 Loaded as API: https://black-forest-labs-flux-1-kontext-dev.hf.space
 Client.predict() Usage Info
 ---------------------------
@@ -18,9 +19,9 @@ Named API endpoints: 2
  - predict(image, api_name="/lambda") -> upload_the_image_for_editing
     Parameters:
      - [Image] image: dict
-kitchen_6pm 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/230aca8c608fb2de179ba475e4b3267a0a978cec4a9eca75aacba0c092b4307c/image.webp
-kitchen_6pm 22 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/22c7283e9b6c5148acc0a015e866c5b5134573deb6e7851aa18d098df1273dd0/image.webp
-car_drivethru 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/12163003941b70dc6c43794c6e1c353b4cd940e35429903db08314bbf8129a05/image.webp
+couch_640 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/978ca1e1d5d2612b7694aa6cb635d969cf49f4653f204a76126e77156ae6d72f/image.webp
+couch_645 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/71f3473e497102afe223f0f704e8ccb33df69aa54e0abdb25d43efb716b469c4/image.webp
+bedroom_10pm 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/3887a105079cde56b5340c2633687617bb6d666e3d6465c9243a9b315aa2ffb8/image.webp
 FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
 FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
 Loaded as API: https://qwen-qwen-image-edit.hf.space
@@ -42,44 +43,4 @@ Named API endpoints: 1
      - [Slider] seed: float (numeric value between 0 and 2147483
 FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
 FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-car_drivethru 22 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-couch_640 11 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-couch_640 22 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-couch_645 11 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-couch_645 22 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-bedroom_10pm 11 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-bedroom_10pm 22 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
 kitchen_1005 11 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-kitchen_1005 22 None None

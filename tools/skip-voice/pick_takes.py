@@ -4,7 +4,7 @@ Scores <ep_dir>/final/u###.wav and each <take_dir>/u###.wav against lock/ref_<wh
 copies the best into <ep_dir>/final, prints the table and the lines still under the bar (dre 0.78, skip 0.85)."""
 import sys, os, json, shutil, numpy as np
 from resemblyzer import VoiceEncoder, preprocess_wav
-BAR = {"dre": 0.78, "skip": 0.85}
+BAR = {"dre": 0.78, "skip": 0.85, "nia": 0.85}
 here = os.path.dirname(os.path.abspath(__file__))
 ep, takes = sys.argv[1], sys.argv[2:]
 enc = VoiceEncoder()

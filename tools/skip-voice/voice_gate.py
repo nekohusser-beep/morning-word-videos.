@@ -3,7 +3,7 @@ Scores each u###.wav against tools/skip-voice/lock/ref_<who>.wav with resemblyze
 Never pitch-shift a line to pass; re-voice it."""
 import sys, os, json, numpy as np
 from resemblyzer import VoiceEncoder, preprocess_wav
-BAR = {"dre": 0.78, "skip": 0.85}
+BAR = {"dre": 0.78, "skip": 0.85, "nia": 0.85}
 here = os.path.dirname(os.path.abspath(__file__))
 enc = VoiceEncoder()
 ref = {w: enc.embed_utterance(preprocess_wav(f"{here}/lock/ref_{w}.wav")) for w in BAR}

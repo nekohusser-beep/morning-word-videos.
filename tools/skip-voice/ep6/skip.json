@@ -1,0 +1,93 @@
+[
+ {
+  "kind": "skip",
+  "text": "Babe, I'm grabbing food. You want anything?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "You sure? Last chance.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "skip",
+  "text": "Remember that. She said it twice.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "skip",
+  "text": "Let me get one burger, one large fry...",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "skip",
+  "text": "Nah. She said she's not hungry. I trust my wife.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "skip",
+  "text": "It's a burger.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "skip",
+  "text": "That was four.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 10
+ },
+ {
+  "kind": "skip",
+  "text": "Babe, where's my fries going?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ },
+ {
+  "kind": "skip",
+  "text": "Are they good?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 14
+ },
+ {
+  "kind": "skip",
+  "text": "...No.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 17
+ },
+ {
+  "kind": "skip",
+  "text": "Four hours. FOUR HOURS. You told me not hungry with your whole chest.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 19
+ },
+ {
+  "kind": "skip",
+  "text": "Baby, I been married six years. I bought two at six o'clock.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 22
+ },
+ {
+  "kind": "skip",
+  "text": "Lesson one in marriage. Not hungry means order for two.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 24
+ }
+]

@@ -1,0 +1,86 @@
+[
+ {
+  "kind": "nia",
+  "text": "No, I'm good. I'm not hungry.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "nia",
+  "text": "Skip. I said I'm not hungry.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "nia",
+  "text": "Ooh, that smells good.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "nia",
+  "text": "Just one fry.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "nia",
+  "text": "They were small.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 11
+ },
+ {
+  "kind": "nia",
+  "text": "I'm just tasting them. Making sure they're good for you.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 13
+ },
+ {
+  "kind": "nia",
+  "text": "Mm-hm. Very.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 15
+ },
+ {
+  "kind": "nia",
+  "text": "Skip... you awake?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 16
+ },
+ {
+  "kind": "nia",
+  "text": "I'm kinda hungry.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 18
+ },
+ {
+  "kind": "nia",
+  "text": "That was six o'clock Nia. This is ten o'clock Nia.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 20
+ },
+ {
+  "kind": "nia",
+  "text": "You got me my own?!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 21
+ },
+ {
+  "kind": "nia",
+  "text": "That's why I married you.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 23
+ }
+]

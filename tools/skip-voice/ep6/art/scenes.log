@@ -1,4 +1,7 @@
 have car_drivethru
+have couch_640
+have couch_645
+have bedroom_10pm
 Loaded as API: https://black-forest-labs-flux-1-kontext-dev.hf.space
 Client.predict() Usage Info
 ---------------------------
@@ -19,28 +22,4 @@ Named API endpoints: 2
  - predict(image, api_name="/lambda") -> upload_the_image_for_editing
     Parameters:
      - [Image] image: dict
-couch_640 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/978ca1e1d5d2612b7694aa6cb635d969cf49f4653f204a76126e77156ae6d72f/image.webp
-couch_645 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/71f3473e497102afe223f0f704e8ccb33df69aa54e0abdb25d43efb716b469c4/image.webp
-bedroom_10pm 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/3887a105079cde56b5340c2633687617bb6d666e3d6465c9243a9b315aa2ffb8/image.webp
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-Loaded as API: https://qwen-qwen-image-edit.hf.space
-Client.predict() Usage Info
----------------------------
-Named API endpoints: 1
-
- - predict(image, prompt, seed, randomize_seed, true_guidance_scale, num_inference_steps, rewrite_prompt, api_name="/infer") -> (result, seed)
-    Parameters:
-     - [Image] image: dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any)) (required)  (For input, either path or url must be provided. For output, path is always provided.) 
-     - [Textbox] prompt: str (required)  
-     - [Slider] seed: float (not required, defaults to:   0)  
-     - [Checkbox] randomize_seed: bool (not required, defaults to:   True)  
-     - [Slider] true_guidance_scale: float (not required, defaults to:   4.0)  
-     - [Slider] num_inference_steps: float (not required, defaults to:   50)  
-     - [Checkbox] rewrite_prompt: bool (not required, defaults to:   True)  
-    Returns:
-     - [Image] result: dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any)) 
-     - [Slider] seed: float (numeric value between 0 and 2147483
-FAIL Qwen/Qwen-Image-Edit 0 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('You have exceeded your ZeroGPU quota (240s requested vs. -120s left). Try again in 0:00:00. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-kitchen_1005 11 None None
+kitchen_1005 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/be9c307eff11c13a2ef2b5149917f5f2ae624bd3eb27fe378be8a67aa6be9b32/image.webp

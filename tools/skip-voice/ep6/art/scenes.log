@@ -1,0 +1,60 @@
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+kitchen_6pm 11 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+kitchen_6pm 22 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+car_drivethru 11 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+car_drivethru 22 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+couch_640 11 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+couch_640 22 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+couch_645 11 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+couch_645 22 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+bedroom_10pm 11 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+bedroom_10pm 22 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+kitchen_1005 11 None None
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 0 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+FAIL Qwen/Qwen-Image-Edit 1 TypeError("Client.__init__() got an unexpected keyword argument 'hf_token'")
+kitchen_1005 22 None None

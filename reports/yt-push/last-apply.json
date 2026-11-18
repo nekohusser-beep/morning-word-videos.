@@ -1,92 +1,30 @@
 {
- "8lt3eRoIOyA-202611172245.json": [
+ "ion4mVvWrqg-202611180250.json": [
   {
-   "video_id": "8lt3eRoIOyA",
+   "video_id": "ion4mVvWrqg",
    "mode": "apply",
-   "time_utc": "2026-11-17T22:45:22",
+   "time_utc": "2026-11-18T02:45:24",
    "changed": [
-    "thumbnail"
+    "tags"
    ],
-   "skipped": [
-    "metadata already matches"
-   ],
+   "skipped": [],
    "errors": [],
-   "live_title": "What It's Like to Have ADHD (Animated) | Meet Skip"
+   "live_title": "Spiritual Warfare Prayer | Put On the Armor of God #Shorts",
+   "rollback": "reports/yt-push/rollback/ion4mVvWrqg-20261118-024524.json"
   }
  ],
- "KUfeV_N6YJE-202611172245.json": [
+ "lM14caCiQpU-202611180250.json": [
   {
-   "video_id": "KUfeV_N6YJE",
+   "video_id": "lM14caCiQpU",
    "mode": "apply",
-   "time_utc": "2026-11-17T22:45:25",
+   "time_utc": "2026-11-18T02:45:33",
    "changed": [
-    "thumbnail"
+    "tags"
    ],
-   "skipped": [
-    "metadata already matches"
-   ],
+   "skipped": [],
    "errors": [],
-   "live_title": "David and Goliath Animated Bible Story for Kids | The Boy Who Beat a Giant (Quiz)"
-  }
- ],
- "Ljd1BwiVgGI-202611172245.json": [
-  {
-   "video_id": "Ljd1BwiVgGI",
-   "mode": "apply",
-   "time_utc": "2026-11-17T22:45:27",
-   "changed": [
-    "thumbnail"
-   ],
-   "skipped": [
-    "metadata already matches"
-   ],
-   "errors": [],
-   "live_title": "Why Do I Keep Falling Back Into Sin? A Morning Prayer to Break the Cycle (1 Corinthians 10:13)"
-  }
- ],
- "W_SDNjJNupk-202611172245.json": [
-  {
-   "video_id": "W_SDNjJNupk",
-   "mode": "apply",
-   "time_utc": "2026-11-17T22:45:30",
-   "changed": [
-    "thumbnail"
-   ],
-   "skipped": [
-    "metadata already matches"
-   ],
-   "errors": [],
-   "live_title": "Morning Prayer About Money | When Bills Keep You Up at Night (Matthew 6:11)"
-  }
- ],
- "sySDddc8YMw-202611172245.json": [
-  {
-   "video_id": "sySDddc8YMw",
-   "mode": "apply",
-   "time_utc": "2026-11-17T22:45:33",
-   "changed": [
-    "thumbnail"
-   ],
-   "skipped": [
-    "metadata already matches"
-   ],
-   "errors": [],
-   "live_title": "Is Hell Real? The Part Nobody Tells You"
-  }
- ],
- "xoOD_wOfmQU-202611172245.json": [
-  {
-   "video_id": "xoOD_wOfmQU",
-   "mode": "apply",
-   "time_utc": "2026-11-17T22:45:38",
-   "changed": [
-    "thumbnail"
-   ],
-   "skipped": [
-    "metadata already matches"
-   ],
-   "errors": [],
-   "live_title": "The 21 Martyrs of Libya: What the 21st Man Told ISIS (True Story)"
+   "live_title": "My Coworker Stole My Lunch... Then Gave It 2 Stars 😭 #shorts",
+   "rollback": "reports/yt-push/rollback/lM14caCiQpU-20261118-024533.json"
   }
  ]
 }

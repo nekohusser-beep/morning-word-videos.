@@ -1,0 +1,37 @@
+{
+ "job": {
+  "video_id": "kkMLAyLup88",
+  "tags": [
+   "sleep scriptures",
+   "bible verses for sleep",
+   "sleep scriptures from the holy bible",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "scripture for sleep",
+   "kjv bible verses",
+   "bible verse for sleep",
+   "psalms for sleep",
+   "bedtime prayer",
+   "kjv",
+   "night prayer",
+   "peaceful sleep",
+   "bible reading for sleep",
+   "psalm 4:8",
+   "psalm 4 8"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "kkMLAyLup88",
+   "mode": "apply",
+   "time_utc": "2026-11-19T02:50:46",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Night Prayer Today | Psalm 4:8 KJV",
+   "rollback": "reports/yt-push/rollback/kkMLAyLup88-20261119-025047.json"
+  }
+ ]
+}

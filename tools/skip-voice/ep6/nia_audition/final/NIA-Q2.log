@@ -1,22 +1,0 @@
-
-********
-Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
-********
- 
-from_pretrained (pretrained_model_name_or_path: str, **kwargs) -> 'Qwen3TTSModel'
-generate_voice_design (self, text: Union[str, List[str]], instruct: Union[str, List[str]], language: Union[str, List[str]] = None, non_streaming_mode: bool = True, **kwargs) -> Tuple[List[numpy.ndarray], int]
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:00<00:00,  7.73it/s]Fetching 4 files: 100%|██████████| 4/4 [00:03<00:00,  1.20it/s]Fetching 4 files: 100%|██████████| 4/4 [00:03<00:00,  1.20it/s]
-loaded with {'device_map': 'cpu', 'dtype': torch.float32}
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 0 2.6 s audio in 14 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 1 2.6 s audio in 14 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 2 2.0 s audio in 11 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 3 1.2 s audio in 7 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 4 1.4 s audio in 8 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 5 4.1 s audio in 22 s
-wrote out/NIA-Q2.wav 19.4 s @ 24000

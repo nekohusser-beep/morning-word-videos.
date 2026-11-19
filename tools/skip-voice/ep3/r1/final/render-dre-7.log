@@ -1,19 +1,0 @@
-/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-source mentions: ['prompt_wav_path', 'prompt_text', 'reference_wav_path', 'cfg_value', 'inference_timesteps', 'denoise', 'normalize']
-Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 1635.42it/s]
-voxcpm_model_path: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd, zipenhancer_model_path: None, enable_denoiser: False
-/opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
-  WeightNorm.apply(module, name, dim)
-Loading AudioVAE from pytorch: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/audiovae.pth
-Running on device: cpu, dtype: bfloat16
-Loading model from safetensors: /home/runner/.cache/huggingface/hub/models--openbmb--VoxCPM2/snapshots/7936080b41163874f38610f46f438e2c0757f9fd/model.safetensors
-Warning: torch.compile disabled - VoxCPMModel can only be optimized on CUDA device
-Loaded VoxCPM2Model
-Warm up VoxCPMModel...
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:23,  2.64s/it] 20%|██        | 2/10 [00:05<00:20,  2.60s/it] 30%|███       | 3/10 [00:07<00:18,  2.60s/it] 40%|████      | 4/10 [00:10<00:15,  2.60s/it] 50%|█████     | 5/10 [00:12<00:12,  2.59s/it] 60%|██████    | 6/10 [00:15<00:10,  2.59s/it] 70%|███████   | 7/10 [00:18<00:07,  2.59s/it] 80%|████████  | 8/10 [00:20<00:05,  2.60s/it] 90%|█████████ | 9/10 [00:23<00:02,  2.60s/it]100%|██████████| 10/10 [00:25<00:00,  2.59s/it]100%|██████████| 10/10 [00:25<00:00,  2.60s/it]
-model loaded with {'load_denoiser': False}
-modes to try: ['prompt+text', 'reference']
-  0%|          | 0/70 [00:00<?, ?it/s]  1%|▏         | 1/70 [00:02<03:00,  2.62s/it]  3%|▎         | 2/70 [00:05<02:57,  2.61s/it]  4%|▍         | 3/70 [00:07<02:54,  2.60s/it]  6%|▌         | 4/70 [00:10<02:51,  2.60s/it]  7%|▋         | 5/70 [00:12<02:48,  2.59s/it]  9%|▊         | 6/70 [00:15<02:46,  2.60s/it] 10%|█         | 7/70 [00:18<02:43,  2.60s/it] 11%|█▏        | 8/70 [00:20<02:40,  2.59s/it] 13%|█▎        | 9/70 [00:23<02:38,  2.60s/it] 14%|█▍        | 10/70 [00:25<02:35,  2.60s/it] 16%|█▌        | 11/70 [00:28<02:35,  2.63s/it] 17%|█▋        | 12/70 [00:31<02:33,  2.64s/it] 19%|█▊        | 13/70 [00:33<02:30,  2.64s/it] 20%|██        | 14/70 [00:36<02:27,  2.63s/it] 20%|██        | 14/70 [00:38<02:33,  2.75s/it]
-23 dre prompt+text attempt 0 2.4 s in 71 s ok : There wasn't room for all twelve names.
-done chunk 0 mode prompt+text

@@ -1,9 +1,0 @@
-scene,start,end,kind,asset,motion,vo,image_prompt
-s001,0.00,5.86,character,s001.mp4,push_in,Okay. Easy one. Grab the salt shaker...,"Stick figure sits at a kitchen table with a coffee mug, salt shaker and sugar bowl; he grabs the shaker and salts the coffee. Instructor speaker icon top right."
-s002,5.86,11.06,character,s002.mp4,pull_out,...and move it so you don't mix it up with the sugar.,"He is still shaking salt into the mug, then freezes mid-shake with a thought-dots note."
-s003,11.06,15.88,abstract,s003.mp4,drift_up,Two parts to that sentence. He did one.,"Graphic: a sentence bar split into PART 1 (green, check) and PART 2 (grey); a yellow ball runs part 1 then hops off the bar."
-s004,15.88,22.88,character,s004.mp4,push_in,"No problem. If anything goes in the wrong cup, pick up the spoon...",He grabs the spoon the second he hears it and stirs the salty coffee hard; coffee sloshes.
-s005,22.88,28.35,character,s005.mp4,pull_out,...and set it down. I'll bring you a fresh one.,"Still stirring, he freezes with the spoon in the mug; thought-dots note."
-s006,28.35,32.81,character,s006.mp4,push_in,You got all that?,"He turns and stares at the camera, eyes wide, one sweat drop, slow blink."
-s007,32.81,36.64,abstract,s007.mp4,pan_right,"If you move before the sentence ends, same here.","Graphic: the same sentence bar; this time the ball waits, then runs the whole bar and gets a check."
-s008,36.64,42.20,character,s008.mp4,push_in,What helps me: let them finish the sentence. Then pick up the spoon.,"Calm figure at the table, hands folded, waits, then picks up the spoon with a fresh cup."

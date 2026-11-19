@@ -1,23 +1,0 @@
-[0;93m2026-11-18 18:41:07.185596057 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
-
-********
-Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
-********
- 
-from_pretrained (pretrained_model_name_or_path: str, **kwargs) -> 'Qwen3TTSModel'
-generate_voice_design (self, text: Union[str, List[str]], instruct: Union[str, List[str]], language: Union[str, List[str]] = None, non_streaming_mode: bool = True, **kwargs) -> Tuple[List[numpy.ndarray], int]
-Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:00<00:00,  5.41it/s]Fetching 4 files: 100%|██████████| 4/4 [00:05<00:00,  1.43s/it]Fetching 4 files: 100%|██████████| 4/4 [00:05<00:00,  1.43s/it]
-loaded with {'device_map': 'cpu', 'dtype': torch.float32}
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 0 3.4 s audio in 20 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 1 2.4 s audio in 15 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 2 2.0 s audio in 12 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 3 1.3 s audio in 8 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 4 2.3 s audio in 14 s
-Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
-seg 5 2.8 s audio in 17 s
-wrote out/NIA-Q1.wav 19.6 s @ 24000

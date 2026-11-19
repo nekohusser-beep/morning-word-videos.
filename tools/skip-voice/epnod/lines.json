@@ -1,0 +1,16 @@
+[
+ {
+  "kind": "dre",
+  "text": "Skip. Is the supervisor running all over your back lately?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "Yeah. I just nod my head and get back on the grind.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ }
+]

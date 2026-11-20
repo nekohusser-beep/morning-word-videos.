@@ -36,28 +36,28 @@
  },
  {
   "kind": "skip",
-  "text": "See! See see see. Hola. Gracias. Taco. Burrito. Quesadilla.",
+  "text": "See! See see see! Hola! Gracias! Taco! Burrito! Quesadilla!",
   "para_end": true,
   "in_line": false,
   "idx": 5
  },
  {
   "kind": "skip",
-  "text": "Oono, dos, tres, cuatro... Cinco de Mayo!",
+  "text": "Oono, dos, tres... Taco Bell! Chipotle! Cinco de Mayo!",
   "para_end": true,
   "in_line": false,
   "idx": 6
  },
  {
   "kind": "skip",
-  "text": "Dora! Senyor! Agua! Fiesta! Peenyata! El Gato! Adios!",
+  "text": "Dora! Senyor! Fiesta! Peenyata! Mi casa, su casa!",
   "para_end": true,
   "in_line": false,
   "idx": 7
  },
  {
   "kind": "skip",
-  "text": "Feliz Navidaaad... Feliz Navidaaaaad...",
+  "text": "Feliz Navidaaad!",
   "para_end": true,
   "in_line": false,
   "idx": 8
@@ -89,5 +89,33 @@
   "para_end": true,
   "in_line": false,
   "idx": 12
+ },
+ {
+  "kind": "abuela",
+  "text": "¿Y él? ¿Habla español?",
+  "idx": 13,
+  "para_end": true,
+  "in_line": false
+ },
+ {
+  "kind": "skip",
+  "text": "Nah.",
+  "idx": 14,
+  "para_end": true,
+  "in_line": false
+ },
+ {
+  "kind": "dog",
+  "text": "Grrrrrr...",
+  "idx": 15,
+  "para_end": true,
+  "in_line": false
+ },
+ {
+  "kind": "dre",
+  "text": "NOT AGAIN! NOT AGAIN!",
+  "idx": 16,
+  "para_end": true,
+  "in_line": false
  }
 ]

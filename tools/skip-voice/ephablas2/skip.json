@@ -1,0 +1,37 @@
+[
+ {
+  "kind": "skip",
+  "text": "See! See see see! Hola! Gracias! Taco! Burrito! Quesadilla!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "skip",
+  "text": "Oono, dos, tres... Taco Bell! Chipotle! Cinco de Mayo!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "skip",
+  "text": "Dora! Senyor! Fiesta! Peenyata! Mi casa, su casa!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "skip",
+  "text": "Feliz Navidaaad!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "skip",
+  "text": "Nah.",
+  "idx": 14,
+  "para_end": true,
+  "in_line": false
+ }
+]

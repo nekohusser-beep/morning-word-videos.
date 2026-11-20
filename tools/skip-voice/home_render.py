@@ -53,11 +53,31 @@ if not os.path.exists(FB): FB = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bol
 POP, HOOK, TITLEF, ENDF = (ImageFont.truetype(FB, s) for s in (86, 104, 60, 74))
 
 def draw_mouth(img, scene, who, openv):
+    """[x, y, w] = old flap; [x, y, w, cw, ch] = cover the drawn mouth with sampled skin first, then a cartoon mouth
+    (closed line / half / open with tongue, 3 steps so it reads as a cartoon flap)."""
     m = MOUTH.get(scene, {}).get(who)
     if not m: return
-    x, y, w = m; d = ImageDraw.Draw(img)
-    h = max(4, w * (0.12 + 0.75 * openv))
-    d.ellipse([x - w * 0.55, y - h * 0.5, x + w * 0.55, y + h * 0.5], fill=(70, 10, 18), outline=(0, 0, 0), width=6)
+    d = ImageDraw.Draw(img)
+    if len(m) == 3:
+        x, y, w = m; h = max(4, w * (0.12 + 0.75 * openv))
+        d.ellipse([x - w * 0.55, y - h * 0.5, x + w * 0.55, y + h * 0.5], fill=(70, 10, 18), outline=(0, 0, 0), width=6); return
+    x, y, w, cw, ch = m
+    a = np.asarray(img)
+    ring = [a[int(y + ch * 0.5 * math.sin(t)), int(x + cw * 0.5 * math.cos(t))] for t in np.linspace(0, 2 * math.pi, 48, endpoint=False)
+            if 0 <= int(y + ch * 0.5 * math.sin(t)) < a.shape[0] and 0 <= int(x + cw * 0.5 * math.cos(t)) < a.shape[1]]
+    ring = np.array(ring); ring = ring[ring.sum(1) > 300]          # skip dark outline pixels
+    skin = tuple(int(v) for v in (np.median(ring, 0) if len(ring) else (245, 245, 245)))
+    d.ellipse([x - cw / 2, y - ch / 2, x + cw / 2, y + ch / 2], fill=skin)
+    lvl = 0 if openv < 0.18 else (1 if openv < 0.55 else 2)
+    if lvl == 0:
+        d.arc([x - w / 2, y - w * 0.06, x + w / 2, y + w * 0.06], 10, 170, fill=(0, 0, 0), width=6); return
+    h = w * (0.5 if lvl == 1 else 0.85)
+    box = [x - w * 0.5, y - h * 0.35, x + w * 0.5, y + h * 0.65]
+    d.chord(box, 0, 180, fill=(60, 8, 14), outline=(0, 0, 0), width=6)       # D-shaped open mouth
+    d.line([box[0], box[1] + (box[3] - box[1]) / 2, box[2], box[1] + (box[3] - box[1]) / 2], fill=(0, 0, 0), width=6)
+    if lvl == 2:
+        d.chord([x - w * 0.28, y + h * 0.2, x + w * 0.28, y + h * 0.62], 180, 360, fill=(215, 95, 100))
+        d.rectangle([x - w * 0.36, y + h * 0.15 - 1, x + w * 0.36, y + h * 0.15 + w * 0.08], fill=(255, 255, 255))
 
 def text_c(d, y, txt, font, fill=(255, 255, 255), sw=9):
     d.text(((W - d.textlength(txt, font=font)) / 2, y), txt, font=font, fill=fill, stroke_width=sw, stroke_fill=(0, 0, 0))

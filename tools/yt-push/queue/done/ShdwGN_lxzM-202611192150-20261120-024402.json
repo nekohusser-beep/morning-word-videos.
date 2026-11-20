@@ -1,0 +1,35 @@
+{
+ "job": {
+  "video_id": "ShdwGN_lxzM",
+  "tags": [
+   "coworker collecting money for gift",
+   "office gift collection",
+   "office birthday collection",
+   "when your coworker",
+   "coworker owes me money",
+   "when someone owe you money",
+   "work humor",
+   "office humor",
+   "break room",
+   "comedy skit",
+   "animated skit",
+   "relatable",
+   "funny shorts",
+   "skip and dre"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "ShdwGN_lxzM",
+   "mode": "apply",
+   "time_utc": "2026-11-20T02:43:52",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "My Coworker Collected $240 for a Gift... It's a Card 😭",
+   "rollback": "reports/yt-push/rollback/ShdwGN_lxzM-20261120-024353.json"
+  }
+ ]
+}

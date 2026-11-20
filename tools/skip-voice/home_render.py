@@ -103,7 +103,9 @@ def top(img, tt):
     d = ImageDraw.Draw(img)
     if tt < 3.6 and HOOKW:  # hook: bold top-center, swaps every 1.2 s
         n = min(len(HOOKW), 1 + int(tt / 1.2) * 2)
-        text_c(d, 170, " ".join(HOOKW[:n][-3:]), HOOK, fill=(255, 225, 40), sw=11)
+        ht = " ".join(HOOKW[:n][-3:]); hf = HOOK
+        while d.textlength(ht, font=hf) > W - 60 and hf.size > 50: hf = ImageFont.truetype(FB, hf.size - 6)  # long words: shrink to fit
+        text_c(d, 170, ht, hf, fill=(255, 225, 40), sw=11)
         return
     tl = cfg["title"]; bh = 70 * len(tl) + 40
     bw = max(d.textlength(l, font=TITLEF) for l in tl) + 60

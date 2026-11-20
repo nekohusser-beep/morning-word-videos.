@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "skip",
+  "text": "See! See see see. Hola. Gracias. Taco. Burrito. Quesadilla.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "skip",
+  "text": "Oono, dos, tres, cuatro... Cinco de Mayo!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "skip",
+  "text": "Dora! Senyor! Agua! Fiesta! Peenyata! El Gato! Adios!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "skip",
+  "text": "Feliz Navidaaad... Feliz Navidaaaaad...",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "skip",
+  "text": "...Cancoon.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "skip",
+  "text": "Since about nine seconds ago.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ }
+]

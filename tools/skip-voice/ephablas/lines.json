@@ -1,0 +1,93 @@
+[
+ {
+  "kind": "abuela",
+  "text": "¿Hablas español?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "Nah.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "dog",
+  "text": "Grrrrrr...",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "dre",
+  "text": "Aaah! Not the hedge! NOT THE HEDGE!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "abuela",
+  "text": "¿Y tú?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "skip",
+  "text": "See! See see see. Hola. Gracias. Taco. Burrito. Quesadilla.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "skip",
+  "text": "Oono, dos, tres, cuatro... Cinco de Mayo!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "skip",
+  "text": "Dora! Senyor! Agua! Fiesta! Peenyata! El Gato! Adios!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "skip",
+  "text": "Feliz Navidaaad... Feliz Navidaaaaad...",
+  "para_end": true,
+  "in_line": false,
+  "idx": 8
+ },
+ {
+  "kind": "skip",
+  "text": "...Cancoon.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "abuela",
+  "text": "Muy bien, mijo.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 10
+ },
+ {
+  "kind": "dre",
+  "text": "Since when you speak Spanish?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 11
+ },
+ {
+  "kind": "skip",
+  "text": "Since about nine seconds ago.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ }
+]

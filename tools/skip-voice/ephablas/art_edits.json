@@ -1,0 +1,16 @@
+{
+ "ref": "tools/skip-voice/ep2b/build/breakroom.jpg",
+ "chain_from": "porch",
+ "seeds": [
+  11,
+  22
+ ],
+ "edits": {
+  "porch": "Keep the same thick-black-outline flat cartoon art style as the reference: white round heads, big expressive eyes. Keep both men exactly the same: the man with spiky blue hair, orange hoodie and navy cargo pants (Skip) and the bald man with the goatee (Dre). Change the break room into the front porch of a small yellow house in daylight. Skip at left and Dre in the middle stand on the porch together holding one big brown cardboard delivery box. In the open front door at right stands a short elderly Latina grandmother in the same white round-head cartoon style: grey hair in a bun, round glasses, flowered apron over a purple dress, arms crossed, stern. Next to her sits a huge brown dog staring at the men. Vertical, no text.",
+  "dog": "Keep the same thick-black-outline flat cartoon art style as the reference: white round heads, big expressive eyes. Close-up of the same huge brown dog from the reference, now standing up on the porch, teeth showing, angry eyebrows, growling. No people in this shot. Vertical, no text.",
+  "porch_empty": "Keep the same thick-black-outline flat cartoon art style as the reference: white round heads, big expressive eyes. The same porch and front door of the yellow house. Nobody on the porch now: the brown cardboard box dropped on its side on the floor, one white sneaker left behind, a cartoon dust-cloud trail leading off the porch toward a green hedge in the yard. No people. Vertical, no text.",
+  "skip_close": "Keep the same thick-black-outline flat cartoon art style as the reference: white round heads, big expressive eyes. Close-up of only the man with spiky blue hair in the orange hoodie (Skip), same face and style, standing on the porch, frozen in panic: huge eyes, big sweat drops flying off his head, mouth closed tight. No other people. Vertical, no text.",
+  "abuela": "Keep the same thick-black-outline flat cartoon art style as the reference: white round heads, big expressive eyes. Close-up of the same elderly grandmother (grey bun, round glasses, flowered apron, purple dress) in her doorway, smiling warmly now, holding out a plate of tamales with both hands. The huge brown dog sits calmly at her side, happy, tongue out. No men in this shot. Vertical, no text.",
+  "hedge": "Keep the same thick-black-outline flat cartoon art style as the reference: white round heads, big expressive eyes. A green hedge in the front yard of the yellow house. The bald man with the goatee (Dre) has only his head poking out of the top of the hedge, leaves and twigs stuck on his head, annoyed face. Standing right next to the hedge, the man with spiky blue hair in the orange hoodie (Skip) happily eating a tamale. Vertical, no text."
+ }
+}

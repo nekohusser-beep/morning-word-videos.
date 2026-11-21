@@ -792,22 +792,25 @@ def reslot(jobs):
     was missed) moves to the next free 12 PM / 6 PM slot after the job before it, and every later job
     moves along behind it. Times still in the future and in order are left alone."""
     now = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
-    last = None
-    for f in glob.glob(os.path.join(UPLOADS_DONE, "*.json")):  # never land on top of what's already scheduled
+    taken = set()  # never land on top of what's already scheduled
+    for f in glob.glob(os.path.join(UPLOADS_DONE, "*.json")):
         w = json.load(open(f, encoding="utf-8")).get("publish_at_utc")
-        if w and (last is None or _utc(w) > last):
-            last = _utc(w)
+        if w:
+            taken.add(_utc(w))
+    last = None
     for path, _, job in [(j[1], 0, j[2]) for j in jobs]:
         own = _utc(job["publish_at_utc"]) if job.get("publish_at_utc") else None
         floor = now + dt.timedelta(minutes=30)
         if last:
             floor = max(floor, last + dt.timedelta(minutes=1))
-        t = own if own and own >= floor else _next_slot(floor)
+        t = own if own and own >= floor and own not in taken else None
+        while t is None or t in taken:
+            t = _next_slot(floor if t is None else t + dt.timedelta(minutes=1))
         if own != t:
             print("moved", job.get("title", "")[:50], own, "->", t)
-        if own != t:
             job["publish_at_utc"] = t.strftime("%Y-%m-%dT%H:%M:00Z")
             json.dump(job, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        taken.add(t)
         last = t
 
 

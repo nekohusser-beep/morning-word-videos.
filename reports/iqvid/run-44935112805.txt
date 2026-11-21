@@ -1,0 +1,48 @@
+=== KEYWORDS: supervisor on your back ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+supervisor on your back                | 38 low       |  202.8K |      1M |   0% |  10%
+how to be a good supervisor at work    | 35 low       |  183.8K |      2K |   0% |  10%
+what is a good supervisor              | 34 low       |  137.2K |    1.9K |   0% |  10%
+how to become a good supervisor at wor | 35 low       |  183.8K |      2K |   0% |  30%
+MATCHING (0): 
+QUESTIONS (3): how to be a good supervisor at work | what is a good supervisor | how to become a good supervisor at work
+RELATED (2): supervisor guard | supervisor patrata
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: nod your head get back on the grind ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+nod your head get back on the grind    | 44 medium    |   11.1M |   80.9K |   0% |  10%
+you ain't no boy no more motivation    | 45 medium    |    7.7M |   53.8K |   0% |  10%
+back on the grind                      | 49 medium    |  260.5K |      8K |  80% |  20%
+MATCHING (0): 
+QUESTIONS (0): 
+RELATED (12): you ain't no boy no more motivation | back on the grind | just get back up when life knocks you down | get back up when it knocks you down | get back up rob bailey | get back on the grind | motivation don't let anyone bring you down | we ain't going nowhere dmx | never get back down | don't let him bring you down | don't let em get you down | back on grizzy lil wayne
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: boss on your back work humor ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+boss on your back work humor           | 46 medium    |    2.9M |   43.9K |   0% |   0%
+boss talking to employees              | 42 medium    |    1.2M |   27.5K |   0% |   0%
+who is your boss                       | 56 medium    |  377.3K |  361.2K |  40% |  30%
+what is your job description bad boys  | 40 medium    |    1.1M |     13K |  10% |  20%
+when your bosses boss shows up to your | 40 medium    |  305.7K |      1M |  20% |   0%
+MATCHING (0): 
+QUESTIONS (5): who is your boss | what is your job description bad boys | when your bosses boss shows up to your job | when you have a bad boss | when boss is your friend
+RELATED (15): boss talking to employees | the office bad leadership | bad manager at work | who's the boss clip | the office bad boss | back to work funny | boss targeting me | bossy coworker not your boss | bad boss good boss | boss of the gym | boss and employee memes | boss stands up for employee | boss and employee comedy | boss yelling at employee meme | boss embarrassed me in front of coworkers
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: night shift humor ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+night shift humor                      | 39 low       |  347.6K |    9.3K |  10% |  30%
+night shift comedy                     | 48 medium    |    726K |  278.6K |  10% |  10%
+night shift funny reels                | 37 low       |  148.4K |   10.8K |   0% |  30%
+night shift comedy whatsapp status     | 30 low       |   25.8K |    4.7K |   0% |  30%
+night shift funny moments              | 42 medium    |  270.1K |   10.9K |  30% |  20%
+night shift funny                      | 46 medium    |    875K |   22.7K |  20% |   0%
+night shift comedy whatsapp status tam | 31 low       |   36.9K |    4.7K |   0% |  20%
+night shift funny whatsapp status      | 29 low       |    9.1K |      71 |  10% |  50%
+night shift jokes                      | 37 low       |  331.8K |    6.8K |   0% |  10%
+how night shift workers sleep          | 33 low       |     37K |     388 |   0% |  20%
+how to work a night shift              | 38 low       |   33.7K |     352 |  30% |  10%
+what is night shift                    | 47 medium    |    1.4M |   51.1K |   0% |   0%
+MATCHING (1): night shift dad humor
+QUESTIONS (6): how night shift workers sleep | how to work a night shift | what is night shift | when the night shift | when you work the night shift | is night shift worth it
+RELATED (39): night shift comedy | night shift funny reels | night shift comedy whatsapp status | night shift funny moments | night shift funny | night shift comedy whatsapp status tamil | night shift funny whatsapp status | night shift jokes | night shift funny videos | night shift work good or bad | night shift explaining to day shift | working a night shift | funny night shift stories | night shift shut up | were on the night shift | i worked the night shift | funny night shift | night shift reporting to day shift | night shift bez zaklona | night shift stand up | night shift game funny | night shift iidaze | night shift horror short | night shift one direction | obsession night shift funny moments | spongebob night shift funny moments | caseoh night shift funny moments | night shift nurse funny | night shift guy | night shift be like | night shift memes | night shift comedy reels | night shift rock | night shift funny status | night shift santhanam comedy | nighttime safety humor | night shift night shift | night shift los | night shift dacus
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

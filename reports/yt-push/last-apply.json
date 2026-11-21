@@ -1,30 +1,22 @@
 {
- "4b3efX0I-X0-202611202145.json": [
+ "Z8OuFTS-pTg-20261121-115455.json": [
   {
-   "video_id": "4b3efX0I-X0",
+   "video_id": "Z8OuFTS-pTg",
    "mode": "apply",
-   "time_utc": "2026-11-21T02:39:51",
+   "time_utc": "2026-11-21T16:55:13",
    "changed": [
-    "tags"
+    "description",
+    "tags",
+    "title",
+    "thumbnail"
    ],
    "skipped": [],
-   "errors": [],
-   "live_title": "ADHD Forgetting What I Was Saying 😂 ADHD vs Non-ADHD",
-   "rollback": "reports/yt-push/rollback/4b3efX0I-X0-20261121-023951.json"
-  }
- ],
- "PVEx17d90eQ-202611202145.json": [
-  {
-   "video_id": "PVEx17d90eQ",
-   "mode": "apply",
-   "time_utc": "2026-11-21T02:40:00",
-   "changed": [
-    "tags"
+   "errors": [
+    "playlist True Martyr Stories | Christians Who Would Not Deny Jesus (KJV): 404 {'error': {'code': 404, 'message': 'Playlist not found.', 'errors': [{'message': 'Playlist not found.', 'domain': 'youtube.playlistItem', 'reason': 'playlistNotFound'}]}}",
+    "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
    ],
-   "skipped": [],
-   "errors": [],
-   "live_title": "ADHD vs Non-ADHD Telling a Story 😂 Forgetting What I Was Saying #shorts",
-   "rollback": "reports/yt-push/rollback/PVEx17d90eQ-20261121-024000.json"
+   "live_title": "**Blessed Prayers**.",
+   "rollback": "reports/yt-push/rollback/Z8OuFTS-pTg-20261121-165513.json"
   }
  ]
 }

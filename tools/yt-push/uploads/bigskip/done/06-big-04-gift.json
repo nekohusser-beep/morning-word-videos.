@@ -23,5 +23,10 @@
  "publish_at_utc": "2026-11-23T23:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/big-04-gift.json"
+ "iqvid_source": "tools/skip-engine/eps/big-04-gift.json",
+ "result": {
+  "time_utc": "2026-11-21T20:34:42",
+  "video_id": "ZJFGJzJVuhM",
+  "result": "uploaded; goes public 2026-11-23T23:00:00Z"
+ }
 }

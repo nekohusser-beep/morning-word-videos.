@@ -22,5 +22,10 @@
  "publish_at_utc": "2026-11-23T02:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/big-06-friday.json"
+ "iqvid_source": "tools/skip-engine/eps/big-06-friday.json",
+ "result": {
+  "time_utc": "2026-11-21T20:34:38",
+  "video_id": "DxryEpkSwCk",
+  "result": "uploaded; goes public 2026-11-23T02:00:00Z"
+ }
 }

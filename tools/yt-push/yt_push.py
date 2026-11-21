@@ -70,6 +70,19 @@ ROLLBACK = os.path.join(REPORTS, "rollback")
 API = "https://www.googleapis.com/youtube/v3"
 UPLOAD_API = "https://www.googleapis.com/upload/youtube/v3"
 CHANNEL_ID = "UCaKI8Xsi-MHu78UnJTY1xpg"
+CHANNEL_NAME = "Blessed Prayers"
+# PROFILE picks which channel this run works on (Neko Nov 21 2026: Skip comedy goes to Big Skip).
+# Each channel has its own saved sign-in file; same Google client, same quota.
+PROFILE = os.environ.get("YTP_PROFILE", "bp").strip().lower() or "bp"
+if PROFILE == "bigskip":
+    CHANNEL_ID = "UCw_zfZtPSIg_LjQURb3o6MQ"
+    CHANNEL_NAME = "Big Skip"
+    TOKEN_FILE = os.path.join(HERE, "signin-bigskip.enc")
+    QUEUE = os.path.join(HERE, "queue-bigskip")
+    DONE = os.path.join(QUEUE, "done")
+UPLOADS = os.path.join(HERE, "uploads", PROFILE)
+UPLOADS_DONE = os.path.join(UPLOADS, "done")
+MAX_UPLOADS_PER_RUN = int(os.environ.get("YTP_MAX_UPLOADS", "5"))  # insert = 1,600 quota units
 # Device sign-in only allows "youtube" (not force-ssl). It covers videos.update, playlistItems
 # and captions; posting comments needs force-ssl, so a comment that is refused is skipped, not failed.
 SCOPE = "https://www.googleapis.com/auth/youtube"
@@ -230,10 +243,10 @@ def device_signin(cid, sec):
     code, url = js["user_code"], js.get("verification_url", "https://www.google.com/device")
     wait_s, interval = int(js.get("expires_in", 1800)), int(js.get("interval", 5))
     os.makedirs(REPORTS, exist_ok=True)
-    note = os.path.join(REPORTS, "SIGN-IN-CODE.txt")
+    note = os.path.join(REPORTS, "SIGN-IN-CODE%s.txt" % ("" if PROFILE == "bp" else "-" + PROFILE))
     with open(note, "w") as f:
-        f.write("OPEN %s AND TYPE: %s\nPick Blessed Prayers, tap Allow. Good for %d minutes from %s UTC.\n"
-                % (url, code, wait_s // 60, time.strftime("%H:%M", time.gmtime())))
+        f.write("OPEN %s AND TYPE: %s\nPick %s, tap Allow. Good for %d minutes from %s UTC.\n"
+                % (url, code, CHANNEL_NAME, wait_s // 60, time.strftime("%H:%M", time.gmtime())))
     print("SIGN-IN NEEDED: open %s and type %s (good for %d minutes)" % (url, code, wait_s // 60))
     git_publish([os.path.relpath(note, REPO)], "yt-push sign-in code")
     deadline = time.time() + wait_s
@@ -699,22 +712,183 @@ def mode_check():
     names = [c["snippet"]["title"] for c in js.get("items", [])] if st == 200 else []
     print("signed in as channel:", names or (st, str(js)[:200]))
     if st == 200 and not any(c["id"] == CHANNEL_ID for c in js.get("items", [])):
-        print("WARNING: the saved sign-in is NOT the Blessed Prayers channel. Run signin again and pick Blessed Prayers.")
+        print("WARNING: the saved sign-in is NOT the %s channel. Run signin again and pick %s." % (CHANNEL_NAME, CHANNEL_NAME))
         return 2
     return 0
 
 
+# ------------------------------------------------------------------ upload (new videos)
+def _utc(s):
+    return dt.datetime.strptime(s[:19], "%Y-%m-%dT%H:%M:%S")
+
+
+def channel_videos(yt):
+    """title -> {id, privacy, publishAt} for every upload on the channel (private and scheduled too)."""
+    st, js = yt.get("channels", {"part": "contentDetails", "id": CHANNEL_ID})
+    if st != 200 or not js.get("items"):
+        return {}
+    pl = js["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    ids, page = [], None
+    for _ in range(10):
+        p = {"part": "contentDetails", "playlistId": pl, "maxResults": 50}
+        if page:
+            p["pageToken"] = page
+        st, js = yt.get("playlistItems", p)
+        if st != 200:
+            break
+        ids += [i["contentDetails"]["videoId"] for i in js.get("items", [])]
+        page = js.get("nextPageToken")
+        if not page:
+            break
+    out = {}
+    for i in range(0, len(ids), 50):
+        st, js = yt.get("videos", {"part": "snippet,status", "id": ",".join(ids[i:i + 50])})
+        for v in js.get("items", []) if st == 200 else []:
+            out[v["snippet"]["title"].strip().lower()] = {"id": v["id"], "privacy": v["status"].get("privacyStatus"),
+                                                         "publishAt": v["status"].get("publishAt"),
+                                                         "snippet": v["snippet"]}
+    return out
+
+
+def _status(job, when):
+    st = {"selfDeclaredMadeForKids": bool(job.get("made_for_kids", False)),
+          "containsSyntheticMedia": bool(job.get("synthetic", True)), "embeddable": True}
+    if when:
+        st["privacyStatus"] = "private"
+        st["publishAt"] = when
+    else:
+        st["privacyStatus"] = job.get("privacy", "public")
+    return st
+
+
+def _publish_time(job):
+    """The job's publish time, moved 20 minutes ahead if it has already passed (YouTube refuses past times)."""
+    w = job.get("publish_at_utc", "")
+    if not w:
+        return ""
+    now = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
+    t = _utc(w)
+    if t < now + dt.timedelta(minutes=10):
+        t = now + dt.timedelta(minutes=20)
+    return t.strftime("%Y-%m-%dT%H:%M:00Z")
+
+
+def upload_one(yt, job):
+    snippet = {"title": job["title"][:MAX_TITLE], "description": job.get("description", "")[:MAX_DESC],
+               "tags": fit_tags(job.get("tags", [])), "categoryId": str(job.get("category_id", "23")),
+               "defaultLanguage": job.get("language", "en"), "defaultAudioLanguage": job.get("language", "en")}
+    when = _publish_time(job)
+    meta = {"snippet": snippet, "status": _status(job, when)}
+    src = job["video_url"]
+    req = urllib.request.Request(src, headers={"User-Agent": "yt-push"})
+    data = urllib.request.urlopen(req, timeout=300).read()
+    if len(data) < 100000:
+        return None, "video download too small (%d bytes) from %s" % (len(data), src)
+    h = {"Authorization": "Bearer " + yt.token, "Content-Type": "application/json; charset=UTF-8",
+         "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(len(data))}
+    url = UPLOAD_API + "/videos?" + urllib.parse.urlencode({"uploadType": "resumable", "part": "snippet,status"})
+    r = urllib.request.Request(url, data=json.dumps(meta).encode(), method="POST", headers=h)
+    try:
+        with urllib.request.urlopen(r, timeout=120) as resp:
+            loc = resp.headers.get("Location")
+    except urllib.error.HTTPError as e:
+        return None, "upload start refused %s %s" % (e.code, e.read().decode("utf-8", "replace")[:400])
+    r = urllib.request.Request(loc, data=data, method="PUT", headers={"Content-Type": "video/mp4"})
+    try:
+        with urllib.request.urlopen(r, timeout=1800) as resp:
+            js = json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        return None, "upload refused %s %s" % (e.code, e.read().decode("utf-8", "replace")[:400])
+    return js.get("id"), when
+
+
+def mode_upload():
+    """Uploads queued new videos (tools/yt-push/uploads/<profile>/*.json, one video per file), earliest
+    publish time first, at most MAX_UPLOADS_PER_RUN a run (YouTube quota). A video whose exact title is
+    already on the channel is not uploaded twice: if it sits there private and unscheduled, it just gets
+    the job's publish time. Each finished job moves to uploads/<profile>/done/ with the video id."""
+    files = sorted(glob.glob(os.path.join(UPLOADS, "*.json")))
+    if not files:
+        print("Nothing to upload.")
+        return 0
+    tok = get_token(allow_device=False)
+    if not tok:
+        return 2
+    yt = YT(token=tok)
+    st, js = yt.get("channels", {"part": "snippet", "mine": "true"})
+    if st != 200 or not any(c["id"] == CHANNEL_ID for c in js.get("items", [])):
+        print("STOP: the saved sign-in is not %s (%s). Nothing uploaded." % (CHANNEL_NAME, st))
+        return 2
+    jobs = []
+    for f in files:
+        j = json.load(open(f, encoding="utf-8"))
+        jobs.append((j.get("publish_at_utc") or "9999", f, j))
+    jobs.sort()
+    have = channel_videos(yt)
+    os.makedirs(UPLOADS_DONE, exist_ok=True)
+    done_n, failures, uploaded = [], 0, 0
+    for _, f, job in jobs:
+        key = job["title"][:MAX_TITLE].strip().lower()
+        res = {"time_utc": dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")}
+        if key in have:
+            v = have[key]
+            res["video_id"] = v["id"]
+            if v["privacy"] == "private" and not v["publishAt"] and job.get("publish_at_utc"):
+                when = _publish_time(job)
+                body = {"id": v["id"], "status": _status(job, when)}
+                st2, js2 = yt.send("PUT", "videos", {"part": "status"}, body)
+                res["result"] = "already on channel; scheduled %s (%s)" % (when, st2)
+                if st2 != 200:
+                    res["error"] = str(js2)[:300]
+            else:
+                res["result"] = "already on channel (%s %s); not uploaded again" % (v["privacy"], v["publishAt"] or "")
+        else:
+            if uploaded >= MAX_UPLOADS_PER_RUN:
+                continue
+            vid, info = upload_one(yt, job)
+            uploaded += 1
+            if vid:
+                res["video_id"], res["result"] = vid, "uploaded; goes public %s" % (info or "now")
+            else:
+                res["error"] = info
+                if "quota" in (info or "").lower():
+                    print("quota used up for today; the rest waits for the next run")
+                    print(os.path.basename(f), "ERROR", info)
+                    failures += 1
+                    break
+        print(os.path.basename(f), "->", res.get("video_id", ""), res.get("result", ""), res.get("error", ""))
+        if res.get("error"):
+            failures += 1
+            continue
+        job["result"] = res
+        dest = os.path.join(UPLOADS_DONE, os.path.basename(f))
+        json.dump(job, open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        os.remove(f)
+        done_n.append(dest)
+        time.sleep(1)
+    left = len(glob.glob(os.path.join(UPLOADS, "*.json")))
+    print("\nSUMMARY upload profile=%s done=%d failed=%d still queued=%d" % (PROFILE, len(done_n), failures, left))
+    git_publish([os.path.relpath(UPLOADS, REPO)], "yt-push upload %s: %d done" % (PROFILE, len(done_n)))
+    return 1 if failures else 0
+
+
 def main():
     mode = (sys.argv[1] if len(sys.argv) > 1 else "dry").lower()
-    if mode not in ("check", "dry", "apply", "verify", "signin", "recent"):
-        print("mode must be check, dry, apply, verify, signin or recent")
+    if mode not in ("check", "dry", "apply", "verify", "signin", "recent", "upload"):
+        print("mode must be check, dry, apply, verify, signin, recent or upload")
         return 2
+    print("profile:", PROFILE, "channel:", CHANNEL_NAME, CHANNEL_ID)
+    if mode == "upload":
+        return mode_upload()
     if mode == "recent":
         return mode_recent()
     if mode == "check":
         return mode_check()
     if mode == "signin":
-        return 0 if get_token(allow_device=True) else 2
+        tok = get_token(allow_device=True)
+        if not tok:
+            return 2
+        return mode_check()
 
     if mode == "verify":
         cutoff = time.time() - 7 * 86400

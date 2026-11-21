@@ -1,0 +1,38 @@
+{
+ "job": {
+  "video_id": "4b3efX0I-X0",
+  "tags": [
+   "adhd forgetting what i was saying",
+   "adhd forgetting things",
+   "adhd forgetting words",
+   "adhd saying the wrong thing",
+   "adhd vs non adhd",
+   "what it's like to have adhd",
+   "adhd humor",
+   "adhd brain",
+   "adhd life",
+   "adhd problems",
+   "adhd skit",
+   "adhd animation",
+   "relatable adhd",
+   "adult adhd",
+   "adhd shorts",
+   "funny adhd",
+   "stick figure animation"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "4b3efX0I-X0",
+   "mode": "apply",
+   "time_utc": "2026-11-21T02:39:51",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "ADHD Forgetting What I Was Saying 😂 ADHD vs Non-ADHD",
+   "rollback": "reports/yt-push/rollback/4b3efX0I-X0-20261121-023951.json"
+  }
+ ]
+}

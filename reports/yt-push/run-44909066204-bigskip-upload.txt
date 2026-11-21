@@ -1,0 +1,2 @@
+profile: bigskip channel: Big Skip UCw_zfZtPSIg_LjQURb3o6MQ
+No working sign-in yet. Run the yt-push workflow once with mode signin.

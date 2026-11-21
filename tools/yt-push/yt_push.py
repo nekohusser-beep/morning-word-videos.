@@ -773,6 +773,44 @@ def _publish_time(job):
     return t.strftime("%Y-%m-%dT%H:%M:00Z")
 
 
+SLOT_HOURS_UTC = (17, 23)  # 12 PM and 6 PM ET (EST); the channel's two daily posting slots
+
+
+def _next_slot(after):
+    d = after.replace(minute=0, second=0, microsecond=0)
+    for _ in range(24 * 60):
+        for h in SLOT_HOURS_UTC:
+            c = d.replace(hour=h)
+            if c >= after:
+                return c
+        d = (d + dt.timedelta(days=1)).replace(hour=0)
+    return after
+
+
+def reslot(jobs):
+    """Keeps the queue in order with no bunching: a job whose time has passed (sign-in came late, a day
+    was missed) moves to the next free 12 PM / 6 PM slot after the job before it, and every later job
+    moves along behind it. Times still in the future and in order are left alone."""
+    now = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
+    last = None
+    for f in glob.glob(os.path.join(UPLOADS_DONE, "*.json")):  # never land on top of what's already scheduled
+        w = json.load(open(f, encoding="utf-8")).get("publish_at_utc")
+        if w and (last is None or _utc(w) > last):
+            last = _utc(w)
+    for path, _, job in [(j[1], 0, j[2]) for j in jobs]:
+        own = _utc(job["publish_at_utc"]) if job.get("publish_at_utc") else None
+        floor = now + dt.timedelta(minutes=30)
+        if last:
+            floor = max(floor, last + dt.timedelta(minutes=1))
+        t = own if own and own >= floor else _next_slot(floor)
+        if own != t:
+            print("moved", job.get("title", "")[:50], own, "->", t)
+        if own != t:
+            job["publish_at_utc"] = t.strftime("%Y-%m-%dT%H:%M:00Z")
+            json.dump(job, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        last = t
+
+
 def upload_one(yt, job):
     snippet = {"title": job["title"][:MAX_TITLE], "description": job.get("description", "")[:MAX_DESC],
                "tags": fit_tags(job.get("tags", [])), "categoryId": str(job.get("category_id", "23")),
@@ -824,6 +862,7 @@ def mode_upload():
         j = json.load(open(f, encoding="utf-8"))
         jobs.append((j.get("publish_at_utc") or "9999", f, j))
     jobs.sort()
+    reslot(jobs)
     have = channel_videos(yt)
     os.makedirs(UPLOADS_DONE, exist_ok=True)
     done_n, failures, uploaded = [], 0, 0

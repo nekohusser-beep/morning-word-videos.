@@ -888,7 +888,11 @@ def main():
         tok = get_token(allow_device=True)
         if not tok:
             return 2
-        return mode_check()
+        rc = mode_check()
+        if rc == 0 and glob.glob(os.path.join(UPLOADS, "*.json")):
+            print("\nsigned in: uploading the queue now")
+            return mode_upload()
+        return rc
 
     if mode == "verify":
         cutoff = time.time() - 7 * 86400

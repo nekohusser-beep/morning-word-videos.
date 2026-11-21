@@ -1,0 +1,45 @@
+=== KEYWORDS: you got me messed up clean ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+you got me messed up clean             | 51 medium    |   11.3K |  136.6K |   0% |  50%
+you got me messed up                   | 47 medium    |  139.3K |   19.4K |  40% |  40%
+how u been clean                       | 36 low       |    8.3K |     120 |  80% |  60%
+how would you clean version            | 45 medium    |  491.9K |   35.4K |   0% |   0%
+what you on clean                      | 50 medium    |  166.4K |   59.7K |  40% |  20%
+MATCHING (0): 
+QUESTIONS (6): how u been clean | how would you clean version | what you on clean | who you wit clean version | who you wit clean | who you with clean version
+RELATED (5): you got me messed up | u got me messed up | you got me messed up song | get off me clean | you got me clean
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: mike j you got me messed up ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+mike j you got me messed up            | 38 low       |   19.3K |   39.6K |  10% |  20%
+you got me messed up                   | 48 medium    |   25.9K |   19.4K |  50% |  50%
+mike teezy go crazy                    | 19 very low  |   38.6K |     689 |  20% |  30%
+mike dash e you got it                 | 30 low       |     23K |     157 |  10% |  20%
+who you gonna call missy elliott       | 31 low       |    3.8K |     33K |  60% |  70%
+who mike jones meme                    | 44 medium    |    9.6M |   62.9K |   0% |  20%
+MATCHING (0): 
+QUESTIONS (2): who you gonna call missy elliott | who mike jones meme
+RELATED (27): you got me messed up | mike teezy go crazy | mike dash e you got it | you looking for me mystikal | you don't work you don't eat mike jones | i got this drank in my cup and i can't stop jiggin | you got me rap song | j squeeze i got money | mike jones boy i got so many | baby you got me you got me you got me woah | mohead ain't dead ft. level | dino btw freestyle part 2 | mike jones u ballin | mike jones missy elliott | lil mista get up off me | j howell you got me | you got me going crazy you turn me on | you got me crazy turn me on | mmh jrock you know | ro james you got me messed up | racked up ready get ya mind right | mike never tried to rap like pac | you got me going crazy turn it up | you got me messed up song | u got me messed up | mmm freestyle part 2 | young ready get ya mind right
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: clean version work song ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+clean version work song                | 49 medium    |    1.3M |   72.2K |   0% |   0%
+clean songs for work                   | 47 medium    |  346.1K |   30.4K |  20% |   0%
+clean rap work playlist                | 43 medium    |  262.5K |    6.8K |  10% |   0%
+clean versions of song                 | 46 medium    |    2.5M |   48.4K |   0% |   0%
+work appropriate music clean           | 45 medium    |  346.1K |   27.1K |   0% |   0%
+why clean version                      | 43 medium    |    1.2M |   36.6K |  20% |  20%
+can i clean version                    | 39 low       |  154.8K |   32.3K |  40% |  20%
+MATCHING (0): 
+QUESTIONS (2): why clean version | can i clean version
+RELATED (31): clean songs for work | clean rap work playlist | clean versions of song | work appropriate music clean | worst clean versions of songs | songs for work clean | work song clean | work work song clean | clean version we ready | we ready clean song | song that is clean | clean music for work | clean rap work music | clean songs no cussing | clean songs no swearing | clean hype songs for work | clean songs without bad words | clean work song | clean music track | clean music with words | clean songs no cussing playlist | clean no cursing songs | clean work song playlist | clean up music clean | clean songs to play at work | clean rap for work | clean rap music clean | work appropriate music playlist clean | clean rap songs no cussing | clean rap songs no swearing | clean versions rap songs
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: working american anthem ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+working american anthem                | 45 medium    |  786.5K |  108.9K |   0% |   0%
+what is the american anthem            | 47 medium    |     14M |   61.4K |   0% |   0%
+what is american national anthem       | 48 medium    |     14M |   64.3K |   0% |   0%
+MATCHING (0): 
+QUESTIONS (2): what is the american anthem | what is american national anthem
+RELATED (12): worst us national anthem | us national anthem worst | us national anthem nfl | worst us national anthem performances | national anthem america with eagle | worst nfl national anthem | work song live in america | working class anthems | national anthem for america | national anthem worx usa | us national anthem but | woodstock american anthem
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

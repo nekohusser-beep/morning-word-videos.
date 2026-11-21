@@ -25,5 +25,10 @@
  "publish_at_utc": "2026-11-21T23:30:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/trend-gta6 (title_score 90; Trends YouTube US 7d: 'gta 6 easter eggs' top sibling, Breakout risers)"
+ "iqvid_source": "tools/trend-gta6 (title_score 90; Trends YouTube US 7d: 'gta 6 easter eggs' top sibling, Breakout risers)",
+ "result": {
+  "time_utc": "2026-11-21T22:23:26",
+  "video_id": "cBmPYmTJeAE",
+  "result": "uploaded; goes public 2026-11-21T23:30:00Z"
+ }
 }

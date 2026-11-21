@@ -22,5 +22,10 @@
  "publish_at_utc": "2026-11-21T23:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/big-06-hungry.json"
+ "iqvid_source": "tools/skip-engine/eps/big-06-hungry.json",
+ "result": {
+  "time_utc": "2026-11-21T14:01:15",
+  "video_id": "ynye5i_8Pu4",
+  "result": "uploaded; goes public 2026-11-21T23:00:00Z"
+ }
 }

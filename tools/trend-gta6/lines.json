@@ -1,0 +1,47 @@
+[
+ {
+  "id": "hook",
+  "say": "GTA six has a human sacrifice in it. That's no rumor, because the gaming sites already published the how-to.",
+  "speed": 1.08
+ },
+ {
+  "id": "ritual",
+  "say": "There's a warehouse in that game with a pentagram on the floor and candles all around it, and you knock a man out, carry him in, and lay him on it. Then a demon shows up.",
+  "speed": 1.07
+ },
+ {
+  "id": "egg",
+  "say": "They call that an Easter egg.",
+  "speed": 1.0
+ },
+ {
+  "id": "money",
+  "say": "It made three point seven nine billion dollars in its first day, the biggest launch any game or movie has ever had. It's in a lot of living rooms tonight.",
+  "speed": 1.08
+ },
+ {
+  "id": "psalm",
+  "say": "David said, I will set no wicked thing before mine eyes. Psalm one oh one, verse three.",
+  "speed": 0.98
+ },
+ {
+  "id": "eph",
+  "say": "Paul wrote, And have no fellowship with the unfruitful works of darkness, but rather reprove them. Ephesians five, eleven.",
+  "speed": 0.98
+ },
+ {
+  "id": "house",
+  "say": "Own the console if you want. Just know what's playing in your house.",
+  "speed": 1.03
+ },
+ {
+  "id": "prayer",
+  "say": "Father, guard our eyes and guard our homes, in Jesus' name. Amen.",
+  "speed": 0.97
+ },
+ {
+  "id": "ask",
+  "say": "Type amen, and send this to a friend who needs it.",
+  "speed": 1.02
+ }
+]

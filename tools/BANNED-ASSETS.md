@@ -1,0 +1,2 @@
+# Banned pictures and clips (Neko). Check this list before pulling b-roll or stills from the repo.
+- Bible with a steel square laid on it: was tools/2tim2-15/broll/br_bible.mp4 (md5 5de46141bf0d5b059346392bbf4c15d1). Rejected Nov 5 2026, again Nov 21 2026 ("don't put it in anything that we have"). Removed from the repo Nov 21 2026. Never rebuild or regenerate it: no square, compass or tool laid on a Bible in any shot.

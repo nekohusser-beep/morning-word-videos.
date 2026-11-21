@@ -1,0 +1,16 @@
+profile: bigskip channel: Big Skip UCw_zfZtPSIg_LjQURb3o6MQ
+SIGN-IN NEEDED: open https://www.google.com/device and type BKN-XQF-LQDW (good for 30 minutes)
+signed in and saved: later runs need no tap
+YOUTUBE_API_KEY: False
+YT_CLIENT_ID: True  YT_CLIENT_SECRET: True
+YT_REFRESH_TOKEN secret: False  saved sign-in file: True
+signed in as channel: ['Big Skip']
+
+signed in: uploading the queue now
+01-big-05-closet.json -> 0mIDiQBRjhw uploaded; goes public 2026-11-21T17:00:00Z 
+02-big-06-hungry.json -> ynye5i_8Pu4 uploaded; goes public 2026-11-21T23:00:00Z 
+03-10-bill.json -> CM-eOD0D5XI uploaded; goes public 2026-11-22T17:00:00Z 
+04-big-03-lunch.json -> rnxpMNrvIog uploaded; goes public 2026-11-22T23:00:00Z 
+05-11-hobby.json -> 7rzwGiVQDpU uploaded; goes public 2026-11-23T17:00:00Z 
+
+SUMMARY upload profile=bigskip done=5 failed=0 still queued=11

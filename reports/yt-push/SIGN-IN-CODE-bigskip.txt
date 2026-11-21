@@ -1,0 +1,2 @@
+OPEN https://www.google.com/device AND TYPE: MCP-TSV-LWDZ
+Pick Big Skip, tap Allow. Good for 30 minutes from 13:29 UTC.

@@ -29,5 +29,10 @@
  "publish_at_utc": "2026-11-25T23:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/03-laundry.json"
+ "iqvid_source": "tools/skip-engine/eps/03-laundry.json",
+ "result": {
+  "time_utc": "2026-11-22T20:45:12",
+  "video_id": "Knrc1sgzZcI",
+  "result": "uploaded; goes public 2026-11-25T23:00:00Z"
+ }
 }

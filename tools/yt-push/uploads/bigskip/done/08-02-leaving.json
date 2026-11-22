@@ -28,5 +28,10 @@
  "publish_at_utc": "2026-11-24T23:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/02-leaving.json"
+ "iqvid_source": "tools/skip-engine/eps/02-leaving.json",
+ "result": {
+  "time_utc": "2026-11-22T20:45:05",
+  "video_id": "JYv_YUhxN_s",
+  "result": "uploaded; goes public 2026-11-24T23:00:00Z"
+ }
 }

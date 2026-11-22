@@ -30,5 +30,10 @@
  "publish_at_utc": "2026-11-26T23:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/05-bedtime.json"
+ "iqvid_source": "tools/skip-engine/eps/05-bedtime.json",
+ "result": {
+  "time_utc": "2026-11-22T20:45:18",
+  "video_id": "IZnZpNT1oW8",
+  "result": "uploaded; goes public 2026-11-26T23:00:00Z"
+ }
 }

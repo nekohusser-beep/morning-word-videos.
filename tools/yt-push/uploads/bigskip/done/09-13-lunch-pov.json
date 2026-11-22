@@ -25,5 +25,10 @@
  "publish_at_utc": "2026-11-25T17:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/13-lunch-pov.json"
+ "iqvid_source": "tools/skip-engine/eps/13-lunch-pov.json",
+ "result": {
+  "time_utc": "2026-11-22T20:45:08",
+  "video_id": "P3aEQ0TpAY8",
+  "result": "uploaded; goes public 2026-11-25T17:00:00Z"
+ }
 }

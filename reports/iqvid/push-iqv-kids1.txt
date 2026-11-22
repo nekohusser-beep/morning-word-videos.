@@ -1,0 +1,32 @@
+=== KEYWORDS: morning prayer for kids ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+morning prayer for kids                | 48 medium    |    289K |    9.6K |  50% |  20%
+morning prayer for kids before school  | 38 low       |    199K |    2.1K |  10% |  10%
+morning prayer for children            | 42 medium    |  199.9K |    2.6K |  50% |   0%
+MATCHING (3): morning prayer for kids before school | good morning prayer for kids | short morning prayer for kids
+QUESTIONS (0): 
+RELATED (14): morning prayer for children | morning prayer for daycare | morning prayer for preschool | daily prayer for kids | morning prayer for toddlers | morning prayer for baby | morning prayer for children's day | morning prayer for preschoolers | morning prayer for my children's protection | morning prayer for my children | morning prayer for my son | daily prayer for my son | short morning prayer for my son | morning prayer for your son
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: kids prayer ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+kids prayer                            | 48 medium    |  852.8K |    9.1K |  60% |   0%
+kids prayer song                       | 47 medium    |    1.6M |   28.4K |  20% |   0%
+kids prayer before sleep               | 39 low       |   35.2K |    3.7K |  10% |  20%
+kids prayer for food                   | 36 low       |   18.8K |    4.8K |  40% |  50%
+kids prayer before bed                 | 38 low       |  144.4K |    4.8K |  10% |  10%
+kids prayer before eating              | 35 low       |   12.8K |     541 |  20% |  50%
+kids prayer for bedtime                | 43 medium    |   33.7K |    7.2K |  70% |  30%
+kids prayer mat                        | 36 low       |      3K |      68 | 100% |  70%
+kids prayer book                       | 31 low       |    3.1K |    1.3K |  20% |  70%
+MATCHING (18): kids prayer song | kids prayer before sleep | kids prayer for food | kids prayer before bed | kids prayer before eating | kids prayer for bedtime | kids prayer mat | kids prayer book | kids prayer dress | prayer for kids at night | prayer for kids before sleep | prayer for kids before school | prayer for kids protection | kids prayer in school | kids prayer lyrics | the lord's prayer for kids | the lord's prayer song for kids | the lord's prayer video for kids
+QUESTIONS (0): 
+RELATED (34): children's prayer at school | children's prayer at night | children's prayer acapella | children's prayer action song | prayer children's activities | kid praying drawing | children's day prayer song in english | child dedication prayer | children's daily prayer | children's day prayer in school | children's day prayer | children's day prayer dance | child's evening prayer | children's evening prayer | kids prayers | pray for me cash kidd | children's jesus prayer telugu | child's prayer lds | child's prayer lyrics | child's prayer lds song | child's prayer little juan's playlist | child's prayer lds piano | kid praying meme | child's prayer minus one | children's prayer malayalam | child's prayer mormon tabernacle choir | children's prayer morning | child's prayer piano | child's prayer piano tutorial | child's prayer poem | child's prayer rhymes | child's prayer ukulele | children's prayer video | child's prayer zain bhikha
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: prayer for kids before school ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+prayer for kids before school          | 38 low       |  183.4K |    2.1K |   0% |   0%
+prayer for my son at school            | 39 low       |   80.7K |    4.1K |  10% |  20%
+MATCHING (1): morning prayer for kids before school
+QUESTIONS (0): 
+RELATED (3): prayer for my son at school | prayer for children in school | prayer for kids in school
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

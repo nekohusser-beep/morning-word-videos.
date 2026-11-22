@@ -1,0 +1,20 @@
+name: kids-voice-edge
+# Push to a branch named kve-* -> render the Microsoft neural voice audition and commit out/ back to that branch.
+on:
+  push:
+    branches: ['kve-*']
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null && pip install -q edge-tts
+      - run: python tools/kids-voice-edge/audition.py
+      - run: |
+          rm -f out/tag*.mp3 out/list.txt
+          mkdir -p tools/kids-voice-edge/out && mv out/*.mp3 tools/kids-voice-edge/out/
+          git config user.name github-actions; git config user.email actions@github.com
+          git add tools/kids-voice-edge/out && git commit -qm "kids voice audition [skip ci]" && git push origin HEAD:${GITHUB_REF_NAME}

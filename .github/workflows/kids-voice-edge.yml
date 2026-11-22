@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null && pip install -q edge-tts
-      - run: python tools/kids-voice-edge/audition.py
+      - run: python tools/kids-voice-edge/audition.py && python tools/kids-voice-edge/joy_lines.py
       - run: |
           rm -f out/tag*.mp3 out/list.txt
           mkdir -p tools/kids-voice-edge/out && mv out/*.mp3 tools/kids-voice-edge/out/

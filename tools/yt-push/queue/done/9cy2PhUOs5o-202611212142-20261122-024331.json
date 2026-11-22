@@ -1,0 +1,20 @@
+{
+ "job": {
+  "video_id": "9cy2PhUOs5o",
+  "category_id": "22"
+ },
+ "results": [
+  {
+   "video_id": "9cy2PhUOs5o",
+   "mode": "apply",
+   "time_utc": "2026-11-22T02:42:56",
+   "changed": [
+    "categoryId"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Kids Prayer to Be Brave | Repeat After Me | Pray With Joy",
+   "rollback": "reports/yt-push/rollback/9cy2PhUOs5o-20261122-024256.json"
+  }
+ ]
+}

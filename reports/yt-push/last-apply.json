@@ -1,22 +1,76 @@
 {
+ "1V9t8GUobtM-202611212142.json": [
+  {
+   "video_id": "1V9t8GUobtM",
+   "mode": "apply",
+   "time_utc": "2026-11-22T02:42:46",
+   "changed": [
+    "categoryId"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Bedtime Prayer for Kids | 3 Easy Steps | Pray With Papa",
+   "rollback": "reports/yt-push/rollback/1V9t8GUobtM-20261122-024247.json"
+  }
+ ],
+ "9cy2PhUOs5o-202611212142.json": [
+  {
+   "video_id": "9cy2PhUOs5o",
+   "mode": "apply",
+   "time_utc": "2026-11-22T02:42:56",
+   "changed": [
+    "categoryId"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Kids Prayer to Be Brave | Repeat After Me | Pray With Joy",
+   "rollback": "reports/yt-push/rollback/9cy2PhUOs5o-20261122-024256.json"
+  }
+ ],
  "Z8OuFTS-pTg-20261121-115455.json": [
   {
    "video_id": "Z8OuFTS-pTg",
    "mode": "apply",
-   "time_utc": "2026-11-21T16:55:13",
+   "time_utc": "2026-11-22T02:43:05",
    "changed": [
-    "description",
-    "tags",
-    "title",
     "thumbnail"
    ],
-   "skipped": [],
+   "skipped": [
+    "metadata already matches"
+   ],
    "errors": [
     "playlist True Martyr Stories | Christians Who Would Not Deny Jesus (KJV): 404 {'error': {'code': 404, 'message': 'Playlist not found.', 'errors': [{'message': 'Playlist not found.', 'domain': 'youtube.playlistItem', 'reason': 'playlistNotFound'}]}}",
     "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
    ],
-   "live_title": "**Blessed Prayers**.",
-   "rollback": "reports/yt-push/rollback/Z8OuFTS-pTg-20261121-165513.json"
+   "live_title": "Who Was Polycarp? The 86-Year-Old Who Chose the Fire"
+  }
+ ],
+ "_FVlWS_tVRM-202611212142.json": [
+  {
+   "video_id": "_FVlWS_tVRM",
+   "mode": "apply",
+   "time_utc": "2026-11-22T02:43:12",
+   "changed": [
+    "categoryId"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Morning Prayer for Kids | Pray With Mama and Joy",
+   "rollback": "reports/yt-push/rollback/_FVlWS_tVRM-20261122-024312.json"
+  }
+ ],
+ "lT_39f8EYZo-202611212142.json": [
+  {
+   "video_id": "lT_39f8EYZo",
+   "mode": "apply",
+   "time_utc": "2026-11-22T02:43:21",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Night Prayer Before Sleep | Psalm 16:7 KJV",
+   "rollback": "reports/yt-push/rollback/lT_39f8EYZo-20261122-024322.json"
   }
  ]
 }

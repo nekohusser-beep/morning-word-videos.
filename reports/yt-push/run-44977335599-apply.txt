@@ -1,0 +1,21 @@
+profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
+
+1V9t8GUobtM | Bedtime Prayer for Kids | 3 Easy Steps | Pray With Papa
+  categoryId: ('23', '22')
+  APPLIED + verified: categoryId
+
+9cy2PhUOs5o | Kids Prayer to Be Brave | Repeat After Me | Pray With Joy
+  categoryId: ('23', '22')
+  APPLIED + verified: categoryId
+
+Z8OuFTS-pTg | Who Was Polycarp? The 86-Year-Old Who Chose the Fire
+  ERROR: playlist True Martyr Stories | Christians Who Would Not Deny Jesus (KJV): 404 {'error': {'code': 404, 'message': 'Playlist not found.', 'errors': [{'message': 'Playlist not found.', 'domain': 'youtube.playlistItem', 'reason': 'playlistNotFound'}]}}
+  ERROR: captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat
+
+_FVlWS_tVRM | Morning Prayer for Kids | Pray With Mama and Joy
+  categoryId: ('23', '22')
+  APPLIED + verified: categoryId
+
+lT_39f8EYZo | Night Prayer Before Sleep | Psalm 16:7 KJV
+  tags: (0, 17)
+  APPLIED + verified: tags

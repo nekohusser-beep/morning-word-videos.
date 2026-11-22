@@ -1,0 +1,4 @@
+profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
+full read+write scope refused: 400 {'error': 'invalid_scope', 'error_description': 'Invalid device flow scope: https://www.googleapis.com/auth/youtube.force-ssl'} -> retrying with plain youtube scope
+SIGN-IN NEEDED: open https://www.google.com/device and type PPHP-XBPZ (good for 30 minutes)
+sign-in stopped: expired_token

@@ -1,0 +1,8 @@
+profile: bigskip channel: Big Skip UCw_zfZtPSIg_LjQURb3o6MQ
+08-02-leaving.json -> JYv_YUhxN_s uploaded; goes public 2026-11-24T23:00:00Z 
+09-13-lunch-pov.json -> P3aEQ0TpAY8 uploaded; goes public 2026-11-25T17:00:00Z 
+10-03-laundry.json -> Knrc1sgzZcI uploaded; goes public 2026-11-25T23:00:00Z 
+11-04-texting.json -> IZ3W2ftzFa4 uploaded; goes public 2026-11-26T17:00:00Z 
+12-05-bedtime.json -> IZnZpNT1oW8 uploaded; goes public 2026-11-26T23:00:00Z 
+
+SUMMARY upload profile=bigskip done=5 failed=0 still queued=4

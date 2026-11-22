@@ -7,5 +7,9 @@ async def main():
         ep = os.path.basename(f)[:-5]; os.makedirs(f"out/{ep}", exist_ok=True)
         for i, (who, text) in enumerate(json.load(open(f))):
             v, r, p = CAST[who]
-            await edge_tts.Communicate(text, v, rate=r, pitch=p).save(f"out/{ep}/{i:02d}_{who}.mp3")
+            for k in range(4):
+                try:
+                    await edge_tts.Communicate(text, v, rate=r, pitch=p).save(f"out/{ep}/{i:02d}_{who}.mp3"); break
+                except Exception as e:
+                    print("retry", ep, i, who, repr(e)); await asyncio.sleep(3)
 asyncio.run(main())

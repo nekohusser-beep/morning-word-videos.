@@ -86,6 +86,9 @@ MAX_UPLOADS_PER_RUN = int(os.environ.get("YTP_MAX_UPLOADS", "5"))  # insert = 1,
 # Device sign-in only allows "youtube" (not force-ssl). It covers videos.update, playlistItems
 # and captions; posting comments needs force-ssl, so a comment that is refused is skipped, not failed.
 SCOPE = "https://www.googleapis.com/auth/youtube"
+# Full read+write (captions, comments) needs force-ssl too. signin asks for it first and falls back
+# to plain "youtube" only if Google refuses the scope for this client type.
+FULL_SCOPE = SCOPE + " https://www.googleapis.com/auth/youtube.force-ssl"
 MAX_TITLE, MAX_DESC, MAX_TAGS = 100, 5000, 500
 
 SETUP_TEXT = """\
@@ -236,7 +239,13 @@ def get_token(allow_device=False):
 
 def device_signin(cid, sec):
     st, js = http("POST", "https://oauth2.googleapis.com/device/code", form=True,
-                  data={"client_id": cid, "scope": SCOPE})
+                  data={"client_id": cid, "scope": FULL_SCOPE})
+    if st != 200 or "device_code" not in js:
+        print("full read+write scope refused:", st, str(js)[:300], "-> retrying with plain youtube scope")
+        st, js = http("POST", "https://oauth2.googleapis.com/device/code", form=True,
+                      data={"client_id": cid, "scope": SCOPE})
+    else:
+        print("device code issued WITH full read+write scope (youtube + youtube.force-ssl)")
     if st != 200 or "device_code" not in js:
         print("device code request failed:", st, str(js)[:300])
         return None
@@ -927,7 +936,9 @@ def main():
     if mode == "check":
         return mode_check()
     if mode == "signin":
-        tok = get_token(allow_device=True)
+        # signin always asks fresh, so a new tap can widen the scope (Neko Nov 21: read and write)
+        cid, sec = os.environ.get("YT_CLIENT_ID", "").strip(), os.environ.get("YT_CLIENT_SECRET", "").strip()
+        tok = device_signin(cid, sec) if (cid and sec) else get_token(allow_device=True)
         if not tok:
             return 2
         rc = mode_check()

@@ -18,15 +18,21 @@ async def main():
     with open("out/voices.txt", "w") as f:
         for v in await edge_tts.list_voices():
             if v["Locale"].startswith("en-"): f.write(f'{v["ShortName"]}\t{v["Gender"]}\t{",".join(v.get("VoiceTag",{}).get("VoicePersonalities",[]))}\n')
+    have = {v["ShortName"] for v in await edge_tts.list_voices()}
+    ok = []
     for name, voice, rate, pitch in V:
-        for k in range(4):
-            try: await edge_tts.Communicate(BOY, voice, rate=rate, pitch=pitch).save(f"out/boy/{name}.mp3"); break
-            except Exception as e: print("retry", name, e); await asyncio.sleep(3)
+        if voice not in have: print("missing", voice); continue
+        for k in range(3):
+            try:
+                await edge_tts.Communicate(BOY, voice, rate=rate, pitch=pitch).save(f"out/boy/{name}.mp3"); ok.append((name,)); break
+            except Exception as e: print("retry", name, e); await asyncio.sleep(2)
+    V[:] = [v for v in V if (v[0],) in ok]
     for name, text in ELI:
         await edge_tts.Communicate(text, "en-US-AndrewMultilingualNeural", rate="-10%", pitch="-6Hz").save(f"out/boy/{name}.mp3")
     parts = []
-    for i, (name, *_ ) in enumerate(V, 1):
-        await edge_tts.Communicate(f"Boy {i}.", "en-US-JennyNeural").save(f"out/t{i}.mp3"); parts += [f"out/t{i}.mp3", f"out/boy/{name}.mp3"]
+    for i, v_ in enumerate(V, 1):
+        name = v_[0]
+        await edge_tts.Communicate(f"Boy {v_[0].split('_')[0]}.", "en-US-JennyNeural").save(f"out/t{i}.mp3"); parts += [f"out/t{i}.mp3", f"out/boy/{name}.mp3"]
     for L, (name, _) in zip("ABCD", ELI):
         await edge_tts.Communicate(f"Papa, name {L}.", "en-US-JennyNeural").save(f"out/t{L}.mp3"); parts += [f"out/t{L}.mp3", f"out/boy/{name}.mp3"]
     open("out/list.txt", "w").write("".join(f"file '{os.path.abspath(p)}'\n" for p in parts))

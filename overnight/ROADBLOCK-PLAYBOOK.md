@@ -14,7 +14,7 @@ Sources: VERIFIED = opened this session; FIELD = Neko or a past thread proved it
 ## Ladders
 
 ### 1. Derrick video (Flow): voice changes per clip, hiss, skipped clips, garbled numbers, dropped first word, "prominent people" block, credit burn
-1. About 15 words per clip, exact spoken line quoted, numbers as words ("the 91st Psalm"), max ~7 clips per batch. Count real clips in the media grid; Flow's chat count lies. Close other Chrome tabs. Project under neko.husser@gmail.com. Lite model, 10 credits per 8 s, ask before spending. (FIELD)
+1. About 15 words per clip, exact spoken line quoted, numbers as words ("the 91st Psalm"), max ~7 clips per batch. Count real clips in the media grid; Flow's chat count lies. Close other Chrome tabs. Project under his personal Google account. Lite model, 10 credits per 8 s, ask before spending. (FIELD)
 2. Voice: Seed-VC conversion to the approved Psalm 118:24 Derrick audio, then Whisper-verify every line and score with speaker-embedding similarity. (FIELD)
 3. Hiss or echo: DeepFilterNet3 on a GitHub Actions runner. (FIELD)
 4. Silent visual plus pre-converted audio laid over.

@@ -6,7 +6,7 @@ Writes out/img/<n>.jpg (about 3000 px wide) and out/manifest.json (title, artist
 Usage: fetch.py [per_query=30] [min_width=2400]"""
 import json, re, sys, time, urllib.parse, urllib.request, os, html
 
-UA = "KingdomImpactVideos/1.0 (neko.husser@gmail.com; sacred-art Shorts)"
+UA = "KingdomImpactVideos/1.0 (https://github.com/nekohusser-beep; sacred-art Shorts)"
 API = "https://commons.wikimedia.org/w/api.php"
 PER = int(sys.argv[1]) if len(sys.argv) > 1 else 30
 MINW = int(sys.argv[2]) if len(sys.argv) > 2 else 2400

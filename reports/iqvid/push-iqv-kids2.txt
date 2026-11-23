@@ -1,0 +1,35 @@
+=== KEYWORDS: bedtime prayer for kids ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+bedtime prayer for kids                | 44 medium    |  578.2K |   15.2K |  50% |  20%
+night prayer for kids                  | 43 medium    |  595.8K |   13.8K |  20% |   0%
+sleeping prayer for kids               | 41 medium    |  538.5K |    9.2K |   0% |  20%
+bedtime prayer for children            | 48 medium    |    1.1M |   20.2K |  40% |  10%
+nighttime prayer for kids              | 40 medium    |  595.8K |     11K |  30% |  10%
+prayer before bedtime for kids         | 36 low       |  135.3K |    4.4K |   0% |  30%
+bedtime prayer for toddlers            | 45 medium    |    1.1M |   25.3K |   0% |  10%
+MATCHING (2): prayer before bedtime for kids | prayer for bedtime for kids
+QUESTIONS (0): 
+RELATED (11): night prayer for kids | sleeping prayer for kids | bedtime prayer for children | nighttime prayer for kids | bedtime prayer for toddlers | prayer for baby to sleep at night | nighttime prayers for kids | short bedtime prayer for child | night prayer for children | bedtime prayer for baby | night prayer for my son
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: kids prayer before bed ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+kids prayer before bed                 | 41 medium    |  577.5K |      9K |  10% |  20%
+children prayer before bed             | 43 medium    |      1M |   11.5K |   0% |   0%
+child's prayer before bed              | 38 low       |  333.9K |   10.5K |   0% |  10%
+kids prayer for bedtime                | 41 medium    |    162K |      6K |  60% |  30%
+kids prayer before sleep               | 42 medium    |  578.2K |    9.3K |  10% |  10%
+children's prayer before sleep         | 44 medium    |      1M |   11.6K |   0% |  10%
+MATCHING (1): prayer before bed for kids
+QUESTIONS (0): 
+RELATED (6): children prayer before bed | child's prayer before bed | kids prayer for bedtime | kids prayer before sleep | children's prayer before sleep | children's prayer before bedtime
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: night prayer for kids ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+night prayer for kids                  | 46 medium    |      1M |   17.4K |  20% |   0%
+nighttime prayer for kids              | 41 medium    |      1M |   16.6K |  10% |  10%
+evening prayer for kids                | 37 low       |     37K |    4.5K |  10% |  20%
+good night prayer for kids             | 43 medium    |  578.2K |   15.2K |  20% |  10%
+MATCHING (2): good night prayer for kids | prayer for kids at night
+QUESTIONS (0): 
+RELATED (6): nighttime prayer for kids | evening prayer for kids | night prayer for children | night prayer for toddlers | prayer for night protection | night prayer for my son
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

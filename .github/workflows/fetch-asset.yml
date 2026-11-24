@@ -1,0 +1,22 @@
+name: fetch-asset
+# Pulls a file from a URL the cloud chat can't reach (e.g. cdn.openart.ai) into the repo.
+on:
+  push:
+    paths: ["tools/fetch-asset/queue.txt"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          while read -r URL DEST; do
+            [ -z "$URL" ] && continue
+            mkdir -p "$(dirname "$DEST")"
+            curl -sSfL -o "$DEST" "$URL" && ls -la "$DEST"
+            git add "$DEST"
+          done < tools/fetch-asset/queue.txt
+          git config user.name "fetch-bot"; git config user.email "actions@users.noreply.github.com"
+          git commit -qm "fetch-asset [skip ci]" && git pull -q --rebase && git push -q

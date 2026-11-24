@@ -1,37 +1,9 @@
 {
- "43ozrzEI_lA-202611222150.json": [
-  {
-   "video_id": "43ozrzEI_lA",
-   "mode": "apply",
-   "time_utc": "2026-11-23T02:47:08",
-   "changed": [
-    "tags"
-   ],
-   "skipped": [],
-   "errors": [],
-   "live_title": "Good Morning Bible Verse | Isaiah 40:31 KJV",
-   "rollback": "reports/yt-push/rollback/43ozrzEI_lA-20261123-024708.json"
-  }
- ],
- "OpnYbkqFDoU-202611222150.json": [
-  {
-   "video_id": "OpnYbkqFDoU",
-   "mode": "apply",
-   "time_utc": "2026-11-23T02:48:17",
-   "changed": [
-    "tags"
-   ],
-   "skipped": [],
-   "errors": [],
-   "live_title": "Night Prayer Today | Psalm 23:1-2 KJV",
-   "rollback": "reports/yt-push/rollback/OpnYbkqFDoU-20261123-024817.json"
-  }
- ],
  "Z8OuFTS-pTg-20261121-115455.json": [
   {
    "video_id": "Z8OuFTS-pTg",
    "mode": "apply",
-   "time_utc": "2026-11-23T02:48:27",
+   "time_utc": "2026-11-24T02:49:47",
    "changed": [
     "thumbnail"
    ],
@@ -43,6 +15,34 @@
     "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
    ],
    "live_title": "Who Was Polycarp? The 86-Year-Old Who Chose the Fire"
+  }
+ ],
+ "gaNTnDu7qO8-202611232205.json": [
+  {
+   "video_id": "gaNTnDu7qO8",
+   "mode": "apply",
+   "time_utc": "2026-11-24T02:49:51",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Night Prayer Before Sleep | Psalm 31:24 KJV",
+   "rollback": "reports/yt-push/rollback/gaNTnDu7qO8-20261124-024951.json"
+  }
+ ],
+ "piwdnf26ltQ-202611232205.json": [
+  {
+   "video_id": "piwdnf26ltQ",
+   "mode": "apply",
+   "time_utc": "2026-11-24T02:50:00",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Morning Prayer for Today | Philippians 4:13 KJV",
+   "rollback": "reports/yt-push/rollback/piwdnf26ltQ-20261124-025000.json"
   }
  ]
 }

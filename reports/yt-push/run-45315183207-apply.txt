@@ -1,0 +1,13 @@
+profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
+
+Z8OuFTS-pTg | Who Was Polycarp? The 86-Year-Old Who Chose the Fire
+  ERROR: playlist True Martyr Stories | Christians Who Would Not Deny Jesus (KJV): 404 {'error': {'code': 404, 'message': 'Playlist not found.', 'errors': [{'message': 'Playlist not found.', 'domain': 'youtube.playlistItem', 'reason': 'playlistNotFound'}]}}
+  ERROR: captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat
+
+gaNTnDu7qO8 | Night Prayer Before Sleep | Psalm 31:24 KJV
+  tags: (0, 17)
+  APPLIED + verified: tags
+
+piwdnf26ltQ | Morning Prayer for Today | Philippians 4:13 KJV
+  tags: (0, 12)
+  APPLIED + verified: tags

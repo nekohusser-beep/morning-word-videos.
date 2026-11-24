@@ -1,0 +1,33 @@
+{
+ "job": {
+  "video_id": "piwdnf26ltQ",
+  "tags": [
+   "philippians 4:13",
+   "philippians 4 13",
+   "i can do all things through christ",
+   "i can do all things through christ which strengtheneth me",
+   "morning prayer for today",
+   "short morning prayer for today",
+   "good morning prayer for today",
+   "powerful morning prayer for today",
+   "bible verse of the day",
+   "kjv bible verses",
+   "kjv",
+   "blessed prayers"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "piwdnf26ltQ",
+   "mode": "apply",
+   "time_utc": "2026-11-24T02:50:00",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Morning Prayer for Today | Philippians 4:13 KJV",
+   "rollback": "reports/yt-push/rollback/piwdnf26ltQ-20261124-025000.json"
+  }
+ ]
+}

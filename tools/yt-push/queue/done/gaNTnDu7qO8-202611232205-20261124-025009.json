@@ -1,0 +1,38 @@
+{
+ "job": {
+  "video_id": "gaNTnDu7qO8",
+  "tags": [
+   "psalm 31:24",
+   "psalm 31 24",
+   "night prayer before sleep",
+   "night prayer before sleep jesus",
+   "be of good courage",
+   "he shall strengthen your heart",
+   "sleep scriptures",
+   "bible verses for sleep",
+   "bedtime scripture for deep sleep",
+   "fall asleep with god's word",
+   "bible verse for sleep",
+   "bedtime prayer",
+   "night prayer",
+   "peaceful sleep",
+   "kjv bible verses",
+   "kjv",
+   "blessed prayers"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "gaNTnDu7qO8",
+   "mode": "apply",
+   "time_utc": "2026-11-24T02:49:51",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Night Prayer Before Sleep | Psalm 31:24 KJV",
+   "rollback": "reports/yt-push/rollback/gaNTnDu7qO8-20261124-024951.json"
+  }
+ ]
+}

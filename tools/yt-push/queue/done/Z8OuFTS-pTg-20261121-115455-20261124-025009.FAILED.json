@@ -1,0 +1,59 @@
+{
+ "job": {
+  "video_id": "Z8OuFTS-pTg",
+  "title": "Who Was Polycarp? The 86-Year-Old Who Chose the Fire",
+  "description": "He was 86 years old. The Roman governor gave him one way out of the stadium alive: curse Christ. This is what Polycarp said back, and what it cost him.\n\nPolycarp of Smyrna was taught by the apostle John. Around AD 155 the police came for him at a farmhouse outside the city. He fed the men who arrested him, asked for an hour to pray, and rode to the stadium on a donkey. In front of the crowd the proconsul told him to swear by Caesar and curse Christ. His answer has been repeated for almost 1,900 years:\n\n\"Eighty and six years have I served Him, and He hath done me no wrong. How can I blaspheme my King and my Saviour?\"\n\nThe story comes from the letter the church at Smyrna wrote after his death, the oldest account of a Christian martyr outside the Bible. Based on true events. Some details come from church accounts.\n\nCHAPTERS\n0:00 An old man in the stadium\n0:43 Taught by the apostle John\n1:29 Persecution reaches Smyrna\n2:24 They come for him\n3:41 The road to the stadium\n4:30 Swear by Caesar\n5:20 Eighty and six years\n6:21 The fire\n7:29 Why this story still stands\n8:20 What Jesus said\n9:10 A prayer to turn to Him\n9:43 Who's watching how you live?\n\nSCRIPTURE (KJV)\nMatthew 16:25-26: \"For whosoever will save his life shall lose it: and whosoever will lose his life for my sake shall find it. For what is a man profited, if he shall gain the whole world, and lose his own soul? or what shall a man give in exchange for his soul?\"\nActs 3:19: \"Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord;\"\n1 John 4:7: \"Beloved, let us love one another.\"\n\nIf this reached you, type amen below.\n\nBlessed Prayers tells true stories of people who followed Jesus when it cost them everything. The pictures were made with AI to show real events.\n\n#Polycarp #ChristianMartyrs #ChurchHistory #BibleStories #KJV",
+  "tags": [
+   "polycarp",
+   "who was polycarp",
+   "polycarp of smyrna",
+   "saint polycarp",
+   "polycarp martyrdom",
+   "martyrdom of polycarp",
+   "polycarp story",
+   "polycarp movie",
+   "christian martyrs",
+   "christian martyr story",
+   "early church martyrs",
+   "early church",
+   "church history",
+   "church fathers",
+   "apostle john",
+   "christian persecution",
+   "martyr stories",
+   "true christian story",
+   "bible stories",
+   "eighty and six years",
+   "would you die for jesus",
+   "blessed prayers"
+  ],
+  "playlist_ids": [
+   "True Martyr Stories | Christians Who Would Not Deny Jesus (KJV)"
+  ],
+  "captions_file": "tools/yt-push/captions/Z8OuFTS-pTg-20261121-115455.srt",
+  "captions_lang": "en",
+  "thumbnail_file": "tools/yt-push/thumbs/Z8OuFTS-pTg-20261121-115455.jpg",
+  "want": {
+   "category_id": "22",
+   "default_language": "en"
+  }
+ },
+ "results": [
+  {
+   "video_id": "Z8OuFTS-pTg",
+   "mode": "apply",
+   "time_utc": "2026-11-24T02:49:47",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [
+    "playlist True Martyr Stories | Christians Who Would Not Deny Jesus (KJV): 404 {'error': {'code': 404, 'message': 'Playlist not found.', 'errors': [{'message': 'Playlist not found.', 'domain': 'youtube.playlistItem', 'reason': 'playlistNotFound'}]}}",
+    "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
+   ],
+   "live_title": "Who Was Polycarp? The 86-Year-Old Who Chose the Fire"
+  }
+ ]
+}

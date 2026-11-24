@@ -1,0 +1,42 @@
+name: transcribe-qa
+# QA helper: Whisper transcript (segment + word times) of a video/audio file in this repo.
+on:
+  workflow_dispatch:
+    inputs:
+      path: {description: "repo path of the media file", required: true}
+      model: {description: "whisper model", required: false, default: "small"}
+  push:
+    paths: ["tools/transcribe/queue.txt"]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q faster-whisper
+      - name: transcribe
+        env: {P: "${{ inputs.path }}", M: "${{ inputs.model }}"}
+        run: |
+          [ -z "$P" ] && P=$(head -1 tools/transcribe/queue.txt)
+          [ -z "$M" ] && M=small
+          mkdir -p reports/transcribe
+          OUT=reports/transcribe/$(basename "$P").txt
+          python3 - "$P" "$M" "$OUT" <<'PY'
+          import sys
+          from faster_whisper import WhisperModel
+          p,m,out=sys.argv[1:4]
+          mod=WhisperModel(m,compute_type="int8")
+          segs,info=mod.transcribe(p,word_timestamps=True,language=None)
+          with open(out,"w") as f:
+              f.write(f"# {p} lang={info.language}\n")
+              for s in segs:
+                  f.write(f"{s.start:6.2f}-{s.end:6.2f} {s.text.strip()}\n")
+                  f.write("   words: "+" ".join(f"{w.word.strip()}@{w.start:.2f}" for w in s.words)+"\n")
+          PY
+          cat "$OUT"
+          git config user.name "transcribe-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/transcribe && git commit -qm "transcribe: $P [skip ci]" && git pull -q --rebase && git push -q

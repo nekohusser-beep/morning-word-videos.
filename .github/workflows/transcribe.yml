@@ -1,40 +1,34 @@
 name: transcribe
-# QA helper: Whisper transcript (segment + word times) of a video/audio file in this repo.
 on:
   workflow_dispatch:
     inputs:
-      path: {description: "repo path of the media file", required: true}
-      model: {description: "whisper model", required: false, default: "small"}
-  push:
-    paths: ["tools/transcribe/queue.txt"]
+      path: {description: "repo path of audio file", required: true}
+      tag: {description: "release tag", required: true, default: "inbox"}
+      model: {description: "whisper model (medium.en default; large-v3 for the strict pronunciation check)", required: false, default: "medium.en"}
 permissions:
   contents: write
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg > /dev/null && pip install -q faster-whisper==1.0.3
-      - name: transcribe
-        env: {P: "${{ inputs.path }}", M: "${{ inputs.model }}"}
-        run: |
-          [ -z "$P" ] && P=$(head -1 tools/transcribe/queue.txt)
-          [ -z "$M" ] && M=small
-          mkdir -p reports/transcribe
-          OUT=reports/transcribe/$(basename "$P").txt
-          python3 - "$P" "$M" "$OUT" <<'PY'
-          import sys
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install faster-whisper
+      - run: |
+          python - <<'PY'
+          import json
           from faster_whisper import WhisperModel
-          p,m,out=sys.argv[1:4]
-          mod=WhisperModel(m,compute_type="int8")
-          segs,info=mod.transcribe(p,word_timestamps=True,language=None)
-          with open(out,"w") as f:
-              f.write(f"# {p} lang={info.language}\n")
-              for s in segs:
-                  f.write(f"{s.start:6.2f}-{s.end:6.2f} {s.text.strip()}\n")
-                  f.write("   words: "+" ".join(f"{w.word.strip()}@{w.start:.2f}" for w in s.words)+"\n")
+          m = WhisperModel("${{ inputs.model }}", device="cpu", compute_type="int8")
+          out = {}
+          for p in "${{ inputs.path }}".split():
+              segs, _ = m.transcribe(p, word_timestamps=True, vad_filter=False)
+              words = [{"text": w.word.strip(), "start": round(w.start, 2), "end": round(w.end, 2)} for s in segs for w in s.words]
+              out[p] = {"words": words, "text": " ".join(w["text"] for w in words)}
+          json.dump(out, open("transcript.json", "w"))
           PY
-          cat "$OUT"
-          git config user.name "transcribe-bot"; git config user.email "actions@users.noreply.github.com"
-          git add reports/transcribe && git commit -qm "transcribe: $P [skip ci]" && git pull -q --rebase && git push -q
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh release view "${{ inputs.tag }}" || gh release create "${{ inputs.tag }}" --draft -t inbox -n inbox
+          cp transcript.json "transcript-${{ github.run_id }}.json"
+          gh release upload "${{ inputs.tag }}" "transcript-${{ github.run_id }}.json" --clobber

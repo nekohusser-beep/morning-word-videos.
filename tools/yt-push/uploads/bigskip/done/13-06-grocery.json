@@ -29,5 +29,10 @@
  "publish_at_utc": "2026-11-27T17:00:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "tools/skip-engine/eps/06-grocery.json"
+ "iqvid_source": "tools/skip-engine/eps/06-grocery.json",
+ "result": {
+  "time_utc": "2026-11-24T01:42:55",
+  "video_id": "EeBG7uwYCCs",
+  "result": "uploaded; goes public 2026-11-27T17:00:00Z"
+ }
 }

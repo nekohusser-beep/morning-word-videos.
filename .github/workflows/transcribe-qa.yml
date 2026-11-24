@@ -39,4 +39,11 @@ jobs:
           PY
           cat "$OUT"
           git config user.name "transcribe-bot"; git config user.email "actions@users.noreply.github.com"
-          git add reports/transcribe && git commit -qm "transcribe: $P [skip ci]" && git pull -q --rebase && git push -q
+          git add reports/transcribe
+          git commit -qm "transcribe: $P [skip ci]" || exit 0
+          for i in 1 2 3; do
+            if git pull -q --rebase origin main && git push -q origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          echo "push failed after 3 tries"; exit 1

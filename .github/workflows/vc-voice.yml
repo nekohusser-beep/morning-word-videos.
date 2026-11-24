@@ -50,4 +50,10 @@ jobs:
           git config user.name "vc-bot"; git config user.email "noreply@github.com"
           git fetch -q origin vc-out && git checkout -q -f -B vc-out origin/vc-out || git checkout -q -B vc-out
           git add -f "$R"; git commit -qm "vc-voice ${{ github.run_id }} ${{ matrix.line }}" || true
-          for i in 1 2 3 4 5; do git push -q origin vc-out && break; git pull -q --rebase origin vc-out; done
+          ok=0
+          for i in 1 2 3 4 5; do
+            if git push -q origin vc-out; then ok=1; break; fi
+            sleep $((RANDOM % 8 + 2))
+            git pull -q --rebase origin vc-out || git rebase --abort 2>/dev/null || true
+          done
+          [ "$ok" = 1 ]

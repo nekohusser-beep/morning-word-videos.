@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "dre",
+  "text": "Nah.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "dre",
+  "text": "Aaah! Not the hedge! NOT THE HEDGE!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "dre",
+  "text": "Since when you speak Spanish?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 11
+ },
+ {
+  "kind": "dre",
+  "text": "NOT AGAIN! NOT AGAIN!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 16
+ }
+]

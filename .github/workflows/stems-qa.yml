@@ -1,0 +1,30 @@
+name: stems-qa
+# Splits a repo media file into vocals / no_vocals (Demucs htdemucs) and commits both WAVs next to it.
+on:
+  workflow_dispatch:
+    inputs:
+      path: {description: "repo path of the media file", required: true}
+      out: {description: "output folder", required: true}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q demucs soundfile
+      - env: {P: "${{ inputs.path }}", O: "${{ inputs.out }}"}
+        run: |
+          mkdir -p "$O" sep
+          ffmpeg -v error -y -i "$P" -ar 44100 -ac 2 sep/in.wav
+          python -m demucs --two-stems=vocals -n htdemucs -o sep sep/in.wav
+          cp sep/htdemucs/in/vocals.wav "$O/vocals.wav"; cp sep/htdemucs/in/no_vocals.wav "$O/no_vocals.wav"
+          git config user.name "stems-bot"; git config user.email "actions@users.noreply.github.com"
+          git add "$O"; git commit -qm "stems-qa: $P [skip ci]"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done

@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "skip",
+  "text": "See! See, see, see! Hola! Gracias! Taco! Burrito! Quesadilla!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ },
+ {
+  "kind": "skip",
+  "text": "Oono, dos, tres... Taco Bell! Chipotle! Cinco de Mayo!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 6
+ },
+ {
+  "kind": "skip",
+  "text": "Dora! Feliz Navidaaad!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 7
+ },
+ {
+  "kind": "skip",
+  "text": "...Cancoon.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 9
+ },
+ {
+  "kind": "skip",
+  "text": "Since about nine seconds ago.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 12
+ },
+ {
+  "kind": "skip",
+  "text": "Nah.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 14
+ }
+]

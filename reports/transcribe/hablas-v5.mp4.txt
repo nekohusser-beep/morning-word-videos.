@@ -1,0 +1,33 @@
+# adhd/stack/hablas-fix/hablas-v5.mp4 lang=es
+  0.00-  0.96 ¿Hablas español?
+   words: ¿Hablas@0.00 español?@0.50
+  1.80-  2.18 No.
+   words: No.@1.80
+  6.08-  8.36 No la hecha. No la hecha.
+   words: No@6.08 la@6.68 hecha.@6.88 No@7.50 la@7.74 hecha.@7.94
+ 11.42- 12.20 ¡Hey, tú!
+   words: ¡Hey,@11.42 tú!@12.10
+ 12.70- 14.90 ¡Sí, sí, sí! ¡Hola! ¡Gracias!
+   words: ¡Sí,@12.70 sí,@13.16 sí!@13.48 ¡Hola!@13.88 ¡Gracias!@14.42
+ 15.14- 17.04 ¡Taco! ¡Burrito! ¡Puesadilla!
+   words: ¡Taco!@15.14 ¡Burrito!@15.72 ¡Puesadilla!@16.44
+ 17.50- 19.26 ¡1, 2, 3! ¡Taco Bell!
+   words: ¡1,@17.50 2,@17.90 3!@18.22 ¡Taco@18.68 Bell!@19.02
+ 19.52- 21.02 ¡Chipotle! ¡Cinco de Mayo!
+   words: ¡Chipotle!@19.52 ¡Cinco@20.30 de@20.66 Mayo!@20.80
+ 21.34- 22.54 ¡Dora Feliz Navidad!
+   words: ¡Dora@21.34 Feliz@21.64 Navidad!@22.12
+ 23.22- 23.70 ¡Cancún!
+   words: ¡Cancún!@23.22
+ 24.14- 25.22 ¡Muy bien, mijo!
+   words: ¡Muy@24.14 bien,@24.32 mijo!@24.88
+ 25.58- 27.40 Desde cuando hablabas español...
+   words: Desde@25.58 cuando@25.78 hablabas@25.94 español...@26.26
+ 28.40- 29.34 Desde hace 9 segundos.
+   words: Desde@28.31 hace@28.62 9@28.70 segundos.@28.98
+ 30.72- 32.18 Y él habla español.
+   words: Y@30.72 él@31.34 habla@31.54 español.@31.82
+ 32.78- 33.16 ¡No!
+   words: ¡No!@32.78
+ 33.66- 35.26 ¡No de nuevo, no de nuevo!
+   words: ¡No@33.66 de@33.96 nuevo,@34.06 no@34.58 de@34.84 nuevo!@34.94

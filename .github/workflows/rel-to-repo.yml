@@ -1,0 +1,22 @@
+name: rel-to-repo
+# Copies a (draft) release's assets into a repo folder so cloud chats without gh can read them.
+on:
+  workflow_dispatch:
+    inputs:
+      tags: {description: "space-separated release tags", required: true}
+      dest: {description: "repo folder (one subfolder per tag)", required: true}
+      pattern: {description: "asset glob", required: false, default: "*.wav"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env: {GH_TOKEN: "${{ github.token }}", TAGS: "${{ inputs.tags }}", D: "${{ inputs.dest }}", PAT: "${{ inputs.pattern }}"}
+        run: |
+          for t in $TAGS; do mkdir -p "$D/$t"; gh release download "$t" -p "$PAT" -D "$D/$t" --clobber -R "$GITHUB_REPOSITORY" || true; done
+          ls -R "$D"
+          git config user.name "rel-bot"; git config user.email "actions@users.noreply.github.com"
+          git add "$D"; git commit -qm "rel-to-repo: $TAGS [skip ci]" || exit 0
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done

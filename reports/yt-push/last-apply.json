@@ -1,48 +1,16 @@
 {
- "Z8OuFTS-pTg-20261121-115455.json": [
+ "BaXcP8x1Mp8-202611242150.json": [
   {
-   "video_id": "Z8OuFTS-pTg",
+   "video_id": "BaXcP8x1Mp8",
    "mode": "apply",
-   "time_utc": "2026-11-24T02:49:47",
-   "changed": [
-    "thumbnail"
-   ],
-   "skipped": [
-    "metadata already matches"
-   ],
-   "errors": [
-    "playlist True Martyr Stories | Christians Who Would Not Deny Jesus (KJV): 404 {'error': {'code': 404, 'message': 'Playlist not found.', 'errors': [{'message': 'Playlist not found.', 'domain': 'youtube.playlistItem', 'reason': 'playlistNotFound'}]}}",
-    "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
-   ],
-   "live_title": "Who Was Polycarp? The 86-Year-Old Who Chose the Fire"
-  }
- ],
- "gaNTnDu7qO8-202611232205.json": [
-  {
-   "video_id": "gaNTnDu7qO8",
-   "mode": "apply",
-   "time_utc": "2026-11-24T02:49:51",
+   "time_utc": "2026-11-25T02:46:58",
    "changed": [
     "tags"
    ],
    "skipped": [],
    "errors": [],
-   "live_title": "Night Prayer Before Sleep | Psalm 31:24 KJV",
-   "rollback": "reports/yt-push/rollback/gaNTnDu7qO8-20261124-024951.json"
-  }
- ],
- "piwdnf26ltQ-202611232205.json": [
-  {
-   "video_id": "piwdnf26ltQ",
-   "mode": "apply",
-   "time_utc": "2026-11-24T02:50:00",
-   "changed": [
-    "tags"
-   ],
-   "skipped": [],
-   "errors": [],
-   "live_title": "Morning Prayer for Today | Philippians 4:13 KJV",
-   "rollback": "reports/yt-push/rollback/piwdnf26ltQ-20261124-025000.json"
+   "live_title": "Good Morning Bible Verse | Joshua 1:9 KJV",
+   "rollback": "reports/yt-push/rollback/BaXcP8x1Mp8-20261125-024658.json"
   }
  ]
 }

@@ -1,0 +1,34 @@
+{
+ "job": {
+  "video_id": "BaXcP8x1Mp8",
+  "tags": [
+   "joshua 1:9",
+   "joshua 1 9",
+   "be strong and of a good courage",
+   "be strong and of good courage",
+   "be not afraid neither be thou dismayed",
+   "have not i commanded thee",
+   "good morning bible verse",
+   "good morning bible verses",
+   "morning bible verses and prayers",
+   "bible verse of the day",
+   "kjv bible verses",
+   "kjv",
+   "blessed prayers"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "BaXcP8x1Mp8",
+   "mode": "apply",
+   "time_utc": "2026-11-25T02:46:58",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Good Morning Bible Verse | Joshua 1:9 KJV",
+   "rollback": "reports/yt-push/rollback/BaXcP8x1Mp8-20261125-024658.json"
+  }
+ ]
+}

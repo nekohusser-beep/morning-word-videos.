@@ -1,0 +1,38 @@
+=== KEYWORDS: joshua 1:9 ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+joshua 1:9                             | 39 low       |   26.9K |     605 | 100% |  10%
+MATCHING (0): 
+QUESTIONS (0): 
+RELATED (0): 
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: be strong and of a good courage ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+be strong and of a good courage        | 40 medium    |   35.3K |     935 |  70% |  30%
+be strong and of a good courage lds    | 14 very low  |    5.8K |     276 |  10% |  70%
+be strong and of good courage sermon   | 31 low       |   45.2K |    1.4K |  10% |  30%
+may 18–24 be strong and of a good cour | 27 low       |      58 |       3 |  90% | 100%
+be strong and take courage with lyrics | 33 low       |  124.6K |    1.4K |  10% |  20%
+be strong and take courage             | 43 medium    |   66.1K |     542 | 100% |  20%
+be strong and take courage don moen    | 24 low       |   84.7K |     513 |  60% |  30%
+be strong and take courage satb        | 13 very low  |    6.2K |     114 |  50% |  60%
+be strong and take courage alto        | 19 very low  |      7K |     161 |  30% |  60%
+be strong and take courage accompanime | 28 low       |    6.1K |     104 |  40% |  60%
+MATCHING (6): be strong and of a good courage lds | be strong and of good courage sermon | may 18–24 be strong and of a good courage | may 18–24 be strong and of a good courage joshua 1–8 23–24 | be strong and be of good courage | be strong and of good courage song lyrics
+QUESTIONS (0): 
+RELATED (36): be strong and take courage with lyrics | be strong and take courage | be strong and take courage don moen | be strong and take courage satb | be strong and take courage alto | be strong and take courage accompaniment | be strong and take courage minus one | be strong and take courage alto vocal guide | be strong and take courage bass | be strong and take courage basil chiasson | be strong and take courage by don moen | be strong and take courage bass 1 | be strong and take courage lyrics by don moen | be strong and take courage choir | be strong and take courage don moen with lyrics | be strong and take courage duet | be strong and take courage esgmm | be strong and take courage tom fettke | be strong and take courage sola gratia | be strong and have good coverage | be strong and take courage instrumental | be strong and take courage karaoke | be strong and take courage camp kirkland | be strong and take courage lyrics | be strong and take courage with lyrics minus one | be strong and take courage with lyrics karaoke | be strong and take courage with lyrics choir | be strong and take courage piano | be strong and take courage soprano | be strong and take courage solo | be strong and take courage song | be strong and take courage soprano 2 | be strong and take courage solo tenor | be strong and take courage tenor | be strong and take courage tenor 2 | be strong and courage with lyrics
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: good morning bible verse ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+good morning bible verse               | 42 medium    |    410K |   11.1K |  10% |  10%
+good morning bible verses              | 42 medium    |  409.2K |     12K |  10% |  20%
+good morning bible verses images       | 26 low       |  165.8K |      2K |  10% |  30%
+good morning bible verses malayalam    | 20 low       |     218 |     620 |   0% |  70%
+best morning bible verse               | 40 medium    |    410K |     11K |   0% |   0%
+good morning bible quotes with images  | 29 low       |   32.9K |    1.5K |   0% |  40%
+good morning bible quotes              | 37 low       |  309.1K |    5.8K |  20% |  10%
+good morning wishes with bible verses  | 31 low       |  309.1K |    9.8K |  10% |  20%
+good morning bible words               | 42 medium    |  552.6K |    9.9K |   0% |  10%
+MATCHING (1): good morning with bible verse
+QUESTIONS (0): 
+RELATED (9): good morning bible verses | good morning bible verses images | good morning bible verses malayalam | best morning bible verse | good morning bible quotes with images | good morning bible quotes | good morning wishes with bible verses | good morning bible words | morning bible verses and prayers
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

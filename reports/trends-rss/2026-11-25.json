@@ -1,203 +1,203 @@
 {
  "geo": "US",
- "made_utc": "2026-11-25T09:30:11",
+ "made_utc": "2026-11-25T20:12:12",
  "items": [
   {
-   "query": "bob seger & the silver bullet band",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 01:10:00 -0800",
+   "query": "ole miss basketball",
+   "traffic": "1000+",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "Silver Bullet Band bassist has died, bandmate posts",
-     "source": "The Detroit News"
+     "title": "Arizona-Ole Miss scouting report: On Rebels' big jump, fired-up fans and beauty sleep",
+     "source": "Arizona Daily Star"
     },
     {
-     "title": "Bob Seger and the Silver Bullet Band Bassist Chris Campbell Dead at 78",
-     "source": "Rolling Stone"
+     "title": "Arizona men\u2019s basketball vs. Ole Miss at Maui Invitational fan discussion",
+     "source": "Yahoo Sports"
     },
     {
-     "title": "Rock music icon dies at 78: \u2018He was one of the best ever\u2019",
-     "source": "PennLive.com"
+     "title": "Ole Miss, No. 8 Arizona clash for Maui Invitational title",
+     "source": "CBS Sports"
     }
    ],
    "hook": true
   },
   {
-   "query": "eastern florida floods",
+   "query": "xavier basketball",
+   "traffic": "1000+",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
+   "news": [
+    {
+     "title": "Xavier vs. Texas A&M start delayed for roof leak in Bahamas",
+     "source": "Cincinnati Enquirer"
+    },
+    {
+     "title": "Xavier vs Texas A&M Prediction, Pick, College Basketball Odds for Wednesday, Nov. 25",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "The Matchups: Xavier vs. Texas A&M",
+     "source": "247Sports"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "hollow knight silksong dlc",
    "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 01:10:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "Flooding in Oak Hill, Florida submerges homes and farms",
-     "source": "The Weather Channel"
+     "title": "Join us in 48 hours for Cherry Time!",
+     "source": "Team Cherry"
     },
     {
-     "title": "FORECAST: Flood Watch for the Palm Beaches and Treasure Coast through Thursday morning",
-     "source": "WPTV"
+     "title": "Hollow Knight Developer Team Cherry To Air Special Presentation Featuring Silksong DLC News And More",
+     "source": "Game Informer"
     },
     {
-     "title": "Floods strand hundreds in Central Florida over weekend following heavy rains",
-     "source": "Central Florida Public Media"
-    }
-   ],
-   "hook": true
-  },
-  {
-   "query": "criminal profile gta 6",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 00:40:00 -0800",
-   "news": [
-    {
-     "title": "GTA VI Does What Most Video Games With Choice And Morality Systems Don't",
-     "source": "Aftermath"
-    },
-    {
-     "title": "Playing GTA 6 as a Villain Makes Escaping the Police Much Harder",
-     "source": "Yahoo Tech"
-    },
-    {
-     "title": "Clearing Up False Info About The \u2018GTA 6\u2019 Criminal Profile System",
-     "source": "Forbes"
+     "title": "Hollow Knight: Silksong devs officially break silence on Sea Of Sorrow DLC with new showcase",
+     "source": "Polygon.com"
     }
    ],
    "hook": false
   },
   {
-   "query": "google play",
+   "query": "long beach state basketball",
    "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 00:30:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "Nearly half of smartphone app users struggle to cancel paid subscriptions, survey finds",
-     "source": "\ud5e4\ub7f4\ub4dc\uacbd\uc81c"
+     "title": "Long Beach State vs Southern Utah Prediction, Picks & Odds | 25 Nov 2026",
+     "source": "Sportsgambler"
     },
     {
-     "title": "The domestic transaction value of app markets such as Google Play, Apple\u2019s App Store and Galaxy Stor..",
-     "source": "\ub9e4\uc77c\uacbd\uc81c"
+     "title": "Men's Basketball Wraps Time In Miami Wednesday Against Southern Utah",
+     "source": "Long Beach State University Athletics"
     },
     {
-     "title": "South Korea\u2019s App Market Skews Toward Google and Apple... 70% of Developers Say Fees Are a Major Burden",
-     "source": "\ud30c\uc774\ub0b8\uc15c\ub274\uc2a4"
+     "title": "Long Beach State Beach vs Southern Utah Thunderbirds Picks, Prop Bets For November 25, 2026 - NCAAB Predictions",
+     "source": "Covers.com"
     }
    ],
    "hook": false
   },
   {
-   "query": "the mosquito bowl",
+   "query": "nfl teams",
    "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 00:20:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "'The Mosquito Bowl' movie features 2 Wisconsin football players",
-     "source": "Milwaukee Journal Sentinel"
+     "title": "1 Thing Every NFL Fanbase Should Actually Be Thankful For Right Now",
+     "source": "Bleacher Report"
     },
     {
-     "title": "Fighting for Film Jobs: Peter Berg on \u201cThe Mosquito Bowl,\u201d MPTERA, and Saving American Production",
-     "source": "Motion Picture Association"
+     "title": "What Every NFL Team Has To Be Thankful For In 2026",
+     "source": "FOX Sports"
     },
     {
-     "title": "Netflix\u2019s The Mosquito Bowl: 65 Marines played to a 0-0 tie, then Okinawa killed 15 of them",
-     "source": "IMDb"
+     "title": "The Win Column: 26 things to be thankful for",
+     "source": "The Atlanta Journal-Constitution"
     }
    ],
    "hook": false
   },
   {
-   "query": "hltv",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 00:20:00 -0800",
+   "query": "club brugge",
+   "traffic": "500+",
+   "pubDate": "Wed, 25 Nov 2026 11:40:00 -0800",
    "news": [
     {
-     "title": "Complexity founder Jason Lake to receive first HLTV Lifetime Achievement Award",
-     "source": "Inven Global"
+     "title": "LIVE - Na kippenvelmoment is het de beurt aan de spelers: kan Club Brugge stunten tegen Liverpool?",
+     "source": "Sporza"
     },
     {
-     "title": "Jason Lake To Receive First HLTV Lifetime Achievement Award",
-     "source": "Insider Gaming"
+     "title": "LIVE: Club Brugge bonkt op deur van top 8 in de Champions League, maakt blauw-zwart vanavond straffe sprong?",
+     "source": "Sporza"
     },
     {
-     "title": "JASON LAKE TO RECEIVE FIRST EVER HLTV LIFETIME ACHIEVEMENT AWARD",
-     "source": "Mynewsdesk"
+     "title": "LIVE Champions League | FC Barcelona scoort erop los in Baku, Virgil van Dijk op de bank bij Liverpool",
+     "source": "De Telegraaf"
     }
    ],
    "hook": false
   },
   {
-   "query": "how many kitty litter labs are there",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 00:10:00 -0800",
+   "query": "psg",
+   "traffic": "2000+",
+   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
    "news": [
     {
-     "title": "Here are all Kitty Litter lab locations in GTA 6 to destroy for Tyrone",
-     "source": "PC Gamer"
+     "title": "La compo du PSG face \u00e0 l'AS Rome : avec Mayulu, Akliouche et Zabarnyi, Demb\u00e9l\u00e9 et Marquinhos sur le banc",
+     "source": "L'\u00c9quipe"
     },
     {
-     "title": "GTA 6 Tyrone Mission Walkthrough: Where to Find Tyrone",
-     "source": "Video Games Chronicle"
+     "title": "PSG - AS Roma : les compositions probables",
+     "source": "Foot Mercato"
     },
     {
-     "title": "GTA 6 Walkthroughs Reveal Kitty Litter Lab Locations",
-     "source": "Demokratis.co.id"
+     "title": "Les onze de d\u00e9part sont connus pour PSG-AS Rome et Lille-Bayern",
+     "source": "Flashscore.fr"
     }
    ],
    "hook": false
   },
   {
-   "query": "how to open vaults in gta 6",
-   "traffic": "200+",
-   "pubDate": "Tue, 24 Nov 2026 23:50:00 -0800",
+   "query": "mike tomlin",
+   "traffic": "1000+",
+   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
    "news": [
     {
-     "title": "The Cartel Heist Walkthrough",
-     "source": "IGN"
-    },
-    {
-     "title": "GTA 6 Secret Bunker location - How to unlock a free tank",
-     "source": "Khel Now"
-    },
-    {
-     "title": "How to Get a Free Tank in GTA 6 (Secret Bunker Location)",
-     "source": "Beebom"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "gta 6 chapter 2 mission list",
-   "traffic": "100+",
-   "pubDate": "Tue, 24 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "How Long Is Chapter 2 in GTA 6? All Missables and Mission List",
-     "source": "VICE"
-    },
-    {
-     "title": "GTA 6 Chapter 2 Mission List - Every Mission in GTA 6 Chapter 2 in Order",
-     "source": "Insider Gaming"
-    },
-    {
-     "title": "GTA 6 Chapter 2 guide: Best moves, strategies and tips to progress faster",
-     "source": "Notebookcheck"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "cameron brink",
-   "traffic": "100+",
-   "pubDate": "Tue, 24 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "Sparks forward Cameron Brink, Ben Felter wed at Stanford",
+     "title": "Steelers' Metcalf denies trying to poke DeJean in eye; WR won't be suspended",
      "source": "ESPN"
     },
     {
-     "title": "Inside WNBA Star Cameron Brink and Ben Felter\u2019s Stanford Wedding\u2014and Her Four Bridal Looks",
-     "source": "Vogue"
+     "title": "DK Metcalf saved the Seahawks from themselves",
+     "source": "The Seattle Times"
     },
     {
-     "title": "WNBA Star Cameron Brink Marries College Sweetheart Ben Felter in California Spot Where Their Love Story Began",
-     "source": "People.com"
+     "title": "Aaron Rodgers wants DK Metcalf involved \u2018early and often\u2019 in Steelers\u2019 offense moving forward",
+     "source": "TribLIVE.com"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "mike mccarthy press conference",
+   "traffic": "500+",
+   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
+   "news": [
+    {
+     "title": "'This is why you play the game': Broncos preparing to play in 'tough environment' as Black Friday matchup vs. Steelers awaits",
+     "source": "Denver Broncos"
+    },
+    {
+     "title": "Broncos-Steelers Fantasy Football Week 12 Start \u2018Em, Sit \u2018Em",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "Steelers vs Broncos: How to watch/listen to the game",
+     "source": "Steelers.com"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "pacifica pier",
+   "traffic": "5000+",
+   "pubDate": "Wed, 25 Nov 2026 11:20:00 -0800",
+   "news": [
+    {
+     "title": "California\u2019s Tides Are in \u2018Uncharted Territory\u2019 as Water Surges Higher",
+     "source": "The New York Times"
+    },
+    {
+     "title": "Live updates: Pacifica Pier collapses, section sent into the ocean",
+     "source": "SFGATE"
+    },
+    {
+     "title": "California beaches close as record-breaking tides and major flooding loom",
+     "source": "The Guardian"
     }
    ],
    "hook": false

@@ -1,201 +1,201 @@
 {
  "events": [
   {
-   "query": "bob seger & the silver bullet band",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 01:10:00 -0800",
+   "query": "ole miss basketball",
+   "traffic": "1000+",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "Silver Bullet Band bassist has died, bandmate posts",
-     "source": "The Detroit News"
+     "title": "Arizona-Ole Miss scouting report: On Rebels' big jump, fired-up fans and beauty sleep",
+     "source": "Arizona Daily Star"
     },
     {
-     "title": "Bob Seger and the Silver Bullet Band Bassist Chris Campbell Dead at 78",
-     "source": "Rolling Stone"
+     "title": "Arizona men\u2019s basketball vs. Ole Miss at Maui Invitational fan discussion",
+     "source": "Yahoo Sports"
     },
     {
-     "title": "Rock music icon dies at 78: \u2018He was one of the best ever\u2019",
-     "source": "PennLive.com"
+     "title": "Ole Miss, No. 8 Arizona clash for Maui Invitational title",
+     "source": "CBS Sports"
     }
    ],
    "hook": true
   },
   {
-   "query": "eastern florida floods",
+   "query": "xavier basketball",
+   "traffic": "1000+",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
+   "news": [
+    {
+     "title": "Xavier vs. Texas A&M start delayed for roof leak in Bahamas",
+     "source": "Cincinnati Enquirer"
+    },
+    {
+     "title": "Xavier vs Texas A&M Prediction, Pick, College Basketball Odds for Wednesday, Nov. 25",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "The Matchups: Xavier vs. Texas A&M",
+     "source": "247Sports"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "hollow knight silksong dlc",
    "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 01:10:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "Flooding in Oak Hill, Florida submerges homes and farms",
-     "source": "The Weather Channel"
+     "title": "Join us in 48 hours for Cherry Time!",
+     "source": "Team Cherry"
     },
     {
-     "title": "FORECAST: Flood Watch for the Palm Beaches and Treasure Coast through Thursday morning",
-     "source": "WPTV"
+     "title": "Hollow Knight Developer Team Cherry To Air Special Presentation Featuring Silksong DLC News And More",
+     "source": "Game Informer"
     },
     {
-     "title": "Floods strand hundreds in Central Florida over weekend following heavy rains",
-     "source": "Central Florida Public Media"
-    }
-   ],
-   "hook": true
-  },
-  {
-   "query": "criminal profile gta 6",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 00:40:00 -0800",
-   "news": [
-    {
-     "title": "GTA VI Does What Most Video Games With Choice And Morality Systems Don't",
-     "source": "Aftermath"
-    },
-    {
-     "title": "Playing GTA 6 as a Villain Makes Escaping the Police Much Harder",
-     "source": "Yahoo Tech"
-    },
-    {
-     "title": "Clearing Up False Info About The \u2018GTA 6\u2019 Criminal Profile System",
-     "source": "Forbes"
+     "title": "Hollow Knight: Silksong devs officially break silence on Sea Of Sorrow DLC with new showcase",
+     "source": "Polygon.com"
     }
    ],
    "hook": false
   },
   {
-   "query": "google play",
+   "query": "long beach state basketball",
    "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 00:30:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "Nearly half of smartphone app users struggle to cancel paid subscriptions, survey finds",
-     "source": "\ud5e4\ub7f4\ub4dc\uacbd\uc81c"
+     "title": "Long Beach State vs Southern Utah Prediction, Picks & Odds | 25 Nov 2026",
+     "source": "Sportsgambler"
     },
     {
-     "title": "The domestic transaction value of app markets such as Google Play, Apple\u2019s App Store and Galaxy Stor..",
-     "source": "\ub9e4\uc77c\uacbd\uc81c"
+     "title": "Men's Basketball Wraps Time In Miami Wednesday Against Southern Utah",
+     "source": "Long Beach State University Athletics"
     },
     {
-     "title": "South Korea\u2019s App Market Skews Toward Google and Apple... 70% of Developers Say Fees Are a Major Burden",
-     "source": "\ud30c\uc774\ub0b8\uc15c\ub274\uc2a4"
+     "title": "Long Beach State Beach vs Southern Utah Thunderbirds Picks, Prop Bets For November 25, 2026 - NCAAB Predictions",
+     "source": "Covers.com"
     }
    ],
    "hook": false
   },
   {
-   "query": "the mosquito bowl",
+   "query": "nfl teams",
    "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 00:20:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
    "news": [
     {
-     "title": "'The Mosquito Bowl' movie features 2 Wisconsin football players",
-     "source": "Milwaukee Journal Sentinel"
+     "title": "1 Thing Every NFL Fanbase Should Actually Be Thankful For Right Now",
+     "source": "Bleacher Report"
     },
     {
-     "title": "Fighting for Film Jobs: Peter Berg on \u201cThe Mosquito Bowl,\u201d MPTERA, and Saving American Production",
-     "source": "Motion Picture Association"
+     "title": "What Every NFL Team Has To Be Thankful For In 2026",
+     "source": "FOX Sports"
     },
     {
-     "title": "Netflix\u2019s The Mosquito Bowl: 65 Marines played to a 0-0 tie, then Okinawa killed 15 of them",
-     "source": "IMDb"
+     "title": "The Win Column: 26 things to be thankful for",
+     "source": "The Atlanta Journal-Constitution"
     }
    ],
    "hook": false
   },
   {
-   "query": "hltv",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 00:20:00 -0800",
+   "query": "club brugge",
+   "traffic": "500+",
+   "pubDate": "Wed, 25 Nov 2026 11:40:00 -0800",
    "news": [
     {
-     "title": "Complexity founder Jason Lake to receive first HLTV Lifetime Achievement Award",
-     "source": "Inven Global"
+     "title": "LIVE - Na kippenvelmoment is het de beurt aan de spelers: kan Club Brugge stunten tegen Liverpool?",
+     "source": "Sporza"
     },
     {
-     "title": "Jason Lake To Receive First HLTV Lifetime Achievement Award",
-     "source": "Insider Gaming"
+     "title": "LIVE: Club Brugge bonkt op deur van top 8 in de Champions League, maakt blauw-zwart vanavond straffe sprong?",
+     "source": "Sporza"
     },
     {
-     "title": "JASON LAKE TO RECEIVE FIRST EVER HLTV LIFETIME ACHIEVEMENT AWARD",
-     "source": "Mynewsdesk"
+     "title": "LIVE Champions League | FC Barcelona scoort erop los in Baku, Virgil van Dijk op de bank bij Liverpool",
+     "source": "De Telegraaf"
     }
    ],
    "hook": false
   },
   {
-   "query": "how many kitty litter labs are there",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 00:10:00 -0800",
+   "query": "psg",
+   "traffic": "2000+",
+   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
    "news": [
     {
-     "title": "Here are all Kitty Litter lab locations in GTA 6 to destroy for Tyrone",
-     "source": "PC Gamer"
+     "title": "La compo du PSG face \u00e0 l'AS Rome : avec Mayulu, Akliouche et Zabarnyi, Demb\u00e9l\u00e9 et Marquinhos sur le banc",
+     "source": "L'\u00c9quipe"
     },
     {
-     "title": "GTA 6 Tyrone Mission Walkthrough: Where to Find Tyrone",
-     "source": "Video Games Chronicle"
+     "title": "PSG - AS Roma : les compositions probables",
+     "source": "Foot Mercato"
     },
     {
-     "title": "GTA 6 Walkthroughs Reveal Kitty Litter Lab Locations",
-     "source": "Demokratis.co.id"
+     "title": "Les onze de d\u00e9part sont connus pour PSG-AS Rome et Lille-Bayern",
+     "source": "Flashscore.fr"
     }
    ],
    "hook": false
   },
   {
-   "query": "how to open vaults in gta 6",
-   "traffic": "200+",
-   "pubDate": "Tue, 24 Nov 2026 23:50:00 -0800",
+   "query": "mike tomlin",
+   "traffic": "1000+",
+   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
    "news": [
     {
-     "title": "The Cartel Heist Walkthrough",
-     "source": "IGN"
-    },
-    {
-     "title": "GTA 6 Secret Bunker location - How to unlock a free tank",
-     "source": "Khel Now"
-    },
-    {
-     "title": "How to Get a Free Tank in GTA 6 (Secret Bunker Location)",
-     "source": "Beebom"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "gta 6 chapter 2 mission list",
-   "traffic": "100+",
-   "pubDate": "Tue, 24 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "How Long Is Chapter 2 in GTA 6? All Missables and Mission List",
-     "source": "VICE"
-    },
-    {
-     "title": "GTA 6 Chapter 2 Mission List - Every Mission in GTA 6 Chapter 2 in Order",
-     "source": "Insider Gaming"
-    },
-    {
-     "title": "GTA 6 Chapter 2 guide: Best moves, strategies and tips to progress faster",
-     "source": "Notebookcheck"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "cameron brink",
-   "traffic": "100+",
-   "pubDate": "Tue, 24 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "Sparks forward Cameron Brink, Ben Felter wed at Stanford",
+     "title": "Steelers' Metcalf denies trying to poke DeJean in eye; WR won't be suspended",
      "source": "ESPN"
     },
     {
-     "title": "Inside WNBA Star Cameron Brink and Ben Felter\u2019s Stanford Wedding\u2014and Her Four Bridal Looks",
-     "source": "Vogue"
+     "title": "DK Metcalf saved the Seahawks from themselves",
+     "source": "The Seattle Times"
     },
     {
-     "title": "WNBA Star Cameron Brink Marries College Sweetheart Ben Felter in California Spot Where Their Love Story Began",
-     "source": "People.com"
+     "title": "Aaron Rodgers wants DK Metcalf involved \u2018early and often\u2019 in Steelers\u2019 offense moving forward",
+     "source": "TribLIVE.com"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "mike mccarthy press conference",
+   "traffic": "500+",
+   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
+   "news": [
+    {
+     "title": "'This is why you play the game': Broncos preparing to play in 'tough environment' as Black Friday matchup vs. Steelers awaits",
+     "source": "Denver Broncos"
+    },
+    {
+     "title": "Broncos-Steelers Fantasy Football Week 12 Start \u2018Em, Sit \u2018Em",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "Steelers vs Broncos: How to watch/listen to the game",
+     "source": "Steelers.com"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "pacifica pier",
+   "traffic": "5000+",
+   "pubDate": "Wed, 25 Nov 2026 11:20:00 -0800",
+   "news": [
+    {
+     "title": "California\u2019s Tides Are in \u2018Uncharted Territory\u2019 as Water Surges Higher",
+     "source": "The New York Times"
+    },
+    {
+     "title": "Live updates: Pacifica Pier collapses, section sent into the ocean",
+     "source": "SFGATE"
+    },
+    {
+     "title": "California beaches close as record-breaking tides and major flooding loom",
+     "source": "The Guardian"
     }
    ],
    "hook": false
@@ -205,82 +205,82 @@
   {
    "id": "ApFMVaucPMc",
    "title": "POWERFUL PSALM 91 PRAYER TO BREAK CHAINS",
-   "views": 388609,
-   "age": 1.5,
+   "views": 444492,
+   "age": 2.5,
    "dur": 929,
    "ch": "Bispo Bruno Leonardo",
    "chid": "UCVNouUw3d3l5JYVCxhAQXKA",
    "live": false,
    "short": false,
-   "vpd": 259072.66666666666,
+   "vpd": 177796.8,
    "seed": "psalm 91 prayer"
   },
   {
-   "id": "c1v3ojDCNjY",
-   "title": "Declare Breakthrough Over Every Area of Your Life | Morning Prayer",
-   "views": 72370,
-   "age": 1.5,
-   "dur": 1068,
+   "id": "obADVZMYCIY",
+   "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
+   "views": 50148,
+   "age": 0.42,
+   "dur": 1158,
    "ch": "Grace Oasis",
    "chid": "UCDXAykwfYd5H0_ytED8aNDg",
    "live": false,
    "short": false,
-   "vpd": 48246.666666666664,
+   "vpd": 100296.0,
    "seed": "morning prayer"
   },
   {
-   "id": "WfiRkXBH5fI",
-   "title": "Even When Life Is Difficult God Is Working Everything Out | A Blessed Morning Prayer",
-   "views": 65489,
-   "age": 1.5,
-   "dur": 1431,
+   "id": "jyeeN4AtC2I",
+   "title": "Lord Work Things Out In My Life From Today | A Blessed Morning Prayer",
+   "views": 41320,
+   "age": 0.38,
+   "dur": 1295,
    "ch": "Grace For Purpose Prayers",
    "chid": "UCvu624igK22l4CVRn59pClA",
    "live": false,
    "short": false,
-   "vpd": 43659.333333333336,
+   "vpd": 82640.0,
    "seed": "morning prayer"
   }
  ],
  "per": {
   "morning prayer": [
    {
-    "id": "c1v3ojDCNjY",
-    "title": "Declare Breakthrough Over Every Area of Your Life | Morning Prayer",
-    "views": 72370,
-    "age": 1.5,
-    "dur": 1068,
+    "id": "obADVZMYCIY",
+    "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
+    "views": 50148,
+    "age": 0.42,
+    "dur": 1158,
     "ch": "Grace Oasis",
     "chid": "UCDXAykwfYd5H0_ytED8aNDg",
     "live": false,
     "short": false,
-    "vpd": 48246.666666666664,
+    "vpd": 100296.0,
     "seed": "morning prayer"
    },
    {
-    "id": "WfiRkXBH5fI",
-    "title": "Even When Life Is Difficult God Is Working Everything Out | A Blessed Morning Prayer",
-    "views": 65489,
-    "age": 1.5,
-    "dur": 1431,
+    "id": "jyeeN4AtC2I",
+    "title": "Lord Work Things Out In My Life From Today | A Blessed Morning Prayer",
+    "views": 41320,
+    "age": 0.38,
+    "dur": 1295,
     "ch": "Grace For Purpose Prayers",
     "chid": "UCvu624igK22l4CVRn59pClA",
     "live": false,
     "short": false,
-    "vpd": 43659.333333333336,
+    "vpd": 82640.0,
     "seed": "morning prayer"
    },
    {
-    "id": "RxKSF8cY6Ok",
-    "title": "Start Your Day with God | Peace, Wisdom, Strength, Favor & Open Doors | Morning Prayer",
-    "views": 39686,
-    "age": 1.5,
-    "dur": 2254,
-    "ch": "GracePrayer",
-    "chid": "UCCBgCfIQOiC9nKFxLDOc1uw",
+    "id": "PbI5n1KNILw",
+    "title": "25TH NOVEMBER 2026: START YOUR WEDNESDAY WITH POWERFUL EARLY MORNING PRAYERS| APOSTLE JOSHUA SELMAN",
+    "views": 49181,
+    "age": 0.88,
+    "dur": 2416,
+    "ch": "Daily Koinonia Alter",
+    "chid": "UC3eti3H37HzU0DeMmXoQzFg",
     "live": false,
     "short": false,
-    "vpd": 26457.333333333332,
+    "vpd": 55887.5,
     "seed": "morning prayer"
    }
   ],
@@ -288,81 +288,81 @@
    {
     "id": "6z9znTlss8Q",
     "title": "Before You Sleep, Pray This Powerful Night Prayer for Your Family's Protection Tonight",
-    "views": 7134,
-    "age": 0.38,
+    "views": 9450,
+    "age": 0.79,
     "dur": 595,
     "ch": "Prayer Today",
     "chid": "UC-f6jkWBr5TOPFys5QoFTQg",
     "live": false,
     "short": false,
-    "vpd": 14268.0,
+    "vpd": 11962.025316455696,
     "seed": "night prayer before sleep"
    },
    {
     "id": "t4Rc3qUIFyM",
     "title": "Call On Lord Jesus, Prayer Before Sleep - Tonight I place my trust in You. Be my refuge...",
-    "views": 4500,
-    "age": 0.33,
+    "views": 6043,
+    "age": 0.79,
     "dur": 453,
     "ch": "Let Us Pray",
     "chid": "UCN0EKA_RiEzMBe1nBIgWnhA",
     "live": false,
     "short": false,
-    "vpd": 9000.0,
+    "vpd": 7649.367088607594,
     "seed": "night prayer before sleep"
    },
    {
     "id": "Kci2yDvZNFM",
     "title": "Rest in the Presence of the Holy Spirit | Evening Prayer Before Sleep",
-    "views": 10381,
+    "views": 10557,
     "age": 1.5,
     "dur": 562,
     "ch": "Prayer Today",
     "chid": "UC-f6jkWBr5TOPFys5QoFTQg",
     "live": false,
     "short": false,
-    "vpd": 6920.666666666667,
+    "vpd": 7038.0,
     "seed": "night prayer before sleep"
    }
   ],
   "bible verse of the day": [
    {
+    "id": "bxMJrJ0eAUw",
+    "title": "Verse of the Day | Philippians 2:3\u20134 [November 25, 2026]",
+    "views": 5322,
+    "age": 0.75,
+    "dur": 383,
+    "ch": "Daily Bible Verses and Prayers",
+    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
+    "live": false,
+    "short": false,
+    "vpd": 7096.0,
+    "seed": "bible verse of the day"
+   },
+   {
+    "id": "ICN5BrlMvSQ",
+    "title": "Are All Sins Really the Same? | Verse of the Day",
+    "views": 2963,
+    "age": 0.5,
+    "dur": 144,
+    "ch": "Daily Bible YouTube ",
+    "chid": "UCYmFuWSwhHzAejbkCYoLrtw",
+    "live": false,
+    "short": false,
+    "vpd": 5926.0,
+    "seed": "bible verse of the day"
+   },
+   {
     "id": "W9olrp_mTrI",
     "title": "Verse of the Day | Matthew 6:6-8 [November 24, 2026]",
-    "views": 5877,
+    "views": 6092,
     "age": 1.5,
     "dur": 376,
     "ch": "Daily Bible Verses and Prayers",
     "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
     "live": false,
     "short": false,
-    "vpd": 3918.0,
-    "seed": "bible verse of the day"
-   },
-   {
-    "id": "Lc_XdQpxiLI",
-    "title": "Verse of the Day | Psalm 50:14\u201315 [November 23, 2026]",
-    "views": 6577,
-    "age": 2.5,
-    "dur": 382,
-    "ch": "Daily Bible Verses and Prayers",
-    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
-    "live": false,
-    "short": false,
-    "vpd": 2630.8,
-    "seed": "bible verse of the day"
-   },
-   {
-    "id": "4Pw5YdH8yj0",
-    "title": "The Assurance the Bible Gives Those Who Fear God\u2019s Rejection | Verse of the Day",
-    "views": 3779,
-    "age": 1.5,
-    "dur": 168,
-    "ch": "Daily Bible YouTube ",
-    "chid": "UCYmFuWSwhHzAejbkCYoLrtw",
-    "live": false,
-    "short": false,
-    "vpd": 2519.3333333333335,
+    "vpd": 4061.3333333333335,
     "seed": "bible verse of the day"
    }
   ],
@@ -370,81 +370,81 @@
    {
     "id": "isOSrIFy1FM",
     "title": "Put Everything That Makes You Anxious Aside and Sleep Well Tonight | Sleep Prayers",
-    "views": 29185,
+    "views": 32023,
     "age": 3.5,
     "dur": 13179,
     "ch": "Grace For Purpose",
     "chid": "UCI8gcSTo1FowsRJdilsjsZw",
     "live": false,
     "short": false,
-    "vpd": 8338.57142857143,
+    "vpd": 9149.42857142857,
     "seed": "prayer for anxiety"
    },
    {
     "id": "abMBRto0Fz4",
     "title": "Start Your Morning in God's Peace | Powerful Prayer to Remove Anxiety, Fear & Worry",
-    "views": 4704,
+    "views": 5259,
     "age": 1.5,
     "dur": 1261,
     "ch": "Thank God Daily Prayers",
     "chid": "UCnbLNBu__ZMA4Rzku6aBxFw",
     "live": false,
     "short": false,
-    "vpd": 3136.0,
+    "vpd": 3506.0,
     "seed": "prayer for anxiety"
    },
    {
     "id": "qMIPnUpTaw8",
     "title": "End Your Day With God | Powerful Night Prayer for Anxiety",
-    "views": 7201,
+    "views": 7226,
     "age": 4.5,
     "dur": 529,
     "ch": "Let Us Pray",
     "chid": "UCN0EKA_RiEzMBe1nBIgWnhA",
     "live": false,
     "short": false,
-    "vpd": 1600.2222222222222,
+    "vpd": 1605.7777777777778,
     "seed": "prayer for anxiety"
    }
   ],
   "good morning bible verse": [
    {
-    "id": "vDk1ml8pFTw",
-    "title": "Thursday, November 19 | Begin Your Day With God | Morning Prayer for Protection, Wisdom & Provision",
-    "views": 36757,
+    "id": "Lc_XdQpxiLI",
+    "title": "Verse of the Day | Psalm 50:14\u201315 [November 23, 2026]",
+    "views": 6619,
+    "age": 2.5,
+    "dur": 382,
+    "ch": "Daily Bible Verses and Prayers",
+    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
+    "live": false,
+    "short": false,
+    "vpd": 2647.6,
+    "seed": "good morning bible verse"
+   },
+   {
+    "id": "A_4ATAvufWo",
+    "title": "Verse of the Day | Psalm 27:13 [November 18, 2026]",
+    "views": 7446,
+    "age": 7.5,
+    "dur": 375,
+    "ch": "Daily Bible Verses and Prayers",
+    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
+    "live": false,
+    "short": false,
+    "vpd": 992.8,
+    "seed": "good morning bible verse"
+   },
+   {
+    "id": "dTXyQwu8xvY",
+    "title": "Thursday, November 19 | Start Your Day With Psalm 91 \ud83d\ude4f Powerful Morning Prayer for God's Protection",
+    "views": 2345,
     "age": 6.5,
-    "dur": 4184,
-    "ch": "Prayer Flow",
-    "chid": "UC99o1p0n_2skTBds-rwWdyA",
+    "dur": 3821,
+    "ch": "Grace-Filled Prayers",
+    "chid": "UCM5Uu7IlU3D8gx96IwpQPfg",
     "live": false,
     "short": false,
-    "vpd": 5654.923076923077,
-    "seed": "good morning bible verse"
-   },
-   {
-    "id": "aJz317rwWWI",
-    "title": "START YOUR DAY WORSHIPPING GOD \ud83d\ude4f | Powerful Morning Prayer of Praise, Thanksgiving & Surrender",
-    "views": 7733,
-    "age": 1.5,
-    "dur": 3420,
-    "ch": "Morning Prayer With God",
-    "chid": "UC5spXp9tnfnAuRQKgZgw2tg",
-    "live": false,
-    "short": false,
-    "vpd": 5155.333333333333,
-    "seed": "good morning bible verse"
-   },
-   {
-    "id": "j5cwtwT1vbk",
-    "title": "Give Thanks to the Lord, for He Is Good | Morning Gratitude Prayer",
-    "views": 9058,
-    "age": 4.5,
-    "dur": 3102,
-    "ch": "Endless Grace Prayers",
-    "chid": "UC658aSaCQleE45jr5XDnS5A",
-    "live": false,
-    "short": false,
-    "vpd": 2012.888888888889,
+    "vpd": 360.7692307692308,
     "seed": "good morning bible verse"
    }
   ],
@@ -452,47 +452,55 @@
    {
     "id": "ApFMVaucPMc",
     "title": "POWERFUL PSALM 91 PRAYER TO BREAK CHAINS",
-    "views": 388609,
-    "age": 1.5,
+    "views": 444492,
+    "age": 2.5,
     "dur": 929,
     "ch": "Bispo Bruno Leonardo",
     "chid": "UCVNouUw3d3l5JYVCxhAQXKA",
     "live": false,
     "short": false,
-    "vpd": 259072.66666666666,
+    "vpd": 177796.8,
+    "seed": "psalm 91 prayer"
+   },
+   {
+    "id": "t9uHNww699c",
+    "title": "Psalm 91 and 35 | Strong Prayer to Cover Your Loved Ones With God's Care",
+    "views": 6368,
+    "age": 1.5,
+    "dur": 21804,
+    "ch": "PSALM 91 PRAYER",
+    "chid": "UCvMnnmNHfCtqwjAe_8Tovzg",
+    "live": false,
+    "short": false,
+    "vpd": 4245.333333333333,
     "seed": "psalm 91 prayer"
    },
    {
     "id": "9HcIAerVbqc",
-    "title": "PSALM 91 & PSALM 23: The Two Most Powerful Prayers In The Bible",
-    "views": 2630,
-    "age": 0.58,
+    "title": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible",
+    "views": 4755,
+    "age": 1.5,
     "dur": 2547,
     "ch": "Inspirational Prayers",
     "chid": "UCg6RyDpfN47RF78R5sEnRjA",
     "live": false,
     "short": false,
-    "vpd": 4534.48275862069,
-    "seed": "psalm 91 prayer"
-   },
-   {
-    "id": "8A8kZGkP7-M",
-    "title": "Psalm 91: Rest Under the Shelter of the Most High | Powerful Morning Prayer",
-    "views": 6481,
-    "age": 1.5,
-    "dur": 2153,
-    "ch": "Endless Grace Prayers",
-    "chid": "UC658aSaCQleE45jr5XDnS5A",
-    "live": false,
-    "short": false,
-    "vpd": 4320.666666666667,
+    "vpd": 3170.0,
     "seed": "psalm 91 prayer"
    }
   ]
  },
  "refs": [
   [
+   "Philippians 2:3",
+   1
+  ],
+  [
    "Matthew 6:6",
+   1
+  ],
+  [
+   "Psalm 27:13",
    1
   ],
   [
@@ -501,23 +509,23 @@
   ]
  ],
  "desc": {
-  "c1v3ojDCNjY": "",
+  "bxMJrJ0eAUw": "",
+  "isOSrIFy1FM": "",
+  "dTXyQwu8xvY": "",
   "9HcIAerVbqc": "",
   "W9olrp_mTrI": "",
-  "abMBRto0Fz4": "",
-  "ApFMVaucPMc": "",
-  "RxKSF8cY6Ok": "",
-  "j5cwtwT1vbk": "",
-  "4Pw5YdH8yj0": "",
-  "t4Rc3qUIFyM": "",
-  "qMIPnUpTaw8": "",
-  "vDk1ml8pFTw": "",
-  "Lc_XdQpxiLI": "",
+  "A_4ATAvufWo": "",
   "6z9znTlss8Q": "",
-  "WfiRkXBH5fI": "",
-  "8A8kZGkP7-M": "",
-  "isOSrIFy1FM": "",
+  "jyeeN4AtC2I": "",
+  "obADVZMYCIY": "",
+  "t4Rc3qUIFyM": "",
   "Kci2yDvZNFM": "",
-  "aJz317rwWWI": ""
+  "ICN5BrlMvSQ": "",
+  "PbI5n1KNILw": "",
+  "abMBRto0Fz4": "",
+  "Lc_XdQpxiLI": "",
+  "ApFMVaucPMc": "",
+  "t9uHNww699c": "",
+  "qMIPnUpTaw8": ""
  }
 }

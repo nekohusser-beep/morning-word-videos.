@@ -1,0 +1,75 @@
+exit=2
+
+/home/runner/work/morning-word-videos./morning-word-videos./agent/site/index.html
+  line 135: [gradient-text] background-clip: text + gradient
+    → Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.
+  line 193: [gradient-text] background-clip: text + gradient
+    → Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.
+  line 194: [gradient-text] background-clip: text + gradient
+    → Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.
+  line 195: [gradient-text] background-clip: text + gradient
+    → Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.
+  line 196: [gradient-text] background-clip: text + gradient
+    → Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.
+  line 127: [dark-glow] Zero-offset box-shadow glow (#22d39a)
+    → Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default "cool" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.
+  line 138: [dark-glow] Zero-offset box-shadow glow (#3fa9ff)
+    → Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default "cool" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.
+  line 205: [dark-glow] Zero-offset box-shadow glow (#3fa9ff)
+    → Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default "cool" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.
+  line 165: [icon-tile-stack] 42x42px icon tile above h4 "AI Receptionist"
+    → A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.
+  line 166: [icon-tile-stack] 42x42px icon tile above h4 "Lead Finder"
+    → A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.
+  line 167: [icon-tile-stack] 42x42px icon tile above h4 "Content Engine"
+    → A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.
+  line 168: [icon-tile-stack] 42x42px icon tile above h4 "Auto-Poster"
+    → A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.
+  line 169: [icon-tile-stack] 42x42px icon tile above h4 "Document Machine"
+    → A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.
+  line 170: [icon-tile-stack] 42x42px icon tile above h4 "Your Own Stack"
+    → A small rounded-square icon container above a heading is the universal AI feature-card template — every generator outputs this exact shape. Try a side-by-side icon and heading, or let the icon sit in flow without its own container.
+  line 135: [hero-eyebrow-chip] eyebrow chip (tracked-caps) "AUTONOMOUS AI · AGENTS · AUTOMATION" above h1 "I've Got An AgentThat Can Do That."
+    → A tiny uppercase letter-spaced label sitting immediately above an oversized hero headline — or the same shape rendered as a pill chip — is now the default AI SaaS hero. Drop the eyebrow, integrate the kicker into the headline, or run it as a navigation breadcrumb instead.
+  line 135: [extreme-negative-tracking] letter-spacing: -0.09em at 16px — "I've Got An AgentThat Can Do That."
+    → Letter-spacing pulled tighter than the point where characters keep their own shapes costs legibility. Tighten display type optically, not destructively.
+  [overused-font] Primary font: space grotesk
+    → Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.
+  [kicker-above-heading] kicker "// PIPELINES WE BUILT AND RUN" above h2 "Not slides. Systems that run."
+    → A tiny tracked uppercase or small-caps label sitting as its own block directly above a heading is banned outright, repeated or not. Generated kickers never earn their place: the heading carries its own weight. Delete the label and let the heading speak; if the words matter, work them into the heading or the body.
+  [kicker-above-heading] kicker "// WHAT WE CAN BUILD FOR YOU" above h2 "If you do it every week, an agent can do it."
+    → A tiny tracked uppercase or small-caps label sitting as its own block directly above a heading is banned outright, repeated or not. Generated kickers never earn their place: the heading carries its own weight. Delete the label and let the heading speak; if the words matter, work them into the heading or the body.
+  [kicker-above-heading] kicker "// HOW IT WORKS" above h2 "From "I'm drowning" to "it's handled."
+    → A tiny tracked uppercase or small-caps label sitting as its own block directly above a heading is banned outright, repeated or not. Generated kickers never earn their place: the heading carries its own weight. Delete the label and let the heading speak; if the words matter, work them into the heading or the body.
+  [kicker-above-heading] kicker "// RUNNING RIGHT NOW" above h2 "Our own shop is the test lab."
+    → A tiny tracked uppercase or small-caps label sitting as its own block directly above a heading is banned outright, repeated or not. Generated kickers never earn their place: the heading carries its own weight. Delete the label and let the heading speak; if the words matter, work them into the heading or the body.
+  [kicker-above-heading] kicker "// LET'S BUILD YOURS" above h2 "Whatever is eating your day, I've got an agent that can do t"
+    → A tiny tracked uppercase or small-caps label sitting as its own block directly above a heading is banned outright, repeated or not. Generated kickers never earn their place: the heading carries its own weight. Delete the label and let the heading speak; if the words matter, work them into the heading or the body.
+  [skipped-heading] <h2> "If you do it every week, an agent can do it." followed by <h4> "AI Receptionist" (missing h3)
+    → Heading levels should not skip (e.g. h1 then h3 with no h2). Screen readers use heading hierarchy for navigation. Skipping levels breaks the document outline.
+  [skipped-heading] <h2> "From "I'm drowning" to "it's handled."" followed by <h4> "Talk it out" (missing h3)
+    → Heading levels should not skip (e.g. h1 then h3 with no h2). Screen readers use heading hierarchy for navigation. Skipping levels breaks the document outline.
+  [gradient-text] background-clip: text + gradient
+    → Gradient text is decorative rather than meaningful — a common AI tell, especially on headings and metrics. Use solid colors for text.
+  [pulsing-dot] .logo i — 10x10px dot with infinite "blink" animation
+    → Small pulsing status dots simulate liveness decoratively. Reserve pulse animation for indicators tied to genuinely live, changing data; a static indicator with clear labeling is honest and calmer.
+  [pulsing-dot] .live:before — 7x7px dot with infinite "blink" animation
+    → Small pulsing status dots simulate liveness decoratively. Reserve pulse animation for indicators tied to genuinely live, changing data; a static indicator with clear labeling is honest and calmer.
+  [marquee] .track — infinite horizontal loop animation "scroll"
+    → Continuously auto-scrolling content demands attention it has not earned and hides half its content at any moment. Reserve motion for content that changes; let readers move at their own pace.
+  [dark-glow] Zero-offset box-shadow glow (#22d39a)
+    → Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default "cool" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.
+
+/home/runner/work/morning-word-videos./morning-word-videos./tools/verse-shorts/template.html
+  [overused-font] Primary font: montserrat
+    → Inter, Roboto, Fraunces, Geist, Plus Jakarta Sans, and Space Grotesk are used on so many sites they no longer feel distinctive. Each new wave of AI-generated UIs converges on the same handful of faces. Choose a face that gives your interface personality.
+
+30 anti-patterns found.
+
+── Advisory (not counted as failures) ──
+
+/home/runner/work/morning-word-videos./morning-word-videos./agent/site/index.html
+  [codex-grid-background] two-axis grid-line gradient background
+    → A decorative grid or line-field background drawn with hairline linear-gradient layers tiled by a fixed pixel cell is a recurring generated-UI signature. Reserve grid overlays for actual canvas, map, blueprint, or measurement surfaces; elsewhere use product structure or a plain surface.
+
+1 advisory note. Suppress with --no-advisory.

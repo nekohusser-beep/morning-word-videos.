@@ -1,0 +1,30 @@
+name: trends-rss
+# Daily Google Trends trending searches (public RSS, free, no key) -> reports/trends-rss/<date>.md/.json.
+# Feeds the trend-video lane (viral topic -> KJV verse Short) and IQ Vid, whose explore calls get 429 on runners.
+on:
+  workflow_dispatch:
+    inputs:
+      geo: {description: "country code", required: false, default: "US"}
+  schedule:
+    - cron: "41 10 * * *"   # 5:41 AM ET
+    - cron: "41 20 * * *"   # 3:41 PM ET (before the evening Short)
+permissions:
+  contents: write
+concurrency:
+  group: trends-rss
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch
+        env:
+          GEO: ${{ inputs.geo || 'US' }}
+        run: python3 tools/trends-rss/rss.py
+      - name: Commit
+        run: |
+          git config user.name "trends-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/trends-rss
+          git commit -q -m "trends-rss $(date -u +%F)" || exit 0
+          for i in 1 2 3 4; do git pull --rebase -X theirs -q origin main && git push -q origin HEAD:main && break; sleep 4; done

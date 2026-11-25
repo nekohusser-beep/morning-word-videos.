@@ -1,0 +1,38 @@
+name: design-check
+# Impeccable slop detector (pbakaus/impeccable, Apache-2.0, 116K stars, pinned 4.11.0): 62 deterministic
+# rules (no LLM, no key) on our shipped HTML: the I've Got An Agent site and the verse-Short card template.
+# Runs in this isolated runner only; no secrets are passed. Report -> reports/design-check/.
+on:
+  workflow_dispatch:
+    inputs:
+      targets: {description: "space-separated paths", required: false, default: "agent/site tools/verse-shorts/template.html"}
+  push:
+    branches: [main]
+    paths: ["agent/site/**", "tools/verse-shorts/template.html"]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - name: Detect
+        env:
+          TARGETS: ${{ inputs.targets || 'agent/site tools/verse-shorts/template.html' }}
+        run: |
+          mkdir -p reports/design-check
+          out=reports/design-check/run-${{ github.run_id }}
+          set +e
+          npx -y impeccable@4.11.0 detect --json $TARGETS > $out.json 2> $out.err
+          echo "exit=$?" > $out.txt
+          npx -y impeccable@4.11.0 detect $TARGETS >> $out.txt 2>&1
+          set -e
+          tail -60 $out.txt
+      - name: Commit
+        run: |
+          git config user.name "design-check-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/design-check
+          git commit -q -m "design-check ${{ github.run_id }}" || exit 0
+          for i in 1 2 3 4; do git pull --rebase -X theirs -q origin main && git push -q origin HEAD:main && break; sleep 4; done

@@ -77,7 +77,7 @@ def main():
     for i, r in enumerate(top, 1):
         L.append("%d. **%s** - %s - %s views, %.0f/day, %s - youtu.be/%s" % (
             i, r["title"], r["ch"], format(r["views"], ","), r["vpd"], "Short" if (r.get("dur") or 999) <= 180 else "long", r["id"]))
-        L.append("   - what they say: %s" % (clean(desc[r["id"]]) or "(no description)"))
+        L.append("   - what they say: %s" % (clean(desc[r["id"]]) or "(runner could not read it: open the link in the browser before writing)"))
     L += ["", "## Verses the movers are using", ""]
     L.append(", ".join("%s (x%d)" % kv for kv in refs.most_common(10)) or "(none found)")
     L += ["", "## Top 3 per phrase", ""]

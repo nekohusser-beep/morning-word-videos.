@@ -1,7 +1,47 @@
 {
  "geo": "US",
- "made_utc": "2026-11-25T09:16:07",
+ "made_utc": "2026-11-25T09:27:41",
  "items": [
+  {
+   "query": "bob seger & the silver bullet band",
+   "traffic": "200+",
+   "pubDate": "Wed, 25 Nov 2026 01:10:00 -0800",
+   "news": [
+    {
+     "title": "Silver Bullet Band bassist has died, bandmate posts",
+     "source": "The Detroit News"
+    },
+    {
+     "title": "Bob Seger and the Silver Bullet Band Bassist Chris Campbell Dead at 78",
+     "source": "Rolling Stone"
+    },
+    {
+     "title": "Rock music icon dies at 78: \u2018He was one of the best ever\u2019",
+     "source": "PennLive.com"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "eastern florida floods",
+   "traffic": "200+",
+   "pubDate": "Wed, 25 Nov 2026 01:10:00 -0800",
+   "news": [
+    {
+     "title": "Flooding in Oak Hill, Florida submerges homes and farms",
+     "source": "The Weather Channel"
+    },
+    {
+     "title": "FORECAST: Flood Watch for the Palm Beaches and Treasure Coast through Thursday morning",
+     "source": "WPTV"
+    },
+    {
+     "title": "Floods strand hundreds in Central Florida over weekend following heavy rains",
+     "source": "Central Florida Public Media"
+    }
+   ],
+   "hook": true
+  },
   {
    "query": "criminal profile gta 6",
    "traffic": "100+",
@@ -12,12 +52,12 @@
      "source": "Aftermath"
     },
     {
-     "title": "Playing GTA 6 as a Villain Makes Escaping the Police Much Harder",
-     "source": "Yahoo Tech"
-    },
-    {
      "title": "Clearing Up False Info About The \u2018GTA 6\u2019 Criminal Profile System",
      "source": "Forbes"
+    },
+    {
+     "title": "GTA 6 Criminal Profile Explained: All Five Profiles and How to Control Them",
+     "source": "space4games"
     }
    ],
    "hook": false
@@ -158,46 +198,6 @@
     {
      "title": "WNBA Star Cameron Brink Marries College Sweetheart Ben Felter in California Spot Where Their Love Story Began",
      "source": "People.com"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "hunger games 2026",
-   "traffic": "200+",
-   "pubDate": "Tue, 24 Nov 2026 23:40:00 -0800",
-   "news": [
-    {
-     "title": "The Hunger Games: Sunrise on the Reaping \u2014 Francis Lawrence [Review]",
-     "source": "In Review Online"
-    },
-    {
-     "title": "\u2018Hunger Games: Sunrise on the Reaping\u2019 opens to $120 million despite GTA VI\u2014and its audience explains why",
-     "source": "Fortune"
-    },
-    {
-     "title": "Weekend Box Office: HUNGER GAMES: SUNRISE ON THE REAPING Sweeps the Competition with $120M Debut",
-     "source": "Boxoffice Pro"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "president snow",
-   "traffic": "100+",
-   "pubDate": "Tue, 24 Nov 2026 23:20:00 -0800",
-   "news": [
-    {
-     "title": "All 3 Versions Of Coriolanus Snow In The Hunger Games Movies, Ranked",
-     "source": "ScreenRant"
-    },
-    {
-     "title": "Ralph Fiennes compares Snow's and Voldemort's evil after the premiere of Az arat\u00e1s hajnala",
-     "source": "Foro3D"
-    },
-    {
-     "title": "Screen Rant Ranks Three Actors Who Portrayed President Snow",
-     "source": "Peradaban.id"
     }
    ],
    "hook": false

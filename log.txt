@@ -1,0 +1,87 @@
+Loaded as API: https://fffiloni-latentsync.hf.space
+Client.predict() Usage Info
+---------------------------
+Named API endpoints: 1
+
+ - predict(input_video_path, input_audio_path, api_name="/generate_lip_sync_video") -> result
+    Parameters:
+     - [Video] input_video_path: filepath (required)  (The FileData class is a subclass of the GradioModel class that represents a file object within a Gradio interface. It is used to store file data and metadata when a file is uploaded.
+
+Attributes:
+    path: The server file path where the file is stored.
+    url: The normalized server URL pointing to the file.
+    size: The size of the file in bytes.
+    orig_name: The original filename before upload.
+    mime_type: The MIME type of the file.
+    is_stream: Indicates whether the file is a stream.
+    meta: Additional metadata used internally (should not be changed).) 
+     - [Audio] input_audio_path: filepath (required)  (The FileData class is a subclass of the GradioModel class that represents a file object within a Gradio interface. It is used to store file data and metadata when a file is uploaded.
+
+Attributes:
+    path: The server file path where the file is stored.
+    url: The normalized server URL pointing to the file.
+    size: The size of the file in bytes.
+    orig_name: The original filename before upload.
+    mime_type: The MIME type of the file.
+    is_stream: Indicates whether the file is a stream.
+    meta: Additional metadata used internally (should not be changed).) 
+    Returns:
+     - [Video] result: filepath 
+
+fffiloni/LatentSync {"/generate_lip_sync_video": [["input_video_path", "filepath", "Video"], ["input_audio_path", "filepath", "Audio"]]}
+CALL fffiloni/LatentSync /generate_lip_sync_video ['input_video_path', 'input_audio_path']
+retry dict form The requested GPU duration (180s) is larger than the maximum allowed
+Traceback (most recent call last):
+  File "/home/runner/work/morning-word-videos./morning-word-videos./tools/little-amens/ls_space.py", line 37, in <module>
+    try: res = c.predict(api_name=name, **kw)
+               ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 606, in predict
+    ).result()
+      ~~~~~~^^
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 1707, in result
+    return super().result(timeout=timeout)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 450, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 1233, in _inner
+    predictions = _predict(*data, **kwargs)
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 1356, in _predict
+    raise AppError(message=message, **result)
+gradio_client.exceptions.AppError: The requested GPU duration (180s) is larger than the maximum allowed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/morning-word-videos./morning-word-videos./tools/little-amens/ls_space.py", line 39, in <module>
+    print("retry dict form", str(e1)[:200], flush=True); kw[vkey] = {"video": handle_file(V)}; res = c.predict(api_name=name, **kw)
+                                                                                                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 606, in predict
+    ).result()
+      ~~~~~~^^
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 1707, in result
+    return super().result(timeout=timeout)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 450, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 1233, in _inner
+    predictions = _predict(*data, **kwargs)
+  File "/home/runner/.local/lib/python3.14/site-packages/gradio_client/client.py", line 1356, in _predict
+    raise AppError(message=message, **result)
+gradio_client.exceptions.AppError: 1 validation error for FileData
+  Value error, The 'meta' field must be explicitly provided in the input data and be equal to {'_type': 'gradio.FileData'}. [type=value_error, input_value={'video': {'path': '/tmp/...e': 'gradio.FileData'}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/value_error
+DONE {"space": "fffiloni/LatentSync", "err": "1 validation error for FileData\n  Value error, The 'meta' field must be explicitly provided in the input data and be equal to {'_type': 'gradio.FileData'}. [type=value_error, input_value={'video': {'path': '/tmp/...e': 'gradio.FileData'}}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error", "sec": 3}

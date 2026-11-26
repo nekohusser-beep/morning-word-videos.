@@ -1,0 +1,21 @@
+[
+ {
+  "space": "fffiloni/LatentSync",
+  "endpoints": {
+   "/generate_lip_sync_video": [
+    [
+     "input_video_path",
+     "filepath",
+     "Video"
+    ],
+    [
+     "input_audio_path",
+     "filepath",
+     "Audio"
+    ]
+   ]
+  },
+  "err": "1 validation error for FileData\n  Value error, The 'meta' field must be explicitly provided in the input data and be equal to {'_type': 'gradio.FileData'}. [type=value_error, input_value={'video': {'path': '/tmp/...e': 'gradio.FileData'}}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error",
+  "sec": 3
+ }
+]

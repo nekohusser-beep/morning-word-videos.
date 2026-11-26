@@ -1,1 +1,1 @@
-TOTAL 21.2 s 635 frames
+TOTAL 20.5 s 615 frames

@@ -1,0 +1,531 @@
+{
+ "events": [
+  {
+   "query": "the legend of zelda wind waker",
+   "traffic": "200+",
+   "pubDate": "Thu, 26 Nov 2026 00:50:00 -0800",
+   "news": [
+    {
+     "title": "Legend Of Zelda: Wind Waker Is Finally Getting The Remaster It Deserves",
+     "source": "OpenCritic"
+    },
+    {
+     "title": "Legend Of Zelda: Wind Waker Is Finally Getting The Remaster It Deserves",
+     "source": "ScreenRant"
+    },
+    {
+     "title": "Legend Of Zelda's Toon Link Officially Returning In New Collection",
+     "source": "IMDb"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "georgia basketball",
+   "traffic": "100+",
+   "pubDate": "Thu, 26 Nov 2026 00:50:00 -0800",
+   "news": [
+    {
+     "title": "Georgia basketball takes on Cincinnati to open ESPN Events Invitational",
+     "source": "247Sports"
+    },
+    {
+     "title": "Georgia vs Cincinnati Prediction, Pick, College Basketball Odds for Thursday, Nov. 26",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "UC Bearcats face Georgia, Boston College in Thanksgiving holiday hoops",
+     "source": "Cincinnati Enquirer"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "dominion power outage",
+   "traffic": "200+",
+   "pubDate": "Thu, 26 Nov 2026 00:20:00 -0800",
+   "news": [
+    {
+     "title": "Virginia Beach braces for Thanksgiving storm as officials warn of flooding, strong winds and rough surf",
+     "source": "13newsnow.com"
+    },
+    {
+     "title": "Cities to open parking garages ahead of coastal storms, flooding",
+     "source": "WAVY.com"
+    },
+    {
+     "title": "Damaging winds, heavy rain and flooding expected ahead of Thanksgiving storm in Hampton Roads",
+     "source": "The Virginian-Pilot"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "dennys",
+   "traffic": "500+",
+   "pubDate": "Thu, 26 Nov 2026 00:10:00 -0800",
+   "news": [
+    {
+     "title": "\u2018Your booth is waiting\u2019: Denny\u2019s welcomes Jensen Huang back as Nvidia CEO",
+     "source": "CNBC"
+    },
+    {
+     "title": "Denny's Says It's 'Proud' of Its Association With Jensen Huang, X Post Says",
+     "source": "Gizmodo"
+    },
+    {
+     "title": "Denny\u2019s faces heat over gushy tribute to Nvidia CEO Jensen Huang: 'Just put the pancakes on bro'",
+     "source": "New York Post"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "in n out",
+   "traffic": "2000+",
+   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
+   "news": [
+    {
+     "title": "LAPD looking for hate crime suspect after apparent racist tirade at Sherman Oaks In-N-Out",
+     "source": "NBC Los Angeles"
+    },
+    {
+     "title": "Woman targeted in racist attack at In-N-Out in Los Angeles speaks out",
+     "source": "KTLA"
+    },
+    {
+     "title": "Woman Allegedly Yelled Anti-Asian Slurs at Mom, Daughter at In-N-Out Burger, Now Being Investigated as Hate Crime",
+     "source": "People.com"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "sam neill",
+   "traffic": "100+",
+   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
+   "news": [
+    {
+     "title": "The Fox review \u2013 talking animals are the least weird thing in this delightfully peculiar comedy",
+     "source": "The Guardian"
+    },
+    {
+     "title": "The Fox is an absurd, fable-like comedy that explores the weirdness of being human",
+     "source": "The Conversation"
+    },
+    {
+     "title": "Dario Russo embraces the Australian and the absurd with \u2018The Fox\u2019",
+     "source": "IF Magazine"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "gta 6 chapter 2 mission list",
+   "traffic": "100+",
+   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
+   "news": [
+    {
+     "title": "'GTA 6' chapter 1 is so good that I'm afraid to move on to chapter 2",
+     "source": "Mashable"
+    },
+    {
+     "title": "The unexpected joy hiding in Grand Theft Auto VI\u2019s chaos? A little routine",
+     "source": "The Guardian"
+    },
+    {
+     "title": "The 'Slow Cinema' of Grand Theft Auto VI",
+     "source": "Little White Lies"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "criminal profile gta 6",
+   "traffic": "200+",
+   "pubDate": "Wed, 25 Nov 2026 23:10:00 -0800",
+   "news": [
+    {
+     "title": "GTA 6 Criminal Profile: How the system works",
+     "source": "Red Bull"
+    },
+    {
+     "title": "Why did Rockstar Games make empathy a key mechanic in GTA 6? \"Because it's fun\" says head of development Rob Nelson",
+     "source": "Eurogamer.net"
+    },
+    {
+     "title": "GTA 6 rewards empathy because being a \"demigod stomping through the world\" is only fun for so long",
+     "source": "Yahoo"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "james franco",
+   "traffic": "100+",
+   "pubDate": "Wed, 25 Nov 2026 23:10:00 -0800",
+   "news": [
+    {
+     "title": "James Franco Admits Student Relationships Crossed Boundaries",
+     "source": "SuaraGarut.ID"
+    },
+    {
+     "title": "James Franco Admits Sleeping With His Acting Students But Denies Opening School To Lure Women",
+     "source": "Fashion Times UK"
+    },
+    {
+     "title": "James Franco Admits Sleeping With Studio 4 Students",
+     "source": "Demokratis.co.id"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "mcdonalds",
+   "traffic": "2000+",
+   "pubDate": "Wed, 25 Nov 2026 23:00:00 -0800",
+   "news": [
+    {
+     "title": "McDonald\u2019s Invites Fans to Leave Adulthood Behind with the Home Alone Meal",
+     "source": "McDonald\u2019s Corporation"
+    },
+    {
+     "title": "McDonald\u2019s Launches \u2018Home Alone\u2019 Meal Inspired by Kevin\u2019s Cravings",
+     "source": "TODAY.com"
+    },
+    {
+     "title": "McDonald\u2019s Is Releasing an All-New Holiday Meal for a Limited Time",
+     "source": "Allrecipes"
+    }
+   ],
+   "hook": false
+  }
+ ],
+ "top": [
+  {
+   "id": "obADVZMYCIY",
+   "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
+   "views": 68984,
+   "age": 0.96,
+   "dur": 1158,
+   "ch": "Grace Oasis",
+   "chid": "UCDXAykwfYd5H0_ytED8aNDg",
+   "live": false,
+   "short": false,
+   "vpd": 71858.33333333334,
+   "seed": "morning prayer"
+  },
+  {
+   "id": "jyeeN4AtC2I",
+   "title": "Lord Work Things Out In My Life From Today | A Blessed Morning Prayer",
+   "views": 53762,
+   "age": 0.92,
+   "dur": 1295,
+   "ch": "Grace For Purpose Prayers",
+   "chid": "UCvu624igK22l4CVRn59pClA",
+   "live": false,
+   "short": false,
+   "vpd": 58436.95652173913,
+   "seed": "morning prayer"
+  },
+  {
+   "id": "c1v3ojDCNjY",
+   "title": "Declare Breakthrough Over Every Area of Your Life | Morning Prayer",
+   "views": 83014,
+   "age": 1.5,
+   "dur": 1068,
+   "ch": "Grace Oasis",
+   "chid": "UCDXAykwfYd5H0_ytED8aNDg",
+   "live": false,
+   "short": false,
+   "vpd": 55342.666666666664,
+   "seed": "morning prayer"
+  }
+ ],
+ "per": {
+  "morning prayer": [
+   {
+    "id": "obADVZMYCIY",
+    "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
+    "views": 68984,
+    "age": 0.96,
+    "dur": 1158,
+    "ch": "Grace Oasis",
+    "chid": "UCDXAykwfYd5H0_ytED8aNDg",
+    "live": false,
+    "short": false,
+    "vpd": 71858.33333333334,
+    "seed": "morning prayer"
+   },
+   {
+    "id": "jyeeN4AtC2I",
+    "title": "Lord Work Things Out In My Life From Today | A Blessed Morning Prayer",
+    "views": 53762,
+    "age": 0.92,
+    "dur": 1295,
+    "ch": "Grace For Purpose Prayers",
+    "chid": "UCvu624igK22l4CVRn59pClA",
+    "live": false,
+    "short": false,
+    "vpd": 58436.95652173913,
+    "seed": "morning prayer"
+   },
+   {
+    "id": "c1v3ojDCNjY",
+    "title": "Declare Breakthrough Over Every Area of Your Life | Morning Prayer",
+    "views": 83014,
+    "age": 1.5,
+    "dur": 1068,
+    "ch": "Grace Oasis",
+    "chid": "UCDXAykwfYd5H0_ytED8aNDg",
+    "live": false,
+    "short": false,
+    "vpd": 55342.666666666664,
+    "seed": "morning prayer"
+   }
+  ],
+  "night prayer before sleep": [
+   {
+    "id": "6z9znTlss8Q",
+    "title": "Before You Sleep, Pray This Powerful Night Prayer for Your Family's Protection Tonight",
+    "views": 12164,
+    "age": 1.5,
+    "dur": 595,
+    "ch": "Prayer Today",
+    "chid": "UC-f6jkWBr5TOPFys5QoFTQg",
+    "live": false,
+    "short": false,
+    "vpd": 8109.333333333333,
+    "seed": "night prayer before sleep"
+   },
+   {
+    "id": "QTIB1vPSJlU",
+    "title": "A Powerful Bedtime Prayer for an Overthinking Mind | Let God Give You Peace",
+    "views": 3797,
+    "age": 0.25,
+    "dur": 462,
+    "ch": "Let Us Pray",
+    "chid": "UCN0EKA_RiEzMBe1nBIgWnhA",
+    "live": false,
+    "short": false,
+    "vpd": 7594.0,
+    "seed": "night prayer before sleep"
+   },
+   {
+    "id": "t4Rc3qUIFyM",
+    "title": "Call On Lord Jesus, Prayer Before Sleep - Tonight I place my trust in You. Be my refuge...",
+    "views": 10304,
+    "age": 1.5,
+    "dur": 453,
+    "ch": "Let Us Pray",
+    "chid": "UCN0EKA_RiEzMBe1nBIgWnhA",
+    "live": false,
+    "short": false,
+    "vpd": 6869.333333333333,
+    "seed": "night prayer before sleep"
+   }
+  ],
+  "bible verse of the day": [
+   {
+    "id": "bxMJrJ0eAUw",
+    "title": "Verse of the Day | Philippians 2:3\u20134 [November 25, 2026]",
+    "views": 6546,
+    "age": 1.5,
+    "dur": 383,
+    "ch": "Daily Bible Verses and Prayers",
+    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
+    "live": false,
+    "short": false,
+    "vpd": 4364.0,
+    "seed": "bible verse of the day"
+   },
+   {
+    "id": "qlyUuXyNH3s",
+    "title": "Today's Catholic Mass Readings and Gospel Reflection \u2013 November 26, 2026 | Thanksgiving",
+    "views": 2441,
+    "age": 0.67,
+    "dur": 1663,
+    "ch": "The Word of Lord",
+    "chid": "UCeyoVjZXtdCHaGdQcRk4MEQ",
+    "live": false,
+    "short": false,
+    "vpd": 3643.283582089552,
+    "seed": "bible verse of the day"
+   },
+   {
+    "id": "W9olrp_mTrI",
+    "title": "Verse of the Day | Matthew 6:6-8 [November 24, 2026]",
+    "views": 6188,
+    "age": 2.5,
+    "dur": 376,
+    "ch": "Daily Bible Verses and Prayers",
+    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
+    "live": false,
+    "short": false,
+    "vpd": 2475.2,
+    "seed": "bible verse of the day"
+   }
+  ],
+  "prayer for anxiety": [
+   {
+    "id": "isOSrIFy1FM",
+    "title": "Put Everything That Makes You Anxious Aside and Sleep Well Tonight | Sleep Prayers",
+    "views": 34888,
+    "age": 4.5,
+    "dur": 13179,
+    "ch": "Grace For Purpose",
+    "chid": "UCI8gcSTo1FowsRJdilsjsZw",
+    "live": false,
+    "short": false,
+    "vpd": 7752.888888888889,
+    "seed": "prayer for anxiety"
+   },
+   {
+    "id": "YWUgMuqPXYg",
+    "title": "Morning Prayer to Heal Anxiety | Start Your Day Calm With God",
+    "views": 4849,
+    "age": 1.5,
+    "dur": 848,
+    "ch": "Daily Morning Prayer",
+    "chid": "UCUOeUMnYw7pH6jhR_XR9szQ",
+    "live": false,
+    "short": false,
+    "vpd": 3232.6666666666665,
+    "seed": "prayer for anxiety"
+   },
+   {
+    "id": "abMBRto0Fz4",
+    "title": "Start Your Morning in God's Peace | Powerful Prayer to Remove Anxiety, Fear & Worry",
+    "views": 5465,
+    "age": 2.5,
+    "dur": 1261,
+    "ch": "Thank God Daily Prayers",
+    "chid": "UCnbLNBu__ZMA4Rzku6aBxFw",
+    "live": false,
+    "short": false,
+    "vpd": 2186.0,
+    "seed": "prayer for anxiety"
+   }
+  ],
+  "good morning bible verse": [
+   {
+    "id": "Lc_XdQpxiLI",
+    "title": "Verse of the Day | Psalm 50:14\u201315 [November 23, 2026]",
+    "views": 6636,
+    "age": 3.5,
+    "dur": 382,
+    "ch": "Daily Bible Verses and Prayers",
+    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
+    "live": false,
+    "short": false,
+    "vpd": 1896.0,
+    "seed": "good morning bible verse"
+   },
+   {
+    "id": "X1Wsm2MITx0",
+    "title": "Psalm 46:10 | Be Still And Know That I Am Lord | Nov 21, 2026 | Bible Verse Of The Day",
+    "views": 2774,
+    "age": 5.5,
+    "dur": 348,
+    "ch": "BLESSED BY HIS WORD",
+    "chid": "UCetU2VlOSupo4y9rTVjhE5A",
+    "live": false,
+    "short": false,
+    "vpd": 504.3636363636364,
+    "seed": "good morning bible verse"
+   },
+   {
+    "id": "e5VKSMt9acY",
+    "title": "Your Feelings May Say Give Up, But God\u2019s Word Says Keep Believing | Blessed Bible Verses For Today",
+    "views": 875,
+    "age": 6.5,
+    "dur": 503,
+    "ch": "Daily Bible Audio",
+    "chid": "UCL5xC4sFNGH-u-iBftrPSYA",
+    "live": false,
+    "short": false,
+    "vpd": 134.6153846153846,
+    "seed": "good morning bible verse"
+   }
+  ],
+  "psalm 91 prayer": [
+   {
+    "id": "9HcIAerVbqc",
+    "title": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible",
+    "views": 5637,
+    "age": 1.5,
+    "dur": 2547,
+    "ch": "Inspirational Prayers",
+    "chid": "UCg6RyDpfN47RF78R5sEnRjA",
+    "live": false,
+    "short": false,
+    "vpd": 3758.0,
+    "seed": "psalm 91 prayer"
+   },
+   {
+    "id": "YOlhqQFvxZQ",
+    "title": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible",
+    "views": 11448,
+    "age": 3.5,
+    "dur": 2412,
+    "ch": "Inspirational Prayers",
+    "chid": "UCg6RyDpfN47RF78R5sEnRjA",
+    "live": false,
+    "short": false,
+    "vpd": 3270.8571428571427,
+    "seed": "psalm 91 prayer"
+   },
+   {
+    "id": "t9utaqDoJ7Y",
+    "title": "PSALM 91 & PSALM 23: The Two Most Powerful Prayers In The Bible",
+    "views": 18174,
+    "age": 6.5,
+    "dur": 2605,
+    "ch": "Inspirational Prayers",
+    "chid": "UCg6RyDpfN47RF78R5sEnRjA",
+    "live": false,
+    "short": false,
+    "vpd": 2796.0,
+    "seed": "psalm 91 prayer"
+   }
+  ]
+ },
+ "refs": [
+  [
+   "Psalm 46:10",
+   1
+  ],
+  [
+   "Philippians 2:3",
+   1
+  ],
+  [
+   "Matthew 6:6",
+   1
+  ],
+  [
+   "Psalm 50:14",
+   1
+  ]
+ ],
+ "desc": {
+  "e5VKSMt9acY": "",
+  "obADVZMYCIY": "",
+  "QTIB1vPSJlU": "",
+  "t4Rc3qUIFyM": "",
+  "X1Wsm2MITx0": "",
+  "c1v3ojDCNjY": "",
+  "abMBRto0Fz4": "",
+  "bxMJrJ0eAUw": "",
+  "YOlhqQFvxZQ": "",
+  "6z9znTlss8Q": "",
+  "t9utaqDoJ7Y": "",
+  "W9olrp_mTrI": "",
+  "qlyUuXyNH3s": "",
+  "jyeeN4AtC2I": "",
+  "YWUgMuqPXYg": "",
+  "Lc_XdQpxiLI": "",
+  "9HcIAerVbqc": "",
+  "isOSrIFy1FM": ""
+ }
+}

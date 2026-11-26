@@ -21,20 +21,40 @@ BOOKS = ("Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel
 REF = re.compile(r"\b((?:[123] )?(?:%s)) (\d{1,3}):(\d{1,3})" % BOOKS, re.I)
 ET = datetime.timezone(datetime.timedelta(hours=-5))
 
+_TOK = {}
+
+def _signin_token():
+    """Access token from the saved yt-push sign-in (needs YT_CLIENT_ID + YT_CLIENT_SECRET in the env). '' if none."""
+    if "t" not in _TOK:
+        _TOK["t"] = ""
+        try:
+            sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "yt-push"))
+            import yt_push  # noqa
+            _TOK["t"] = yt_push.get_token(False) or ""
+        except Exception as e:  # noqa
+            print("sign-in token not available: %s" % str(e)[:100])
+    return _TOK["t"]
+
 def description(vid):
     # Official route first (Neko Nov 26 2026, GROW head-to-head): the YouTube Data API returns the FULL description.
     # The watch-page scrape below came back blank from runners every time. Key goes in a header, never the URL,
     # so a failed call can never print it. Costs 1 of the 10,000 free daily quota units per video.
+    # Auth: the API key if this repo has one, otherwise the channel sign-in yt-push already uses (read-only call).
     key = os.environ.get("YOUTUBE_API_KEY", "").strip()
-    if key:
+    auth = {"X-Goog-Api-Key": key} if key else None
+    if not auth:
+        tok = _signin_token()
+        auth = {"Authorization": "Bearer " + tok} if tok else None
+    if auth:
         try:
             j = json.loads(iqvid.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=%s" % vid,
-                                     tries=2, headers={"X-Goog-Api-Key": key}))
+                                     tries=2, headers=auth))
             items = j.get("items") or []
             if items and items[0].get("snippet", {}).get("description"):
                 return items[0]["snippet"]["description"]
         except Exception as e:  # noqa
-            print("api description failed for %s: %s" % (vid, str(e).replace(key, "[key]")[:120]))
+            secret = key or (auth.get("Authorization", "")[7:])
+            print("api description failed for %s: %s" % (vid, str(e).replace(secret, "[secret]")[:120] if secret else str(e)[:120]))
     try:
         html = iqvid.get("https://www.youtube.com/watch?v=%s&hl=en&gl=US" % vid)
         m = re.search(r'"shortDescription":"((?:[^"\\]|\\.)*)"', html)

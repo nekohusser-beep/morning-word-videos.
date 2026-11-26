@@ -32,7 +32,9 @@ jobs:
           pm = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-lv-60-espeak-cv-ft").eval()
           out = []
           for f in sorted(glob.glob("in/*/*.wav")):
-              subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f, "-ar", "16000", "-ac", "1", "x.wav"], check=True)
+              a0, sr0 = sf.read(f, always_2d=True); a0 = a0.mean(1)
+              import numpy as np
+              sf.write("x.wav", np.interp(np.linspace(0, len(a0) - 1, int(len(a0) * 16000 / sr0)), np.arange(len(a0)), a0), 16000)
               segs, _ = wm.transcribe("x.wav", word_timestamps=True, language="en")
               words = [(w.word.strip(), round(w.probability, 2)) for s in segs for w in s.words]
               a, _ = sf.read("x.wav")

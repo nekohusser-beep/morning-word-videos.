@@ -18,6 +18,32 @@ from kokoro_onnx import Kokoro
 k = Kokoro(f'{KD}/kokoro-v1.0.onnx', f'{KD}/voices-v1.0.bin')
 tmp = '/tmp/dv_' + os.path.basename(OUT).replace('.mp4', ''); os.makedirs(tmp, exist_ok=True)
 
+# VOICE FIXES (Nov 26 2026). Kokoro sounds these KJV words out wrong from their spelling: "goest" came out as
+# "ghost" on the Nov 24 card (caught by Gemini, proven with wav2vec2 phones; Whisper's language model hid it).
+# Respelling the text makes it worse ("go-est" is read as letters), so the sounds are given directly.
+# Scripture on screen is never touched: this only changes what the voice is told to pronounce.
+import re
+FIX = {
+    'goest': 'ɡˈoʊɪst',            # GO-ist, not "ghost"
+    'hast': 'hˈæst',               # rhymes with "fast", not "haste"
+    'strengtheneth': 'stɹˈɛŋθənəθ',  # STRENGTH-en-eth, not "streng-THEE-neth"
+    'zephaniah': 'zˌɛfənˈaɪə',     # zef-uh-NYE-uh
+    'commune': 'kəmjˈuːn',         # the verb: kuh-MYOON
+}
+_FIXRX = re.compile(r"\b(%s)\b" % '|'.join(FIX), re.I)
+
+def speak(text, voice, speed):
+    if not _FIXRX.search(text):
+        return k.create(text, voice=voice, speed=speed, lang='en-us')
+    out = []
+    for part in _FIXRX.split(text):
+        if part.lower() in FIX:
+            out.append(FIX[part.lower()])
+        elif part.strip():
+            out.append(k.tokenizer.phonemize(part.strip(), 'en-us'))
+    ph = re.sub(r"\s+([.,;:?!])", r"\1", ' '.join(out))
+    return k.create(ph, voice=voice, speed=speed, lang='en-us', is_phonemes=True)
+
 def wrap(d, text, font, maxw):
     out, cur = [], ''
     for w in text.split():
@@ -51,7 +77,7 @@ def card(i, l):
 
 parts = []
 for i, l in enumerate(ep['lines']):
-    a, sr = k.create(l['say'], voice=ep.get('voice', 'am_michael'), speed=ep.get('speed', 0.94), lang='en-us')
+    a, sr = speak(l['say'], ep.get('voice', 'am_michael'), ep.get('speed', 0.94))
     a = np.concatenate([np.zeros(int(sr*0.15), np.float32), a.astype(np.float32), np.zeros(int(sr*0.35), np.float32)])
     wav = f'{tmp}/a{i:02d}.wav'; sf.write(wav, a, sr); D = len(a) / sr
     c = card(i, l); seg = f'{tmp}/s{i:02d}.mp4'

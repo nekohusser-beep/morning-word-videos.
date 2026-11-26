@@ -29,12 +29,14 @@ for sp in spaces[:14]:
             kw = {}
             for p in ps:
                 n = p.get("parameter_name"); comp = p.get("component", "")
-                if "Video" in comp: kw[n] = {"video": handle_file(V)}
+                if "Video" in comp: kw[n] = handle_file(V); vkey = n
                 elif "Audio" in comp: kw[n] = handle_file(A)
                 elif p.get("parameter_has_default"): continue
                 else: kw[n] = p.get("parameter_default")
             print("CALL", sp, name, list(kw), flush=True)
-            res = c.predict(api_name=name, **kw)
+            try: res = c.predict(api_name=name, **kw)
+            except Exception as e1:
+                print("retry dict form", str(e1)[:200], flush=True); kw[vkey] = {"video": handle_file(V)}; res = c.predict(api_name=name, **kw)
             print("RES", str(res)[:400], flush=True)
             def find(o):
                 if isinstance(o, str) and os.path.exists(o) and o.lower().endswith((".mp4", ".webm", ".mov")): return o

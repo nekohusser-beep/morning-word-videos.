@@ -1,0 +1,39 @@
+name: la-musetalk
+on:
+  workflow_dispatch:
+    inputs:
+      tasks: {description: "repo path of tasks json", required: true, default: "tools/little-amens/tasks-test.json"}
+      out: {description: "output branch", required: true, default: "la-mt-out"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.10'}
+      - name: setup
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          git clone -q --depth 1 https://github.com/TMElyralab/MuseTalk mt
+          python -m pip install -q "pip<24.1" "setuptools<70" wheel
+          pip install -q torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cpu
+          cd mt && grep -v -i -E "^(torch|torchvision|torchaudio|tensorflow|tensorboard|gradio|spaces)([=<>~ ]|$)" requirements.txt > req2.txt && cat req2.txt && pip install -q -r req2.txt
+          pip install -q -U openmim && mim install -q mmengine && mim install -q "mmcv==2.0.1" && mim install -q "mmdet==3.1.0" && mim install -q "mmpose==1.1.0"
+          pip install -q "numpy<2" "huggingface_hub<0.26" gdown
+          pip list 2>/dev/null | grep -i -E "torch|numpy|mmcv|mmpose|mmdet|diffusers|transformers|huggingface"
+      - name: weights
+        run: |
+          cd mt && sed -n 1,80p download_weights.sh && bash download_weights.sh 2>&1 | tail -30; find models -type f | head -40
+      - name: run
+        run: |
+          python tools/little-amens/mt_prep.py ${{ inputs.tasks }}
+          mkdir -p res; cp w/cfg.yaml res/
+          cd mt && python -m scripts.inference --inference_config ../w/cfg.yaml --result_dir ../res/out --unet_model_path models/musetalkV15/unet.pth --unet_config models/musetalkV15/musetalk.json --version v15 2>&1 | tee ../res/log.txt | tail -60
+      - name: push
+        if: always()
+        run: |
+          mkdir -p res; find res -type f | head -50
+          cd res && find . -name "*.mp4" -size +90M -delete; git init -q && git checkout -q -b ${{ inputs.out }} && git add -A && git -c user.name=bot -c user.email=actions@users.noreply.github.com commit -qm out && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ${{ inputs.out }}

@@ -1,0 +1,21 @@
+# adhd/stack/skip-big-11-twoweeks.mp4 lang=en
+  0.00-  2.06 Dre! I'm putting in my two weeks!
+   words: Dre!@0.00 I'm@0.66 putting@1.04 in@1.22 my@1.40 two@1.52 weeks!@1.72
+  2.42-  3.26 Congrats, man!
+   words: Congrats,@2.42 man!@3.06
+  3.94-  5.90 Wait, who's gonna do your work?
+   words: Wait,@3.94 who's@4.92 gonna@5.14 do@5.28 your@5.46 work?@5.60
+  6.28-  7.02 The new guy!
+   words: The@6.28 new@6.58 guy!@6.76
+  7.38-  8.14 Hmm, no.
+   words: Hmm,@7.38 no.@7.92
+  9.14- 10.72 I mean, who's gonna do my work?
+   words: I@9.14 mean,@9.36 who's@9.62 gonna@9.78 do@9.92 my@10.16 work?@10.36
+ 11.04- 12.78 You've been doing my work since 2019.
+   words: You've@11.04 been@11.24 doing@11.34 my@11.50 work@11.72 since@11.94 2019.@12.12
+ 13.40- 15.16 I'll learn the printer. I'll learn the printer.
+   words: I'll@13.40 learn@13.60 the@13.74 printer.@13.88 I'll@14.50 learn@14.64 the@14.76 printer.@14.88
+ 15.92- 16.92 He gave me his desk.
+   words: He@15.92 gave@16.06 me@16.22 his@16.38 desk.@16.52
+ 17.66- 18.52 And his work.
+   words: And@17.66 his@18.10 work.@18.24

@@ -1,0 +1,56 @@
+{
+ "voices": "../voices/lo1126",
+ "lines": "lines.json",
+ "gap": 0.14,
+ "shots": [
+  {
+   "clip": "clips/c1.mp4",
+   "lines": [
+    0
+   ]
+  },
+  {
+   "clip": "clips/c2.mp4",
+   "lines": [
+    1
+   ]
+  },
+  {
+   "clip": "clips/c3.mp4",
+   "lines": [
+    2
+   ],
+   "tail": 0.6
+  },
+  {
+   "clip": "clips/c4.mp4",
+   "lines": [
+    3,
+    4
+   ]
+  },
+  {
+   "clip": "clips/c5.mp4",
+   "lines": [
+    5
+   ],
+   "tail": 0.3
+  }
+ ],
+ "hook": [
+  [
+   "MY WIFE LABELED"
+  ],
+  [
+   "HER LEFTOVERS"
+  ],
+  [
+   "I DIDN'T READ"
+  ]
+ ],
+ "end": [
+  "WHO'S EATING",
+  "YOUR LEFTOVERS?"
+ ],
+ "end_hold": 1.8
+}

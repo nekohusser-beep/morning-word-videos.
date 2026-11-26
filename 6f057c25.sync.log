@@ -1,0 +1,2 @@
+2026-11-26 18:32:49,060 SyncNetInstance INFO: Using device: cpu
+2026-11-26 18:32:49,164 __main__ INFO: Model data/syncnet_v2.model loaded.

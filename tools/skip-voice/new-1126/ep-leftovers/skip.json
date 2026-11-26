@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "skip",
+  "text": "Two A.M. Thanksgiving plate. Nobody's gonna know.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "Nia's. Don't. That's not even a full sentence. Legally, that's not binding.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "How?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "skip",
+  "text": "You waited two hours?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ }
+]

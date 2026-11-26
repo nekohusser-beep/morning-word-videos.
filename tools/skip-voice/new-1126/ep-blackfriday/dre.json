@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "dre",
+  "text": "Three A.M. Fourteen hours in line. That TV is mine.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "Since Thanksgiving. I left before the pie. That's sacrifice.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "dre",
+  "text": "I got it! Two ninety-nine!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "dre",
+  "text": "Did they at least have pie online?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ }
+]

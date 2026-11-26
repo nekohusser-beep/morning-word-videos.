@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "skip",
+  "text": "Two A.M. Thanksgiving plate. Nobody's gonna know.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "Nia's. Don't. That's not even a full sentence. Legally, that's not binding.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "How?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "nia",
+  "text": "I've been sitting here since midnight.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "skip",
+  "text": "You waited two hours?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "nia",
+  "text": "I knew you'd come. I made you your own plate. You just never read.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ }
+]

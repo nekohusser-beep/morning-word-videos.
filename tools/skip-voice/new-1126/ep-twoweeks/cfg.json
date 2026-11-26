@@ -1,0 +1,51 @@
+{
+ "voices": "../voices/tw1126",
+ "lines": "lines.json",
+ "gap": 0.14,
+ "shots": [
+  {
+   "clip": "clips/c1.mp4",
+   "lines": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "clip": "clips/c2.mp4",
+   "lines": [
+    3
+   ]
+  },
+  {
+   "clip": "clips/c3.mp4",
+   "lines": [
+    4
+   ],
+   "tail": 0.4
+  },
+  {
+   "clip": "clips/c4.mp4",
+   "lines": [
+    5
+   ],
+   "tail": 1.0
+  }
+ ],
+ "hook": [
+  [
+   "I PUT IN MY TWO WEEKS"
+  ],
+  [
+   "MY COWORKER"
+  ],
+  [
+   "PANICKED"
+  ]
+ ],
+ "end": [
+  "TAG THE COWORKER WHO'D",
+  "BE LOST WITHOUT YOU"
+ ],
+ "end_hold": 1.8
+}

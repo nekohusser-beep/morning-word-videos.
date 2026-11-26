@@ -120,6 +120,11 @@ def main(cfgp, outp):
         for n, c in enumerate(cs):
             p = f'{tmp}/c{i}_{n}.png'; card([c.upper()], 100, 1360, p, box=False)
             ov.append((p, starts[i] + L * n / len(cs), starts[i] + L * (n + 1) / len(cs)))
+    # labels: [{"shot": j, "text": ["2:52 PM"], "dur": 1.6}] -> top-center card at the start of shot j
+    for n, lb in enumerate(cfg.get('labels', [])):
+        p = f'{tmp}/lb{n}.png'; card(lb['text'], 110, 130, p)
+        a0 = max(shot_spans[lb['shot']][0], 3.6 if lb['shot'] == 0 else 0)
+        ov.append((p, a0, a0 + lb.get('dur', 1.6)))
     if cfg.get('end'):
         p = f'{tmp}/end.png'; card(cfg['end'], 84, 130, p)
         ov.append((p, total - end_hold, total + 1))

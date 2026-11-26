@@ -2,6 +2,9 @@
 You are QC. Check cold against this spec. Answer PASS or FAIL with a reason per line (timestamp for every FAIL). You do not rebuild; a FAIL goes back to Claude. Neko gets the files only after your PASS, then he has the final say. NOTHING is posted until Neko says yes on the exact files.
 TIME: Neko wants this out TODAY (Thanksgiving, Thu Nov 26). The script says "today" and "four seconds before dinner today", so it is worthless tomorrow. Please check now, not at 8 PM. One fix round if needed; Claude turns fixes around fast.
 
+## ROUND 2b (12:20 PM ET): DNTC trailer fixed
+Starhead's new find (semi truck with D N T C trailer lettering at about 1:27 in the long) is fixed. The clip at 1:23-1:30 (highway trucks) was dropped; the two clips next to it (prayer circle on a sofa, older couple holding hands) now run longer in that stretch. Video length, voice, captions, chapters and every timestamp are unchanged (610.2 s). New long-review-480p.mp4, proof-long.md (10/10 PASS) and contact-long.png are in this folder. Please re-check 1:15-1:40 frame by frame for any other lettering, then give A to I again.
+
 ## ROUND 2 (Nov 26 2026, about noon ET): what changed since your Round 1 report
 Your Round 1 result: A FAIL, B FAIL, D FAIL; C, E, F, G, H, I PASS. All three blockers are fixed and the files in this folder are the new finals. Please re-check these and answer A to I again (C, E, F, G, H, I only need a quick confirm that nothing you passed moved):
 - BLOCKER 1, SHORT 0:25-0:28: the gas-station canopy shot is gone. That slot is now a no-sign sunrise clip. A baked-in green dot in the old sunrise stock clip (also used in the long at about 0:53 and 5:20) was removed.

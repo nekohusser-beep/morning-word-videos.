@@ -1,5 +1,5 @@
 # PROOF PACK for Where-Are-the-Nine-Thanksgiving-Word.mp4
-built Nov 26 2026 12:05 PM ET | sha256 695a5f5ea1ed1209... | 225434226 bytes
+built Nov 26 2026 12:16 PM ET | sha256 7067b9a4af7a9dbb... | 225672662 bytes
 
 | # | Check | Result |
 |---|---|---|
@@ -33,7 +33,7 @@ none found (silencedetect -50 dB, 1 s). A voice dropout under a music bed is NOT
 ```
 ### 5. FRAMES (first, quarter, middle, three-quarter, last saved for the reviewer to LOOK at): PASS
 ```
-5/5 frames in tgl/proof_final_long/frames; contact sheet tgl/proof_final_long/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
+5/5 frames in proof_final_long2/frames; contact sheet proof_final_long2/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
 ```
 ### 6. BANNED PHRASES (tools/humanize/gate.py on the script): PASS
 ```
@@ -58,46 +58,3 @@ ok 16/16 words 'o give thanks unto the lord...'; ok 6/6 words 'jesus master have
 ```
 
 GATE: PASS (10 of 10). Send to Starhead with the spec.
-
-## Evidence notes (added by Claude), ROUND 2 build
-**Scripture source:** thiagobodruk/bible en_kjv.json (KJV).
-
-### Verse table (long, 10 verses)
-| Verse | Result | Words | On-screen is exact KJV run | Same as script | Spoken unbroken | Omitted lead-in | Omitted tail |
-|---|---|---|---|---|---|---|---|
-| Psalm 107:1 | **PASS** | 16 | True | True | True | - | - |
-| Luke 17:13 | **PASS** | 6 | True | True | True | and they lifted up their voices and said | - |
-| Luke 17:15-16 | **PASS** | 37 | True | True | True | - | - |
-| Luke 17:17 | **PASS** | 10 | True | True | True | and jesus answering said | - |
-| Luke 17:19 | **PASS** | 10 | True | True | True | and he said unto him | - |
-| Psalm 103:2 | **PASS** | 12 | True | True | True | - | - |
-| James 1:17 | **PASS** | 27 | True | True | True | - | - |
-| Romans 1:21 | **PASS** | 27 | True | True | True | - | - |
-| Philippians 4:6-7 | **PASS** | 40 | True | True | True | - | - |
-| 1 Thessalonians 5:18 | **PASS** | 17 | True | True | True | - | - |
-
-### Heard vs written: how the two speech models were reconciled
-medium.en is the strict pass, large-v3 the independent second pass, both run on the audio of THIS final file. A difference is cleared only when it is spacing, digits vs spelled numbers, or the second model heard the written word. Log:
-```
-spacing only: wrote 'for ever' / heard 'forever'
-spacing only: wrote 'every thing' / heard 'everything'
-digits vs words: wrote 'two thousand' / heard '2000'
-digits vs words: wrote 'first' / heard '1'
-spacing only: wrote 'every thing' / heard 'everything'
-second pass heard it as written: wrote 'in' / first pass heard 'and'
-spacing only: wrote 'every thing' / heard 'everything'
-spacing only: wrote 'every thing' / heard 'everything'
-```
-Tail: medium.en ends at "day." (602.64 s) with no extra word. large-v3 adds one "Amen." at 603.1 s after "have a blessed day"; the narration-only track has the decaying echo of "day" there (about -33 dB at 603.0 s) and is silent from 603.6 s (rms 0.0). Whisper invents a word over the closing music. Confirm by ear. The Round 1 "you" at 607 s is gone (the last bell hit under the music was removed and the end fade is 8 s).
-
-### Pronunciation
-Round 1 flagged "uses" at 1:55. The line was reworded to "And that's the exact word the psalm chose." and re-voiced in the same narrator voice, padded to the identical duration so no timestamp moved. medium.en heard "the exact word the Psalm chose"; large-v3 heard "the exact word the Psalm... ...chose" (it marks a short pause). Confirm by ear.
-
-### Footage (what a script can and cannot prove)
-No machine proof of brand-free footage is claimed. Round 1 showed OCR cannot read small stylised signs (it missed the amigo canopy and the CONSTANT clock). The three Round 1 shots were swapped and the new finals were looked at frame by frame on a contact sheet every 6 s by Claude; the real brand check is yours. A baked-in green dot in one sunrise stock clip was removed. Free Pexels footage, one clip set per paragraph (plan.py).
-
-### Black-frame check
-The candle shot at 9:33-9:39 first failed this check (a candle in a nearly black room is over 98% dark). Its exposure was lifted; it now reads as a candle in a dim room and the check passes.
-
-### IQ Vid pre-post (tools/iqvid/prepost.py)
-Title A: He Healed Ten Lepers. Only One Said Thank You. Chapters (0:00, 0:47, 2:03, 3:16, 4:15, 5:26, 5:56, 7:13, 8:28, 9:06) are unchanged: same cut length, same audio timing.

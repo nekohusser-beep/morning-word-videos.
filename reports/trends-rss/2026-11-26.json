@@ -1,203 +1,203 @@
 {
  "geo": "US",
- "made_utc": "2026-11-26T10:06:18",
+ "made_utc": "2026-11-26T19:51:34",
  "items": [
   {
-   "query": "gma",
-   "traffic": "100+",
-   "pubDate": "Thu, 26 Nov 2026 01:50:00 -0800",
+   "query": "john 3:16",
+   "traffic": "10000+",
+   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
    "news": [
     {
-     "title": "'GMA' Deals & Steals Free Shipping Bonanza",
-     "source": "Good Morning America"
+     "title": "Thankfulness at John 3:16",
+     "source": "KTUL"
     },
     {
-     "title": "'GMA' Deals & Steals: Holiday gifts with free shipping",
+     "title": "John 3:16 Mission",
+     "source": "Tulsa World"
+    },
+    {
+     "title": "John 3:16 Mission",
+     "source": "Tulsa World"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "joe biden",
+   "traffic": "1000+",
+   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
+   "news": [
+    {
+     "title": "Joe Biden, 84, pictured inside home amid cancer battle: 'I am humbled'",
      "source": "Yahoo"
     },
     {
-     "title": "'GMA' Deals & Steals for $20 and under",
-     "source": "ABC News - Breaking News, Latest News and Videos"
+     "title": "Shapiro Accuses Biden of Not Doing Enough to Rein In Netanyahu",
+     "source": "WSJ"
+    },
+    {
+     "title": "Josh Shapiro, set to run in 2028, slams \u2018failed\u2019 Netanyahu, says Biden didn\u2019t check Israel enough",
+     "source": "The Times of Israel"
     }
    ],
-   "hook": false
+   "hook": true
   },
   {
-   "query": "sl-a vs ind-a",
+   "query": "laporta",
    "traffic": "500+",
-   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
+   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
    "news": [
     {
-     "title": "SLA vs INDA, 1st Semi-Final (A1 v B2), ACC Men's Asia Cup Rising Stars 2026 - Commentary",
-     "source": "Cricbuzz"
+     "title": "Barcelona: Laporta atiza a Real Madrid y amenaza con llevar al club a juicio",
+     "source": "ESPN Deportes"
     },
     {
-     "title": "India A vs Sri Lanka A ACC Men's Asia Cup Rising Stars live score, toss winner, winning probability, result and highlights from Doha",
-     "source": "Yahoo Sports"
+     "title": "Caso Negreira: \u00bfpor qu\u00e9 el FC Barcelona y Florentino P\u00e9rez terminaron en los tribunales?",
+     "source": "Sports Illustrated"
     },
     {
-     "title": "Sri Lanka A vs India A at Doha, DP World Men's Asia Cup Rising Stars, Semi-Final, 26 Nov 2026",
-     "source": "BCCI"
+     "title": "Florentino y el Bar\u00e7a cierran sin acuerdo su encuentro por el Caso Negreira",
+     "source": "MARCA"
     }
    ],
    "hook": false
   },
   {
-   "query": "modot",
-   "traffic": "10000+",
-   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
-   "news": [
-    {
-     "title": "LIVE RADAR: Snow moves into St. Louis as Thanksgiving travel ramps up",
-     "source": "KSDK"
-    },
-    {
-     "title": "A turkey of a winter storm",
-     "source": "FOX 2"
-    },
-    {
-     "title": "Winter Weather Advisory for Springfield area heading into Thanksgiving",
-     "source": "NPR Illinois"
-    }
-   ],
-   "hook": true
-  },
-  {
-   "query": "buckingham jubilee gta 6 location",
-   "traffic": "200+",
-   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
-   "news": [
-    {
-     "title": "Buckingham Jubilee GTA 6 Location \u2013 Where to Find the Rolls-Royce SUV",
-     "source": "VICE"
-    },
-    {
-     "title": "Where to Find All of Randy\u2019s Wishlist Supercars in GTA 6\u2014Car Locations & Tips",
-     "source": "Insider Gaming"
-    },
-    {
-     "title": "How to steal the Pegassi Infernus in GTA 6",
-     "source": "PC Gamer"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "egypt",
+   "query": "georgetown vs texas",
    "traffic": "1000+",
-   "pubDate": "Thu, 26 Nov 2026 01:10:00 -0800",
+   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
    "news": [
     {
-     "title": "At least 31 killed in fuel tanker fire near Cairo, Egyptian authorities say",
-     "source": "CNN"
+     "title": "Texas vs. Georgetown preview: Hoyas\u2019 inside-out offense tests the Longhorns in San Diego",
+     "source": "Burnt Orange Nation"
     },
     {
-     "title": "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people",
-     "source": "NBC News"
-    },
-    {
-     "title": "Thirty-one killed in fire after vehicle overturns in Egypt",
-     "source": "Reuters"
-    }
-   ],
-   "hook": true
-  },
-  {
-   "query": "3",
-   "traffic": "1000+",
-   "pubDate": "Thu, 26 Nov 2026 01:00:00 -0800",
-   "news": [
-    {
-     "title": "Guardians bringing back lefty Griffin on 3-year, $48 million deal (source)",
-     "source": "MLB.com"
-    },
-    {
-     "title": "Foster Griffin agrees to 3-year, $48 million deal to stay with Guardians",
-     "source": "ESPN"
-    },
-    {
-     "title": "Foster Griffin returns to Cleveland on 3-year deal with Guardians: Sources - The Athletic",
+     "title": "How to watch Georgetown vs. Texas men\u2019s basketball: TV channel and streaming options for November 26",
      "source": "The New York Times"
+    },
+    {
+     "title": "Game Thread: Georgetown vs No. 7 Texas",
+     "source": "Yahoo Sports"
     }
    ],
    "hook": false
   },
   {
-   "query": "the legend of zelda wind waker",
+   "query": "lyon - lillestr\u00f8m",
+   "traffic": "500+",
+   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
+   "news": [
+    {
+     "title": "[FREE!!] Lyon vs Lillestr\u00f8m Live: UEFA Europa League - League Stage",
+     "source": "Charleston Sun-Sentinel"
+    },
+    {
+     "title": "Olympique Lyonnais vs Lillestr\u00f8m Predictions, Picks & Odds \u2013 26/11/2026",
+     "source": "ToffeeWeb"
+    },
+    {
+     "title": "Lyon vs Lillestrom Lineups, Prediction, Betting Picks & Odds",
+     "source": "Oddschecker"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "al pacino",
+   "traffic": "1000+",
+   "pubDate": "Thu, 26 Nov 2026 11:20:00 -0800",
+   "news": [
+    {
+     "title": "Al Pacino and Anthony Hopkins Fuel the Racecar Revolution in the Official 'Maserati: The Brothers' Trailer",
+     "source": "Hypebeast"
+    },
+    {
+     "title": "Michele Morrone, Jessica Alba, Andy Garcia, Anthony Hopkins, and Al Pacino Star in \u2018Maserati: The Brothers\u2019 \u2013 Trailer and Release Date",
+     "source": "Movie Vine"
+    },
+    {
+     "title": "The film \"Maserati: The Brothers\" arrives in Egyptian cinemas on December 3rd.",
+     "source": "\u0635\u0648\u062a \u0627\u0644\u0625\u0645\u0627\u0631\u0627\u062a"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "movies in theaters",
+   "traffic": "2000+",
+   "pubDate": "Thu, 26 Nov 2026 11:20:00 -0800",
+   "news": [
+    {
+     "title": "What Are Local Movie Theaters Showing for Thanksgiving 2026?",
+     "source": "IndieWire"
+    },
+    {
+     "title": "What Are Local Movie Theaters Showing for Thanksgiving 2026?",
+     "source": "IMDb"
+    },
+    {
+     "title": "Johnny Depp is back as Scrooge, patron saint of second chances",
+     "source": "The Economist"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "port hardy hospital",
    "traffic": "200+",
-   "pubDate": "Thu, 26 Nov 2026 00:50:00 -0800",
+   "pubDate": "Thu, 26 Nov 2026 11:20:00 -0800",
    "news": [
     {
-     "title": "Wind Waker Recomp Brings Zelda Game to Native PC",
-     "source": "Demokratis.co.id"
+     "title": "The E.R. Closed at 5 P.M. A Dying Woman Showed Up 11 Minutes Too Late.",
+     "source": "The New York Times"
     },
     {
-     "title": "Legend Of Zelda: Wind Waker Is Finally Getting The Remaster It Deserves",
-     "source": "OpenCritic"
+     "title": "B.C. premier pledges to bolster health-care staffing as woman dies outside closed ER",
+     "source": "Global News"
     },
     {
-     "title": "Wind Waker Recomp Brings Game to Native PC",
-     "source": "cwibc.co.id"
+     "title": "Mother dies after seeking help at closed ER, family launches fundraiser",
+     "source": "CTV News"
     }
    ],
    "hook": false
   },
   {
-   "query": "georgia basketball",
-   "traffic": "100+",
-   "pubDate": "Thu, 26 Nov 2026 00:50:00 -0800",
+   "query": "crystal palace - real sociedad",
+   "traffic": "2000+",
+   "pubDate": "Thu, 26 Nov 2026 11:10:00 -0800",
    "news": [
     {
-     "title": "Georgia basketball takes on Cincinnati to open ESPN Events Invitational",
-     "source": "247Sports"
+     "title": "Crystal Palace v Real Sociedad Saves Odds",
+     "source": "FanDuel Sportsbook"
     },
     {
-     "title": "Georgia vs Cincinnati Prediction, Pick, College Basketball Odds for Thursday, Nov. 26",
+     "title": "Crystal Palace vs Real Sociedad Predictions: Goals to flow at Selhurst",
+     "source": "Goal.com"
+    },
+    {
+     "title": "Crystal Palace-Real Sociedad: Palace arrive with four absentees",
+     "source": "Tu Futbolero"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "juventus vs omonoia",
+   "traffic": "2000+",
+   "pubDate": "Thu, 26 Nov 2026 11:10:00 -0800",
+   "news": [
+    {
+     "title": "Juventus complete final training session ahead of Omonia",
      "source": "Yahoo Sports"
     },
     {
-     "title": "UC Bearcats face Georgia, Boston College in Thanksgiving holiday hoops",
-     "source": "Cincinnati Enquirer"
-    }
-   ],
-   "hook": true
-  },
-  {
-   "query": "dominion power outage",
-   "traffic": "500+",
-   "pubDate": "Thu, 26 Nov 2026 00:20:00 -0800",
-   "news": [
-    {
-     "title": "Coastal storm warning expected to have significant impacts on region",
-     "source": "WAVY.com"
+     "title": "Juventus, Ekhator to start before possible Monza move for Varela",
+     "source": "Goal.com"
     },
     {
-     "title": "Virginia Beach braces for Thanksgiving storm as officials warn of flooding, strong winds and rough surf",
-     "source": "13newsnow.com"
-    },
-    {
-     "title": "Damaging winds, heavy rain and flooding expected ahead of Thanksgiving storm in Hampton Roads",
-     "source": "The Virginian-Pilot"
-    }
-   ],
-   "hook": true
-  },
-  {
-   "query": "dennys",
-   "traffic": "500+",
-   "pubDate": "Thu, 26 Nov 2026 00:10:00 -0800",
-   "news": [
-    {
-     "title": "\u2018Your booth is waiting\u2019: Denny\u2019s welcomes Jensen Huang back as Nvidia CEO",
-     "source": "CNBC"
-    },
-    {
-     "title": "Denny's Says It's 'Proud' of Its Association With Jensen Huang, X Post Says",
-     "source": "Gizmodo"
-    },
-    {
-     "title": "Denny\u2019s faces heat over gushy tribute to Nvidia CEO Jensen Huang: 'Just put the pancakes on bro'",
-     "source": "New York Post"
+     "title": "Spalletti makes eight changes for Juventus against Omonia",
+     "source": "Tu Futbolero"
     }
    ],
    "hook": false

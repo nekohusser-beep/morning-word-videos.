@@ -1,0 +1,22 @@
+Loaded as API: https://black-forest-labs-flux-1-kontext-dev.hf.space
+Client.predict() Usage Info
+---------------------------
+Named API endpoints: 2
+
+ - predict(input_image, prompt, seed, randomize_seed, guidance_scale, steps, api_name="/infer") -> (result, seed)
+    Parameters:
+     - [Image] input_image: dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any)) (required)  (For input, either path or url must be provided. For output, path is always provided.) 
+     - [Textbox] prompt: str (required)  
+     - [Slider] seed: float (not required, defaults to:   0)  
+     - [Checkbox] randomize_seed: bool (not required, defaults to:   True)  
+     - [Slider] guidance_scale: float (not required, defaults to:   2.5)  
+     - [Slider] steps: float (not required, defaults to:   28)  
+    Returns:
+     - [Image] result: dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any)) 
+     - [Slider] seed: float (numeric value between 0 and 2147483647) 
+
+ - predict(image, api_name="/lambda") -> upload_the_image_for_editing
+    Parameters:
+     - [Image] image: dict
+a_two 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/b496de8044e2424de7db46a7cf3496d5503c8b2b325abeae1efc23fa24bc8741/image.webp
+b_box 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/310972f2af906c2c8e0ba59f66473b98188b741a0628c5991e6ae59400b4c17d/image.webp

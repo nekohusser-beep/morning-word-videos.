@@ -22,11 +22,11 @@ jobs:
           pip install -q torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cpu
           cd mt && grep -v -i -E "^(torch|torchvision|torchaudio|tensorflow|tensorboard|gradio|spaces)([=<>~ ]|$)" requirements.txt > req2.txt && cat req2.txt && pip install -q -r req2.txt
           pip install -q -U openmim && mim install -q mmengine && mim install -q "mmcv==2.0.1" && mim install -q "mmdet==3.1.0" && mim install -q "mmpose==1.1.0"
-          pip install -q "numpy<2" "huggingface_hub<0.26" gdown
+          pip install "numpy<2" "huggingface_hub==0.25.2" gdown 2>&1 | tail -3
           pip list 2>/dev/null | grep -i -E "torch|numpy|mmcv|mmpose|mmdet|diffusers|transformers|huggingface"
       - name: weights
         run: |
-          cd mt && sed -n 1,80p download_weights.sh && bash download_weights.sh 2>&1 | tail -30; find models -type f | head -40
+          cd mt && python ../tools/little-amens/mt_weights.py 2>&1 | tail -30 && pip list 2>/dev/null | grep -i -E "huggingface|transformers|diffusers|numpy"
       - name: run
         run: |
           python tools/little-amens/mt_prep.py ${{ inputs.tasks }}

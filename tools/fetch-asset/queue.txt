@@ -10,3 +10,4 @@ https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4nei
 https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/f7b97bdd25952d5b97fc31963bfbae85-82e94ce7-1e37-40b0-91f8-fdd5c0856719_c2pa_1795685394765_668c27e8.png tools/skip-voice/new-1126/ep-leftovers/art/l5_plate.png
 https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_d6a55e47a2ed64a34857e27db39807d1_1795685512325_5420f722.mp4 tools/skip-voice/new-1126/ep-leftovers/clips/c1.mp4
 https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_0cefdfe0ee51910c2ce3deea03876d6d_1795685514551_e3a4faaa.mp4 tools/skip-voice/new-1126/ep-leftovers/clips/c2.mp4
+

@@ -19,4 +19,5 @@ jobs:
             git add "$DEST"
           done < tools/fetch-asset/queue.txt
           git config user.name "fetch-bot"; git config user.email "actions@users.noreply.github.com"
-          git commit -qm "fetch-asset [skip ci]" && git pull -q --rebase && git push -q
+          git commit -qm "fetch-asset [skip ci]" || exit 0
+          for i in 1 2 3 4 5 6; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep $((i*4)); done; exit 1

@@ -107,6 +107,7 @@ def top(img, tt):
         while d.textlength(ht, font=hf) > W - 60 and hf.size > 50: hf = ImageFont.truetype(FB, hf.size - 6)  # long words: shrink to fit
         text_c(d, 170, ht, hf, fill=(255, 225, 40), sw=11)
         return
+    if cfg.get("title_off"): return          # no standing title box (when the art carries its own sign)
     tl = cfg["title"]; bh = 70 * len(tl) + 40
     bw = max(d.textlength(l, font=TITLEF) for l in tl) + 60
     bx, by = (W - bw) / 2, 150
@@ -123,8 +124,13 @@ def frame(n):
     if tt < 3.0: z += 0.03 * (int(tt / 0.45) % 2)          # visual change every beat in the first 3 s
     z *= 1.0 + 0.004 * math.sin(tt * 2.1)
     fx = SIDE.get(scene, {}).get(who, 0.32 if who == "skip" else 0.68) * AW
+    cyf = 0.42
+    zm = cfg.get("zoom", {}).get(str(li))      # optional per-line shot: [zoom, y centre 0-1, x centre 0-1 (optional)] = a cut to a closer framing
+    if zm:
+        z = zm[0] * (1.0 + 0.04 * p) * (1.0 + 0.004 * math.sin(tt * 2.1)); cyf = zm[1]
+        if len(zm) > 2: fx = zm[2] * AW
     cw, ch = AW / z, AW / z * (H / W)
-    cx = min(max(fx, cw / 2), AW - cw / 2); cy = min(max(AH * 0.42, ch / 2), AH - ch / 2)
+    cx = min(max(fx, cw / 2), AW - cw / 2); cy = min(max(AH * cyf, ch / 2), AH - ch / 2)
     img = arts[scene].copy()
     if i is not None: draw_mouth(img, scene, who, float(np.clip(env[n] if n < len(env) else 0, 0, 1)))
     img = img.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)

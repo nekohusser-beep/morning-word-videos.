@@ -1,0 +1,18 @@
+name: find-live-desc
+# Read-only: lists live morning-card Shorts whose description repeats a cut-off piece of the verse and prints
+# the corrected description as a yt-push job line. Nothing is written or changed here.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q cryptography
+      - run: python3 tools/daily-verse/find_live_desc.py

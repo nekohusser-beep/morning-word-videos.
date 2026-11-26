@@ -1,0 +1,144 @@
+=== KEYWORDS: black friday coworker ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+black friday coworker                  | 38 low       |  361.6K |   11.6K |   0% |  10%
+black friday employee prank            | 38 low       |    1.2M |   12.8K |  40% |   0%
+black friday employee edition          | 31 low       |     13K |    4.7K |  30% |  40%
+black friday shopping fights           | 32 low       |  266.8K |      8K |   0% |  10%
+black friday skit                      | 38 low       |  355.5K |     56K |   0% |  20%
+black friday scam                      | 49 medium    |    8.4K |   69.8K |  90% |  60%
+black friday clip                      | 40 medium    |  320.6K |   31.5K |  20% |  10%
+why is black friday called black frida | 39 low       |   54.5K |     371 |  60% |  20%
+when black friday comes                | 39 low       |  299.3K |     809 |  20% |  20%
+where black people and white people bu | 30 low       |   22.1K |    1.5K |   0% |  30%
+MATCHING (0): 
+QUESTIONS (4): why is black friday called black friday | when black friday comes | where black people and white people buy furniture | is black friday
+RELATED (22): black friday employee prank | black friday employee edition | black friday shopping fights | black friday skit | black friday scam | black friday clip | worst of black friday | truth about black friday | black friday store chaos | black friday truth | black friday rant | black coworkers | black friday crazy | black friday shopping chaos | black friday stores | black friday campaign | black friday 2001 | black friday 2005 | fake black friday employee prank ireland | black friday store rush | black friday insane | black friday panic
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: black friday funny ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+black friday funny                     | 40 medium    |  361.6K |  136.2K |  20% |   0%
+black friday funny moments             | 43 medium    |  245.8K |   54.9K |  30% |  10%
+black friday funny skits               | 38 low       |  518.6K |     83K |   0% |  10%
+black friday funny videos              | 37 low       |    130K |   88.6K |   0% |  10%
+black friday funny scene               | 39 low       |  588.5K |   83.6K |   0% |   0%
+starkid black friday funny moments     | 16 very low  |  132.3K |     611 |   0% |   0%
+rebecca black friday funny             | 40 medium    |    6.7M |   51.1K |   0% |  10%
+rebecca black friday funny or die      | 33 low       |    1.1M |   42.2K |   0% |   0%
+black friday usa funny                 | 38 low       |  326.2K |    2.6K |  10% |  10%
+black friday comedy scene              | 40 medium    |  790.4K |    7.9K |   0% |   0%
+when black friday                      | 54 medium    |  123.1K |  452.7K |   0% |   0%
+when black friday comes                | 39 low       |  299.3K |     809 |  20% |  20%
+MATCHING (8): black friday funny moments | black friday funny skits | black friday funny videos | black friday funny scene | starkid black friday funny moments | rebecca black friday funny | rebecca black friday funny or die | black friday usa funny
+QUESTIONS (2): when black friday | when black friday comes
+RELATED (17): black friday comedy scene | rebecca black friday fun loop | it is black friday | black friday comedy | black friday clips | black friday compilation | black friday wanna have fun | black friday america | black friday pepper spray | black friday skit | black friday best moments | black friday crazy moments | black friday hd movie | black friday hd | black friday black friday | black friday chaos compilation | black friday people
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: thanksgiving leftovers funny ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+thanksgiving leftovers funny           | 25 low       |   47.9K |    2.3K |   0% |  40%
+thanksgiving leftovers                 | 51 medium    |   92.7K |  199.9K |  90% |  10%
+thanksgiving leftovers meme            | 12 very low  |   16.4K |    1.1K |  10% |  50%
+thanksgiving leftovers interview       | 14 very low  |    4.8K |     291 |   0% |  60%
+who ate all the falafel                | 25 low       |    5.4K |    1.7K |   0% |  70%
+when thanksgiving gets personal        | 43 medium    |   39.3K |  151.9K |   0% |  40%
+MATCHING (0): 
+QUESTIONS (2): who ate all the falafel | when thanksgiving gets personal
+RELATED (14): thanksgiving leftovers | thanksgiving leftovers meme | thanksgiving leftovers interview | thanksgiving leftovers still hitting | white people thanksgiving food | thanksgiving dinner in a can | thanksgiving leftovers mukbang | thanksgiving dinner ruined | eating thanksgiving leftovers | thanksgiving dinner freak out | thanksgiving dinner argument | thanksgiving family dinner | thanksgiving dinner meltdown | thanksgiving dinner meme
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: wife leftovers ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+wife leftovers                         | 36 low       |      5K |    7.7K |  70% |  60%
+total wine leftovers                   |  8 very low  |     366 |      73 |   0% |  70%
+dirk nowitzki wife leftovers           | 14 very low  |    168K |      7K |   0% |  30%
+eating wife's leftovers                | 33 low       |   14.2K |   11.1K |   0% |  50%
+wife refuses to cook                   | 42 medium    |   65.6K |    8.5K |  30% |   0%
+wife cruelty                           | 37 low       |   27.6K |    4.3K |  60% |  50%
+when wife leaves home                  | 39 low       |   80.3K |    273K |   0% |  10%
+when your wife leaves                  | 43 medium    |   42.5K |     94K |  10% |  10%
+why i am getting divorced              | 43 medium    |  279.1K |  112.8K |   0% |   0%
+MATCHING (1): dirk nowitzki wife leftovers
+QUESTIONS (3): when wife leaves home | when your wife leaves | why i am getting divorced
+RELATED (19): total wine leftovers | eating wife's leftovers | wife refuses to cook | wife cruelty | wife wants everything in divorce | wife loses divorce | china leftover women | wife dutch oven | wife discovers husband's affair | wife has an affair | wife lies | wife threatens divorce | wife always threatens divorce | wife leaves | wife leaving | wife worst nightmare | wife pays alimony | wife dinner | wife berates husband
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: secret santa coworker ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+secret santa coworker                  | 26 low       |  201.7K |    8.8K |  10% |   0%
+secret santa in office                 | 43 medium    |  389.4K |    7.1K |  40% |   0%
+secret santa secret santa              | 61 high      |     78K |  171.4K | 100% |  10%
+what is secret santa                   | 50 medium    |   70.4K |  103.5K |  10% |  20%
+what is secret santa game              | 34 low       |   52.6K |    9.3K |   0% |  40%
+what to get for secret santa gifts     | 32 low       |   38.1K |   59.6K |   0% |  40%
+MATCHING (0): 
+QUESTIONS (3): what is secret santa | what is secret santa game | what to get for secret santa gifts
+RELATED (8): secret santa in office | secret santa secret santa | secret santa gift ideas | secret santa with friends | secret santa gift exchange | secret santa 2017 | secret santa surprise | secret santa friends
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: coworker two weeks notice ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+coworker two weeks notice              | 30 low       |    246K |   10.5K |   0% |  20%
+fired after 2 weeks notice             | 32 low       |  153.9K |   12.3K |   0% |  30%
+working after your two weeks notice    | 39 low       |  269.9K |   14.7K |  10% |  10%
+two weeks notice job                   | 35 low       |  165.3K |   12.3K |   0% |  10%
+giving your two weeks notice           | 38 low       |  165.3K |   12.2K |  10% |  10%
+two weeks notice envelope scene        | 15 very low  |  201.7K |     443 |  10% |  20%
+how to put in your two weeks notice at | 37 low       |    189K |    5.6K |   0% |   0%
+when to give two weeks notice          | 35 low       |  120.1K |    9.9K |  10% |  30%
+how to hand in your two weeks notice   | 35 low       |  165.3K |    5.5K |   0% |  10%
+MATCHING (0): 
+QUESTIONS (4): how to put in your two weeks notice at work | when to give two weeks notice | how to hand in your two weeks notice | how to quit your job without two weeks notice
+RELATED (12): fired after 2 weeks notice | working after your two weeks notice | two weeks notice job | giving your two weeks notice | two weeks notice envelope scene | 2 weeks notice for work | two weeks notice opening | putting two weeks notice in | should you give two weeks notice | should you give 2 weeks notice | quitting job without 2 weeks notice | two weeks notice traffic scene
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: coworker got promoted ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+coworker got promoted                  | 31 low       |     15K |     406 |  60% |  50%
+coworker got promoted over me          | 24 low       |   18.2K |     495 |   0% |  30%
+coworker got me fired                  | 28 low       |    5.5K |    2.9K |  20% |  70%
+when employees disrespect manager      | 22 low       |   49.9K |     439 |   0% |  10%
+MATCHING (1): coworker got promoted over me
+QUESTIONS (1): when employees disrespect manager
+RELATED (1): coworker got me fired
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd time blindness ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd time blindness                    | 37 low       |  202.6K |   11.4K |  20% |  40%
+adhd time blindness explained          | 19 very low  |  101.1K |   11.6K |  10% |  30%
+adhd time blindness tips               | 24 low       |  325.1K |   11.6K |   0% |  20%
+adhd time blindness dr k               | 23 low       |  880.7K |   17.9K |   0% |   0%
+adhd time blindness shorts             | 32 low       |   32.3K |    2.2K |   0% |  40%
+adhd love time blindness               | 29 low       |      5K |      2K |   0% |  60%
+russell barkley adhd time blindness    | 12 very low  |   85.9K |    1.7K |   0% |  10%
+trevor noah adhd time blindness        | 13 very low  |  191.8K |   12.5K |   0% |  20%
+how adhd time blindness ruins your lif | 12 very low  |   29.2K |      2K |  10% |  40%
+how to deal with adhd time blindness   | 35 low       |  200.9K |    2.6K |   0% |  40%
+how to fix time blindness adhd         | 22 low       |   89.8K |    2.6K |  10% |  30%
+MATCHING (14): adhd time blindness explained | adhd time blindness tips | adhd time blindness dr k | adhd time blindness shorts | adhd love time blindness | russell barkley adhd time blindness | trevor noah adhd time blindness | how adhd time blindness ruins your life | how to deal with adhd time blindness | how to fix time blindness adhd | how to adhd time blindness | adhd and time blindness | what is adhd time blindness | time blindness in adhd
+QUESTIONS (5): how adhd time blindness ruins your life | how to deal with adhd time blindness | how to fix time blindness adhd | how to adhd time blindness | what is adhd time blindness
+RELATED (0): 
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: adhd husband ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+adhd husband                           | 38 low       |  289.3K |    2.5K |  10% |  10%
+adhd husband autistic wife             | 35 low       |  286.5K |    5.4K |   0% |   0%
+adhd husband funny                     | 37 low       |  797.6K |    8.5K |   0% |  10%
+adhd husband and wife                  | 39 low       |  499.7K |    3.2K |   0% |  10%
+adhd husband comedy                    | 39 low       |  360.9K |    8.7K |   0% |  10%
+adhd husband driving me crazy          | 15 very low  |     96K |    1.5K |   0% |   0%
+my adhd husband                        | 38 low       |  289.4K |    2.1K |  10% |  10%
+dealing with adhd husband              | 39 low       |  499.7K |    3.4K |   0% |  10%
+dude dad adhd husband                  | 36 low       |  663.6K |   11.1K |   0% |   0%
+adhd marriage                          | 40 medium    |  499.7K |    3.2K |  20% |   0%
+how to deal with adhd husband          | 39 low       |  499.7K |    3.4K |   0% |  10%
+how to live with adhd husband          | 35 low       |  331.9K |    2.2K |   0% |  10%
+when your partner has adhd             | 39 low       |  499.7K |    3.2K |   0% |  10%
+MATCHING (15): adhd husband autistic wife | adhd husband funny | adhd husband and wife | adhd husband comedy | adhd husband driving me crazy | my adhd husband | dealing with adhd husband | dude dad adhd husband | living with adhd husband | how to deal with adhd husband | how to live with adhd husband | husband has adhd | does my husband have adhd | adhd wife vs ocd husband | husband with adhd
+QUESTIONS (10): how to deal with adhd husband | how to live with adhd husband | when your partner has adhd | when your wife has adhd | what is adhd adults | is adhd real | where did adhd come from | can adhd be treated | can adhd be cured | does my husband have adhd
+RELATED (41): adhd marriage | having an adhd wife | adhd ruining my marriage | having a wife with adhd | my wife with adhd | i was diagnosed with adhd | the truth about adhd in adults | divorce adhd | adhd spouse burnout | adhd spouse support | adhd spouse | adhd relationships communication | adhd chatter relationships | adhd relationships dr k | adhd spouse driving me crazy | adhd relationships dopamine | adhd and autism couple | adhd partner funny | adhd partner gaslighting | adhd partner relationship | adhd love relationships | adhd love marriage | adhd dating adhd | adhd marriage melissa orlov | adhd men relationships | autistic husband and wife | adhd relationships | adhd partner | adhd relationships problems | adhd partner burnout | adhd marriage problems | adhd relationships podcast | adhd relationships ruri | adhd romantic relationships | adhd ruins relationships | adhd partner survival guide | adhd study partner | adhd women relationships | adhd with relationships | adhd divorce
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: married to someone with adhd ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+married to someone with adhd           | 39 low       |  499.7K |      8K |  10% |   0%
+being married to someone with adhd rea | 35 low       |   16.1K |    6.9K |  20% |  40%
+how to be married to someone with adhd | 38 low       |  499.7K |    7.9K |   0% |   0%
+when your partner has adhd             | 38 low       |  499.7K |    3.2K |   0% |   0%
+MATCHING (5): being married to someone with adhd reaction | how to be married to someone with adhd | being married to someone with adhd | drew lynch being married to someone with adhd reaction | being married to someone with adhd drew lynch
+QUESTIONS (2): how to be married to someone with adhd | when your partner has adhd
+RELATED (0): 
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

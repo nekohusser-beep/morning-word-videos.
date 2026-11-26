@@ -1,3 +1,2 @@
-https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_fb7efe5f0d18d500315e1be1f858fd95_1795687718517_65dd9e4a.mp4 tools/skip-voice/new-1126/ep-notnow/clips/c3.mp4
-https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_3090e5abd99072591dafd1e2edc18486_1795687832833_66db628d.mp4 tools/skip-voice/new-1126/ep-notnow/clips/c4.mp4
-https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_957148ce546311df5149854799161054_1795687945421_df5da947.mp4 tools/skip-voice/new-1126/ep-notnow/clips/c5.mp4
+https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_d1214332aef091ee47e6ea39e602555b_1795688138179_7befcda2.mp4 tools/skip-voice/new-1126/ep-onething/clips/c1.mp4
+https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_d00c530cc349aba8dd5b056189b5a910_1795688138526_d1f6c982.mp4 tools/skip-voice/new-1126/ep-onething/clips/c2.mp4

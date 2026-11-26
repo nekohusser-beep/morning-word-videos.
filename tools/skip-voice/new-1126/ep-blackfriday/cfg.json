@@ -1,0 +1,56 @@
+{
+ "voices": "../voices/bf1126",
+ "lines": "lines.json",
+ "gap": 0.14,
+ "shots": [
+  {
+   "clip": "clips/c1.mp4",
+   "lines": [
+    0
+   ]
+  },
+  {
+   "clip": "clips/c2.mp4",
+   "lines": [
+    1,
+    2
+   ]
+  },
+  {
+   "clip": "clips/c3.mp4",
+   "lines": [
+    3
+   ]
+  },
+  {
+   "clip": "clips/c4.mp4",
+   "lines": [
+    4
+   ],
+   "tail": 0.5
+  },
+  {
+   "clip": "clips/c5.mp4",
+   "lines": [
+    5
+   ],
+   "tail": 0.3
+  }
+ ],
+ "hook": [
+  [
+   "DRE CAMPED OUT"
+  ],
+  [
+   "FOR BLACK FRIDAY"
+  ],
+  [
+   "SINCE THANKSGIVING \ud83d\ude2d"
+  ]
+ ],
+ "end": [
+  "TAG THE FRIEND WHO'D",
+  "STILL CAMP OUT"
+ ],
+ "end_hold": 1.8
+}

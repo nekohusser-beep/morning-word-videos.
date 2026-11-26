@@ -1,0 +1,60 @@
+{
+ "voices": "../voices/ot1126",
+ "lines": "lines.json",
+ "gap": 0.14,
+ "shots": [
+  {
+   "clip": "clips/c1.mp4",
+   "lines": [
+    0,
+    1
+   ]
+  },
+  {
+   "clip": "clips/c2.mp4",
+   "lines": [],
+   "tail": 2.6
+  },
+  {
+   "clip": "clips/c3.mp4",
+   "lines": [
+    2,
+    3,
+    4
+   ],
+   "tail": 0.3
+  },
+  {
+   "clip": "clips/c5.mp4",
+   "lines": [
+    5
+   ],
+   "tail": 1.0
+  }
+ ],
+ "hook": [
+  [
+   "MY WIFE ASKED ME"
+  ],
+  [
+   "FOR ONE THING"
+  ],
+  [
+   "JUST MILK"
+  ]
+ ],
+ "labels": [
+  {
+   "shot": 1,
+   "text": [
+    "30 SECONDS LATER"
+   ],
+   "dur": 1.6
+  }
+ ],
+ "end": [
+  "TAG YOUR",
+  "\"ONE THING\" PERSON"
+ ],
+ "end_hold": 1.8
+}

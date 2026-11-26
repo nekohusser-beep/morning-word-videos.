@@ -1,0 +1,46 @@
+name: voice-clarity
+# For voice takes in draft releases: what a listener is likely to hear. Per wav: Whisper words with the model's
+# confidence per word (low = muddy), and the phones actually spoken (wav2vec2 + espeak), so "Dre" said as "Trey"
+# shows up as t instead of d even when Whisper spells it right. Free runner. Report -> reports/voice-clarity/.
+on:
+  workflow_dispatch:
+    inputs:
+      tags: {description: "space-separated release tags holding u###.wav", required: true}
+      name: {description: "report name", required: true, default: "report"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: "reports/voice-clarity\ntools/skip-voice/lock"}
+      - run: |
+          sudo apt-get -qq install -y espeak-ng ffmpeg >/dev/null
+          pip install -q faster-whisper phonemizer soundfile numpy torch transformers --extra-index-url https://download.pytorch.org/whl/cpu
+      - env: {GH_TOKEN: "${{ github.token }}", TAGS: "${{ inputs.tags }}", NAME: "${{ inputs.name }}"}
+        run: |
+          for t in $TAGS; do mkdir -p in/$t; gh release download "$t" -p "*.wav" -D in/$t --clobber -R "$GITHUB_REPOSITORY" || true; done
+          mkdir -p reports/voice-clarity
+          python - <<'PY'
+          import glob, os, subprocess, soundfile as sf, torch
+          from faster_whisper import WhisperModel
+          from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
+          wm = WhisperModel("medium.en", compute_type="int8")
+          proc = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-lv-60-espeak-cv-ft")
+          pm = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-lv-60-espeak-cv-ft").eval()
+          out = []
+          for f in sorted(glob.glob("in/*/*.wav")):
+              subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f, "-ar", "16000", "-ac", "1", "x.wav"], check=True)
+              segs, _ = wm.transcribe("x.wav", word_timestamps=True, language="en")
+              words = [(w.word.strip(), round(w.probability, 2)) for s in segs for w in s.words]
+              a, _ = sf.read("x.wav")
+              with torch.no_grad(): ids = pm(proc(a, sampling_rate=16000, return_tensors="pt").input_values).logits.argmax(-1)
+              phones = proc.batch_decode(ids)[0]
+              out.append(f"{f[3:]}\n  words: " + " ".join(f"{w}({p})" for w, p in words) + f"\n  min-conf: {min([p for _, p in words] or [0])}\n  phones: {phones}\n")
+          open(f"reports/voice-clarity/{os.environ['NAME']}.txt", "w").write("\n".join(out)); print("\n".join(out))
+          PY
+          git config user.name "voice-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/voice-clarity; git commit -qm "voice-clarity: $NAME [skip ci]" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep $((i*4)); done

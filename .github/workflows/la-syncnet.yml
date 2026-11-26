@@ -21,7 +21,7 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           git clone -q --depth 1 https://github.com/joonson/syncnet_python sn
           pip install -q torch==1.13.1 torchvision==0.14.1 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q "numpy==1.23.5" "scipy==1.9.3" "scenedetect==0.5.1" "opencv-contrib-python==4.6.0.66" python_speech_features tqdm click
+          pip install -q "numpy==1.23.5" "scipy==1.9.3" "scenedetect>=0.6.2,<0.7" "opencv-contrib-python==4.6.0.66" python_speech_features tqdm click
           cd sn && cat download_model.sh && sh download_model.sh && ls -la data detectors/s3fd/weights
           sed -i 's/\.cuda()//g' SyncNetInstance.py run_pipeline.py run_syncnet.py detectors/s3fd/*.py
           sed -i "s/device='cuda'/device='cpu'/g" run_pipeline.py detectors/s3fd/*.py

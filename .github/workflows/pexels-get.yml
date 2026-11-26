@@ -37,7 +37,7 @@ jobs:
               done
             fi
             if [ -z "$got" ]; then echo "$id MISSING" | tee -a files/log.txt; rm -f "raw/$id.mp4"; continue; fi
-            info=$(ffprobe -nostdin -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate:format=duration -of csv=p=0 "raw/$id.mp4" | tr '\n' ' ')
+            info=$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate:format=duration -of csv=p=0 "raw/$id.mp4" </dev/null | tr '\n' ' ')
             ffmpeg -nostdin -v error -y -i "raw/$id.mp4" -t 40 -an -vf "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,fps=30" -c:v libx264 -crf 23 -preset veryfast -pix_fmt yuv420p "files/$id.mp4" && echo "$id OK $info $got" | tee -a files/log.txt || echo "$id FFFAIL $got" | tee -a files/log.txt
             rm -f "raw/$id.mp4"
           done 3<<< "$ITEMS"

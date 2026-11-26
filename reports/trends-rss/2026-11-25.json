@@ -1,206 +1,206 @@
 {
  "geo": "US",
- "made_utc": "2026-11-25T20:12:12",
+ "made_utc": "2026-11-26T03:07:26",
  "items": [
   {
-   "query": "ole miss basketball",
-   "traffic": "1000+",
-   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
+   "query": "bono",
+   "traffic": "20000+",
+   "pubDate": "Wed, 25 Nov 2026 18:50:00 -0800",
    "news": [
     {
-     "title": "Arizona-Ole Miss scouting report: On Rebels' big jump, fired-up fans and beauty sleep",
-     "source": "Arizona Daily Star"
+     "title": "El Gobierno de Per\u00fa prev\u00e9 entregar bonos de setenta d\u00f3lares a damnificados por El Ni\u00f1o",
+     "source": "Yahoo"
     },
     {
-     "title": "Arizona men\u2019s basketball vs. Ole Miss at Maui Invitational fan discussion",
+     "title": "Produce articula medidas para apoyar a pescadores afectados por fen\u00f3meno El Ni\u00f1o",
+     "source": "notiper\u00fa"
+    },
+    {
+     "title": "Ministro Requejo consolida avances de Produce para reactivar la pesca y las mype frente a El Ni\u00f1o",
+     "source": "El Peruano"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "karl anthony towns",
+   "traffic": "1000+",
+   "pubDate": "Wed, 25 Nov 2026 18:50:00 -0800",
+   "news": [
+    {
+     "title": "NBA Power Rankings: Knicks making their move as Karl-Anthony Towns has taken center stage",
+     "source": "CBS Sports"
+    },
+    {
+     "title": "Karl-Anthony Towns for MVP? Knicks star is making case as the best player in the East",
      "source": "Yahoo Sports"
     },
     {
-     "title": "Ole Miss, No. 8 Arizona clash for Maui Invitational title",
-     "source": "CBS Sports"
+     "title": "Knicks Are Losing Their Bet Against Karl-Anthony Towns in Huge Way",
+     "source": "Sports Illustrated"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "u2 bono",
+   "traffic": "500+",
+   "pubDate": "Wed, 25 Nov 2026 18:50:00 -0800",
+   "news": [
+    {
+     "title": "In 2000, U2 were too embarrassed to play their song. Now, it\u2019s been streamed over 770,000,000 times",
+     "source": "Far Out Magazine"
+    },
+    {
+     "title": "In 1987, U2 threw one of their best songs in the trash. Now, it\u2019s been heard over 1,000,000,000 times",
+     "source": "Far Out Magazine"
+    },
+    {
+     "title": "How old are U2\u2019s members? Bono, the Edge, Adam Clayton and Larry Mullen Jr\u2019s ages",
+     "source": "Bolavip US"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "halftime show 2027",
+   "traffic": "200+",
+   "pubDate": "Wed, 25 Nov 2026 18:50:00 -0800",
+   "news": [
+    {
+     "title": "The Greatest Show on Earth set for North America",
+     "source": "U2.com"
+    },
+    {
+     "title": "U2's new album is about 'defiant joy.' They'll tour it in North America next summer",
+     "source": "KSL"
+    },
+    {
+     "title": "U2 returns to Gillette Stadium for first time in a decade with \u2018The Greatest Show on Earth\u2019",
+     "source": "The Boston Globe"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "elizabeth debicki",
+   "traffic": "500+",
+   "pubDate": "Wed, 25 Nov 2026 18:50:00 -0800",
+   "news": [
+    {
+     "title": "Elizabeth Debicki Takes Another Walk on the Wild Side",
+     "source": "Yahoo"
+    },
+    {
+     "title": "Elizabeth Debicki Embraces Animal Patterns in a Chic Tiger Print Ensemble",
+     "source": "WWD"
+    },
+    {
+     "title": "Elizabeth Debicki Veers Back to Animal Print",
+     "source": "Go Fug Yourself"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "cliff booth",
+   "traffic": "10000+",
+   "pubDate": "Wed, 25 Nov 2026 18:40:00 -0800",
+   "news": [
+    {
+     "title": "\u2018The Further Mis-Adventures of Cliff Booth\u2019 Review: Golden-Boy Fumes",
+     "source": "The New York Times"
+    },
+    {
+     "title": "A Bizarre Sequel to One of Tarantino\u2019s Best Movies",
+     "source": "The Atlantic"
+    },
+    {
+     "title": "Reeling in the years: how Hollywood fell for its own vanishing glories",
+     "source": "The Guardian"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "nhl standings",
+   "traffic": "2000+",
+   "pubDate": "Wed, 25 Nov 2026 18:40:00 -0800",
+   "news": [
+    {
+     "title": "NHL Thanksgiving Panic Index: Which teams should be most worried?",
+     "source": "ESPN"
+    },
+    {
+     "title": "Slafkovsk\u00fd\u2019s slow start, Maple Leafs\u2019 woes and more: A Thanksgiving concern-o-meter - The Athletic",
+     "source": "The New York Times"
+    },
+    {
+     "title": "NHL Power Rankings for Every Team at Thanksgiving 2026",
+     "source": "Bleacher Report"
     }
    ],
    "hook": true
   },
   {
-   "query": "xavier basketball",
-   "traffic": "1000+",
-   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
-   "news": [
-    {
-     "title": "Xavier vs. Texas A&M start delayed for roof leak in Bahamas",
-     "source": "Cincinnati Enquirer"
-    },
-    {
-     "title": "Xavier vs Texas A&M Prediction, Pick, College Basketball Odds for Wednesday, Nov. 25",
-     "source": "Yahoo Sports"
-    },
-    {
-     "title": "The Matchups: Xavier vs. Texas A&M",
-     "source": "247Sports"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "hollow knight silksong dlc",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
-   "news": [
-    {
-     "title": "Join us in 48 hours for Cherry Time!",
-     "source": "Team Cherry"
-    },
-    {
-     "title": "Hollow Knight Developer Team Cherry To Air Special Presentation Featuring Silksong DLC News And More",
-     "source": "Game Informer"
-    },
-    {
-     "title": "Hollow Knight: Silksong devs officially break silence on Sea Of Sorrow DLC with new showcase",
-     "source": "Polygon.com"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "long beach state basketball",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
-   "news": [
-    {
-     "title": "Long Beach State vs Southern Utah Prediction, Picks & Odds | 25 Nov 2026",
-     "source": "Sportsgambler"
-    },
-    {
-     "title": "Men's Basketball Wraps Time In Miami Wednesday Against Southern Utah",
-     "source": "Long Beach State University Athletics"
-    },
-    {
-     "title": "Long Beach State Beach vs Southern Utah Thunderbirds Picks, Prop Bets For November 25, 2026 - NCAAB Predictions",
-     "source": "Covers.com"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "nfl teams",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 11:50:00 -0800",
-   "news": [
-    {
-     "title": "1 Thing Every NFL Fanbase Should Actually Be Thankful For Right Now",
-     "source": "Bleacher Report"
-    },
-    {
-     "title": "What Every NFL Team Has To Be Thankful For In 2026",
-     "source": "FOX Sports"
-    },
-    {
-     "title": "The Win Column: 26 things to be thankful for",
-     "source": "The Atlanta Journal-Constitution"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "club brugge",
+   "query": "james wiseman",
    "traffic": "500+",
-   "pubDate": "Wed, 25 Nov 2026 11:40:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 18:40:00 -0800",
    "news": [
     {
-     "title": "LIVE - Na kippenvelmoment is het de beurt aan de spelers: kan Club Brugge stunten tegen Liverpool?",
-     "source": "Sporza"
+     "title": "James Wiseman rises to finish the alley-oop",
+     "source": "NBA.com"
     },
     {
-     "title": "LIVE: Club Brugge bonkt op deur van top 8 in de Champions League, maakt blauw-zwart vanavond straffe sprong?",
-     "source": "Sporza"
+     "title": "Knicks' James Wiseman: Returns to NBA team",
+     "source": "CBS Sports"
     },
     {
-     "title": "LIVE Champions League | FC Barcelona scoort erop los in Baku, Virgil van Dijk op de bank bij Liverpool",
-     "source": "De Telegraaf"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "psg",
-   "traffic": "2000+",
-   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
-   "news": [
-    {
-     "title": "La compo du PSG face \u00e0 l'AS Rome : avec Mayulu, Akliouche et Zabarnyi, Demb\u00e9l\u00e9 et Marquinhos sur le banc",
-     "source": "L'\u00c9quipe"
-    },
-    {
-     "title": "PSG - AS Roma : les compositions probables",
-     "source": "Foot Mercato"
-    },
-    {
-     "title": "Les onze de d\u00e9part sont connus pour PSG-AS Rome et Lille-Bayern",
-     "source": "Flashscore.fr"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "mike tomlin",
-   "traffic": "1000+",
-   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
-   "news": [
-    {
-     "title": "Steelers' Metcalf denies trying to poke DeJean in eye; WR won't be suspended",
+     "title": "James Wiseman elevates for slam dunk",
      "source": "ESPN"
-    },
-    {
-     "title": "DK Metcalf saved the Seahawks from themselves",
-     "source": "The Seattle Times"
-    },
-    {
-     "title": "Aaron Rodgers wants DK Metcalf involved \u2018early and often\u2019 in Steelers\u2019 offense moving forward",
-     "source": "TribLIVE.com"
     }
    ],
    "hook": false
   },
   {
-   "query": "mike mccarthy press conference",
+   "query": "zach edey",
    "traffic": "500+",
-   "pubDate": "Wed, 25 Nov 2026 11:30:00 -0800",
+   "pubDate": "Wed, 25 Nov 2026 18:40:00 -0800",
    "news": [
     {
-     "title": "'This is why you play the game': Broncos preparing to play in 'tough environment' as Black Friday matchup vs. Steelers awaits",
-     "source": "Denver Broncos"
+     "title": "Grizzlies' Zach Edey leaves NBA Cup game vs Clippers with injury",
+     "source": "The Commercial Appeal"
     },
     {
-     "title": "Broncos-Steelers Fantasy Football Week 12 Start \u2018Em, Sit \u2018Em",
-     "source": "Yahoo Sports"
+     "title": "Zach Edey (ankle) ruled out Thursday vs. Warriors",
+     "source": "NBC Sports"
     },
     {
-     "title": "Steelers vs Broncos: How to watch/listen to the game",
-     "source": "Steelers.com"
+     "title": "Zach Edey Returns for Grizzlies Against Timberwolves",
+     "source": "bsinews.id"
     }
    ],
    "hook": false
   },
   {
-   "query": "pacifica pier",
-   "traffic": "5000+",
-   "pubDate": "Wed, 25 Nov 2026 11:20:00 -0800",
+   "query": "dillon danis",
+   "traffic": "200+",
+   "pubDate": "Wed, 25 Nov 2026 18:40:00 -0800",
    "news": [
     {
-     "title": "California\u2019s Tides Are in \u2018Uncharted Territory\u2019 as Water Surges Higher",
-     "source": "The New York Times"
+     "title": "Jon Jones and Dillon Danis Cross the Line With Personal Attacks in Heated Instagram War",
+     "source": "MMA Sucka"
     },
     {
-     "title": "Live updates: Pacifica Pier collapses, section sent into the ocean",
-     "source": "SFGATE"
+     "title": "Dillon Danis exposed his DMs with Jon Jones on social media, and he questioned the former champion's sexuality",
+     "source": "Operation Sports"
     },
     {
-     "title": "California beaches close as record-breaking tides and major flooding loom",
-     "source": "The Guardian"
+     "title": "Jon Jones and Dillon Danis Exchange Leaked DMs as Feud Escalates",
+     "source": "EssentiallySports"
     }
    ],
-   "hook": false
+   "hook": true
   }
  ]
 }

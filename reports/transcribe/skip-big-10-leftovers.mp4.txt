@@ -1,21 +1,23 @@
 # adhd/stack/skip-big-10-leftovers.mp4 lang=en
   0.00-  1.28 2 a.m. Thanksgiving plate?
-   words: 2@0.00 a@0.18 .m.@0.34 Thanksgiving@0.58 plate?@0.80
-  1.68-  2.50 Nobody's gonna know.
-   words: Nobody's@1.68 gonna@2.04 know.@2.18
-  2.82-  3.96 I is, don't.
-   words: I@2.82 is,@3.04 don't.@3.58
-  4.22-  5.68 That's not even a full sentence.
-   words: That's@4.22 not@4.42 even@4.56 a@4.80 full@4.98 sentence.@5.22
-  6.14-  7.62 Legally, that's not binding.
-   words: Legally,@6.14 that's@6.78 not@7.00 binding.@7.16
-  8.10-  8.34 How?
-   words: How?@8.10
-  9.62- 11.70 I've been sitting here since midnight.
-   words: I've@9.62 been@10.16 sitting@10.30 here@10.58 since@10.92 midnight.@11.18
- 12.22- 12.94 You waited two hours?
-   words: You@12.22 waited@12.38 two@12.48 hours?@12.72
- 13.24- 14.40 I knew you'd come.
-   words: I@13.24 knew@13.56 you'd@13.86 come.@14.12
- 15.24- 18.76 I may do your own plate, you just never read.
-   words: I@15.24 may@15.56 do@15.74 your@15.92 own@16.10 plate,@16.26 you@17.16 just@17.32 never@17.66 read.@18.32
+   words: 2@0.00 a@0.18 .m.@0.34 Thanksgiving@0.54 plate?@0.78
+  1.66-  2.52 Nobody's gonna know!
+   words: Nobody's@1.66 gonna@2.04 know!@2.18
+  2.82-  3.90 Nias don't!
+   words: Nias@2.82 don't!@3.24
+  4.18-  5.42 That's not even a full sentence!
+   words: That's@4.18 not@4.46 even@4.60 a@4.76 full@4.90 sentence!@5.04
+  5.88-  7.22 Legally, that's not binding!
+   words: Legally,@5.88 that's@6.42 not@6.64 binding!@6.80
+  7.70-  7.96 How?
+   words: How?@7.70
+  9.20- 11.28 I've been sitting here since midnight.
+   words: I've@9.20 been@9.76 sitting@9.90 here@10.18 since@10.50 midnight.@10.78
+ 11.82- 12.56 You waited two hours?
+   words: You@11.82 waited@11.96 two@12.08 hours?@12.32
+ 12.84- 13.72 I knew you'd come.
+   words: I@12.84 knew@13.02 you'd@13.22 come.@13.44
+ 14.48- 15.82 I made you your own plate.
+   words: I@14.48 made@14.84 you@15.06 your@15.20 own@15.34 plate.@15.50
+ 16.48- 17.84 You just never read.
+   words: You@16.48 just@16.66 never@16.92 read.@17.42

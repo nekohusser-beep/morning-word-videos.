@@ -1,92 +1,108 @@
 {
  "title": [
   "My coworker camped out",
-  "since THANKSGIVING"
+  "for Black Friday"
  ],
- "hook_text": "DRE CAMPED OUT FOR BLACK FRIDAY",
+ "title_off": true,
+ "rest_mouths": true,
+ "hook_text": "",
+ "hook_cards": [
+  "BLACK FRIDAY",
+  "3 A.M.",
+  "DRE CAMPED OUT"
+ ],
  "scenes": {
   "a": [
    0,
    1,
    2
   ],
-  "b": [
+  "c": [
    3,
-   4,
    5
+  ],
+  "b": [
+   4
   ]
  },
  "art": {
   "a": "art-free/a.jpg",
+  "c": "art-free/c.jpg",
   "b": "art-free/b.jpg"
  },
  "side": {
   "a": {
-   "skip": 0.33,
-   "dre": 0.68
+   "skip": 0.3,
+   "dre": 0.72
+  },
+  "c": {
+   "skip": 0.3,
+   "dre": 0.72
   },
   "b": {
-   "skip": 0.33,
-   "dre": 0.68
+   "skip": 0.3,
+   "dre": 0.72
   }
  },
  "mouth": {
   "a": {
    "skip": [
-    320,
-    824,
-    62,
-    108,
-    44
+    310,
+    925,
+    60,
+    150,
+    56
    ],
    "dre": [
-    872,
-    1116,
-    44,
-    62,
-    26
+    822,
+    1107,
+    40,
+    80,
+    40
+   ]
+  },
+  "c": {
+   "skip": [
+    310,
+    932,
+    60,
+    150,
+    56
+   ],
+   "dre": [
+    818,
+    1110,
+    40,
+    80,
+    40
    ]
   },
   "b": {
    "skip": [
-    322,
-    840,
-    62,
-    108,
-    44
+    310,
+    932,
+    60,
+    150,
+    56
    ],
    "dre": [
-    868,
-    1122,
-    44,
-    62,
-    26
+    821,
+    1146,
+    40,
+    80,
+    40
    ]
   }
  },
- "cap": {
-  "3": "I GOT IT! $299!",
-  "4": "IT'S $249 ONLINE. FREE SHIPPING."
- },
- "punch": [
-  2,
-  4,
-  5
- ],
- "gap": {
-  "2": 1.0,
-  "4": 1.1
- },
- "end_card": "Tag the friend who'd still camp out",
  "zoom": {
   "0": [
    1.75,
    0.56,
-   0.74
+   0.72
   ],
   "1": [
-   1.6,
-   0.4,
+   1.66,
+   0.59,
    0.3
   ],
   "2": [
@@ -95,20 +111,42 @@
    0.52
   ],
   "3": [
-   1.5,
-   0.62,
+   1.77,
+   0.5615,
    0.72
   ],
   "4": [
-   1.45,
-   0.44,
-   0.4
+   1.15,
+   0.47,
+   0.5
   ],
   "5": [
    2.0,
    0.55,
-   0.76
+   0.72
   ]
  },
- "title_off": true
+ "cap": {
+  "0": "3 A.M. 14 HOURS IN LINE. THAT TV IS MINE.",
+  "3": "I GOT IT! $299!",
+  "4": "IT'S $249 ONLINE. FREE SHIPPING."
+ },
+ "cap_y_line": {
+  "3": 300,
+  "5": 300,
+  "4": 1640
+ },
+ "punch": [],
+ "gap": {
+  "2": 1.0,
+  "3": 0.6,
+  "4": 1.1
+ },
+ "end_card": "Tag the friend who'd still camp out",
+ "end_y": 250,
+ "hook_fill": [
+  255,
+  255,
+  255
+ ]
 }

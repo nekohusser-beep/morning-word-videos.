@@ -17,6 +17,7 @@ NL = len(lines)
 GAP = {int(k): v for k, v in cfg.get("gap", {}).items()}
 CAP = {int(k): v for k, v in cfg.get("cap", {}).items()}
 PUNCH = set(cfg.get("punch", []))
+CAPY = {int(k): v for k, v in cfg.get("cap_y_line", {}).items()}
 SCENE_OF = {i: s for s, ids in cfg["scenes"].items() for i in ids}
 SCENE_LAST = {ids[-1] for ids in cfg["scenes"].values()}
 
@@ -95,17 +96,18 @@ def caption(img, tt):
     xx = (W - d.textlength(txt, font=POP)) / 2
     for j, w in enumerate(chunk):
         wd = w.upper() + (" " if j < len(chunk) - 1 else "")
-        d.text((xx, 1380), wd, font=POP, fill=(255, 225, 40) if a0 + j == k else (255, 255, 255), stroke_width=9, stroke_fill=(0, 0, 0))
+        d.text((xx, CAPY.get(i, cfg.get("cap_y", 1380))), wd, font=POP, fill=(255, 225, 40) if a0 + j == k else (255, 255, 255), stroke_width=9, stroke_fill=(0, 0, 0))
         xx += d.textlength(wd, font=POP)
 
 HOOKW = cfg.get("hook_text", "").split()
 def top(img, tt):
     d = ImageDraw.Draw(img)
-    if tt < 3.6 and HOOKW:  # hook: bold top-center, swaps every 1.2 s
+    if tt < 3.6 and (HOOKW or cfg.get("hook_cards")):  # hook: bold top-center, swaps every 1.2 s
         n = min(len(HOOKW), 1 + int(tt / 1.2) * 2)
-        ht = " ".join(HOOKW[:n][-3:]); hf = HOOK
+        hc = cfg.get("hook_cards")                 # optional: whole cards, one per 1.2 s, so every card reads on its own
+        ht = hc[min(int(tt / 1.2), len(hc) - 1)] if hc else " ".join(HOOKW[:n][-3:]); hf = HOOK
         while d.textlength(ht, font=hf) > W - 60 and hf.size > 50: hf = ImageFont.truetype(FB, hf.size - 6)  # long words: shrink to fit
-        text_c(d, 170, ht, hf, fill=(255, 225, 40), sw=11)
+        text_c(d, 170, ht, hf, fill=tuple(cfg.get("hook_fill", (255, 225, 40))), sw=11)
         return
     if cfg.get("title_off"): return          # no standing title box (when the art carries its own sign)
     tl = cfg["title"]; bh = 70 * len(tl) + 40
@@ -132,12 +134,15 @@ def frame(n):
     cw, ch = AW / z, AW / z * (H / W)
     cx = min(max(fx, cw / 2), AW - cw / 2); cy = min(max(AH * cyf, ch / 2), AH - ch / 2)
     img = arts[scene].copy()
-    if i is not None: draw_mouth(img, scene, who, float(np.clip(env[n] if n < len(env) else 0, 0, 1)))
+    if cfg.get("rest_mouths"):                     # every character with a mouth spec gets the drawn mouth all the time (closed when silent)
+        for w2 in MOUTH.get(scene, {}):
+            draw_mouth(img, scene, w2, float(np.clip(env[n] if n < len(env) else 0, 0, 1)) if (i is not None and w2 == who) else 0.0)
+    elif i is not None: draw_mouth(img, scene, who, float(np.clip(env[n] if n < len(env) else 0, 0, 1)))
     img = img.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)
     if tt > TOTAL - END + 0.3 and cfg.get("end_card"):
         ov = Image.new("RGBA", (W, H), (0, 0, 0, 150)); img = Image.alpha_composite(img.convert("RGBA"), ov).convert("RGB")
         d = ImageDraw.Draw(img); words = cfg["end_card"].replace("😂", "").split(); half = (len(words) + 1) // 2
-        text_c(d, 820, " ".join(words[:half]).upper(), ENDF, fill=(255, 225, 40)); text_c(d, 920, " ".join(words[half:]).upper(), ENDF)
+        ey = cfg.get("end_y", 820); text_c(d, ey, " ".join(words[:half]).upper(), ENDF, fill=(255, 225, 40)); text_c(d, ey + 100, " ".join(words[half:]).upper(), ENDF)
         return img
     top(img, tt); caption(img, tt)
     return img

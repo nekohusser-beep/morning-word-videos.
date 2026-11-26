@@ -2,6 +2,18 @@
 You are QC. Check cold against this spec. Answer PASS or FAIL with a reason per line (timestamp for every FAIL). You do not rebuild; a FAIL goes back to Claude. Neko gets the files only after your PASS, then he has the final say. NOTHING is posted until Neko says yes on the exact files.
 TIME: Neko wants this out TODAY (Thanksgiving, Thu Nov 26). The script says "today" and "four seconds before dinner today", so it is worthless tomorrow. Please check now, not at 8 PM. One fix round if needed; Claude turns fixes around fast.
 
+## ROUND 2 (Nov 26 2026, about noon ET): what changed since your Round 1 report
+Your Round 1 result: A FAIL, B FAIL, D FAIL; C, E, F, G, H, I PASS. All three blockers are fixed and the files in this folder are the new finals. Please re-check these and answer A to I again (C, E, F, G, H, I only need a quick confirm that nothing you passed moved):
+- BLOCKER 1, SHORT 0:25-0:28: the gas-station canopy shot is gone. That slot is now a no-sign sunrise clip. A baked-in green dot in the old sunrise stock clip (also used in the long at about 0:53 and 5:20) was removed.
+- BLOCKER 2, LONG about 3:39: the CONSTANT alarm-clock shot is gone; the slot is now a woman at a curtained window.
+- BLOCKER 3, LONG 1:55-1:58: reworded to "And that's the exact word the psalm chose." and re-voiced (large-v3 and medium.en both heard "chose"). Same duration as before, so every timestamp and chapter is unchanged.
+- Repeats (your items 4 to 7): turkey (was 3 uses, now 2, minutes apart), three women on a bed (now 2), forklift (swapped), fabric worker (swapped). The family-at-the-table shot used at about 4:42 was also swapped for a different clip. Two uses of a clip minutes apart remain in places because the free library is finite; no shot repeats back to back.
+- Your item 8 (6:53 hand): the women-on-a-bed clip no longer sits there.
+- Your item 9 (607 s "you"): the last bell hit under the music was removed and the end fade lengthened to 8 s. medium.en now ends at "day." with no extra word.
+- New: the candle shot at about 9:33-9:39 was lifted in exposure (it read as black frames to the black-frame check). It now reads as a candle in a dim room.
+- Everything else is the same cut: same length (10:10.226), same audio, same captions except the one reworded line, same chapters, same Scripture cards, same thumbnails and SEO.
+- proof.py: 10/10 PASS on both finals again (proof-long.md, proof-short.md).
+
 ## What this is
 - Blessed Prayers (YouTube). Thanksgiving message. KJV only. Every work points to Christ.
 - LONG: 10:10, 16:9, narrated Bible talk, Luke 17 (the ten lepers) with Psalm 107, Romans 1, Philippians 4, 1 Thess 5. Posts today as a long-video slot.
@@ -16,10 +28,10 @@ TIME: Neko wants this out TODAY (Thanksgiving, Thu Nov 26). The script says "tod
   Raw file links follow the pattern https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/starhead-review/thanksgiving-2026/<file>
 
 ## What the machine checks already did (proof.py 10/10 PASS on both finals, you do NOT redo these, but you may read proof-*.md)
-File/format, loudness (-14.2 LUFS long, -14.4 Short), no black frames, no silent gaps over 1 s, banned phrases, heard-vs-written transcript (medium.en + large-v3, reconciled, every accepted difference logged in the proof), every Scripture verse on screen and spoken word for word against a KJV source, an OCR scan of the long video every 2 s and the Short every 1 s for brand/store text. A script cannot see pictures or hear pronunciation. That is your job.
+File/format, loudness (-14.2 LUFS long, -14.4 Short), no black frames, no silent gaps over 1 s, banned phrases, heard-vs-written transcript (medium.en + large-v3, reconciled, every accepted difference logged in the proof), every Scripture verse on screen and spoken word for word against a KJV source, A script cannot see pictures, read small brand text or hear pronunciation (Round 1 proved it: an OCR scan missed the amigo canopy and the CONSTANT clock). Your frame-by-frame look is the only brand check. That is your job.
 
 ## What PASS looks like (every line must hold)
-1. The voice speaks the script word for word. No stray syllable, clipped word or doubled word at any join. No wrong pronunciation (listen for: Samaritan, leprosy, Philippians, Thessalonians, endureth, variableness, mercy, "uses" in "the exact word the psalm uses" was said yoo-siss in an earlier build and was fixed; confirm it now says yooz-iz).
+1. The voice speaks the script word for word. No stray syllable, clipped word or doubled word at any join. No wrong pronunciation (listen for: Samaritan, leprosy, Philippians, Thessalonians, endureth, variableness, mercy, the line at 1:55 was "the exact word the psalm uses" and "uses" came out yoo-siss; it is now reworded and re-voiced as "the exact word the psalm chose", same timing, confirm it sounds clean).
 2. Captions match what is said, are readable on a phone, are never cut off or covered, and change with the voice.
 3. Scripture on screen is identical to the KJV and stays up long enough to read at a normal pace. Reference shown matches the verse.
 4. No readable brand, store, truck, sign, license plate or logo in any shot. No watermark. The Bible with the steel square NEVER appears. No Bible page with foreign text.
@@ -27,7 +39,7 @@ File/format, loudness (-14.2 LUFS long, -14.4 Short), no black frames, no silent
 6. The opening: first spoken word on frame 1, opens on the viewer's tension (long: "When's the last time you said thank you and really meant it?"), bold top-center text changing about every 1 to 1.5 s, picture changes every few words in the first 3 s. The teaser line "Ten lepers got healed one day, and only one came back to say thank you." lands at about 0:29 to 0:34 over a fitting picture.
 7. The teaching is faithful to the passage. Flag any claim about Scripture that is not in the text or is doctrinally off (e.g. "Nobody gets healed first": Luke 17:14 says they were cleansed as they went; "he was a Samaritan"; the lepers stood afar off). Flag anything that sounds like a stock AI phrase or preachy filler.
 8. No glorifying the dead, no prayer requests, no tagging or promising future content, no ElevenLabs mention.
-9. Ending: the prayer ends in Jesus' name, amen. The end card "TYPE AMEN" reads clean. The narration ends around 602.98 s and the music tails to 610.23 s. Known Whisper artifacts, NOT defects unless you hear them: an extra "you" at 607.18 s in the long, one drawn-out "amen" read twice near 51 s in the Short. The voice-only track is silent at 607.18 s and has one burst at 51.0-51.6 s. Confirm by ear that no extra word is spoken there.
+9. Ending: the prayer ends in Jesus' name, amen. The end card "TYPE AMEN" reads clean. The narration ends around 603 s and the music tails to 610.23 s with an 8 s fade and no bell hit after 601 s. Known Whisper artifacts, NOT defects unless you hear them: large-v3 adds one "Amen." at 603.1 s in the long (the decaying echo of "day"; the voice-only track is silent from 603.6 s) and "Amen. Amen." at 57.7 s in the Short (the voice-only track is silent from 56.5 s); medium.en hears neither. Confirm by ear that no extra word is spoken there.
 10. Loudness feels even: no spike at the Scripture reads, music never covers the voice.
 
 ## Things only you can sign off on (reply with PASS or FAIL on each)
@@ -54,7 +66,7 @@ The psalm gives two reasons. He is good, and His mercy does not run out. It does
 
 Think about the last time you were truly thankful. Maybe somebody covered a bill you couldn't, or a friend drove two hours when they didn't have to. What was going on inside you? You felt small and glad at the same time. Small, because you knew you hadn't earned it. Glad, because it came anyway.
 
-That's what thankfulness is. Humility and gladness in one heart. A proud man can be happy about what he gets, but he can't be thankful, because he figures he had it coming. You have to know you got more than you deserved before the word means anything. And that's the exact word the psalm uses. Mercy. Getting what you didn't earn.
+That's what thankfulness is. Humility and gladness in one heart. A proud man can be happy about what he gets, but he can't be thankful, because he figures he had it coming. You have to know you got more than you deserved before the word means anything. And that's the exact word the psalm chose. Mercy. Getting what you didn't earn.
 
 Jesus saw this play out one day, and Luke wrote it down. Luke chapter 17. He's heading into a village and ten men with leprosy meet Him. They stand way off, because the law kept them away from everybody. Family, work, worship. And they lift their voices and ask for one thing.
 

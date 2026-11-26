@@ -1,0 +1,91 @@
+[
+ {
+  "name": "ltx_i2v",
+  "space": "Lightricks/ltx-video-distilled",
+  "stage": "RUNNING",
+  "hardware": "zero-a10g",
+  "endpoints": [
+   "/handle_image_upload_for_dims",
+   "/handle_video_upload_for_dims",
+   "/update_task_image",
+   "/update_task_text",
+   "/text_to_video",
+   "/image_to_video",
+   "/video_to_video"
+  ],
+  "api_name": "/image_to_video",
+  "args": [
+   "A flat 2D cartoon stick figure with a red shirt and blue pan",
+   "worst quality, blurry, jittery, distorted, new characters, s",
+   "{'path': 'tools/skip-voice/ep2b/build/breakroom.jpg', 'meta'",
+   "None",
+   "512",
+   "704",
+   "image-to-video",
+   "5.0",
+   "9",
+   "42",
+   "True",
+   "3.0",
+   "True"
+  ],
+  "seconds": 20.6,
+  "files": [
+   "out/ltx_i2v/out0.mp4",
+   null
+  ],
+  "result": "OK",
+  "type": "space"
+ },
+ {
+  "name": "wan22_i2v",
+  "space": "zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+  "stage": "RUNNING",
+  "hardware": "zero-a10g",
+  "endpoints": [
+   "/generate_video"
+  ],
+  "api_name": "/generate_video",
+  "args": [
+   "{'path': 'tools/skip-voice/ep2b/build/breakroom.jpg', 'meta'",
+   "A flat 2D cartoon stick figure with a red shirt and blue pan",
+   "6",
+   "blurry, low quality, text, watermark, distorted",
+   "3.5",
+   "1",
+   "1",
+   "42",
+   "False"
+  ],
+  "seconds": 45.4,
+  "files": [
+   "out/wan22_i2v/out0.mp4",
+   null
+  ],
+  "result": "OK",
+  "type": "space"
+ },
+ {
+  "name": "self_forcing_t2v",
+  "space": "multimodalart/self-forcing",
+  "stage": "RUNNING",
+  "hardware": "zero-a10g",
+  "endpoints": [
+   "/video_generation_handler_streaming",
+   "/enhance_prompt"
+  ],
+  "api_name": "/video_generation_handler_streaming",
+  "args": [
+   "A flat 2D cartoon stick figure with a red shirt and blue pan",
+   "42",
+   "15.0"
+  ],
+  "seconds": 25.4,
+  "files": [
+   "out/self_forcing_t2v/out0.m3u8",
+   null
+  ],
+  "result": "OK",
+  "type": "space"
+ }
+]

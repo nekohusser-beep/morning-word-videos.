@@ -41,9 +41,12 @@ def load_wav(p):
 def card(texts, size, y, path, box=True, color=(255, 255, 255), stroke=(0, 0, 0)):
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    f = ImageFont.truetype(FONT, size)
     lines = texts if isinstance(texts, list) else [texts]
-    hs = [d.textbbox((0, 0), t, font=f, stroke_width=8) for t in lines]
+    while True:  # shrink until every line fits inside the safe width
+        f = ImageFont.truetype(FONT, size)
+        hs = [d.textbbox((0, 0), t, font=f, stroke_width=8) for t in lines]
+        if max(b[2] - b[0] for b in hs) <= W - 160 or size <= 40: break
+        size -= 4
     tot = sum(b[3] - b[1] for b in hs) + 14 * (len(lines) - 1)
     cy = y
     if box:
@@ -52,7 +55,7 @@ def card(texts, size, y, path, box=True, color=(255, 255, 255), stroke=(0, 0, 0)
         color, stroke = (20, 16, 24), (255, 255, 255)
     for t, b in zip(lines, hs):
         w = b[2] - b[0]
-        d.text((W / 2 - w / 2 - b[0], cy - b[1]), t, font=f, fill=color, stroke_width=0 if box else 8, stroke_fill=stroke)
+        d.text((W / 2 - w / 2 - b[0], cy - b[1]), t, font=f, fill=color, stroke_width=0 if box else 10, stroke_fill=stroke)
         cy += (b[3] - b[1]) + 14
     im.save(path)
 
@@ -110,15 +113,15 @@ def main(cfgp, outp):
     ov = []
     hk = cfg.get('hook', [])
     for n, h in enumerate(hk):
-        p = f'{tmp}/h{n}.png'; card(h if isinstance(h, list) else [h], 74, 150, p)
+        p = f'{tmp}/h{n}.png'; card(h if isinstance(h, list) else [h], 96, 130, p)
         ov.append((p, n * 1.2, (n + 1) * 1.2 if n < len(hk) - 1 else max(3.6, (n + 1) * 1.2)))
     for i in order:
         cs = chunks(lines[i]['text']); L = len(wavs[i]) / SR
         for n, c in enumerate(cs):
-            p = f'{tmp}/c{i}_{n}.png'; card([c.upper()], 82, 1380, p, box=False)
+            p = f'{tmp}/c{i}_{n}.png'; card([c.upper()], 100, 1360, p, box=False)
             ov.append((p, starts[i] + L * n / len(cs), starts[i] + L * (n + 1) / len(cs)))
     if cfg.get('end'):
-        p = f'{tmp}/end.png'; card(cfg['end'], 70, 150, p)
+        p = f'{tmp}/end.png'; card(cfg['end'], 84, 130, p)
         ov.append((p, total - end_hold, total + 1))
     args = ['ffmpeg', '-y', '-v', 'error', '-i', f'{tmp}/base.mp4', '-i', f'{tmp}/vo.wav']
     for p, _, _ in ov: args += ['-i', p]

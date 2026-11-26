@@ -1,5 +1,3 @@
-https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_57f478ff134ea22c4e2edc0a39f04fac_1795687277821_9ad5b6f0.mp4 tools/skip-voice/new-1126/ep-twoweeks/clips/c3.mp4
-https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/3ec799b798d160eef16626ac524c3c18-df99188a-86e9-4455-95a2-ab0ef2c37bcc_c2pa_1795687269322_b4b76d7b.png tools/skip-voice/new-1126/ep-notnow/art/n1.png
-https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/e5bf74769e2384061d7e2daad18717e5-6246879a-b931-4a83-bfac-a5ecb43228f2_c2pa_1795687245482_f0c2a7ee.png tools/skip-voice/new-1126/ep-notnow/art/n2.png
-https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/0000a24868967f18b6718932ebd5b58f-1b5a4119-d5ce-4925-9270-25fb8be8294f_c2pa_1795687256254_a6b6f61e.png tools/skip-voice/new-1126/ep-notnow/art/n3.png
-https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/55c363abec83c26d038763e0b9297bd2-5b2f4085-aac1-49ea-af0f-a5fe761624f5_c2pa_1795687274349_9d209fe2.png tools/skip-voice/new-1126/ep-notnow/art/n4.png
+https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_78f0ae1399b0ea66d5f88bb626ba2f32_1795687356948_0edd65c1.mp4 tools/skip-voice/new-1126/ep-twoweeks/clips/c4.mp4
+https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/image_1795687351985_44380da9_1795687352066_33a52a1b.png tools/skip-voice/new-1126/ep-notnow/art/n5.png
+https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/fe3e7f0aea76ec6f08f8ed7462fffee5-cf80d900-7337-4d87-b02f-187f71ccd929_c2pa_1795687452437_d9fa7f72.png tools/skip-voice/new-1126/ep-onething/art/o1.png

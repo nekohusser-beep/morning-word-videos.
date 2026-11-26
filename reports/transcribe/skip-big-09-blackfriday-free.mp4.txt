@@ -1,15 +1,15 @@
 # adhd/stack/skip-big-09-blackfriday-free.mp4 lang=en
-  0.00-  3.12 3 a.m. 14 hours in line, that TV is mine.
-   words: 3@0.00 a@0.24 .m.@0.42 14@0.64 hours@0.94 in@1.32 line,@1.50 that@2.18 TV@2.30 is@2.58 mine.@2.82
-  3.56-  5.18 Dre, you been here since yesterday?
-   words: Dre,@3.56 you@4.06 been@4.26 here@4.42 since@4.52 yesterday?@4.74
-  5.54-  7.56 Since Thanksgiving I left before the pie.
-   words: Since@5.54 Thanksgiving@5.88 I@6.34 left@6.60 before@6.78 the@7.12 pie.@7.28
-  8.68-  9.62 That's sacrifice.
-   words: That's@8.68 sacrifice.@9.04
- 10.72- 12.64 I got it, $2.99.
-   words: I@10.72 got@11.20 it,@11.40 $2@11.98 .99.@12.12
- 13.46- 15.92 It's $2.49 online, free shipping.
-   words: It's@13.46 $2@13.86 .49@14.02 online,@14.50 free@15.36 shipping.@15.58
- 16.98- 18.66 Did they at least have pie online?
-   words: Did@16.98 they@17.38 at@17.56 least@17.68 have@17.84 pie@18.06 online?@18.36
+  0.00-  3.26 3 a.m., 14 hours in line. That TV is mine.
+   words: 3@0.00 a@0.28 .m.,@0.46 14@0.78 hours@1.04 in@1.36 line.@1.58 That@2.22 TV@2.36 is@2.62 mine.@2.88
+  3.96-  5.66 Dre! You've been here since yesterday!
+   words: Dre!@3.96 You've@4.44 been@4.72 here@4.78 since@4.94 yesterday!@5.16
+  6.24-  8.14 Since Thanksgiving, I left before the pie.
+   words: Since@6.24 Thanksgiving,@6.44 I@6.94 left@7.18 before@7.34 the@7.68 pie.@7.96
+  8.60-  9.44 That's sacrifice.
+   words: That's@8.60 sacrifice.@8.98
+ 10.36- 12.24 I got it. $2.99.
+   words: I@10.36 got@10.46 it.@10.68 $2@11.50 .99.@11.64
+ 13.20- 15.52 It's $2.49 online. Free shipping!
+   words: It's@13.20 $2@13.56 .49@13.72 online.@14.24 Free@15.02 shipping!@15.12
+ 16.28- 17.74 Did they at least have pie online?
+   words: Did@16.28 they@16.38 at@16.56 least@16.70 have@16.82 pie@17.08 online?@17.36

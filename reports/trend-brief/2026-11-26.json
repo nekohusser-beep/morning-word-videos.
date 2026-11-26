@@ -1,21 +1,141 @@
 {
  "events": [
   {
+   "query": "gma",
+   "traffic": "100+",
+   "pubDate": "Thu, 26 Nov 2026 01:50:00 -0800",
+   "news": [
+    {
+     "title": "'GMA' Deals & Steals Free Shipping Bonanza",
+     "source": "Good Morning America"
+    },
+    {
+     "title": "'GMA' Deals & Steals: Holiday gifts with free shipping",
+     "source": "Yahoo"
+    },
+    {
+     "title": "'GMA' Deals & Steals for $20 and under",
+     "source": "ABC News - Breaking News, Latest News and Videos"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "sl-a vs ind-a",
+   "traffic": "500+",
+   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
+   "news": [
+    {
+     "title": "SLA vs INDA, 1st Semi-Final (A1 v B2), ACC Men's Asia Cup Rising Stars 2026 - Commentary",
+     "source": "Cricbuzz"
+    },
+    {
+     "title": "India A vs Sri Lanka A ACC Men's Asia Cup Rising Stars live score, toss winner, winning probability, result and highlights from Doha",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "Sri Lanka A vs India A at Doha, DP World Men's Asia Cup Rising Stars, Semi-Final, 26 Nov 2026",
+     "source": "BCCI"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "modot",
+   "traffic": "10000+",
+   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
+   "news": [
+    {
+     "title": "LIVE RADAR: Snow moves into St. Louis as Thanksgiving travel ramps up",
+     "source": "KSDK"
+    },
+    {
+     "title": "A turkey of a winter storm",
+     "source": "FOX 2"
+    },
+    {
+     "title": "Winter Weather Advisory for Springfield area heading into Thanksgiving",
+     "source": "NPR Illinois"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "buckingham jubilee gta 6 location",
+   "traffic": "200+",
+   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
+   "news": [
+    {
+     "title": "Buckingham Jubilee GTA 6 Location \u2013 Where to Find the Rolls-Royce SUV",
+     "source": "VICE"
+    },
+    {
+     "title": "Where to Find All of Randy\u2019s Wishlist Supercars in GTA 6\u2014Car Locations & Tips",
+     "source": "Insider Gaming"
+    },
+    {
+     "title": "How to steal the Pegassi Infernus in GTA 6",
+     "source": "PC Gamer"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "egypt",
+   "traffic": "1000+",
+   "pubDate": "Thu, 26 Nov 2026 01:10:00 -0800",
+   "news": [
+    {
+     "title": "At least 31 killed in fuel tanker fire near Cairo, Egyptian authorities say",
+     "source": "CNN"
+    },
+    {
+     "title": "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people",
+     "source": "NBC News"
+    },
+    {
+     "title": "Thirty-one killed in fire after vehicle overturns in Egypt",
+     "source": "Reuters"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "3",
+   "traffic": "1000+",
+   "pubDate": "Thu, 26 Nov 2026 01:00:00 -0800",
+   "news": [
+    {
+     "title": "Guardians bringing back lefty Griffin on 3-year, $48 million deal (source)",
+     "source": "MLB.com"
+    },
+    {
+     "title": "Foster Griffin agrees to 3-year, $48 million deal to stay with Guardians",
+     "source": "ESPN"
+    },
+    {
+     "title": "Foster Griffin returns to Cleveland on 3-year deal with Guardians: Sources - The Athletic",
+     "source": "The New York Times"
+    }
+   ],
+   "hook": false
+  },
+  {
    "query": "the legend of zelda wind waker",
    "traffic": "200+",
    "pubDate": "Thu, 26 Nov 2026 00:50:00 -0800",
    "news": [
     {
+     "title": "Wind Waker Recomp Brings Zelda Game to Native PC",
+     "source": "Demokratis.co.id"
+    },
+    {
      "title": "Legend Of Zelda: Wind Waker Is Finally Getting The Remaster It Deserves",
      "source": "OpenCritic"
     },
     {
-     "title": "Legend Of Zelda: Wind Waker Is Finally Getting The Remaster It Deserves",
-     "source": "ScreenRant"
-    },
-    {
-     "title": "Legend Of Zelda's Toon Link Officially Returning In New Collection",
-     "source": "IMDb"
+     "title": "Wind Waker Recomp Brings Game to Native PC",
+     "source": "cwibc.co.id"
     }
    ],
    "hook": false
@@ -42,16 +162,16 @@
   },
   {
    "query": "dominion power outage",
-   "traffic": "200+",
+   "traffic": "500+",
    "pubDate": "Thu, 26 Nov 2026 00:20:00 -0800",
    "news": [
     {
-     "title": "Virginia Beach braces for Thanksgiving storm as officials warn of flooding, strong winds and rough surf",
-     "source": "13newsnow.com"
+     "title": "Coastal storm warning expected to have significant impacts on region",
+     "source": "WAVY.com"
     },
     {
-     "title": "Cities to open parking garages ahead of coastal storms, flooding",
-     "source": "WAVY.com"
+     "title": "Virginia Beach braces for Thanksgiving storm as officials warn of flooding, strong winds and rough surf",
+     "source": "13newsnow.com"
     },
     {
      "title": "Damaging winds, heavy rain and flooding expected ahead of Thanksgiving storm in Hampton Roads",
@@ -79,208 +199,88 @@
     }
    ],
    "hook": false
-  },
-  {
-   "query": "in n out",
-   "traffic": "2000+",
-   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "LAPD looking for hate crime suspect after apparent racist tirade at Sherman Oaks In-N-Out",
-     "source": "NBC Los Angeles"
-    },
-    {
-     "title": "Woman targeted in racist attack at In-N-Out in Los Angeles speaks out",
-     "source": "KTLA"
-    },
-    {
-     "title": "Woman Allegedly Yelled Anti-Asian Slurs at Mom, Daughter at In-N-Out Burger, Now Being Investigated as Hate Crime",
-     "source": "People.com"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "sam neill",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "The Fox review \u2013 talking animals are the least weird thing in this delightfully peculiar comedy",
-     "source": "The Guardian"
-    },
-    {
-     "title": "The Fox is an absurd, fable-like comedy that explores the weirdness of being human",
-     "source": "The Conversation"
-    },
-    {
-     "title": "Dario Russo embraces the Australian and the absurd with \u2018The Fox\u2019",
-     "source": "IF Magazine"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "gta 6 chapter 2 mission list",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "'GTA 6' chapter 1 is so good that I'm afraid to move on to chapter 2",
-     "source": "Mashable"
-    },
-    {
-     "title": "The unexpected joy hiding in Grand Theft Auto VI\u2019s chaos? A little routine",
-     "source": "The Guardian"
-    },
-    {
-     "title": "The 'Slow Cinema' of Grand Theft Auto VI",
-     "source": "Little White Lies"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "criminal profile gta 6",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 23:10:00 -0800",
-   "news": [
-    {
-     "title": "GTA 6 Criminal Profile: How the system works",
-     "source": "Red Bull"
-    },
-    {
-     "title": "Why did Rockstar Games make empathy a key mechanic in GTA 6? \"Because it's fun\" says head of development Rob Nelson",
-     "source": "Eurogamer.net"
-    },
-    {
-     "title": "GTA 6 rewards empathy because being a \"demigod stomping through the world\" is only fun for so long",
-     "source": "Yahoo"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "james franco",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 23:10:00 -0800",
-   "news": [
-    {
-     "title": "James Franco Admits Student Relationships Crossed Boundaries",
-     "source": "SuaraGarut.ID"
-    },
-    {
-     "title": "James Franco Admits Sleeping With His Acting Students But Denies Opening School To Lure Women",
-     "source": "Fashion Times UK"
-    },
-    {
-     "title": "James Franco Admits Sleeping With Studio 4 Students",
-     "source": "Demokratis.co.id"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "mcdonalds",
-   "traffic": "2000+",
-   "pubDate": "Wed, 25 Nov 2026 23:00:00 -0800",
-   "news": [
-    {
-     "title": "McDonald\u2019s Invites Fans to Leave Adulthood Behind with the Home Alone Meal",
-     "source": "McDonald\u2019s Corporation"
-    },
-    {
-     "title": "McDonald\u2019s Launches \u2018Home Alone\u2019 Meal Inspired by Kevin\u2019s Cravings",
-     "source": "TODAY.com"
-    },
-    {
-     "title": "McDonald\u2019s Is Releasing an All-New Holiday Meal for a Limited Time",
-     "source": "Allrecipes"
-    }
-   ],
-   "hook": false
   }
  ],
  "top": [
   {
-   "id": "obADVZMYCIY",
-   "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
-   "views": 69136,
-   "age": 0.96,
-   "dur": 1158,
-   "ch": "Grace Oasis",
-   "chid": "UCDXAykwfYd5H0_ytED8aNDg",
-   "live": false,
-   "short": false,
-   "vpd": 72016.66666666667,
-   "seed": "morning prayer"
-  },
-  {
    "id": "jyeeN4AtC2I",
    "title": "Lord Work Things Out In My Life From Today | A Blessed Morning Prayer",
-   "views": 53837,
-   "age": 0.92,
+   "views": 54590,
+   "age": 0.96,
    "dur": 1295,
    "ch": "Grace For Purpose Prayers",
    "chid": "UCvu624igK22l4CVRn59pClA",
    "live": false,
    "short": false,
-   "vpd": 58518.47826086956,
+   "vpd": 56864.583333333336,
+   "seed": "morning prayer"
+  },
+  {
+   "id": "obADVZMYCIY",
+   "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
+   "views": 70511,
+   "age": 1.5,
+   "dur": 1158,
+   "ch": "Grace Oasis",
+   "chid": "UCDXAykwfYd5H0_ytED8aNDg",
+   "live": false,
+   "short": false,
+   "vpd": 47007.333333333336,
    "seed": "morning prayer"
   },
   {
    "id": "c1v3ojDCNjY",
    "title": "Declare Breakthrough Over Every Area of Your Life | Morning Prayer",
-   "views": 83042,
-   "age": 1.5,
+   "views": 83227,
+   "age": 2.5,
    "dur": 1068,
    "ch": "Grace Oasis",
    "chid": "UCDXAykwfYd5H0_ytED8aNDg",
    "live": false,
    "short": false,
-   "vpd": 55361.333333333336,
+   "vpd": 33290.8,
    "seed": "morning prayer"
   }
  ],
  "per": {
   "morning prayer": [
    {
-    "id": "obADVZMYCIY",
-    "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
-    "views": 69136,
-    "age": 0.96,
-    "dur": 1158,
-    "ch": "Grace Oasis",
-    "chid": "UCDXAykwfYd5H0_ytED8aNDg",
-    "live": false,
-    "short": false,
-    "vpd": 72016.66666666667,
-    "seed": "morning prayer"
-   },
-   {
     "id": "jyeeN4AtC2I",
     "title": "Lord Work Things Out In My Life From Today | A Blessed Morning Prayer",
-    "views": 53837,
-    "age": 0.92,
+    "views": 54590,
+    "age": 0.96,
     "dur": 1295,
     "ch": "Grace For Purpose Prayers",
     "chid": "UCvu624igK22l4CVRn59pClA",
     "live": false,
     "short": false,
-    "vpd": 58518.47826086956,
+    "vpd": 56864.583333333336,
+    "seed": "morning prayer"
+   },
+   {
+    "id": "obADVZMYCIY",
+    "title": "Let God Be Your First Thought in Everything You Begin | Morning Prayer",
+    "views": 70511,
+    "age": 1.5,
+    "dur": 1158,
+    "ch": "Grace Oasis",
+    "chid": "UCDXAykwfYd5H0_ytED8aNDg",
+    "live": false,
+    "short": false,
+    "vpd": 47007.333333333336,
     "seed": "morning prayer"
    },
    {
     "id": "c1v3ojDCNjY",
     "title": "Declare Breakthrough Over Every Area of Your Life | Morning Prayer",
-    "views": 83042,
-    "age": 1.5,
+    "views": 83227,
+    "age": 2.5,
     "dur": 1068,
     "ch": "Grace Oasis",
     "chid": "UCDXAykwfYd5H0_ytED8aNDg",
     "live": false,
     "short": false,
-    "vpd": 55361.333333333336,
+    "vpd": 33290.8,
     "seed": "morning prayer"
    }
   ],
@@ -288,40 +288,40 @@
    {
     "id": "6z9znTlss8Q",
     "title": "Before You Sleep, Pray This Powerful Night Prayer for Your Family's Protection Tonight",
-    "views": 12164,
+    "views": 12212,
     "age": 1.5,
     "dur": 595,
     "ch": "Prayer Today",
     "chid": "UC-f6jkWBr5TOPFys5QoFTQg",
     "live": false,
     "short": false,
-    "vpd": 8109.333333333333,
-    "seed": "night prayer before sleep"
-   },
-   {
-    "id": "QTIB1vPSJlU",
-    "title": "A Powerful Bedtime Prayer for an Overthinking Mind | Let God Give You Peace",
-    "views": 3814,
-    "age": 0.25,
-    "dur": 462,
-    "ch": "Let Us Pray",
-    "chid": "UCN0EKA_RiEzMBe1nBIgWnhA",
-    "live": false,
-    "short": false,
-    "vpd": 7628.0,
+    "vpd": 8141.333333333333,
     "seed": "night prayer before sleep"
    },
    {
     "id": "t4Rc3qUIFyM",
     "title": "Call On Lord Jesus, Prayer Before Sleep - Tonight I place my trust in You. Be my refuge...",
-    "views": 10324,
+    "views": 10512,
     "age": 1.5,
     "dur": 453,
     "ch": "Let Us Pray",
     "chid": "UCN0EKA_RiEzMBe1nBIgWnhA",
     "live": false,
     "short": false,
-    "vpd": 6882.666666666667,
+    "vpd": 7008.0,
+    "seed": "night prayer before sleep"
+   },
+   {
+    "id": "LLEfJhGQfEI",
+    "title": "See What happens When You Say This Powerful Night Prayer For Adults",
+    "views": 2980,
+    "age": 0.42,
+    "dur": 268,
+    "ch": "Inspired BedTime Prayers",
+    "chid": "UCtrngi5HsWwLNAlRKJx9COw",
+    "live": false,
+    "short": false,
+    "vpd": 5960.0,
     "seed": "night prayer before sleep"
    }
   ],
@@ -329,118 +329,118 @@
    {
     "id": "bxMJrJ0eAUw",
     "title": "Verse of the Day | Philippians 2:3\u20134 [November 25, 2026]",
-    "views": 6555,
+    "views": 6581,
     "age": 1.5,
     "dur": 383,
     "ch": "Daily Bible Verses and Prayers",
     "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
     "live": false,
     "short": false,
-    "vpd": 4370.0,
+    "vpd": 4387.333333333333,
     "seed": "bible verse of the day"
    },
    {
     "id": "qlyUuXyNH3s",
     "title": "Today's Catholic Mass Readings and Gospel Reflection \u2013 November 26, 2026 | Thanksgiving",
-    "views": 2441,
-    "age": 0.67,
+    "views": 2513,
+    "age": 0.71,
     "dur": 1663,
     "ch": "The Word of Lord",
     "chid": "UCeyoVjZXtdCHaGdQcRk4MEQ",
     "live": false,
     "short": false,
-    "vpd": 3643.283582089552,
+    "vpd": 3539.43661971831,
     "seed": "bible verse of the day"
    },
    {
     "id": "W9olrp_mTrI",
     "title": "Verse of the Day | Matthew 6:6-8 [November 24, 2026]",
-    "views": 6184,
+    "views": 6188,
     "age": 2.5,
     "dur": 376,
     "ch": "Daily Bible Verses and Prayers",
     "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
     "live": false,
     "short": false,
-    "vpd": 2473.6,
+    "vpd": 2475.2,
     "seed": "bible verse of the day"
    }
   ],
   "prayer for anxiety": [
    {
+    "id": "isOSrIFy1FM",
+    "title": "Put Everything That Makes You Anxious Aside and Sleep Well Tonight | Sleep Prayers",
+    "views": 35384,
+    "age": 4.5,
+    "dur": 13179,
+    "ch": "Grace For Purpose",
+    "chid": "UCI8gcSTo1FowsRJdilsjsZw",
+    "live": false,
+    "short": false,
+    "vpd": 7863.111111111111,
+    "seed": "prayer for anxiety"
+   },
+   {
     "id": "abMBRto0Fz4",
     "title": "Start Your Morning in God's Peace | Powerful Prayer to Remove Anxiety, Fear & Worry",
-    "views": 5465,
+    "views": 5486,
     "age": 2.5,
     "dur": 1261,
     "ch": "Thank God Daily Prayers",
     "chid": "UCnbLNBu__ZMA4Rzku6aBxFw",
     "live": false,
     "short": false,
-    "vpd": 2186.0,
+    "vpd": 2194.4,
     "seed": "prayer for anxiety"
    },
    {
     "id": "qMIPnUpTaw8",
     "title": "End Your Day With God | Powerful Night Prayer for Anxiety",
-    "views": 7291,
+    "views": 7288,
     "age": 5.5,
     "dur": 529,
     "ch": "Let Us Pray",
     "chid": "UCN0EKA_RiEzMBe1nBIgWnhA",
     "live": false,
     "short": false,
-    "vpd": 1325.6363636363637,
-    "seed": "prayer for anxiety"
-   },
-   {
-    "id": "mIQCEZMetHE",
-    "title": "November 22nd, Sunday | OVERCOMING WORRY AND ANXIETY - LET GO and Trust God | Morning Prayer",
-    "views": 3522,
-    "age": 4.5,
-    "dur": 2071,
-    "ch": "Daily Grace Morning Prayer",
-    "chid": "UCvur1zv1Tx-frWbWSuwNXXw",
-    "live": false,
-    "short": false,
-    "vpd": 782.6666666666666,
+    "vpd": 1325.090909090909,
     "seed": "prayer for anxiety"
    }
   ],
   "good morning bible verse": [
    {
-    "id": "X1Wsm2MITx0",
-    "title": "Psalm 46:10 | Be Still And Know That I Am Lord | Nov 21, 2026 | Bible Verse Of The Day",
-    "views": 2774,
-    "age": 5.5,
-    "dur": 348,
-    "ch": "BLESSED BY HIS WORD",
-    "chid": "UCetU2VlOSupo4y9rTVjhE5A",
+    "id": "Lc_XdQpxiLI",
+    "title": "Verse of the Day | Psalm 50:14\u201315 [November 23, 2026]",
+    "views": 6600,
+    "age": 3.5,
+    "dur": 382,
+    "ch": "Start your day with today's Bible verse and a peaceful Christian prayer to strengthen your faith, calm your heart, and draw you\u00a0...",
+    "chid": "UC7dDdE2PCBVbpM02SMhE5Pw",
     "live": false,
     "short": false,
-    "vpd": 504.3636363636364,
+    "vpd": 1885.7142857142858,
     "seed": "good morning bible verse"
    },
    {
-    "id": "dTXyQwu8xvY",
-    "title": "Thursday, November 19 | Start Your Day With Psalm 91 \ud83d\ude4f Powerful Morning Prayer for God's Protection",
-    "views": 2347,
-    "age": 7.5,
-    "dur": 3821,
-    "ch": "Grace-Filled Prayers",
-    "chid": "UCM5Uu7IlU3D8gx96IwpQPfg",
+    "id": "X1Wsm2MITx0",
+    "title": "Psalm 46:10 | Be Still And Know That I Am Lord | Nov 21, 2026 | Bible Verse Of The Day",
+    "views": 2700,
+    "age": 5.5,
+    "dur": 348,
+    "ch": "\"Find Your Stillness, Feel His Presence\" : Are you feeling overwhelmed by life's worries, uncertainty, and endless responsibilities?",
+    "chid": "UCetU2VlOSupo4y9rTVjhE5A",
     "live": false,
     "short": false,
-    "vpd": 312.93333333333334,
+    "vpd": 490.90909090909093,
     "seed": "good morning bible verse"
    },
    {
     "id": "e5VKSMt9acY",
-    "title": "When Your Feelings Say It's Over, God's Word Says Otherwise | Blessed Morning Bible Verses For Today",
+    "title": "When Everything Feels Hopeless, Remember What Gods Word Says About The Future | Blessed Bible Verses",
     "views": 875,
     "age": 6.5,
     "dur": 503,
-    "ch": "Daily Bible Audio",
+    "ch": "When Your Feelings Say It's Over, God's Word Says Otherwise | Blessed Morning Bible Verses For Today\u00a0...",
     "chid": "UCL5xC4sFNGH-u-iBftrPSYA",
     "live": false,
     "short": false,
@@ -451,68 +451,56 @@
   "psalm 91 prayer": [
    {
     "id": "9HcIAerVbqc",
-    "title": "PSALM 91 & PSALM 23 | The Two Most Powerful Prayers In The Bible",
-    "views": 5643,
+    "title": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible",
+    "views": 5725,
     "age": 1.5,
     "dur": 2547,
     "ch": "Inspirational Prayers",
     "chid": "UCg6RyDpfN47RF78R5sEnRjA",
     "live": false,
     "short": false,
-    "vpd": 3762.0,
+    "vpd": 3816.6666666666665,
     "seed": "psalm 91 prayer"
    },
    {
-    "id": "t9uHNww699c",
-    "title": "Psalm 91 and 35 | Strong Prayer to Cover Your Loved Ones With God's Care",
-    "views": 7724,
-    "age": 2.5,
-    "dur": 21804,
-    "ch": "PSALM 91 PRAYER",
-    "chid": "UCvMnnmNHfCtqwjAe_8Tovzg",
+    "id": "YOlhqQFvxZQ",
+    "title": "PSALM 91 & PSALM 23: The Two Most Powerful Prayers In The Bible",
+    "views": 11511,
+    "age": 3.5,
+    "dur": 2412,
+    "ch": "Inspirational Prayers",
+    "chid": "UCg6RyDpfN47RF78R5sEnRjA",
     "live": false,
     "short": false,
-    "vpd": 3089.6,
+    "vpd": 3288.8571428571427,
     "seed": "psalm 91 prayer"
    },
    {
-    "id": "KuSr0uEM8DQ",
-    "title": "Pray Psalm 91 Over Your Life This Morning and Rest Under His Wings",
-    "views": 8469,
-    "age": 4.5,
-    "dur": 1033,
-    "ch": "Daily Jesus Prayers",
-    "chid": "UCIixC6QsuVd23uyy7wZwD8w",
+    "id": "t9utaqDoJ7Y",
+    "title": "PSALM 91 & PSALM 23 | The Two Most Powerful Prayers In The Bible",
+    "views": 18279,
+    "age": 6.5,
+    "dur": 2605,
+    "ch": "Inspirational Prayers",
+    "chid": "UCg6RyDpfN47RF78R5sEnRjA",
     "live": false,
     "short": false,
-    "vpd": 1882.0,
+    "vpd": 2812.153846153846,
     "seed": "psalm 91 prayer"
    }
   ]
  },
  "refs": [
   [
-   "1 Peter 5:7",
-   4
-  ],
-  [
-   "Luke 21:20",
-   2
-  ],
-  [
    "Matthew 6:6",
    2
   ],
   [
-   "Philippians 2:3",
+   "Psalm 50:14",
    2
   ],
   [
-   "Philippians 4:7",
-   2
-  ],
-  [
-   "Proverbs 3:5",
+   "Luke 21:20",
    2
   ],
   [
@@ -520,28 +508,28 @@
    2
   ],
   [
-   "Philippians 4:6",
+   "Philippians 2:3",
    2
   ],
   [
-   "Matthew 6:26",
-   2
+   "2 Samuel 5:20",
+   1
   ],
   [
-   "Philippians 4:8",
-   2
+   "Micah 2:13",
+   1
   ],
   [
-   "Isaiah 26:3",
-   2
+   "Zechariah 4:6",
+   1
   ],
   [
-   "John 14:27",
-   2
+   "Isaiah 43:19",
+   1
   ],
   [
-   "Numbers 6:24",
-   2
+   "Revelation 3:8",
+   1
   ],
   [
    "Revelation 18:1",
@@ -556,40 +544,44 @@
    1
   ],
   [
-   "Psalm 23:4",
+   "Proverbs 16:3",
    1
   ],
   [
-   "Isaiah 41:10",
+   "James 1:5",
    1
   ],
   [
-   "Psalm 121:7",
+   "Colossians 3:17",
    1
   ],
   [
-   "2 Samuel 5:20",
+   "Psalm 37:5",
+   1
+  ],
+  [
+   "Psalm 127:1",
    1
   ]
  ],
  "desc": {
-  "qlyUuXyNH3s": "Today's Catholic Mass Readings and Gospel Reflection \u2013 Thursday, November 26, 2026 | Thanksgiving Day Welcome to **The Word of Lord**. Join us for today's Catholic Daily Mass Readings, Responsorial Psalm, Holy Gospel, and a powerful Gospel Reflection for Thursday, November 26, 2026. Today, we celebrate Thursday of the Thirty-Fourth Week in Ordinary Time. In the United States, we also celebrate Thanksgiving Day. Today's Gospel from Luke 21:20-28 reminds us that even when the world is shaken by fear, suffering, and uncertainty, we must stand firm in faith because our redemption is drawing near. Our reflection, **\"When the World Shakes, Give Thanks: Hope in the Lord Who Saves,\"** explores the power of gratitude, trusting God's promises, and finding peace in Jesus Christ during difficult times. Today's Catholic Mass Readings: First Reading: Revelation 18:1-2, 21-23; 19:1-3, 9a Responsorial Psalm: Psalm 100:1b-2, 3, 4, 5 Gospel Acclamation: Luke 21:28 Holy Gospel: Luke 21:20-28 Today's reflection reminds us that earthly powers will pass away, but God's love and faithfulness endure forever. This Thanksgiving, let us thank God for His blessings, remember those who are suffering, and share His love through generosity, forgiveness, and compassion. \ud83d\ude4f PRAY WITH US: May Jesus strengthen our faith, protect our families, heal the sick, comfort the suffering, and fill every home with gratitude, hope, and lasting peace. If today's reflection inspires you, SUBSCRIBE to The Word of Lord for da",
-  "jyeeN4AtC2I": "Be blessed as you meditate on God's word and listen to this inspirational morning devotional prayer. \ud83d\udcdaGrace For Purpose Prayer Book available on Amazon: SUBSCRIBE to Grace for Purpose for more! \u00a9 2026 Grace for Purpose Prayers",
   "qMIPnUpTaw8": "End Your Day With God | Powerful Night Prayer for Anxiety End your day with God and leave your worries in His hands. \ud83d\ude4f This powerful night prayer for anxiety will help you calm your mind, release your fears, and find peace in God's loving presence. If you're struggling with overthinking, stress, or worries about tomorrow, take a few minutes tonight to pray and remember that God is always with you. Listen to this bedtime prayer before sleeping and allow God's Word to bring comfort, strength, and peaceful rest to your heart. May God bless you and your family tonight. \u2764\ufe0f If you'd like to support this prayer ministry, you'll find the donation link in the description. There is absolutely no pressure. Your Queries:- end your day with God give your worries to God prayer for overthinking and anxiety peaceful prayer before sleeping God calm my anxious mind night prayer for stress and worry prayer for a peaceful night's sleep sleep peacefully with God prayer for God's protection at night surrender your worries to God",
-  "QTIB1vPSJlU": "A Powerful Bedtime Prayer for an Overthinking Mind | Let God Give You Peace Feeling worried or finding it hard to quiet your mind before sleep? Take a few minutes to pray and give your worries to God. This bedtime prayer will help you release stress, calm your thoughts, trust God with tomorrow, and find peace in His presence. Let go of today's burdens and rest in God's loving care. God bless you. Song: Spirit Composer: Alex Productions Website: No URL available License: Creative Commons (BY 3.0) Music powered by BreakingCopyright: Your Queries:- Let's pray together let\u2019s pray together. lets pray together night prayer evening prayer morning prayer bedtime prayer Night prayer before going to bed catholic jesus powerful prayer Daily jesus prayer daily jesus prayers daily jesus devotional",
-  "W9olrp_mTrI": "Start your day with today\u2019s Bible verse and a peaceful Christian prayer to strengthen your faith, calm your heart, and draw you closer to God. In this Verse of the Day, we reflect on Matthew 6:6-8 and allow God\u2019s Word to speak encouragement, wisdom, and hope into our daily lives. Whether you are beginning your morning, going through a difficult season, or simply needing a reminder of God\u2019s presence, this daily Bible verse and prayer is here to uplift your spirit and help you walk with the Lord today. Take a quiet moment to listen, reflect, and pray. May this Scripture remind you that God is near, His Word is true, and His love never fails. If these daily Bible verses and prayers have been a blessing to you, you are always welcome to join our community as we continue seeking God together each day. God bless you always. \ud83d\ude4f\u2764\ufe0f \"Where Every Day Begins with the Word of God.\" \ud83d\udce2 Follow us for more inspiration: \ud83d\udd39SHOP: \ud83d\udd39MEMBER: \ud83d\udd39FACEBOOK: \ud83d\udd39YOUTUBE : Music: \u201cPEACE - Deep Instrumental Worship\u201d by Deep Instrumental/David Lastra Source: CHAPTERS: Verse of the Day - 00:05 Thoughts on Today's Verse - 00:33 Prayer - 04:44 Closing Line - 06:06",
-  "9HcIAerVbqc": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible \u25ba SUBSCRIBE! \ud83d\udc49 \u25ba LIKE! \ud83d\udc4d \u25ba COMMENT! \u25ba SHARE! \u25ba TURN ON THE NOTIFICATION BELL! \ud83d\udd14 Welcome to Inspirational Prayers, a channel dedicated to Christian prayers and devotions. Our mission is to inspire, motivate and most importantly educate ourselves in everything related to the kingdom of God. Helping people cultivate a deeper relationship with God through prayers. We understand that maintaining faith can be challenging, and we are committed to offering encouragement and motivation to help you remain steadfast on your spiritual path. Our prayers are rooted in the teachings of Jesus Christ as found in the Bible, as He is the sole source of peace, strength, and blessings in life, as well as our salvation. Please subscribe to our channel so you won't miss any of our content, which is filled with inspiring and devotional messages designed to lead and reinforce your faith. We recognize that faith is a very powerful tool for overcoming obstacles and achieving your goals, and we are here to help support your journey. Whether you are new to Christianity or have practiced for many years, we extend an invitation for you to join us. Our content is tailored to assist you in deepening your relationship with God and discovering daily inspiration. Let us pray together and bestow blessings upon each other throughout our spiritual journey. May the Lord bless you and safeguard you, and may His love and grace illuminate in all you do. Th",
-  "KuSr0uEM8DQ": "If you feel under attack and your home no longer feels safe, this Psalm 91 prayer for protection is for you. Pray it over your life this morning and rest under His wings. \u25ba LIKE! \ud83d\udc4d \u25ba COMMENT! \ud83d\udcac \u25ba SHARE! \u27a4 \u25ba SUBSCRIBE! \ud83d\udc49 \u25ba TURN ON THE NOTIFICATION BELL! \ud83d\udd14 If you are led to support our ministry, you may do so here: \u25ba DONATIONS \ud83d\udc49 We appreciate your support! When your home no longer feels safe, remember that the Most High is already standing at your door. This video explores the nature of divine presence during difficult times, using the physics of a car cage as a reminder that you are shielded from the storms of life. Just as engineers test safety by striking metal shells with man-made lightning, your faith remains secure because the charge flows around you, not through you. This message is for anyone needing a reminder of heavenly defense when life feels overwhelming. You will learn how to rest in the assurance that God is your ultimate protector, keeping you safe even when you feel exposed to the elements of this world. Stay to the end for a prayer to release your fear and walk in the confidence of His shelter. \ud83d\udcd6 CHAPTERS 0:00 Finding Refuge in the Most High 2:04 When Fear Tries to Shape Your Decisions 5:01 The Hidden Conversation of Psalm 91 8:11 Securing Your Home Under His Shadow 11:22 A Prayer for Divine Protection \ud83d\ude4f If this prayer blessed you, comment \"AMEN\" and share it with someone who needs God's covering over their home today. \ud83d\udd14 Subscribe and turn on notifications so ",
-  "e5VKSMt9acY": "When Your Feelings Say It's Over, God's Word Says Otherwise | Blessed Morning Bible Verses For Today \ud83e\udd16 REAL PERSON | REAL FAITH | REAL VOICE (NO AI VOICES ON THIS CHANNEL) \u2611\ufe0f SUBSCRIBE and click the \ud83d\udd14 for notifications to catch all the latest videos uploaded to this channel! \ud83d\udc48 \u2611\ufe0f SUBSCRIBE to my PRAYER CHANNEL and click the \ud83d\udd14 for notifications to catch all the latest videos uploaded to the channel! \ud83d\udc48 \u2611\ufe0f You can SUPPORT and PARTNER with my ministry here (Daily Effective Prayer, Daily Bible Audio): \ud83d\udc48 \u2611\ufe0f SHOP for MINISTRY MERCH here: \ud83d\udc48 \ud83d\udcf2 SOCIAL X/TWITTER: FACEBOOK: THREADS: INSTAGRAM: When Your Feelings Say It's Over, God's Word Says Otherwise | Blessed Morning Bible Verses For Today This is simply a video I\u2019ve put together where I would like to encourage anyone with the Word of God within the sound of my voice. You can adjust the speed of the video in the playback settings. All I ask you to do is to listen to me read the Word of God or turn off the audio and read it for yourself. Please continue to let God's Word take root in your heart. Speak God's Word daily or listen to this video over and over again and allow the Scriptures to reach deep into your spirit. The KJV Bible is a public domain works that I have uploaded primarily for myself to be able to play and listen to in the background but also to pass along to others seeking the divine Word of God. The Bible never, ever fails. God bless you! - Daniel (Channel Creator) \u2729 Watch More Daily Bible Audio Videos Below: Speak Gods ",
-  "bxMJrJ0eAUw": "Start your day with today\u2019s Bible verse and a peaceful Christian prayer to strengthen your faith, calm your heart, and draw you closer to God. In this Verse of the Day, we reflect on Philippians 2:3\u20134 and allow God\u2019s Word to speak encouragement, wisdom, and hope into our daily lives. Whether you are beginning your morning, going through a difficult season, or simply needing a reminder of God\u2019s presence, this daily Bible verse and prayer is here to uplift your spirit and help you walk with the Lord today. Take a quiet moment to listen, reflect, and pray. May this Scripture remind you that God is near, His Word is true, and His love never fails. If these daily Bible verses and prayers have been a blessing to you, you are always welcome to join our community as we continue seeking God together each day. God bless you always. \ud83d\ude4f\u2764\ufe0f \"Where Every Day Begins with the Word of God.\" \ud83d\udce2 Follow us for more inspiration: \ud83d\udd39SHOP: \ud83d\udd39MEMBER: \ud83d\udd39FACEBOOK: \ud83d\udd39YOUTUBE : Music: \u201cPEACE - Deep Instrumental Worship\u201d by Deep Instrumental/David Lastra Source: CHAPTERS: Verse of the Day - 00:05 Thoughts on Today's Verse - 00:22 Prayer - 04:56 Closing Line - 06:13",
-  "dTXyQwu8xvY": "Start your Thursday morning, November 19, with the powerful promises of Psalm 91 and invite God's divine protection, healing, peace, and blessings into your life. This powerful morning prayer will strengthen your faith, calm your anxious heart, and remind you that God is your refuge, fortress, and protector. No matter what challenges you are facing today, remember that you are never alone. God sees your struggles, hears your prayers, and knows every burden you carry. As you begin this beautiful morning, surrender your worries, family, health, finances, and future into His loving hands. Through this morning prayer, we pray for: \ud83d\ude4f God's divine protection over your life and family. \ud83d\ude4f Healing for your body, mind, and broken heart. \ud83d\ude4f Freedom from fear, anxiety, and negative thoughts. \ud83d\ude4f Peace, strength, and courage for every challenge. \ud83d\ude4f God's angels to watch over your daily journey. \ud83d\ude4f Restoration, blessings, and renewed hope. Let Psalm 91 become your declaration of faith today. Trust God, walk in His promises, and believe that His love will sustain you through every season. Bible Verses: Psalm 91 Psalm 23:4 Isaiah 41:10 Psalm 121:7-8 Philippians 4:7 Proverbs 3:5-6 If this prayer touches your heart, type AMEN in the comments as a declaration of faith. Share this prayer with someone who needs God's protection and encouragement today. Subscribe for daily Christian morning prayers, powerful Bible verses, healing prayers, and faith-filled encouragement. May God bless you and protect yo",
-  "c1v3ojDCNjY": "Let\u2019s meditate on God\u2019s Word and pray together. You can support us through either of these options: Buymeacoffee: Patreon: \ud83d\udcd6 Bible References: 2 Samuel 5:20 Micah 2:13 Zechariah 4:6\u20137 Isaiah 43:19 Revelation 3:8 \u00a9 Grace Oasis Ministry 2026",
-  "t4Rc3qUIFyM": "Call On Lord Jesus, Prayer Before Sleep - Tonight I place my trust in You. Be my refuge... End your day by calling on Jesus, your Protector and Savior. This powerful night prayer will help you learn to trust Jesus during difficult moments, surrender your fears, seek God's protection for your family, strengthen your faith, and find peace before sleeping. Pray with us tonight and allow God's love to comfort your heart. If this prayer blesses you, like, subscribe, and share it with someone who needs God's protection tonight. Song: Spirit Composer: Alex Productions Website: No URL available License: Creative Commons (BY 3.0) Music powered by BreakingCopyright: Your Queries:- Let's pray together let\u2019s pray together. lets pray together night prayer evening prayer morning prayer bedtime prayer Night prayer before going to bed catholic jesus powerful prayer Daily jesus prayer daily jesus prayers daily jesus devotional",
-  "X1Wsm2MITx0": "\"Find Your Stillness, Feel His Presence\" : Are you feeling overwhelmed by life's worries, uncertainty, and endless responsibilities? Sometimes, the greatest thing we can do is pause, become still, and remember that God is always in control. In today's daily Bible devotional, we explore Psalm 46:10 (NLT) and discover the powerful meaning behind God's invitation to be still and know Him. This beautiful Bible verse reminds us that even when life feels chaotic, we can find peace, strength, and reassurance in God's presence. Being still doesn't mean giving up or ignoring our problems. It means releasing our fears, surrendering what we cannot control, and trusting the One who holds our future. Through this encouraging Bible message, you will discover how to: 1) Find peace when life feels overwhelming. 2) Quiet your mind and rest in God's presence. 3) Release anxiety and trust God's perfect timing. 4) Strengthen your faith during difficult circumstances. 5) Make time for prayer, reflection, and spiritual growth. Take a moment today to pause, breathe, and reflect on God's goodness. You don't have to figure everything out. God is with you, and His presence is greater than your problems. Verse Of The Day: \u201cBe still, and know that I am God! I will be honored by every nation. I will be honored throughout the world.\u201d Blessed By His Word \u2014 Helping you grow in faith, one Scripture at a time. YOUTUBE CHANNEL : \"Blessed By His Word\" is a YouTube channel that focuses on spreading the word of C",
-  "6z9znTlss8Q": "Before You Sleep, Pray This Powerful Prayer for Your Family's Protection Tonight. End your day with this powerful Night Prayer for Family Protection and place your loved ones in God's loving hands. Ask Heavenly Father to protect your children, parents, spouse, and every family member throughout the night. This heartfelt Bedtime Prayer is a prayer for God's protection, family safety, healing, good health, peaceful sleep, and strength during difficult times. Whether your loved ones are at home or far away, pray for God's guidance and protection over their lives. If your family is facing worries, financial struggles, health concerns, or difficult circumstances, surrender every burden to Jesus and trust in His unfailing love. Let this Powerful Night Prayer Before Sleep bring peace to your heart and remind your family that God's presence is always near. Pray along with Prayer Today and believe in God's protection tonight. May God bless your family, guard your home, and give every loved one peaceful rest. Amen. Good night, and God bless you.\u2764\ufe0f If this prayer touched your heart, please LIKE, SHARE, and SUBSCRIBE\ud83d\ude4f \ud83d\udd14 Subscribe here \ud83d\udc47 -------------------------------------------- -------------------------------------------- \u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac Click here to watch more Prayer Videos:- \u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac Other Query:-- evening prayer night prayer prayer before sleep bedtime prayer Christian sleep prayer powerful Christian prayer prayer today prayer",
-  "t9uHNww699c": "\ud83d\ude4f GO DEEPER IN PRAYER \u2014 ONE DAY AT A TIME If these prayers have been strengthening your faith, your time with God doesn\u2019t have to end when this video ends. I created the PSALM 91 PRAYER \u2014 30-Day Devotional for those who want to build a more intentional prayer routine, spend meaningful time in Scripture, and keep their hearts focused on God through the challenges of everyday life. \ud83d\udcd6 GET THE 30-DAY DEVOTIONAL HERE: \ud83d\udc49 [PASTE YOUR CHECKOUT LINK HERE] For the next 30 days, this devotional gives you a simple and meaningful way to continue your journey through Scripture, reflection, prayer, and biblical encouragement. It was created for those moments when you need to step away from the noise, open God\u2019s Word, pray for yourself and your family, and remember where your strength and refuge come from. \u2728 INSIDE THIS 30-DAY JOURNEY, YOU\u2019LL BE ENCOURAGED TO: \u2022 Build a consistent daily prayer routine \u2022 Spend intentional time reflecting on the Psalms \u2022 Strengthen your faith during difficult seasons \u2022 Pray intentionally for yourself and your family \u2022 Turn to Scripture in moments of fear and uncertainty \u2022 Develop the habit of seeking God through His Word \u2022 Keep your heart centered on God throughout your day \ud83d\udcd6 30 DAYS. 30 MOMENTS WITH GOD. ONE STEP AT A TIME. You don\u2019t need to have all the answers. You simply need a place to begin. \ud83d\udc49 START YOUR 30-DAY DEVOTIONAL JOURNEY HERE: [PASTE YOUR CHECKOUT LINK HERE] \ud83d\ude4f WELCOME TO PSALM 91 PRAYER This channel is a place for biblical prayer, faith, protect",
-  "mIQCEZMetHE": "Good morning, and welcome to this Sunday, November 22 morning prayer. Maybe you stood under the shower this morning and suddenly noticed your shoulders lifted up near your ears and your jaw clenched tight, bracing all night without even knowing it. If worry has been running your mind, replaying conversations, rechecking the bills, imagining the worst, this prayer is for you. God says, \"Be anxious for nothing, but in everything by prayer and supplication, with thanksgiving, let your requests be made known to God.\" In this prayer we hand over our work, money, health and family with open hands, learn to trust Him one day at a time like daily manna, ask for a quiet mind fixed on what is true, hear Jesus speak peace to the storms of this new week, lift up the people we worry about, pray for provision and a grateful heart, receive rest for body and soul, and choose trust again every morning. \ud83d\udcd6 Grow closer to God one morning at a time \u2014 40 mornings of Scripture, reflection & guided prayer in the \"Daily Grace Morning Prayer\" devotional \ud83d\udc49 In this prayer we stand on Philippians 4:6-7, 1 Peter 5:7, Matthew 6:26-27, Philippians 4:8, Isaiah 26:3, Proverbs 3:5-6, Psalm 62:8, John 14:27, 1 Samuel 1, and the Aaronic blessing of Numbers 6:24-26. Stay to the very end \u2014 a personal blessing is spoken over your life, your home and the rest of your week, followed by the blessing of Numbers 6. \"Casting all your care upon Him, for He cares for you.\" (1 Peter 5:7) May the God of peace guard your hear",
   "abMBRto0Fz4": "Start Your Morning in God's Peace | Powerful Prayer to Remove Anxiety, Fear & Worry Begin your day with God. Release every worry, overcome anxiety, and receive the peace that surpasses all understanding. Let His presence calm your heart today. \u25ba LIKE \u25ba COMMENT \u25ba SHARE \u25ba SUBSCRIBE \u25ba TURN ON NOTIFICATIONS",
-  "obADVZMYCIY": "Let\u2019s meditate on God\u2019s Word and pray together. You can support us through either of these options: Buymeacoffee: Patreon: \ud83d\udcd6 Bible References: Proverbs 16:3 James 1:5 Colossians 3:17 Psalm 37:5 Psalm 127:1 \u00a9 Grace Oasis Ministry 2026"
+  "6z9znTlss8Q": "Before You Sleep, Pray This Powerful Prayer for Your Family's Protection Tonight. End your day with this powerful Night Prayer for Family Protection and place your loved ones in God's loving hands. Ask Heavenly Father to protect your children, parents, spouse, and every family member throughout the night. This heartfelt Bedtime Prayer is a prayer for God's protection, family safety, healing, good health, peaceful sleep, and strength during difficult times. Whether your loved ones are at home or far away, pray for God's guidance and protection over their lives. If your family is facing worries, financial struggles, health concerns, or difficult circumstances, surrender every burden to Jesus and trust in His unfailing love. Let this Powerful Night Prayer Before Sleep bring peace to your heart and remind your family that God's presence is always near. Pray along with Prayer Today and believe in God's protection tonight. May God bless your family, guard your home, and give every loved one peaceful rest. Amen. Good night, and God bless you.\u2764\ufe0f If this prayer touched your heart, please LIKE, SHARE, and SUBSCRIBE\ud83d\ude4f \ud83d\udd14 Subscribe here \ud83d\udc47 -------------------------------------------- -------------------------------------------- \u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac Click here to watch more Prayer Videos:- \u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac\u25ac Other Query:-- evening prayer night prayer prayer before sleep bedtime prayer Christian sleep prayer powerful Christian prayer prayer today prayer",
+  "9HcIAerVbqc": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible \u25ba SUBSCRIBE! \ud83d\udc49 \u25ba LIKE! \ud83d\udc4d \u25ba COMMENT! \u25ba SHARE! \u25ba TURN ON THE NOTIFICATION BELL! \ud83d\udd14 Welcome to Inspirational Prayers, a channel dedicated to Christian prayers and devotions. Our mission is to inspire, motivate and most importantly educate ourselves in everything related to the kingdom of God. Helping people cultivate a deeper relationship with God through prayers. We understand that maintaining faith can be challenging, and we are committed to offering encouragement and motivation to help you remain steadfast on your spiritual path. Our prayers are rooted in the teachings of Jesus Christ as found in the Bible, as He is the sole source of peace, strength, and blessings in life, as well as our salvation. Please subscribe to our channel so you won't miss any of our content, which is filled with inspiring and devotional messages designed to lead and reinforce your faith. We recognize that faith is a very powerful tool for overcoming obstacles and achieving your goals, and we are here to help support your journey. Whether you are new to Christianity or have practiced for many years, we extend an invitation for you to join us. Our content is tailored to assist you in deepening your relationship with God and discovering daily inspiration. Let us pray together and bestow blessings upon each other throughout our spiritual journey. May the Lord bless you and safeguard you, and may His love and grace illuminate in all you do. Th",
+  "W9olrp_mTrI": "Start your day with today\u2019s Bible verse and a peaceful Christian prayer to strengthen your faith, calm your heart, and draw you closer to God. In this Verse of the Day, we reflect on Matthew 6:6-8 and allow God\u2019s Word to speak encouragement, wisdom, and hope into our daily lives. Whether you are beginning your morning, going through a difficult season, or simply needing a reminder of God\u2019s presence, this daily Bible verse and prayer is here to uplift your spirit and help you walk with the Lord today. Take a quiet moment to listen, reflect, and pray. May this Scripture remind you that God is near, His Word is true, and His love never fails. If these daily Bible verses and prayers have been a blessing to you, you are always welcome to join our community as we continue seeking God together each day. God bless you always. \ud83d\ude4f\u2764\ufe0f \"Where Every Day Begins with the Word of God.\" \ud83d\udce2 Follow us for more inspiration: \ud83d\udd39SHOP: \ud83d\udd39MEMBER: \ud83d\udd39FACEBOOK: \ud83d\udd39YOUTUBE : Music: \u201cPEACE - Deep Instrumental Worship\u201d by Deep Instrumental/David Lastra Source: CHAPTERS: Verse of the Day - 00:05 Thoughts on Today's Verse - 00:33 Prayer - 04:44 Closing Line - 06:06",
+  "YOlhqQFvxZQ": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible \u25ba SUBSCRIBE! \ud83d\udc49 \u25ba LIKE! \ud83d\udc4d \u25ba COMMENT! \u25ba SHARE! \u25ba TURN ON THE NOTIFICATION BELL! \ud83d\udd14 Welcome to Inspirational Prayers, a channel dedicated to Christian prayers and devotions. Our mission is to inspire, motivate and most importantly educate ourselves in everything related to the kingdom of God. Helping people cultivate a deeper relationship with God through prayers. We understand that maintaining faith can be challenging, and we are committed to offering encouragement and motivation to help you remain steadfast on your spiritual path. Our prayers are rooted in the teachings of Jesus Christ as found in the Bible, as He is the sole source of peace, strength, and blessings in life, as well as our salvation. Please subscribe to our channel so you won't miss any of our content, which is filled with inspiring and devotional messages designed to lead and reinforce your faith. We recognize that faith is a very powerful tool for overcoming obstacles and achieving your goals, and we are here to help support your journey. Whether you are new to Christianity or have practiced for many years, we extend an invitation for you to join us. Our content is tailored to assist you in deepening your relationship with God and discovering daily inspiration. Let us pray together and bestow blessings upon each other throughout our spiritual journey. May the Lord bless you and safeguard you, and may His love and grace illuminate in all you do. Th",
+  "Lc_XdQpxiLI": "Start your day with today\u2019s Bible verse and a peaceful Christian prayer to strengthen your faith, calm your heart, and draw you closer to God. In this Verse of the Day, we reflect on Psalm 50:14\u201315 and allow God\u2019s Word to speak encouragement, wisdom, and hope into our daily lives. Whether you are beginning your morning, going through a difficult season, or simply needing a reminder of God\u2019s presence, this daily Bible verse and prayer is here to uplift your spirit and help you walk with the Lord today. Take a quiet moment to listen, reflect, and pray. May this Scripture remind you that God is near, His Word is true, and His love never fails. If these daily Bible verses and prayers have been a blessing to you, you are always welcome to join our community as we continue seeking God together each day. God bless you always. \ud83d\ude4f\u2764\ufe0f \"Where Every Day Begins with the Word of God.\" \ud83d\udce2 Follow us for more inspiration: \ud83d\udd39SHOP: \ud83d\udd39MEMBER: \ud83d\udd39FACEBOOK: \ud83d\udd39YOUTUBE : Music: \u201cPEACE - Deep Instrumental Worship\u201d by Deep Instrumental/David Lastra Source: CHAPTERS: Verse of the Day - 00:05 Thoughts on Today's Verse - 00:20 Prayer - 04:54 Closing Line - 06:11",
+  "c1v3ojDCNjY": "Let\u2019s meditate on God\u2019s Word and pray together. You can support us through either of these options: Buymeacoffee: Patreon: \ud83d\udcd6 Bible References: 2 Samuel 5:20 Micah 2:13 Zechariah 4:6\u20137 Isaiah 43:19 Revelation 3:8 \u00a9 Grace Oasis Ministry 2026",
+  "qlyUuXyNH3s": "Today's Catholic Mass Readings and Gospel Reflection \u2013 Thursday, November 26, 2026 | Thanksgiving Day Welcome to **The Word of Lord**. Join us for today's Catholic Daily Mass Readings, Responsorial Psalm, Holy Gospel, and a powerful Gospel Reflection for Thursday, November 26, 2026. Today, we celebrate Thursday of the Thirty-Fourth Week in Ordinary Time. In the United States, we also celebrate Thanksgiving Day. Today's Gospel from Luke 21:20-28 reminds us that even when the world is shaken by fear, suffering, and uncertainty, we must stand firm in faith because our redemption is drawing near. Our reflection, **\"When the World Shakes, Give Thanks: Hope in the Lord Who Saves,\"** explores the power of gratitude, trusting God's promises, and finding peace in Jesus Christ during difficult times. Today's Catholic Mass Readings: First Reading: Revelation 18:1-2, 21-23; 19:1-3, 9a Responsorial Psalm: Psalm 100:1b-2, 3, 4, 5 Gospel Acclamation: Luke 21:28 Holy Gospel: Luke 21:20-28 Today's reflection reminds us that earthly powers will pass away, but God's love and faithfulness endure forever. This Thanksgiving, let us thank God for His blessings, remember those who are suffering, and share His love through generosity, forgiveness, and compassion. \ud83d\ude4f PRAY WITH US: May Jesus strengthen our faith, protect our families, heal the sick, comfort the suffering, and fill every home with gratitude, hope, and lasting peace. If today's reflection inspires you, SUBSCRIBE to The Word of Lord for da",
+  "X1Wsm2MITx0": "\"Find Your Stillness, Feel His Presence\" : Are you feeling overwhelmed by life's worries, uncertainty, and endless responsibilities? Sometimes, the greatest thing we can do is pause, become still, and remember that God is always in control. In today's daily Bible devotional, we explore Psalm 46:10 (NLT) and discover the powerful meaning behind God's invitation to be still and know Him. This beautiful Bible verse reminds us that even when life feels chaotic, we can find peace, strength, and reassurance in God's presence. Being still doesn't mean giving up or ignoring our problems. It means releasing our fears, surrendering what we cannot control, and trusting the One who holds our future. Through this encouraging Bible message, you will discover how to: 1) Find peace when life feels overwhelming. 2) Quiet your mind and rest in God's presence. 3) Release anxiety and trust God's perfect timing. 4) Strengthen your faith during difficult circumstances. 5) Make time for prayer, reflection, and spiritual growth. Take a moment today to pause, breathe, and reflect on God's goodness. You don't have to figure everything out. God is with you, and His presence is greater than your problems. Verse Of The Day: \u201cBe still, and know that I am God! I will be honored by every nation. I will be honored throughout the world.\u201d Blessed By His Word \u2014 Helping you grow in faith, one Scripture at a time. YOUTUBE CHANNEL : \"Blessed By His Word\" is a YouTube channel that focuses on spreading the word of C",
+  "t4Rc3qUIFyM": "Call On Lord Jesus, Prayer Before Sleep - Tonight I place my trust in You. Be my refuge... End your day by calling on Jesus, your Protector and Savior. This powerful night prayer will help you learn to trust Jesus during difficult moments, surrender your fears, seek God's protection for your family, strengthen your faith, and find peace before sleeping. Pray with us tonight and allow God's love to comfort your heart. If this prayer blesses you, like, subscribe, and share it with someone who needs God's protection tonight. Song: Spirit Composer: Alex Productions Website: No URL available License: Creative Commons (BY 3.0) Music powered by BreakingCopyright: Your Queries:- Let's pray together let\u2019s pray together. lets pray together night prayer evening prayer morning prayer bedtime prayer Night prayer before going to bed catholic jesus powerful prayer Daily jesus prayer daily jesus prayers daily jesus devotional",
+  "LLEfJhGQfEI": "Bedtime Prayer - Night Prayer Before You Sleep - Evening Prayer Before Going To Bed \"Each day brings its own challenges, noise, and distractions. But in the quiet of the evening, we are given a chance \u2014 to slow down, breathe, and turn our hearts back to God. Prayer isn't just a habit; it's a lifeline. As the day ends, let us draw near to the One who never sleeps nor slumbers. Let\u2019s build a nightly rhythm of bedtime prayer \u2014 not out of routine, but out of relationship. A sacred pause. A moment to realign our spirit and rest in His presence.\" As we close another day, let's come together in evening prayer, expressing thank you God for His unwavering presence. May we find peaceful rest knowing we are under God's guidance, filling our hearts with gratitude for all blessings, and ending with a christian prayer before sleep. , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,",
+  "isOSrIFy1FM": "\ud83d\udcdaGrace For Purpose Prayer Book now available on Amazon: A Christian motivational video that aims to leave you blessed, inspired and encouraged as well as strengthening your prayer life and daily walk with God. As you listen to this daily devotional video may Jesus Christ light up your life! \u25baAn original video created by Grace for Purpose and delivered by our team speakers. Our faith based content aims to bring biblical teachings to life! Our team aims to produce content that is focused on the scriptures, encouraging prayers, and insightful teachings For any enquiries, contact us: teamg4p@gmail.com",
+  "obADVZMYCIY": "Let\u2019s meditate on God\u2019s Word and pray together. You can support us through either of these options: Buymeacoffee: Patreon: \ud83d\udcd6 Bible References: Proverbs 16:3 James 1:5 Colossians 3:17 Psalm 37:5 Psalm 127:1 \u00a9 Grace Oasis Ministry 2026",
+  "bxMJrJ0eAUw": "Start your day with today\u2019s Bible verse and a peaceful Christian prayer to strengthen your faith, calm your heart, and draw you closer to God. In this Verse of the Day, we reflect on Philippians 2:3\u20134 and allow God\u2019s Word to speak encouragement, wisdom, and hope into our daily lives. Whether you are beginning your morning, going through a difficult season, or simply needing a reminder of God\u2019s presence, this daily Bible verse and prayer is here to uplift your spirit and help you walk with the Lord today. Take a quiet moment to listen, reflect, and pray. May this Scripture remind you that God is near, His Word is true, and His love never fails. If these daily Bible verses and prayers have been a blessing to you, you are always welcome to join our community as we continue seeking God together each day. God bless you always. \ud83d\ude4f\u2764\ufe0f \"Where Every Day Begins with the Word of God.\" \ud83d\udce2 Follow us for more inspiration: \ud83d\udd39SHOP: \ud83d\udd39MEMBER: \ud83d\udd39FACEBOOK: \ud83d\udd39YOUTUBE : Music: \u201cPEACE - Deep Instrumental Worship\u201d by Deep Instrumental/David Lastra Source: CHAPTERS: Verse of the Day - 00:05 Thoughts on Today's Verse - 00:22 Prayer - 04:56 Closing Line - 06:13",
+  "e5VKSMt9acY": "When Your Feelings Say It's Over, God's Word Says Otherwise | Blessed Morning Bible Verses For Today \ud83e\udd16 REAL PERSON | REAL FAITH | REAL VOICE (NO AI VOICES ON THIS CHANNEL) \u2611\ufe0f SUBSCRIBE and click the \ud83d\udd14 for notifications to catch all the latest videos uploaded to this channel! \ud83d\udc48 \u2611\ufe0f SUBSCRIBE to my PRAYER CHANNEL and click the \ud83d\udd14 for notifications to catch all the latest videos uploaded to the channel! \ud83d\udc48 \u2611\ufe0f You can SUPPORT and PARTNER with my ministry here (Daily Effective Prayer, Daily Bible Audio): \ud83d\udc48 \u2611\ufe0f SHOP for MINISTRY MERCH here: \ud83d\udc48 \ud83d\udcf2 SOCIAL X/TWITTER: FACEBOOK: THREADS: INSTAGRAM: When Your Feelings Say It's Over, God's Word Says Otherwise | Blessed Morning Bible Verses For Today This is simply a video I\u2019ve put together where I would like to encourage anyone with the Word of God within the sound of my voice. You can adjust the speed of the video in the playback settings. All I ask you to do is to listen to me read the Word of God or turn off the audio and read it for yourself. Please continue to let God's Word take root in your heart. Speak God's Word daily or listen to this video over and over again and allow the Scriptures to reach deep into your spirit. The KJV Bible is a public domain works that I have uploaded primarily for myself to be able to play and listen to in the background but also to pass along to others seeking the divine Word of God. The Bible never, ever fails. God bless you! - Daniel (Channel Creator) \u2729 Watch More Daily Bible Audio Videos Below: Speak Gods ",
+  "jyeeN4AtC2I": "Be blessed as you meditate on God's word and listen to this inspirational morning devotional prayer. \ud83d\udcdaGrace For Purpose Prayer Book available on Amazon: SUBSCRIBE to Grace for Purpose for more! \u00a9 2026 Grace for Purpose Prayers",
+  "t9utaqDoJ7Y": "PSALM 91 & PSALM 23 The Two Most Powerful Prayers In The Bible \u25ba SUBSCRIBE! \ud83d\udc49 \u25ba LIKE! \ud83d\udc4d \u25ba COMMENT! \u25ba SHARE! \u25ba TURN ON THE NOTIFICATION BELL! \ud83d\udd14 Welcome to Inspirational Prayers, a channel dedicated to Christian prayers and devotions. Our mission is to inspire, motivate and most importantly educate ourselves in everything related to the kingdom of God. Helping people cultivate a deeper relationship with God through prayers. We understand that maintaining faith can be challenging, and we are committed to offering encouragement and motivation to help you remain steadfast on your spiritual path. Our prayers are rooted in the teachings of Jesus Christ as found in the Bible, as He is the sole source of peace, strength, and blessings in life, as well as our salvation. Please subscribe to our channel so you won't miss any of our content, which is filled with inspiring and devotional messages designed to lead and reinforce your faith. We recognize that faith is a very powerful tool for overcoming obstacles and achieving your goals, and we are here to help support your journey. Whether you are new to Christianity or have practiced for many years, we extend an invitation for you to join us. Our content is tailored to assist you in deepening your relationship with God and discovering daily inspiration. Let us pray together and bestow blessings upon each other throughout our spiritual journey. May the Lord bless you and safeguard you, and may His love and grace illuminate in all you do. Th"
  }
 }

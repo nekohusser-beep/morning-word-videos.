@@ -1,23 +1,143 @@
 {
  "geo": "US",
- "made_utc": "2026-11-26T09:07:50",
+ "made_utc": "2026-11-26T10:06:18",
  "items": [
+  {
+   "query": "gma",
+   "traffic": "100+",
+   "pubDate": "Thu, 26 Nov 2026 01:50:00 -0800",
+   "news": [
+    {
+     "title": "'GMA' Deals & Steals Free Shipping Bonanza",
+     "source": "Good Morning America"
+    },
+    {
+     "title": "'GMA' Deals & Steals: Holiday gifts with free shipping",
+     "source": "Yahoo"
+    },
+    {
+     "title": "'GMA' Deals & Steals for $20 and under",
+     "source": "ABC News - Breaking News, Latest News and Videos"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "sl-a vs ind-a",
+   "traffic": "500+",
+   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
+   "news": [
+    {
+     "title": "SLA vs INDA, 1st Semi-Final (A1 v B2), ACC Men's Asia Cup Rising Stars 2026 - Commentary",
+     "source": "Cricbuzz"
+    },
+    {
+     "title": "India A vs Sri Lanka A ACC Men's Asia Cup Rising Stars live score, toss winner, winning probability, result and highlights from Doha",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "Sri Lanka A vs India A at Doha, DP World Men's Asia Cup Rising Stars, Semi-Final, 26 Nov 2026",
+     "source": "BCCI"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "modot",
+   "traffic": "10000+",
+   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
+   "news": [
+    {
+     "title": "LIVE RADAR: Snow moves into St. Louis as Thanksgiving travel ramps up",
+     "source": "KSDK"
+    },
+    {
+     "title": "A turkey of a winter storm",
+     "source": "FOX 2"
+    },
+    {
+     "title": "Winter Weather Advisory for Springfield area heading into Thanksgiving",
+     "source": "NPR Illinois"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "buckingham jubilee gta 6 location",
+   "traffic": "200+",
+   "pubDate": "Thu, 26 Nov 2026 01:40:00 -0800",
+   "news": [
+    {
+     "title": "Buckingham Jubilee GTA 6 Location \u2013 Where to Find the Rolls-Royce SUV",
+     "source": "VICE"
+    },
+    {
+     "title": "Where to Find All of Randy\u2019s Wishlist Supercars in GTA 6\u2014Car Locations & Tips",
+     "source": "Insider Gaming"
+    },
+    {
+     "title": "How to steal the Pegassi Infernus in GTA 6",
+     "source": "PC Gamer"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "egypt",
+   "traffic": "1000+",
+   "pubDate": "Thu, 26 Nov 2026 01:10:00 -0800",
+   "news": [
+    {
+     "title": "At least 31 killed in fuel tanker fire near Cairo, Egyptian authorities say",
+     "source": "CNN"
+    },
+    {
+     "title": "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people",
+     "source": "NBC News"
+    },
+    {
+     "title": "Thirty-one killed in fire after vehicle overturns in Egypt",
+     "source": "Reuters"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "3",
+   "traffic": "1000+",
+   "pubDate": "Thu, 26 Nov 2026 01:00:00 -0800",
+   "news": [
+    {
+     "title": "Guardians bringing back lefty Griffin on 3-year, $48 million deal (source)",
+     "source": "MLB.com"
+    },
+    {
+     "title": "Foster Griffin agrees to 3-year, $48 million deal to stay with Guardians",
+     "source": "ESPN"
+    },
+    {
+     "title": "Foster Griffin returns to Cleveland on 3-year deal with Guardians: Sources - The Athletic",
+     "source": "The New York Times"
+    }
+   ],
+   "hook": false
+  },
   {
    "query": "the legend of zelda wind waker",
    "traffic": "200+",
    "pubDate": "Thu, 26 Nov 2026 00:50:00 -0800",
    "news": [
     {
+     "title": "Wind Waker Recomp Brings Zelda Game to Native PC",
+     "source": "Demokratis.co.id"
+    },
+    {
      "title": "Legend Of Zelda: Wind Waker Is Finally Getting The Remaster It Deserves",
      "source": "OpenCritic"
     },
     {
-     "title": "Legend Of Zelda: Wind Waker Is Finally Getting The Remaster It Deserves",
-     "source": "ScreenRant"
-    },
-    {
-     "title": "Legend Of Zelda's Toon Link Officially Returning In New Collection",
-     "source": "IMDb"
+     "title": "Wind Waker Recomp Brings Game to Native PC",
+     "source": "cwibc.co.id"
     }
    ],
    "hook": false
@@ -44,16 +164,16 @@
   },
   {
    "query": "dominion power outage",
-   "traffic": "200+",
+   "traffic": "500+",
    "pubDate": "Thu, 26 Nov 2026 00:20:00 -0800",
    "news": [
     {
-     "title": "Virginia Beach braces for Thanksgiving storm as officials warn of flooding, strong winds and rough surf",
-     "source": "13newsnow.com"
+     "title": "Coastal storm warning expected to have significant impacts on region",
+     "source": "WAVY.com"
     },
     {
-     "title": "Cities to open parking garages ahead of coastal storms, flooding",
-     "source": "WAVY.com"
+     "title": "Virginia Beach braces for Thanksgiving storm as officials warn of flooding, strong winds and rough surf",
+     "source": "13newsnow.com"
     },
     {
      "title": "Damaging winds, heavy rain and flooding expected ahead of Thanksgiving storm in Hampton Roads",
@@ -78,126 +198,6 @@
     {
      "title": "Denny\u2019s faces heat over gushy tribute to Nvidia CEO Jensen Huang: 'Just put the pancakes on bro'",
      "source": "New York Post"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "in n out",
-   "traffic": "2000+",
-   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "LAPD looking for hate crime suspect after apparent racist tirade at Sherman Oaks In-N-Out",
-     "source": "NBC Los Angeles"
-    },
-    {
-     "title": "Woman targeted in racist attack at In-N-Out in Los Angeles speaks out",
-     "source": "KTLA"
-    },
-    {
-     "title": "Woman Allegedly Yelled Anti-Asian Slurs at Mom, Daughter at In-N-Out Burger, Now Being Investigated as Hate Crime",
-     "source": "People.com"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "sam neill",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "The Fox review \u2013 talking animals are the least weird thing in this delightfully peculiar comedy",
-     "source": "The Guardian"
-    },
-    {
-     "title": "The Fox is an absurd, fable-like comedy that explores the weirdness of being human",
-     "source": "The Conversation"
-    },
-    {
-     "title": "Dario Russo embraces the Australian and the absurd with \u2018The Fox\u2019",
-     "source": "IF Magazine"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "gta 6 chapter 2 mission list",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 23:50:00 -0800",
-   "news": [
-    {
-     "title": "'GTA 6' chapter 1 is so good that I'm afraid to move on to chapter 2",
-     "source": "Mashable"
-    },
-    {
-     "title": "The unexpected joy hiding in Grand Theft Auto VI\u2019s chaos? A little routine",
-     "source": "The Guardian"
-    },
-    {
-     "title": "The 'Slow Cinema' of Grand Theft Auto VI",
-     "source": "Little White Lies"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "criminal profile gta 6",
-   "traffic": "200+",
-   "pubDate": "Wed, 25 Nov 2026 23:10:00 -0800",
-   "news": [
-    {
-     "title": "GTA 6 Criminal Profile: How the system works",
-     "source": "Red Bull"
-    },
-    {
-     "title": "Why did Rockstar Games make empathy a key mechanic in GTA 6? \"Because it's fun\" says head of development Rob Nelson",
-     "source": "Eurogamer.net"
-    },
-    {
-     "title": "GTA 6 rewards empathy because being a \"demigod stomping through the world\" is only fun for so long",
-     "source": "Yahoo"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "james franco",
-   "traffic": "100+",
-   "pubDate": "Wed, 25 Nov 2026 23:10:00 -0800",
-   "news": [
-    {
-     "title": "James Franco Admits Student Relationships Crossed Boundaries",
-     "source": "SuaraGarut.ID"
-    },
-    {
-     "title": "James Franco Admits Sleeping With His Acting Students But Denies Opening School To Lure Women",
-     "source": "Fashion Times UK"
-    },
-    {
-     "title": "James Franco Admits Sleeping With Studio 4 Students",
-     "source": "Demokratis.co.id"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "mcdonalds",
-   "traffic": "2000+",
-   "pubDate": "Wed, 25 Nov 2026 23:00:00 -0800",
-   "news": [
-    {
-     "title": "McDonald\u2019s Invites Fans to Leave Adulthood Behind with the Home Alone Meal",
-     "source": "McDonald\u2019s Corporation"
-    },
-    {
-     "title": "McDonald\u2019s Launches \u2018Home Alone\u2019 Meal Inspired by Kevin\u2019s Cravings",
-     "source": "TODAY.com"
-    },
-    {
-     "title": "McDonald\u2019s Is Releasing an All-New Holiday Meal for a Limited Time",
-     "source": "Allrecipes"
     }
    ],
    "hook": false

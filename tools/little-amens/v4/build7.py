@@ -15,11 +15,11 @@ def bursts(cid):
             else: R.append([st,i])
             st=None
     return [(x/fps,y/fps) for x,y in R if e[x:y].max()>=0.35]
-INFO=json.load(open('v3/segG/info.json'))
+INFO=json.load(open('v3/segH/info.json'))
 lst=[]; t=0; caps=[]
 FIX={'pip.':'Pip!','Ba':'Baa','-ah!':'','-men!':'-men!','-men.':'-men.','Momma!':'Mama!','Hahahaha.':'','Hahahahahaha.':'','Ah,':'Aaah...','ah,':'Aaah...','mmm,':'Mmmm.','Thank.':'Thank...','You.':'you.','he':'He','Say,':'Say...','say,':'say...','men.':'men!','men,':'men.'}
 for lab,cid,a,b in E:
-    var='F'; out=f'v3/segG/{lab}.mp4'; a=INFO[lab]['o0']; b=INFO[lab]['o1']
+    var='F'; out=f'v3/segH/{lab}.mp4'; a=INFO[lab]['o0']; b=INFO[lab]['o1']
     dur=float(subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',out],capture_output=True,text=True).stdout)
     lst.append(f"file '{os.path.abspath(out)}'")
     # captions: sentence chunks
@@ -69,6 +69,6 @@ open('v3/caps.ass','w').write(ass); json.dump(caps,open('v3/caps.json','w'))
 for c in caps: print(round(c[0],2),round(c[1],2),c[2])
 subprocess.run(['ffmpeg','-v','error','-y','-f','concat','-safe','0','-i','v3/list.txt','-c','copy','v3/cat.mp4'],check=True)
 subprocess.run(['ffmpeg','-v','error','-y','-i','v3/cat.mp4','-i','bed.wav','-filter_complex',
-  f"[0:v]ass=v3/caps.ass,fade=t=in:st=0:d=0.5,fade=t=out:st={TOT-1.2:.2f}:d=1.2[v];[1:a]dynaudnorm=f=200:g=11:m=6,volume=0.20,afade=t=in:st=0:d=1.5,afade=t=out:st={TOT-2:.2f}:d=2[bed];[0:a][bed]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
-  '-map','[v]','-map','[a]','-t',f'{TOT:.2f}','-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','little-amens-ep1-v6.mp4'],check=True)
+  f"[0:v]ass=v3/caps.ass,fade=t=in:st=0:d=0.5,fade=t=out:st={TOT-1.2:.2f}:d=1.2[v];[1:a]acompressor=threshold=-34dB:ratio=8:attack=5:release=120:makeup=4,dynaudnorm=f=75:g=5:m=10,volume=0.18,afade=t=in:st=0:d=1.5,afade=t=out:st={TOT-2:.2f}:d=2[bed];[0:a][bed]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
+  '-map','[v]','-map','[a]','-t',f'{TOT:.2f}','-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','little-amens-ep1-v7.mp4'],check=True)
 print('TOTAL',TOT)

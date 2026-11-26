@@ -1,0 +1,468 @@
+################
+QUERY: adhd skit  results: 30
+median views: 263091
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+   7386003 |       - | 28.1x |   936s | - | Being Married To Someone With ADHD [Drew Lynch] https://youtu.be/v3I0YsfMJS8 OUTLIER
+    118228 |       - |  0.4x |   335s | - | when the doctor says you have ADHD... [Charlie Berens] https://youtu.be/64EO9r_dmbI
+    170187 |       - |  0.6x |  1267s | - | When You Have ADHD and Anxiety At The Same Time. Ray DeVito - Full Special [Dry Bar Comedy] https://youtu.be/LL0vVD1cTMo
+    527391 |       - |  2.0x |   273s | - | your ADHD brain when you give it coffee [Daniel Thrasher] https://youtu.be/jeyKDlA1ub0
+   2424749 |       - |  9.2x |   223s | - | ADHD - "Under The Sea" Parody [Holderness Family Music] https://youtu.be/Zvqx9DfG9lU OUTLIER
+   1043581 |       - |  4.0x |  1688s | - | The Truth About Having ADHD. Dry Bar Comedy [Dry Bar Comedy] https://youtu.be/QafoV1oPu_I OUTLIER
+     85780 |       - |  0.3x |   328s | - | Autism vs ADHD vs AuDHD: “Thinking Out Loud" [Kojo Sarfo, DNP] https://youtu.be/dfKx_Q8aFRY
+    986166 |       - |  3.7x |   212s | - | A Conversation with ADHD [GingerPale] https://youtu.be/sqyTEcLlt88 OUTLIER
+    115037 |       - |  0.4x |   687s | - | Can You Resist Laughing at These ADHD Jokes? Let's Find Out! [How to ADHD] https://youtu.be/lshK3_g6YZQ
+   1212737 |       - |  4.6x |   562s | - | Comedian Gets Caught In Conversation With ADHD Couple [Drew Lynch] https://youtu.be/raPe-Uf99hs OUTLIER
+   1074640 |       - |  4.1x |  2354s | - | I HAVE A DISORDER | Full Standup Comedy Special | AJ Wilkerson [AJ Wilkerson Comedy] https://youtu.be/k82dywiOjFE OUTLIER
+    194220 |       - |  0.7x |   267s | - | Me and My ADHD [Holderness Family Laughs] https://youtu.be/FVSnHCDAdCU
+    228133 |       - |  0.9x |   264s | - | ADHD In The Wild [Holderness Family Laughs] https://youtu.be/08FDeQDGWSM
+    446654 |       - |  1.7x |   220s | - | ADHD Needs A New Name - Supercalifragilisticexpialidocious Parody [Holderness Family Music] https://youtu.be/ugKm0iTbF4Q
+   8860731 |       - | 33.7x |   344s | - | adhd [Ice Cream Sandwich] https://youtu.be/-NVoikSV-cQ OUTLIER
+    104540 |       - |  0.4x |   590s | - | 'They Studied Me!!' - When Autism Meets ADHD | AJ Wilkerson Comedy [AJ Wilkerson Comedy] https://youtu.be/vlmTmYTHqWY
+    298050 |       - |  1.1x |   251s | - | Trying to do ANYTHING with ADHD [Daniel Thrasher] https://youtu.be/aYKtTGS0yAo
+    736497 |       - |  2.8x |   208s | - | What It's Like To Have ADHD | Smile Squad Comedy [Smile Squad Comedy] https://youtu.be/LNh4ebMHqkw
+      4068 |       - |  0.0x |    19s | - | They're Out Of My ADHD Medication. . . | STH Skit | [×honeychips×] https://youtu.be/wAtFXqBmfO8
+    760769 |       - |  2.9x |  2230s | - | ADHDon't Annoy Your Wife. Al Goodwin- Full Special [Dry Bar Comedy] https://youtu.be/dld64uQrsgI
+     61642 |       - |  0.2x |   385s | - | Debra DiGiovanni Stand-Up: Dealing with ADHD, Skipping Over Small Talk | The Tonight Show [The Tonight Show Starring Jimmy Fallon] https://youtu.be/aCRNhMU01CU
+    362716 |       - |  1.4x |   195s | - | Autism vs ADHD vs AuDHD: “Repeating Meals” [Kojo Sarfo, DNP] https://youtu.be/nS2_TioNYeE
+   9201021 |       - | 35.0x |   475s | - | ADHD but medicated [Ice Cream Sandwich] https://youtu.be/oavSiNIUJO0 OUTLIER
+       293 |       - |  0.0x |   372s | - | ADHD Skit [Isabella Duran] https://youtu.be/ko6rjJWUv9Y
+      1199 |       - |  0.0x |   894s | - | The Chaos of Living with an ADHD Wife | Drew Lynch Stand Up Comedy [Comedy Laugh Riot] https://youtu.be/GnG6THygEfU
+        73 |       - |  0.0x |    11s | - | I wish I could sleep | ADHD skit [Shadow_Punnk] https://youtu.be/HOe4U7u8LaM
+        93 |       - |  0.0x |    57s | - | Don't Mention ADHD Skit [Ceolskog] https://youtu.be/W3RwdqRlrgA
+     41740 |       - |  0.2x |    16s | - | "..They're out of my ADHD medication.." // skit // ft.Wally asu [-VioletteClouds-] https://youtu.be/mG6TWriO95E
+   1799190 |       - |  6.8x |   763s | - | 5 Signs You’re A High-Masking Autistic With ADHD [Auticate with Chris & Debby] https://youtu.be/ZlFSeamEJbA OUTLIER
+        22 |       - |  0.0x |    10s | - | What it feels like to have ADHD @Colorado_Counselor #adhd #skit [Bardic Kin ] https://youtu.be/LCFnzxMvqww
+
+TITLE WORDS: adhd(29), with(7), the(7), skit(6), you(5), have(5), comedy(5), when(4), out(4), full(3), special(3), autism(3), and(2), your(2), parody(2), audhd(2), conversation(2), wilkerson(2), what(2), like(2), they're(2), medication(2), wife(2), stand(2), being(1)
+TOP TAGS: 
+AUTOCOMPLETE: adhd skit | adhd comedy skit | snl adhd skit | adhd assessment skit | adhd humor skit | adhd conversation skit | adhd interview skit | adhd friend skit | marcello hernandez adhd skit | south park adhd skit
+################
+QUERY: adhd vs non adhd  results: 30
+median views: 789275
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+  30368101 |       - | 38.5x |   345s | - | ADHD Child vs. Non-ADHD Child Interview [Mental Health Matters] https://youtu.be/-IO6zqIm88s OUTLIER
+    116757 |       - |  0.1x |   266s | - | 5 Signs You Have ADHD, Not Laziness [Psych2Go] https://youtu.be/n-RE9BSZTmA
+    498759 |       - |  0.6x |   624s | - | 10 Signs You Do NOT Have ADHD [Rick Has ADHD] https://youtu.be/ukyZdPQ7kHk
+   1006931 |       - |  1.3x |   496s | - | Rethinking ADHD Treatment: The Power of Non-Stimulant Medication [Dr. Tracey Marks] https://youtu.be/_p5ZeE7gc0I
+   2990663 |       - |  3.8x |   771s | - | Adult ADHD | Inattentive [MedCircle] https://youtu.be/ToN-y8CNl-Q OUTLIER
+      9526 |       - |  0.0x |   220s | - | Do stimulants affect people with ADHD differently from people without ADHD? -- Dr. Joanna Moncrieff [Medicating Normal] https://youtu.be/4jEsD40FVmc
+   1812146 |       - |  2.3x |   330s | - | 5 Signs of Inattentive ADHD (ADD) [Psych2Go] https://youtu.be/O0-9Zh6PZaM
+    130268 |       - |  0.2x |  1000s | - | How People With ADHD See People Without ADHD (Part 1 - 20) [Life Actuator] https://youtu.be/w6KyuztHW5U
+    307762 |       - |  0.4x |   133s | - | Infographics: What is ADHD? [Reynolds Journalism Institute] https://youtu.be/Rfcdx3qm77M
+  12600842 |       - | 16.0x |  1695s | - | ADD/ADHD | What Is Attention Deficit Hyperactivity Disorder? [Understood] https://youtu.be/ouZrZa5pLXk OUTLIER
+    741141 |       - |  0.9x |   415s | - | ADHD Vs Bipolar Disorder - How To Tell The Difference [Dr. Tracey Marks] https://youtu.be/pGUvXPL57as
+    627016 |       - |  0.8x |   761s | - | Do All People with ADHD Think the Same? | SPECTRUM [Jubilee] https://youtu.be/qd6k8PZDicw
+    837410 |       - |  1.1x |  1490s | - | 10 Habits That Instantly Tell Me You're NOT ADHD [I'm Autistic, Now What?] https://youtu.be/VKc-M1diqos
+   1799190 |       - |  2.3x |   763s | - | 5 Signs You’re A High-Masking Autistic With ADHD [Auticate with Chris & Debby] https://youtu.be/ZlFSeamEJbA
+    380992 |       - |  0.5x |   340s | - | The ADHD You Don't See: The Truth About Women's Struggles [Dr. Tracey Marks] https://youtu.be/l4j62WsDOYg
+   1407090 |       - |  1.8x |  1632s | - | A nerdy deep dive into ADHD and Anxiety [Therapy in a Nutshell] https://youtu.be/uL0eC1E9AHQ
+    132991 |       - |  0.2x |   973s | - | How to Explain ADHD (To Someone Without ADHD) [Life Actuator] https://youtu.be/aRPNiKApBVI
+    118131 |       - |  0.1x |   534s | - | How Is the ADHD Brain Different? [Trace Elements] https://youtu.be/EyjaW6oN1T0
+   4019959 |       - |  5.1x |  1330s | - | I spent a day with people w/ ADHD [Smosh Alike] https://youtu.be/jICroNO55RA OUTLIER
+    251497 |       - |  0.3x |   579s | - | ADHD & Autism (AuDHD): Why Stimulants Work Differently (and What to Try Instead) [Dr. Rege] https://youtu.be/dLVzwNp9GMY
+   2815950 |       - |  3.6x |   209s | - | Is ADHD An Advantage? [AsapSCIENCE] https://youtu.be/n2EVEYmeSqg OUTLIER
+   8670794 |       - | 11.0x |   360s | - | A Day in the Life with ADHD [Charleston Shoe Productions] https://youtu.be/t32CK5t8d2Q OUTLIER
+     87652 |       - |  0.1x |   647s | - | Adderall Use by Those Who Don't Have ADHD [The Mental Breakdown] https://youtu.be/Cp-ocF4vNz8
+   4274080 |       - |  5.4x |   309s | - | 6 Signs and Symptoms Of ADHD [Psych2Go] https://youtu.be/Dm_q2lIF30g OUTLIER
+    731198 |       - |  0.9x |   185s | - | Can adults have ADHD? A psychiatrist explains the symptoms [Global News] https://youtu.be/mv-BME1SmTA
+   7383340 |       - |  9.4x |  1033s | - | Failing at Normal: An ADHD Success Story | Jessica McCabe | TEDxBratislava [TEDx Talks] https://youtu.be/JiwZQNYlGQI OUTLIER
+   1772656 |       - |  2.2x |   369s | - | Why Stimulants Help ADHD [SciShow Psych] https://youtu.be/yoX0vEDn5a4
+    447570 |       - |  0.6x |   566s | - | Do You Have Autism or ADHD (OR Both)? [Psych2Go] https://youtu.be/TZ5V_-hP05g
+    199100 |       - |  0.3x |   159s | - | Does my child have ADHD? [Nicklaus Children's Hospital] https://youtu.be/5osVxPKnQ90
+    868476 |       - |  1.1x |   422s | - | How ADHD Looks Different In Adults [Dr. Tracey Marks] https://youtu.be/L7mMYK7hP7Q
+
+TITLE WORDS: adhd(34), the(8), have(6), people(6), with(6), signs(5), you(5), how(5), child(3), not(3), stimulants(3), without(3), what(3), and(3), non(2), inattentive(2), differently(2), add(2), see(2), disorder(2), tell(2), don't(2), different(2), day(2), autism(2)
+TOP TAGS: 
+AUTOCOMPLETE: adhd vs non adhd | adhd vs non adhd interview | adhd vs non adhd time lapse | adhd vs non adhd brain | adhd vs non adhd shorts | adhd vs non adhd sleep | adhd vs non adhd studying | adhd vs non adhd nikko ortiz
+################
+QUERY: coworker skit  results: 30
+median views: 3379385
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+   2505560 |       - |  0.7x |   339s | - | Kathy - Coworker Drinks - SNL [Saturday Night Live] https://youtu.be/UrEbWMtkkDI
+  38370890 |       - | 11.4x |   222s | - | Key & Peele - Office Homophobe [Comedy Central] https://youtu.be/e3h6es6zh1c OUTLIER
+   3741048 |       - |  1.1x |   353s | - | Kathy - SNL [Saturday Night Live] https://youtu.be/ZpcMXvUi4Zg
+     21827 |       - |  0.0x |  1154s | - | The Narcissistic Co-Worker - FULL SKIT [Sarah Wizeman] https://youtu.be/_0KNLRn-2_I
+        39 |       - |  0.0x |    35s | - | "When It's FINALLY Slap Your Coworker Day! 😂💀 | Coworker Comedy Skit [RayTaylorTV] https://youtu.be/4tKkxEpuGLI
+   1771727 |       - |  0.5x |   287s | - | Leadership Summit - SNL [Saturday Night Live] https://youtu.be/tLKBFwJCumY
+      1182 |       - |  0.0x |   288s | - | Manager wants me to give coworker a ride to work #skits #coworkers #callcenter #funnyreels [Wanda] https://youtu.be/C3pJImNMkoY
+   4789992 |       - |  1.4x |   280s | - | Office Apology - SNL [Saturday Night Live] https://youtu.be/ep63_TfYKh4
+  12114450 |       - |  3.6x |   171s | - | Key and Peele: Can You Be Too Nice at the Office? | The New York Times [The New York Times] https://youtu.be/c6V_zUGVlTk OUTLIER
+       805 |       - |  0.0x |   318s | - | We All Have That One Coworker... (Skit) [R. Alexandria] https://youtu.be/MW6YSTNoAFk
+  16447111 |       - |  4.9x |   344s | - | Sexual Harassment Charlie - SNL [Saturday Night Live] https://youtu.be/iAAJYpg9xWE OUTLIER
+   1746285 |       - |  0.5x |   272s | - | Plates - SNL [Saturday Night Live] https://youtu.be/AKWh8D8bSR0
+      5822 |       - |  0.0x |   664s | - | That One Old Head Coworker | Skit Series | #DavarionJarvelle [Davarion Jarvelle] https://youtu.be/iy0M55gbKr0
+  10321938 |       - |  3.1x |    87s | - | The Office US - Jim vs Dwight - Jim Impersonates Dwight [The Office] https://youtu.be/WaaANll8h18 OUTLIER
+   2937559 |       - |  0.9x |   329s | - | Louise's Birthday - SNL [Saturday Night Live] https://youtu.be/GNG__Vq4L60
+    527636 |       - |  0.2x |   184s | - | Sick Day // Colleagues [BuzzFeedVideo] https://youtu.be/ne6UKcpb44E
+   3673823 |       - |  1.1x |   218s | - | You Don't Actually Need a Menu [Dropout] https://youtu.be/k5oL4QKb6Sk
+     20950 |       - |  0.0x |   181s | - | "Stop Baking Treats for Our Coworkers" Part 3 #coworkers #skit #fyp #part3 #karen [Taylor_saurasrex ] https://youtu.be/2x3tfbBjV7E
+  13048394 |       - |  3.9x |   199s | - | Is This Guy’s Boss Even Real? - Key & Peele [Key & Peele] https://youtu.be/YGgnza9hLMM OUTLIER
+   7791958 |       - |  2.3x |   544s | - | Best Office Moments Ever | Key & Peele [Comedy Central Asia] https://youtu.be/dRJNbzDbv1w
+   3812236 |       - |  1.1x |   346s | - | Workplace Harassment Seminar - SNL [Saturday Night Live] https://youtu.be/YSs-__3szeE
+   6705813 |       - |  2.0x |   236s | - | Millennials in the Workplace Training Video [Official Comedy] https://youtu.be/Sz0o9clVQu8
+      3428 |       - |  0.0x |   270s | - | restaurant skit/ story: karen coworkers and mangers! [sydney🍓💛] https://youtu.be/Pc0IY5VBxlI
+   9445418 |       - |  2.8x |   179s | - | Sister - SNL [Saturday Night Live] https://youtu.be/-X9dxL17t1k
+      2476 |       - |  0.0x |   378s | - | The different types of co workers | skit [mikegbeatz] https://youtu.be/dgtA2zlvfRQ
+  16062896 |       - |  4.8x |   335s | - | Office Phone Call - SNL [Saturday Night Live] https://youtu.be/9LCMuKtpnPE OUTLIER
+   9792243 |       - |  2.9x |   267s | - | 'Brian's Hat' Full Sketch - I Think You Should Leave with Tim Robinson Season 2 [Netflix Is A Joke] https://youtu.be/LO2k-BNySLI
+   1837216 |       - |  0.5x |   254s | - | I Got One - SNL [Saturday Night Live] https://youtu.be/BNs2dnKYXUM
+  44844349 |       - | 13.3x |   248s | - | Key & Peele - Undercover Boss [Comedy Central] https://youtu.be/UHyoDV1fsA4 OUTLIER
+   3084948 |       - |  0.9x |   158s | - | Green Flags - SNL [Saturday Night Live] https://youtu.be/I2eQDTDm2O0
+
+TITLE WORDS: snl(12), skit(7), coworker(6), office(6), the(6), key(5), peele(5), coworkers(4), you(3), one(3), kathy(2), full(2), day(2), and(2), that(2), harassment(2), jim(2), dwight(2), karen(2), boss(2), workplace(2), drinks(1), homophobe(1), narcissistic(1), worker(1)
+TOP TAGS: 
+AUTOCOMPLETE: coworker skit | funny coworker skits | druski coworker skit | toxic coworker skits | chinese coworker skit | unfiltered coworker skits | creepy coworker skit | snl annoying coworker skit | coworker humor
+################
+QUERY: animated comedy skit  results: 30
+median views: 401118
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+   4278925 |       - | 10.7x |  1404s | - | How to NOT Make an Animated Comedy [Bradley G] https://youtu.be/qpgDYtb0AsI OUTLIER
+   1787929 |       - |  4.5x |   340s | - | Comedy Central Re-Animated - Steve Rannazzisi - Ordering A Pizza [Comedy Central Stand-Up] https://youtu.be/6-KpiclMuPA OUTLIER
+    172593 |       - |  0.4x |  9393s | - | The WEIRD Animated Side of Comedy Central [Jordan Fringe] https://youtu.be/2XYvLB62IFY
+   1456337 |       - |  3.6x |   273s | - | Occupied - Animated Horror Comedy Short Film [Laimfunk] https://youtu.be/AldqlGq0B9w OUTLIER
+    426729 |       - |  1.1x |   942s | - | Smiling Friends - How to Make an Animated Comedy [Bradley G] https://youtu.be/k22Gz1wPzPM
+      4771 |       - |  0.0x |   422s | - | Yardie Runnings #149 | Sure Shot | Jamaican Animated Comedy [Las May TOONS] https://youtu.be/yrmGUTb-GV4
+   4147721 |       - | 10.3x |   232s | - | The Expert: IT Support (Short Comedy Sketch) [Lauris Beinerts] https://youtu.be/ZOzzRlc_qho OUTLIER
+    189181 |       - |  0.5x |   410s | - | Froggy & Fishy  | The Funniest Frog and Fish Adventure! | 3D Cartoon Comedy for kids | Qutub Toons  [Qutub Toons] https://youtu.be/FAef_TZIAAc
+  33077823 |       - | 82.5x |   455s | - | The Expert (Short Comedy Sketch) [Lauris Beinerts] https://youtu.be/BKorP55Aqvg OUTLIER
+   3462052 |       - |  8.6x |   174s | - | The Expert: Progress Meeting (Short Comedy Sketch) [Lauris Beinerts] https://youtu.be/u8Kt7fRa2Wc OUTLIER
+   2223989 |       - |  5.5x |   303s | - | Let's Go! Heeppeep!🐸 | EP.01-04 | #heeppeep #animation #funny #cute #comedy #shorts #memes #cartoon [힙핍 Heeppeep and Devil's Candy ] https://youtu.be/L1NIzqQWd6Y OUTLIER
+    111613 |       - |  0.3x |    30s | - | Boom Bam Comedy Jam😆| Official Trailer✨| Teen Titans Go💪| Grizzy & The Lemmings👊| #promo [Cartoon Network India] https://youtu.be/ubEudMu9tUk
+   9652225 |       - | 24.1x |    88s | - | Do You Speak English? - Big Train - BBC comedy [BBC Studios] https://youtu.be/rxUm-2x-2dM OUTLIER
+   1895725 |       - |  4.7x |  1094s | - | Natia Comedy Part 743 || Chhadakhai [utkal cartoonworld] https://youtu.be/I-_lETbHY0Y OUTLIER
+   1402603 |       - |  3.5x |   814s | - | Monthly Special ❤️🈷️| Dec.| #heeppeep #animation #funny #cartoon #comedy #cute #memes #shorts #reels [힙핍 Heeppeep and Devil's Candy ] https://youtu.be/iqZGnMKyU9s OUTLIER
+    207303 |       - |  0.5x |   303s | - | JOKE OF - TRAIN MEIN BHOOT ( चिंकी बनी भूत ) - Bolta comedy [bolta comedy] https://youtu.be/rAKX4XSsL4c
+   1182584 |       - |  2.9x |   503s | - | Special Top Trending Pregnant Funny Comedy Video 2026 😂 New Amazing Funny Video 2026😂 By Fun Tv 24 [Fun Tv 24] https://youtu.be/twPRp9c5sEI
+     10551 |       - |  0.0x |   258s | - | Security Guard 🤣🤣 Deshi Funny Comedy Cartoon Video | Betasawa Funny Video | GournagarMeme [গৌৰনগৰ Meme] https://youtu.be/z9JL_1HMg7U
+    507371 |       - |  1.3x |   529s | - | Exclusive Top New Trending Comedy Video 2026 Amazing Injection Wala Comedy Video New Doctor Video739 [Bidik Fun Tv] https://youtu.be/FCgqWnAFj9o
+     38707 |       - |  0.1x |   191s | - | injection Funny Video 2026 Must Watch Family Comedy Video Try To Not Laugh Episode 243 By BELUFUNTV [BELU FUN TV] https://youtu.be/1WlzTu6zGvU
+      2313 |       - |  0.0x |   718s | - | Exclusive Top New Doctor Funniest Comedy Video,😂Must Watch Viral Injuction Funny Video 2026, Bidik [Bidik Fun Tv] https://youtu.be/ZhEbn76SSTM
+    133391 |       - |  0.3x |   134s | - | Natia Comedy Part 743 || 80s WORLD || Dinosaur  [manash cartoon world ] https://youtu.be/2doDivFov3Y
+    273478 |       - |  0.7x |   300s | - | JOKE OF - TRAIN MEIN KAMLA  ( ट्रेन में कमला ) - Comedy time toons [Comedy Time Toons] https://youtu.be/iww-c5NrFbc
+    216901 |       - |  0.5x |   509s | - | Exclusive Top New Trending Comedy Video 2026 Amazing Injection Wala Comedy Video New Doctor Video734 [Bidik Fun Tv] https://youtu.be/erW0zNYz2YM
+    111480 |       - |  0.3x |   241s | - | injection Funny Video 2026 Must Watch Family Comedy Video Try To Not Laugh Episode 242 By BELUFUNTV [BELU FUN TV] https://youtu.be/XHjXLO72Nmc
+    755582 |       - |  1.9x |   211s | - | Sheru Bhai's Tea Stall Became a LUXURY CAFE! 😱☕ | Hindi Cartoon Story | Poor to Rich Transformation [SHERU TOONS] https://youtu.be/57InKryZ36g
+    659011 |       - |  1.6x |   799s | - | ​തങ്കനും പങ്കനും | കോളേജിലെ പ്രണയം! 💔 | Animated Comedy Thriller Video | Vegetable Cartoon [വേജിറ്റബിൾ ഗാങ്സ് 2.o] https://youtu.be/q0pHTBYNcDo
+    375508 |       - |  0.9x |   765s | - | Exclusive Top New Trending Comedy Video 2026 Amazing Injection Wala Comedy Video New Doctor Video733 [Bidik Fun Tv] https://youtu.be/1m4huoCyxj4
+      6005 |       - |  0.0x |   672s | - | টাইম মেচিন ২ ❤️❤️ assamese comedy video// apunar smile// funny video//comedy cartoon [apunar smile] https://youtu.be/dq6nj3_CEQs
+    196397 |       - |  0.5x |   664s | - | Exclusive Top New Trending Comedy Video 2026 Amazing Injection Wala Comedy Video New Doctor Video745 [Bidik Fun Tv] https://youtu.be/tjVuKQXq7YM
+
+TITLE WORDS: comedy(34), video(21), funny(10), new(10), 2026(9), animated(7), cartoon(7), the(6), top(6), injection(6), trending(5), amazing(5), exclusive(5), doctor(5), short(4), wala(4), not(3), expert(3), sketch(3), heeppeep(3), train(3), must(3), watch(3), how(2), make(2)
+TOP TAGS: 
+AUTOCOMPLETE: animated comedy skits | cartoon comedy skits | animated comedy video | animated comedy video hindi | animated comedy video kaise banaye | 3d animated comedy skits | animated skit humor | anime style comedy skits | naruto anime comedy skit
+################
+QUERY: wife vs husband skit  results: 30
+median views: 630557
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+     19214 |       - |  0.0x |   507s | - | Wife vs Husband ASMR Challenge! ⚡ [ASMR Chiranjit] https://youtu.be/tzwA8BUzJc8
+    130466 |       - |  0.2x |  1388s | - | Wife vs Husband! Try Not to Laugh 2026 | Eddie Mora Funny Shorts Compilation [Comedy Skits] https://youtu.be/6oZl2tcOd_A
+   5325910 |       - |  8.4x |   312s | - | Anjelah Johnson and Her Husband Argue Latino Culture Rankings | Netflix Is A Joke [Netflix Is A Joke] https://youtu.be/8u9LNhNs8CM OUTLIER
+    164403 |       - |  0.3x |   405s | - | Husband Sick of His Wife | The Carol Burnett Show Clip [The Carol Burnett Show Official] https://youtu.be/3FIjbZPVBxo
+    605527 |       - |  1.0x |   577s | - | EVIL HUSBAND Mocks Wife's WEDDING DRESS | Dhar Mann Bonus! [Dhar Mann Bonus] https://youtu.be/PtxeBeadbpE
+    461234 |       - |  0.7x |  1332s | - | Husband Vs. Wife Cooking Challenge [Mythical Kitchen] https://youtu.be/omFgHQHTKhg
+  10560592 |       - | 16.7x |   301s | - | Angry Husband Yells At Wife, Doesn't Appreciate All She Does | Dhar Mann [Dhar Mann Studios] https://youtu.be/G3mzICEAVKU OUTLIER
+    214618 |       - |  0.3x |   111s | - | 'The Real Meaning of MPH' Video Goes Viral: Husband Confounds Wife With Math Question [ABC News] https://youtu.be/LJ1q5wFGwv8
+   4669901 |       - |  7.4x |  1036s | - | Wife Discovers Her Husband's Disgusting Secret [EWU Bodycam] https://youtu.be/AeSAZTMyur0 OUTLIER
+   1517696 |       - |  2.4x |  1354s | - | Millionaire wife tries (and fails) to kill husband [True Crime News] https://youtu.be/pNUg_Wn4d2c
+    554845 |       - |  0.9x |   786s | - | Husband Forces WIFE To Get PLASTIC SURGERY | Dhar Mann Bonus! [Dhar Mann Bonus] https://youtu.be/E-caSvVEAMQ
+   1000564 |       - |  1.6x |   488s | - | EVIL HUSBAND Gets KARMA From Wife | Dhar Mann Bonus! [Dhar Mann Bonus] https://youtu.be/LFS3jbXkviU
+    183039 |       - |  0.3x |   347s | - | HUSBAND’S HILARIOUS IMPRESSIONS OF HIS WIFE GO VIRAL WITH OVER 46 MILLION VIEWS [Tamron Hall Show] https://youtu.be/3A3czMZ9s4E
+    304203 |       - |  0.5x |   887s | - | 12 Ways a Wife Can Show Respect to Her Husband [Vlad Savchuk] https://youtu.be/aU3NX3sOMVg
+    372560 |       - |  0.6x |  3651s | - | Criminal Lawyer Reacts To Evil Husband Realizes Wife Recorded Everything [CLR Bruce Rivers] https://youtu.be/IgIUUe3Fiec
+    655588 |       - |  1.0x |   482s | - | EVIL HUSBAND Humiliates WIFE At Bank | Dhar Mann Bonus! [Dhar Mann Bonus] https://youtu.be/i4_9eCL-nfU
+    806977 |       - |  1.3x |  1972s | - | Husband vs. Wife Cooking Challenge [Mythical Kitchen] https://youtu.be/XZRmS1I2A2g
+    841438 |       - |  1.3x |  1445s | - | Viral Video Shows Wife Bragging About Almost Divorcing Her Husband [Matt Walsh] https://youtu.be/R9GWUe58NVs
+   4058059 |       - |  6.4x |  2117s | - | Match The Wives To Their Husband [Kevin Langue] https://youtu.be/EqBGufjP5AY OUTLIER
+    407031 |       - |  0.6x |   936s | - | HUSBAND Kicks PREGNANT WIFE Out of Home | Dhar Mann Bonus! [Dhar Mann Bonus] https://youtu.be/R6EA6kmQN0Q
+    705089 |       - |  1.1x |   517s | - | PREGNANT WIFE DUMPED By Husband | Dhar Mann Bonus! [Dhar Mann Bonus] https://youtu.be/TdRrqq-WzW0
+   1473158 |       - |  2.3x |   183s | - | Love Month Stories 2023: A pregnant wife needs a caring husband [YoüLOL] https://youtu.be/DbpqVvx-xII
+    660104 |       - |  1.0x |  2021s | - | Wife Thinks She Got Away With Killing Her Husband (She Didn't) [SNC Crime Storytime] https://youtu.be/UuEybwlzvb4
+      2962 |       - |  0.0x |   118s | - | Husband Wife Comedy 😂🤣 | Funny Couple Moments | जबरदस्त पति पत्नी कॉमेडी | #comedy  [ગુજરાતી જોક્સ ] https://youtu.be/k1Rt3kAJ5yw
+    688729 |       - |  1.1x |   481s | - | ABUSIVE HUSBAND Shames Wife For Being OLD | Dhar Mann Bonus! [Dhar Mann Bonus] https://youtu.be/VQKfBMXA4D8
+  12841243 |       - | 20.4x |  2270s | - | Wife Poisons Husband To Receive $37,000,000 Inheritance [Dr Insanity] https://youtu.be/0xYJMC9mlqY OUTLIER
+   1620502 |       - |  2.6x |   154s | - | Shreya Ghoshal & Kapil Sharma’s Husband-Wife Duet 🎤🔥 Ft. Badshah | TGIKS | Netflix India [Netflix India] https://youtu.be/L7FOjj5EKiM
+    100922 |       - |  0.2x |   661s | - | Biwi Ka Darr Ya Pyaar? 🫢😂 | Husband Wife Funny Video | Tu Tu Mai Mai | Part 20 | Hyderabadi Comedy [Golden Hyderabadiz] https://youtu.be/AdXySzlUyXw
+    442012 |       - |  0.7x |   235s | - | “My Husband Chooses His Family Over Me” | Dr. Renu Kishore x Bonobology [Beyond Small Talk by Bonobology] https://youtu.be/LFf8-0JygQ4
+    398421 |       - |  0.6x |   818s | - | Slapped Prank On Wife Gone Extremely Wrong Emotional Husband Wife Prank | Prank Video | Wife Prank [Piyush Grover ] https://youtu.be/0XKPOT78pZs
+
+TITLE WORDS: husband(29), wife(28), dhar(8), mann(8), bonus(7), her(5), evil(4), video(4), prank(4), challenge(3), funny(3), his(3), she(3), viral(3), with(3), pregnant(3), comedy(3), and(2), netflix(2), the(2), show(2), cooking(2), over(2), 000(2), mai(2)
+TOP TAGS: 
+AUTOCOMPLETE: wife and husband skits | wife and husband drama | wife and husband video editing | wife and husband video status | wife and husband drama pakistani | wife doubting husband comedy | wife vs husband comedy
+################
+QUERY: thanksgiving skit  results: 30
+median views: 2891615
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+    938448 |       - |  0.3x |   139s | - | Leslie Jones Stops Your Annoying Relatives from Ruining Thanksgiving | The Daily Show [The Daily Show] https://youtu.be/0kyRNRZBB4M
+  11026465 |       - |  3.8x |   317s | - | First Thanksgiving - SNL [Saturday Night Live] https://youtu.be/SDUDlAEv5pU OUTLIER
+  26437454 |       - |  9.1x |   228s | - | A Thanksgiving Miracle - SNL [Saturday Night Live and Aidy Bryant] https://youtu.be/e2zyjbH9zzA OUTLIER
+   1671279 |       - |  0.6x |   308s | - | Festive Thanksgiving - SNL [Saturday Night Live] https://youtu.be/HVv0_Fh0Tr4
+   5474024 |       - |  1.9x |   332s | - | Penelope: Thanksgiving - SNL [Saturday Night Live] https://youtu.be/w4maUKzCRCk
+   6691389 |       - |  2.3x |   178s | - | Target Thanksgiving Ad - SNL [Saturday Night Live] https://youtu.be/syA9oZkQ-KY
+   3525490 |       - |  1.2x |   297s | - | Friends-giving - SNL [Saturday Night Live] https://youtu.be/obu4G6AiV2U
+  10108365 |       - |  3.5x |   173s | - | JUMANJI: THE NEXT LEVEL - A Very Jumanji Thanksgiving [Sony Pictures Entertainment] https://youtu.be/RxULSYzo5eE OUTLIER
+   3077801 |       - |  1.1x |   398s | - | The Californians: Thanksgiving - SNL [Saturday Night Live] https://youtu.be/pGK06TzP6F4
+   2983519 |       - |  1.0x |   286s | - | Cut for Time: Thanksgiving Foods (Kristen Wiig) - SNL [Saturday Night Live] https://youtu.be/2rBY9coqpFc
+   1285610 |       - |  0.4x |   257s | - | It Girl Thanksgiving Special - SNL [Saturday Night Live] https://youtu.be/CvddzAql0kw
+   2466768 |       - |  0.9x |   300s | - | Thanksgiving Baking Championship 2024 - SNL [Saturday Night Live] https://youtu.be/qHwnaWgXnUA
+   1360576 |       - |  0.5x |   215s | - | Thanksgiving Parade - SNL [Saturday Night Live] https://youtu.be/VY0dCkbTA8A
+  15363281 |       - |  5.3x |   204s | - | Back Home Ballers - SNL [Saturday Night Live] https://youtu.be/ZmWH1F-caM8 OUTLIER
+   2161485 |       - |  0.7x |   445s | - | Vincent Price's Thanksgiving Special - SNL [Saturday Night Live] https://youtu.be/5vjMnm_JIOs
+    369038 |       - |  0.1x |   262s | - | Black People On Thanksgiving Be Like [Jay Nedaj] https://youtu.be/7MTJ9-_ymJU
+   1147057 |       - |  0.4x |   315s | - | A New Jack Thanksgiving - SNL [Saturday Night Live] https://youtu.be/RltvPCnKKZk
+   1242318 |       - |  0.4x |   245s | - | Every Southerner on Thanksgiving [It's a Southern Thing] https://youtu.be/KFqHpWltYuc
+   4595010 |       - |  1.6x |   307s | - | Surprise Lady: Thanksgiving - SNL [Saturday Night Live] https://youtu.be/762p43qHRiE
+    164296 |       - |  0.1x |   114s | - | Time to Eat (Holiday) 🍽️ Thanksgiving Food Song for Kids | Laurie Berkner [The Laurie Berkner Band - Kids Songs] https://youtu.be/1HBdUCMfF8g
+  12122823 |       - |  4.2x |   407s | - | Family Feud: Harvey Family Thanksgiving - SNL [Saturday Night Live] https://youtu.be/P_kA2t2ytA8 OUTLIER
+  26928153 |       - |  9.3x |   663s | - | Thanksgiving Stereotypes [Dude Perfect] https://youtu.be/r1mhvegC6is OUTLIER
+   2799711 |       - |  1.0x |   309s | - | Thanksgiving Baking Championship - SNL [Saturday Night Live] https://youtu.be/pMdo2thujgU
+    811732 |       - |  0.3x |   259s | - | Roberta's Thanksgiving - SNL [Saturday Night Live] https://youtu.be/xGS91-mJR48
+   1412884 |       - |  0.5x |   248s | - | Thanksgiving Guest - SNL [Saturday Night Live] https://youtu.be/VbAdvL_Xing
+   5879924 |       - |  2.0x |   149s | - | Thanksgiving Etiquette [Ze Frank] https://youtu.be/zdWmMjw0E9A
+   6845991 |       - |  2.4x |   261s | - | Wayne Thanksgiving - SNL [Saturday Night Live] https://youtu.be/fK0OkpQ4vEU
+   4737833 |       - |  1.6x |   317s | - | Passive Aggressive Thanksgiving Dinner [Lilly Singh] https://youtu.be/XxJrDeK_8z4
+    237071 |       - |  0.1x |   286s | - | Thanksgiving with the Keisters - SNL [Saturday Night Live] https://youtu.be/_bBqn5o7VlQ
+    268677 |       - |  0.1x |   294s | - | Rita Delvecchio's Thanksgiving - SNL [Saturday Night Live] https://youtu.be/9zHhGByRznU
+
+TITLE WORDS: thanksgiving(28), snl(22), the(4), jumanji(2), for(2), time(2), special(2), baking(2), championship(2), family(2), leslie(1), jones(1), stops(1), your(1), annoying(1), relatives(1), from(1), ruining(1), daily(1), show(1), first(1), miracle(1), festive(1), penelope(1), target(1)
+TOP TAGS: 
+AUTOCOMPLETE: thanksgiving skit | thanksgiving skit for church | thanksgiving skit snl | thanksgiving skit for students | funny thanksgiving skits | vegan thanksgiving skit | thanksgiving comedy skit | thanksgiving dinner skit | reggie thanksgiving skit | snl thanksgiving skit leslie jones
+################
+QUERY: black friday skit  results: 30
+median views: 944320
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+   5945141 |       - |  6.3x |   159s | - | Black Friday - SNL [Saturday Night Live] https://youtu.be/iB5hYK0-__k OUTLIER
+   2880954 |       - |  3.1x |    96s | - | Black Friday - Studio C [Studio C] https://youtu.be/CnMcTJPaKfs OUTLIER
+    799776 |       - |  0.8x |   199s | - | Zack and Miri Black Friday Fun [ChrisS] https://youtu.be/nJMT5FA7Kak
+       300 |       - |  0.0x |   198s | - | Black Friday - Groundlings Originals [The Groundlings] https://youtu.be/yeZyV2uIY6I
+    367314 |       - |  0.4x |   140s | - | Zack and Miri Make a Porno (1/11) Movie CLIP - Black Friday (2008) HD [Movieclips] https://youtu.be/zZab0Lq7_vU
+        99 |       - |  0.0x |    92s | - | Black Friday in the Country 🇮🇪 👖 💰  [Tadhg J Devery] https://youtu.be/DzvkZcpobWs
+   7016248 |       - |  7.4x |   348s | - | EVERY BLACK FRIDAY EVER [Smosh] https://youtu.be/i2vkviU2Qw4 OUTLIER
+   3592877 |       - |  3.8x |   122s | - | Black Friday shoppers go crazy in Utah [The Salt Lake Tribune] https://youtu.be/2zBWjlkKDpA OUTLIER
+    601421 |       - |  0.6x |   270s | - | 120 secondes - Black Friday [52 minutes RTS] https://youtu.be/vZDEgY9lJao
+     23321 |       - |  0.0x |   228s | - | 'Black Friday Thanksgiving' with Teri Hatcher and Tom Arnold | Comedy Sketch [Funny Or Die] https://youtu.be/jRZQ1CAJAeQ
+      1768 |       - |  0.0x |   288s | - | Hawaiʻi's Finest is set to launch major Black Friday and Cyber Monday sale [KHON2 News] https://youtu.be/41hFkvR73YM
+  13643896 |       - | 14.4x |   202s | - | Best Black Friday Shopper | Anwar Jibawi & Lele Pons [Anwar Jibawi] https://youtu.be/cnNbCAqPBRg OUTLIER
+    344501 |       - |  0.4x |   812s | - | TRY NOT TO LAUGH: Black Friday Fails [Toni and Ryan] https://youtu.be/1GK-zAfbm_4
+    239083 |       - |  0.3x |    45s | - | Happy Black Friday Shopping from The Muppets! [The Muppets] https://youtu.be/ddbcGx8z_z4
+      6059 |       - |  0.0x |   298s | - | Walmart Associates on Black Friday | Comedy Sketch [LAUGH&GROW w/TAM] https://youtu.be/r7607NIXg_4
+  88743439 |       - | 94.0x |   399s | - | Black Jeopardy with Tom Hanks - SNL [Saturday Night Live] https://youtu.be/O7VaXlMvAvk OUTLIER
+   1088865 |       - |  1.2x |   153s | - | Rebecca Black Unpacks The Lyrics To 'Friday' For The First Time [Funny Or Die] https://youtu.be/6DYi8fmLYSQ
+         9 |       - |  0.0x |    68s | - | black friday skit keeping up with the kavoodles [mycavoodle] https://youtu.be/S9UKdAXWOxY
+    493625 |       - |  0.5x |   601s | - | BLACK FRIDAY DISASTER (Beanie Boo Skit) [Ha Sa] https://youtu.be/r256-iYRlik
+   3347094 |       - |  3.5x |   107s | - | Fast Fashion Ad - SNL [Saturday Night Live] https://youtu.be/MKTN2OiR2R8 OUTLIER
+   6691389 |       - |  7.1x |   178s | - | Target Thanksgiving Ad - SNL [Saturday Night Live] https://youtu.be/syA9oZkQ-KY OUTLIER
+  12281571 |       - | 13.0x |   305s | - | Harry Potter Friday Parody by The Hillywood Show® [The Hillywood Show] https://youtu.be/qvgVMecNp0c OUTLIER
+       288 |       - |  0.0x |    91s | - | Happy Black Friday! (Skit) [canto1408] https://youtu.be/UljWYPyffzo
+   2246812 |       - |  2.4x |   118s | - | Flamin' Hot Commercial - SNL [Saturday Night Live] https://youtu.be/aOJTJ87sFps
+      3414 |       - |  0.0x |    99s | - | Fox NFL Black Friday Sale Skit 2021 [R Lo] https://youtu.be/B_aI_l1jfxk
+  14929191 |       - | 15.8x |   164s | - | Children’s Clothing Ad - SNL [Saturday Night Live] https://youtu.be/MVXN85TJabg OUTLIER
+   8501697 |       - |  9.0x |   234s | - | The Black Lotus - SNL [Saturday Night Live] https://youtu.be/kdDK7_M59os OUTLIER
+   4717187 |       - |  5.0x |   133s | - | Your Hometown - SNL [Saturday Night Live] https://youtu.be/sjLNevjSVgs OUTLIER
+   2850870 |       - |  3.0x |   143s | - | Forever 31 - SNL [Saturday Night Live] https://youtu.be/ABphTaZwE_w OUTLIER
+        64 |       - |  0.0x |   103s | - | Annoying America's skit 'Black Friday Eve' 2011 (video) [outlawfilms] https://youtu.be/S_5CwmvGYcQ
+
+TITLE WORDS: black(21), friday(21), snl(9), the(7), skit(5), and(4), with(3), zack(2), miri(2), 'black(2), tom(2), comedy(2), sketch(2), sale(2), happy(2), studio(1), fun(1), groundlings(1), originals(1), make(1), porno(1), movie(1), clip(1), 2008(1), country(1)
+TOP TAGS: 
+AUTOCOMPLETE: black friday skit | black friday drama | black friday video | black friday parody | black friday video ads | black friday video game | black friday video ideas | black friday funny skits | snl black friday skit | black friday yawa skits
+################
+QUERY: my coworker  results: 30
+median views: 60535
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+      3199 |       - |  0.1x |  3710s | - | Am I overreacting… or is my coworker INSANE? (With updates) | Reading Reddit Stories [Jamie Nelson] https://youtu.be/IUwMrnr6zpI
+   3438796 |       - | 56.8x |    31s | - | My Co-worker is an Eldritch X I ANIMATION [Twisoh Media] https://youtu.be/4ImgE81mB94 OUTLIER
+     64350 |       - |  1.1x |   123s | - | My Co-worker Is After My Lunch? [Twisoh Media] https://youtu.be/HcDOp8VRK_k
+     13926 |       - |  0.2x |  2031s | - | My coworker spent years AVOIDING work… then got a boss who arrived when she did! | Reddit Stories [ok storytime clips] https://youtu.be/nv4d5ggAVcY
+      8254 |       - |  0.1x |  2380s | - | My coworker, Sienna, saw me pull up in a luxury car and asked, her voice laced with envy, roxanne, [vibesredditor ] https://youtu.be/ttyuS5gmgGw
+   1042717 |       - | 17.2x |  3430s | - | I Exposed My Coworker… and It Ruined Her Career - Charlotte Dobre REACTION [Charlotte Dobre] https://youtu.be/KAFOWqSX9cE OUTLIER
+     21859 |       - |  0.4x |   773s | - | My coworker filed an HR complaint because I flirted with the guy [Behind The Butterfly] https://youtu.be/kBT2Iugj9S8
+    269060 |       - |  4.4x |   807s | - | Why Toxic Co Workers Target You (It's Not What You Think) [MINDORA] https://youtu.be/PimUc2jTr4Y OUTLIER
+    147511 |       - |  2.4x |   520s | - | Signs your female coworker likes you, and how to initiate [Blaine Anderson • Matchmaker & Dating Coach] https://youtu.be/7Schz6D5Ac0
+     27468 |       - |  0.5x |   878s | - | My Coworker Reported Me for Leaving Early Every Friday, Not Knowing Where I Was Really Going [Karma Kept] https://youtu.be/LWDfC_zp_Xo
+    393966 |       - |  6.5x |   502s | - | my coworker beat his shi at work [NikoNotNico] https://youtu.be/k-r67pE74TY OUTLIER
+   1196078 |       - | 19.8x |  1734s | - | my coworker is ANGRY about my weight loss... - REACTION [Charlotte Dobre] https://youtu.be/7W_5Kj-uluw OUTLIER
+     93103 |       - |  1.5x |  1628s | - | My Lazy Coworker Got Promoted Instead Of Me, But Then My Boss Reached The Last Sentence Of... [Stories with Mandy] https://youtu.be/kFU2X3X1afY
+     13507 |       - |  0.2x |  1681s | - | My coworker was bragging to me about her marriage to a rich man, and without me asking..(FULL STORY) [KoleReads] https://youtu.be/TJgXUcb4Wss
+   5058720 |       - | 83.6x |  3766s | - | Office Nightmares | Reading Reddit Stories [Smosh Pit] https://youtu.be/64920nlbtf0 OUTLIER
+      7011 |       - |  0.1x |  1693s | - | I Called My Coworker My Soulmate at My Farewell Party… That Night, My Husband Moved Out [Vow Debt] https://youtu.be/YwY-p9nC8wo
+     43012 |       - |  0.7x |  3209s | - | I Drove My Coworker Home After She Twisted Her Ankle…Her Dad Shook My Hand: "So You're Him. Finally" [Whispered Maybe] https://youtu.be/8k7oyeyBT3k
+     64774 |       - |  1.1x |   604s | - | My Coworker STABBED Me Because She Thought I Was Sleeping With Our Boss [TV Animations] https://youtu.be/zn3Tu1iNAT0
+     18569 |       - |  0.3x |  1559s | - | my coworker tries asmr for the first time  [Mia Marie ASMR] https://youtu.be/T0zQhr4c3C8
+     30429 |       - |  0.5x |  1184s | - | Why My Quiet Quitting 51 Year Old CoWorker Was The Happiest Man I Knew! [Retiree Is Me] https://youtu.be/ckHCrRS46lo
+     56720 |       - |  0.9x |  1685s | - | My Coworker Reported Me to HR 12 Times Because I Ate Lunch at My Own Desk. [RedditTalks] https://youtu.be/q06bnU3PAYI
+      5884 |       - |  0.1x |  2011s | - | I’m Going on a Date With My Coworker,” My Wife Said Coolly  I Replied, “Great — Then Sign This [Revenge Beyond Loved] https://youtu.be/MWCYbJfBMRs
+   1164079 |       - | 19.2x |  2625s | - | AITA for NOT Helping My Coworker…She Got FIRED?! - Charlotte Dobre REACTION [Charlotte Dobre] https://youtu.be/V7MLiqDO-Vs OUTLIER
+   2270921 |       - | 37.5x |   990s | - | My Coworker is an Idiot [SMii7Y] https://youtu.be/meFnTHdUAvE OUTLIER
+     12568 |       - |  0.2x |  2835s | - | My Coworker Dumped Her Workload On Me Every Day Because She Was Newly Married... [QuokkaReads] https://youtu.be/VMqE3by2zvo
+     52265 |       - |  0.9x | 10323s | - | My Coworkers Waited 2 HOURS for the CEO. They Didn't Know He Was With His SECRET WIFE - ME! 😳 [Queen of Drama] https://youtu.be/Bz_dVzgIfe8
+    717906 |       - | 11.9x |   850s | - | How to Deal with Toxic, Jealous, Insecure Coworkers [Linda Raynier] https://youtu.be/GUw5lUajtpQ OUTLIER
+   1058486 |       - | 17.5x |  1440s | - | coworker stole my position and now I get to watch her struggle - Charlotte Dobre REACTION [Charlotte Dobre] https://youtu.be/JcaSAsIhcEs OUTLIER
+   3931316 |       - | 64.9x |  1217s | - | I Went Out for Food with my Doctor Coworker... [Zeliha Akpinar] https://youtu.be/3xH1Tc9vY8U OUTLIER
+     29836 |       - |  0.5x |  2085s | - | STORYTIME: I Went on A DATE With My COWORKER… and REGRETTED IT! [IAM ASIA] https://youtu.be/HlqEz5zFb6o
+
+TITLE WORDS: coworker(24), with(9), her(7), and(6), was(6), she(5), the(5), for(5), reaction(4), because(4), reddit(3), stories(3), then(3), got(3), boss(3), charlotte(3), dobre(3), you(3), not(3), reading(2), worker(2), after(2), lunch(2), work(2), why(2)
+TOP TAGS: 
+AUTOCOMPLETE: my coworker reported me to hr 12 times | my coworker claimed she was pregnant by my dead husband | my coworker mia walked up to me cradling her slightly rounded belly | my coworker constantly talks over me | my coworker filed an hr complaint | my coworker vanessa cole | my coworker entered court three months pregnant | my coworker entered court 3 months pregnant | my coworker is an eldritch x | my coworker told me i'm lucky my wife is quiet
+################
+QUERY: when your coworker  results: 30
+median views: 113672
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+     12573 |       - |  0.1x |   226s | - | when your coworker has a questionable name (FULL SKETCH) [Chine Ikoro] https://youtu.be/oP2ok69FalE
+    556107 |       - |  4.9x |   135s | - | That coworker who gets away with EVERYTHING [Tra Rags] https://youtu.be/oRg48KbaQs0 OUTLIER
+      8830 |       - |  0.1x |    70s | - | When Your Coworker Thinks She's Your Boss 😂 [Tony Animation] https://youtu.be/yxQ6lB_vmew
+     31096 |       - |  0.3x |   769s | - | Your Coworker IS A SNAKE! PLEASE Learn from My Mistakes! | Your Coworkers are NOT Your Friends [ODonutz Live] https://youtu.be/Ba6-fTIiyGI
+     33685 |       - |  0.3x |   419s | - | Choose your own ending for POV-your coworker lies to leave work and you get stuck closing #wwyd  [Michelle The Bartender] https://youtu.be/RJRn_ZC0cG8
+   1054583 |       - |  9.3x |   225s | - | When your coworker hits on you… [Matt & Justus] https://youtu.be/rBkF8x-uVTM OUTLIER
+    919157 |       - |  8.1x |    85s | - | That one useless co-worker just heard that you gave your two-week notice [The Slappable Jerk] https://youtu.be/Yqa041MoGPQ OUTLIER
+      1433 |       - |  0.0x |   841s | - | 6 Signs Your Coworker is Secretly Sabotaging You [Business with Brianna] https://youtu.be/Fskif7IxGRg
+     68894 |       - |  0.6x |   145s | - | When Your Coworker Steals Your Tips [TylerRegan] https://youtu.be/nWNaV0VcNm0
+     76825 |       - |  0.7x |   635s | - | 6 Signs Your Coworker Is Secretly Sabotaging You (And How to Stop Them) [Emily Durham] https://youtu.be/aXO_Q_35l1o
+     99289 |       - |  0.9x |   181s | - | When Your Coworker Gets Instant Karma [TylerRegan] https://youtu.be/UUKjz9H_eT8
+     84697 |       - |  0.7x |   431s | - | 7 Signs Your Coworker is Secretly Jealous You [Jennifer Brick] https://youtu.be/BBCYGZDEZBA
+    571343 |       - |  5.0x |   136s | - | That coworker who acts like they're your boss [LongBeachGriffy] https://youtu.be/hNxiGZONA54 OUTLIER
+     82911 |       - |  0.7x |   181s | - | When Your Coworker Gets Arrested [TylerRegan] https://youtu.be/C0pCpNwK6Iw
+    269060 |       - |  2.4x |   807s | - | Why Toxic Co Workers Target You (It's Not What You Think) [MINDORA] https://youtu.be/PimUc2jTr4Y
+    559790 |       - |  4.9x |   218s | - | When your coworker might be a killer [Viva La Dirt League] https://youtu.be/3o5Zt8ZH0FA OUTLIER
+    147511 |       - |  1.3x |   520s | - | Signs your female coworker likes you, and how to initiate [Blaine Anderson • Matchmaker & Dating Coach] https://youtu.be/7Schz6D5Ac0
+    222422 |       - |  2.0x |   247s | - | 3 Ways to Better Connect with Your Coworkers | The Way We Work, a TED series [TED] https://youtu.be/zgtD2Cerots
+    464306 |       - |  4.1x |   925s | - | Why being respectful to your coworkers is good for business | Christine Porath [TED] https://youtu.be/YY1ERM-NIBY OUTLIER
+    377916 |       - |  3.3x |   844s | - | You don't owe your co-workers anything! [missctolbertvoh] https://youtu.be/yIGMewg7b4Q OUTLIER
+     51965 |       - |  0.5x |   363s | - | Dealing With A Coworker You Don't Trust: Signs To Look For & What To Do (Or Not!) [PM Problems] https://youtu.be/7f0AKucaXGo
+     51062 |       - |  0.4x |   198s | - | When Your Coworker Thinks They're Better Than You [SarahSession] https://youtu.be/ITqlOUzEW6g
+    147540 |       - |  1.3x |   230s | - | When Your Favorite Coworker Quits Without Telling You [KillaKayTV] https://youtu.be/91-MhBZq5fk
+   1196078 |       - | 10.5x |  1734s | - | my coworker is ANGRY about my weight loss... - REACTION [Charlotte Dobre] https://youtu.be/7W_5Kj-uluw OUTLIER
+    260251 |       - |  2.3x |   196s | - | When your coworker is a lot but you respect the hustle | Parks and Recreation [Parks and Recreation] https://youtu.be/sLo1Q4xRGBs
+      1265 |       - |  0.0x |   833s | - | Is Your Coworker Secretly Attracted to You [Ryan Dating Psychology] https://youtu.be/eNfwCNaPeBw
+    128055 |       - |  1.1x |   497s | - | How to Work with a Passive-Aggressive Coworker | The Harvard Business Review Guide [Harvard Business Review] https://youtu.be/-W4_I4nX2uI
+    149300 |       - |  1.3x |   368s | - | The 3 most difficult types of coworkers and how to deal with them | Amy Gallo for Big Think+ [Big Think] https://youtu.be/V3OjpC2LR4k
+     46964 |       - |  0.4x |   131s | - | When You Catch Your Coworker Stealing [TylerRegan] https://youtu.be/x8cRG6tcyo4
+     21250 |       - |  0.2x |   581s | - | Stop a Coworker Taking Credit for Your Work: Exactly What to Say REVEALED! [Kara Ronin] https://youtu.be/ck1rxSrDFLs
+
+TITLE WORDS: your(29), coworker(24), you(16), when(11), with(5), for(5), and(5), signs(5), that(4), coworkers(4), work(4), secretly(4), how(4), the(4), gets(3), not(3), what(3), who(2), thinks(2), boss(2), sabotaging(2), stop(2), them(2), they're(2), why(2)
+TOP TAGS: 
+AUTOCOMPLETE: when your coworker joins a cult | when your coworker can't control their face | when your coworker hates meshuggah | when your coworker joins a cult bistro huddy part 6 | when your coworker gets promoted | when your coworker makes her famous lasagna | when your coworker | when your coworker leaves | when your coworker joins a cult bistro huddy | when your coworkers don't like you
+################
+QUERY: secret santa at work  results: 30
+median views: 130214
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+      3924 |       - |  0.0x |   320s | - | A Secret Santa surprise for a cleaner with a heart of gold who spreads happiness all year long [East Idaho News] https://youtu.be/RylerTfQZzM
+    310005 |       - |  2.4x |   168s | - | The Office Secret Santa 🎅 - The Chit Show - Season 2, Episode 12 [The Chit Show] https://youtu.be/7ltzZjksQV0
+   1612805 |       - | 12.4x |   258s | - | Yankee Swap - The Office US [The Office] https://youtu.be/19ulSNSRKyU OUTLIER
+    110519 |       - |  0.8x |   205s | - | A Secret Santa surprise for a young construction worker who could really use a break [East Idaho News] https://youtu.be/cJGRSlXY4TY
+     69250 |       - |  0.5x |   264s | - | She went back to work at 79 to pay for her eye. Now a Secret Santa has a surprise for her. [East Idaho News] https://youtu.be/8PvBvLE4toM
+     59133 |       - |  0.5x |   194s | - | Woman surprised at work with gift from a Secret Santa [East Idaho News] https://youtu.be/Fzuso_4BZF0
+      7984 |       - |  0.1x |    77s | - | How Does Secret Santa Work? [wikiHow] https://youtu.be/4MOO4hA9tHo
+    122637 |       - |  0.9x |    94s | - | Secret Santa surprises Sugar-Salem High School secretary at a soda shop [East Idaho News] https://youtu.be/plDjN58xJl8
+        93 |       - |  0.0x |   107s | - | Secret Santa at Work — Funny Office Christmas Song [Millennial Christmas Club] https://youtu.be/HYhHazu6aqA
+    203937 |       - |  1.6x |   242s | - | Secret Santa Gift Exchange GONE WRONG  [Jay Nedaj] https://youtu.be/F2C5GT5ArPw
+    283101 |       - |  2.2x |   338s | - | 'This is impossible!' Cheerful custodian breaks down crying opening gift from a Secret Santa [East Idaho News] https://youtu.be/h_765nPjqPY
+    137791 |       - |  1.1x |   184s | - | A Secret Santa surprise for a Burger King worker who's walked to work every day for 23 years [East Idaho News] https://youtu.be/1TLwwsYhqD0
+     52529 |       - |  0.4x |  3981s | - | SECRET SANTA DRAMA 2025 !😱| Fake Smiles, Real Disappointment! [SlashedbySandy] https://youtu.be/-HckU0YwXzM
+     98874 |       - |  0.8x |   385s | - | Double Christmas gift: A Secret Santa stuns school aide, then delivers a second surprise for her mom [East Idaho News] https://youtu.be/F6RAcOaRg7M
+    505674 |       - |  3.9x |   200s | - | Coffee shop worker stunned and speechless when Secret Santa gifts her a car and cash [East Idaho News] https://youtu.be/DO5Tq7r-z1Q OUTLIER
+     10567 |       - |  0.1x |    40s | - | Secret Santa at work, what not to do. [Canity] https://youtu.be/NMLXVNVu3yc
+    282104 |       - |  2.2x |   398s | - | A Secret Santa surprise for a mom who was embarrassed at how she responded to a gift 9 years ago [East Idaho News] https://youtu.be/DMKeZQFKN7I
+    115866 |       - |  0.9x |  6525s | - | The men who made us cry during 2024 Secret Santa gift deliveries [East Idaho News] https://youtu.be/05XssJ4Z3M0
+    989747 |       - |  7.6x |   181s | - | Secret Santa surprises restaurant cook who has walked to work every day for the past 5 years [East Idaho News] https://youtu.be/FefV4S5o8xw OUTLIER
+    114359 |       - |  0.9x |   260s | - | Husband, wife and daughter are called to the school office for surprise from a Secret Santa [East Idaho News] https://youtu.be/KH1GHfgIVq0
+    390008 |       - |  3.0x |   256s | - | Police dispatcher breaks down after receiving special gifts from a Secret Santa [East Idaho News] https://youtu.be/E443GYMZ-HQ
+    247567 |       - |  1.9x |   167s | - | Secret Santa surprises single mom at work with $20,000 check! [East Idaho News] https://youtu.be/3f6Y0rk1O5U
+   2187727 |       - | 16.8x |   390s | - | McDonald's employee who walks over 2 miles to work gets special Christmas gift from a Secret Santa [East Idaho News] https://youtu.be/IVfCt36Uiwo OUTLIER
+    205361 |       - |  1.6x |   389s | - | Young man shows up for work at Cafe Sabor and gets the surprise of a lifetime from a Secret Santa [East Idaho News] https://youtu.be/xsXy5AFJ5fM
+      1426 |       - |  0.0x |    99s | - | How to Organise Secret Santa in the Workplace [The HR Dept South Warwickshire] https://youtu.be/VfWhPNPBfmg
+     72308 |       - |  0.6x |    61s | - | Do you play Secret Santa with your friends or colleagues? [BBC Learning English] https://youtu.be/wsDybwHUE3w
+    195604 |       - |  1.5x |   259s | - | Father of 6 surprised at work with gifts from a Secret Santa [East Idaho News] https://youtu.be/MtO4qJt9Q64
+    208425 |       - |  1.6x |   278s | - | Woman fighting severe health problems starts new job and a Secret Santa has a surprise for her [East Idaho News] https://youtu.be/yO01gqCrv0M
+       268 |       - |  0.0x |   149s | - | Secret Santa Rules: How to Play, Step by Step (+3 Mistakes to Avoid) [Secret Gift — Secret Santa, Wishlists & Advent] https://youtu.be/yKZtZlMuy-I
+    272334 |       - |  2.1x |   407s | - | School custodian working in the lunchroom gets life-changing surprise from Secret Santa [East Idaho News] https://youtu.be/HLMqBt6x5Yc
+
+TITLE WORDS: secret(29), santa(29), for(12), work(11), surprise(10), the(9), from(8), gift(7), who(6), with(5), her(5), and(5), office(4), how(4), school(4), worker(3), has(3), surprises(3), christmas(3), years(3), mom(3), gifts(3), gets(3), young(2), she(2)
+TOP TAGS: 
+AUTOCOMPLETE: secret santa at work | secret santa in office | secret santa gift exchange
+################
+QUERY: christmas party at work skit  results: 30
+median views: 257492
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+   1686853 |       - |  6.6x |   195s | - | Office Christmas Party Extravaganza - SNL [Saturday Night Live] https://youtu.be/bm3IjOxZVto OUTLIER
+    106901 |       - |  0.4x |  1156s | - | After 40, Men Stopped Going to the Office Christmas Party & HR Asked Why [The Leverage Doctrine] https://youtu.be/90piazEh2dM
+   3206250 |       - | 12.5x |   177s | - | Office Christmas Party (Amy Adams) - SNL [Saturday Night Live] https://youtu.be/kOPHkWcbSho OUTLIER
+     51066 |       - |  0.2x |    36s | - | Kate McKinnon's Dress Code - Office Christmas Party [Comedy Central UK] https://youtu.be/-7lUmPDndek
+      2264 |       - |  0.0x |   172s | - | Epic Office Christmas Party (Christmas - Michael Buble´) [Jimmy Pope] https://youtu.be/BEc3ticio0E
+    426905 |       - |  1.7x |   150s | - | Everyone Hates the Office Christmas Party [Foil Arms and Hog] https://youtu.be/kDrXt9ECAxM
+     42149 |       - |  0.2x |   280s | - | How To Behave At The Office Christmas Party [Videojug] https://youtu.be/Nkk-WUxEK70
+     12852 |       - |  0.0x |   126s | - | OFFICE CHRISTMAS PARTY Slapstick Montage (Music Video) [Musical Journeys Thru Cinema] https://youtu.be/XAZ7VQvEJCQ
+     28221 |       - |  0.1x |  1268s | - | Men Stopped Going to the Office Christmas Party & HR Noticed. [The Over Thinking] https://youtu.be/1OFN1Xp2Yhc
+   1608566 |       - |  6.2x |   322s | - | Office Dance - SNL [Saturday Night Live] https://youtu.be/a4l56MunPHw OUTLIER
+   4092102 |       - | 15.9x |   212s | - | Awkward Christmas Party Crasher - Studio C [Studio C] https://youtu.be/u0MBDzTiHFo OUTLIER
+      4701 |       - |  0.0x |   121s | - | Britain's Office Christmas Party Has Gone Completely MAD! 😂 [Artificial LOLs] https://youtu.be/k5v7Ha09cfU
+  26437454 |       - | 102.7x |   228s | - | A Thanksgiving Miracle - SNL [Saturday Night Live and Aidy Bryant] https://youtu.be/e2zyjbH9zzA OUTLIER
+   1889682 |       - |  7.3x |   287s | - | Christmas Party - SNL [Saturday Night Live] https://youtu.be/5xyTgJzMlFQ OUTLIER
+    132081 |       - |  0.5x |    36s | - | Office Christmas Party | Clip: "Darci" | Paramount Pictures International [Paramount Pictures International] https://youtu.be/snc2JC6RNSw
+    382904 |       - |  1.5x |   262s | - | funny christmas party presentation [MOJOJO] https://youtu.be/qpgXBSNcbbs
+    934369 |       - |  3.6x |   615s | - | Best of the Christmas Parties - The Office US [The Office] https://youtu.be/toZ47KV2Kjc OUTLIER
+     54266 |       - |  0.2x |   219s | - | Sample Christmas Party Program and Games | Year-End Party Hosting Video | HOST RON [Host Ron] https://youtu.be/p-BYuVzMos0
+       287 |       - |  0.0x |    91s | - | 15 Office Christmas Party Ideas for 2026 [Envitely] https://youtu.be/p9qXPctJtFo
+      6350 |       - |  0.0x |  1477s | - | Gen X Men Stopped Going to the Office Christmas Party & HR Noticed [Black Psychology] https://youtu.be/M3Yxdg-Hqrk
+  18696842 |       - | 72.6x |   277s | - | Digital Short: The Japanese Office - SNL [Saturday Night Live] https://youtu.be/BmTfxyoEqAc OUTLIER
+  10909070 |       - | 42.4x |   225s | - | Home for the Holidays - SNL [Saturday Night Live] https://youtu.be/VxVXYp2KIeE OUTLIER
+   6591590 |       - | 25.6x |   262s | - | Office Halloween Party - SNL [Saturday Night Live] https://youtu.be/P8YRuxu8dQU OUTLIER
+    514902 |       - |  2.0x |  2921s | - | 1970: The Office Christmas Party | Man Alive | Classic BBC Documentary | BBC Archive [BBC Archive] https://youtu.be/OxAzCyCY7Ms
+     20351 |       - |  0.1x |  1040s | - | Why Men Stopped Going to the Office Christmas Party (It Makes Sense) [It Makes Sense] https://youtu.be/zl5rbVfi97M
+   4789992 |       - | 18.6x |   280s | - | Office Apology - SNL [Saturday Night Live] https://youtu.be/ep63_TfYKh4 OUTLIER
+      9116 |       - |  0.0x |    93s | - | The Office Christmas Party - Michael's Pictures [Mulverine] https://youtu.be/MoB1F11EXtk
+      6357 |       - |  0.0x |   986s | - | Why Men No Longer Go To The Office Christmas Party (Are They Right Or Wrong) [The Forged Men and Mind Over Men] https://youtu.be/sVm6Z0G6S4E
+     25928 |       - |  0.1x |   647s | - | If Real Right and Uncut was a Christmas party (new video 12/23/2025) [Real Right and Uncut Ext] https://youtu.be/E8Kwn5jZzIk
+  13250681 |       - | 51.5x |   155s | - | Christmas Robe - SNL [Saturday Night Live] https://youtu.be/FOVCtUdaMCU OUTLIER
+
+TITLE WORDS: christmas(25), party(24), office(22), the(13), snl(10), men(5), stopped(4), going(4), why(3), video(3), noticed(2), pictures(2), and(2), for(2), bbc(2), right(2), extravaganza(1), after(1), asked(1), amy(1), adams(1), kate(1), mckinnon's(1), dress(1), code(1)
+TOP TAGS: 
+AUTOCOMPLETE: 
+################
+QUERY: ADHD explained psychologist  results: 30
+median views: 659193
+
+TOP RESULTS (views | views/day | x median | length | channel subs | title)
+   1407099 |       - |  2.1x |  1632s | - | A nerdy deep dive into ADHD and Anxiety [Therapy in a Nutshell] https://youtu.be/uL0eC1E9AHQ
+      7856 |       - |  0.0x |   474s | - | Psychologist explains the biggest challenges of adult ADHD | Experts Answer [Understood] https://youtu.be/L7YJGecsf-s
+     19300 |       - |  0.0x |   248s | - | The link between ADHD and executive function explained by a psychologist [Understood] https://youtu.be/mFlaKbiCHHs
+    195870 |       - |  0.3x |  3654s | - | ADHD Explained - A Live Expert Panel [Understood] https://youtu.be/yostXDU4PtE
+   1842115 |       - |  2.8x |  1702s | - | The Neuroscience of ADHD and Emotional Dysregulation [Therapy in a Nutshell] https://youtu.be/qcryeu8g2fA
+   2990663 |       - |  4.5x |   771s | - | Adult ADHD | Inattentive [MedCircle] https://youtu.be/ToN-y8CNl-Q OUTLIER
+     67729 |       - |  0.1x |  1096s | - | The Psychology of People with ADHD [Apex Psychology] https://youtu.be/S97ish2x3yA
+    656872 |       - |  1.0x |   776s | - | Every ADHD Symptom EXPLAINED in 12 Minutes [Inspire and Thrive] https://youtu.be/D7QUxM0IPdU
+     32962 |       - |  0.1x |   485s | - | Executive dysfunction explained: Why ADHD makes everything so hard | Experts Answer [Understood] https://youtu.be/0XcppZUxxUo
+      5152 |       - |  0.0x |   356s | - | Psychologist answers biggest questions on ADHD and emotions | Experts Answer [Understood] https://youtu.be/sK-z4g7wNH8
+  12600842 |       - | 19.1x |  1695s | - | ADD/ADHD | What Is Attention Deficit Hyperactivity Disorder? [Understood] https://youtu.be/ouZrZa5pLXk OUTLIER
+   1236104 |       - |  1.9x |  1679s | - | What Everyone Gets Wrong About ADHD [HealthyGamerGG] https://youtu.be/6kD5RbQCjFg
+     91926 |       - |  0.1x |   849s | - | Psychologist on ADHD, Attachment Styles, and Relationships: Common Challenges & How to Overcome Them [Dr. Maika Steinborn] https://youtu.be/KMgjV5f2EYU
+   1036080 |       - |  1.6x |  4170s | - | The Dark Truth About Female ADHD, The Invisible Struggle (Leading Psychiatrist Explains) [ADHD Chatter Podcast] https://youtu.be/7cEdPWh9hqU
+      9779 |       - |  0.0x |   292s | - | Groundbreaking psychologist on why ADHD is overlooked in women [Understood] https://youtu.be/yoteflManGg
+   1778388 |       - |  2.7x |  2113s | - | Adult ADHD and Childhood Trauma [Patrick Teahan ] https://youtu.be/lYD0Q4oMYXw
+    864229 |       - |  1.3x |   514s | - | How To Power Through ADHD: Proven Strategies to Crush Tough Tasks [Dr. Tracey Marks] https://youtu.be/yj6_1t1PAcE
+      5937 |       - |  0.0x |   461s | - | ADHD Paralysis Explained| Why You’re Stuck & How to Break Free [ADHD Empowerment | Dr. Janina Maschke] https://youtu.be/MuLeFItmfI4
+    297011 |       - |  0.5x |  3633s | - | I've Seen The Dark Side Of Female ADHD (Psychologist shares stories) [ADHD Chatter Podcast] https://youtu.be/HKEumU2q-uw
+    661515 |       - |  1.0x |   527s | - | ADHD 101 - Why Kids With ADHD Need Different Parenting Strategies [Seattle Children's] https://youtu.be/ktb520seHYk
+    478691 |       - |  0.7x |  5497s | - | Neuro-Spicy: Discussing ADHD with Dr. Kristin Carothers | What Now? with Trevor Noah Podcast [Trevor Noah] https://youtu.be/SkDvqvpxKBY
+   4092433 |       - |  6.2x |   245s | - | How to Know if You Have ADHD [How to ADHD] https://youtu.be/cx13a2-unjE OUTLIER
+   4274080 |       - |  6.5x |   309s | - | 6 Signs and Symptoms Of ADHD [Psych2Go] https://youtu.be/Dm_q2lIF30g OUTLIER
+   7383340 |       - | 11.2x |  1033s | - | Failing at Normal: An ADHD Success Story | Jessica McCabe | TEDxBratislava [TEDx Talks] https://youtu.be/JiwZQNYlGQI OUTLIER
+    145134 |       - |  0.2x |   818s | - | Attention Deficit Hyperactivity Disorder (ADHD) Mnemonics (Memorable Psychiatry Lecture) [Memorable Psychiatry and Neurology] https://youtu.be/sOimBjnJKJQ
+   6039810 |       - |  9.2x |   485s | - | Why People with ADHD Procrastinate (And 4 Brain-Based Ways to Get Started) [Dr. Tracey Marks] https://youtu.be/Xp805f-j1VI OUTLIER
+    174864 |       - |  0.3x |   455s | - | Apollo Hospitals | All you need to know about ADHD  | Dr. Achal Bhagat [Apollo Hospitals] https://youtu.be/2_nyNWeNmtY
+   1501570 |       - |  2.3x |   654s | - | Attention Deficit Hyperactivity Disorder vs Autism – How To Tell The Difference [Dr. Tracey Marks] https://youtu.be/TEOuY6dKRw8
+   1854421 |       - |  2.8x |  4046s | - | The ADHD Doctor: How to Focus, Stop Procrastinating, Manage Your Emotions, & Feel in Control [Mel Robbins and Sasha Hamdani MD] https://youtu.be/nUPQImuDUng
+    164696 |       - |  0.2x |  1884s | - | Therapist Explains Why Your ADHD is Unmanageable | ADHD Tips [Mickey Atkins] https://youtu.be/N-O5M1cvd5k
+
+TITLE WORDS: adhd(31), the(9), and(8), psychologist(6), why(6), how(6), explained(5), with(5), explains(3), adult(3), experts(3), answer(3), what(3), attention(3), deficit(3), hyperactivity(3), disorder(3), about(3), you(3), biggest(2), challenges(2), executive(2), people(2), emotions(2), dark(2)
+TOP TAGS: 
+AUTOCOMPLETE: adhd explained psychology | adhd explained in adults | adhd and behavior problems

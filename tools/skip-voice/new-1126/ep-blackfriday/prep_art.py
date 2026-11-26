@@ -24,8 +24,13 @@ def clean_head(im):
         if len(dark) and len(lite) and lite.min() > dark.min(): hl.append(lite[lite > dark.min()].min())
     hl = int(np.median(hl)) if hl else 0
     yy, xx = np.mgrid[y0:y1, x0:x1]; inside = (xx - 832) ** 2 + (yy - 1012) ** 2 < 122 ** 2
-    r[near & inside & (yy - y0 >= hl)] = WHITE
+    r[near & inside & (yy - y0 >= hl) & (yy < 974)] = WHITE
     r[near & inside & (yy - y0 < hl)] = (14, 12, 18)
+    lab, n = label(r.sum(-1) < 520)
+    for i in range(1, n + 1):
+        ys, xs = np.where(lab == i)
+        if len(ys) < 60 and ys.min() > 0 and xs.min() > 0 and ys.max() < r.shape[0] - 1 and xs.max() < r.shape[1] - 1 and (ys + y0).max() < 972:
+            r[binary_dilation(lab == i, iterations=2)] = WHITE
     a[y0:y1, x0:x1] = r
     # cheek speck
     x0, y0, x1, y1 = 826, 1092, 872, 1138; r = a[y0:y1, x0:x1]; R, G, B = r[..., 0], r[..., 1], r[..., 2]
@@ -34,26 +39,30 @@ def clean_head(im):
     x0, y0, x1, y1 = 765, 1070, 850, 1135; r = a[y0:y1, x0:x1]; lab, n = label(r.sum(-1) < 420)
     edge = set(np.unique(np.concatenate([lab[-1, :], lab[:, -1], lab[0, :], lab[:, 0]]))) - {0}
     global MOUTH_XY
+    goatee = binary_dilation(np.isin(lab, list(edge)), iterations=3)
     for i in range(1, n + 1):
         if i in edge: continue
         ys, xs = np.where(lab == i)
-        if len(ys) < 25: r[binary_dilation(lab == i, iterations=2)] = WHITE; continue
-        row = int(np.median(ys)); off = binary_dilation((lab == i) & (np.abs(np.arange(r.shape[0])[:, None] - row) > 4), iterations=3)
-        r[off & (r.sum(-1) < 700) & ~np.isin(lab, list(edge))] = WHITE
-        MOUTH_XY = (x0 + int((xs.min() + xs.max()) / 2), y0 + row, int(xs.max() - xs.min()))
+        if len(ys) >= 25: MOUTH_XY = (x0 + int(xs.min()), x0 + int(xs.max()) - 7, y0 + int(np.median(ys)))
+    r[(r.sum(-1) < 735) & ~goatee] = WHITE                      # line, nub and stray grey specks inside the goatee
     a[y0:y1, x0:x1] = r
     # any sauce-red left inside the head near the forehead
     x0, y0, x1, y1 = 690, 895, 815, 1010; r = a[y0:y1, x0:x1]; R, G, B = r[..., 0], r[..., 1], r[..., 2]
     yy, xx = np.mgrid[y0:y1, x0:x1]; ins = (xx - 832) ** 2 + (yy - 1012) ** 2 < 133 ** 2
     r[binary_dilation((R > G + 22) & (R > B + 22) & ins, iterations=2) & ins & (r.sum(-1) > 200)] = WHITE; a[y0:y1, x0:x1] = r
-    return Image.fromarray(a.astype("uint8"))
+    im = Image.fromarray(a.astype("uint8")); xa, xb, ym = MOUTH_XY
+    ImageDraw.Draw(im).line([xa, ym, xb, ym], fill=(14, 12, 18), width=6)
+    return im
 def tag(d, box, txt, size):
     d.rounded_rectangle(box, 10, fill=(214, 32, 38), outline=(20, 10, 14), width=4)
     f = ImageFont.truetype(FB, size); w = d.textlength(txt, font=f); bb = d.textbbox((0, 0), txt, font=f)
     d.text(((box[0] + box[2] - w) / 2, (box[1] + box[3]) / 2 - (bb[1] + bb[3]) / 2), txt, font=f, fill=(255, 255, 255))
-def finish(im, dst, box_dy=None, phone=False):
+def finish(im, dst, box_dy=None, phone=False, sign=(778, 864)):
+    import cv2
+    arr = np.asarray(im).copy(); mk = np.zeros(arr.shape[:2], "uint8"); mk[sign[0]:sign[1], 982:1094] = 255
+    im = Image.fromarray(cv2.inpaint(arr, mk, 5, cv2.INPAINT_NS))      # garbled shelf sign -> filled from its surroundings
     d = ImageDraw.Draw(im)
-    tag(d, (66, 588, 186, 672), "SALE", 38); tag(d, (988, 596, 1112, 690), "SALE", 40); d.rounded_rectangle((992, 792, 1084, 852), 8, fill=(40, 34, 30), outline=(20, 14, 12), width=4)   # garbled shelf sign -> plain dark screen
+    tag(d, (66, 588, 186, 672), "SALE", 38); tag(d, (988, 596, 1112, 690), "SALE", 40)
     d.rounded_rectangle([250, 296, 894, 412], 18, fill=(214, 32, 38), outline=(20, 10, 14), width=7)
     f = ImageFont.truetype(FB, 78); t = "BLACK FRIDAY"; w = d.textlength(t, font=f); d.text(((AW - w) / 2, 303), t, font=f, fill=(255, 255, 255))
     if box_dy is not None:
@@ -76,4 +85,4 @@ import sys
 DC = (int(sys.argv[1]), int(sys.argv[2])) if len(sys.argv) > 2 else (-2, 10)
 DB = (int(sys.argv[3]), int(sys.argv[4])) if len(sys.argv) > 4 else (5, 25)
 c = with_head(load(cw), a, *DC); b = with_head(load(b3), a, *DB)
-print("mouth", MOUTH_XY); finish(a.copy(), "art-free/a.jpg"); finish(c, "art-free/c.jpg", box_dy=0); finish(b, "art-free/b.jpg", box_dy=15, phone=True)
+print("mouth", MOUTH_XY); finish(a.copy(), "art-free/a.jpg"); finish(c, "art-free/c.jpg", box_dy=0, sign=(796, 874)); finish(b, "art-free/b.jpg", box_dy=15, phone=True, sign=(786, 888))

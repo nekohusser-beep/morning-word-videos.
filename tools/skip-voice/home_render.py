@@ -107,7 +107,7 @@ def caption(img, tt):
 HOOKW = cfg.get("hook_text", "").split()
 def top(img, tt):
     d = ImageDraw.Draw(img)
-    if tt < 3.6 and (HOOKW or cfg.get("hook_cards")):  # hook: bold top-center, swaps every 1.2 s
+    if tt < cfg.get("hook_end", 3.6) and (HOOKW or cfg.get("hook_cards")):   # hook_end: set it to the first cut so the card never drops a frame early  # hook: bold top-center, swaps every 1.2 s
         n = min(len(HOOKW), 1 + int(tt / 1.2) * 2)
         hc = cfg.get("hook_cards")                 # optional: whole cards, one per 1.2 s, so every card reads on its own
         ht = hc[min(int(tt / 1.2), len(hc) - 1)] if hc else " ".join(HOOKW[:n][-3:]); hf = HOOK

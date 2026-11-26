@@ -1,0 +1,89 @@
+bf1126/u000.wav
+  words: 3(0.85) a(0.32) .m.,(0.78) 14(0.95) hours(0.99) in(0.99) line,(1.0) that(0.94) TV(0.95) is(1.0) mine.(1.0)
+  min-conf: 0.32
+  phones: θ ɹ iː eɪ ɛ m f oːɹ t t iː n aʊ ɚ z ɪ n l aɪ n ð æ t t iː v iː ɪ z m aɪ n
+
+bf1126/u001.wav
+  words: Tree!(0.42) You've(0.77) been(1.0) here(1.0) since(1.0) yesterday!(0.99)
+  min-conf: 0.42
+  phones: dʒ ɹ j uː b ɪ n h ɪ s ɪ n s j ɛ s t ɚ d eɪ
+
+bf1126/u002.wav
+  words: Since(0.93) Thanksgiving,(0.79) I(0.99) left(0.98) before(0.98) the(0.99) pie.(0.97) That's(0.97) sacrifice.(0.93)
+  min-conf: 0.79
+  phones: s ɪ n s θ ð æ ŋ k s ɡ ɪ v ɪ ŋ aɪ l ɛ f t b ə f oːɹ ð ə p aɪ æ t s s æ k ɹ ɪ f aɪ s
+
+bf1126/u003.wav
+  words: I(0.93) got(0.98) it.(0.99) $2(0.76) .99.(1.0)
+  min-conf: 0.76
+  phones: a h ɡ a l ɛ t t uː n aɪ n d i n aɪ n
+
+bf1126/u004.wav
+  words: It's(0.92) $2(0.87) .49(1.0) online!(0.95) Free(0.97) shipping!(0.89)
+  min-conf: 0.87
+  phones: ɪ t s t uː f ɔːɹ ɾ i n aɪ n ɑː n l aɪ n f ɹ iː ʃ ɪ p ɪ ŋ
+
+bf1126/u005.wav
+  words: Did(0.87) they(1.0) at(0.99) least(1.0) have(1.0) pie(0.4) online?(0.91)
+  min-conf: 0.4
+  phones: d uː ð eɪ t l iː s t h æ v p aɪ ɔ n l aɪ n
+
+bfrA1/u001.wav
+  words: Trey,(0.56) you(0.9) been(0.65) here(1.0) since(1.0) yesterday?(0.98)
+  min-conf: 0.56
+  phones: t ɹ eɪ j uː b ɪ n h ɜː s ɪ n s j ɛ s t ɚ d eɪ
+
+bfrA1/u003.wav
+  words: I(0.83) got(0.95) it.(0.99) $2(0.8) .99.(1.0)
+  min-conf: 0.8
+  phones: a h ɡ a r t uː n aɪ n i n aɪ n
+
+bfrA1/u004.wav
+  words: It's(0.94) $2(0.91) .49(1.0) online.(0.96) Free(0.98) shipping!(0.95)
+  min-conf: 0.91
+  phones: ɪ t s t uː f ɔːɹ ɾ i n aɪ n ɔ n l aɪ n f ɹ iː ʃ ɪ p ɪ ŋ
+
+bfrA2/u001.wav
+  words: Jay,(0.57) you(0.95) been(0.75) here(1.0) since(1.0) yesterday?(0.99)
+  min-conf: 0.57
+  phones: dʒ eɪ j uː b ɪ n h ɪ s ɪ n s j ɛ s t ɚ d eɪ
+
+bfrA2/u003.wav
+  words: I(0.94) got(0.99) it.(0.99) $2(0.74) .99.(1.0)
+  min-conf: 0.74
+  phones: aɪ ɡ ɑː ɾ ɪ t t uː n aɪ n d i n aɪ n
+
+bfrA2/u004.wav
+  words: It's(0.94) $2(0.85) .49(1.0) online,(0.96) free(0.94) shipping.(1.0)
+  min-conf: 0.85
+  phones: ɪ t s t uː f oːɹ ɾ i n aɪ n ɔ n l aɪ n f ɹ iː ʃ ɪ p ɪ ŋ
+
+bfrB1/u001.wav
+  words: Trey,(0.6) you've(0.9) been(1.0) here(1.0) since(1.0) yesterday!(0.98)
+  min-conf: 0.6
+  phones: t ɹ eɪ j uː b ɪ n h ɪ s ɪ n s j ɛ s t ɚ d eɪ
+
+bfrB1/u003.wav
+  words: I(0.87) got(0.97) it,(1.0) $2(0.79) .99.(1.0)
+  min-conf: 0.79
+  phones: h a ɡ a r ɪ t t uː n aɪ n i n aɪ n
+
+bfrB1/u004.wav
+  words: It's(0.94) $2(0.86) .49(1.0) online!(0.96) Free(0.97) shipping!(0.91)
+  min-conf: 0.86
+  phones: ɪ t s t uː f ɔːɹ ɾ i n aɪ n n l aɪ n f ɹ iː ʃ ɪ p ɪ ŋ
+
+bfrB2/u001.wav
+  words: Dre!(0.4) You've(0.75) been(1.0) here(1.0) since(1.0) yesterday?(0.99)
+  min-conf: 0.4
+  phones: dʒ ɹ eɪ j uː b ɪ n h ɪ s ɪ n s j ɛ s t ɚ d eɪ
+
+bfrB2/u003.wav
+  words: I(0.85) got(0.99) it.(1.0) $2(0.77) .99.(1.0)
+  min-conf: 0.77
+  phones: aɪ ɡ ɑː ɾ ɪ t t uː n aɪ n d i n aɪ n
+
+bfrB2/u004.wav
+  words: It's(0.94) $2(0.89) .49(1.0) online,(0.97) free(0.96) shipping!(1.0)
+  min-conf: 0.89
+  phones: ɪ t s t uː f ɔːɹ ɾ i n aɪ n ɔ n l aɪ n f ɹ iː ʃ ɪ p ɪ ŋ

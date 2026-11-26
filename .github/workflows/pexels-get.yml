@@ -1,0 +1,44 @@
+name: pexels-get
+# Pexels search/video pages block the runner, the video CDN does not. Lines: id|suffix (suffix like hd_1920_1080_30fps or 14202812_1920_1080_30fps).
+# Empty suffix = guess the usual HD names. Each clip is probed, trimmed to 40 s, scaled to 1280x720, audio dropped, and saved as files/<id>.mp4. log.txt records original size.
+on:
+  workflow_dispatch:
+    inputs:
+      branch: {description: "temp branch (delete after pulling)", required: true, type: string}
+      items: {description: "id|suffix, one per line", required: true, type: string}
+permissions:
+  contents: write
+jobs:
+  get:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      ITEMS: ${{ inputs.items }}
+      BRANCH: ${{ inputs.branch }}
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash
+        run: |
+          git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true; mkdir -p files raw
+          echo "$ITEMS" | while IFS='|' read -r id suf; do
+            [ -z "$id" ] && continue; got=""
+            if [ -n "$suf" ]; then
+              u="https://videos.pexels.com/video-files/$id/$id-$suf.mp4"
+              curl -fsSL --retry 2 -A "Mozilla/5.0" -o "raw/$id.mp4" "$u" && got=$u
+            fi
+            if [ -z "$got" ]; then
+              for res in 1920_1080 1366_720 2048_1080 1920_1012 1920_1018 1280_720; do
+                for fps in 25 30 24 50 60; do
+                  u="https://videos.pexels.com/video-files/$id/$id-hd_${res}_${fps}fps.mp4"
+                  if curl -fsSL -A "Mozilla/5.0" -o "raw/$id.mp4" "$u"; then got=$u; break 2; fi
+                done
+              done
+            fi
+            if [ -z "$got" ]; then echo "$id MISSING" | tee -a files/log.txt; rm -f "raw/$id.mp4"; continue; fi
+            info=$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate:format=duration -of csv=p=0 "raw/$id.mp4" | tr '\n' ' ')
+            ffmpeg -v error -y -i "raw/$id.mp4" -t 40 -an -vf "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,fps=30" -c:v libx264 -crf 23 -preset veryfast -pix_fmt yuv420p "files/$id.mp4" && echo "$id OK $info $got" | tee -a files/log.txt || echo "$id FFFAIL $got" | tee -a files/log.txt
+            rm -f "raw/$id.mp4"
+          done
+          du -sh files
+          git config user.name github-actions; git config user.email actions@github.com
+          git add files; git commit -m "pexels get"; git push -f origin "$BRANCH"

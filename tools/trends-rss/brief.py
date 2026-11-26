@@ -22,6 +22,19 @@ REF = re.compile(r"\b((?:[123] )?(?:%s)) (\d{1,3}):(\d{1,3})" % BOOKS, re.I)
 ET = datetime.timezone(datetime.timedelta(hours=-5))
 
 def description(vid):
+    # Official route first (Neko Nov 26 2026, GROW head-to-head): the YouTube Data API returns the FULL description.
+    # The watch-page scrape below came back blank from runners every time. Key goes in a header, never the URL,
+    # so a failed call can never print it. Costs 1 of the 10,000 free daily quota units per video.
+    key = os.environ.get("YOUTUBE_API_KEY", "").strip()
+    if key:
+        try:
+            j = json.loads(iqvid.get("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=%s" % vid,
+                                     tries=2, headers={"X-Goog-Api-Key": key}))
+            items = j.get("items") or []
+            if items and items[0].get("snippet", {}).get("description"):
+                return items[0]["snippet"]["description"]
+        except Exception as e:  # noqa
+            print("api description failed for %s: %s" % (vid, str(e).replace(key, "[key]")[:120]))
     try:
         html = iqvid.get("https://www.youtube.com/watch?v=%s&hl=en&gl=US" % vid)
         m = re.search(r'"shortDescription":"((?:[^"\\]|\\.)*)"', html)

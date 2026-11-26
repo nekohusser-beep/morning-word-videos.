@@ -23,6 +23,8 @@ jobs:
           GEO: ${{ inputs.geo || 'US' }}
         run: python3 tools/trends-rss/rss.py
       - name: Trend brief (niche top 3 + their descriptions)
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python3 tools/trends-rss/brief.py || echo brief-failed
       - name: Commit
         run: |

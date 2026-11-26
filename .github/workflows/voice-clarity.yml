@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with: {sparse-checkout: "reports/voice-clarity\ntools/skip-voice/lock"}
       - run: |
-          sudo apt-get -qq install -y espeak-ng ffmpeg >/dev/null
+          sudo apt-get -qq update && sudo apt-get -qq install -y espeak-ng >/dev/null
           pip install -q faster-whisper phonemizer soundfile numpy torch transformers --extra-index-url https://download.pytorch.org/whl/cpu
       - env: {GH_TOKEN: "${{ github.token }}", TAGS: "${{ inputs.tags }}", NAME: "${{ inputs.name }}"}
         run: |

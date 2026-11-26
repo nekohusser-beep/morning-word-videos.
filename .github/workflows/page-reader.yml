@@ -1,0 +1,38 @@
+name: page-reader
+# Reads public pages our other readers cannot (YouTube watch pages in full, Etsy search/listing pages) through
+# Firecrawl keyless: no account, no key, no secrets. Report lands in reports/page-reader/run-<id>.md (PUBLIC repo: public pages only).
+# Lives here, not in kingdom-brain: private-repo Actions have been refused since Nov 8 2026 (spending-limit notice).
+# Dispatch: gh api -X POST repos/nekohusser-beep/morning-word-videos./actions/workflows/page-reader.yml/dispatches -f ref=main -f 'inputs[urls]=URL1 URL2'
+on:
+  workflow_dispatch:
+    inputs:
+      urls: {description: "one or more public URLs separated by spaces", required: true}
+permissions:
+  contents: write
+concurrency:
+  group: page-reader
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      URLS: ${{ inputs.urls }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read the pages
+        shell: bash
+        run: |
+          mkdir -p reports/page-reader
+          OUT="reports/page-reader/run-${{ github.run_id }}.md"
+          # word-split on purpose: URLS is a space-separated list
+          python3 tools/page-reader/firecrawl_keyless.py $URLS > "$OUT" 2>&1 || echo "some or all URLs failed" >> "$OUT"
+          head -c 3000 "$OUT"
+      - name: Commit the report
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "page-reader-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reports/page-reader
+          git commit -q -m "page-reader run ${{ github.run_id }}" || exit 0
+          for i in 1 2 3 4; do git pull --rebase -X theirs -q origin main && git push -q origin HEAD:main && break; sleep 4; done

@@ -18,26 +18,4 @@ Named API endpoints: 2
  - predict(image, api_name="/lambda") -> upload_the_image_for_editing
     Parameters:
      - [Image] image: dict
-a2 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/bde315e25e27f13a7f97718dca096d7f4ddee612b6dd65263d317e158733f67c/image.webp
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 99s left). Try again in 16:24:02. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 99s left). Try again in 16:23:51. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-Loaded as API: https://qwen-qwen-image-edit.hf.space
-Client.predict() Usage Info
----------------------------
-Named API endpoints: 1
-
- - predict(image, prompt, seed, randomize_seed, true_guidance_scale, num_inference_steps, rewrite_prompt, api_name="/infer") -> (result, seed)
-    Parameters:
-     - [Image] image: dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any)) (required)  (For input, either path or url must be provided. For output, path is always provided.) 
-     - [Textbox] prompt: str (required)  
-     - [Slider] seed: float (not required, defaults to:   0)  
-     - [Checkbox] randomize_seed: bool (not required, defaults to:   True)  
-     - [Slider] true_guidance_scale: float (not required, defaults to:   4.0)  
-     - [Slider] num_inference_steps: float (not required, defaults to:   50)  
-     - [Checkbox] rewrite_prompt: bool (not required, defaults to:   True)  
-    Returns:
-     - [Image] result: dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any)) 
-     - [Slider] seed: float (numeric value between 0 and 2147483
-FAIL Qwen/Qwen-Image-Edit 0 AppError('The requested GPU duration (240s) is larger than the maximum allowed')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('The requested GPU duration (240s) is larger than the maximum allowed')
-c_box 11 None None
+c_box 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/b9378450dbeb5309d887e1694ca2a48bd3e179d65ac340eb67a9ea292ca85d4d/image.webp

@@ -1,0 +1,54 @@
+name: la-syncnet
+# Lip-sync meter for Little Amens: SyncNet AV offset + confidence for every clip on the given branches.
+on:
+  workflow_dispatch:
+    inputs:
+      branches: {description: "space-separated branches holding .mp4 clips", required: true, default: "la-v3-a la-v3-b"}
+      out: {description: "output branch", required: true, default: "la-sync-out"}
+      only: {description: "optional space-separated clip ids", required: false, default: ""}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.9'}
+      - name: setup
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          git clone -q --depth 1 https://github.com/joonson/syncnet_python sn
+          pip install -q torch==1.13.1 torchvision==0.14.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "numpy==1.23.5" "scipy==1.9.3" "scenedetect==0.5.1" "opencv-contrib-python==4.6.0.66" python_speech_features tqdm click
+          cd sn && cat download_model.sh && sh download_model.sh && ls -la data detectors/s3fd/weights
+          sed -i 's/\.cuda()//g' SyncNetInstance.py run_pipeline.py run_syncnet.py detectors/s3fd/*.py
+          sed -i "s/device='cuda'/device='cpu'/g" run_pipeline.py detectors/s3fd/*.py
+          grep -n "cuda" *.py detectors/s3fd/*.py || true
+      - name: clips
+        run: |
+          mkdir -p clips res
+          for b in ${{ inputs.branches }}; do git fetch -q --depth=1 origin $b && git archive FETCH_HEAD | tar -x -C clips --wildcards '*.mp4' || true; done
+          ls -la clips | head -60
+          c=$(ls clips/6f057c25.mp4 2>/dev/null || ls clips/*.mp4 | head -1)
+          ffmpeg -v error -y -i $c -itsoffset 0.4 -i $c -map 0:v -map 1:a -c:v copy -c:a aac clips/ctl_audio_late_400ms.mp4
+          ffmpeg -v error -y -i $c -itsoffset 0.4 -i $c -map 1:v -map 0:a -c:v libx264 -crf 18 -c:a aac clips/ctl_audio_early_400ms.mp4
+      - name: run
+        run: |
+          cd sn
+          for f in ../clips/*.mp4; do
+            id=$(basename $f .mp4)
+            if [ -n "${{ inputs.only }}" ] && ! echo " ${{ inputs.only }} ctl_audio_late_400ms ctl_audio_early_400ms " | grep -q " $id "; then continue; fi
+            echo "=== $id"
+            python run_pipeline.py --videofile $f --reference $id --data_dir ../work --min_track 50 > ../res/$id.pipe.log 2>&1 || tail -5 ../res/$id.pipe.log
+            python run_syncnet.py --videofile $f --reference $id --data_dir ../work --vshift 20 > ../res/$id.sync.log 2>&1 || tail -5 ../res/$id.sync.log
+            grep -E "AV offset|Min dist|Confidence" ../res/$id.sync.log || tail -3 ../res/$id.sync.log
+            ls ../work/pycrop/$id 2>/dev/null | head
+          done
+          cd .. && python tools/little-amens/sn_collect.py
+          cat res/sync.json
+      - name: push
+        if: always()
+        run: |
+          cd res && git init -q && git checkout -q -b ${{ inputs.out }} && git add -A && git -c user.name=bot -c user.email=actions@users.noreply.github.com commit -qm out && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ${{ inputs.out }}

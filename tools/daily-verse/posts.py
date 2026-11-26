@@ -7,8 +7,12 @@ for f in sorted(glob.glob('eps/[mn]-*.json')):
     i = int(d[-2:])
     if kind == 'm':
         title = (f"Morning Prayer for Today | {r} KJV" if i % 2 else f"Good Morning Bible Verse | {r} KJV")
-        hook = e['lines'][0]['say']; line = [l['say'] for l in e['lines'] if l['big'] == l['say']][0] if any(l['big'] == l['say'] for l in e['lines']) else ''
-        desc = f"{hook}\n\n\"{kjv}\" {r} (KJV)\n\n{line}\n\nHave a blessed day. Type amen, and send this to somebody starting their day.\n\nNarration: AI-generated voice. The Word is real.\n\n#MorningPrayer #BibleVerse #KJV #BlessedPrayers #shorts"
+        hook = e['lines'][0]['say']
+        # the one personal line, NOT a piece of the verse. Nov 26 2026 fix: when a long verse is split over two
+        # screens its first half also has big == say, and that cut-off half was being repeated under the full verse.
+        own = [l['say'] for l in e['lines'] if l['big'] == l['say'] and l['big'].strip() not in kjv]
+        line = own[0] if own else ''
+        desc = f"{hook}\n\n\"{kjv}\" {r} (KJV)\n\n" + (line + "\n\n" if line else "") + f"Have a blessed day. Type amen, and send this to somebody starting their day.\n\nNarration: AI-generated voice. The Word is real.\n\n#MorningPrayer #BibleVerse #KJV #BlessedPrayers #shorts"
         file = f'Blessed-Morning-{d}.mp4'; at = f'{d}T05:00:00-05:00'
     else:
         title = (f"Night Prayer Before Sleep | {r} KJV" if i % 2 else f"Night Prayer Today | {r} KJV")

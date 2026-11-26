@@ -1,0 +1,87 @@
+{
+ "voices": "../voices/nn1126",
+ "lines": "lines.json",
+ "gap": 0.14,
+ "shots": [
+  {
+   "clip": "clips/c1.mp4",
+   "lines": [
+    0
+   ]
+  },
+  {
+   "clip": "clips/c2.mp4",
+   "lines": [
+    1
+   ],
+   "tail": 0.8
+  },
+  {
+   "clip": "clips/c3.mp4",
+   "lines": [
+    2
+   ],
+   "tail": 0.8
+  },
+  {
+   "clip": "clips/c4.mp4",
+   "lines": [
+    3
+   ],
+   "tail": 0.3
+  },
+  {
+   "clip": "clips/c5.mp4",
+   "lines": [
+    4
+   ],
+   "tail": 1.2
+  }
+ ],
+ "hook": [
+  [
+   "ADHD HAS 2 TIMES"
+  ],
+  [
+   "NOW"
+  ],
+  [
+   "AND NOT NOW"
+  ]
+ ],
+ "labels": [
+  {
+   "shot": 0,
+   "text": [
+    "11:00 AM"
+   ],
+   "dur": 1.4
+  },
+  {
+   "shot": 1,
+   "text": [
+    "11:01 AM"
+   ],
+   "dur": 1.6
+  },
+  {
+   "shot": 2,
+   "text": [
+    "1:30 PM"
+   ],
+   "dur": 1.8
+  },
+  {
+   "shot": 3,
+   "text": [
+    "2:52 PM"
+   ],
+   "dur": 1.6
+  }
+ ],
+ "end": [
+  "IT'S CALLED TIME BLINDNESS.",
+  "NOT LAZY."
+ ],
+ "end_hold": 2.0
+}

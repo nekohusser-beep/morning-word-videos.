@@ -1,0 +1,15 @@
+# adhd/stack/skip-big-12-onething.mp4 lang=en
+  0.00-  1.04 Babe, can you grab milk?
+   words: Babe,@0.00 can@0.28 you@0.38 grab@0.50 milk?@0.72
+  1.78-  3.56 Just milk, one thing.
+   words: Just@1.78 milk,@2.00 one@2.80 thing.@3.28
+  3.82-  5.58 One thing milk, I got it.
+   words: One@3.82 thing@4.04 milk,@4.26 I@4.92 got@5.08 it.@5.32
+  8.08-  8.88 Where's the milk?
+   words: Where's@8.08 the@8.52 milk?@8.64
+  9.22- 11.26 We live by a lake, Nia, we never use the lake.
+   words: We@9.22 live@9.38 by@9.52 a@9.70 lake,@9.78 Nia,@10.02 we@10.32 never@10.40 use@10.58 the@10.82 lake.@10.98
+ 11.58- 13.22 We live by a retention pond.
+   words: We@11.58 live@11.78 by@12.00 a@12.26 retention@12.36 pond.@12.74
+ 13.94- 14.52 Got the milk.
+   words: Got@13.94 the@14.10 milk.@14.26

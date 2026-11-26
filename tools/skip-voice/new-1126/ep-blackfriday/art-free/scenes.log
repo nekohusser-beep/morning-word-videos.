@@ -18,5 +18,4 @@ Named API endpoints: 2
  - predict(image, api_name="/lambda") -> upload_the_image_for_editing
     Parameters:
      - [Image] image: dict
-a_two 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/b496de8044e2424de7db46a7cf3496d5503c8b2b325abeae1efc23fa24bc8741/image.webp
-b_box 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/310972f2af906c2c8e0ba59f66473b98188b741a0628c5991e6ae59400b4c17d/image.webp
+b_box 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/5aeeb866f9a2206ae983c942bbaaeca055c8dd41eba35706eeddca6474716caf/image.webp

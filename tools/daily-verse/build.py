@@ -29,8 +29,14 @@ FIX = {
     'strengtheneth': 'stɹˈɛŋθənəθ',  # STRENGTH-en-eth, not "streng-THEE-neth"
     'zephaniah': 'zˌɛfənˈaɪə',     # zef-uh-NYE-uh
     'commune': 'kəmjˈuːn',         # the verb: kuh-MYOON
+    # words with two pronunciations that the voice picks wrong in OUR lines (phrase-level so other uses stay as they are)
+    'wind down': 'wˈaɪnd dˌaʊn',           # not the wind that blows
+    'tear them down': 'tˈɛɹ ðˌɛm dˈaʊn',   # not a teardrop
+    'live like': 'lˈɪv lˈaɪk',             # not "a live show"
+    'use the time': 'jˈuːz ðə tˈaɪm',      # the verb
+    'read slowly': 'ɹˈɛd slˈoʊli',         # "Psalms ..., read slowly, is on the channel": past tense, "red"
 }
-_FIXRX = re.compile(r"\b(%s)\b" % '|'.join(FIX), re.I)
+_FIXRX = re.compile(r"\b(%s)\b" % '|'.join(sorted(FIX, key=len, reverse=True)), re.I)
 
 def speak(text, voice, speed):
     if not _FIXRX.search(text):

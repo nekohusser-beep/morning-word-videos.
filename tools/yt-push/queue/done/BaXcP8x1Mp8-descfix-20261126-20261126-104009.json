@@ -1,0 +1,20 @@
+{
+ "job": {
+  "video_id": "BaXcP8x1Mp8",
+  "description": "Good morning. If you're walking into something hard today, hear this.\n\n\"Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.\" Joshua 1:9 (KJV)\n\nHe didn't tell Joshua it would be easy. He told him who was going with him.\n\nHave a blessed day. Type amen, and send this to somebody starting their day.\n\nNarration: AI-generated voice. The Word is real.\n\n#MorningPrayer #BibleVerse #KJV #BlessedPrayers #shorts"
+ },
+ "results": [
+  {
+   "video_id": "BaXcP8x1Mp8",
+   "mode": "apply",
+   "time_utc": "2026-11-26T10:39:50",
+   "changed": [
+    "description"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Good Morning Bible Verse | Joshua 1:9 KJV",
+   "rollback": "reports/yt-push/rollback/BaXcP8x1Mp8-20261126-103950.json"
+  }
+ ]
+}

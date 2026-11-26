@@ -1,30 +1,44 @@
 {
- "Qq6Jrnbq34M-202611252145.json": [
+ "43ozrzEI_lA-descfix-20261126.json": [
   {
-   "video_id": "Qq6Jrnbq34M",
+   "video_id": "43ozrzEI_lA",
    "mode": "apply",
-   "time_utc": "2026-11-26T02:43:01",
+   "time_utc": "2026-11-26T10:39:41",
    "changed": [
-    "tags"
+    "description"
    ],
    "skipped": [],
    "errors": [],
-   "live_title": "Morning Prayer for Today | Psalm 46:1 KJV",
-   "rollback": "reports/yt-push/rollback/Qq6Jrnbq34M-20261126-024301.json"
+   "live_title": "Good Morning Bible Verse | Isaiah 40:31 KJV",
+   "rollback": "reports/yt-push/rollback/43ozrzEI_lA-20261126-103941.json"
   }
  ],
- "WK-pg3uuumg-202611252145.json": [
+ "BaXcP8x1Mp8-descfix-20261126.json": [
   {
-   "video_id": "WK-pg3uuumg",
+   "video_id": "BaXcP8x1Mp8",
    "mode": "apply",
-   "time_utc": "2026-11-26T02:43:11",
+   "time_utc": "2026-11-26T10:39:50",
    "changed": [
-    "tags"
+    "description"
    ],
    "skipped": [],
    "errors": [],
-   "live_title": "Night Prayer Before Sleep | Psalm 37:7 KJV",
-   "rollback": "reports/yt-push/rollback/WK-pg3uuumg-20261126-024311.json"
+   "live_title": "Good Morning Bible Verse | Joshua 1:9 KJV",
+   "rollback": "reports/yt-push/rollback/BaXcP8x1Mp8-20261126-103950.json"
+  }
+ ],
+ "V5n89Tl4CD4-descfix-20261126.json": [
+  {
+   "video_id": "V5n89Tl4CD4",
+   "mode": "apply",
+   "time_utc": "2026-11-26T10:39:59",
+   "changed": [
+    "description"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Good Morning Bible Verse | Proverbs 3:5-6 KJV",
+   "rollback": "reports/yt-push/rollback/V5n89Tl4CD4-20261126-104000.json"
   }
  ]
 }

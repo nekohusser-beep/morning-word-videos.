@@ -1,0 +1,13 @@
+profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
+
+43ozrzEI_lA | Good Morning Bible Verse | Isaiah 40:31 KJV
+  description: (534, 486)
+  APPLIED + verified: description
+
+BaXcP8x1Mp8 | Good Morning Bible Verse | Joshua 1:9 KJV
+  description: (511, 512)
+  APPLIED + verified: description
+
+V5n89Tl4CD4 | Good Morning Bible Verse | Proverbs 3:5-6 KJV
+  description: (454, 507)
+  APPLIED + verified: description

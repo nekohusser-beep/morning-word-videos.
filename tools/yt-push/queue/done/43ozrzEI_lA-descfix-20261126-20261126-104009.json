@@ -1,0 +1,20 @@
+{
+ "job": {
+  "video_id": "43ozrzEI_lA",
+  "description": "Good morning. Running on empty already? Hear this.\n\n\"But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.\" Isaiah 40:31 (KJV)\n\nEagles don't flap their way up. The wind carries them.\n\nHave a blessed day. Type amen, and send this to somebody starting their day.\n\nNarration: AI-generated voice. The Word is real.\n\n#MorningPrayer #BibleVerse #KJV #BlessedPrayers #shorts"
+ },
+ "results": [
+  {
+   "video_id": "43ozrzEI_lA",
+   "mode": "apply",
+   "time_utc": "2026-11-26T10:39:41",
+   "changed": [
+    "description"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Good Morning Bible Verse | Isaiah 40:31 KJV",
+   "rollback": "reports/yt-push/rollback/43ozrzEI_lA-20261126-103941.json"
+  }
+ ]
+}

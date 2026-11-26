@@ -1,2 +1,4 @@
-https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_465fc5ad535e3ca0abd05851ea877b10_1795688371781_c27d2418.mp4 tools/skip-voice/new-1126/ep-onething/clips/c3.mp4
-https://cdn.openart.ai/openart-ai/production/2026-11/create-video/z7hTwQ6kmX4neixgJbQ8/job_9d78d3487e30611048a633632b3b929f_1795688366628_ec621ee2.mp4 tools/skip-voice/new-1126/ep-onething/clips/c5.mp4
+https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/a0854492011daeb627273f656df3b43a-7a90c478-a1a2-4170-b545-5e81470d4417_c2pa_1795688957630_0ed1999c.png tools/skip-voice/new-1126/ep-santa/art/s1.png
+https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/c7d6eaa9f24d142a384eca36d0c4fdcc-4f7d58bf-0864-4da1-97dc-a1d7acef25de_c2pa_1795688956511_eebd54b2.png tools/skip-voice/new-1126/ep-santa/art/s2.png
+https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/9e43eeb5b46df457abd5c0d91e7c58d6-03688ef6-1fca-45c9-9514-87ff6d906ea6_c2pa_1795688960386_4b6e438d.png tools/skip-voice/new-1126/ep-santa/art/s3.png
+https://cdn.openart.ai/openart-ai/production/2026-11/create-image/z7hTwQ6kmX4neixgJbQ8/2a8453221b890b583ab67b298a8e8609-6899436b-944a-4be9-b185-fb1f81c778b3_c2pa_1795688961292_81754d6b.png tools/skip-voice/new-1126/ep-santa/art/s4.png

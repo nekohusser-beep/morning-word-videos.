@@ -23,6 +23,7 @@ SCENE_LAST = {ids[-1] for ids in cfg["scenes"].values()}
 
 tmp = tempfile.mkdtemp()
 starts, durs, parts, t = [], [], [], 0.0
+SEGS = []
 for i in range(NL):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{EP}/final/u{i:03d}.wav", "-ar", str(SR), "-ac", "1", f"{tmp}/r.wav"], check=True)
     a, _ = sf.read(f"{tmp}/r.wav")
@@ -36,6 +37,12 @@ for i in range(NL):
         a = a[keep]
     a = a / (np.max(np.abs(a)) + 1e-9) * 0.85
     starts.append(t); durs.append(len(a) / SR)
+    w_ = SR // 100; r_ = np.array([np.sqrt(np.mean(a[k:k + w_] ** 2)) for k in range(0, len(a) - w_, w_)]) > 0.02   # spoken phrases = runs of sound split by >= 0.15 s of quiet
+    on = np.where(r_)[0]; sg = []
+    if len(on):                                 # keep every quiet run >= 0.05 s as a candidate boundary: (start_s, end_s) of the quiet
+        brk = [(on[k] + 1, on[k + 1]) for k in range(len(on) - 1) if on[k + 1] - on[k] > 5]
+        sg = [(on[0] / 100, (on[-1] + 1) / 100, [(u / 100, v / 100) for u, v in brk])]
+    SEGS.append(sg)
     g = GAP.get(i, 1.0 if i in SCENE_LAST else 0.28)
     if cfg.get("frame_align"):                  # next line starts exactly on a frame, so sound and cut land together
         nxt = math.ceil((t + len(a) / SR + g) * FPS - 1e-6) / FPS; g = nxt - t - len(a) / SR
@@ -52,6 +59,12 @@ if cfg.get("bed"):                              # optional room tone under the w
     tone = tone / (np.sqrt(np.mean(tone ** 2)) + 1e-9) * cfg["bed"]
     fade = np.minimum(1, np.minimum(np.arange(len(raw)) / (0.05 * SR), (len(raw) - np.arange(len(raw))) / (0.4 * SR)))
     out_a = raw + tone * fade
+if cfg.get("end_chime"):                        # optional soft two-note chime as the end card lands (no dead air under it)
+    out_a = out_a.copy(); k0 = int((t + 0.3) * SR)
+    for j, hz in enumerate((523.25, 783.99)):
+        n_ = np.arange(int(1.6 * SR)); tone_ = (np.sin(2 * np.pi * hz * n_ / SR) + 0.3 * np.sin(4 * np.pi * hz * n_ / SR)) * np.exp(-n_ / (0.45 * SR)) * np.minimum(1, n_ / (0.01 * SR))
+        a0_ = k0 + int(j * 0.18 * SR); m_ = min(len(tone_), len(out_a) - a0_); out_a[a0_:a0_ + m_] += tone_[:m_] * cfg["end_chime"]
+    out_a[-int(0.15 * SR):] *= np.linspace(1, 0, int(0.15 * SR))
 wav = f"{tmp}/dialogue.wav"; sf.write(wav, out_a, SR)
 hop = SR // FPS; nfr = int(math.ceil(TOTAL * FPS))
 env = np.array([np.sqrt(np.mean(raw[k * hop:(k + 1) * hop] ** 2)) if k * hop < len(raw) else 0 for k in range(nfr)])
@@ -100,24 +113,38 @@ def draw_mouth(img, scene, who, openv):
 def text_c(d, y, txt, font, fill=(255, 255, 255), sw=9):
     d.text(((W - d.textlength(txt, font=font)) / 2, y), txt, font=font, fill=fill, stroke_width=sw, stroke_fill=(0, 0, 0))
 
+import re
+def cap_words(i):
+    """-> [(word, t_on, chunk_id)] for line i. Each sentence of the caption is tied to one spoken phrase (found from the pauses),
+    so a caption never runs ahead of or behind the voice; chunks of up to 3 words never straddle two sentences."""
+    txt = CAP.get(i, lines[i]["text"]); ph = [p for p in re.split(r"(?<=[.!?])\s+", txt) if p]
+    v0, v1, brk = SEGS[i][0] if SEGS[i] else (0, durs[i], [])
+    if len(ph) - 1 > len(brk) or i in cfg.get("cap_one", []): ph = [txt]     # cap_one: lines whose sentences run together with no real pause
+    cut = sorted(sorted(brk, key=lambda q: q[0] - q[1])[:len(ph) - 1])           # the longest pauses are the sentence breaks
+    sg = list(zip([v0] + [q[1] for q in cut], [q[0] for q in cut] + [v1]))
+    out, cid = [], 0
+    for p, (a0, a1) in zip(ph, sg):
+        ws = p.split(); wt = np.cumsum([0] + [len(w) + 2 for w in ws]); wt = a0 + wt / wt[-1] * (a1 - a0)
+        for j, w in enumerate(ws):
+            if j and j % 3 == 0: cid += 1
+            out.append((w, wt[j], cid))
+        cid += 1
+    return out
+CW = {}
 def caption(img, tt):
     i = line_at(tt)
     if i is None: return
-    ws = CAP.get(i, lines[i]["text"]).split()
-    wt = np.cumsum([len(w) + 2 for w in ws]); wt = wt / wt[-1] * durs[i]
-    k = min(int(np.searchsorted(wt, tt - starts[i])), len(ws) - 1)
-    a0 = (k // 3) * 3; chunk = ws[a0:a0 + 3]; d = ImageDraw.Draw(img)
+    if i not in CW: CW[i] = cap_words(i); print("cap", i, [(w, round(float(starts[i] + t0), 2)) for w, t0, _ in CW[i]])
+    cw = CW[i]; el = tt - starts[i]
+    k = max([n for n, (_, t0, _) in enumerate(cw) if t0 <= el + 1e-6] or [0])
+    idx = [n for n, c in enumerate(cw) if c[2] == cw[k][2]]; chunk = [cw[n][0] for n in idx]; d = ImageDraw.Draw(img)
     txt = " ".join(chunk).upper()
     POPF = POP
-    if cfg.get("cap_fit"):                      # shrink the type to fit (the old way dropped the last word of a long chunk)
-        while d.textlength(txt, font=POPF) > W - 80 and POPF.size > 48: POPF = ImageFont.truetype(FB, POPF.size - 4)
-    else:
-        while d.textlength(txt, font=POP) > W - 80 and len(chunk) > 1:
-            chunk = chunk[:-1]; txt = " ".join(chunk).upper()
+    while d.textlength(txt, font=POPF) > W - cfg.get("cap_margin", 80) and POPF.size > 48: POPF = ImageFont.truetype(FB, POPF.size - 4)
     xx = (W - d.textlength(txt, font=POPF)) / 2
     for j, w in enumerate(chunk):
         wd = w.upper() + (" " if j < len(chunk) - 1 else "")
-        d.text((xx, CAPY.get(i, cfg.get("cap_y", 1380))), wd, font=POPF, fill=(255, 225, 40) if a0 + j == k else (255, 255, 255), stroke_width=9, stroke_fill=(0, 0, 0))
+        d.text((xx, CAPY.get(i, cfg.get("cap_y", 1380))), wd, font=POPF, fill=(255, 225, 40) if idx[j] == k else (255, 255, 255), stroke_width=9, stroke_fill=(0, 0, 0))
         xx += d.textlength(wd, font=POPF)
 
 HOOKW = cfg.get("hook_text", "").split()

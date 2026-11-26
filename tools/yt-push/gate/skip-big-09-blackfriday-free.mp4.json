@@ -1,9 +1,9 @@
 {
  "video": "adhd/stack/skip-big-09-blackfriday-free.mp4",
- "sha256": "69cfca16098529a944e9a1a3e187f916b3ad479cc6be12bbae7c99fcfa9673db",
+ "sha256": "17272a2f435e56525591d8700697e5bb3d0102011e546273e479b4651e3cabb6",
  "voice_gate": "PASS",
  "qa": "PASS",
- "qa_report": "reports/skip-qa/2026-11-26-blackfriday-free-v5.md",
- "neko_ok": "",
- "starhead": ""
+ "starhead": "",
+ "qa_report": "reports/skip-qa/2026-11-26-blackfriday-free-v6.md",
+ "neko_ok": ""
 }

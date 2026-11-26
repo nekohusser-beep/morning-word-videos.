@@ -17,6 +17,8 @@ jobs:
       BRANCH: ${{ inputs.branch }}
     steps:
       - uses: actions/checkout@v4
+      - name: ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - shell: bash
         run: |
           git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true; mkdir -p files raw

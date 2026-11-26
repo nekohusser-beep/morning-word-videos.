@@ -1,0 +1,36 @@
+2026-11-26 20:21:51,963 SyncNetInstance INFO: Using device: cpu
+2026-11-26 20:21:52,070 __main__ INFO: Model data/syncnet_v2.model loaded.
+2026-11-26 20:21:52,071 SyncNetInstance INFO: Extracting video frames from ../work/pycrop/F_C07/00000.avi
+2026-11-26 20:21:52,123 SyncNetInstance INFO: Extracting audio from ../work/pycrop/F_C07/00000.avi
+2026-11-26 20:21:52,229 SyncNetInstance WARNING: Audio (3.5520s) and video (3.6000s) lengths are different.
+2026-11-26 20:21:54,529 SyncNetInstance INFO: Compute time 2.301 sec.
+2026-11-26 20:21:54,533 SyncNetInstance INFO: Framewise conf: 
+2026-11-26 20:21:54,533 SyncNetInstance INFO: [ 8.357  8.565  8.565  8.794  8.794  8.794  8.357  8.273  7.982  7.982
+  7.982  8.273  8.273  7.982  7.982  7.982  7.982  6.226  3.092  2.407
+  2.407  2.407  2.407  3.092  5.672  6.093  7.073  7.073  7.073  7.125
+  7.125  7.125  7.654  7.125  7.125  7.125  8.037  8.829  8.829  8.037
+  7.705  7.705  8.037  8.037  8.829  7.705  7.705  7.705  8.130  9.185
+  9.067  8.130  9.067  9.067  9.240  10.072  10.072  10.072  10.072
+  10.072  10.072  9.257  8.802  8.802  8.802  9.257  9.257  9.257  9.257
+  9.564  9.850  9.850  9.564  8.866  8.220  7.916  7.746  7.252  4.890
+  4.354  3.858  3.468  3.223]
+2026-11-26 20:21:54,533 SyncNetInstance INFO: AV offset: 	-2
+2026-11-26 20:21:54,533 SyncNetInstance INFO: Min dist: 	6.502
+2026-11-26 20:21:54,533 SyncNetInstance INFO: Confidence: 	7.730
+2026-11-26 20:21:54,539 SyncNetInstance INFO: Extracting video frames from ../work/pycrop/F_C07/00001.avi
+2026-11-26 20:21:54,594 SyncNetInstance INFO: Extracting audio from ../work/pycrop/F_C07/00001.avi
+2026-11-26 20:21:54,693 SyncNetInstance WARNING: Audio (3.5520s) and video (3.6000s) lengths are different.
+2026-11-26 20:21:56,869 SyncNetInstance INFO: Compute time 2.176 sec.
+2026-11-26 20:21:56,873 SyncNetInstance INFO: Framewise conf: 
+2026-11-26 20:21:56,873 SyncNetInstance INFO: [ 0.000  0.179  0.350  0.539  3.177  3.525  5.070  5.070  5.070  5.070
+  3.177  2.015  0.049 -0.309 -2.897 -2.897 -3.129 -3.129 -3.255 -3.129
+ -2.897 -2.493 -2.434 -1.718  1.275  1.480  1.480  1.480  1.480  1.480
+ -0.257 -0.769 -2.555 -2.584 -2.765 -2.805 -3.040 -3.040 -3.040 -3.040
+ -2.957 -2.584 -2.573 -2.430 -2.430 -2.430 -2.430 -2.573 -4.474 -4.474
+ -4.474 -4.474 -4.474 -3.156 -2.614  0.042  0.448  0.550  0.971  1.286
+  1.286  2.905  3.398  3.549  3.549  3.549  3.549  3.549  4.008  4.008
+  4.008  4.228  4.273  5.159  5.604  5.604  5.780  5.780  6.064  6.064
+  6.064  5.604  3.968]
+2026-11-26 20:21:56,873 SyncNetInstance INFO: AV offset: 	-20
+2026-11-26 20:21:56,873 SyncNetInstance INFO: Min dist: 	13.261
+2026-11-26 20:21:56,873 SyncNetInstance INFO: Confidence: 	1.088

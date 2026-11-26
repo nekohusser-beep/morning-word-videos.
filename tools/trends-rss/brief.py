@@ -62,6 +62,24 @@ def description(vid):
     except Exception as e:  # noqa
         return ""
 
+def opening(vid, n=14):
+    """The first words a mover actually SPEAKS plus how long its script is, read through Firecrawl keyless (no account,
+    no key, free; capped per IP per day, so a miss just leaves the line out). Added Nov 26 2026 (GROW head-to-head):
+    Firecrawl returns the full transcript of a watch page. Kept to a few words on purpose: study the hook, never copy."""
+    try:
+        body = json.dumps({"url": "https://www.youtube.com/watch?v=%s" % vid, "formats": ["markdown"]}).encode()
+        raw = iqvid.get("https://api.firecrawl.dev/v2/scrape", tries=1, timeout=90, data=body,
+                        headers={"Content-Type": "application/json"})
+        md = (json.loads(raw).get("data") or {}).get("markdown") or ""
+        m = re.search(r"## Transcript\s+(.+)", md, re.S)
+        words = re.sub(r"\s+", " ", m.group(1)).strip().split() if m else []
+        if len(words) < 20:
+            return ""
+        return '"%s..." (%d words spoken)' % (" ".join(words[:n]), len(words))
+    except Exception as e:  # noqa
+        print("opening not read for %s: %s" % (vid, str(e)[:100]))
+        return ""
+
 def clean(d, n=700):
     d = re.sub(r"https?://\S+", "", d)
     d = re.sub(r"#\w+", "", d)
@@ -111,6 +129,9 @@ def main():
         L.append("%d. **%s** - %s - %s views, %.0f/day, %s - youtu.be/%s" % (
             i, r["title"], r["ch"], format(r["views"], ","), r["vpd"], "Short" if (r.get("dur") or 999) <= 180 else "long", r["id"]))
         L.append("   - what they say: %s" % (clean(desc[r["id"]]) or "(runner could not read it: open the link in the browser before writing)"))
+        o = opening(r["id"])
+        if o:
+            L.append("   - their first words: %s" % o)
     L += ["", "## Verses the movers are using", ""]
     L.append(", ".join("%s (x%d)" % kv for kv in refs.most_common(10)) or "(none found)")
     L += ["", "## Top 3 per phrase", ""]

@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "dre",
+  "text": "Secret Santa! Twenty-five dollar limit. I got... Dre.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "dre",
+  "text": "Rules say buy for the name you drew. I'm a rule follower.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "dre",
+  "text": "A massage chair?! Who knew me like this?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "dre",
+  "text": "Twenty-five from me. Two seventy-five from your envelope.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ }
+]

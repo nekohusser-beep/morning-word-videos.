@@ -1,0 +1,16 @@
+[
+ {
+  "kind": "skip",
+  "text": "You can't draw yourself. Put it back.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "That's three hundred dollars.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ }
+]

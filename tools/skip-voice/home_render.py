@@ -60,7 +60,8 @@ def draw_mouth(img, scene, who, openv):
     if not m: return
     d = ImageDraw.Draw(img)
     if len(m) == 3:
-        x, y, w = m; h = max(4, w * (0.12 + 0.75 * openv))
+        if cfg.get("rest_mouths") and openv < 0.1: return      # silent: leave the mouth exactly as drawn in the art
+        x, y, w = m; h = min(max(4, w * (0.12 + 0.75 * openv)), w * cfg.get("mouth_max", 1.0))
         d.ellipse([x - w * 0.55, y - h * 0.5, x + w * 0.55, y + h * 0.5], fill=(70, 10, 18), outline=(0, 0, 0), width=6); return
     x, y, w, cw, ch = m
     a = np.asarray(img)
@@ -91,13 +92,17 @@ def caption(img, tt):
     k = min(int(np.searchsorted(wt, tt - starts[i])), len(ws) - 1)
     a0 = (k // 3) * 3; chunk = ws[a0:a0 + 3]; d = ImageDraw.Draw(img)
     txt = " ".join(chunk).upper()
-    while d.textlength(txt, font=POP) > W - 80 and len(chunk) > 1:
-        chunk = chunk[:-1]; txt = " ".join(chunk).upper()
-    xx = (W - d.textlength(txt, font=POP)) / 2
+    POPF = POP
+    if cfg.get("cap_fit"):                      # shrink the type to fit (the old way dropped the last word of a long chunk)
+        while d.textlength(txt, font=POPF) > W - 80 and POPF.size > 48: POPF = ImageFont.truetype(FB, POPF.size - 4)
+    else:
+        while d.textlength(txt, font=POP) > W - 80 and len(chunk) > 1:
+            chunk = chunk[:-1]; txt = " ".join(chunk).upper()
+    xx = (W - d.textlength(txt, font=POPF)) / 2
     for j, w in enumerate(chunk):
         wd = w.upper() + (" " if j < len(chunk) - 1 else "")
-        d.text((xx, CAPY.get(i, cfg.get("cap_y", 1380))), wd, font=POP, fill=(255, 225, 40) if a0 + j == k else (255, 255, 255), stroke_width=9, stroke_fill=(0, 0, 0))
-        xx += d.textlength(wd, font=POP)
+        d.text((xx, CAPY.get(i, cfg.get("cap_y", 1380))), wd, font=POPF, fill=(255, 225, 40) if a0 + j == k else (255, 255, 255), stroke_width=9, stroke_fill=(0, 0, 0))
+        xx += d.textlength(wd, font=POPF)
 
 HOOKW = cfg.get("hook_text", "").split()
 def top(img, tt):

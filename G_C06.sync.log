@@ -1,0 +1,21 @@
+2026-11-26 20:54:17,472 SyncNetInstance INFO: Using device: cpu
+2026-11-26 20:54:17,579 __main__ INFO: Model data/syncnet_v2.model loaded.
+2026-11-26 20:54:17,579 SyncNetInstance INFO: Extracting video frames from ../work/pycrop/G_C06/00000.avi
+2026-11-26 20:54:17,638 SyncNetInstance INFO: Extracting audio from ../work/pycrop/G_C06/00000.avi
+2026-11-26 20:54:17,776 SyncNetInstance WARNING: Audio (4.6080s) and video (4.6800s) lengths are different.
+2026-11-26 20:54:20,819 SyncNetInstance INFO: Compute time 3.043 sec.
+2026-11-26 20:54:20,824 SyncNetInstance INFO: Framewise conf: 
+2026-11-26 20:54:20,824 SyncNetInstance INFO: [ 0.000  0.000  1.595  2.845  4.292  4.292  2.845  1.595  3.520  3.520
+  0.987  0.987  0.987  0.987  0.987  1.325  1.325  1.325  1.325  1.325
+  0.641  0.239  0.187  0.187  0.187  0.187  0.187  1.584  2.393  3.270
+  6.028  6.202  6.258  8.731  8.731  8.932  8.932  8.932  8.731  8.259
+  6.875  6.536  4.934  4.934  4.934  4.934  4.934  5.638  5.803  7.106
+  7.287  7.287  7.388  7.445  7.774  8.440  8.440  7.774  7.774  5.973
+  7.594  5.715  5.601  5.415  4.799  4.659  4.264  2.594  2.594  2.594
+  2.236  1.780  1.780  2.236  2.594  2.895  3.159  3.533  4.423  4.863
+  5.170  5.478  5.478  5.478  5.478  5.478  4.863  4.041  2.998 -1.640
+ -2.011 -2.437 -2.437 -2.437 -2.437 -2.437 -1.959 -1.956 -1.705 -1.705
+ -1.368 -0.999  0.486 -0.083 -0.083  0.475  0.475  0.475  0.475  0.000]
+2026-11-26 20:54:20,824 SyncNetInstance INFO: AV offset: 	1
+2026-11-26 20:54:20,824 SyncNetInstance INFO: Min dist: 	10.604
+2026-11-26 20:54:20,824 SyncNetInstance INFO: Confidence: 	3.090

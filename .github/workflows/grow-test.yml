@@ -1,0 +1,38 @@
+name: grow-test
+# One-off head-to-head runs for the Neil Fin GROW tools (Nov 26 2026). Read-only: results go to the job log,
+# nothing is committed and no secrets are passed to either job.
+on:
+  workflow_dispatch:
+    inputs:
+      topic: {description: "last30days topic", required: false, default: "morning prayer"}
+permissions:
+  contents: read
+jobs:
+  firecrawl-keyless:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - name: Firecrawl keyless scrape test
+        run: python3 tools/grow-test/firecrawl_keyless.py
+  last30days:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Get last30days at the commit we vetted (70c5b3d, MIT)
+        run: |
+          git clone -q https://github.com/mvanhorn/last30days-skill l30
+          cd l30 && git checkout -q 70c5b3d && git log -1 --format='%H %ad %s' --date=short
+          pip install -q yt-dlp
+      - name: Run
+        env:
+          LAST30DAYS_ALLOW_ENGINE_PLAN: "1"
+          TOPIC: ${{ inputs.topic || 'morning prayer' }}
+        run: |
+          cd l30
+          S=$(ls skills/last30days/scripts/last30days.py scripts/last30days.py 2>/dev/null | head -1)
+          echo "script: $S"
+          timeout 900 python3 "$S" "$TOPIC" --auto-resolve --emit md --output out.md 2>&1 | tail -60 || echo "RUN-EXIT $?"
+          echo "===== OUT.MD ($(wc -c < out.md 2>/dev/null || echo 0) bytes) ====="
+          head -c 14000 out.md 2>/dev/null || echo "no out.md"

@@ -852,6 +852,29 @@ def upload_one(yt, job):
     return js.get("id"), when
 
 
+def gate_block(job):
+    """Big Skip only. Returns why the job may not upload, or '' when its gate record passes.
+    Record: tools/yt-push/gate/<video file name>.json = {"voice_gate": "PASS", "qa": "PASS",
+    "qa_report": "<repo path>", "neko_ok": "<date + his words>"}. Written by tools/skip-voice/gate.py;
+    neko_ok is filled in only after Neko has watched that exact file."""
+    if PROFILE != "bigskip":
+        return ""
+    name = os.path.basename(job.get("video_url", ""))
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gate", name + ".json")
+    if not os.path.exists(p):
+        return "no gate record (tools/yt-push/gate/%s.json)" % name
+    try:
+        g = json.load(open(p, encoding="utf-8"))
+    except Exception as e:
+        return "gate record unreadable: %s" % e
+    for k in ("voice_gate", "qa"):
+        if g.get(k) != "PASS":
+            return "%s is %r, not PASS" % (k, g.get(k))
+    if not str(g.get("neko_ok") or "").strip():
+        return "Neko has not OK'd this file"
+    return ""
+
+
 def mode_upload():
     """Uploads queued new videos (tools/yt-push/uploads/<profile>/*.json, one video per file), earliest
     publish time first, at most MAX_UPLOADS_PER_RUN a run (YouTube quota). A video whose exact title is
@@ -894,6 +917,12 @@ def mode_upload():
             else:
                 res["result"] = "already on channel (%s %s); not uploaded again" % (v["privacy"], v["publishAt"] or "")
         else:
+            why = gate_block(job)
+            if why:
+                # SKIP GATE (Neko Nov 26 2026): no Big Skip video uploads without a passed gate record.
+                print("[SKIP GATE] held %s: %s" % (os.path.basename(f), why))
+                failures += 1
+                continue
             if uploaded >= MAX_UPLOADS_PER_RUN:
                 continue
             vid, info = upload_one(yt, job)

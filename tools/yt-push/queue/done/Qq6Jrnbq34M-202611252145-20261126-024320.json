@@ -1,0 +1,33 @@
+{
+ "job": {
+  "video_id": "Qq6Jrnbq34M",
+  "tags": [
+   "psalm 46:1",
+   "psalm 46 1",
+   "god is our refuge and strength",
+   "a very present help in trouble",
+   "morning prayer for today",
+   "short morning prayer for today",
+   "daily prayer for today",
+   "morning devotional prayer for today",
+   "bible verse of the day",
+   "kjv bible verses",
+   "kjv",
+   "blessed prayers"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "Qq6Jrnbq34M",
+   "mode": "apply",
+   "time_utc": "2026-11-26T02:43:01",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Morning Prayer for Today | Psalm 46:1 KJV",
+   "rollback": "reports/yt-push/rollback/Qq6Jrnbq34M-20261126-024301.json"
+  }
+ ]
+}

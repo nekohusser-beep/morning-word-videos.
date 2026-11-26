@@ -1,16 +1,30 @@
 {
- "BaXcP8x1Mp8-202611242150.json": [
+ "Qq6Jrnbq34M-202611252145.json": [
   {
-   "video_id": "BaXcP8x1Mp8",
+   "video_id": "Qq6Jrnbq34M",
    "mode": "apply",
-   "time_utc": "2026-11-25T02:46:58",
+   "time_utc": "2026-11-26T02:43:01",
    "changed": [
     "tags"
    ],
    "skipped": [],
    "errors": [],
-   "live_title": "Good Morning Bible Verse | Joshua 1:9 KJV",
-   "rollback": "reports/yt-push/rollback/BaXcP8x1Mp8-20261125-024658.json"
+   "live_title": "Morning Prayer for Today | Psalm 46:1 KJV",
+   "rollback": "reports/yt-push/rollback/Qq6Jrnbq34M-20261126-024301.json"
+  }
+ ],
+ "WK-pg3uuumg-202611252145.json": [
+  {
+   "video_id": "WK-pg3uuumg",
+   "mode": "apply",
+   "time_utc": "2026-11-26T02:43:11",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Night Prayer Before Sleep | Psalm 37:7 KJV",
+   "rollback": "reports/yt-push/rollback/WK-pg3uuumg-20261126-024311.json"
   }
  ]
 }

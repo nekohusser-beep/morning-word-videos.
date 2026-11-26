@@ -18,8 +18,9 @@ Named API endpoints: 2
  - predict(image, api_name="/lambda") -> upload_the_image_for_editing
     Parameters:
      - [Image] image: dict
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 14s left). Try again in 8:12:29. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 14s left). Try again in 8:12:18. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
+a2 11 black-forest-labs/FLUX.1-Kontext-Dev /tmp/gradio/bde315e25e27f13a7f97718dca096d7f4ddee612b6dd65263d317e158733f67c/image.webp
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 99s left). Try again in 16:24:02. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
+FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 99s left). Try again in 16:23:51. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
 Loaded as API: https://qwen-qwen-image-edit.hf.space
 Client.predict() Usage Info
 ---------------------------
@@ -37,11 +38,6 @@ Named API endpoints: 1
     Returns:
      - [Image] result: dict(path: str | None (Path to a local file), url: str | None (Publicly available url or base64 encoded image), size: int | None (Size of image in bytes), orig_name: str | None (Original filename), mime_type: str | None (mime type of image), is_stream: bool (Can always be set to False), meta: dict(str, Any)) 
      - [Slider] seed: float (numeric value between 0 and 2147483
-FAIL Qwen/Qwen-Image-Edit 0 AppError('The requested GPU duration (240s) is larger than the maximum allowed')
-FAIL Qwen/Qwen-Image-Edit 1 AppError('The requested GPU duration (240s) is larger than the maximum allowed')
-a2 11 None None
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 0 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 14s left). Try again in 8:11:45. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
-FAIL black-forest-labs/FLUX.1-Kontext-Dev 1 AppError('You have exceeded your ZeroGPU quota (105s requested vs. 14s left). Try again in 8:11:34. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens')
 FAIL Qwen/Qwen-Image-Edit 0 AppError('The requested GPU duration (240s) is larger than the maximum allowed')
 FAIL Qwen/Qwen-Image-Edit 1 AppError('The requested GPU duration (240s) is larger than the maximum allowed')
 c_box 11 None None

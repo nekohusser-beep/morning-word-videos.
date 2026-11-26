@@ -31,7 +31,7 @@ jobs:
       - shell: bash
         run: |
           set -e
-          sudo apt-get install -y ffmpeg >/dev/null 2>&1 || true
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true; mkdir -p files
           python3 - <<'PY'
           import json, os, urllib.request, urllib.parse

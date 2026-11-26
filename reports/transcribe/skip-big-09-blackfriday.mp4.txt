@@ -1,0 +1,17 @@
+# adhd/stack/skip-big-09-blackfriday.mp4 lang=en
+  0.00-  2.64 3 a.m. 14 hours in line.
+   words: 3@0.00 a@0.26 .m.@0.50 14@1.28 hours@1.70 in@2.12 line.@2.38
+  3.48-  4.48 That TV is mine.
+   words: That@3.48 TV@3.60 is@3.92 mine.@4.20
+  4.88-  6.42 Dre, you been here since yesterday?
+   words: Dre,@4.88 you@5.34 been@5.52 here@5.68 since@5.78 yesterday?@5.98
+  6.76-  8.74 Since Thanksgiving I left before the pie.
+   words: Since@6.76 Thanksgiving@7.02 I@7.50 left@7.76 before@7.94 the@8.28 pie.@8.42
+  9.72- 10.66 That's sacrifice.
+   words: That's@9.72 sacrifice.@10.20
+ 11.32- 12.96 I got it, $2.99.
+   words: I@11.32 got@11.50 it,@11.72 $2@12.28 .99.@12.42
+ 13.48- 15.80 It's $2.49 online, free shipping.
+   words: It's@13.48 $2@13.72 .49@13.90 online,@14.38 free@15.26 shipping.@15.46
+ 16.50- 18.04 Did they at least have pie online?
+   words: Did@16.50 they@16.82 at@16.98 least@17.10 have@17.24 pie@17.46 online?@17.72

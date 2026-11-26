@@ -27,6 +27,7 @@ jobs:
             if [ -n "$suf" ]; then
               u="https://videos.pexels.com/video-files/$id/$id-$suf.mp4"
               curl -fsSL --retry 2 -A "Mozilla/5.0" -o "raw/$id.mp4" "$u" && got=$u
+              if [ -z "$got" ]; then u="https://videos.pexels.com/video-files/$id/$suf.mp4"; curl -fsSL --retry 2 -A "Mozilla/5.0" -o "raw/$id.mp4" "$u" && got=$u; fi
             fi
             if [ -z "$got" ]; then
               for res in 1920_1080 1366_720 2048_1080 1920_1012 1920_1018 1280_720; do

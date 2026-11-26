@@ -1,0 +1,60 @@
+{
+ "voices": "../voices/ss1126",
+ "lines": "lines.json",
+ "gap": 0.14,
+ "shots": [
+  {
+   "clip": "clips/c1.mp4",
+   "lines": [
+    0
+   ]
+  },
+  {
+   "clip": "clips/c2.mp4",
+   "lines": [
+    1,
+    2
+   ]
+  },
+  {
+   "clip": "clips/c3.mp4",
+   "lines": [
+    3
+   ],
+   "tail": 0.4
+  },
+  {
+   "clip": "clips/c4.mp4",
+   "lines": [
+    4,
+    5
+   ],
+   "tail": 0.6
+  }
+ ],
+ "hook": [
+  [
+   "MY COWORKER"
+  ],
+  [
+   "DREW HIS OWN NAME"
+  ],
+  [
+   "FOR SECRET SANTA"
+  ]
+ ],
+ "labels": [
+  {
+   "shot": 2,
+   "text": [
+    "PARTY DAY"
+   ],
+   "dur": 1.4
+  }
+ ],
+ "end": [
+  "EVERYBODY HAS",
+  "A DRE AT WORK"
+ ],
+ "end_hold": 1.8
+}

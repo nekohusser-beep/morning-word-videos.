@@ -1,0 +1,21 @@
+# adhd/stack/skip-big-10-leftovers.mp4 lang=en
+  0.00-  1.28 2 a.m. Thanksgiving plate?
+   words: 2@0.00 a@0.18 .m.@0.34 Thanksgiving@0.58 plate?@0.80
+  1.68-  2.50 Nobody's gonna know.
+   words: Nobody's@1.68 gonna@2.04 know.@2.18
+  2.82-  3.96 I is, don't.
+   words: I@2.82 is,@3.04 don't.@3.58
+  4.22-  5.68 That's not even a full sentence.
+   words: That's@4.22 not@4.42 even@4.56 a@4.80 full@4.98 sentence.@5.22
+  6.14-  7.62 Legally, that's not binding.
+   words: Legally,@6.14 that's@6.78 not@7.00 binding.@7.16
+  8.10-  8.34 How?
+   words: How?@8.10
+  9.62- 11.70 I've been sitting here since midnight.
+   words: I've@9.62 been@10.16 sitting@10.30 here@10.58 since@10.92 midnight.@11.18
+ 12.22- 12.94 You waited two hours?
+   words: You@12.22 waited@12.38 two@12.48 hours?@12.72
+ 13.24- 14.40 I knew you'd come.
+   words: I@13.24 knew@13.56 you'd@13.86 come.@14.12
+ 15.24- 18.76 I may do your own plate, you just never read.
+   words: I@15.24 may@15.56 do@15.74 your@15.92 own@16.10 plate,@16.26 you@17.16 just@17.32 never@17.66 read.@18.32

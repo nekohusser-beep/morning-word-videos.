@@ -6,6 +6,7 @@
  ],
  "edits": {
   "a_two": "Change only the background and the props. Do not change either person: keep both men, their faces, hair, clothes, positions and poses exactly as they are. New background: outside the dark glass front of a big store at night, with light snow on the ground. Remove the refrigerator, the lockers, the clock and the note. Remove the table and all the food. The seated man on the right now has a grey sleeping bag over his legs and holds a thermos instead of the chicken leg. The standing man on the left now holds a paper coffee cup. No text anywhere.",
-  "b_box": "Do not change either person: keep both men, their faces, hair, clothes and positions exactly as they are, and keep the same night background. Only change the props: the seated man on the right now hugs a large plain white cardboard box on his lap instead of the thermos. The standing man on the left now holds up a smartphone toward him instead of the coffee cup; the phone screen is plain bright green. No text anywhere."
- }
+  "b_box": "Do not change either person: keep both men, their faces, hair, clothes and positions exactly as they are, and keep the same night background. Only change two props. First: the seated man on the right now holds a large plain white cardboard box low on his lap, below his chin, so his whole face and goatee stay fully visible. Second: replace the coffee cup in the standing man's hand with exactly one smartphone with a plain bright green screen, held at chest height toward the seated man; his other arm hangs down empty. Only one phone in the picture. No text anywhere."
+ },
+ "chain_ref": "tools/skip-voice/new-1126/ep-blackfriday/art-free/a_two_11.webp"
 }

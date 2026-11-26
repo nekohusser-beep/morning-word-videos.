@@ -1,0 +1,11 @@
+{
+ "ref": "tools/skip-voice/ep2b/build/breakroom.jpg",
+ "chain_from": "a2",
+ "seeds": [
+  11
+ ],
+ "edits": {
+  "a2": "Do not change either person: keep both men, their faces, hair, clothes, positions and poses exactly as they are. Change only the background and the props. New background: the brightly lit glass front doors and big windows of an electronics store at night, warm yellow light glowing from inside, shelves with televisions visible through the glass, snow on the ground in front. Remove the refrigerator, lockers, clock and note. Remove the table and all the food. The seated man on the right now has a grey sleeping bag over his legs and holds a steel thermos in one hand; his other hand is empty. The standing man on the left has empty hands. Clean faces with no stains. No text anywhere.",
+  "c_box": "Do not change either person: keep both men, their faces, hair, clothes, positions and poses exactly as they are. Keep the same lit store background. Change only one prop: the seated man on the right now holds a large plain white cardboard box low on his lap, below his chin, with both hands, instead of the thermos. His whole face and goatee stay fully visible. The standing man on the left stays exactly the same with empty hands. No phone. No text anywhere."
+ }
+}

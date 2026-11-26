@@ -854,7 +854,7 @@ def upload_one(yt, job):
 
 def gate_block(job):
     """Big Skip only. Returns why the job may not upload, or '' when its gate record passes.
-    Record: tools/yt-push/gate/<video file name>.json = {"voice_gate": "PASS", "qa": "PASS",
+    Record: tools/yt-push/gate/<video file name>.json = {"voice_gate": "PASS", "qa": "PASS", "starhead": "PASS",
     "qa_report": "<repo path>", "neko_ok": "<date + his words>"}. Written by tools/skip-voice/gate.py;
     neko_ok is filled in only after Neko has watched that exact file."""
     if PROFILE != "bigskip":
@@ -867,7 +867,7 @@ def gate_block(job):
         g = json.load(open(p, encoding="utf-8"))
     except Exception as e:
         return "gate record unreadable: %s" % e
-    for k in ("voice_gate", "qa"):
+    for k in ("voice_gate", "qa", "starhead"):      # starhead = his QC verdict (tools/skip-voice/STARHEAD-QC.md), Neko Nov 26 2026
         if g.get(k) != "PASS":
             return "%s is %r, not PASS" % (k, g.get(k))
     if not str(g.get("neko_ok") or "").strip():

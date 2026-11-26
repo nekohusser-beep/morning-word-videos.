@@ -4,5 +4,6 @@
  "voice_gate": "PASS",
  "qa": "PASS",
  "qa_report": "reports/skip-qa/2026-11-26-blackfriday-free-v5.md",
- "neko_ok": ""
+ "neko_ok": "",
+ "starhead": ""
 }

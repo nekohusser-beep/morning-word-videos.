@@ -18,7 +18,7 @@ vg = "PASS" if r.returncode == 0 else "FAIL"
 txt = open(qa, encoding="utf-8").read() if os.path.exists(qa) else ""
 q = "PASS" if "VERDICT: PASS" in txt else "FAIL"
 rec = {"video": os.path.relpath(video, repo), "sha256": hashlib.sha256(open(video, "rb").read()).hexdigest(),
-       "voice_gate": vg, "qa": q, "qa_report": os.path.relpath(qa, repo), "neko_ok": ""}
+       "voice_gate": vg, "qa": q, "starhead": "", "qa_report": os.path.relpath(qa, repo), "neko_ok": ""}
 out = f"{repo}/tools/yt-push/gate/{os.path.basename(video)}.json"
 os.makedirs(os.path.dirname(out), exist_ok=True); json.dump(rec, open(out, "w"), indent=1)
 print(f"voice_gate={vg} qa={q} -> {out}")

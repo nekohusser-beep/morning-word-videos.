@@ -1,7 +1,7 @@
 """Collect SyncNet results (one entry per face track) into res/sync.json, plus each track's face box so tracks can be told apart."""
 import glob, json, os, pickle, re
 out = {}
-for f in sorted(glob.glob('res/*.sync.log')):
+for f in sorted(glob.glob("res/*.sync.log")):
     cid = os.path.basename(f)[:-9]
     t = open(f, errors='ignore').read()
     offs = re.findall(r'AV offset:\s*(-?\d+)', t); dist = re.findall(r'Min dist:\s*([\d.]+)', t); conf = re.findall(r'Confidence:\s*([\d.]+)', t)

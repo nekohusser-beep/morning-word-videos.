@@ -1,0 +1,36 @@
+name: la-fetch-tx
+# Download a bundle of clips (4-byte len + JSON header + blobs) from a URL, unpack, transcribe each clip's audio with word times, push to a branch.
+on:
+  workflow_dispatch:
+    inputs:
+      url: {description: "bundle url", required: true}
+      out: {description: "output branch", required: true}
+      model: {description: "whisper model", required: false, default: "small.en"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q faster-whisper
+      - env: {URL: "${{ inputs.url }}"}
+        run: |
+          mkdir res && curl -fsSL --retry 3 -A "Mozilla/5.0" -o bundle.bin "$URL"
+          python - <<'PY'
+          import json,struct,subprocess
+          from faster_whisper import WhisperModel
+          d=open('bundle.bin','rb').read(); n=struct.unpack('>I',d[:4])[0]; h=json.loads(d[4:4+n]); base=4+n
+          m=WhisperModel("${{ inputs.model }}",device="cpu",compute_type="int8"); out={}
+          for x in h:
+              p=f"res/{x['id']}.mp4"; open(p,'wb').write(d[base+x['off']:base+x['off']+x['size']])
+              try:
+                  segs,_=m.transcribe(p,word_timestamps=True,vad_filter=False)
+                  out[x['id']]=[[w.word.strip(),round(w.start,2),round(w.end,2)] for s in segs for w in s.words]
+              except Exception as e: out[x['id']]=['ERR '+str(e)[:100]]
+              print(x['id'],' '.join(w[0] for w in out[x['id']] if isinstance(w,list)),flush=True)
+          json.dump({'header':h,'words':out},open('res/index.json','w'))
+          PY
+          cd res && git init -q && git checkout -q -b ${{ inputs.out }} && git add -A && git -c user.name=bot -c user.email=actions@users.noreply.github.com commit -qm out && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ${{ inputs.out }}

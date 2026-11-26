@@ -28,15 +28,31 @@ for i in range(NL):
     a, _ = sf.read(f"{tmp}/r.wav")
     nz = np.where(np.abs(a) > 0.01)[0]
     a = a[max(0, nz[0] - (0 if i == 0 else 400)):nz[-1] + 2000]
+    mp = cfg.get("max_pause")                   # optional: shorten any silence inside a line to this many seconds (no dead air mid-line)
+    if mp:
+        q = np.abs(a) > 0.012; idx = np.where(q)[0]; keep = np.ones(len(a), bool)
+        for u, v in zip(idx[:-1], idx[1:]):
+            if (v - u) / SR > mp: keep[u + int(mp * SR / 2):v - int(mp * SR / 2)] = False
+        a = a[keep]
     a = a / (np.max(np.abs(a)) + 1e-9) * 0.85
     starts.append(t); durs.append(len(a) / SR)
     g = GAP.get(i, 1.0 if i in SCENE_LAST else 0.28)
-    parts += [a, np.zeros(int(g * SR))]
+    if cfg.get("frame_align"):                  # next line starts exactly on a frame, so sound and cut land together
+        nxt = math.ceil((t + len(a) / SR + g) * FPS - 1e-6) / FPS; g = nxt - t - len(a) / SR
+    parts += [a, np.zeros(int(round(g * SR)))]
     t += len(a) / SR + g
-END = 2.6
+END = cfg.get("end", 2.6)
 TOTAL = t + END
 raw = np.concatenate(parts + [np.zeros(int(END * SR))])
-wav = f"{tmp}/dialogue.wav"; sf.write(wav, raw, SR)
+out_a = raw
+if cfg.get("bed"):                              # optional room tone under the whole cut, so pauses and the end card are never digital silence
+    rng = np.random.default_rng(7); nz_ = rng.standard_normal(len(raw) + SR)
+    k = np.exp(-np.arange(400) / 60.0); k /= k.sum()                       # soft low-pass: a distant night hum, no hiss
+    tone = np.convolve(nz_, k, mode="same")[:len(raw)]
+    tone = tone / (np.sqrt(np.mean(tone ** 2)) + 1e-9) * cfg["bed"]
+    fade = np.minimum(1, np.minimum(np.arange(len(raw)) / (0.05 * SR), (len(raw) - np.arange(len(raw))) / (0.4 * SR)))
+    out_a = raw + tone * fade
+wav = f"{tmp}/dialogue.wav"; sf.write(wav, out_a, SR)
 hop = SR // FPS; nfr = int(math.ceil(TOTAL * FPS))
 env = np.array([np.sqrt(np.mean(raw[k * hop:(k + 1) * hop] ** 2)) if k * hop < len(raw) else 0 for k in range(nfr)])
 env = env / (np.percentile(env[env > 0.005], 90) + 1e-9)
@@ -107,7 +123,7 @@ def caption(img, tt):
 HOOKW = cfg.get("hook_text", "").split()
 def top(img, tt):
     d = ImageDraw.Draw(img)
-    if tt < cfg.get("hook_end", 3.6) and (HOOKW or cfg.get("hook_cards")):   # hook_end: set it to the first cut so the card never drops a frame early  # hook: bold top-center, swaps every 1.2 s
+    if tt < cfg.get("hook_end", starts[1] - 1e-3 if cfg.get("frame_align") and NL > 1 else 3.6) and (HOOKW or cfg.get("hook_cards")):   # hook_end: set it to the first cut so the card never drops a frame early  # hook: bold top-center, swaps every 1.2 s
         n = min(len(HOOKW), 1 + int(tt / 1.2) * 2)
         hc = cfg.get("hook_cards")                 # optional: whole cards, one per 1.2 s, so every card reads on its own
         ht = hc[min(int(tt / 1.2), len(hc) - 1)] if hc else " ".join(HOOKW[:n][-3:]); hf = HOOK
@@ -139,9 +155,11 @@ def frame(n):
     cw, ch = AW / z, AW / z * (H / W)
     cx = min(max(fx, cw / 2), AW - cw / 2); cy = min(max(AH * cyf, ch / 2), AH - ch / 2)
     img = arts[scene].copy()
+    mg = cfg.get("mouth_gate", 0.0)             # below this level the speaker's mouth stays shut (breaths and pauses inside a line)
     if cfg.get("rest_mouths"):                     # every character with a mouth spec gets the drawn mouth all the time (closed when silent)
         for w2 in MOUTH.get(scene, {}):
-            draw_mouth(img, scene, w2, float(np.clip(env[n] if n < len(env) else 0, 0, 1)) if (i is not None and w2 == who) else 0.0)
+            ov_ = float(np.clip(env[n] if n < len(env) else 0, 0, 1)) if (i is not None and w2 == who) else 0.0
+            draw_mouth(img, scene, w2, ov_ if ov_ >= mg else 0.0)
     elif i is not None: draw_mouth(img, scene, who, float(np.clip(env[n] if n < len(env) else 0, 0, 1)))
     img = img.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BILINEAR)
     if tt > TOTAL - END + 0.3 and cfg.get("end_card"):

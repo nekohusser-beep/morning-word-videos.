@@ -31,7 +31,7 @@ jobs:
           mkdir -p clips res
           for b in ${{ inputs.branches }}; do git fetch -q --depth=1 origin $b && git archive FETCH_HEAD | tar -x -C clips --wildcards '*.mp4' || true; done
           ls -la clips | head -60
-          c=$(ls clips/6f057c25.mp4 2>/dev/null || ls clips/*.mp4 | head -1)
+          c=$(ls clips/44a07f8d.mp4 2>/dev/null || ls clips/*.mp4 | head -1)
           ffmpeg -v error -y -i $c -itsoffset 0.4 -i $c -map 0:v -map 1:a -c:v copy -c:a aac clips/ctl_audio_late_400ms.mp4
           ffmpeg -v error -y -i $c -itsoffset 0.4 -i $c -map 1:v -map 0:a -c:v libx264 -crf 18 -c:a aac clips/ctl_audio_early_400ms.mp4
       - name: run

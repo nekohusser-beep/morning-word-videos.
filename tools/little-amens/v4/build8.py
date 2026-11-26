@@ -20,7 +20,7 @@ lst=[]; t=0; caps=[]
 FIX={'pip.':'Pip!','Ba':'Baa','-ah!':'','-men!':'-men!','-men.':'-men.','Momma!':'Mama!','Hahahaha.':'','Hahahahahaha.':'','Ah,':'Aaah...','ah,':'Aaah...','mmm,':'Mmmm.','Thank.':'Thank...','You.':'you.','he':'He','Say,':'Say...','say,':'say...','men.':'men!','men,':'men.'}
 for lab,cid,a,b in E:
     var='F'; out=f'v3/segH/{lab}.mp4'; a=INFO[lab]['o0']; b=INFO[lab]['o1']
-    dur=float(subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',out],capture_output=True,text=True).stdout)
+    dur=int(subprocess.run(['ffprobe','-v','error','-select_streams','v','-count_packets','-show_entries','stream=nb_read_packets','-of','csv=p=0',out],capture_output=True,text=True).stdout.strip().strip(','))/30
     lst.append(f"file '{os.path.abspath(out)}'")
     # captions: sentence chunks
     ws=[[w[0],max(w[1],a),w[2]] for w in W[cid] if w[2]>a+0.05 and w[1]<b-0.05]
@@ -67,8 +67,20 @@ ass+=f"Dialogue: 1,{ts(0.2)},{ts(3.2)},Title,,0,0,0,,{{\\fad(300,400)}}Little Am
 for a,b,txt,_ in caps: ass+=f"Dialogue: 0,{ts(max(0,a-0.05))},{ts(b)},Word,,0,0,0,,{txt}\n"
 open('v3/caps.ass','w').write(ass); json.dump(caps,open('v3/caps.json','w'))
 for c in caps: print(round(c[0],2),round(c[1],2),c[2])
-subprocess.run(['ffmpeg','-v','error','-y','-f','concat','-safe','0','-i','v3/list.txt','-c','copy','v3/cat.mp4'],check=True)
-subprocess.run(['ffmpeg','-v','error','-y','-i','v3/cat.mp4','-i','bed.wav','-filter_complex',
+import numpy as np, wave
+# exact join: each clip's sound is padded or cut to its own picture length in samples, so nothing drifts across cuts
+# (stream-copy joining let short audio tails pull every later clip's sound early or late: v6 up to 0.12 s, v7 0.19 s)
+segs=[l.split("'")[1] for l in lst]; pcm=[]
+for p in segs:
+    nf=int(subprocess.run(['ffprobe','-v','error','-select_streams','v','-count_packets','-show_entries','stream=nb_read_packets','-of','csv=p=0',p],capture_output=True,text=True).stdout.strip().strip(','))
+    a=np.frombuffer(subprocess.run(['ffmpeg','-v','error','-i',p,'-f','s16le','-ac','2','-ar','48000','-'],capture_output=True).stdout,np.int16).reshape(-1,2)
+    n=int(round(nf*48000/30)); a=a[:n] if len(a)>=n else np.vstack([a,np.zeros((n-len(a),2),np.int16)]); pcm.append(a)
+w=wave.open('v3/cat.wav','wb'); w.setnchannels(2); w.setsampwidth(2); w.setframerate(48000); w.writeframes(np.vstack(pcm).tobytes()); w.close()
+args=[]; fc=''
+for i,p in enumerate(segs): args+=['-i',p]; fc+=f"[{i}:v]setpts=PTS-STARTPTS[v{i}];"
+fc+=''.join(f'[v{i}]' for i in range(len(segs)))+f'concat=n={len(segs)}:v=1:a=0,fps=30[v]'
+subprocess.run(['ffmpeg','-v','error','-y']+args+['-i','v3/cat.wav','-filter_complex',fc,'-map','[v]','-map',f'{len(segs)}:a','-c:v','libx264','-preset','veryfast','-crf','14','-pix_fmt','yuv420p','-c:a','pcm_s16le','v3/cat.mkv'],check=True)
+subprocess.run(['ffmpeg','-v','error','-y','-i','v3/cat.mkv','-i','bed.wav','-filter_complex',
   f"[0:v]ass=v3/caps.ass,fade=t=in:st=0:d=0.5,fade=t=out:st={TOT-1.2:.2f}:d=1.2[v];[1:a]acompressor=threshold=-34dB:ratio=8:attack=5:release=120:makeup=4,dynaudnorm=f=75:g=5:m=10,volume=0.18,afade=t=in:st=0:d=1.5,afade=t=out:st={TOT-2:.2f}:d=2[bed];[0:a][bed]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
-  '-map','[v]','-map','[a]','-t',f'{TOT:.2f}','-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','little-amens-ep1-v7.mp4'],check=True)
+  '-map','[v]','-map','[a]','-t',f'{TOT:.2f}','-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','little-amens-ep1-v8.mp4'],check=True)
 print('TOTAL',TOT)

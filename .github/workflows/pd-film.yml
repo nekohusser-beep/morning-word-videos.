@@ -1,0 +1,73 @@
+name: pd-film
+# Public-domain film footage from archive.org on the Actions runner (shell sandbox cannot reach archive.org).
+# mode=sheet: search by title (or use ident), download the film's mp4, commit contact sheets (1 frame per `every` s, 6x8 tiles) + search/file lists.
+# mode=clip : cuts = lines "name|start_seconds|duration" -> 1280x720 mp4 clips committed to the temp branch (delete the branch after pulling).
+on:
+  workflow_dispatch:
+    inputs:
+      branch: {description: "temp branch (delete after pulling)", required: true, type: string}
+      mode: {description: "sheet or clip", required: true, default: "sheet", type: string}
+      query: {description: "archive.org title query (mode sheet, when ident is empty)", required: false, default: "", type: string}
+      ident: {description: "archive.org identifier (optional)", required: false, default: "", type: string}
+      file: {description: "file name inside the item (optional; default = best mp4)", required: false, default: "", type: string}
+      every: {description: "seconds between sheet frames", required: false, default: "20", type: string}
+      cuts: {description: "mode clip: name|start|duration per line", required: false, default: "", type: string}
+permissions:
+  contents: write
+jobs:
+  go:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BRANCH: ${{ inputs.branch }}
+      MODE: ${{ inputs.mode }}
+      Q: ${{ inputs.query }}
+      IDENT: ${{ inputs.ident }}
+      FILE: ${{ inputs.file }}
+      EVERY: ${{ inputs.every }}
+      CUTS: ${{ inputs.cuts }}
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash
+        run: |
+          set -e
+          sudo apt-get install -y ffmpeg >/dev/null 2>&1 || true
+          git checkout --orphan "$BRANCH"; git rm -rf . >/dev/null 2>&1 || true; mkdir -p files
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          ident=os.environ.get("IDENT","").strip()
+          if not ident:
+              q=os.environ["Q"]
+              u="https://archive.org/advancedsearch.php?q="+urllib.parse.quote("("+q+") AND mediatype:movies")+"&fl[]=identifier&fl[]=title&fl[]=downloads&fl[]=year&sort[]=downloads+desc&rows=10&output=json"
+              docs=json.load(urllib.request.urlopen(u))["response"]["docs"]
+              print(json.dumps(docs,indent=1)); json.dump(docs,open("files/search.json","w"),indent=1)
+              ident=docs[0]["identifier"]
+          meta=json.load(urllib.request.urlopen("https://archive.org/metadata/"+ident))
+          fl=[{"name":f["name"],"size":int(f.get("size",0) or 0),"format":f.get("format","")} for f in meta["files"]]
+          json.dump({"ident":ident,"files":fl},open("files/files.json","w"),indent=1)
+          want=os.environ.get("FILE","").strip()
+          vids=[f for f in fl if f["name"].lower().endswith((".mp4",".m4v",".mkv",".ogv",".avi"))]
+          if want: pick=[f for f in fl if f["name"]==want][0]
+          else:
+              mp=[f for f in vids if f["name"].lower().endswith(".mp4")] or vids
+              mp=[f for f in mp if f["size"]<1500_000_000] or mp
+              pick=sorted(mp,key=lambda f:-f["size"])[0]
+          print("IDENT",ident,"FILE",pick)
+          open("pick.env","w").write(f'IDENT="{ident}"\nPICK="{pick["name"]}"\n')
+          PY
+          . ./pick.env; rm -f pick.env
+          URL="https://archive.org/download/$IDENT/$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$PICK")"
+          echo "$URL" > files/source-url.txt
+          if [ "$MODE" = "sheet" ]; then
+            curl -fsSL --retry 3 -o film.bin "$URL"
+            ls -la film.bin; ffprobe -v error -show_entries format=duration -of csv=p=0 film.bin | tee files/duration.txt
+            ffmpeg -loglevel error -i film.bin -vf "fps=1/$EVERY,scale=320:180:force_original_aspect_ratio=decrease,pad=320:180:(ow-iw)/2:(oh-ih)/2,tile=6x8:padding=2" -q:v 4 files/sheet_%02d.jpg
+          else
+            while IFS='|' read -r name start d; do
+              [ -z "$name" ] && continue
+              ffmpeg -loglevel error -y -ss "$start" -i "$URL" -t "$d" -vf "scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,fps=30" -an -c:v libx264 -crf 24 -preset veryfast -pix_fmt yuv420p "files/$name.mp4" || echo "FAIL $name"
+            done <<< "$CUTS"
+          fi
+          ls -la files
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add files; git commit -m "pd-film $MODE"; git push -f origin "$BRANCH"

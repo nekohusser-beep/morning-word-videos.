@@ -1,0 +1,34 @@
+name: la-lipsync-test
+on:
+  workflow_dispatch:
+    inputs:
+      clip: {description: "clip id", required: true, default: "6528b7b7"}
+      a0: {description: "audio start s", required: true, default: "42"}
+      dur: {description: "seconds", required: true, default: "7.9"}
+      spaces: {description: "space ids, blank = search", required: false, default: ""}
+      out: {description: "output branch", required: true, default: "la-ls-out"}
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && pip install -q gradio_client demucs soundfile
+      - name: stems
+        run: |
+          mkdir -p w res
+          python -m demucs --two-stems vocals -n htdemucs -o w tools/little-amens/audio/song1.mp3
+          cp w/htdemucs/song1/vocals.wav res/vocals.wav; cp w/htdemucs/song1/no_vocals.wav res/no_vocals.wav
+          ffmpeg -v error -y -ss ${{ inputs.a0 }} -t ${{ inputs.dur }} -i res/vocals.wav -ar 16000 -ac 1 w/a.wav
+          ffmpeg -v error -y -i tools/little-amens/clips/${{ inputs.clip }}.mp4 -t ${{ inputs.dur }} -an -r 25 -c:v libx264 -crf 16 -pix_fmt yuv420p w/v.mp4
+      - name: spaces
+        env: {HF_TOKEN: "${{ secrets.HF_TOKEN }}"}
+        run: python tools/little-amens/ls_space.py w/v.mp4 w/a.wav res ${{ inputs.spaces }} 2>&1 | tee res/log.txt || true
+      - name: push
+        if: always()
+        run: |
+          cp w/a.wav w/v.mp4 res/ || true
+          ffmpeg -v error -y -i res/vocals.wav -b:a 192k res/vocals.mp3 && rm res/vocals.wav; ffmpeg -v error -y -i res/no_vocals.wav -b:a 192k res/no_vocals.mp3 && rm res/no_vocals.wav
+          cd res && git init -q && git checkout -q -b ${{ inputs.out }} && git add -A && git -c user.name=bot -c user.email=actions@users.noreply.github.com commit -qm out && git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ${{ inputs.out }}

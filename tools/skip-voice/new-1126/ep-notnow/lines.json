@@ -1,0 +1,37 @@
+[
+ {
+  "kind": "skip",
+  "text": "Dentist at three. It's eleven. That's four hours. That's basically next week.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "Plenty of time.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "Still not now.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "skip",
+  "text": "It's now. It's now-now!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "skip",
+  "text": "See, that one was never now.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ }
+]

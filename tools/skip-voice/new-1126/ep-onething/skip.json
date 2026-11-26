@@ -1,0 +1,23 @@
+[
+ {
+  "kind": "skip",
+  "text": "One thing. Milk. I got it.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "skip",
+  "text": "We live by a lake, Nia. We never use the lake.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "skip",
+  "text": "Got the milk.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ }
+]

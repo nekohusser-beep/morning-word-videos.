@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "dre",
+  "text": "Congrats, man! Wait. Who's gonna do your work?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "dre",
+  "text": "No. I mean who's gonna do MY work? You been doing my work since twenty nineteen.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "dre",
+  "text": "I'll learn the printer! I'll learn the printer!",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "dre",
+  "text": "...He gave me his desk. And his work.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ }
+]

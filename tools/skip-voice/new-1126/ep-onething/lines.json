@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "nia",
+  "text": "Babe, can you grab milk? Just milk. One thing.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 0
+ },
+ {
+  "kind": "skip",
+  "text": "One thing. Milk. I got it.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 1
+ },
+ {
+  "kind": "nia",
+  "text": "Where's the milk?",
+  "para_end": true,
+  "in_line": false,
+  "idx": 2
+ },
+ {
+  "kind": "skip",
+  "text": "We live by a lake, Nia. We never use the lake.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 3
+ },
+ {
+  "kind": "nia",
+  "text": "We live by a retention pond.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 4
+ },
+ {
+  "kind": "skip",
+  "text": "Got the milk.",
+  "para_end": true,
+  "in_line": false,
+  "idx": 5
+ }
+]

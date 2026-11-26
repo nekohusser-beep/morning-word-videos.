@@ -35,7 +35,9 @@ for lab,cid,a,b in E:
         on=ws if inside else (cand[0][0] if cand else ws)
         last[0]=on
         if on<a-0.02 or on>b-0.2: on=max(a,min(on,b-0.3))
-        caps.append([t+on-a, t+max(cur[-1][2],on+0.4)-a, txt, t+dur])
+        cend=t+dur
+        if lab=='C03' and on<2.80: cend=min(cend,t+2.80-a)      # a caption never runs over the cutaway to Lucia
+        caps.append([t+on-a, t+max(cur[-1][2],on+0.4)-a, txt, cend])
     for w in ws:
         word=FIX.get(w[0],w[0])
         if word=='': continue
@@ -81,6 +83,6 @@ for i,p in enumerate(segs): args+=['-i',p]; fc+=f"[{i}:v]setpts=PTS-STARTPTS[v{i
 fc+=''.join(f'[v{i}]' for i in range(len(segs)))+f'concat=n={len(segs)}:v=1:a=0,fps=30[v]'
 subprocess.run(['ffmpeg','-v','error','-y']+args+['-i','v3/cat.wav','-filter_complex',fc,'-map','[v]','-map',f'{len(segs)}:a','-c:v','libx264','-preset','veryfast','-crf','14','-pix_fmt','yuv420p','-c:a','pcm_s16le','v3/cat.mkv'],check=True)
 subprocess.run(['ffmpeg','-v','error','-y','-i','v3/cat.mkv','-i','bed.wav','-filter_complex',
-  f"[0:v]ass=v3/caps.ass,fade=t=in:st=0:d=0.5,fade=t=out:st={TOT-1.2:.2f}:d=1.2[v];[1:a]acompressor=threshold=-34dB:ratio=8:attack=5:release=120:makeup=4,dynaudnorm=f=75:g=5:m=10,volume=0.18,afade=t=in:st=0:d=1.5,afade=t=out:st={TOT-2:.2f}:d=2[bed];[0:a][bed]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]",
-  '-map','[v]','-map','[a]','-t',f'{TOT:.2f}','-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','little-amens-ep1-v8.mp4'],check=True)
+  f"[0:v]noise=alls=2:allf=t,ass=v3/caps.ass,fade=t=in:st=0:d=0.5,fade=t=out:st={TOT-1.2:.2f}:d=1.2[v];[1:a]acompressor=threshold=-34dB:ratio=8:attack=5:release=120:makeup=4,dynaudnorm=f=75:g=5:m=10,volume=0.18,afade=t=in:st=0:d=1.5,afade=t=out:st={TOT-2:.2f}:d=2[bed];[0:a][bed]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-2.5:LRA=11,alimiter=limit=0.75:level=disabled:attack=2:release=40[a]",
+  '-map','[v]','-map','[a]','-t',f'{TOT:.2f}','-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','256k','-movflags','+faststart','little-amens-ep1-v9.mp4'],check=True)
 print('TOTAL',TOT)

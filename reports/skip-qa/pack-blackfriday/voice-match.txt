@@ -1,7 +1,7 @@
 u000 dre  0.804 PASS  Three A.M. Fourteen hours in line. That TV is mine
-u001 skip 0.851 PASS  Dre. You been here since yesterday?
+u001 skip 0.874 PASS  Dre. You been here since yesterday?
 u002 dre  0.841 PASS  Since Thanksgiving. I left before the pie. That's 
-u003 dre  0.818 PASS  I got it! Two ninety-nine!
-u004 skip 0.900 PASS  It's two forty-nine online. Free shipping.
+u003 dre  0.786 PASS  I got it! Two ninety-nine!
+u004 skip 0.858 PASS  It's two forty-nine online. Free shipping.
 u005 dre  0.804 PASS  Did they at least have pie online?
 FAILS: 0

@@ -1,10 +1,1 @@
-silence_start: 7.73798
-silence_duration: 1.08621
-silence_start: 10.0305
-silence_duration: 1.02302
-silence_start: 13.0317
-silence_duration: 0.626984
-silence_start: 16.1666
-silence_duration: 1.13222
-silence_start: 18.9418
-silence_duration: 3.6512
+silence_start: 20.9109	silence_end: 21.1766

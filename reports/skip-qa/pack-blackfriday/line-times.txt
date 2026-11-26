@@ -1,0 +1,8 @@
+Every line starts exactly on a frame, and the picture cuts on that same frame.
+line 0 dre  starts  0.000s (frame 0) speech ends  3.333s  pause after 0.47s  | Three A.M. Fourteen hours in line. That TV is mine.
+line 1 skip starts  3.800s (frame 114) speech ends  5.870s  pause after 0.33s  | Dre. You been here since yesterday?
+line 2 dre  starts  6.200s (frame 186) speech ends  9.805s  pause after 0.53s  | Since Thanksgiving. I left before the pie. That's sacrifice.
+line 3 dre  starts 10.333s (frame 310) speech ends 12.688s  pause after 0.51s  | I got it! Two ninety-nine!
+line 4 skip starts 13.200s (frame 396) speech ends 15.666s  pause after 0.60s  | It's two forty-nine online. Free shipping.
+line 5 dre  starts 16.267s (frame 488) speech ends 17.949s  pause after 1.02s  | Did they at least have pie online?
+end card from 19.27s, video ends 21.17s

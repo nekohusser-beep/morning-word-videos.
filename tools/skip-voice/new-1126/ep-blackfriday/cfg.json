@@ -149,7 +149,7 @@
  "mouth_max": 0.6,
  "frame_align": true,
  "end": 2.2,
- "bed": 0.012,
+ "bed": 0.006,
  "mouth_gate": 0.16,
  "max_pause": 0.35
 }

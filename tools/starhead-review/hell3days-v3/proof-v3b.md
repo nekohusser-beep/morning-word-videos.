@@ -1,5 +1,5 @@
-# PROOF PACK for final_v3.mp4
-built Nov 27 2026 02:24 PM ET | sha256 3f1687904c8333b3... | 21573975 bytes
+# PROOF PACK for final_v3b.mp4
+built Nov 27 2026 02:43 PM ET | sha256 2eb09d58dfc5df2f... | 20614058 bytes
 
 | # | Check | Result |
 |---|---|---|
@@ -17,7 +17,7 @@ built Nov 27 2026 02:24 PM ET | sha256 3f1687904c8333b3... | 21573975 bytes
 ## Raw evidence
 ### 1. FILE (has video and audio, vertical, longer than 1s): PASS
 ```
-duration 54.99s | video h264 1080x1920 | audio aac 48000 Hz
+duration 55.00s | video h264 1080x1920 | audio aac 48000 Hz
 ```
 ### 2. LOUDNESS (-14 LUFS +/-2, true peak at or under -1 dB): PASS
 ```
@@ -33,7 +33,7 @@ none found (silencedetect -50 dB, 1 s). A voice dropout under a music bed is NOT
 ```
 ### 5. FRAMES (first, quarter, middle, three-quarter, last saved for the reviewer to LOOK at): PASS
 ```
-5/5 frames in /tmp/work/build/proof_v3/frames; contact sheet /tmp/work/build/proof_v3/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
+5/5 frames in proof_v3b/frames; contact sheet proof_v3b/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
 ```
 ### 6. BANNED PHRASES (tools/humanize/gate.py on the script): PASS
 ```

@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 98:4",
+ "kjv": "Make a joyful noise unto the LORD, all the earth: make a loud noise, and rejoice, and sing praise.",
+ "audio_bible": "https://www.youtube.com/watch?v=9omyQM3ULPU",
+ "audio_range": "79–104",
+ "lines": [
+  {
+   "say": "Two nights before Christmas. End the day with this one.",
+   "big": "Two nights before Christmas",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Make a joyful noise unto the LORD, all the earth:",
+   "big": "Make a joyful noise unto the LORD, all the earth:",
+   "small": "",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "make a loud noise, and rejoice, and sing praise. Psalm ninety eight, verse four.",
+   "big": "make a loud noise, and rejoice, and sing praise.",
+   "small": "Psalm 98:4 (KJV)",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Joy to the World was written from this psalm. Let it be your last song tonight.",
+   "big": "Joy to the World was written from this psalm. Let it be your last song tonight.",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, thank you for coming into the world. Fill my heart with joy tonight. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 79 through 104, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 79–104, read slowly. Link in the description.",
+   "clip": "n-ocean1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

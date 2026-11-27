@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 50:15",
+ "kjv": "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me.",
+ "audio_bible": "https://www.youtube.com/watch?v=enLUGzduXXE",
+ "audio_range": "32–56",
+ "lines": [
+  {
+   "say": "Trouble on your mind tonight? Read this before bed.",
+   "big": "Trouble on your mind tonight",
+   "small": "",
+   "clip": "n-candle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me. Psalm fifty, verse fifteen.",
+   "big": "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me.",
+   "small": "Psalm 50:15 (KJV)",
+   "clip": "n-ocean0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "He didn't say figure it out. He said call on me.",
+   "big": "He didn't say figure it out. He said call on me.",
+   "small": "",
+   "clip": "n-stars1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I'm calling on you tonight. Deliver me, and I'll give you the glory. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 32 through 56, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 32–56, read slowly. Link in the description.",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  }
+ ]
+}

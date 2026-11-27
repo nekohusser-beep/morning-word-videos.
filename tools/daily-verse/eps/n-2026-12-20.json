@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 127:1",
+ "kjv": "Except the LORD build the house, they labour in vain that build it: except the LORD keep the city, the watchman waketh but in vain.",
+ "audio_bible": "https://www.youtube.com/watch?v=2V6mjKBs0yo",
+ "audio_range": "125–150",
+ "lines": [
+  {
+   "say": "Been holding it all together by yourself? Hear this tonight.",
+   "big": "Been holding it all together by yourself",
+   "small": "",
+   "clip": "n-ocean0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Except the LORD build the house, they labour in vain that build it:",
+   "big": "Except the LORD build the house, they labour in vain that build it:",
+   "small": "",
+   "clip": "n-stars1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "except the LORD keep the city, the watchman waketh but in vain. Psalm one twenty seven, verse one.",
+   "big": "except the LORD keep the city, the watchman waketh but in vain.",
+   "small": "Psalm 127:1 (KJV)",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "You can stop guarding everything. Let him keep watch tonight.",
+   "big": "You can stop guarding everything. Let him keep watch tonight.",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, build my house and keep watch over it tonight. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 125 through 150, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 125–150, read slowly. Link in the description.",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

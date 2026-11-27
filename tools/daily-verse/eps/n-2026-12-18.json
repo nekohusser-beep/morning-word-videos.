@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 46:10",
+ "kjv": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+ "audio_bible": "https://www.youtube.com/watch?v=enLUGzduXXE",
+ "audio_range": "32–56",
+ "lines": [
+  {
+   "say": "Mind still racing tonight? Hear this.",
+   "big": "Mind still racing tonight",
+   "small": "",
+   "clip": "n-stars0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Be still, and know that I am God:",
+   "big": "Be still, and know that I am God:",
+   "small": "",
+   "clip": "n-candle0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "I will be exalted among the heathen, I will be exalted in the earth. Psalm forty six, verse ten.",
+   "big": "I will be exalted among the heathen, I will be exalted in the earth.",
+   "small": "Psalm 46:10 (KJV)",
+   "clip": "n-ocean0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Still doesn't mean you quit. It means you let him be God for the night.",
+   "big": "Still doesn't mean you quit. It means you let him be God for the night.",
+   "small": "",
+   "clip": "n-stars1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I'm being still tonight. You are God, and I'm not. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 32 through 56, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 32–56, read slowly. Link in the description.",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  }
+ ]
+}

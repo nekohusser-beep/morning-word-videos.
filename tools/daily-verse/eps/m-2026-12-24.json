@@ -1,0 +1,49 @@
+{
+ "brand": "BLESSED MORNING",
+ "ref": "Matthew 1:21",
+ "kjv": "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins.",
+ "lines": [
+  {
+   "say": "Good morning. It's Christmas Eve. Here's why the name matters.",
+   "big": "Good morning.",
+   "small": "It's Christmas Eve. Here's why the name matters.",
+   "clip": "m-birds2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "And she shall bring forth a son, and thou shalt call his name JESUS:",
+   "big": "And she shall bring forth a son, and thou shalt call his name JESUS:",
+   "small": "",
+   "clip": "m-birds0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "for he shall save his people from their sins. Matthew one, verse twenty one.",
+   "big": "for he shall save his people from their sins.",
+   "small": "Matthew 1:21 (KJV)",
+   "clip": "m-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "His name tells you what he came to do. He came to save.",
+   "big": "His name tells you what he came to do. He came to save.",
+   "small": "",
+   "clip": "m-water1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord Jesus, thank you for coming to save me. I'm yours today. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "m-forest1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Have a blessed day. Type amen, and send this to somebody starting their day.",
+   "big": "Have a blessed day.",
+   "small": "Type amen, and send this to somebody starting their day",
+   "clip": "m-eagle0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

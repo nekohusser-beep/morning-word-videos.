@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 85:8",
+ "kjv": "I will hear what God the LORD will speak: for he will speak peace unto his people, and to his saints: but let them not turn again to folly.",
+ "audio_bible": "https://www.youtube.com/watch?v=9omyQM3ULPU",
+ "audio_range": "79–104",
+ "lines": [
+  {
+   "say": "Too much noise in your head tonight? Hear this.",
+   "big": "Too much noise in your head tonight",
+   "small": "",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "I will hear what God the LORD will speak: for he will speak peace unto his people,",
+   "big": "I will hear what God the LORD will speak: for he will speak peace unto his people,",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "and to his saints: but let them not turn again to folly. Psalm eighty five, verse eight.",
+   "big": "and to his saints: but let them not turn again to folly.",
+   "small": "Psalm 85:8 (KJV)",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Turn the noise down and listen. He speaks peace to his people.",
+   "big": "Turn the noise down and listen. He speaks peace to his people.",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, speak peace to me tonight. I'm listening. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 79 through 104, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 79–104, read slowly. Link in the description.",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

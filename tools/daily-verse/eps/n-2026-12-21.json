@@ -1,0 +1,45 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 121:7",
+ "kjv": "The LORD shall preserve thee from all evil: he shall preserve thy soul.",
+ "audio_bible": "https://www.youtube.com/watch?v=JJQjAr3xG0g",
+ "audio_range": "105–124",
+ "lines": [
+  {
+   "say": "Before you close your eyes, hear this over your house.",
+   "big": "Before you close your eyes, hear this over your house",
+   "small": "",
+   "clip": "n-stars1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "The LORD shall preserve thee from all evil: he shall preserve thy soul. Psalm one twenty one, verse seven.",
+   "big": "The LORD shall preserve thee from all evil: he shall preserve thy soul.",
+   "small": "Psalm 121:7 (KJV)",
+   "clip": "n-moon0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "All evil. Not some of it. He keeps your soul tonight.",
+   "big": "All evil. Not some of it. He keeps your soul tonight.",
+   "small": "",
+   "clip": "n-moon2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, preserve me and my family tonight from all evil. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 105 through 124, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 105–124, read slowly. Link in the description.",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

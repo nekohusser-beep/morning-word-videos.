@@ -1,0 +1,52 @@
+{
+ "brand": "REST IN THE WORD",
+ "speed": 0.9,
+ "ref": "Psalms 130:5-6",
+ "kjv": "I wait for the LORD, my soul doth wait, and in his word do I hope. My soul waiteth for the Lord more than they that watch for the morning: I say, more than they that watch for the morning.",
+ "audio_bible": "https://www.youtube.com/watch?v=2V6mjKBs0yo",
+ "audio_range": "125–150",
+ "lines": [
+  {
+   "say": "It's Christmas Eve. Waiting on something tonight? This is for you.",
+   "big": "It's Christmas Eve",
+   "small": "",
+   "clip": "n-stars2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "I wait for the LORD, my soul doth wait, and in his word do I hope. My soul waiteth for the Lord more than they that watch for the morning:",
+   "big": "I wait for the LORD, my soul doth wait, and in his word do I hope. My soul waiteth for the Lord more than they that watch for the morning:",
+   "small": "",
+   "clip": "n-candle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "I say, more than they that watch for the morning. Psalm one thirty, verses five and six.",
+   "big": "I say, more than they that watch for the morning.",
+   "small": "Psalm 130:5-6 (KJV)",
+   "clip": "n-moon1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "The watchmen waited all night for morning. Morning always came. So did he.",
+   "big": "The watchmen waited all night for morning. Morning always came. So did he.",
+   "small": "",
+   "clip": "n-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, I'm waiting on you tonight. Thank you for keeping every promise. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "n-ocean1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Want the Word playing while you sleep? Psalms 125 through 150, read slowly, is on our channel. The link is in the description.",
+   "big": "Fall asleep to the Word",
+   "small": "Psalms 125–150, read slowly. Link in the description.",
+   "clip": "n-stars0.mp4",
+   "ss": 0.5
+  }
+ ]
+}

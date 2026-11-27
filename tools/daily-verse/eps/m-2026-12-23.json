@@ -1,0 +1,49 @@
+{
+ "brand": "BLESSED MORNING",
+ "ref": "Luke 2:10-11",
+ "kjv": "And the angel said unto them, Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people. For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+ "lines": [
+  {
+   "say": "Good morning. Holidays feel heavy this year? Hear what the angel said.",
+   "big": "Good morning.",
+   "small": "Holidays feel heavy this year? Hear what the angel said.",
+   "clip": "m-eagle1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "And the angel said unto them, Fear not: for, behold, I bring you good tidings of great joy,",
+   "big": "And the angel said unto them, Fear not: for, behold, I bring you good tidings of great joy,",
+   "small": "",
+   "clip": "m-birds2.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "which shall be to all people. For unto you is born this day in the city of David a Saviour, which is Christ the Lord. Luke two, verses ten and eleven.",
+   "big": "which shall be to all people. For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+   "small": "Luke 2:10-11 (KJV)",
+   "clip": "m-birds0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "The first Christmas news started with fear not. It still does.",
+   "big": "The first Christmas news started with fear not. It still does.",
+   "small": "",
+   "clip": "m-lake0.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Lord, thank you for the good tidings. Give me your joy today. In Jesus' name, amen.",
+   "big": "In Jesus' name, amen.",
+   "small": "",
+   "clip": "m-water1.mp4",
+   "ss": 0.5
+  },
+  {
+   "say": "Have a blessed day. Type amen, and send this to somebody starting their day.",
+   "big": "Have a blessed day.",
+   "small": "Type amen, and send this to somebody starting their day",
+   "clip": "m-forest1.mp4",
+   "ss": 0.5
+  }
+ ]
+}

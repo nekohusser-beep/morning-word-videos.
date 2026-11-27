@@ -1,0 +1,5 @@
+profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
+moved What Did Jesus Do in Hell for 3 Days? Psalm 16:10 2026-11-28 00:30:00 -> 2026-11-27 23:00:00
+2026-11-27-hell3days-short-v3b.json -> mCmD8tiJXec uploaded; goes public 2026-11-27T23:00:00Z 
+
+SUMMARY upload profile=bp done=1 failed=0 still queued=0

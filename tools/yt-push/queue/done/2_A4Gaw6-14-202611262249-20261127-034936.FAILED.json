@@ -1,0 +1,27 @@
+{
+ "job": {
+  "video_id": "2_A4Gaw6-14",
+  "captions_file": "tools/yt-push/captions/tg-long.srt",
+  "captions_lang": "en",
+  "captions_name": "English",
+  "thumbnail_file": "tools/yt-push/thumbs/tg-long-B.jpg",
+  "default_language": "en"
+ },
+ "results": [
+  {
+   "video_id": "2_A4Gaw6-14",
+   "mode": "apply",
+   "time_utc": "2026-11-27T03:49:31",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [
+    "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
+   ],
+   "live_title": "He Healed Ten Lepers. Only One Said Thank You."
+  }
+ ]
+}

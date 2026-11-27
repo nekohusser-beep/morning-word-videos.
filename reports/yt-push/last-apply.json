@@ -1,16 +1,33 @@
 {
- "V5n89Tl4CD4-202611262150.json": [
+ "2_A4Gaw6-14-202611262249.json": [
   {
-   "video_id": "V5n89Tl4CD4",
+   "video_id": "2_A4Gaw6-14",
    "mode": "apply",
-   "time_utc": "2026-11-27T02:45:51",
+   "time_utc": "2026-11-27T03:49:31",
    "changed": [
-    "tags"
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [
+    "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
+   ],
+   "live_title": "He Healed Ten Lepers. Only One Said Thank You."
+  }
+ ],
+ "Ov-vzSRRF1A-202611262249.json": [
+  {
+   "video_id": "Ov-vzSRRF1A",
+   "mode": "apply",
+   "time_utc": "2026-11-27T03:49:34",
+   "changed": [
+    "description"
    ],
    "skipped": [],
    "errors": [],
-   "live_title": "Good Morning Bible Verse | Proverbs 3:5-6 KJV",
-   "rollback": "reports/yt-push/rollback/V5n89Tl4CD4-20261127-024551.json"
+   "live_title": "He Healed Ten Lepers. Where Are the Nine?",
+   "rollback": "reports/yt-push/rollback/Ov-vzSRRF1A-20261127-034935.json"
   }
  ]
 }

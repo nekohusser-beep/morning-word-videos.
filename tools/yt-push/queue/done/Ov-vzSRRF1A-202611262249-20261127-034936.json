@@ -1,0 +1,21 @@
+{
+ "job": {
+  "video_id": "Ov-vzSRRF1A",
+  "description": "Full Thanksgiving Word: https://youtu.be/2_A4Gaw6-14\n\nTen lepers were healed on the same road, and only one came back to say thank you. Luke 17:17 asks where the nine are. Today, say thank you out loud, and make it specific.\n\nLuke 17:17: \"And Jesus answering said, Were there not ten cleansed? but where are the nine?\"\nPsalm 107:1: \"O give thanks unto the LORD, for he is good: for his mercy endureth for ever.\"\n\nType amen below. The narration voice is AI-generated and the footage is licensed stock.\n\n#TenLepers #Thanksgiving #Luke17 #KJV #Shorts",
+  "default_language": "en"
+ },
+ "results": [
+  {
+   "video_id": "Ov-vzSRRF1A",
+   "mode": "apply",
+   "time_utc": "2026-11-27T03:49:34",
+   "changed": [
+    "description"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "He Healed Ten Lepers. Where Are the Nine?",
+   "rollback": "reports/yt-push/rollback/Ov-vzSRRF1A-20261127-034935.json"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "job": {
+  "video_id": "84hF0oYJDA4",
+  "thumbnail_file": "tools/yt-push/thumbs/84hF0oYJDA4-20261127-141859.jpg"
+ },
+ "results": [
+  {
+   "video_id": "84hF0oYJDA4",
+   "mode": "apply",
+   "time_utc": "2026-11-27T19:19:14",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "What Did Jesus Do in Hell for 3 Days? Psalm 16:10"
+  }
+ ]
+}

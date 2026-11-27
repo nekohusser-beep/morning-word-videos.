@@ -1,0 +1,35 @@
+{
+ "job": {
+  "video_id": "V5n89Tl4CD4",
+  "tags": [
+   "proverbs 3:5-6",
+   "proverbs 3 5 6",
+   "proverbs 3 5-6 kjv",
+   "trust in the lord with all thine heart",
+   "trust in the lord with all your heart",
+   "lean not unto thine own understanding",
+   "he shall direct thy paths",
+   "good morning bible verse",
+   "good morning bible verses",
+   "morning bible verses and prayers",
+   "bible verse of the day",
+   "kjv bible verses",
+   "kjv",
+   "blessed prayers"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "V5n89Tl4CD4",
+   "mode": "apply",
+   "time_utc": "2026-11-27T02:45:51",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Good Morning Bible Verse | Proverbs 3:5-6 KJV",
+   "rollback": "reports/yt-push/rollback/V5n89Tl4CD4-20261127-024551.json"
+  }
+ ]
+}

@@ -1,44 +1,16 @@
 {
- "43ozrzEI_lA-descfix-20261126.json": [
-  {
-   "video_id": "43ozrzEI_lA",
-   "mode": "apply",
-   "time_utc": "2026-11-26T10:39:41",
-   "changed": [
-    "description"
-   ],
-   "skipped": [],
-   "errors": [],
-   "live_title": "Good Morning Bible Verse | Isaiah 40:31 KJV",
-   "rollback": "reports/yt-push/rollback/43ozrzEI_lA-20261126-103941.json"
-  }
- ],
- "BaXcP8x1Mp8-descfix-20261126.json": [
-  {
-   "video_id": "BaXcP8x1Mp8",
-   "mode": "apply",
-   "time_utc": "2026-11-26T10:39:50",
-   "changed": [
-    "description"
-   ],
-   "skipped": [],
-   "errors": [],
-   "live_title": "Good Morning Bible Verse | Joshua 1:9 KJV",
-   "rollback": "reports/yt-push/rollback/BaXcP8x1Mp8-20261126-103950.json"
-  }
- ],
- "V5n89Tl4CD4-descfix-20261126.json": [
+ "V5n89Tl4CD4-202611262150.json": [
   {
    "video_id": "V5n89Tl4CD4",
    "mode": "apply",
-   "time_utc": "2026-11-26T10:39:59",
+   "time_utc": "2026-11-27T02:45:51",
    "changed": [
-    "description"
+    "tags"
    ],
    "skipped": [],
    "errors": [],
    "live_title": "Good Morning Bible Verse | Proverbs 3:5-6 KJV",
-   "rollback": "reports/yt-push/rollback/V5n89Tl4CD4-20261126-104000.json"
+   "rollback": "reports/yt-push/rollback/V5n89Tl4CD4-20261127-024551.json"
   }
  ]
 }

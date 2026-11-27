@@ -1,17 +1,17 @@
 {
- "84hF0oYJDA4-20261127-141859.json": [
+ "84hF0oYJDA4-retire-v2-20261127.json": [
   {
    "video_id": "84hF0oYJDA4",
    "mode": "apply",
-   "time_utc": "2026-11-27T19:19:14",
+   "time_utc": "2026-11-27T20:09:55",
    "changed": [
-    "thumbnail"
+    "title",
+    "privacy -> private, schedule cleared"
    ],
-   "skipped": [
-    "metadata already matches"
-   ],
+   "skipped": [],
    "errors": [],
-   "live_title": "What Did Jesus Do in Hell for 3 Days? Psalm 16:10"
+   "live_title": "What Did Jesus Do in Hell for 3 Days? Psalm 16:10",
+   "rollback": "reports/yt-push/rollback/84hF0oYJDA4-20261127-200955.json"
   }
  ]
 }

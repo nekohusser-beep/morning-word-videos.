@@ -1,0 +1,32 @@
+=== KEYWORDS: what did jesus do in hell ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+what did jesus do in hell              | 39 low       |  203.9K |   20.9K |   0% |   0%
+what did jesus do in hell for 3 days   | 39 low       |  233.3K |    7.8K |   0% |   0%
+what did jesus do in hell before he ro | 39 low       |  273.2K |   32.4K |  10% |   0%
+what did jesus do in hell for 3 days c | 32 low       |  128.4K |      6K |   0% |   0%
+what did christ do in hell for 3 days  | 38 low       |  324.8K |   33.2K |   0% |   0%
+what was jesus doing in hell for 3 day | 40 medium    |  280.9K |    8.1K |   0% |   0%
+what was jesus doing in hell           | 36 low       |  111.9K |    5.8K |   0% |   0%
+MATCHING (5): what did jesus do in hell for 3 days | what did jesus do in hell before he rose from the dead | what did jesus do in hell for 3 days catholic | what did jesus do when he descended into hell | what did jesus do when he went to hell
+QUESTIONS (8): what did jesus do in hell for 3 days | what did jesus do in hell before he rose from the dead | what did jesus do in hell for 3 days catholic | what did christ do in hell for 3 days | what was jesus doing in hell for 3 days | what was jesus doing in hell | what did jesus do when he descended into hell | what did jesus do when he went to hell
+RELATED (0): 
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: jesus in hell three days ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+jesus in hell three days               | 40 medium    |  233.3K |   33.1K |  10% |   0%
+jesus in hell for 3 days               | 41 medium    |  280.9K |   33.8K |  10% |   0%
+was jesus in hell for three days       | 39 low       |  233.3K |    7.7K |  10% |   0%
+why jesus spent three days in hell     | 22 low       |  146.7K |    9.6K |   0% |  20%
+what did jesus do in hell for 3 days   | 39 low       |  233.2K |    7.8K |   0% |   0%
+did jesus believe in hell              | 41 medium    |   72.8K |    4.2K |  40% |  10%
+MATCHING (2): was jesus in hell for three days | why jesus spent three days in hell
+QUESTIONS (3): why jesus spent three days in hell | what did jesus do in hell for 3 days | did jesus believe in hell
+RELATED (1): jesus in hell for 3 days
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}
+=== KEYWORDS: psalm 16:10 ===
+keyword | competition | top-10 median views | views/day landing on top 10 | titles using it | weak spots
+psalm 16:10                            | 20 low       |     505 |     318 |  60% |  70%
+MATCHING (0): 
+QUESTIONS (0): 
+RELATED (0): 
+TRENDS FROM RUNNER: {"ok": false, "why": "HTTP Error 429: unknown"}

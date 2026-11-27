@@ -1,12 +1,12 @@
 {
- "made_utc": "2026-11-27T03:54:01.006426Z",
+ "made_utc": "2026-11-27T04:28:50.963065Z",
  "videos": [
   {
    "id": "Ov-vzSRRF1A",
    "title": "He Healed Ten Lepers. Where Are the Nine?",
-   "published_utc": "2026-11-27T03:48:54Z",
-   "publish_at_utc": "2026-11-27T04:26:00Z",
-   "privacy": "private",
+   "published_utc": "2026-11-27T04:26:32Z",
+   "publish_at_utc": null,
+   "privacy": "public",
    "kind": "short",
    "seconds": 60,
    "categoryId": "22",
@@ -16,9 +16,9 @@
   {
    "id": "2_A4Gaw6-14",
    "title": "He Healed Ten Lepers. Only One Said Thank You.",
-   "published_utc": "2026-11-27T03:48:49Z",
-   "publish_at_utc": "2026-11-27T04:24:00Z",
-   "privacy": "private",
+   "published_utc": "2026-11-27T04:24:12Z",
+   "publish_at_utc": null,
+   "privacy": "public",
    "kind": "long",
    "seconds": 611,
    "categoryId": "22",

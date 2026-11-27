@@ -350,7 +350,7 @@ def resolve_job(job):
         except Exception as e:
             problems.append("pack unreadable: %s" % e)
     for k in ("title", "description", "tags", "category_id", "default_language",
-              "localized_titles", "playlist_ids", "playlist_names", "comment", "captions_file", "captions_lang", "captions_name", "thumbnail_file", "privacy"):
+              "localized_titles", "playlist_ids", "playlist_names", "comment", "captions_file", "captions_lang", "captions_name", "thumbnail_file", "privacy", "publish_at_utc"):
         if job.get(k) not in (None, "", [], {}):
             want[k] = job[k]
     if "title" in want:
@@ -569,6 +569,48 @@ def run_job(yt, job, mode):
                         print("  APPLIED + verified: private, no schedule")
                     else:
                         res["errors"].append("privacy saved but YouTube still shows %s %s" % (chk.get("privacyStatus"), chk.get("publishAt")))
+
+    # reschedule (Nov 27 2026): set the public-at time of a video that is private or already scheduled (future times only).
+    if want.get("publish_at_utc") and mode == "apply":
+        try:
+            when = _utc(want["publish_at_utc"])
+            ok_time = when > dt.datetime.now(dt.timezone.utc).replace(tzinfo=None) + dt.timedelta(minutes=10)
+        except Exception:
+            ok_time = False
+        cur, err = read_video(yt, vid)
+        if not ok_time:
+            res["errors"].append("publish_at_utc must be a valid time at least 10 minutes ahead")
+        elif err:
+            res["errors"].append("reschedule read failed: " + err)
+        else:
+            st_live = cur.get("status", {})
+            want_str = when.strftime("%Y-%m-%dT%H:%M:00")
+            if st_live.get("privacyStatus") == "public":
+                res["errors"].append("reschedule refused: the video is already public")
+            elif (st_live.get("publishAt") or "").startswith(want_str):
+                res["skipped"].append("already scheduled for " + want_str + "Z")
+            else:
+                if "rollback" not in res:
+                    res["rollback"] = save_rollback(vid, cur)
+                new_st = {k: v for k, v in st_live.items() if k != "publishedAt"}
+                new_st["privacyStatus"] = "private"
+                new_st["publishAt"] = want_str + ".000Z"
+                st, js = yt.send("PUT", "videos", {"part": "status"}, {"id": vid, "status": new_st})
+                if st != 200:
+                    res["errors"].append("reschedule: %s %s" % (st, str(js)[:200]))
+                else:
+                    chk = {}
+                    for wait in (0, 6, 15):
+                        time.sleep(wait)
+                        again, err2 = read_video(yt, vid)
+                        chk = (again or {}).get("status", {}) if not err2 else {}
+                        if (chk.get("publishAt") or "").startswith(want_str):
+                            break
+                    if (chk.get("publishAt") or "").startswith(want_str):
+                        res["changed"].append("scheduled for %sZ" % want_str)
+                        print("  APPLIED + verified: scheduled for %sZ" % want_str)
+                    else:
+                        res["errors"].append("reschedule saved but YouTube shows %s %s" % (chk.get("privacyStatus"), chk.get("publishAt")))
 
     # playlists
     names = want.get("playlist_names") or job.get("playlist_names") or []

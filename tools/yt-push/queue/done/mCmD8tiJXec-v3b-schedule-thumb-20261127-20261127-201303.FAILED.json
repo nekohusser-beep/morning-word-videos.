@@ -1,0 +1,20 @@
+{
+ "job": {
+  "video_id": "mCmD8tiJXec",
+  "publish_at_utc": "2026-11-28T00:30:00Z",
+  "thumbnail_file": "tools/starhead-review/hell3days-v3/thumb.jpg",
+  "note": "v3b for tonight. Upload reslotted it to 6 PM ET; Blessed Prayers posts at 7:30 PM ET (00:30Z). Thumbnail: HELL 3 DAYS + keys, IQ Vid thumb score 94."
+ },
+ "results": [
+  {
+   "video_id": "mCmD8tiJXec",
+   "mode": "apply",
+   "time_utc": "2026-11-27T20:13:02",
+   "changed": [],
+   "skipped": [],
+   "errors": [
+    "thumbnail not found: tools/starhead-review/hell3days-v3/thumb.jpg"
+   ]
+  }
+ ]
+}

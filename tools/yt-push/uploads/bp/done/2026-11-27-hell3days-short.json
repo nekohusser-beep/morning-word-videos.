@@ -20,5 +20,10 @@
  "publish_at_utc": "2026-11-28T00:30:00Z",
  "made_for_kids": false,
  "synthetic": true,
- "iqvid_source": "reports/iqvid/run-46052722944.txt (what did jesus do in hell for 3 days: competition 39 low, top-10 median 233K, 0% of top titles use it); title_score 91"
+ "iqvid_source": "reports/iqvid/run-46052722944.txt (what did jesus do in hell for 3 days: competition 39 low, top-10 median 233K, 0% of top titles use it); title_score 91",
+ "result": {
+  "time_utc": "2026-11-27T18:59:22",
+  "video_id": "84hF0oYJDA4",
+  "result": "uploaded; goes public 2026-11-28T00:30:00Z"
+ }
 }

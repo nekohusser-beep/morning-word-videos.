@@ -1,0 +1,758 @@
+[
+ {
+  "k": "s",
+  "tag": "hook"
+ },
+ {
+  "k": "n",
+  "t": "Before you walk out that door today, give me a few minutes.",
+  "f": "a000.wav",
+  "d": 3.6053333333333333,
+  "p": 0
+ },
+ {
+  "k": "n",
+  "t": "You already know what's out there.",
+  "f": "a001.wav",
+  "d": 1.9413333333333334,
+  "p": 0
+ },
+ {
+  "k": "n",
+  "t": "The email you've been dreading.",
+  "f": "a002.wav",
+  "d": 1.9626666666666666,
+  "p": 0
+ },
+ {
+  "k": "n",
+  "t": "The drive.",
+  "f": "a003.wav",
+  "d": 1.0666666666666667,
+  "p": 0
+ },
+ {
+  "k": "n",
+  "t": "The conversation you keep putting off.",
+  "f": "a004.wav",
+  "d": 2.304,
+  "p": 0
+ },
+ {
+  "k": "n",
+  "t": "And you're about to walk into all of it with nothing between you and the day but a cup of coffee.",
+  "f": "a005.wav",
+  "d": 5.952,
+  "p": 0,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "This psalm is for the person standing at that door.",
+  "f": "a006.wav",
+  "d": 3.136,
+  "p": 1
+ },
+ {
+  "k": "n",
+  "t": "People have prayed it in hospital hallways, before shifts, and on the way to jobs they were scared to lose.",
+  "f": "a007.wav",
+  "d": 6.784,
+  "p": 1
+ },
+ {
+  "k": "n",
+  "t": "Pray it with me, and then go.",
+  "f": "a008.wav",
+  "d": 1.92,
+  "p": 1,
+  "para": 1
+ },
+ {
+  "k": "s",
+  "tag": "dwell"
+ },
+ {
+  "k": "n",
+  "t": "Here is how it starts.",
+  "f": "a009.wav",
+  "d": 1.7493333333333334,
+  "p": 2
+ },
+ {
+  "k": "n",
+  "t": "Psalm 91, verses 1 and 2.",
+  "f": "a010.wav",
+  "d": 2.7093333333333334,
+  "p": 2,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "Psalm 91:1-2",
+  "t": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust.",
+  "f": "a011.wav",
+  "d": 13.269333333333334,
+  "para": 1,
+  "p": 3,
+  "red": [
+   "secret place",
+   "refuge",
+   "fortress",
+   "trust"
+  ]
+ },
+ {
+  "k": "n",
+  "t": "Look at the word dwelleth.",
+  "f": "a012.wav",
+  "d": 1.6,
+  "p": 4
+ },
+ {
+  "k": "n",
+  "t": "That's somebody who lives there.",
+  "f": "a013.wav",
+  "d": 1.8986666666666667,
+  "p": 4
+ },
+ {
+  "k": "n",
+  "t": "Not a person who stops by when the car breaks down.",
+  "f": "a014.wav",
+  "d": 3.52,
+  "p": 4
+ },
+ {
+  "k": "n",
+  "t": "This one is for an ordinary Tuesday, when nobody is watching and nothing is on fire.",
+  "f": "a015.wav",
+  "d": 5.973333333333334,
+  "p": 4
+ },
+ {
+  "k": "n",
+  "t": "When's the last time you prayed before you left the house, instead of after something went wrong?",
+  "f": "a016.wav",
+  "d": 5.653333333333333,
+  "p": 4,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "And look at what the writer does in verse 2.",
+  "f": "a109.wav",
+  "d": 2.7306666666666666,
+  "p": 5
+ },
+ {
+  "k": "n",
+  "t": "He says it out loud.",
+  "f": "a110.wav",
+  "d": 1.6,
+  "p": 5
+ },
+ {
+  "k": "n",
+  "t": "I will say of the LORD.",
+  "f": "a111.wav",
+  "d": 1.728,
+  "p": 5
+ },
+ {
+  "k": "n",
+  "t": "Your worry talks all morning long.",
+  "f": "a112.wav",
+  "d": 2.3466666666666667,
+  "p": 5
+ },
+ {
+  "k": "n",
+  "t": "Faith has to talk back.",
+  "f": "a113.wav",
+  "d": 1.6853333333333333,
+  "p": 5,
+  "para": 1
+ },
+ {
+  "k": "s",
+  "tag": "trap"
+ },
+ {
+  "k": "n",
+  "t": "Verses 3 and 4.",
+  "f": "a022.wav",
+  "d": 1.6213333333333333,
+  "p": 6,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "Psalm 91:3-4",
+  "t": "Surely he shall deliver thee from the snare of the fowler, and from the noisome pestilence. He shall cover thee with his feathers, and under his wings shalt thou trust: his truth shall be thy shield and buckler.",
+  "f": "a023.wav",
+  "d": 13.504,
+  "para": 1,
+  "p": 7,
+  "red": [
+   "fowler",
+   "pestilence",
+   "wings",
+   "shield"
+  ]
+ },
+ {
+  "k": "n",
+  "t": "A fowler is a trapper, and a snare is the trap you never saw coming.",
+  "f": "a024.wav",
+  "d": 4.736,
+  "p": 8
+ },
+ {
+  "k": "n",
+  "t": "The bad deal.",
+  "f": "a025.wav",
+  "d": 1.216,
+  "p": 8
+ },
+ {
+  "k": "n",
+  "t": "The wrong crowd.",
+  "f": "a026.wav",
+  "d": 1.3013333333333332,
+  "p": 8
+ },
+ {
+  "k": "n",
+  "t": "The text you should not have sent.",
+  "f": "a027.wav",
+  "d": 1.8986666666666667,
+  "p": 8
+ },
+ {
+  "k": "n",
+  "t": "God sees the trap before you ever step toward it.",
+  "f": "a028.wav",
+  "d": 3.1786666666666665,
+  "p": 8,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "Then comes the picture I love.",
+  "f": "a029.wav",
+  "d": 2.026666666666667,
+  "p": 9
+ },
+ {
+  "k": "n",
+  "t": "Under his wings.",
+  "f": "a030.wav",
+  "d": 1.3653333333333333,
+  "p": 9
+ },
+ {
+  "k": "n",
+  "t": "A mother bird covers her young with her own body when the weather turns, and whatever is coming has to get through her first.",
+  "f": "a031.wav",
+  "d": 7.552,
+  "p": 9,
+  "para": 1
+ },
+ {
+  "k": "s",
+  "tag": "hours"
+ },
+ {
+  "k": "n",
+  "t": "Verses 5 through 8.",
+  "f": "a032.wav",
+  "d": 1.6853333333333333,
+  "p": 10,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "Psalm 91:5-8",
+  "t": "Thou shalt not be afraid for the terror by night; nor for the arrow that flieth by day; Nor for the pestilence that walketh in darkness; nor for the destruction that wasteth at noonday. A thousand shall fall at thy side, and ten thousand at thy right hand; but it shall not come nigh thee. Only with thine eyes shalt thou behold and see the reward of the wicked.",
+  "f": "a033.wav",
+  "d": 24.362666666666666,
+  "para": 1,
+  "p": 11,
+  "red": [
+   "not be afraid",
+   "night",
+   "noon",
+   "not come nigh"
+  ]
+ },
+ {
+  "k": "n",
+  "t": "Four hours are named in there, the night, the day, the darkness, and noon.",
+  "f": "a034.wav",
+  "d": 4.8,
+  "p": 12
+ },
+ {
+  "k": "n",
+  "t": "There is no hour on the clock that was left uncovered.",
+  "f": "a035.wav",
+  "d": 3.3706666666666667,
+  "p": 12
+ },
+ {
+  "k": "n",
+  "t": "The fear that hits at three in the morning is on that list, and so is the trouble that shows up in broad daylight.",
+  "f": "a036.wav",
+  "d": 7.338666666666667,
+  "p": 12,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "So does that mean nothing bad ever comes near a believer?",
+  "f": "a098.wav",
+  "d": 3.712,
+  "p": 13
+ },
+ {
+  "k": "n",
+  "t": "Read it again.",
+  "f": "a099.wav",
+  "d": 1.3653333333333333,
+  "p": 13
+ },
+ {
+  "k": "n",
+  "t": "It never says nothing will come at you.",
+  "f": "a100.wav",
+  "d": 2.517333333333333,
+  "p": 13
+ },
+ {
+  "k": "n",
+  "t": "It says you do not have to be afraid of it.",
+  "f": "a101.wav",
+  "d": 2.6666666666666665,
+  "p": 13
+ },
+ {
+  "k": "n",
+  "t": "Jesus said the same thing plainly, in John chapter 16, verse 33.",
+  "f": "a102.wav",
+  "d": 5.589333333333333,
+  "p": 13,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "John 16:33",
+  "t": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+  "f": "a040.wav",
+  "d": 10.56,
+  "para": 1,
+  "p": 14,
+  "red": [
+   "peace",
+   "overcome"
+  ]
+ },
+ {
+  "k": "s",
+  "tag": "refuge"
+ },
+ {
+  "k": "n",
+  "t": "Back to the psalm.",
+  "f": "a041.wav",
+  "d": 1.3866666666666667,
+  "p": 15
+ },
+ {
+  "k": "n",
+  "t": "Verses 9 and 10.",
+  "f": "a042.wav",
+  "d": 1.5786666666666667,
+  "p": 15,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "Psalm 91:9-10",
+  "t": "Because thou hast made the LORD, which is my refuge, even the most High, thy habitation; There shall no evil befall thee, neither shall any plague come nigh thy dwelling.",
+  "f": "a089.wav",
+  "d": 11.754666666666667,
+  "para": 1,
+  "p": 16,
+  "red": [
+   "habitation",
+   "no evil"
+  ]
+ },
+ {
+  "k": "n",
+  "t": "Thy habitation.",
+  "f": "a044.wav",
+  "d": 1.4506666666666668,
+  "p": 17
+ },
+ {
+  "k": "n",
+  "t": "It keeps coming back to where you live.",
+  "f": "a045.wav",
+  "d": 2.3253333333333335,
+  "p": 17
+ },
+ {
+  "k": "n",
+  "t": "Proverbs chapter 18, verse 10 puts it another way.",
+  "f": "a046.wav",
+  "d": 3.7333333333333334,
+  "p": 17,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "Proverbs 18:10",
+  "t": "The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+  "f": "a047.wav",
+  "d": 5.397333333333333,
+  "para": 1,
+  "p": 18,
+  "red": [
+   "strong tower",
+   "runneth into it",
+   "safe"
+  ]
+ },
+ {
+  "k": "n",
+  "t": "Runneth into it.",
+  "f": "a048.wav",
+  "d": 1.3013333333333332,
+  "p": 19
+ },
+ {
+  "k": "n",
+  "t": "So when the fear comes, run.",
+  "f": "a049.wav",
+  "d": 1.9413333333333334,
+  "p": 19
+ },
+ {
+  "k": "n",
+  "t": "Say his name.",
+  "f": "a050.wav",
+  "d": 1.1946666666666668,
+  "p": 19
+ },
+ {
+  "k": "n",
+  "t": "You don't need fancy words.",
+  "f": "a051.wav",
+  "d": 1.7493333333333334,
+  "p": 19
+ },
+ {
+  "k": "n",
+  "t": "Jesus, help me, is a whole prayer.",
+  "f": "a052.wav",
+  "d": 2.517333333333333,
+  "p": 19,
+  "para": 1
+ },
+ {
+  "k": "s",
+  "tag": "angels"
+ },
+ {
+  "k": "n",
+  "t": "Verses 11 through 13.",
+  "f": "a053.wav",
+  "d": 1.9626666666666666,
+  "p": 20,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "Psalm 91:11-13",
+  "t": "For he shall give his angels charge over thee, to keep thee in all thy ways. They shall bear thee up in their hands, lest thou dash thy foot against a stone. Thou shalt tread upon the lion and adder: the young lion and the dragon shalt thou trample under feet.",
+  "f": "a054.wav",
+  "d": 17.28,
+  "para": 1,
+  "p": 21,
+  "red": [
+   "angels",
+   "keep thee",
+   "lion"
+  ]
+ },
+ {
+  "k": "n",
+  "t": "You have help you can't see.",
+  "f": "a103.wav",
+  "d": 1.6213333333333333,
+  "p": 22
+ },
+ {
+  "k": "n",
+  "t": "God gives his angels orders about you.",
+  "f": "a104.wav",
+  "d": 2.7306666666666666,
+  "p": 22
+ },
+ {
+  "k": "n",
+  "t": "How many close calls have you already walked away from?",
+  "f": "a105.wav",
+  "d": 3.562666666666667,
+  "p": 22
+ },
+ {
+  "k": "n",
+  "t": "You have probably been kept from things you will never hear about.",
+  "f": "a106.wav",
+  "d": 3.8826666666666667,
+  "p": 22
+ },
+ {
+  "k": "n",
+  "t": "The truck that did not cross the line.",
+  "f": "a107.wav",
+  "d": 2.1546666666666665,
+  "p": 22
+ },
+ {
+  "k": "n",
+  "t": "The night you made it home when you had no business making it.",
+  "f": "a108.wav",
+  "d": 3.584,
+  "p": 22,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "One careful note.",
+  "f": "a060.wav",
+  "d": 1.4933333333333334,
+  "p": 23
+ },
+ {
+  "k": "n",
+  "t": "The devil quoted these very verses to Jesus in the wilderness and dared him to jump.",
+  "f": "a061.wav",
+  "d": 5.952,
+  "p": 23
+ },
+ {
+  "k": "n",
+  "t": "Jesus said no.",
+  "f": "a062.wav",
+  "d": 1.4293333333333333,
+  "p": 23
+ },
+ {
+  "k": "n",
+  "t": "This psalm is a shelter for people who walk with God.",
+  "f": "a063.wav",
+  "d": 3.52,
+  "p": 23
+ },
+ {
+  "k": "n",
+  "t": "It was never a permission slip to go looking for danger.",
+  "f": "a064.wav",
+  "d": 3.541333333333333,
+  "p": 23,
+  "para": 1
+ },
+ {
+  "k": "s",
+  "tag": "love"
+ },
+ {
+  "k": "n",
+  "t": "Now listen, because in verse 14 the voice changes.",
+  "f": "a065.wav",
+  "d": 3.6906666666666665,
+  "p": 24
+ },
+ {
+  "k": "n",
+  "t": "God himself starts to talk.",
+  "f": "a066.wav",
+  "d": 2.1973333333333334,
+  "p": 24
+ },
+ {
+  "k": "n",
+  "t": "Verses 14 through 16.",
+  "f": "a067.wav",
+  "d": 2.0906666666666665,
+  "p": 24,
+  "para": 1
+ },
+ {
+  "k": "v",
+  "ref": "Psalm 91:14-16",
+  "t": "Because he hath set his love upon me, therefore will I deliver him: I will set him on high, because he hath known my name. He shall call upon me, and I will answer him: I will be with him in trouble; I will deliver him, and honour him. With long life will I satisfy him, and shew him my salvation.",
+  "f": "a068.wav",
+  "d": 19.072,
+  "para": 1,
+  "p": 25,
+  "red": [
+   "deliver him",
+   "with him in trouble",
+   "salvation"
+  ]
+ },
+ {
+  "k": "n",
+  "t": "Look at the middle of that.",
+  "f": "a069.wav",
+  "d": 1.5573333333333332,
+  "p": 26
+ },
+ {
+  "k": "n",
+  "t": "I will be with him in trouble.",
+  "f": "a070.wav",
+  "d": 2.005333333333333,
+  "p": 26
+ },
+ {
+  "k": "n",
+  "t": "He never said you would not see trouble today.",
+  "f": "a071.wav",
+  "d": 3.0933333333333333,
+  "p": 26
+ },
+ {
+  "k": "n",
+  "t": "He said you would not be in it alone.",
+  "f": "a072.wav",
+  "d": 2.2826666666666666,
+  "p": 26,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "And look at the reason.",
+  "f": "a073.wav",
+  "d": 1.4293333333333333,
+  "p": 27
+ },
+ {
+  "k": "n",
+  "t": "Because he hath set his love upon me.",
+  "f": "a074.wav",
+  "d": 2.0906666666666665,
+  "p": 27
+ },
+ {
+  "k": "n",
+  "t": "This whole psalm rests on a relationship, not a formula.",
+  "f": "a075.wav",
+  "d": 3.968,
+  "p": 27
+ },
+ {
+  "k": "n",
+  "t": "If you have drifted, this morning is a good morning to walk back.",
+  "f": "a076.wav",
+  "d": 4.245333333333333,
+  "p": 27,
+  "para": 1
+ },
+ {
+  "k": "s",
+  "tag": "pray"
+ },
+ {
+  "k": "n",
+  "t": "So here is the prayer.",
+  "f": "a077.wav",
+  "d": 1.6426666666666667,
+  "p": 28
+ },
+ {
+  "k": "n",
+  "t": "Pray it out loud if you can.",
+  "f": "a078.wav",
+  "d": 2.1333333333333333,
+  "p": 28,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "Father, I am stepping out the door, and I am putting this day under your wing.",
+  "f": "a090.wav",
+  "d": 4.970666666666666,
+  "p": 29
+ },
+ {
+  "k": "n",
+  "t": "Cover my house while I am gone.",
+  "f": "a091.wav",
+  "d": 2.176,
+  "p": 29
+ },
+ {
+  "k": "n",
+  "t": "Cover the ones I love, wherever they are right now.",
+  "f": "a092.wav",
+  "d": 3.3066666666666666,
+  "p": 29
+ },
+ {
+  "k": "n",
+  "t": "When a trap is set, show me before I step.",
+  "f": "a093.wav",
+  "d": 3.029333333333333,
+  "p": 29
+ },
+ {
+  "k": "n",
+  "t": "When fear comes, remind me where I dwell.",
+  "f": "a094.wav",
+  "d": 2.965333333333333,
+  "p": 29
+ },
+ {
+  "k": "n",
+  "t": "Send your angels ahead of me, and let me come home tonight with a thankful heart.",
+  "f": "a095.wav",
+  "d": 4.970666666666666,
+  "p": 29
+ },
+ {
+  "k": "n",
+  "t": "I ask it in the name of Jesus Christ.",
+  "f": "a096.wav",
+  "d": 2.688,
+  "p": 29
+ },
+ {
+  "k": "n",
+  "t": "Amen.",
+  "f": "a097.wav",
+  "d": 1.0666666666666667,
+  "p": 29,
+  "para": 1
+ },
+ {
+  "k": "n",
+  "t": "Type amen, and send this to a friend who needs it.",
+  "f": "a087.wav",
+  "d": 3.3066666666666666,
+  "p": 30
+ },
+ {
+  "k": "n",
+  "t": "Have a blessed day, and remember the Word for today.",
+  "f": "a088.wav",
+  "d": 3.3706666666666667,
+  "p": 30,
+  "para": 1
+ }
+]

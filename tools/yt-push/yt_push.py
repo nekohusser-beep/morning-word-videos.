@@ -350,7 +350,7 @@ def resolve_job(job):
         except Exception as e:
             problems.append("pack unreadable: %s" % e)
     for k in ("title", "description", "tags", "category_id", "default_language",
-              "localized_titles", "playlist_ids", "playlist_names", "comment", "captions_file", "captions_lang", "captions_name", "thumbnail_file"):
+              "localized_titles", "playlist_ids", "playlist_names", "comment", "captions_file", "captions_lang", "captions_name", "thumbnail_file", "privacy"):
         if job.get(k) not in (None, "", [], {}):
             want[k] = job[k]
     if "title" in want:
@@ -535,6 +535,40 @@ def run_job(yt, job, mode):
                 print("  APPLIED + verified:", ", ".join(sorted(diff)))
     else:
         res["skipped"].append("metadata already matches")
+
+    # privacy (Nov 27 2026): only "private" is accepted (pulls a scheduled or public video back; never makes anything public).
+    # Used to retire a scheduled upload that was replaced by a newer file. Old status is saved in the rollback file.
+    if want.get("privacy"):
+        if str(want["privacy"]).lower() != "private":
+            res["errors"].append("privacy: only 'private' is allowed in a job")
+        elif mode == "apply":
+            cur, err = read_video(yt, vid)
+            st_live = (cur or {}).get("status", {}) if not err else {}
+            if err:
+                res["errors"].append("privacy read failed: " + err)
+            elif st_live.get("privacyStatus") == "private" and not st_live.get("publishAt"):
+                res["skipped"].append("already private and unscheduled")
+            else:
+                if "rollback" not in res:
+                    res["rollback"] = save_rollback(vid, cur)
+                new_st = {k: v for k, v in st_live.items() if k not in ("publishAt", "publishedAt")}
+                new_st["privacyStatus"] = "private"
+                st, js = yt.send("PUT", "videos", {"part": "status"}, {"id": vid, "status": new_st})
+                if st != 200:
+                    res["errors"].append("privacy: %s %s" % (st, str(js)[:200]))
+                else:
+                    chk = {}
+                    for wait in (0, 6, 15):
+                        time.sleep(wait)
+                        again, err2 = read_video(yt, vid)
+                        chk = (again or {}).get("status", {}) if not err2 else {}
+                        if chk.get("privacyStatus") == "private" and not chk.get("publishAt"):
+                            break
+                    if chk.get("privacyStatus") == "private" and not chk.get("publishAt"):
+                        res["changed"].append("privacy -> private, schedule cleared")
+                        print("  APPLIED + verified: private, no schedule")
+                    else:
+                        res["errors"].append("privacy saved but YouTube still shows %s %s" % (chk.get("privacyStatus"), chk.get("publishAt")))
 
     # playlists
     names = want.get("playlist_names") or job.get("playlist_names") or []

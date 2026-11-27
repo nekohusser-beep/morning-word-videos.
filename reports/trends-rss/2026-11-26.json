@@ -1,203 +1,203 @@
 {
  "geo": "US",
- "made_utc": "2026-11-26T19:51:34",
+ "made_utc": "2026-11-27T03:17:33",
  "items": [
   {
-   "query": "john 3:16",
-   "traffic": "10000+",
-   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
+   "query": "harrison butker",
+   "traffic": "2000+",
+   "pubDate": "Thu, 26 Nov 2026 18:50:00 -0800",
    "news": [
     {
-     "title": "Thankfulness at John 3:16",
-     "source": "KTUL"
+     "title": "Harrison Butker's miserable season has produced another ridiculous statistic",
+     "source": "Arrowhead Addict"
     },
     {
-     "title": "John 3:16 Mission",
-     "source": "Tulsa World"
+     "title": "Harrison Butker Week 12 Outlook for Fantasy Football (2026)",
+     "source": "RotoBaller"
     },
     {
-     "title": "John 3:16 Mission",
-     "source": "Tulsa World"
+     "title": "Chiefs' pressure on Harrison Butker may have finally paid off",
+     "source": "KC Kingdom"
     }
    ],
    "hook": false
   },
   {
-   "query": "joe biden",
-   "traffic": "1000+",
-   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
+   "query": "uc davis basketball",
+   "traffic": "200+",
+   "pubDate": "Thu, 26 Nov 2026 18:40:00 -0800",
    "news": [
     {
-     "title": "Joe Biden, 84, pictured inside home amid cancer battle: 'I am humbled'",
+     "title": "Jacksonville State vs UC Davis Prediction, Picks & Odds | 26 Nov 2026",
+     "source": "Sportsgambler"
+    },
+    {
+     "title": "How to Watch Jacksonville State Gamecocks vs. UC Davis Aggies: Live Stream or on TV",
+     "source": "Bleacher Nation"
+    },
+    {
+     "title": "Jacksonville State vs. UC Davis Predictions - Nov. 26",
+     "source": "iHeart"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "mike tomlin minecraft",
+   "traffic": "2000+",
+   "pubDate": "Thu, 26 Nov 2026 18:30:00 -0800",
+   "news": [
+    {
+     "title": "Who won the Aaron Rodgers-Mike McCarthy battle? Mike Tomlin",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "Mike Tomlin Shows Off Minecraft Stadiums in Video Amid McCarthy, Rodgers, Steelers Drama",
+     "source": "Bleacher Report"
+    },
+    {
+     "title": "Mike Tomlin to explore \u2018ballparks, stadiums\u2019 in newest Minecraft episode",
+     "source": "Pittsburgh Post-Gazette"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "big 12 championship game",
+   "traffic": "500+",
+   "pubDate": "Thu, 26 Nov 2026 18:30:00 -0800",
+   "news": [
+    {
+     "title": "Big 12 Conference Championship Game scenarios",
+     "source": "Yahoo Sports"
+    },
+    {
+     "title": "Big 12 power rankings: Big 12 stands pat at the top amid college football\u2019s chaos",
+     "source": "Deseret News"
+    },
+    {
+     "title": "Texas Tech expected to join Utah in Big 12 title game; BYU hopes still alive",
+     "source": "KUTV"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "justin timberlake",
+   "traffic": "2000+",
+   "pubDate": "Thu, 26 Nov 2026 18:30:00 -0800",
+   "news": [
+    {
+     "title": "Justin Timberlake and Jimmy Fallon Do the \u2018Cha Cha Slide\u2019 in \u2018Tonight Show\u2019 Sneak Peek",
+     "source": "People.com"
+    },
+    {
+     "title": "Justin Timberlake and Jimmy Fallon preview party songs medley on NBC Thanksgiving episode \u2014 The Tonight Show Starring Jimmy Fallon: Justin Timberlake",
+     "source": "\u0634\u0628\u0643\u0629 \u062a\u0648\u0627\u0635\u0644 \u0627\u0644\u0625\u062e\u0628\u0627\u0631\u064a\u0629"
+    },
+    {
+     "title": "Justin Timberlake and Jimmy Fallon Bust Out the \u2018Cha Cha Slide\u2019 in Thanksgiving Special Sneak Peek",
      "source": "Yahoo"
-    },
-    {
-     "title": "Shapiro Accuses Biden of Not Doing Enough to Rein In Netanyahu",
-     "source": "WSJ"
-    },
-    {
-     "title": "Josh Shapiro, set to run in 2028, slams \u2018failed\u2019 Netanyahu, says Biden didn\u2019t check Israel enough",
-     "source": "The Times of Israel"
     }
    ],
    "hook": true
   },
   {
-   "query": "laporta",
+   "query": "c\u00e1rtel de sinaloa",
    "traffic": "500+",
-   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
+   "pubDate": "Thu, 26 Nov 2026 18:30:00 -0800",
    "news": [
     {
-     "title": "Barcelona: Laporta atiza a Real Madrid y amenaza con llevar al club a juicio",
+     "title": "Atrapan a otro l\u00edder de La Mayiza: Detienen al \u2018Chapo F\u00e9lix\u2019 en la sierra de Durango",
+     "source": "El Financiero"
+    },
+    {
+     "title": "Cae otro Chapo; detienen a F\u00e9lix, operador de las \"Fuerzas Especiales Zambada\" de \"Los Mayos\"",
+     "source": "El Universal"
+    },
+    {
+     "title": "Capturan en Tamazula a c\u00e9lula ligada a 'La Mayiza'",
+     "source": "Reforma"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "emirates",
+   "traffic": "500+",
+   "pubDate": "Thu, 26 Nov 2026 18:30:00 -0800",
+   "news": [
+    {
+     "title": "XEBO.ai raises $10.5 million in Series A funding from Emirates Growth Fund",
+     "source": "Northwest Signal"
+    },
+    {
+     "title": "Emirates Growth Fund signs $10.5 million investment in AI feedback firm XEBO.ai",
+     "source": "Superpower Daily"
+    },
+    {
+     "title": "XEBO.ai Raises $10.5M Series A to Expand Agentic AI and Analytics",
+     "source": "Unite.AI"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "le\u00f3n - cruz azul",
+   "traffic": "50000+",
+   "pubDate": "Thu, 26 Nov 2026 18:20:00 -0800",
+   "news": [
+    {
+     "title": "Le\u00f3n vs. Cruz Azul EN VIVO Ida Cuartos de Final de Liga MX Apertura 2026: Horario y d\u00f3nde ver",
+     "source": "TUDN"
+    },
+    {
+     "title": "Le\u00f3n vs Cruz Azul: posibles alineaciones y probabilidades",
      "source": "ESPN Deportes"
     },
     {
-     "title": "Caso Negreira: \u00bfpor qu\u00e9 el FC Barcelona y Florentino P\u00e9rez terminaron en los tribunales?",
-     "source": "Sports Illustrated"
-    },
-    {
-     "title": "Florentino y el Bar\u00e7a cierran sin acuerdo su encuentro por el Caso Negreira",
-     "source": "MARCA"
+     "title": "\u00bfD\u00f3nde ver L\u00e9on vs Cruz Azul en los cuartos de final del Apertura 2026?",
+     "source": "azcentral.com and The Arizona Republic"
     }
    ],
    "hook": false
   },
   {
-   "query": "georgetown vs texas",
-   "traffic": "1000+",
-   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
+   "query": "kenneth walker",
+   "traffic": "5000+",
+   "pubDate": "Thu, 26 Nov 2026 18:20:00 -0800",
    "news": [
     {
-     "title": "Texas vs. Georgetown preview: Hoyas\u2019 inside-out offense tests the Longhorns in San Diego",
-     "source": "Burnt Orange Nation"
+     "title": "Chiefs rule RB Kenneth Walker III (groin) out for showdown vs. Bills",
+     "source": "ESPN"
     },
     {
-     "title": "How to watch Georgetown vs. Texas men\u2019s basketball: TV channel and streaming options for November 26",
-     "source": "The New York Times"
+     "title": "NFL news roundup: Chiefs RB Kenneth Walker III (groin) to miss Thanksgiving game vs. Bills",
+     "source": "NFL.com"
     },
     {
-     "title": "Game Thread: Georgetown vs No. 7 Texas",
-     "source": "Yahoo Sports"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "lyon - lillestr\u00f8m",
-   "traffic": "500+",
-   "pubDate": "Thu, 26 Nov 2026 11:30:00 -0800",
-   "news": [
-    {
-     "title": "[FREE!!] Lyon vs Lillestr\u00f8m Live: UEFA Europa League - League Stage",
-     "source": "Charleston Sun-Sentinel"
-    },
-    {
-     "title": "Olympique Lyonnais vs Lillestr\u00f8m Predictions, Picks & Odds \u2013 26/11/2026",
-     "source": "ToffeeWeb"
-    },
-    {
-     "title": "Lyon vs Lillestrom Lineups, Prediction, Betting Picks & Odds",
-     "source": "Oddschecker"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "al pacino",
-   "traffic": "1000+",
-   "pubDate": "Thu, 26 Nov 2026 11:20:00 -0800",
-   "news": [
-    {
-     "title": "Al Pacino and Anthony Hopkins Fuel the Racecar Revolution in the Official 'Maserati: The Brothers' Trailer",
-     "source": "Hypebeast"
-    },
-    {
-     "title": "Michele Morrone, Jessica Alba, Andy Garcia, Anthony Hopkins, and Al Pacino Star in \u2018Maserati: The Brothers\u2019 \u2013 Trailer and Release Date",
-     "source": "Movie Vine"
-    },
-    {
-     "title": "The film \"Maserati: The Brothers\" arrives in Egyptian cinemas on December 3rd.",
-     "source": "\u0635\u0648\u062a \u0627\u0644\u0625\u0645\u0627\u0631\u0627\u062a"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "movies in theaters",
-   "traffic": "2000+",
-   "pubDate": "Thu, 26 Nov 2026 11:20:00 -0800",
-   "news": [
-    {
-     "title": "What Are Local Movie Theaters Showing for Thanksgiving 2026?",
-     "source": "IndieWire"
-    },
-    {
-     "title": "What Are Local Movie Theaters Showing for Thanksgiving 2026?",
-     "source": "IMDb"
-    },
-    {
-     "title": "Johnny Depp is back as Scrooge, patron saint of second chances",
-     "source": "The Economist"
+     "title": "Fantasy football Week 12 RB preview puts Emmett Johnson's upside in the hands of Kenneth Walker's health",
+     "source": "CBS Sports"
     }
    ],
    "hook": true
   },
   {
-   "query": "port hardy hospital",
-   "traffic": "200+",
-   "pubDate": "Thu, 26 Nov 2026 11:20:00 -0800",
+   "query": "greg rousseau",
+   "traffic": "500+",
+   "pubDate": "Thu, 26 Nov 2026 18:20:00 -0800",
    "news": [
     {
-     "title": "The E.R. Closed at 5 P.M. A Dying Woman Showed Up 11 Minutes Too Late.",
-     "source": "The New York Times"
+     "title": "Greg Rousseau On Confidence In His Playing, Preparing For The Chiefs, And More",
+     "source": "Buffalo Bills"
     },
     {
-     "title": "B.C. premier pledges to bolster health-care staffing as woman dies outside closed ER",
-     "source": "Global News"
+     "title": "Buffalo Bills OLB Greg Rousseau single-handedly wrecking NFL offenses",
+     "source": "Buffalo Rumblings"
     },
     {
-     "title": "Mother dies after seeking help at closed ER, family launches fundraiser",
-     "source": "CTV News"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "crystal palace - real sociedad",
-   "traffic": "2000+",
-   "pubDate": "Thu, 26 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "Crystal Palace v Real Sociedad Saves Odds",
-     "source": "FanDuel Sportsbook"
-    },
-    {
-     "title": "Crystal Palace vs Real Sociedad Predictions: Goals to flow at Selhurst",
-     "source": "Goal.com"
-    },
-    {
-     "title": "Crystal Palace-Real Sociedad: Palace arrive with four absentees",
-     "source": "Tu Futbolero"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "juventus vs omonoia",
-   "traffic": "2000+",
-   "pubDate": "Thu, 26 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "Juventus complete final training session ahead of Omonia",
-     "source": "Yahoo Sports"
-    },
-    {
-     "title": "Juventus, Ekhator to start before possible Monza move for Varela",
-     "source": "Goal.com"
-    },
-    {
-     "title": "Spalletti makes eight changes for Juventus against Omonia",
-     "source": "Tu Futbolero"
+     "title": "Is Greg Rousseau a Defensive Player of the Year candidate? His play begs the question",
+     "source": "Buffalo News"
     }
    ],
    "hook": false

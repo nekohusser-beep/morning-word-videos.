@@ -6,3 +6,5 @@ profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
 Ov-vzSRRF1A | He Healed Ten Lepers. Where Are the Nine?
   description: (534, 547)
   APPLIED + verified: description
+
+SUMMARY mode=apply jobs=2 failed=1

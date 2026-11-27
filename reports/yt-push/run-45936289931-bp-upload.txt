@@ -1,0 +1,5 @@
+profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
+2026-11-26-tg-1-long.json -> 2_A4Gaw6-14 uploaded; goes public 2026-11-27T04:24:00Z 
+2026-11-26-tg-2-short.json -> Ov-vzSRRF1A uploaded; goes public 2026-11-27T04:26:00Z 
+
+SUMMARY upload profile=bp done=2 failed=0 still queued=0

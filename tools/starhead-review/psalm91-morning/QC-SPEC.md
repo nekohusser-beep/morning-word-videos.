@@ -1,16 +1,26 @@
 # STARHEAD QC JOB: Psalm 91 morning prayer, long video "Before You Walk Out the Door". Nov 27 2026, from Claude.
 You are QC. Check cold against this spec. Answer PASS or FAIL with a reason per line (timestamp for every FAIL). You do not rebuild; a FAIL goes back to Claude. Neko gets the file only after your PASS, then he has the final say. NOTHING is posted until Neko says yes on the exact file.
 
+## ROUND 2 (Nov 27 2026, about 4:30 PM ET): what changed since your Round 1 report
+Your Round 1 result: FAIL on one thing, captions too small for a phone; everything else passed, and you would run thumbnail A. The files in this folder are the new finals. Please answer A to H again (only C needs a full look; the rest a quick confirm that nothing you passed moved):
+- BLOCKER, CAPTIONS: now about twice as big (Poppins 58 -> 110), two balanced lines, heavier outline. The top hook text went up with them (104 -> 124). Captions still never sit on a Scripture card.
+- YOUR NOTE, the temple: the line now reads "The devil set Jesus on the top of the temple, quoted these very verses, and dared him to jump. Jesus said no." (Matthew 4:5-6). Re-voiced at about 5:28. The video is now 7:39 (459.1 s); the last chapter moved one second (6:47).
+- YOUR NOTE, laptop mail screen (0:04 to 0:09 and 2:02): checked on the 1080p master. Full-resolution crops are in laptop_crops.jpg: the screen is out of focus and no logo or word can be read. Say so if you still want the shot gone.
+- YOUR NOTE, loudness: the 1080p master measures -14.14 LUFS integrated, true peak -1.32 dBTP (proof-long.md check 2). The 480p review copy now carries the master's own audio stream, copied, not re-encoded.
+- YOUR NOTE, "wasteth" at 2:41: voiced WAYST-eth; both speech-to-text models wrote "wasteth". Give it a listen.
+- Everything else is the same cut: same footage, same Scripture cards, same thumbnails, same title, description and tags.
+- proof.py: 10 of 10 PASS on the new final (proof-long.md, with the transcript log and the OCR table of every verse page).
+
 ## What this is
 - Blessed Prayers (YouTube). A morning prayer talk through Psalm 91, KJV only. Every work points to Christ.
-- LONG only (no Short in this job): 7:38 (458.4 s), 16:9, 1080p. Built from IQ Vid's trend pull today: Psalm 91 prayer for protection and morning prayer are the two biggest searches in our niche, and "pray this before you step into your day" is the title pattern winning right now.
+- LONG only (no Short in this job): 7:39 (459.1 s), 16:9, 1080p. Built from IQ Vid's trend pull today: Psalm 91 prayer for protection and morning prayer are the two biggest searches in our niche, and "pray this before you step into your day" is the title pattern winning right now.
 - Voice: AI narrator, Kokoro am_michael at 0.92 speed (the long-video standard). The description carries the line "The narration voice is AI-generated and the footage is licensed stock."
 - Picture: free Pexels stock footage matched to each paragraph, no talking faces. Burned-in captions at the bottom. Bold top-center hook text in the first 4 seconds, then "PSALM 91" in gold until about 8 s.
 - NEW LOOK to judge: Scripture is on a SPLIT CARD. Footage stays on the left, a dark panel with a gold edge sits on the right, the reference is in gold above the verse, the verse is white serif, and the key words are RED. Long passages turn the page once (Psalm 91:5-8, 91:11-13, 91:14-16 each have two pages).
 - Ends with a prayer in the name of Jesus Christ, then "Type amen, and send this to a friend who needs it." End card "TYPE AMEN / BLESSED PRAYERS". No prayer requests anywhere.
 
 ## Files (480p review copy; the real file is 1080p, same cut, same audio)
-- long-review-480p.mp4, contact-long.png (one frame every 5 s), proof-long.md, SEO-long.md, captions.srt, script-long.txt, thumb-A-dont-leave-yet.jpg, thumb-B-pray-this-first.jpg, thumb-C-psalm-91-before-work.jpg. All in one folder:
+- long-review-480p.mp4, contact-long.png (one frame every 5 s), proof-long.md, SEO-long.md, captions.srt, script-long.txt, thumb-A-dont-leave-yet.jpg, thumb-B-pray-this-first.jpg, thumb-C-psalm-91-before-work.jpg, laptop_crops.jpg. All in one folder:
   https://github.com/nekohusser-beep/morning-word-videos./tree/main/tools/starhead-review/psalm91-morning
   Raw file links: https://raw.githubusercontent.com/nekohusser-beep/morning-word-videos./main/tools/starhead-review/psalm91-morning/<file>
 
@@ -27,9 +37,9 @@ The dash-cam clip with the amigo canopy and lettered trucks (the one you failed 
 4. No readable brand, store, truck, sign, license plate or logo in any shot. No watermark. The Bible with the steel square NEVER appears.
 5. Each shot fits the line it sits under, nothing odd or AI-glitched, no shot repeated back to back or looped. Known repeats, minutes apart, because the free library is finite: wet road (0:30, 1:57, 5:20), clock (0:27, 2:27 to 3:05), fog valley, clouds, cliff mist. Flag any that bother you.
 6. The opening: first spoken word on frame 1 ("Before you walk out that door today"), opens on the viewer's tension, bold top-center text changing about every 1.25 s (BEFORE YOU WALK OUT / THAT DOOR TODAY / PRAY THIS FIRST), picture changes three times in the first 4 s.
-7. The teaching is faithful to the passage. Flag any claim about Scripture that is not in the text or is doctrinally off. Points to check: "Four hours are named, the night, the day, the darkness, and noon" (verses 5-6); "It never says nothing will come at you. It says you do not have to be afraid of it" (verse 5 with John 16:33); "The devil quoted these very verses to Jesus in the wilderness and dared him to jump. Jesus said no" (Matthew 4:5-7, Luke 4:9-12; he quoted verses 11-12); "in verse 14 the voice changes. God himself starts to talk." Flag anything that sounds like a stock AI phrase or preachy filler.
+7. The teaching is faithful to the passage. Flag any claim about Scripture that is not in the text or is doctrinally off. Points to check: "Four hours are named, the night, the day, the darkness, and noon" (verses 5-6); "It never says nothing will come at you. It says you do not have to be afraid of it" (verse 5 with John 16:33); "The devil set Jesus on the top of the temple, quoted these very verses, and dared him to jump. Jesus said no" (Matthew 4:5-7, Luke 4:9-12; he quoted verses 11-12); "in verse 14 the voice changes. God himself starts to talk." Flag anything that sounds like a stock AI phrase or preachy filler.
 8. No glorifying the dead, no prayer requests, no tagging or promising future content, no ElevenLabs mention.
-9. Ending: the prayer ends "I ask it in the name of Jesus Christ. Amen." The closer is "Type amen, and send this to a friend who needs it. Have a blessed day, and remember the Word for today." Narration ends at about 450.7 s; music tails to 458.4 s. Known Whisper artifact, NOT a defect unless you hear it: large-v3 writes the closer as "Amen. Amen. Amen. And send this"; medium.en hears "Type amen and send this" as written. Confirm by ear.
+9. Ending: the prayer ends "I ask it in the name of Jesus Christ. Amen." The closer is "Type amen, and send this to a friend who needs it. Have a blessed day, and remember the Word for today." Narration ends at about 451.4 s; music tails to 459.1 s. Both speech-to-text models hear the closer as written on this build. Confirm by ear.
 10. Loudness feels even: no spike at the Scripture reads, music never covers the voice.
 
 ## Things only you can sign off on (reply with PASS or FAIL on each)
@@ -39,7 +49,7 @@ C. Captions.
 D. Scripture split cards (KJV exact, readable, red words, page turns, time on screen).
 E. First 8 seconds (hook).
 F. Thumbnails A, B, C: legible at phone size, no brand or watermark, true to the video. Claude's pick is A ("DON'T LEAVE YET", red circle on the hand at the door). Say which you would run.
-G. SEO-long.md: title A "Dreading Today? Psalm 91 Prayer Before You Walk Out" is true to the video; description claims match what the video says; the four KJV lines are exact; chapter timestamps (0:00, 0:36, 1:36, 2:26, 3:48, 4:40, 5:46, 6:46) each land on the moment the chapter names.
+G. SEO-long.md: title A "Dreading Today? Psalm 91 Prayer Before You Walk Out" is true to the video; description claims match what the video says; the four KJV lines are exact; chapter timestamps (0:00, 0:36, 1:36, 2:26, 3:48, 4:40, 5:46, 6:47) each land on the moment the chapter names.
 H. Teaching and tone (item 7 and 8 above).
 
 ## Answer format
@@ -69,7 +79,7 @@ Runneth into it. So when the fear comes, run. Say his name. You don't need fancy
 Verses 11 through 13.
 [[For he shall give his angels charge over thee, to keep thee in all thy ways. They shall bear thee up in their hands, lest thou dash thy foot against a stone. Thou shalt tread upon the lion and adder: the young lion and the dragon shalt thou trample under feet.]]
 You have help you can't see. God gives his angels orders about you. How many close calls have you already walked away from? You have probably been kept from things you will never hear about. The truck that did not cross the line. The night you made it home when you had no business making it.
-One careful note. The devil quoted these very verses to Jesus in the wilderness and dared him to jump. Jesus said no. This psalm is a shelter for people who walk with God. It was never a permission slip to go looking for danger.
+One careful note. The devil set Jesus on the top of the temple, quoted these very verses, and dared him to jump. Jesus said no. This psalm is a shelter for people who walk with God. It was never a permission slip to go looking for danger.
 Now listen, because in verse 14 the voice changes. God himself starts to talk. Verses 14 through 16.
 [[Because he hath set his love upon me, therefore will I deliver him: I will set him on high, because he hath known my name. He shall call upon me, and I will answer him: I will be with him in trouble; I will deliver him, and honour him. With long life will I satisfy him, and shew him my salvation.]]
 Look at the middle of that. I will be with him in trouble. He never said you would not see trouble today. He said you would not be in it alone.

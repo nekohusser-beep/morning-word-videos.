@@ -28,7 +28,7 @@ CHAPTERS
 3:48 The LORD thy habitation (verses 9-10)
 4:40 He shall give his angels charge (verses 11-13)
 5:46 God speaks: I will be with him in trouble
-6:46 A morning prayer for protection
+6:47 A morning prayer for protection
 
 SCRIPTURE (KJV)
 Psalm 91:1-2: "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust."

@@ -34,7 +34,7 @@ S=[
 ('n',"Verses 11 through 13."),
 ('v',"Psalm 91:11-13","Psalms 91:11-13",["angels","keep thee","lion"]),
 ('n',"You have help you can't see. God gives his angels orders about you. How many close calls have you already walked away from? You have probably been kept from things you will never hear about. The truck that did not cross the line. The night you made it home when you had no business making it."),
-('n',"One careful note. The devil quoted these very verses to Jesus in the wilderness and dared him to jump. Jesus said no. This psalm is a shelter for people who walk with God. It was never a permission slip to go looking for danger."),
+('n',"One careful note. The devil set Jesus on the top of the temple, quoted these very verses, and dared him to jump. Jesus said no. This psalm is a shelter for people who walk with God. It was never a permission slip to go looking for danger."),
 ('s','love'),
 ('n',"Now listen, because in verse 14 the voice changes. God himself starts to talk. Verses 14 through 16."),
 ('v',"Psalm 91:14-16","Psalms 91:14-16",["deliver him","with him in trouble","salvation"]),

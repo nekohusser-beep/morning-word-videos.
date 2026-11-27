@@ -1,5 +1,5 @@
 # PROOF PACK for Psalm-91-Before-You-Walk-Out-the-Door.mp4
-built Nov 27 2026 03:43 PM ET | sha256 5b46b3c932c79240... | 318928895 bytes
+built Nov 27 2026 04:24 PM ET | sha256 140604b49b8861df... | 318340311 bytes
 
 | # | Check | Result |
 |---|---|---|
@@ -17,11 +17,11 @@ built Nov 27 2026 03:43 PM ET | sha256 5b46b3c932c79240... | 318928895 bytes
 ## Raw evidence
 ### 1. FILE (has video and audio, landscape, longer than 1s): PASS
 ```
-duration 458.38s | video h264 1920x1080 | audio aac 48000 Hz
+duration 459.09s | video h264 1920x1080 | audio aac 48000 Hz
 ```
 ### 2. LOUDNESS (-14 LUFS +/-2, true peak at or under -1 dB): PASS
 ```
-integrated -14.15 LUFS | true peak -1.27 dBTP | LRA 4.10
+integrated -14.14 LUFS | true peak -1.32 dBTP | LRA 4.10
 ```
 ### 3. BLACK FRAMES (none in the middle of the video): PASS
 ```
@@ -33,7 +33,7 @@ none found (silencedetect -50 dB, 1 s). A voice dropout under a music bed is NOT
 ```
 ### 5. FRAMES (first, quarter, middle, three-quarter, last saved for the reviewer to LOOK at): PASS
 ```
-5/5 frames in proof_long/frames; contact sheet proof_long/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
+5/5 frames in proof_long2/frames; contact sheet proof_long2/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
 ```
 ### 6. BANNED PHRASES (tools/humanize/gate.py on the script): PASS
 ```
@@ -41,7 +41,7 @@ HUMANIZE GATE: PASS
 ```
 ### 7. WORDS PER LINE: PASS
 ```
-no limit set; counts: 52, 37, 11, 39, 54, 32, 4, 38, 38, 33, 4, 69, 49, 45, 31, 8, 30, 19, 17, 24, 4, 51, 56, 44, 18, 61, 31, 36, 12, 77, 21 (total 1045)
+no limit set; counts: 52, 37, 11, 39, 54, 32, 4, 38, 38, 33, 4, 69, 49, 45, 31, 8, 30, 19, 17, 24, 4, 51, 56, 47, 18, 61, 31, 36, 12, 77, 21 (total 1048)
 ```
 ### 8. HEARD vs WRITTEN (strict word-for-word): PASS
 ```
@@ -61,7 +61,14 @@ GATE: PASS (10 of 10). Send to Starhead with the spec.
 
 
 ## Added by hand (the workflow asks for these in the pack)
-### Transcript hygiene (heard.txt = medium.en reconciled with large-v3, both run on the FINISHED audio by transcribe.yml, runs 46063508846 and 46063519340)
+### Round 2 (after Starhead's Round 1 FAIL on caption size)
+- Captions: Poppins 58 -> 110 (about twice as big), two balanced lines of up to 66 characters, heavier outline. Hook text 104 -> 124.
+- Script fix from Starhead's note: "The devil quoted these very verses to Jesus in the wilderness and dared him to jump" now reads "The devil set Jesus on the top of the temple, quoted these very verses, and dared him to jump" (Matthew 4:5-6). Re-voiced; video is 459.1 s.
+- Loudness on the 1080p master: see check 2 above. The 480p review copy now carries the master's own audio stream (copied, not re-encoded).
+- Laptop shot (0:04-0:09 and 2:02): full-resolution crops of the screen are in laptop_crops.jpg. The screen is out of focus; no logo or word can be read.
+- "wasteth" at 2:41: voiced as WAYST-eth (phonemes w'eIst@T); both speech-to-text models wrote "wasteth".
+
+### Transcript hygiene (heard.txt = medium.en reconciled with large-v3, both run on the FINISHED Round 2 audio by transcribe.yml, runs 46069000511 and 46069010503)
 Accepted differences, every one logged:
 ```
 KJV spelling, same sound: wrote 'flieth' / heard 'flyeth'
@@ -69,24 +76,23 @@ second pass heard it as written: wrote 'don't' / first pass heard 'do not'
 KJV spelling, same sound: wrote 'honour' / heard 'honor'
 KJV spelling, same sound: wrote 'shew' / heard 'show'
 ```
-- "KJV spelling, same sound" is a rule added in a local copy of norm_heard.py for this job (honour/honor, shew/show, flieth/flyeth are the same spoken word; Whisper writes the modern spelling). It is logged here so the reviewer can overrule it.
-- large-v3 extras NOT in medium.en and NOT counted (its known habit of inventing words in pauses under music): "God gave you a book for it" at 325.1-325.8 s (voice-only track is at -43 dBFS there, the pause between "making it." and "One careful note."), a doubled "the Lord. The wicked" at 174.0 s, a repeated "14 the voice changes God himself starts to talk" at 353.0 s, and "saved" for "safe", "thee" for "these", "Somme" for "psalm", which medium.en heard as written. Reviewer: listen at 2:54, 4:24, 5:25, 5:36 and 5:53.
-- First build: both models heard "Worry talks all morning long" as "Where he talks". The line was reworded to "Your worry talks all morning long" and re-voiced; both models now hear it as written.
+- "KJV spelling, same sound" is a rule added in a local copy of norm_heard.py for this job (honour/honor, shew/show, flieth/flyeth are the same spoken word; Whisper writes the modern spelling). Logged so the reviewer can overrule it.
+- large-v3 on this pass DROPPED words that medium.en heard as written: "of", "and is safe" (Proverbs 18:10, 4:24), "it", "through", and wrote "the" for "a". On the Round 1 audio (same recordings for those lines) large-v3 heard them and invented others in pauses. Its misses move from run to run under the music bed; medium.en matched the script on both passes. Reviewer: listen at 4:24.
 
 ### What is really on the screen (OCR of the finished video, one frame from the middle of each verse page, right panel only, tesseract)
-| Page | Time | Words | OCR equals the KJV page text |
-|---|---|---|---|
-| Psalm 91:1-2 | 0:50 | 40 | yes |
-| Psalm 91:3-4 | 1:47 | 39 | yes |
-| Psalm 91:5-8 | 2:36 | 35 | yes |
-| Psalm 91:5-8 | 2:49 | 36 | yes |
-| John 16:33 | 3:40 | 32 | yes |
-| Psalm 91:9-10 | 4:00 | 31 | yes |
-| Proverbs 18:10 | 4:22 | 18 | letters identical; OCR joined two words (is a read as isa) |
-| Psalm 91:11-13 | 4:49 | 33 | yes |
-| Psalm 91:11-13 | 4:58 | 20 | yes |
-| Psalm 91:14-16 | 6:02 | 36 | yes |
-| Psalm 91:14-16 | 6:12 | 27 | yes |
+| Page | Time | Words | Seconds on screen | OCR equals the KJV page text |
+|---|---|---|---|---|
+| Psalm 91:1-2 | 0:50 | 40 | 14.3 | yes |
+| Psalm 91:3-4 | 1:47 | 39 | 14.6 | yes |
+| Psalm 91:5-8 | 2:36 | 35 | 13.0 | yes |
+| Psalm 91:5-8 | 2:49 | 36 | 12.4 | yes |
+| John 16:33 | 3:40 | 32 | 11.6 | yes |
+| Psalm 91:9-10 | 4:00 | 31 | 12.8 | yes |
+| Proverbs 18:10 | 4:22 | 18 | 6.4 | letters identical; OCR joined or split a word |
+| Psalm 91:11-13 | 4:49 | 33 | 11.1 | yes |
+| Psalm 91:11-13 | 4:58 | 20 | 7.2 | yes |
+| Psalm 91:14-16 | 6:03 | 36 | 11.4 | yes |
+| Psalm 91:14-16 | 6:13 | 27 | 8.7 | yes |
 
 ### IQ Vid pre-post check (tools/iqvid/prepost.py on SEO-long.md + captions.srt)
 0 to fix, 24 passed, 1 to do at upload (end screen and pinned comment point to "He Healed Ten Lepers. Only One Said Thank You.").

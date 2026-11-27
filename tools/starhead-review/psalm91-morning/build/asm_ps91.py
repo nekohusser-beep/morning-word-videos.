@@ -34,18 +34,18 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,Poppins,58,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,3.5,2,2,230,230,78,1
+Style: Cap,Poppins,110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,5.5,3,2,110,110,60,1
 Style: Verse,DejaVu Serif,58,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,2.5,2,5,120,120,0,1
 Style: Ref,Poppins,54,&H0057C8FF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,2.5,2,5,120,120,0,1
 Style: Title,Poppins,170,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,6,0,1,3,3,5,100,100,0,1
 Style: Sub,Poppins,62,&H0057C8FF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,3,0,1,2.5,2,5,100,100,0,1
-Style: Hook,Poppins,104,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,5,3,8,80,80,70,1
-Style: HookGold,Poppins,104,&H0057C8FF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,5,3,8,80,80,70,1
+Style: Hook,Poppins,124,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,5,3,8,80,80,70,1
+Style: HookGold,Poppins,124,&H0057C8FF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,2,0,1,5,3,8,80,80,70,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
-def chunks_txt(s,mx=84):
+def chunks_txt(s,mx=66):
     if len(s)<=mx: return [s]
     parts=re.split(r'(?<=,)\s+',s); out=[]; cur=''
     for p in parts:
@@ -115,7 +115,7 @@ def ass_for(i):
     def D(layer,a,b,style,text): L.append(f"Dialogue: {layer},{ts(a-o)},{ts(b-o)},{style},,0,0,0,,{text}\n")
     if i==0:
         for a,b,t,st in HOOK: D(3,a,b,st,r"{\fad(60,60)}"+t)
-        D(3,4.4,8.2,'HookGold',r"{\fad(500,500)\fs84}PSALM 91")
+        D(3,4.4,8.2,'HookGold',r"{\fad(500,500)\fs110}PSALM 91")
     if i==len(chunks)-1:
         D(1,TOTAL-5.4,TOTAL,'Title',r"{\fad(700,900)\pos(960,470)\fs100}TYPE  AMEN")
         D(1,TOTAL-4.9,TOTAL,'Sub',r"{\fad(700,900)\pos(960,610)}BLESSED PRAYERS")

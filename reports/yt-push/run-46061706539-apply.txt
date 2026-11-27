@@ -4,3 +4,5 @@ profile: bp channel: Blessed Prayers UCaKI8Xsi-MHu78UnJTY1xpg
   title: ('What Did Jesus Do in Hell for 3 Days? Psalm 16:10', 'OLD v2 replaced by v3b, do not post: What Did Jesus Do in Hell for 3 Days?')
   APPLIED + verified: title
   APPLIED + verified: private, no schedule
+
+SUMMARY mode=apply jobs=1 failed=0

@@ -3,12 +3,17 @@
   {
    "video_id": "mCmD8tiJXec",
    "mode": "apply",
-   "time_utc": "2026-11-27T20:13:02",
-   "changed": [],
-   "skipped": [],
-   "errors": [
-    "thumbnail not found: tools/starhead-review/hell3days-v3/thumb.jpg"
-   ]
+   "time_utc": "2026-11-27T20:14:10",
+   "changed": [
+    "scheduled for 2026-11-28T00:30:00Z",
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "What Did Jesus Do in Hell for 3 Days? Psalm 16:10",
+   "rollback": "reports/yt-push/rollback/mCmD8tiJXec-20261127-201410.json"
   }
  ]
 }

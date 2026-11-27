@@ -1,0 +1,22 @@
+{
+ "job": {
+  "video_id": "2_A4Gaw6-14",
+  "thumbnail_file": "tools/yt-push/thumbs/tg-long-B.jpg",
+  "default_language": "en"
+ },
+ "results": [
+  {
+   "video_id": "2_A4Gaw6-14",
+   "mode": "apply",
+   "time_utc": "2026-11-27T03:51:29",
+   "changed": [
+    "thumbnail"
+   ],
+   "skipped": [
+    "metadata already matches"
+   ],
+   "errors": [],
+   "live_title": "He Healed Ten Lepers. Only One Said Thank You."
+  }
+ ]
+}

@@ -3,31 +3,15 @@
   {
    "video_id": "2_A4Gaw6-14",
    "mode": "apply",
-   "time_utc": "2026-11-27T03:49:31",
+   "time_utc": "2026-11-27T03:51:29",
    "changed": [
     "thumbnail"
    ],
    "skipped": [
     "metadata already matches"
    ],
-   "errors": [
-    "captions: 403 {'error': {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'stat"
-   ],
-   "live_title": "He Healed Ten Lepers. Only One Said Thank You."
-  }
- ],
- "Ov-vzSRRF1A-202611262249.json": [
-  {
-   "video_id": "Ov-vzSRRF1A",
-   "mode": "apply",
-   "time_utc": "2026-11-27T03:49:34",
-   "changed": [
-    "description"
-   ],
-   "skipped": [],
    "errors": [],
-   "live_title": "He Healed Ten Lepers. Where Are the Nine?",
-   "rollback": "reports/yt-push/rollback/Ov-vzSRRF1A-20261127-034935.json"
+   "live_title": "He Healed Ten Lepers. Only One Said Thank You."
   }
  ]
 }

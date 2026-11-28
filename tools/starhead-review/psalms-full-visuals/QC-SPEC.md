@@ -1,14 +1,14 @@
 # STARHEAD QC JOB (PICTURE ONLY): Psalms 1 to 150, visual version. Nov 28 2026, from Claude.
 You are QC. Check cold against this spec. Answer PASS or FAIL with a reason per line (timestamp for every FAIL). You do not rebuild; a FAIL goes back to Claude. Neko gets the file only after your PASS, then he has the final say. NOTHING is posted until Neko says yes on this exact file.
 
-## What this is
+## What this is (v2: smaller re-encode of the build you already passed; please re-confirm, see evidence.md)
 - The same Psalms 1 to 150 sleep reading you already passed on Nov 28 (8:48:36, 1080p, 16:9, KJV, one narrator). Neko watched the plain version on his phone and said it plays but "it's just the reading, not a video", and asked for "Visuals".
 - ONLY THE PICTURE CHANGED. The audio is the same stream: I compared the packet checksum of the audio in this file against the passed master and they match (MD5 46a3bd48e14ac0671c87b06d2039991a in both, see evidence.md). So your earlier audio verdicts (joins, spot clips, level, end tail) stand and are not re-asked here.
 - New picture: the gold title card "The Book of Psalms / Psalms 1 to 150 . King James Version . for rest" for the first 54 s, a slow 12 s dissolve into scene 1, then 66 calm, dim, still scenes (night hills under a moon, still water with moon path, mist mountains, cedar ridges at dusk, dunes at dusk, Milky Way, dusk clouds, sunset sea, a lone tree at dusk, soft warm or cool bokeh lights, twilight pasture, dawn glow). Each holds about 7 min 45 s, then a 12 s dissolve to the next. The last scene holds to 8:47:36 and fades to black over the final 60 s.
 - All pictures are drawn in code (free, no credits, no people, no animals, no text, no logos, no brands, no Bible book art). Dim on purpose for sleep: average brightness about 25 of 255.
 - 1 frame per second (our sleep-reading standard); the file is H.264 High, 1080p, AAC-LC audio with a proper audio config (plays on phones; the earlier "can't play" problem was fixed in the plain version and the same method is used here).
 
-## Files (all in this folder; review copies are 480p, the real master is the 524 MB 1080p file)
+## Files (all in this folder; review copies are 480p, the real master is the 455 MiB 1080p file (v2))
 - contact-66-scenes.jpg: one frame from the middle of every scene, taken FROM the finished file. Left to right, top to bottom, 11 per row, 6 rows = scenes 1 to 66.
 - scene-times.md: when each scene is fully on screen and when each dissolve runs.
 - sample-start-0m-to-2m.mp4: first 2 minutes (title card, dissolve at 0:54 to 1:06 into scene 1, narrator starts the title and Psalm 1).

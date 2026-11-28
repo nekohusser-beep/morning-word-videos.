@@ -16,13 +16,15 @@ jobs:
         with:
           sparse-checkout: tools/rel.sh
           sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
       - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
       - name: seed-vc + cpu torch + weights
         run: |
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
           git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
           cd sv; git rev-parse HEAD | tee ../seedvc.sha
-          pip install -q torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu > ../log.txt 2>&1
+          pip install -q torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu > ../log.txt 2>&1 || (tail -40 ../log.txt; exit 1)
           grep -v -i -E '^(--extra-index-url|torch|torchvision|torchaudio)' requirements.txt > ../req2.txt
           pip install -q -r ../req2.txt >> ../log.txt 2>&1 || (tail -40 ../log.txt; true)
           ffmpeg -v error -y -f lavfi -i "sine=f=180:d=3" -ar 22050 -ac 1 ../src.wav

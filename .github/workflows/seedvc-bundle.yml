@@ -1,0 +1,47 @@
+name: seedvc-bundle
+# Packages the PUBLIC Seed-VC model weights and CPU torch wheels (cp311) into the draft release `seedvc-bundle`,
+# so conversions can run where huggingface.co is not reachable. No voices, no references, nothing personal goes through here.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: tools/rel.sh
+          sparse-checkout-cone-mode: false
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg libsndfile1 >/dev/null
+      - name: seed-vc + cpu torch + weights
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
+          git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
+          cd sv; git rev-parse HEAD | tee ../seedvc.sha
+          pip install -q torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu > ../log.txt 2>&1
+          grep -v -i -E '^(--extra-index-url|torch|torchvision|torchaudio)' requirements.txt > ../req2.txt
+          pip install -q -r ../req2.txt >> ../log.txt 2>&1 || (tail -40 ../log.txt; true)
+          ffmpeg -v error -y -f lavfi -i "sine=f=180:d=3" -ar 22050 -ac 1 ../src.wav
+          ffmpeg -v error -y -f lavfi -i "sine=f=140:d=6" -ar 22050 -ac 1 ../ref.wav
+          mkdir -p ../tmpo
+          python inference.py --source ../src.wav --target ../ref.wav --output ../tmpo --diffusion-steps 4 --length-adjust 1.0 --inference-cfg-rate 0.7 --f0-condition False --fp16 False >> ../log.txt 2>&1 || (tail -60 ../log.txt; exit 1)
+          ls ../tmpo; du -sh checkpoints ~/.cache/huggingface 2>/dev/null || true
+      - name: package
+        run: |
+          mkdir -p bundle/wheels
+          pip download -q --no-deps --only-binary=:all: --python-version 3.11 --implementation cp --abi cp311 --platform linux_x86_64 \
+            --index-url https://download.pytorch.org/whl/cpu -d bundle/wheels torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0
+          ls -la bundle/wheels
+          cp req2.txt seedvc.sha bundle/
+          L="-C sv checkpoints"; [ -d ~/.cache/huggingface ] && L="$L -C $HOME .cache/huggingface"
+          tar -czf bundle/weights.tgz $L
+          ls -la bundle
+          cd bundle && split -b 1500m -d weights.tgz weights.tgz.part && rm weights.tgz && ls -la
+      - name: upload
+        run: |
+          bash tools/rel.sh ensure seedvc-bundle >/dev/null
+          bash tools/rel.sh up seedvc-bundle bundle/wheels/* bundle/req2.txt bundle/seedvc.sha bundle/weights.tgz.part*

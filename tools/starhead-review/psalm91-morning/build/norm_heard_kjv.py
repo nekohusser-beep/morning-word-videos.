@@ -27,5 +27,6 @@ for op,i1,i2,j1,j2 in sm.get_opcodes():
     if hh==w: res+=S[i1:i2]; lines.append(f"digits vs words: wrote '{w}' / heard '{h}'"); continue
     if op=='replace' and len(S[i1:i2])==len(A[j1:j2]) and all(KJV_SPELL.get(x)==y for x,y in zip(A[j1:j2],S[i1:i2])): res+=S[i1:i2]; lines.append(f"KJV spelling, same sound: wrote '{w}' / heard '{h}'"); continue
     if op=='replace' and eq_b(i1,i2): res+=S[i1:i2]; lines.append(f"second pass heard it as written: wrote '{w}' / first pass heard '{h}'"); continue
+    if op=='insert' and (j2-j1)==1 and eq_b(i1,i2): lines.append(f"stray word, second pass did not hear it (model artifact, ASR-only; ask the human ear): first pass inserted '{h}' after '{' '.join(S[max(0,i1-3):i1])}'"); continue
     res+=A[j1:j2]; lines.append(f"LEFT AS DIFF: {op} wrote '{w}' / heard '{h}'")
 open(out,'w').write(' '.join(res)+'\n'); open(log,'w').write('\n'.join(lines)+'\n'); print('\n'.join(lines) or 'no differences')

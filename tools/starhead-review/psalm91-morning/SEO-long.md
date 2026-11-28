@@ -1,4 +1,7 @@
-# Psalm 91 morning prayer (long) SEO package. IQ Vid, Nov 27 2026. NOT posted. Waits on Starhead's PASS, then Neko's yes on the exact file.
+# Psalm 91 morning prayer (long) SEO package. IQ Vid, Nov 27 2026; Round 3 edit Nov 28 2026 (avatar open and prayer close). NOT posted. Waits on Starhead's PASS, then Neko's yes on the exact file.
+
+## At upload (Round 3)
+- YouTube Studio > Details > "Altered content": answer YES (realistic AI-generated presenter, and the presenter's voice is AI voice conversion). The description carries the disclosure line too.
 
 ## Title
 - A (use): **Dreading Today? Psalm 91 Prayer Before You Walk Out** (51 characters). IQ Vid 88. Leads with the viewer's pain; "psalm 91 prayer" sits in the first 40 characters.
@@ -28,7 +31,7 @@ CHAPTERS
 3:48 The LORD thy habitation (verses 9-10)
 4:40 He shall give his angels charge (verses 11-13)
 5:46 God speaks: I will be with him in trouble
-6:47 A morning prayer for protection
+6:46 A morning prayer for protection
 
 SCRIPTURE (KJV)
 Psalm 91:1-2: "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust."
@@ -36,7 +39,7 @@ Psalm 91:15: "He shall call upon me, and I will answer him: I will be with him i
 Proverbs 18:10: "The name of the LORD is a strong tower: the righteous runneth into it, and is safe."
 John 16:33: "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world."
 
-Blessed Prayers shares the Word of God for everyday life. The narration voice is AI-generated and the footage is licensed stock.
+Blessed Prayers shares the Word of God for everyday life. The host in the opening and the closing prayer is an AI-generated version of Neko, speaking in his voice. The teaching narration is AI-generated and the footage is licensed stock.
 
 #Psalm91 #MorningPrayer #PrayerForProtection #KJV #BlessedPrayers
 ```

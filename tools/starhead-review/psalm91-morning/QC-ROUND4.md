@@ -1,0 +1,8 @@
+# STARHEAD QC JOB, ROUND 4: Psalm 91 "Before You Walk Out the Door" (Nov 28 2026, from Claude)
+Neko asked for three changes to the Round 3 version you passed. Check these, then confirm nothing else moved.
+1. ALL the narration is now Neko's voice (Seed-VC conversion of every narration and Scripture line, same timing as before, so captions and Scripture cards line up exactly as in Round 2/3). Listen for: anything that sounds airy, robotic, or not like the same man as the opening and closing; any word that sounds wrong. Machine check: every word heard as written (Parakeet), only KJV spellings honour/shew written as honor/show by the recognizer. One line ("You have help you can't see", about 5:14) was re-voiced because the conversion made it sound like "helped"; confirm it sounds right.
+2. The "airy" background: the converted voice is cleaned (noise reduction + silence gating between words). Tell us if you still hear hiss or breath in the pauses.
+3. The echo on "Amen": the prayer's "Amen" (about 7:24) is now followed by a 1.3 s quiet beat (Neko smiling) before he says "Type amen, and send this to a friend who needs it." Confirm it no longer sounds like an echo.
+Also: the AIRBUS / BOEING 747 poster lettering is blurred in every avatar shot (please look at 0:00-0:36 and 6:46-7:37). Description's last line updated: all speaking is Neko's voice made with AI voice conversion.
+Files: long-review-480p.mp4, contact-long-r4.jpg, proof-long.md (10 of 10 PASS), SEO-long.md, in this folder.
+Answer: A picture, B audio/voice, C captions, D Scripture cards, E the Amen pause, F description true to the video, then overall PASS or FAIL with a timestamp for every FAIL.

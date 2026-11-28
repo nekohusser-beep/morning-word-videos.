@@ -43,7 +43,7 @@ Psalm 91:15: "He shall call upon me, and I will answer him: I will be with him i
 Proverbs 18:10: "The name of the LORD is a strong tower: the righteous runneth into it, and is safe."
 John 16:33: "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world."
 
-Blessed Prayers shares the Word of God for everyday life. The host in the opening and the closing prayer is an AI-generated version of Neko, speaking in his voice. The teaching narration is AI-generated and the footage is licensed stock.
+Blessed Prayers shares the Word of God for everyday life. The host in the opening and the closing prayer is an AI-generated version of Neko. All of the speaking, the teaching included, is Neko's own voice made with AI voice conversion, and the footage is licensed stock.
 
 #Psalm91 #MorningPrayer #PrayerForProtection #TrustInGod #KJV #BlessedPrayers
 ```

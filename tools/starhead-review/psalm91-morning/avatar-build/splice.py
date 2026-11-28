@@ -3,11 +3,12 @@ import json,subprocess,re,os,sys
 import sherpa_onnx, soundfile as sf, numpy as np
 os.chdir('/home/claude/ps91av')
 B=json.load(open('bnd.json')); MS=B['bnd']['2']; ME=B['bnd']['28']
-MASTER='/home/claude/ps91m/Psalm-91-Before-You-Walk-Out-the-Door.mp4'
+MASTER=os.environ.get('MASTER','/home/claude/ps91m/Psalm-91-Before-You-Walk-Out-the-Door.mp4')
 d='/home/claude/vet/models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8'
 R=sherpa_onnx.OfflineRecognizer.from_transducer(encoder=f'{d}/encoder.int8.onnx',decoder=f'{d}/decoder.int8.onnx',joiner=f'{d}/joiner.int8.onnx',tokens=f'{d}/tokens.txt',model_type='nemo_transducer',num_threads=2)
 OPEN=['o1','o2','o3','o4','o5']; CLOSE=['c1','c2','c3','c4','c5','c6','c7']
 CUT_END={'c6':6.28}
+HOLD={'c6':1.2}  # quiet beat after the prayer's Amen so the closer's 'Type amen' does not sound like an echo
 def words(clip):
     subprocess.check_call(['ffmpeg','-y','-loglevel','error','-i',f'clip_{clip}.mp4','-vn','-ac','1','-ar','16000','/tmp/w.wav'])
     a,sr=sf.read('/tmp/w.wav',dtype='float32'); s=R.create_stream(); s.accept_waveform(sr,a); R.decode_stream(s)
@@ -48,11 +49,13 @@ def build_part(name,clips,tail=0.0):
     # video/audio graph
     ins=[];fc=[];cum=0;offs=[]
     for k,(c,st,en,tw,times) in enumerate(info):
-        D=en-st; hold=tail if (k==len(info)-1) else 0
-        ins+=['-ss',f'{st:.3f}','-t',f'{D:.3f}','-i',f'clip_{c}.mp4']
-        fc.append(f"[{k}:v]fps=30,scale=1920:1080:flags=lanczos,unsharp=5:5:0.6,setsar=1,format=yuv420p,trim=duration={D:.3f},setpts=PTS-STARTPTS"+(f",tpad=stop_mode=clone:stop_duration={hold:.2f}" if hold else "")+f"[v{k}]")
-        fc.append(f"[{k}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=duration={D:.3f},asetpts=PTS-STARTPTS"+(f",apad=pad_dur={hold:.2f}" if hold else "")+f"[a{k}]")
+        D0=en-st; hold=tail if (k==len(info)-1) else HOLD.get(c,0)
+        ins+=['-ss',f'{st:.3f}','-t',f'{D0:.3f}','-i',f'clip_{c}.mp4']
+        D=D0 if k==len(info)-1 else D0+hold
+        fc.append(f"[{k}:v]fps=30,scale=1920:1080:flags=lanczos,unsharp=5:5:0.6,setsar=1,format=yuv420p,trim=duration={D0:.3f},setpts=PTS-STARTPTS"+(f",tpad=stop_mode=clone:stop_duration={hold:.2f}" if hold else "")+f"[v{k}]")
+        fc.append(f"[{k}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=duration={D0:.3f},asetpts=PTS-STARTPTS"+(f",apad=pad_dur={hold:.2f}" if hold else "")+f"[a{k}]")
         offs.append(cum); cum+=D-X
+        if k==len(info)-1: cum+=0  # tail added below
     total=cum+X+tail
     lv='v0';la='a0';o=0
     for k in range(1,len(info)):

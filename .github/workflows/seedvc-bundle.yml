@@ -24,9 +24,12 @@ jobs:
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
           git clone --depth 1 https://github.com/Plachtaa/seed-vc.git sv
           cd sv; git rev-parse HEAD | tee ../seedvc.sha
-          pip install -q torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu > ../log.txt 2>&1 || (tail -40 ../log.txt; exit 1)
-          grep -v -i -E '^(--extra-index-url|torch|torchvision|torchaudio)' requirements.txt > ../req2.txt
+          pip install -q torch==2.4.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu > ../log.txt 2>&1 || (tail -40 ../log.txt; exit 1)
+          grep -v -i -E '^(--extra-index-url|torch|torchvision|torchaudio)' requirements.txt > ../req2.txt; echo '--- requirements'; cat ../req2.txt
           pip install -q -r ../req2.txt >> ../log.txt 2>&1 || (tail -40 ../log.txt; true)
+          pip uninstall -y torchvision >/dev/null 2>&1 || true
+          pip list 2>/dev/null | grep -i -E '^(torch|torchaudio|torchvision|transformers|numpy) '
+          python -c 'import torch;print(torch.__version__)' | grep -q '^2.4.0' || pip install -q --no-deps --force-reinstall torch==2.4.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cpu
           ffmpeg -v error -y -f lavfi -i "sine=f=180:d=3" -ar 22050 -ac 1 ../src.wav
           ffmpeg -v error -y -f lavfi -i "sine=f=140:d=6" -ar 22050 -ac 1 ../ref.wav
           mkdir -p ../tmpo
@@ -36,7 +39,7 @@ jobs:
         run: |
           mkdir -p bundle/wheels
           pip download -q --no-deps --only-binary=:all: --python-version 3.11 --implementation cp --abi cp311 --platform linux_x86_64 \
-            --index-url https://download.pytorch.org/whl/cpu -d bundle/wheels torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0
+            --index-url https://download.pytorch.org/whl/cpu -d bundle/wheels torch==2.4.0 torchaudio==2.4.0
           ls -la bundle/wheels
           cp req2.txt seedvc.sha bundle/
           L="-C sv checkpoints"; [ -d ~/.cache/huggingface ] && L="$L -C $HOME .cache/huggingface"

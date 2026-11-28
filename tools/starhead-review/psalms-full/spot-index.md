@@ -44,7 +44,7 @@ Each clip is 9 s of the real master audio (starts 3.5 s before the word). Clip n
 | 39 | 4:47:40 to 4:47:49 (word near 4:47:44) | zalmunna | salmanah / salmonah | ...princes as zebah and as zalmunna who said let us take... |
 | 40 | 4:57:53 to 4:58:02 (word near 4:57:57) | holpen | halped in / haste halp in | ...ashamed because thou lord hast holpen me and comforted me psalm... |
 | 41 | 5:40:26 to 5:40:35 (word near 5:40:30) | answeredst | answereths / answerest | ...that he gave them thou answeredst them o lord our god... |
-| 42 | 5:50:12 to 5:50:21 (word near 5:50:16) | lovingkindness and tender mercies who satisfieth thy mouth with good | loving / his benefits | ...destruction who crowneth thee with lovingkindness and tender mercies who satisfieth thy mouth with good things so that thy youth... |
+| 42 | 5:50:12 to 5:50:21 (RE-CUT: spot-42-lovingkindness-recut.mp4, 5:50:03.5 to 5:50:14.5, word "lovingkindness" at about 5:50:07) | lovingkindness and tender mercies who satisfieth thy mouth with good | loving / his benefits | ...destruction who crowneth thee with lovingkindness and tender mercies who satisfieth thy mouth with good things so that thy youth... |
 | 43 | 5:54:47 to 5:54:56 (word near 5:54:50) | coveredst | coverest / coverest | ...be removed for ever thou coveredst it with the deep as... |
 | 44 | 5:55:22 to 5:55:31 (word near 5:55:26) | a bound | about / about | ...for them thou hast set a bound that they may not pass... |
 | 45 | 5:57:17 to 5:57:26 (word near 5:57:20) | conies | canines / canaes | ...and the rocks for the conies he appointed the moon for... |

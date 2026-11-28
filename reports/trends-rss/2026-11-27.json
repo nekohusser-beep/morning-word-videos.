@@ -1,206 +1,206 @@
 {
  "geo": "US",
- "made_utc": "2026-11-27T19:41:27",
+ "made_utc": "2026-11-28T02:59:48",
  "items": [
   {
-   "query": "app state vs south alabama",
-   "traffic": "2000+",
-   "pubDate": "Fri, 27 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "App State vs South Alabama Prediction, Pick, College Football Odds for Friday, Nov. 27",
-     "source": "Yahoo Sports"
-    },
-    {
-     "title": "Scouting report: What you need to know for South Alabama\u2019s game vs. Appalachian State",
-     "source": "AL.com"
-    },
-    {
-     "title": "Mountaineers aim to conquer Jaguars\u2019 territory in season finale",
-     "source": "The Appalachian Online"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "panthers vs capitals",
-   "traffic": "1000+",
-   "pubDate": "Fri, 27 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "Caps Power Play Quietly Surging",
-     "source": "NHL.com"
-    },
-    {
-     "title": "How to watch Panthers vs. Capitals: TV channel and streaming options for November 27 - The Athletic",
-     "source": "The New York Times"
-    },
-    {
-     "title": "Florida visits Washington in Eastern Conference action",
-     "source": "AP News"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "levante - racing de santander",
-   "traffic": "2000+",
-   "pubDate": "Fri, 27 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "Levante vs Racing de Santander: horario y d\u00f3nde ver hoy por TV y online el partido de LaLiga 2026/27",
-     "source": "DAZN"
-    },
-    {
-     "title": "Demasiada rabia como para caer en la frustraci\u00f3n",
-     "source": "Superdeporte"
-    },
-    {
-     "title": "La previa: Levante UD-Real Racing Club",
-     "source": "Levante UD | Web Oficial"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "canucks vs flyers",
-   "traffic": "2000+",
-   "pubDate": "Fri, 27 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "Matvei Michkov Suspended by Flyers For Canucks Game, Latest NHL Rumors Amid Trade Buzz",
-     "source": "Bleacher Report"
-    },
-    {
-     "title": "Flyers\u2019 Matvei Michkov scratched vs. Canucks due to internal team matter",
-     "source": "The New York Times"
-    },
-    {
-     "title": "Flyers\u2019 Michkov removed from Canucks game over \u2018internal team matter\u2019",
-     "source": "TSN"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "red wings vs blue jackets",
-   "traffic": "1000+",
-   "pubDate": "Fri, 27 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "Columbus Blue Jackets Lines, Defensive Pairings, & Scratches For Tonight's Game vs. Detroit Red Wings",
-     "source": "Yahoo Sports"
-    },
-    {
-     "title": "Red Wings at Blue Jackets projected lineups",
-     "source": "NHL.com"
-    },
-    {
-     "title": "How to watch Red Wings vs. Blue Jackets: TV channel and streaming options for November 27",
-     "source": "The New York Times"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "venezia vs bologna",
-   "traffic": "500+",
-   "pubDate": "Fri, 27 Nov 2026 11:10:00 -0800",
-   "news": [
-    {
-     "title": "Venezia vs Bologna Live Stream: How to Watch Italian Serie A in Canada (Nov. 27, 2026)",
-     "source": "Fubo"
-    },
-    {
-     "title": "\u2705 Official Venezia-Bologna teams: Orsolini out! The Adams and Zortea call",
-     "source": "Yahoo Sports"
-    },
-    {
-     "title": "November 27, 2026: Venezia FC vs Bologna FC 1909: Total Goals Prediction Market",
-     "source": "Robinhood"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "nottm forest vs chelsea",
-   "traffic": "10000+",
-   "pubDate": "Fri, 27 Nov 2026 11:00:00 -0800",
-   "news": [
-    {
-     "title": "Nottingham Forest vs Chelsea LIVE: Premier League score, lineups, commentary & updates",
-     "source": "BBC"
-    },
-    {
-     "title": "Nottingham Forest vs. Chelsea LIVE: Premier League score, updates and commentary",
-     "source": "ESPN"
-    },
-    {
-     "title": "Chavarria: We're going to treat it like it's the last game we play | News | Official Site",
-     "source": "Chelsea Football Club"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "tim tawa",
+   "query": "snow",
    "traffic": "5000+",
-   "pubDate": "Fri, 27 Nov 2026 10:40:00 -0800",
+   "pubDate": "Fri, 27 Nov 2026 18:40:00 -0800",
    "news": [
     {
-     "title": "C Davis -- 2021 No. 1 pick -- headed to Arizona; Bucs get utility man Tawa (source)",
-     "source": "MLB.com"
+     "title": "Timing, totals, impacts: Snow, high winds Saturday in Colorado mountains",
+     "source": "KDVR"
     },
     {
-     "title": "Pirates reportedly trading former first-overall pick Henry Davis to Arizona",
+     "title": "Colorado storm to bring heavy snow, strong winds and dangerous holiday travel Saturday",
      "source": "CBS News"
     },
     {
-     "title": "Diamondbacks make trade, acquire former No. 1 overall pick from Pirates",
+     "title": "Resort could get 15\u2033 of snow in change of pace for Colorado",
+     "source": "Denver Gazette"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "heat game",
+   "traffic": "500+",
+   "pubDate": "Fri, 27 Nov 2026 18:40:00 -0800",
+   "news": [
+    {
+     "title": "Miami Heat vs. New York Knicks Live NBA Updates, Scores and Highlights",
+     "source": "Bleacher Report"
+    },
+    {
+     "title": "Game Preview: Knicks vs. Heat, November 27, 2026",
+     "source": "Posting and Toasting"
+    },
+    {
+     "title": "Knicks on the Court: Sunday, November 27 vs. Miami Heat",
+     "source": "NBA.com"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "isaiah joe",
+   "traffic": "200+",
+   "pubDate": "Fri, 27 Nov 2026 18:40:00 -0800",
+   "news": [
+    {
+     "title": "Pistons' Isaiah Joe: Late scratch Friday",
+     "source": "CBS Sports"
+    },
+    {
+     "title": "Isaiah Joe News: Late scratch Friday",
+     "source": "RotoWire"
+    },
+    {
+     "title": "Pistons vs Magic final score: Detroit\u2019s dominant defense shows up with Cade Cunningham sidelined",
+     "source": "Detroit Bad Boys"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "hiromi itoh",
+   "traffic": "2000+",
+   "pubDate": "Fri, 27 Nov 2026 18:30:00 -0800",
+   "news": [
+    {
+     "title": "Japanese Free Agent Linked to Red Sox in Boston's Rotation Pursuit",
+     "source": "NESN"
+    },
+    {
+     "title": "Cubs reach agreement with right-hander Hiromi Itoh",
+     "source": "NBC Sports"
+    },
+    {
+     "title": "With Teruaki Sato and Kaima Taira off the board, don't sleep on Japanese pitcher Hiromi Itoh",
+     "source": "Yahoo Sports"
+    }
+   ],
+   "hook": true
+  },
+  {
+   "query": "knicks vs miami heat match player stats",
+   "traffic": "500+",
+   "pubDate": "Fri, 27 Nov 2026 18:30:00 -0800",
+   "news": [
+    {
+     "title": "San Antonio Spurs vs Portland Trail Blazers Nov 25, 2026 Box Scores",
+     "source": "NBA.com"
+    },
+    {
+     "title": "Phoenix Suns vs Houston Rockets Nov 25, 2026 Box Scores",
+     "source": "NBA.com"
+    },
+    {
+     "title": "Phoenix Suns vs Houston Rockets Nov 25, 2026 Play-by-Play",
+     "source": "NBA.com"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "michael hawkins jr",
+   "traffic": "500+",
+   "pubDate": "Fri, 27 Nov 2026 18:20:00 -0800",
+   "news": [
+    {
+     "title": "Mike Hawkins\u2019 Status Makes QB Situation Clear for Friday Night",
+     "source": "WV Sports Now"
+    },
+    {
+     "title": "The health of Michael Hawkins Jr. is in question heading into the season finale",
+     "source": "247Sports"
+    },
+    {
+     "title": "Scotty Fox Leads West Virginia Against Utah as Backups Gain Roles",
+     "source": "bsinews.id"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "rafael caro quintero",
+   "traffic": "500+",
+   "pubDate": "Fri, 27 Nov 2026 18:20:00 -0800",
+   "news": [
+    {
+     "title": "Estados Unidos sopesa un acuerdo con Rafael Caro Quintero para evitar el juicio; esto se sabe",
+     "source": "Telemundo"
+    },
+    {
+     "title": "La Fiscal\u00eda de Nueva York ofrece a la defensa de Caro Quintero un posible acuerdo de culpabilidad",
+     "source": "Univision"
+    },
+    {
+     "title": "Justicia de EEUU ofrece un posible acuerdo de culpabilidad a Caro Quintero",
+     "source": "Infobae"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "kris murray",
+   "traffic": "500+",
+   "pubDate": "Fri, 27 Nov 2026 18:20:00 -0800",
+   "news": [
+    {
+     "title": "Memphis Grizzlies @ Minnesota Timberwolves Odds",
+     "source": "FanDuel Sportsbook"
+    },
+    {
+     "title": "Game Preview #20: Wolves vs Grizzlies Game Thread",
+     "source": "Canis Hoopus"
+    },
+    {
+     "title": "Grizzlies and Timberwolves face off in winner-take-all NBA Cup game",
+     "source": "The Commercial Appeal"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "steve sarkisian",
+   "traffic": "1000+",
+   "pubDate": "Fri, 27 Nov 2026 18:10:00 -0800",
+   "news": [
+    {
+     "title": "Sarkisian proud of offensive line ahead of tough challenge against Texas A&M defense",
+     "source": "KXAN Austin"
+    },
+    {
+     "title": "Live notes from Steve Sarkisian's Monday press conferenceVIP",
+     "source": "247Sports"
+    },
+    {
+     "title": "Sarkisian takes responsibility, admits to 'lull' in middle of the season and need to 'get to one and zero' this week",
+     "source": "On3"
+    }
+   ],
+   "hook": false
+  },
+  {
+   "query": "jose alvarado",
+   "traffic": "500+",
+   "pubDate": "Fri, 27 Nov 2026 18:10:00 -0800",
+   "news": [
+    {
+     "title": "Player Grades: Cavs at Knicks - Another fourth quarter implosion",
+     "source": "Fear The Sword"
+    },
+    {
+     "title": "Knicks on the Court: Sunday, November 25 vs. Cleveland Cavaliers",
+     "source": "NBA.com"
+    },
+    {
+     "title": "3 Takeaways From Cavaliers\u2019 121-102 Loss to Knicks After 39-17 Fourth",
      "source": "Yahoo Sports"
     }
    ],
    "hook": false
-  },
-  {
-   "query": "jojo siwa",
-   "traffic": "2000+",
-   "pubDate": "Fri, 27 Nov 2026 10:40:00 -0800",
-   "news": [
-    {
-     "title": "JoJo Siwa and Chris Hughes Split After a Year and a Half Together: \u2018She Needed to Choose Herself\u2019 (Exclusive Source)",
-     "source": "People.com"
-    },
-    {
-     "title": "JoJo Siwa and Chris Hughes split just days after she issued brutal baby ultimatum",
-     "source": "Yahoo"
-    },
-    {
-     "title": "Jojo Siwa & Chris Hughes: Romance Rewind",
-     "source": "E! News"
-    }
-   ],
-   "hook": false
-  },
-  {
-   "query": "storm",
-   "traffic": "20000+",
-   "pubDate": "Fri, 27 Nov 2026 10:40:00 -0800",
-   "news": [
-    {
-     "title": "Thanksgiving storm moves to Northeast, bringing snow, winds, flooding",
-     "source": "The Weather Channel"
-    },
-    {
-     "title": "When and where storms could slow your post-Thanksgiving travel",
-     "source": "CNN"
-    },
-    {
-     "title": "Hundreds of thousands on East Coast remain without power after Thanksgiving storm",
-     "source": "The Washington Post"
-    }
-   ],
-   "hook": true
   }
  ]
 }

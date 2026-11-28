@@ -1,4 +1,4 @@
-# Psalm 91 morning prayer (long) SEO package. IQ Vid, Nov 27 2026; Round 3 edit Nov 28 2026 (avatar open and prayer close). NOT posted. Waits on Starhead's PASS, then Neko's yes on the exact file.
+# Psalm 91 morning prayer (long) SEO package. Description rewritten Nov 28 2026 5:30 AM ET in the style Neko picked (God Is With Us, EnoNrmqPn_8): opening claim, what we do in the video, emoji call lines; leaning on the Lord in all things, from the first breath and getting out of bed. IQ Vid, Nov 27 2026; Round 3 edit Nov 28 2026 (avatar open and prayer close). NOT posted. Waits on Starhead's PASS, then Neko's yes on the exact file.
 
 ## At upload (Round 3)
 - YouTube Studio > Details > "Altered content": answer YES (realistic AI-generated presenter, and the presenter's voice is AI voice conversion). The description carries the disclosure line too.
@@ -15,13 +15,17 @@
 
 ## Description (paste as is)
 ```
-Dreading today? Pray this Psalm 91 prayer before you walk out the door. Psalm 91 is the Bible's prayer for protection, and this morning we read it slow, in the King James Version, and pray it over the day in front of you.
+Dreading today? Pray this Psalm 91 prayer with me. Psalm 91 is the Bible's great prayer for God's protection, and here we read it slowly in the King James Version, walk through what each verse means, and pray it over the day in front of you.
 
-Maybe it's an email you don't want to open, a long drive, or a talk you keep putting off. This psalm is for the person standing at that door. We start with the secret place of the most High and what it means to dwell there on an ordinary morning, not only when something breaks. Then comes the snare of the fowler, the trap you never saw coming, and the picture of being covered under His wings.
+This psalm was never meant only for the doorway. The word dwelleth means somebody who lives there, not somebody who stops by when the car breaks down. Leaning on the Lord starts with the first breath He gives you in the morning, before your feet ever hit the floor, and it carries you through the drive, the email you dread, the conversation you keep putting off, and the hours nobody sees.
 
-Verses 5 through 8 name the night, the day, the darkness and noon, so no hour is left out. We read what Jesus said in John 16:33, then Proverbs 18:10, the angels God gives charge over you, a careful note about how the devil twisted these same verses, and the moment in verse 14 where God Himself starts to talk.
+We start in the secret place of the most High, then the snare of the fowler and the picture of being covered under His wings. Verses 5 through 8 name the night, the day, the darkness and noon, so no hour of your day is left out. We read the words of Jesus in John 16:33 and Proverbs 18:10, the angels God gives charge over you, a careful note on how the devil twisted these same verses at the temple, and the moment in verse 14 where God Himself starts to talk.
 
-We close with a prayer for protection over your house, your family and your day, in the name of Jesus Christ. If it helped you, type amen below and send it to a friend who needs it.
+We close with a prayer for protection over your house, your family and your day, in the name of Jesus Christ.
+
+🙏 Let this psalm go with you, every breath of the day.
+📖 Pray it out loud, and come back to it whenever fear starts talking.
+🔔 Type amen, and send this to a friend who needs it.
 
 CHAPTERS
 0:00 Before you walk out the door
@@ -41,7 +45,7 @@ John 16:33: "These things I have spoken unto you, that in me ye might have peace
 
 Blessed Prayers shares the Word of God for everyday life. The host in the opening and the closing prayer is an AI-generated version of Neko, speaking in his voice. The teaching narration is AI-generated and the footage is licensed stock.
 
-#Psalm91 #MorningPrayer #PrayerForProtection #KJV #BlessedPrayers
+#Psalm91 #MorningPrayer #PrayerForProtection #TrustInGod #KJV #BlessedPrayers
 ```
 
 ## Tags

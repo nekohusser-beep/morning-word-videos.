@@ -1,0 +1,35 @@
+{
+ "job": {
+  "video_id": "8n0rZETpa6U",
+  "tags": [
+   "isaiah 41:10",
+   "isaiah 41 10",
+   "isaiah 41:10 kjv",
+   "fear thou not for i am with thee",
+   "fear not for i am with you",
+   "i will strengthen thee",
+   "morning prayer for today",
+   "good morning prayer for today",
+   "short morning prayer for today",
+   "morning prayer",
+   "bible verse of the day",
+   "kjv bible verses",
+   "kjv",
+   "blessed prayers"
+  ]
+ },
+ "results": [
+  {
+   "video_id": "8n0rZETpa6U",
+   "mode": "apply",
+   "time_utc": "2026-11-28T02:50:20",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "Morning Prayer for Today | Isaiah 41:10 KJV",
+   "rollback": "reports/yt-push/rollback/8n0rZETpa6U-20261128-025020.json"
+  }
+ ]
+}

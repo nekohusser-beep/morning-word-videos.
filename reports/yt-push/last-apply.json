@@ -1,19 +1,30 @@
 {
- "mCmD8tiJXec-v3b-schedule-thumb-20261127.json": [
+ "8n0rZETpa6U-202611272215.json": [
   {
-   "video_id": "mCmD8tiJXec",
+   "video_id": "8n0rZETpa6U",
    "mode": "apply",
-   "time_utc": "2026-11-27T20:14:10",
+   "time_utc": "2026-11-28T02:50:20",
    "changed": [
-    "scheduled for 2026-11-28T00:30:00Z",
-    "thumbnail"
+    "tags"
    ],
-   "skipped": [
-    "metadata already matches"
-   ],
+   "skipped": [],
    "errors": [],
-   "live_title": "What Did Jesus Do in Hell for 3 Days? Psalm 16:10",
-   "rollback": "reports/yt-push/rollback/mCmD8tiJXec-20261127-201410.json"
+   "live_title": "Morning Prayer for Today | Isaiah 41:10 KJV",
+   "rollback": "reports/yt-push/rollback/8n0rZETpa6U-20261128-025020.json"
+  }
+ ],
+ "XbxECeoZEUc-202611272215.json": [
+  {
+   "video_id": "XbxECeoZEUc",
+   "mode": "apply",
+   "time_utc": "2026-11-28T02:50:29",
+   "changed": [
+    "tags"
+   ],
+   "skipped": [],
+   "errors": [],
+   "live_title": "The Fire Bent Around Him | Polycarp of Smyrna #shorts",
+   "rollback": "reports/yt-push/rollback/XbxECeoZEUc-20261128-025029.json"
   }
  ]
 }

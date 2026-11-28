@@ -1,5 +1,5 @@
 # PROOF PACK for Psalm-91-Neko-Voice-Final.mp4
-built Nov 28 2026 08:12 AM ET | sha256 0f2fa863a399510a... | 283698060 bytes
+built Nov 28 2026 09:13 AM ET | sha256 5bcd446a2361eb9f... | 283696779 bytes
 
 | # | Check | Result |
 |---|---|---|
@@ -21,7 +21,7 @@ duration 456.96s | video h264 1920x1080 | audio aac 48000 Hz
 ```
 ### 2. LOUDNESS (-14 LUFS +/-2, true peak at or under -1 dB): PASS
 ```
-integrated -14.25 LUFS | true peak -1.8 dBTP | LRA 4.50
+integrated -14.05 LUFS | true peak -1.63 dBTP | LRA 3.80
 ```
 ### 3. BLACK FRAMES (none in the middle of the video): PASS
 ```
@@ -33,7 +33,7 @@ none found (silencedetect -50 dB, 1 s). A voice dropout under a music bed is NOT
 ```
 ### 5. FRAMES (first, quarter, middle, three-quarter, last saved for the reviewer to LOOK at): PASS
 ```
-5/5 frames in proof_v4/frames; contact sheet proof_v4/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
+5/5 frames in proof_v5/frames; contact sheet proof_v5/contact.png. Face, outfit, set, text, banned picture: reviewer eyes, not a script.
 ```
 ### 6. BANNED PHRASES (tools/humanize/gate.py on the script): PASS
 ```

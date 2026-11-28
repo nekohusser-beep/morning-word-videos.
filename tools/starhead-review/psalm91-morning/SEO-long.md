@@ -19,7 +19,7 @@ Dreading today? Pray this Psalm 91 prayer with me. Psalm 91 is the Bible's great
 
 This psalm was never meant only for the doorway. The word dwelleth means somebody who lives there, not somebody who stops by when the car breaks down. Leaning on the Lord starts with the first breath He gives you in the morning, before your feet ever hit the floor, and it carries you through the drive, the email you dread, the conversation you keep putting off, and the hours nobody sees.
 
-We start in the secret place of the most High, then the snare of the fowler and the picture of being covered under His wings. Verses 5 through 8 name the night, the day, the darkness and noon, so no hour of your day is left out. We read the words of Jesus in John 16:33 and Proverbs 18:10, the angels God gives charge over you, a careful note on how the devil twisted these same verses at the temple, and the moment in verse 14 where God Himself starts to talk.
+We start in the secret place of the most High, then the snare of the fowler and the picture of being covered under His wings. Verses 5 through 8 name the night, the day, the darkness and noon, so no hour of your day is left out. We read the words of Jesus in John 16:33, the strong tower of Proverbs 18:10, the angels God gives charge over you, a careful note on how the devil twisted these same verses at the temple, and the moment in verse 14 where God Himself starts to talk.
 
 We close with a prayer for protection over your house, your family and your day, in the name of Jesus Christ.
 

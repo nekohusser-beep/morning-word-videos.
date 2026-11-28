@@ -1,0 +1,98 @@
+{
+ "raw/Man_praying_aloud_in_room_0a7da6c0.mp4": {
+  "id": "c4",
+  "score": 1.0,
+  "heard": "When a trap is set, show me before I step. When fear comes, remind me where I dwell.",
+  "first": 0.24,
+  "last": 7.28,
+  "dur": 7.936
+ },
+ "raw/Man_praying_aloud_in_room_cf77e2ff.mp4": {
+  "id": "c2",
+  "score": 1.0,
+  "heard": "Father, I am stepping out the door and I am putting this day under your wing.",
+  "first": 0.16,
+  "last": 7.36,
+  "dur": 7.936
+ },
+ "raw/Man_praying_in_brick_loft_731b9132.mp4": {
+  "id": "c6",
+  "score": 0.952,
+  "heard": "I ask it in the name of Jesus Christ. Amen. Amen.",
+  "first": 2.56,
+  "last": 7.04,
+  "dur": 7.936
+ },
+ "raw/Man_praying_in_loft_85952323.mp4": {
+  "id": "c3",
+  "score": 1.0,
+  "heard": "Cover my house while I am gone Cover the ones I love, wherever they are, right now.",
+  "first": 0.24,
+  "last": 7.36,
+  "dur": 7.936
+ },
+ "raw/Man_praying_in_room_afc07e11.mp4": {
+  "id": "c5",
+  "score": 1.0,
+  "heard": "Send your angels ahead of me and let me come home tonight with a thankful heart.",
+  "first": 0.24,
+  "last": 7.36,
+  "dur": 7.936
+ },
+ "raw/Man_speaking_about_dreaded_email_b21a47d6.mp4": {
+  "id": "o2",
+  "score": 1.0,
+  "heard": "The email you've been dreading. The drive. The conversation you keep putting off.",
+  "first": 0.32,
+  "last": 7.04,
+  "dur": 7.936
+ },
+ "raw/Man_speaking_about_morning_coffee_ff9a56e2.mp4": {
+  "id": "o3",
+  "score": 1.0,
+  "heard": "And you're about to walk into all of it with nothing between you and the day but a cup of coffee.",
+  "first": 0.48,
+  "last": 7.36,
+  "dur": 7.936
+ },
+ "raw/Man_speaking_about_prayer_f31d21cf.mp4": {
+  "id": "c1",
+  "score": 1.0,
+  "heard": "So here is the prayer. Pray it out loud if you can.",
+  "first": 2.56,
+  "last": 7.04,
+  "dur": 7.936
+ },
+ "raw/Man_speaking_about_psalm_43b819f2.mp4": {
+  "id": "o4",
+  "score": 1.0,
+  "heard": "This psalm is for the person standing at that door. People have prayed it in hospital hallways, before shifts.",
+  "first": 0.24,
+  "last": 7.52,
+  "dur": 7.936
+ },
+ "raw/Man_speaking_in_brick_loft_75b2667b.mp4": {
+  "id": "o5",
+  "score": 1.0,
+  "heard": "And on the way to jobs, they were scared to lose. Pray it with me and then go.",
+  "first": 0.0,
+  "last": 7.04,
+  "dur": 7.936
+ },
+ "raw/Man_speaking_to_camera_832f28dc.mp4": {
+  "id": "c7",
+  "score": 1.0,
+  "heard": "Type Amen and send this to a friend who needs it. Have a blessed day and remember the word for today.",
+  "first": 0.0,
+  "last": 7.04,
+  "dur": 7.936
+ },
+ "raw/o1.mp4": {
+  "id": "o1",
+  "score": 1.0,
+  "heard": "Before you walk out that door today, give me a few minutes. You already know what's out there.",
+  "first": 0.48,
+  "last": 7.36,
+  "dur": 7.936
+ }
+}
